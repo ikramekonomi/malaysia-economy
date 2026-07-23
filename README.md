@@ -1,53 +1,42 @@
 # Malaysia Public Finance Data Warehouse
 
-A consolidated, fully-verifiable data warehouse of **Malaysia's public finances** — built to
-understand, track, analyse, and **find gaps in the country's fiscal behaviour**. Multiple
-official sources are ingested with complete provenance, then curated into a comparable layer
-so the same concept can be traced and cross-checked across sources.
+A consolidated, fully-verifiable data warehouse of **Malaysia's public finances** — federal
+**and** state — built to understand, track, analyse, and **find gaps in the country's fiscal
+behaviour**. Multiple official sources are ingested with complete provenance, then curated
+into a comparable layer so the same concept can be traced and cross-checked across sources.
+
+Start with **`CLAUDE.md`** (mission + rules) and **`docs/SOURCES.md`** (what to add next and
+why).
+
+## Layout
+```
+sources/            one folder per source (each independently verifiable)
+  pkkp/             Federal Government Financial Statements FY2009–2024 (audited actuals)
+    data/<year>/        the CSVs (source of truth), one folder per volume
+    pipeline/<year>/    extraction scripts
+    DATA_DICTIONARY.md · VALIDATION_REPORT.md · README_QUICKSTART.md
+curated/            consolidated layer (conformed dims + gap views) — built as sources land
+pipeline/build_duckdb.py   rebuilds sources/pkkp/pkkp.duckdb from the CSVs
+docs/SOURCES.md     source catalogue: federal, state, statistics — priority + gap pairings
+```
 
 ## Sources
-
-**PKKP — Federal Government Financial Statements (FY2009–FY2024)** — the first and
-foundational source: the audited *Penyata Kewangan Kerajaan Persekutuan*, extracted to full
-detail (~580,000 numeric data points; 76,320 object-level operating-expenditure rows). Audited
-**actuals**, down to per-ministry object-level grain, every figure traceable to its source PDF
-and page. More sources (budget estimates, MOF fiscal reports, …) will be added in their own
-namespaces alongside this one.
-
-## Layout (current)
-
-```
-warehouse/            <- PKKP data (CSVs are the source of truth)
-  *.csv               <- FY2024 volume's tables (root)
-  2009/ .. 2023/      <- each older volume's tables (identical schemas)
-  DATA_DICTIONARY.md      <- every table & column
-  VALIDATION_REPORT.md    <- how each volume was verified
-  README_QUICKSTART.md    <- start here to query
-pipeline/             <- extraction & build code (reproducible)
-  build_duckdb.py     <- regenerates warehouse/pkkp.duckdb from the CSVs
-  2009/ .. 2024/      <- per-volume extraction scripts
-CLAUDE.md             <- operating manual & mission (read this first)
-SOURCES.md
-```
-As the second source lands, expect a move to a `sources/<name>/` layout with a `curated/`
-consolidation layer above. See `CLAUDE.md` for the architecture direction.
+**pkkp** is the first and foundational source: the audited *Penyata Kewangan Kerajaan
+Persekutuan*, FY2009–2024, extracted to full detail (~580,000 data points; 76,320
+object-level opex rows), every figure traceable to its source PDF and page. Planned additions
+(budget estimates, MOF fiscal reports, DOSM, state statements, …) are catalogued in
+`docs/SOURCES.md`.
 
 ## Quick start
-
 ```bash
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py        # builds warehouse/pkkp.duckdb from the CSVs
-duckdb warehouse/pkkp.duckdb
+python3 pipeline/build_duckdb.py          # builds sources/pkkp/pkkp.duckdb from the CSVs
+duckdb sources/pkkp/pkkp.duckdb
 ```
-Then read `warehouse/README_QUICKSTART.md`. Core rules: the CSVs are canonical (the .duckdb is
-a rebuildable cache); **join on codes, not names**; **sum only leaf rows** (`row_type` in
-`object_aktiviti`/`project`/`detail`) or you'll double count; take each year from its own
-volume for clean series (see the `_restatements_*.csv` catalogues); **never silently correct a
-published figure**.
+Then read `sources/pkkp/README_QUICKSTART.md`. Core rules: CSVs are canonical (the .duckdb is
+a rebuildable cache); **join on codes, not names**; **sum only leaf rows**; take each year
+from its own volume; **never silently correct a published figure**.
 
 ## Known caveat
-
-FY2015 is the one image-only scan. Its statements, registers, panel and ministry-level totals
-are fully verified; its object-leaf / project-leaf amounts are OCR-provisional and not
-reconciled to printed subtotals (unresolved cells inventoried in
-`warehouse/2015/_unresolved_ocr_cells_2015.csv`). See `VALIDATION_REPORT.md`.
+FY2015 is the one image-only scan — its object-leaf/project-leaf amounts are OCR-provisional
+(fully-verified everywhere else). See `sources/pkkp/VALIDATION_REPORT.md`.
