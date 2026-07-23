@@ -1,0 +1,51 @@
+maksud_code,jenis_bm,maksud_name_bm,year,anggaran_asal_rm,anggaran_dipinda_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+T.01,Tanggungan,Peruntukan Diraja Bagi S.P.B. Yang Di-Pertuan Agong,2015,13533000.0,13533000.0,13532940.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.02,Tanggungan,Elaun-elaun Diraja,2015,1813100.0,1813100.0,1494098.0,82.41,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.03,Tanggungan,"Ketua Hakim Negara, Hakim Besar dan Hakim",2015,90000000.0,84500000.0,82896157.0,98.1,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.04,Tanggungan,Ketua Audit Negara,2015,1254000.0,1254000.0,598674.0,47.74,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.05,Tanggungan,Yang Dipertua Dewan Rakyat,2015,1320000.0,1627000.0,1582746.0,97.28,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.06,Tanggungan,Yang Dipertua Dewan Negara,2015,1260000.0,1536000.0,1532070.0,99.74,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.07,Tanggungan,Suruhanjaya Pilihan Raya,2015,1420000.0,1739000.0,1738731.0,99.98,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.08,Tanggungan,Suruhanjaya Perkhidmatan Perundangan,2015,50000.0,40000.0,31880.0,79.7,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.09,Tanggungan,Suruhanjaya Perkhidmatan Awam,2015,10650000.0,5850000.0,5193631.0,88.78,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.10,Tanggungan,Suruhanjaya Perkhidmatan Pelajaran,2015,3935800.0,3935800.0,3596456.0,91.38,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.11,Tanggungan,Suruhanjaya Pasukan Polis,2015,1454700.0,1454700.0,1440939.0,99.05,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.12,Tanggungan,Perbendaharaan,2015,6302328400.0,5428007987.0,5393219018.0,99.36,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.13,Tanggungan,Perbelanjaan Kerana Hutang Negara,2015,24379250000.0,24379250000.0,24283376224.0,99.61,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+T.14,Tanggungan,"Pencen, Elaun Bersara dan Ganjaran",2015,15700000000.0,17986607146.0,17986096719.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.01,Bekalan,Parlimen,2015,89132000.0,130132000.0,130131991.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.02,Bekalan,Pejabat Penyimpan Mohor Besar Raja-Raja,2015,2294000.0,1939631.0,1787756.0,92.17,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.03,Bekalan,Jabatan Audit Negara,2015,164670000.0,157307742.0,154335518.0,98.11,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.04,Bekalan,Suruhanjaya Pilihan Raya,2015,73852000.0,72352000.0,71402636.0,98.69,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.05,Bekalan,Suruhanjaya Perkhidmatan Awam,2015,50622000.0,49800632.0,49430001.0,99.26,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.06,Bekalan,Jabatan Perdana Menteri,2015,6025239000.0,5845878097.0,5841982204.0,99.93,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.07,Bekalan,Jabatan Perkhidmatan Awam,2015,2670130000.0,2670130000.0,2670129914.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.08,Bekalan,Jabatan Peguam Negara,2015,202200000.0,183668590.0,179693758.0,97.84,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.09,Bekalan,Suruhanjaya Pencegahan Rasuah Malaysia,2015,294326800.0,267068001.0,265065787.0,99.25,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.10,Bekalan,Perbendaharaan,2015,3427324900.0,3427324900.0,3373591021.0,98.43,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.11,Bekalan,Perkhidmatan Am Perbendaharaan,2015,32815826300.0,31942654980.0,27485770991.0,86.05,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.12,Bekalan,Peruntukan kepada Kumpulan Wang Terkanun,2015,2053800100.0,2138100100.0,4226102854.0,197.66,True,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.13,Bekalan,Kementerian Luar Negeri,2015,761833000.0,750635234.0,808322840.0,107.69,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.20,Bekalan,Kementerian Perusahaan Perladangan dan Komoditi,2015,1237800000.0,1166200000.0,1161679534.0,99.61,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.21,Bekalan,Kementerian Pertanian dan Industri Asas Tani,2015,4284289300.0,3979176500.0,3954495609.0,99.38,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.22,Bekalan,Kementerian Kemajuan Luar Bandar dan Wilayah,2015,5982302200.0,5963002200.0,5945202478.0,99.7,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.23,Bekalan,Kementerian Sumber Asli dan Alam Sekitar,2015,1101875500.0,1074724800.0,1074539035.0,99.98,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.24,Bekalan,Kementerian Perdagangan Antarabangsa dan Industri,2015,586658500.0,515847400.0,507421780.0,98.37,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.25,Bekalan,"Kementerian Perdagangan Dalam Negeri, Koperasi dan Kepenggunaan",2015,947029000.0,874464004.0,871046601.0,99.61,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.27,Bekalan,Kementerian Kerja Raya,2015,2112630000.0,1821614240.0,1821614117.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.28,Bekalan,Kementerian Pengangkutan,2015,1256217900.0,1311057521.0,1311057445.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.29,Bekalan,"Kementerian Tenaga, Teknologi Hijau dan Air",2015,280970000.0,246181514.0,246180514.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.30,Bekalan,"Kementerian Sains, Teknologi dan Inovasi",2015,727057500.0,699602300.0,695269139.0,99.38,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.31,Bekalan,Kementerian Pelancongan dan Kebudayaan,2015,1187592000.0,1158122800.0,1149410251.0,99.25,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.32,Bekalan,Kementerian Wilayah Persekutuan,2015,427375600.0,343888170.0,340552831.0,99.03,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.40,Bekalan,Suruhanjaya Perkhidmatan Pelajaran,2015,16629400.0,15898461.0,15610235.0,98.19,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.42,Bekalan,Kementerian Kesihatan,2015,21714210000.0,21714210000.0,21714209921.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.43,Bekalan,"Kementerian Kesejahteraan Bandar, Perumahan dan Kerajaan Tempatan",2015,2556521800.0,3131994850.0,3131994802.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.45,Bekalan,Kementerian Belia dan Sukan,2015,534835000.0,523780600.0,523780573.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.46,Bekalan,Kementerian Sumber Manusia,2015,801770000.0,793681200.0,793582166.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.47,Bekalan,Kementerian Komunikasi dan Multimedia,2015,1385097900.0,1280831900.0,1254766214.0,97.96,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.48,Bekalan,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",2015,2044623400.0,1979550509.0,1969965484.0,99.52,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.60,Bekalan,Kementerian Pertahanan,2015,14144796800.0,13397780828.0,13397774532.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.62,Bekalan,Kementerian Dalam Negeri,2015,12611150000.0,12604057000.0,12604053489.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.63,Bekalan,Kementerian Pendidikan Malaysia,2015,39211432000.0,39336432000.0,39336431952.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus
+B.64,Bekalan,Kementerian Pendidikan Tinggi,2015,13147617100.0,12246523861.0,12234044570.0,99.99,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,54,Nota 5(b) Perbelanjaan Mengurus

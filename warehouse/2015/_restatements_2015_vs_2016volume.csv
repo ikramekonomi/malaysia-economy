@@ -1,0 +1,53 @@
+table,key,value_2015_volume,value_2016_volume,difference,note
+fact_financial_position,WANG AWAM | JUMLAH WANG AWAM,48726920651.0,,,row present in only one volume (structure/label diff)
+fact_financial_position,KUMPULAN WANG DISATUKAN | JUMLAH KUMPULAN WANG DISATUKAN,48726920651.0,,,row present in only one volume (structure/label diff)
+fact_financial_performance,HASIL | anggaran,222454645000.0,,,row present in only one volume (structure/label diff)
+fact_financial_performance,Belanja Mengurus | anggaran,221726762298.0,,,row present in only one volume (structure/label diff)
+fact_financial_performance,LEBIHAN/(KURANGAN) HASIL | anggaran,727882702.0,,,row present in only one volume (structure/label diff)
+fact_financial_performance,Belanja Pembangunan | anggaran,43025161162.0,,,row present in only one volume (structure/label diff)
+fact_financial_performance,KURANGAN KESELURUHAN | anggaran,-42297278460.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Hasil | Jumlah Hasil,219088255295.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Pinjaman | Jumlah Pinjaman,121107483979.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Bantuan Luar Negeri | Jumlah Bantuan Luar Negeri,256238110.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Terimaan Modal | Terimaan Balik Pendahuluan,0.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Terimaan Modal | Jumlah Terimaan Modal,1029832780.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Terimaan Amanah | Inisiatif Pembiayaan Swasta (PFI),56248418.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Terimaan Amanah | Jumlah Terimaan Amanah,688195345.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,BAYARAN | Perbelanjaan Mengurus | Jumlah Perbelanjaan Mengurus,215044511316.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,BAYARAN | Perbelanjaan Pembangunan | Jumlah Perbelanjaan Pembangunan,40767711667.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,BAYARAN | Pinjaman | Jumlah Pinjaman,77208110445.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,BAYARAN | Bantuan Luar Negeri | Jumlah Bantuan Luar Negeri,410164536.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,BAYARAN | Perbelanjaan Modal | Jumlah Perbelanjaan Modal,1864888405.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,BAYARAN | Perbelanjaan Amanah | Jumlah Perbelanjaan Amanah,1328742097.0,,,row present in only one volume (structure/label diff)
+fact_cash_statement,TERIMAAN | Terimaan Amanah | Inisiatif Pembiayaan Swasta,,56248418.0,,row present in only one volume (structure/label diff)
+fact_memorandum,MEMORANDUM ASET | Pinjaman Boleh Dituntut,105733458107.0,,,row present in only one volume (structure/label diff)
+fact_memorandum,MEMORANDUM LIABILITI | Hutang Awam,630540436110.0,,,row present in only one volume (structure/label diff)
+fact_memorandum,MEMORANDUM ASET | Pinjaman dan Pendahuluan Boleh Dituntut,,106821651022.0,,row present in only one volume (structure/label diff)
+fact_memorandum,MEMORANDUM LIABILITI | Hutang Persekutuan,,630540436110.0,,row present in only one volume (structure/label diff)
+fact_investments,International Finance Corporation | modal_saham_amt,2566199000.0,2566000000.0,199000.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,ASEAN Potash Mining Public Co. Ltd. | modal_saham_amt,2060837300.0,2688308700.0,-627471400.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,FELDA Holdings Berhad | modal_saham_amt,220000000.0,220000001.0,-1.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Khazanah Nasional Berhad | modal_saham_amt,6643953220.0,6643953229.0,-9.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Keretapi Tanah Melayu Berhad | modal_saham_amt,1276159172.0,1306159172.0,-30000000.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Mass Rapid Transit Corporation Sdn. Bhd. | modal_saham_amt,175000000.0,275000000.0,-100000000.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Pelabuhan Tanjung Pelepas Sdn. Bhd. | modal_saham_amt,728304849.41,728076746.71,228102.7,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Penang Port Sdn. Bhd. | modal_saham_amt,73450003.0,73450002.0,1.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Pengurusan Aset Air Berhad | modal_saham_amt,510000000.0,580000000.0,-70000000.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Pengurusan Danaharta Nasional Berhad | modal_saham_amt,1250000000.0,1000000000.0,250000000.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Pos Malaysia Berhad | modal_saham_amt,268513043.5,391388419.0,-122875375.5,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Syarikat Perumahan Negara Berhad | modal_saham_amt,210000002.0,1082935222.0,-872935220.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Telekom Malaysia Berhad | modal_saham_amt,2630557302.1,2630555302.1,2000.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Tenaga Nasional Berhad | modal_saham_amt,5643611171.0,5652334171.0,-8723000.0,modal saham (share capital) printed in 2015 volume differs from 2016 volume's 2015 comparative; kept as printed in 2015. nilai_buku (book value) reconciles exactly.
+fact_investments,Bursa Malaysia Berhad | nilai_buku_rm,0.00,,,"entity present in 2015 volume, absent/divested in 2016 volume comparative"
+fact_investments,Percetakan Nasional Malaysia Berhad | nilai_buku_rm,0.00,,,"entity present in 2015 volume, absent/divested in 2016 volume comparative"
+fact_timeseries_2006_2015,Terimaan Kumpulan Wang Pembangunan | 2014 (RM juta),1713.0,1095.0,618.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Jumlah Punca Dana | 2014 (RM juta),220788.0,220170.0,618.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Tambahan/(Kurangan) Dana | 2014 (RM juta),-50195.0,-50813.0,618.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Tambahan/(Kurangan) Wang Tunai dan Pelaburan | 2015 (RM juta),5546.0,7411.0,-1865.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Tambahan/(Kurangan) Wang Tunai dan Pelaburan | 2014 (RM juta),7800.0,-8242.0,16042.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Pinjaman Bersih Dalam dan Luar Negeri | 2015 (RM juta),-41881.0,-43746.0,1865.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Pinjaman Bersih Dalam dan Luar Negeri | 2014 (RM juta),42598.0,-42571.0,85169.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Tambahan/(Kurangan) Modal Kerja | 2014 (RM juta),50198.0,-50813.0,101011.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Kerajaan Negeri | 2015 (RM juta),16933.0,17901.0,-968.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Perseorangan | 2015 (RM juta),51103.0,51223.0,-120.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).
+fact_timeseries_2006_2015,Jumlah Pinjaman Boleh Dituntut | 2015 (RM juta),105733.0,106821.0,-1088.0,Perangkaan series printed in 2015 volume differs from 2016 volume reprint; kept as printed in 2015 (internally cross-foots).

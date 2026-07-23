@@ -1,0 +1,79 @@
+jenis_jaminan_bm,kategori_bm,agensi_bm,row_type,year,dalam_negeri_rm,luar_negeri_rm,jumlah_rm,source_file,pdf_page,printed_page,statement
+JAMINAN PENCARUM / PENDEPOSIT,,Bank Simpanan Nasional,detail,2013,26552762254.87,0.0,26552762254.87,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Bank Simpanan Nasional,detail,2012,,,22195721445.55,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Kumpulan Wang Simpanan Guru-Guru,detail,2013,1839193.0,0.0,1839193.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Kumpulan Wang Simpanan Guru-Guru,detail,2012,,,1599298.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Kumpulan Wang Simpanan Pekerja,detail,2013,538634066578.56,0.0,538634066578.56,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Kumpulan Wang Simpanan Pekerja,detail,2012,,,489276019278.84,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Lembaga Tabung Haji,detail,2013,45719459000.0,0.0,45719459000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Lembaga Tabung Haji,detail,2012,,,35835608607.79,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,JUMLAH JAMINAN PENCARUM / PENDEPOSIT,subtotal,2013,610908127026.43,0.0,610908127026.43,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,JUMLAH JAMINAN PENCARUM / PENDEPOSIT,subtotal,2012,,,547308948630.18,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Tabung Pendidikan Tinggi Nasional,detail,2013,29200000000.0,0.0,29200000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Tabung Pendidikan Tinggi Nasional,detail,2012,,,24200000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Lembaga Kemajuan Tanah Persekutuan (FELDA),detail,2013,5720464286.0,0.0,5720464286.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Lembaga Kemajuan Tanah Persekutuan (FELDA),detail,2012,,,3816250000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Kemajuan Negeri Pahang,detail,2013,200000000.0,0.0,200000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Kemajuan Negeri Pahang,detail,2012,,,200000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Jumlah Badan Berkanun,subtotal,2013,35120464286.0,0.0,35120464286.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Jumlah Badan Berkanun,subtotal,2012,,,28216250000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,1Malaysia Development Berhad,detail,2013,5000000000.0,0.0,5000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,1Malaysia Development Berhad,detail,2012,,,5000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,1MDB Real Estate Sdn Bhd,detail,2013,800000000.0,0.0,800000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,1MDB Real Estate Sdn Bhd,detail,2012,,,800000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Asset Global Network Sdn. Bhd.,detail,2013,961020000.0,0.0,961020000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Asset Global Network Sdn. Bhd.,detail,2012,,,1011600000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Pembangunan Malaysia Berhad (BPMP),detail,2013,10500000000.0,486894490.72,10986894490.72,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Pembangunan Malaysia Berhad (BPMP),detail,2012,,,12321495678.06,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Pertanian Malaysia,detail,2013,0.0,0.0,0.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Pertanian Malaysia,detail,2012,,,20326889.62,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Perusahaan Kecil & Sederhana Malaysia Berhad (SME Bank),detail,2013,1300000000.0,55781544.28,1355781544.28,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Perusahaan Kecil & Sederhana Malaysia Berhad (SME Bank),detail,2012,,,1413074913.88,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Danainfra Nasional Berhad,detail,2013,6500000000.0,0.0,6500000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Danainfra Nasional Berhad,detail,2012,,,2400000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Govco Holdings Berhad,detail,2013,3000000000.0,0.0,3000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Govco Holdings Berhad,detail,2012,,,3000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jambatan Kedua Sdn Bhd,detail,2013,3620794781.44,1095732000.0,4716526781.44,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jambatan Kedua Sdn Bhd,detail,2012,,,3787034297.81,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Johor Corporation (Jcorp),detail,2013,3000000000.0,0.0,3000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Johor Corporation (Jcorp),detail,2012,,,3000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Khazanah Nasional Berhad,detail,2013,18700000000.0,0.0,18700000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Khazanah Nasional Berhad,detail,2012,,,17700000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,K.L. International Airport Berhad,detail,2013,4860000000.0,472275874.75,5332275874.75,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,K.L. International Airport Berhad,detail,2012,,,5987220558.55,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysia Debt Ventures Sdn Bhd,detail,2013,1000000000.0,0.0,1000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysia Debt Ventures Sdn Bhd,detail,2012,,,1000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysian Industrial Development Finance Bhd. (MIDF),detail,2013,0.0,27890772.14,27890772.14,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysian Industrial Development Finance Bhd. (MIDF),detail,2012,,,60312663.72,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pelabuhan Tanjung Pelepas Sdn Bhd,detail,2013,1870000000.0,0.0,1870000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pelabuhan Tanjung Pelepas Sdn Bhd,detail,2012,,,1555000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Penerbangan Malaysia Berhad (PMB),detail,2013,5828768080.45,0.0,5828768080.45,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Penerbangan Malaysia Berhad (PMB),detail,2012,,,6553249169.37,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pengurusan Air SPV Berhad (PAAB),detail,2013,9850000000.0,0.0,9850000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pengurusan Air SPV Berhad (PAAB),detail,2012,,,9500000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Projek Lebuhraya Usahasama Berhad (PLUS),detail,2013,11000000000.0,0.0,11000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Projek Lebuhraya Usahasama Berhad (PLUS),detail,2012,,,11000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sykt Prasarana Negara Berhad (SPNB),detail,2013,11914000000.0,0.0,11914000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sykt Prasarana Negara Berhad (SPNB),detail,2012,,,9914000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sabah Electricity Sdn. Bhd. (SESB),detail,2013,0.0,16803366.49,16803366.49,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sabah Electricity Sdn. Bhd. (SESB),detail,2012,,,23124343.45,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sarawak Capital Resources Ltd.,detail,2013,99612000.0,0.0,99612000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sarawak Capital Resources Ltd.,detail,2012,,,309928620.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sarawak Hidro Sdn. Bhd. (SHSB),detail,2013,6350000000.0,0.0,6350000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sarawak Hidro Sdn. Bhd. (SHSB),detail,2012,,,5350000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Senai Airport Terminal Service Sdn Bhd,detail,2013,330000000.0,0.0,330000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Senai Airport Terminal Service Sdn Bhd,detail,2012,,,330000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Silterra Malaysia Sdn. Bhd.,detail,2013,1800000000.0,0.0,1800000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Silterra Malaysia Sdn. Bhd.,detail,2012,,,1800000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,SRC International Sdn Bhd,detail,2013,4000000000.0,0.0,4000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,SRC International Sdn Bhd,detail,2012,,,4000000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Tenaga Nasional Berhad (TNB),detail,2013,0.0,2629876035.55,2629876035.55,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Tenaga Nasional Berhad (TNB),detail,2012,,,3656193067.35,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Turus Pesawat Sdn Bhd,detail,2013,5310000000.0,0.0,5310000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Turus Pesawat Sdn Bhd,detail,2012,,,3400000000.0,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jumlah Syarikat,subtotal,2013,117594194861.89,4785254083.93,122379448945.82,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jumlah Syarikat,subtotal,2012,,,114892560201.81,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,,JUMLAH JAMINAN PINJAMAN,subtotal,2013,152714659147.89,4785254083.93,157499913231.82,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,,JUMLAH JAMINAN PINJAMAN,subtotal,2012,,,143108810201.81,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+,,JUMLAH JAMINAN,total,2013,763622786174.32,4785254083.93,768408040258.25,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun
+,,JUMLAH JAMINAN,total,2012,,,690417758831.99,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,251,Penyata Akaun Memorandum Jaminan Berkanun

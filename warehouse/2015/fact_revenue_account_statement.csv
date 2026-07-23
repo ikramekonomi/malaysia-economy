@@ -1,0 +1,33 @@
+section_bm,line_item_bm,row_type,year,anggaran_disemak_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+BAKI,BAKI PADA 1 JANUARI,opening,2015,,11863127086.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,BAKI PADA 1 JANUARI,opening,2014,,11863127086.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Cukai,detail,2015,170017285000.0,165440651772.0,97.31,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Cukai,detail,2014,,164204887589.0,95.6,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Bukan Cukai,detail,2015,50094595000.0,51466753565.0,102.74,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Bukan Cukai,detail,2014,,53898784542.0,104.6,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Terimaan Bukan Hasil,detail,2015,1473499000.0,1289802714.0,87.53,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Terimaan Bukan Hasil,detail,2014,,1666651362.0,144.62,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Wilayah Persekutuan,detail,2015,869266000.0,891552775.0,102.56,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Wilayah Persekutuan,detail,2014,,855349863.0,132.64,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Jumlah Hasil,subtotal,2015,222454645000.0,219088760826.0,98.49,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Jumlah Hasil,subtotal,2014,,220625673356.0,98.01,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Emolumen,detail,2015,70119225634.0,70050168154.0,99.9,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Emolumen,detail,2014,,66946934325.0,100.71,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perkhidmatan dan Bekalan,detail,2015,36432850052.0,36372752985.0,99.84,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perkhidmatan dan Bekalan,detail,2014,,34258880520.0,96.51,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Aset,detail,2015,1731531453.0,1722703353.0,99.49,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Aset,detail,2014,,1802125806.0,95.59,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Pemberian dan Kenaan Bayaran Tetap,detail,2015,112302554087.0,107743610517.0,95.94,True,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Pemberian dan Kenaan Bayaran Tetap,detail,2014,,115096757716.0,98.61,True,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perbelanjaan-perbelanjaan Lain,detail,2015,1140601072.0,1108293498.0,97.17,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perbelanjaan-perbelanjaan Lain,detail,2014,,1484444205.0,99.07,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Jumlah Perbelanjaan Mengurus (sebelum pindahan),subtotal,2015,221726762298.0,216997528507.0,97.87,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Jumlah Perbelanjaan Mengurus (sebelum pindahan),subtotal,2014,,219589142572.0,98.88,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PINDAHAN,Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan,transfer,2015,0.0,2091232319.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PINDAHAN,Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan,transfer,2014,,1036530784.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Jumlah Perbelanjaan Mengurus (selepas pindahan),total_after_transfer,2015,221726762298.0,219088760826.0,98.81,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Jumlah Perbelanjaan Mengurus (selepas pindahan),total_after_transfer,2014,,220625673356.0,99.34,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,Lebihan/(Kurangan) bagi Tahun,net,2015,,0.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,Lebihan/(Kurangan) bagi Tahun,net,2014,,0.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,BAKI PADA 31 DISEMBER,closing,2015,,11863127086.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,BAKI PADA 31 DISEMBER,closing,2014,,11863127086.0,,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,52,Nota 5 Penyata Akaun Hasil Disatukan

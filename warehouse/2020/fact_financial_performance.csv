@@ -1,0 +1,27 @@
+line_item_bm,line_code,year,basis,amount_rm,source_file,pdf_page,printed_page,statement
+Hasil,revenue,2020,anggaran,227270015000.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Hasil,revenue,2020,sebenar,225074947242.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Hasil,revenue,2019,sebenar,264414755876.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2020,anggaran,226720000000.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2020,sebenar,224600242049.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2019,sebenar,263342924643.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2020,anggaran,550015000.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2020,sebenar,474705193.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2019,sebenar,1071831233.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2020,anggaran,52689471785.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2020,sebenar,51359855763.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2019,sebenar,54173235317.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2020,anggaran,39007290555.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2020,sebenar,38019238631.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2019,sebenar,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2020,anggaran,-91146747340.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2020,sebenar,-88904389201.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2019,sebenar,-53101404084.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2020,sebenar,88904389201.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2019,sebenar,53101404084.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2020,sebenar,96497183864.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2019,sebenar,55509292462.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Terimaan Balik Pinjaman dan Pelbagai Terimaan,financing_capital_receipts,2020,sebenar,1259155427.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+Terimaan Balik Pinjaman dan Pelbagai Terimaan,financing_capital_receipts,2019,sebenar,1730728126.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2020,sebenar,-8851950090.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2019,sebenar,-4138616504.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,54,Penyata Prestasi Kewangan

@@ -1,0 +1,30 @@
+nota,line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+3,Pengurangan Baki Wang Tunai Dalam Bank tahun 2016,2016,7151931175.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,51,Nota 3 Wang Tunai
+3,"Pembayaran kepada Lembaga Pembiayaan Perumahan Sektor Awam (pengkorporatan Bahagian Pinjaman Perumahan Perbendaharaan, termasuk dalam pengurangan)",2016,1784376301.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,51,Nota 3 Wang Tunai
+4,Jualan instrumen kewangan di Penyata Penerimaan dan Pembayaran Wang Tunai,2016,2544500510.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,51,Nota 4 Pelaburan
+4,Urus niaga bukan tunai pelarasan pertukaran pinjaman kepada pegangan ekuiti (tidak diambil kira dalam jualan instrumen kewangan),2016,100000000.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,51,Nota 4 Pelaburan
+5(a),Perbezaan Hasil Bukan Cukai di Penyata Penerimaan dan Pembayaran Wang Tunai (pelarasan Akaun Premium Terbitan Pelaburan Kerajaan dan Keuntungan Pelaburan Sukuk Global),2016,203392339.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,63,52,Nota 5(a) Hasil
+5(a),Perbezaan Terimaan Bukan Hasil di Penyata Penerimaan dan Pembayaran Wang Tunai,2016,199116112.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,63,52,Nota 5(a) Hasil
+5(b),Perbezaan perbelanjaan Pemberian dan Kenaan Bayaran Tetap di Penyata Penerimaan dan Pembayaran Wang Tunai,2016,1723129743.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,64,53,Nota 5(b) Perbelanjaan Mengurus
+5(b),Pindahan peruntukan Kumpulan Wang Terkanun (komponen perbezaan Pemberian),2016,1036879570.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,64,53,Nota 5(b) Perbelanjaan Mengurus
+5(b),Pindahan dan pelarasan bayaran balik pendahuluan Kumpulan Wang Pendahuluan Negeri (komponen perbezaan Pemberian),2016,682442834.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,64,53,Nota 5(b) Perbelanjaan Mengurus
+5(b),Pelarasan Keuntungan Pelaburan Sukuk Global (komponen perbezaan Pemberian),2016,3392339.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,64,53,Nota 5(b) Perbelanjaan Mengurus
+5(b),Pindahan peruntukan ke Kumpulan Wang Amanah (komponen perbezaan Pemberian),2016,415000.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,64,53,Nota 5(b) Perbelanjaan Mengurus
+5(b),Perbezaan Perbelanjaan-perbelanjaan Lain di Penyata Penerimaan dan Pembayaran Wang Tunai,2016,68081820.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,64,53,Nota 5(b) Perbelanjaan Mengurus
+5(b),Pelarasan hapus kira (komponen perbezaan Perbelanjaan-perbelanjaan Lain),2016,61666602.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,64,53,Nota 5(b) Perbelanjaan Mengurus
+6,Bayaran faedah pinjaman dan kos lain dikenakan kepada Perbelanjaan Tanggungan (T13),2016,26479617582.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Akaun Pinjaman Disatukan
+6,Bantuan Luar Negeri yang belum diterima bagi membiayai projek pembangunan,2016,642334273.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Akaun Pinjaman Disatukan
+6,Bantuan Luar Negeri yang belum diterima bagi membiayai projek pembangunan,2015,731862446.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Akaun Pinjaman Disatukan
+7,Akaun Penyelesaian Utama Perbendaharaan: debit tidak melibatkan terimaan atau bayaran sebenar,2016,345864447595.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,67,56,Nota 7 Akaun Amanah Disatukan
+7,Akaun Penyelesaian Utama Perbendaharaan: kredit tidak melibatkan terimaan atau bayaran sebenar,2016,348088493503.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,67,56,Nota 7 Akaun Amanah Disatukan
+7,Pelbagai Bayaran Amanah di Penyata Penerimaan dan Pembayaran Wang Tunai (baki bersih semasa Akaun Amanah),2016,9678007675.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,67,56,Nota 7 Akaun Amanah Disatukan
+8(a),Jumlah Pinjaman dan Pendahuluan Boleh Dituntut 2015 sebelum penyata semula,2015,105733458107.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,59,Nota 8 Memorandum Aset
+8(a),Pengurangan Pinjaman dan Pendahuluan Boleh Dituntut tahun 2016,2016,51008156507.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,59,Nota 8 Memorandum Aset
+8(a),Baki perseorangan pinjaman perumahan dipindahkan ke Lembaga Pembiayaan Perumahan Sektor Awam (termasuk dalam pengurangan),2016,50924736485.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,59,Nota 8 Memorandum Aset
+9(a),Pinjaman berjangka Kumpulan Wang Pinjaman Perumahan dikeluarkan dari pelaporan (pengkorporatan kepada LPPSA),2016,21900000000.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,71,60,Nota 9 Memorandum Liabiliti
+9(a),Pegangan Bukan Pemastautin bagi Pinjaman Dalam Negeri,2016,191784004000.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,71,60,Nota 9 Memorandum Liabiliti
+10,Pinjaman Badan Berkanun dan syarikat milik kerajaan yang dijamin oleh Kerajaan Persekutuan [Akta 96],2016,187234195606.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,61,Nota 10 Liabiliti Luar Jangka
+10,"Simpanan pendeposit di Bank Simpanan Nasional, Kumpulan Wang Simpanan Pekerja dan Lembaga Tabung Haji",2016,797869215863.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,61,Nota 10 Liabiliti Luar Jangka
+11,Akaun Belum Terima (maklumat tambahan berdasarkan rekod Kementerian/Jabatan),2016,21066477880.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,61,Nota 11 Akaun Belum Terima
+11,Tunggakan Pinjaman Boleh Dituntut (termasuk dalam Akaun Belum Terima),2016,10326692208.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,61,Nota 11 Akaun Belum Terima
+12,Wang pendahuluan kepada kontraktor yang belum dibayar balik,2016,946402872.0,narrative,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,61,Nota 12 Wang Pendahuluan Kepada Kontraktor

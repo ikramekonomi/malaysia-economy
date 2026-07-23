@@ -1,0 +1,18 @@
+status,check,extracted_value,printed_value,difference
+PASS,L3 Pinjaman Boleh Dituntut total 2013 (as printed),92547188214.00,92547188214.00,0.00
+PASS,L3 detail sum==subtotal sum 2013,92547188213.96,92547188213.96,0.00
+PASS,L3 detail sum->total 2013 (0.04 sen print rounding),92547188213.96,92547188214.00,-0.04
+PASS,L3 pembangunan_rm detail->total 2013,39864058141.56,39864058141.56,0.00
+PASS,L3 hasil_disatukan_rm detail->total 2013,3014871857.77,3014871857.77,-0.00
+PASS,L3 amanah_lain_rm detail->total 2013,49668258214.63,49668258214.63,0.00
+PASS,L5 Hutang Awam register total,539857759215.61,539857759215.00,0.61
+PASS,L5 detail sum->total,539857759215.61,539857759215.61,-0.00
+PASS,L6 dalam+luar=jumlah all 2013 detail (fails),0.00,0.00,0.00
+PASS,L6 Jaminan Pinjaman subtotal ties Nota10(a),157499913231.82,157499913232.00,-0.18
+PASS,L6 loan Badan Berkanun+Syarikat->subtotal,157499913231.82,157499913231.82,0.00
+PASS,L6 Jaminan Pencarum/Pendeposit ties Nota10(b),610908127026.43,610908127026.00,0.43
+PASS,L6 grand total = loan_sub + deposit_sub,768408040258.25,768408040258.25,0.00
+PASS,L4 Pelaburan register total 2013,29679137798.72,29679137799.00,-0.28
+PASS,L4 detail sum->total 2013,29679137798.72,29679137798.72,0.00
+PASS,L4 Pelaburan register total 2012,28110412577.40,28110412577.00,0.40
+PASS,Nota8b Pelaburan foots 2013,29679137799.00,29679137799.00,0.00

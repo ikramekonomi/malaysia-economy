@@ -1,0 +1,587 @@
+status,check,extracted_value,printed_value,difference
+PASS,notes-detail: Nota3 cash details sum = printed total 2014,17426671072.0,17426671072.0,0.0
+PASS,notes-detail: Nota3 cash details sum = printed total 2013,25051038985.0,25051038985.0,0.0
+PASS,notes-detail: control: Wang Tunai 2014 = position,17426671072.0,17426671072,0.0
+PASS,notes-detail: control: Wang Tunai 2013 = position,25051038985.0,25051038985,0.0
+PASS,notes-detail: Nota4 Pelaburan Kumpulan Wang Amanah details = Jumlah 2014,14764013983.0,14764013983.0,0.0
+PASS,notes-detail: Nota4 Pelaburan Am details = Jumlah 2014,8650654266.0,8650654266.0,0.0
+PASS,notes-detail: Nota4 subtotals = JUMLAH PELABURAN 2014,23414668249.0,23414668249.0,0.0
+PASS,notes-detail: Nota4 Pelaburan Kumpulan Wang Amanah details = Jumlah 2013,13673122189.0,13673122189.0,0.0
+PASS,notes-detail: Nota4 Pelaburan Am details = Jumlah 2013,10359424167.0,10359424167.0,0.0
+PASS,notes-detail: Nota4 subtotals = JUMLAH PELABURAN 2013,24032546356.0,24032546356.0,0.0
+PASS,notes-detail: control: Pelaburan 2014 = position,23414668249.0,23414668249,0.0
+PASS,notes-detail: control: Pelaburan 2013 = position,24032546356.0,24032546356,0.0
+PASS,notes-detail: Nota7(a)(i) KWP TERIMAAN details = subtotal 2014,26126620840.0,26126620840.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP BAYARAN details = subtotal 2014,39503487396.0,39503487396.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP terimaan-bayaran = Lebihan/(Kurangan) 2014,-13376866556.0,-13376866556.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP opening+net = closing 2014,-53911937389.0,-53911937389.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP TERIMAAN details = subtotal 2013,45499309807.0,45499309807.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP BAYARAN details = subtotal 2013,42209801384.0,42209801384.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP terimaan-bayaran = Lebihan/(Kurangan) 2013,3289508423.0,3289508423.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP opening+net = closing 2013,-40535070833.0,-40535070833.0,0.0
+PASS,notes-detail: control: KWP closing 2014,-53911937389.0,-53911937389,0.0
+PASS,notes-detail: Nota7(a)(ii) KWPP TERIMAAN details = subtotal 2014,17638941853.0,17638941853.0,0.0
+PASS,notes-detail: Nota7(a)(ii) KWPP BAYARAN details = subtotal 2014,-17724349153.0,-17724349153.0,0.0
+PASS,notes-detail: Nota7(a)(ii) KWPP opening+terimaan+bayaran = closing 2014,1239537651.0,1239537651.0,0.0
+PASS,notes-detail: Nota7(a)(ii) KWPP TERIMAAN details = subtotal 2013,16165236951.0,16165236951.0,0.0
+PASS,notes-detail: Nota7(a)(ii) KWPP BAYARAN details = subtotal 2013,-16355812436.0,-16355812436.0,0.0
+PASS,notes-detail: Nota7(a)(ii) KWPP opening+terimaan+bayaran = closing 2013,1324944951.0,1324944951.0,0.0
+PASS,notes-detail: cross: KWPP closing 2014 = Nota 7 table,1239537651.0,1239537651,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PENYELESAIAN details = subtotal 2014,2156817279.0,2156817279.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PERNIAGAAN details = subtotal 2014,77668364.0,77668364.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PINJAMAN details = subtotal 2014,7763642257.0,7763642257.0,0.0
+PASS,notes-detail: Nota7(a)(iii) KUMPULAN WANG LUAR JANGKA details = subtotal 2014,1255624280.0,1255624280.0,0.0
+PASS,notes-detail: Nota7(a)(iii) KUMPULAN WANG YANG LAIN details = subtotal 2014,12028584469.0,12028584469.0,0.0
+PASS,notes-detail: Nota7(a)(iii) all details = PELBAGAI KWAK total 2014,23282336649.0,23282336649.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PENYELESAIAN details = subtotal 2013,9810381418.0,9810381418.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PERNIAGAAN details = subtotal 2013,82506758.0,82506758.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PINJAMAN details = subtotal 2013,7133892658.0,7133892658.0,0.0
+PASS,notes-detail: Nota7(a)(iii) KUMPULAN WANG LUAR JANGKA details = subtotal 2013,1207799118.0,1207799118.0,0.0
+PASS,notes-detail: Nota7(a)(iii) KUMPULAN WANG YANG LAIN details = subtotal 2013,11370636978.0,11370636978.0,0.0
+PASS,notes-detail: Nota7(a)(iii) all details = PELBAGAI KWAK total 2013,29605216930.0,29605216930.0,0.0
+PASS,notes-detail: cross: Pelbagai KWAK total 2014 = Nota 7 table closing,23282336649.0,23282336649,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH KHAS details = subtotal 2014,675929420.0,675929420.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH AM details = subtotal 2014,7903580164.0,7903580164.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM subtotals = total 2014,8579509584.0,8579509584.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH KHAS details = subtotal 2013,646842019.0,646842019.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH AM details = subtotal 2013,10059927940.0,10059927940.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM subtotals = total 2013,10706769959.0,10706769959.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT AM details = subtotal 2014,9970547418.0,9970547418.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT PELARASAN details = subtotal 2014,226098223.0,226098223.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT subtotals = total 2014,10196645641.0,10196645641.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT AM details = subtotal 2013,9465977654.0,9465977654.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT PELARASAN details = subtotal 2013,272261730.0,272261730.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT subtotals = total 2013,9738239384.0,9738239384.0,0.0
+PASS,notes-detail: Nota8 PBD details = printed total 2014,99036023598.0,99036023598.0,0.0
+PASS,notes-detail: Nota8 Pelaburan details = printed total 2014,29883017259.0,29883017259.0,0.0
+PASS,notes-detail: Nota8 PBD details = printed total 2013,92444600374.0,92444600374.0,0.0
+PASS,notes-detail: Nota8 Pelaburan details = printed total 2013,29679137799.0,29679137799.0,0.0
+PASS,notes-detail: control: memo PBD 2014 = memorandum statement,99036023598.0,99036023598,0.0
+PASS,notes-detail: control: memo Pelaburan 2014 = memorandum statement,29883017259.0,29883017259,0.0
+PASS,"notes-detail: declared restatement: 2013 PBD restated from 92,547,188,214 to 92,444,600,374",92444600374.0,92444600374,0.0
+PASS,notes-detail: Nota9(b) PELBAGAI LIABILITI details = printed total 2014,318104801.0,318104801.0,0.0
+PASS,notes-detail: Nota9(b) PELBAGAI LIABILITI details = printed total 2013,286624151.0,286624151.0,0.0
+PASS,notes-detail: control: Pelbagai Liabiliti 2014,318104801.0,318104801,0.0
+PASS,notes-detail: Nota5(a): Hasil Bukan Cukai Nota - cash = printed reconciliation components,1550652596,1550652596,0.0
+PASS,notes-detail: Nota5(b): Perkhidmatan dan Bekalan Nota - cash = printed difference,5944643,5944643,0.0
+PASS,notes-detail: Nota5(b): Aset Nota - cash = printed difference,120302655,120302655,0.0
+PASS,"notes-detail: Nota5(b): Pemberian Nota (excl. transfer, as printed '**') - cash = printed difference",2552502859,2552502859,0.0
+PASS,notes-detail: Nota5(b): Pemberian difference components sum,2552502859,2552502859,0.0
+PASS,notes-detail: Nota5(b): Perbelanjaan Lain Nota - cash = printed difference,419859631,419859631,0.0
+PASS,notes-detail: Nota5(b): Perbelanjaan Lain difference components sum,419859631,419859631,0.0
+PASS,notes-detail: Nota7(a)(i): devex Nota - cash = printed difference,34892269,34892269,0.0
+PASS,notes-detail: Nota7(a)(i): devex difference components sum,34892269,34892269,0.0
+PASS,notes-detail: Nota6: Nota Bilateral Terimaan - cash = printed difference,24820725,24820725,0.0
+PASS,notes-detail: Nota6: Nota Bilateral Bayaran - cash = printed difference,8077049,8077049,0.0
+PASS,notes-detail: Nota6: prestasi P&BLN explanation identity within RM1 rounding (diff-1),0,0,0.0
+PASS,notes-detail: Nota10(a) = Lampiran 6 JUMLAH JAMINAN PINJAMAN (rounded RM),172019413967.0,172019413967,0.0
+PASS,notes-detail: Nota10(b) = Lampiran 6 JUMLAH JAMINAN PENCARUM (rounded RM),678015728835.0,678015728835,0.0
+PASS,core: pos: Wang Awam items 2014 = printed (unlabelled) total,40841339321.0,40841339321,0.0
+PASS,core: pos: Kumpulan Wang Disatukan items 2014 = printed (unlabelled) total,40841339321.0,40841339321,0.0
+PASS,core: pos: captured JUMLAH WANG AWAM row 2014,40841339321.0,40841339321,0.0
+PASS,core: pos: captured JUMLAH KW DISATUKAN row 2014,40841339321.0,40841339321,0.0
+PASS,core: pos: Wang Awam items 2013 = printed (unlabelled) total,49083585341.0,49083585341,0.0
+PASS,core: pos: Kumpulan Wang Disatukan items 2013 = printed (unlabelled) total,49083585341.0,49083585341,0.0
+PASS,core: pos: captured JUMLAH WANG AWAM row 2013,49083585341.0,49083585341,0.0
+PASS,core: pos: captured JUMLAH KW DISATUKAN row 2013,49083585341.0,49083585341,0.0
+PASS,core: perf: Hasil sebenar 2014,220625673356.0,220625673356,0.0
+PASS,core: perf: Belanja Mengurus sebenar 2014,219589142572.0,219589142572,0.0
+PASS,core: perf: Belanja Pembangunan sebenar 2014,39503487396.0,39503487396,0.0
+PASS,core: perf: Kurangan Keseluruhan 2014,-38466956612.0,-38466956612,0.0
+PASS,core: perf: identity hasil-opex-devex=kurangan 2014,-38466956612.0,-38466956612,0.0
+PASS,core: perf: pembiayaan = kurangan 2014,38466956612.0,38466956612,0.0
+PASS,core: perf: financing components = JUMLAH PEMBIAYAAN 2014,38466956612.0,38466956612.0,0.0
+PASS,core: perf: Hasil sebenar 2013,213370213558.0,213370213558,0.0
+PASS,core: perf: Belanja Mengurus sebenar 2013,211270336793.0,211270336793,0.0
+PASS,core: perf: Belanja Pembangunan sebenar 2013,42209801384.0,42209801384,0.0
+PASS,core: perf: Kurangan Keseluruhan 2013,-40109924619.0,-40109924619,0.0
+PASS,core: perf: identity hasil-opex-devex=kurangan 2013,-40109924619.0,-40109924619,0.0
+PASS,core: perf: pembiayaan = kurangan 2013,40109924619.0,40109924619,0.0
+PASS,core: perf: financing components = JUMLAH PEMBIAYAAN 2013,40109924619.0,40109924619.0,0.0
+PASS,core: perf: anggaran identity hasil-opex = lebihan 2014,3013157030.0,3013157030.0,0.0
+PASS,core: perf: anggaran identity lebihan-devex = kurangan 2014,-39150274901.0,-39150274901.0,0.0
+PASS,core: rev[anggaran_asal_rm]: sum(L1) = JUMLAH HASIL,224244429000.0,224244429000.0,0.0
+PASS,core: rev[anggaran_asal_rm]: sum(items) = HASIL CUKAI,172120378000.0,172120378000.0,0.0
+PASS,core: rev[anggaran_asal_rm]: sum(items) = HASIL BUKAN CUKAI,50626704000.0,50626704000.0,0.0
+PASS,core: rev[anggaran_asal_rm]: sum(items) = TERIMAAN BUKAN HASIL,852467000.0,852467000.0,0.0
+PASS,core: rev[anggaran_asal_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,644880000.0,644880000.0,0.0
+PASS,core: rev[anggaran_disemak_rm]: sum(L1) = JUMLAH HASIL,225094429000.0,225094429000.0,0.0
+PASS,core: rev[anggaran_disemak_rm]: sum(items) = HASIL CUKAI,171770377000.0,171770377000.0,0.0
+PASS,core: rev[anggaran_disemak_rm]: sum(items) = HASIL BUKAN CUKAI,51526705000.0,51526705000.0,0.0
+PASS,core: rev[anggaran_disemak_rm]: sum(items) = TERIMAAN BUKAN HASIL,1152467000.0,1152467000.0,0.0
+PASS,core: rev[anggaran_disemak_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,644880000.0,644880000.0,0.0
+PASS,core: rev[sebenar_rm]: sum(L1) = JUMLAH HASIL,220625673356.0,220625673356.0,0.0
+PASS,core: rev[sebenar_rm]: sum(items) = HASIL CUKAI,164204887589.0,164204887589.0,0.0
+PASS,core: rev[sebenar_rm]: sum(items) = HASIL BUKAN CUKAI,53898784542.0,53898784542.0,0.0
+PASS,core: rev[sebenar_rm]: sum(items) = TERIMAAN BUKAN HASIL,1666651362.0,1666651362.0,0.0
+PASS,core: rev[sebenar_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,855349863.0,855349863.0,0.0
+PASS,core: rev[sebenar_prior_rm]: sum(L1) = JUMLAH HASIL,213370213558.0,213370213558.0,0.0
+PASS,core: rev[sebenar_prior_rm]: sum(items) = HASIL CUKAI,155952205546.0,155952205546.0,0.0
+PASS,core: rev[sebenar_prior_rm]: sum(items) = HASIL BUKAN CUKAI,54450479701.0,54450479701.0,0.0
+PASS,core: rev[sebenar_prior_rm]: sum(items) = TERIMAAN BUKAN HASIL,1589505741.0,1589505741.0,0.0
+PASS,core: rev[sebenar_prior_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,1378022570.0,1378022570.0,0.0
+PASS,core: rev: HASIL sebenar = perf Hasil,220625673356.0,220625673356,0.0
+PASS,core: rev: HASIL sebenar prior = perf Hasil 2013,213370213558.0,213370213558,0.0
+PASS,core: opex: sum(T.*) sebenar = printed Jumlah Perbelanjaan Tanggungan,44335538291.0,44335538291,0.0
+PASS,core: opex: sum(B.*) sebenar = printed Jumlah Perbelanjaan Bekalan,176290135065.0,176290135065,0.0
+PASS,core: opex: T+B = printed JUMLAH PERBELANJAAN MENGURUS (incl. transfer),220625673356.0,220625673356,0.0
+PASS,core: opex: count of maksud = 49,49,49,0
+PASS,core: opex[anggaran_asal_rm]: sum(T.*) = printed jenis subtotal,42843291000.0,42843291000,0.0
+PASS,core: opex[anggaran_asal_rm]: sum(B.*) = printed jenis subtotal,174807709000.0,174807709000,0.0
+PASS,core: opex[anggaran_dipinda_rm]: sum(T.*) = printed jenis subtotal,45091880340.0,45091880340,0.0
+PASS,core: opex[anggaran_dipinda_rm]: sum(B.*) = printed jenis subtotal,176989391630.0,176989391630,0.0
+PASS,"core: opex: anggaran asal grand = printed 217,651,000,000",217651000000.0,217651000000,0.0
+PASS,"core: opex: anggaran dipinda grand = printed 222,081,271,970 (= prestasi anggaran)",222081271970.0,222081271970,0.0
+PASS,core: devex[anggaran_jumlah_rm]: sum(ministries) = grand total,42163431931.0,42163431931.0,0.0
+PASS,core: devex[sebenar_jumlah_rm]: sum(ministries) = grand total,39503487395.98,39503487395.98,0.0
+PASS,core: devex[kos_keseluruhan_rm]: sum(ministries) = grand total,443346767095.54004,443346767095.54,6.103515625e-05
+PASS,core: devex[terkumpul_rmke10_prior_rm]: sum(ministries) = grand total,135558617616.48999,135558617616.49,-1.52587890625e-05
+PASS,core: devex[terkumpul_rmke10_rm]: sum(ministries) = grand total,175062105012.47,175062105012.47,0.0
+PASS,core: devex: grand total sebenar = printed (sen),39503487395.98,39503487395.98,0.0
+PASS,core: devex: grand total = perf Belanja Pembangunan (rounded),39503487395.98,39503487396,-0.01999664306640625
+PASS,core: devex row: langsung+pinjaman=jumlah [P.06],8308754327.07,8308754327.07,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.06],33515155203.37,33515155203.37,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.07],23180247.25,23180247.25,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.07],142264292.31,142264292.31,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.10],1141556112.37,1141556112.37,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.10],4984801658.5,4984801658.5,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.13],120223380.11,120223380.11,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.13],358364674.33,358364674.33,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.20],697518526.9,697518526.9,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.20],2505067626.9,2505067626.9,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.21],1465541689.0,1465541689.0,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.21],4730337311.13,4730337311.13,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.22],3897396562.26,3897396562.26,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.22],23602938031.61,23602938031.61,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.23],1257647955.24,1257647955.24,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.23],5717360174.5199995,5717360174.52,-9.5367431640625e-07
+PASS,core: devex row: langsung+pinjaman=jumlah [P.24],632219262.37,632219262.37,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.24],2862109765.29,2862109765.29,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.25],28406770.5,28406770.5,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.25],156418010.6,156418010.6,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.27],3726518728.86,3726518728.86,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.27],13650965363.140001,13650965363.14,1.9073486328125e-06
+PASS,core: devex row: langsung+pinjaman=jumlah [P.28],2459939265.31,2459939265.31,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.28],13907754888.18,13907754888.18,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.29],1800772053.12,1800772053.12,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.29],6642166558.19,6642166558.19,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.30],338074839.74,338074839.74,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.30],1969154426.36,1969154426.36,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.31],246573945.63,246573945.63,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.31],1234816949.65,1234816949.65,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.32],878508919.84,878508919.84,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.32],3639181842.56,3639181842.56,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.41],4020143013.51,4020143013.51,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.41],21201616905.050003,21201616905.05,3.814697265625e-06
+PASS,core: devex row: langsung+pinjaman=jumlah [P.42],1389079700.52,1389079700.52,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.42],6849593986.690001,6849593986.69,9.5367431640625e-07
+PASS,core: devex row: langsung+pinjaman=jumlah [P.43],2150171934.99,2150171934.99,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.43],6043573881.69,6043573881.69,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.45],121383230.2,121383230.2,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.45],902181368.0300001,902181368.03,1.1920928955078125e-07
+PASS,core: devex row: langsung+pinjaman=jumlah [P.46],502503765.11,502503765.11,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.46],2292480540.31,2292480540.31,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.47],490214006.68,490214006.68,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.47],2452903496.81,2452903496.81,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.48],70289885.61,70289885.61,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.48],433727836.32,433727836.32,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.60],3152726081.99,3152726081.99,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.60],12480285624.47,12480285624.47,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.62],584143191.8,584143191.8,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.62],2786884596.46,2786884596.46,0.0
+PASS,core: devex row: langsung+pinjaman=jumlah [P.70],0.0,0.0,0.0
+PASS,core: devex row: terkumpul RMKe-10 = prior + sebenar 2014 [P.70],0.0,0.0,0.0
+PASS,core: cash: sum(terimaan items) 2014 = printed Jumlah Terimaan,330010464477.0,330010464477,0.0
+PASS,core: cash: sum(bayaran items) 2014 = printed Jumlah Bayaran,337634832390.0,337634832390,0.0
+PASS,core: cash: captured Jumlah Terimaan row 2014,330010464477.0,330010464477,0.0
+PASS,core: cash: captured Jumlah Bayaran row 2014,337634832390.0,337634832390,0.0
+PASS,core: cash: closing cash 2014 = printed,17426671072.0,17426671072,0.0
+PASS,core: cash: roll-forward opening+net=closing 2014,17426671072.0,17426671072,0.0
+PASS,core: cash: TERIMAAN/Hasil items sum = printed category total 2014,219075020760.0,219075020760,0.0
+PASS,core: cash: TERIMAAN/Hasil captured category-total row 2014,219075020760.0,219075020760,0.0
+PASS,core: cash: TERIMAAN/Pinjaman items sum = printed category total 2014,108809141548.0,108809141548,0.0
+PASS,core: cash: TERIMAAN/Pinjaman captured category-total row 2014,108809141548.0,108809141548,0.0
+PASS,core: cash: TERIMAAN/Bantuan Luar Negeri items sum = printed category total 2014,249284105.0,249284105,0.0
+PASS,core: cash: TERIMAAN/Bantuan Luar Negeri captured category-total row 2014,249284105.0,249284105,0.0
+PASS,core: cash: TERIMAAN/Terimaan Modal items sum = printed category total 2014,1712598183.0,1712598183,0.0
+PASS,core: cash: TERIMAAN/Terimaan Modal captured category-total row 2014,1712598183.0,1712598183,0.0
+PASS,core: cash: TERIMAAN/Terimaan Amanah items sum = printed category total 2014,164419881.0,164419881,0.0
+PASS,core: cash: TERIMAAN/Terimaan Amanah captured category-total row 2014,164419881.0,164419881,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Mengurus items sum = printed category total 2014,216490532784.0,216490532784,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Mengurus captured category-total row 2014,216490532784.0,216490532784,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Pembangunan items sum = printed category total 2014,39468595127.0,39468595127,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Pembangunan captured category-total row 2014,39468595127.0,39468595127,0.0
+PASS,core: cash: BAYARAN/Pinjaman items sum = printed category total 2014,65861587665.0,65861587665,0.0
+PASS,core: cash: BAYARAN/Pinjaman captured category-total row 2014,65861587665.0,65861587665,0.0
+PASS,core: cash: BAYARAN/Bantuan Luar Negeri items sum = printed category total 2014,625495418.0,625495418,0.0
+PASS,core: cash: BAYARAN/Bantuan Luar Negeri captured category-total row 2014,625495418.0,625495418,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Amanah items sum = printed category total 2014,15188621396.0,15188621396,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Amanah captured category-total row 2014,15188621396.0,15188621396,0.0
+PASS,core: cash: sum(terimaan items) 2013 = printed Jumlah Terimaan,328282501320.0,328282501320,0.0
+PASS,core: cash: sum(bayaran items) 2013 = printed Jumlah Bayaran,332587287519.0,332587287519,0.0
+PASS,core: cash: captured Jumlah Terimaan row 2013,328282501320.0,328282501320,0.0
+PASS,core: cash: captured Jumlah Bayaran row 2013,332587287519.0,332587287519,0.0
+PASS,core: cash: closing cash 2013 = printed,25051038985.0,25051038985,0.0
+PASS,core: cash: roll-forward opening+net=closing 2013,25051038985.0,25051038985,0.0
+PASS,core: cash: TERIMAAN/Hasil items sum = printed category total 2013,209152274939.0,209152274939,0.0
+PASS,core: cash: TERIMAAN/Hasil captured category-total row 2013,209152274939.0,209152274939,0.0
+PASS,core: cash: TERIMAAN/Pinjaman items sum = printed category total 2013,111357188482.0,111357188482,0.0
+PASS,core: cash: TERIMAAN/Pinjaman captured category-total row 2013,111357188482.0,111357188482,0.0
+PASS,core: cash: TERIMAAN/Bantuan Luar Negeri items sum = printed category total 2013,412652196.0,412652196,0.0
+PASS,core: cash: TERIMAAN/Bantuan Luar Negeri captured category-total row 2013,412652196.0,412652196,0.0
+PASS,core: cash: TERIMAAN/Terimaan Modal items sum = printed category total 2013,2157029761.0,2157029761,0.0
+PASS,core: cash: TERIMAAN/Terimaan Modal captured category-total row 2013,2157029761.0,2157029761,0.0
+PASS,core: cash: TERIMAAN/Terimaan Amanah items sum = printed category total 2013,5203355942.0,5203355942,0.0
+PASS,core: cash: TERIMAAN/Terimaan Amanah captured category-total row 2013,5203355942.0,5203355942,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Mengurus items sum = printed category total 2013,207752597154.0,207752597154,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Mengurus captured category-total row 2013,207752597154.0,207752597154,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Pembangunan items sum = printed category total 2013,42209801384.0,42209801384,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Pembangunan captured category-total row 2013,42209801384.0,42209801384,0.0
+PASS,core: cash: BAYARAN/Pinjaman items sum = printed category total 2013,73030098558.0,73030098558,0.0
+PASS,core: cash: BAYARAN/Pinjaman captured category-total row 2013,73030098558.0,73030098558,0.0
+PASS,core: cash: BAYARAN/Bantuan Luar Negeri items sum = printed category total 2013,621022819.0,621022819,0.0
+PASS,core: cash: BAYARAN/Bantuan Luar Negeri captured category-total row 2013,621022819.0,621022819,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Amanah items sum = printed category total 2013,8973767604.0,8973767604,0.0
+PASS,core: cash: BAYARAN/Perbelanjaan Amanah captured category-total row 2013,8973767604.0,8973767604,0.0
+PASS,core: cross: cash closing 2014 = position Wang Tunai,17426671072,17426671072.0,0.0
+PASS,core: cash: Hasil (cash) + Nota 5(a) reconciliation = Nota 5(a) JUMLAH HASIL,220625673356.0,220625673356,0.0
+PASS,core: debt: sum(DN instruments) 2014 = printed unlabelled DN subtotal,519452319000.0,519452319000,0.0
+PASS,core: debt: captured DN subtotal row 2014,519452319000.0,519452319000,0.0
+PASS,core: debt: sum(KWPP instruments) 2014 = printed unlabelled KWPP subtotal,46600000000.0,46600000000,0.0
+PASS,core: debt: Hutang Awam 2014 = printed,582828241281.0,582828241281,0.0
+PASS,core: debt: DN+KWPP+LN+BLN = Hutang 2014,582828241281.0,582828241281,0.0
+PASS,core: debt: PINJAMAN+BANTUAN = HUTANG 2014,582828241281.0,582828241281,0.0
+PASS,core: debt: DN subtotal + KWPP + Pinjaman Pasaran = PINJAMAN 2014,577521244000.0,577521244000.0,0.0
+PASS,core: cross: memo Hutang Awam = debt Hutang 2014,582828241281.0,582828241281,0.0
+PASS,core: debt: Pelbagai Liabiliti = memo 2014,318104801.0,318104801.0,0.0
+PASS,core: debt: sum(DN instruments) 2013 = printed unlabelled DN subtotal,481895000000.0,481895000000,0.0
+PASS,core: debt: captured DN subtotal row 2013,481895000000.0,481895000000,0.0
+PASS,core: debt: sum(KWPP instruments) 2013 = printed unlabelled KWPP subtotal,41200000000.0,41200000000,0.0
+PASS,core: debt: Hutang Awam 2013 = printed,539857759215.0,539857759215,0.0
+PASS,core: debt: DN+KWPP+LN+BLN = Hutang 2013,539857759215.0,539857759215,0.0
+PASS,core: debt: PINJAMAN+BANTUAN = HUTANG 2013,539857759215.0,539857759215,0.0
+PASS,core: debt: DN subtotal + KWPP + Pinjaman Pasaran = PINJAMAN 2013,533886300000.0,533886300000.0,0.0
+PASS,core: cross: memo Hutang Awam = debt Hutang 2013,539857759215.0,539857759215,0.0
+PASS,core: debt: Pelbagai Liabiliti = memo 2013,286624151.0,286624151.0,0.0
+PASS,core: memo: Pinjaman Boleh Dituntut 2014 = printed,99036023598.0,99036023598,0.0
+PASS,core: memo: Pelaburan 2014 = printed,29883017259.0,29883017259,0.0
+PASS,core: memo: Pinjaman Boleh Dituntut 2013 = printed,92444600374.0,92444600374,0.0
+PASS,core: memo: Pelaburan 2013 = printed,29679137799.0,29679137799,0.0
+PASS,core: trust row identity [Kumpulan Wang Pembangunan],-53911937389.0,-53911937389.0,0.0
+PASS,core: trust row identity [Kumpulan Wang Pinjaman Perumahan],1239537651.0,1239537651.0,0.0
+PASS,core: trust row identity [Pelbagai Kumpulan Wang Amanah Kera],23282336649.0,23282336649.0,0.0
+PASS,core: trust row identity [KUMPULAN WANG AMANAH KERAJAAN],-29390063089.0,-29390063089.0,0.0
+PASS,core: trust row identity [Kumpulan Wang Amanah Khas],675929420.0,675929420.0,0.0
+PASS,core: trust row identity [Kumpulan Wang Amanah Am],7903580164.0,7903580164.0,0.0
+PASS,core: trust row identity [KUMPULAN WANG AMANAH AWAM],8579509584.0,8579509584.0,0.0
+PASS,core: trust row identity [Deposit Am],9970547418.0,9970547418.0,0.0
+PASS,core: trust row identity [Deposit Pelarasan],226098223.0,226098223.0,0.0
+PASS,core: trust row identity [AKAUN DEPOSIT],10196645641.0,10196645641.0,0.0
+PASS,core: trust: sum(groups).baki_awal_rm = AKAUN AMANAH DISATUKAN,10840100391.0,10840100391.0,0.0
+PASS,core: trust: sum(groups).debit_rm = AKAUN AMANAH DISATUKAN,454581510422.0,454581510422.0,0.0
+PASS,core: trust: sum(groups).kredit_rm = AKAUN AMANAH DISATUKAN,433127502167.0,433127502167.0,0.0
+PASS,core: trust: sum(groups).baki_akhir_rm = AKAUN AMANAH DISATUKAN,-10613907864.0,-10613907864.0,0.0
+PASS,core: trust: closing = printed Nota 7 total 2014,-10613907864.0,-10613907864,0.0
+PASS,core: trust: opening = printed Nota 7 total 2013,10840100391.0,10840100391,0.0
+PASS,core: cross: trust closing = position Akaun Amanah 2014,-10613907864.0,-10613907864.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH KERAJAAN members.baki_awal_rm = group total,-9604908952.0,-9604908952.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH KERAJAAN members.debit_rm = group total,442141554792.0,442141554792.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH KERAJAAN members.kredit_rm = group total,422356400655.0,422356400655.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH KERAJAAN members.baki_akhir_rm = group total,-29390063089.0,-29390063089.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH AWAM members.baki_awal_rm = group total,10706769959.0,10706769959.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH AWAM members.debit_rm = group total,8489525011.0,8489525011.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH AWAM members.kredit_rm = group total,6362264636.0,6362264636.0,0.0
+PASS,core: trust: KUMPULAN WANG AMANAH AWAM members.baki_akhir_rm = group total,8579509584.0,8579509584.0,0.0
+PASS,core: trust: AKAUN DEPOSIT members.baki_awal_rm = group total,9738239384.0,9738239384.0,0.0
+PASS,core: trust: AKAUN DEPOSIT members.debit_rm = group total,3950430619.0,3950430619.0,0.0
+PASS,core: trust: AKAUN DEPOSIT members.kredit_rm = group total,4408836876.0,4408836876.0,0.0
+PASS,core: trust: AKAUN DEPOSIT members.baki_akhir_rm = group total,10196645641.0,10196645641.0,0.0
+PASS,core: opex_detail[anggaran_asal_rm]: maksud leaf sums = Nota 5(b) (49 maksud),49,49,0
+PASS,core: opex_detail[anggaran_asal_rm]: maksud leaf sums = printed JUMLAH maksud rows (49),49,49,0
+PASS,core: opex_detail[anggaran_jumlah_rm]: maksud leaf sums = Nota 5(b) (49 maksud),49,49,0
+PASS,core: opex_detail[anggaran_jumlah_rm]: maksud leaf sums = printed JUMLAH maksud rows (49),49,49,0
+PASS,core: opex_detail[sebenar_rm]: maksud leaf sums = Nota 5(b) (49 maksud),49,49,0
+PASS,core: opex_detail[sebenar_rm]: maksud leaf sums = printed JUMLAH maksud rows (49),49,49,0
+PASS,core: opex_detail[anggaran_asal_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups; 1 diagnosed printed code typos),1,1,0
+PASS,core: opex_detail[anggaran_asal_rm]: program leaf sums = printed Jumlah program (bad groups; 1 diagnosed printed code typo B.31),1,1,0
+PASS,core: opex_detail[anggaran_asal_rm]: B.31 'Jumlah 070000' typo residual = 170000 aktiviti sum,31930000.0,31930000.0,0.0
+PASS,core: opex_detail[anggaran_jumlah_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups; 2 diagnosed printed code typos),2,2,0
+PASS,core: opex_detail[anggaran_jumlah_rm]: program leaf sums = printed Jumlah program (bad groups; 1 diagnosed printed code typo B.31),1,1,0
+PASS,core: opex_detail[anggaran_jumlah_rm]: B.31 'Jumlah 070000' typo residual = 170000 aktiviti sum,35087665.0,35087665.0,0.0
+PASS,core: opex_detail[sebenar_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups; 2 diagnosed printed code typos),2,2,0
+PASS,core: opex_detail[sebenar_rm]: program leaf sums = printed Jumlah program (bad groups; 1 diagnosed printed code typo B.31),1,1,0
+PASS,core: opex_detail[sebenar_rm]: B.31 'Jumlah 070000' typo residual = 170000 aktiviti sum,34112918.84,34112918.84,0.0
+PASS,core: opex_detail[anggaran_asal_rm]: sum(jenis totals) = grand total,217651000000.0,217651000000.0,0.0
+PASS,core: opex_detail[anggaran_asal_rm]: sum(maksud totals) = grand total,217651000000.0,217651000000.0,0.0
+PASS,core: opex_detail[anggaran_jumlah_rm]: sum(jenis totals) = grand total,222081271970.0,222081271970.0,0.0
+PASS,core: opex_detail[anggaran_jumlah_rm]: sum(maksud totals) = grand total,222081271970.0,222081271970.0,0.0
+PASS,core: opex_detail[sebenar_rm]: sum(jenis totals) = grand total,220625673355.87,220625673355.87,0.0
+PASS,core: opex_detail[sebenar_rm]: sum(maksud totals) = grand total,220625673355.87,220625673355.87,0.0
+PASS,core: opex_detail: grand total sebenar = printed Lampiran 1 (sen),220625673355.87,220625673355.87,0.0
+PASS,core: opex_detail: grand total sebenar = Nota total (rounded),220625673355.87,220625673356,-0.1300048828125
+PASS,core: opex_detail: jenis totals sebenar = printed Tanggungan+Bekalan,220625673355.87,220625673356,-0.1300048828125
+PASS,core: opex_detail[anggaran_tambahan_rm]: not printed in the 2014 4-column layout (populated rows),0,0,0
+PASS,core: opex_detail[viremen_rm]: not printed in the 2014 4-column layout (populated rows),0,0,0
+PASS,core: opex_detail[varian_rm]: not printed in the 2014 4-column layout (populated rows),0,0,0
+PASS,core: devex_project[kos_keseluruhan_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[kos_keseluruhan_rm]: ministry totals sum = grand total,443346767095.54004,443346767095.54,6.103515625e-05
+PASS,core: devex_project[terkumpul_rmke10_prior_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[terkumpul_rmke10_prior_rm]: ministry totals sum = grand total,135558617616.48999,135558617616.49,-1.52587890625e-05
+PASS,core: devex_project[anggaran_langsung_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[anggaran_langsung_rm]: ministry totals sum = grand total,40274389221.0,40274389221.0,0.0
+PASS,core: devex_project[anggaran_pinjaman_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[anggaran_pinjaman_rm]: ministry totals sum = grand total,1889042710.0,1889042710.0,0.0
+PASS,core: devex_project[anggaran_jumlah_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[anggaran_jumlah_rm]: ministry totals sum = grand total,42163431931.0,42163431931.0,0.0
+PASS,core: devex_project[sebenar_langsung_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[sebenar_langsung_rm]: ministry totals sum = grand total,37624076538.98001,37624076538.98,7.62939453125e-06
+PASS,core: devex_project[sebenar_pinjaman_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[sebenar_pinjaman_rm]: ministry totals sum = grand total,1879410857.0,1879410857.0,0.0
+PASS,core: devex_project[sebenar_jumlah_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[sebenar_jumlah_rm]: ministry totals sum = grand total,39503487395.98,39503487395.98,0.0
+PASS,core: devex_project[terkumpul_rmke10_rm]: project sums = ministry totals (26),26,26,0
+PASS,core: devex_project[terkumpul_rmke10_rm]: ministry totals sum = grand total,175062105012.47,175062105012.47,0.0
+PASS,core: devex_project: grand total = printed (sen),39503487395.98,39503487395.98,0.0
+PASS,core: devex_project: per-project identities (0 failures; RMKe-10: prior+sebenar=terkumpul),0,0,0
+PASS,core: timeseries: covers 2005-2014 (10 years),10,10,0
+PASS,core: timeseries: min year 2005,2005,2005,0
+PASS,core: timeseries: max year 2014,2014,2014,0
+PASS,core: timeseries: Jumlah Hasil 2014 = warehouse (RM juta),220626.0,220626,0.0
+PASS,core: timeseries: Wang Tunai 2014 = warehouse (RM juta),17427.0,17427,0.0
+PASS,core: timeseries: Akaun Amanah Disatukan 2014 = warehouse (RM juta),-10614.0,-10614,0.0
+PASS,core: timeseries: Jumlah Hutang Awam 2014 = warehouse (RM juta),582828.0,582828,0.0
+PASS,core: timeseries: Jumlah Pinjaman Boleh Dituntut 2014 = warehouse (RM juta),99036.0,99036,0.0
+PASS,core: timeseries xfoot [Wang Awam -> Jumlah Wang Awam] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Kumpulan Wang Disatukan -> Jumlah Kumpulan Wang Disatukan] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Punca Dana -> Jumlah Punca Dana] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Penggunaan Dana -> Jumlah Penggunaan Dana] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Hasil -> Jumlah Hasil] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Perbelanjaan Mengurus -> Jumlah Perbelanjaan Mengurus] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Terimaan Pinjaman Dalam Negeri -> Jumlah Terimaan Pinjaman Dalam Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Terimaan Pinjaman Luar Negeri -> Jumlah Terimaan Pinjaman Luar Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Bayaran Balik Dalam Negeri -> Jumlah Bayaran Balik Dalam Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Bayaran Balik Luar Negeri -> Jumlah Bayaran Balik Luar Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Pinjaman Bersih Dalam Negeri -> Jumlah Pinjaman Bersih Dalam Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Pinjaman Bersih Luar Negeri -> Jumlah Pinjaman Bersih Luar Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Wang Tunai -> Jumlah Wang Tunai] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Pelaburan -> Jumlah Pelaburan] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Pinjaman Boleh Dituntut -> Jumlah Pinjaman Boleh Dituntut] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Kewangan -> Lebihan/(Kurangan) Keseluruhan] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Perubahan Dalam Modal Kerja -> Tambahan/(Kurangan) Modal Kerja] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Dibiayai oleh: -> Jumlah] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Kumpulan Wang Pembangunan / Penerimaan -> Jumlah Penerimaan] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Kumpulan Wang Pembangunan / Perbelanjaan Pembangunan -> Jumlah Pembayaran] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Hutang Awam Dalam Negeri -> Jumlah Hutang Awam Dalam Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Hutang Awam Luar Negeri -> Jumlah Hutang Awam Luar Negeri] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Jaminan -> Jumlah Jaminan] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Jumlah Terimaan Pinjaman = DN+LN] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Jumlah Bayaran Balik = DN+LN] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Jumlah Pinjaman Bersih = DN+LN] all 10 years (bad years),0,0,0
+PASS,core: timeseries xfoot [Jumlah Hutang Awam = DN+LN] all 10 years (bad years),0,0,0
+PASS,core: timeseries identity [Akaun Hasil roll] all 10 years (bad years),0,0,0
+PASS,core: timeseries identity [Akaun Pinjaman roll] all 10 years (bad years),0,0,0
+PASS,core: timeseries roll [Akaun Hasil Disatukan] opening=prior closing (bad years; 0 diagnosed printed inconsistency),0,0,0
+PASS,core: timeseries roll [Akaun Pinjaman Disatukan] opening=prior closing (bad years; 0 diagnosed printed inconsistency),0,0,0
+PASS,core: timeseries roll [Akaun Amanah Disatukan] opening=prior closing (bad years; 0 diagnosed printed inconsistency),0,0,0
+PASS,core: timeseries roll [Kumpulan Wang Pembangunan] opening=prior closing (bad years; 0 diagnosed printed inconsistency),0,0,0
+PASS,core: timeseries roll [Kumpulan Wang Pinjaman Perumahan] opening=prior closing (bad years; 0 diagnosed printed inconsistency),0,0,0
+PASS,core: timeseries roll [Pelbagai Kumpulan Wang Amanah Kerajaan] opening=prior closing (bad years; 1 diagnosed printed inconsistency),1,1,0
+PASS,core: timeseries roll [Kumpulan Wang Amanah Awam] opening=prior closing (bad years; 0 diagnosed printed inconsistency),0,0,0
+PASS,core: timeseries roll [Wang Deposit] opening=prior closing (bad years; 1 diagnosed printed inconsistency),1,1,0
+PASS,core: nota5stmt: hasil components sum = Jumlah Hasil 2014,220625673356.0,220625673356.0,0.0
+PASS,core: nota5stmt: opex object components sum = Jumlah sebelum pindahan 2014,219589142572.0,219589142572.0,0.0
+PASS,core: nota5stmt: sebelum + pindahan = selepas pindahan 2014,220625673356.0,220625673356.0,0.0
+PASS,core: nota5stmt: hasil = perf revenue 2014,220625673356.0,220625673356,0.0
+PASS,core: nota5stmt: opex sebelum pindahan = perf opex 2014,219589142572.0,219589142572,0.0
+PASS,core: nota5stmt: baki roll-forward 2014,11863127086.0,11863127086.0,0.0
+PASS,core: nota5stmt: hasil components sum = Jumlah Hasil 2013,213370213558.0,213370213558.0,0.0
+PASS,core: nota5stmt: opex object components sum = Jumlah sebelum pindahan 2013,211270336793.0,211270336793.0,0.0
+PASS,core: nota5stmt: sebelum + pindahan = selepas pindahan 2013,213370213558.0,213370213558.0,0.0
+PASS,core: nota5stmt: hasil = perf revenue 2013,213370213558.0,213370213558,0.0
+PASS,core: nota5stmt: opex sebelum pindahan = perf opex 2013,211270336793.0,211270336793,0.0
+PASS,core: nota5stmt: baki roll-forward 2013,11863127086.0,11863127086.0,0.0
+PASS,"core: nota5stmt: Akaun Hasil balance fixed at 11,863,127,086 since 1996",11863127086.0,11863127086,0.0
+PASS,core: cross: Nota 6 closing = position Akaun Pinjaman 2014,39592120099.0,39592120099.0,0.0
+PASS,core: cross: Nota 6 closing = position Akaun Pinjaman 2013,26380357864.0,26380357864.0,0.0
+PASS,core: devex: program subtotals matched by linked project sums,0,0,0
+PASS,core: devex: verified program-linkage groups >= 30,1,1,0
+PASS,core: cross: Nota7(a)(i) closing = Nota 7 table KWP closing,-53911937389.0,-53911937389.0,0.0
+PASS,core: cross: Nota7(a)(ii) closing = Nota 7 table KWPP closing,1239537651.0,1239537651.0,0.0
+PASS,core: cross: Nota7(a)(iii) total = Nota 7 table PKWAK closing,23282336649.0,23282336649.0,0.0
+PASS,core: cross: Nota7(b) total = Nota 7 table KWAA closing,8579509584.0,8579509584.0,0.0
+PASS,core: cross: Nota7(c) total = Nota 7 table Deposit closing,10196645641.0,10196645641.0,0.0
+PASS,core: cross: Nota7(a)(i) Jumlah Bayaran = perf Belanja Pembangunan 2014,39503487396.0,39503487396,0.0
+PASS,core: lampiran1: jumlah_aktiviti rows not matching their own leaf sum (all diagnosed),0,0,0
+DIAGNOSIS,"core: lampiran1 aktiviti-code printed typos (B.07 pdf 111, B.11 pdf 128): B.07: aktiviti 050500 MyWIN Academy's total prints as 'Jumlah 050400'; B.11: aktiviti 023400 (NBOS)'s total prints as 'Jumlah 023300'. Both verified against the blocks' own printed leaves; kept as printed",,,
+DIAGNOSIS,"core: lampiran1 program-code printed typo (B.31, pdf 185): the 'ONE-OFF' program 170000's total prints as 'Jumlah 070000', colliding with the MUZIUM 070000 program earlier in B.31; residual equals the 170000 aktiviti sum exactly; kept as printed",,,
+DIAGNOSIS,"core: lampiran1 duplicate printed aktiviti code (B.22, pdf 149): two consecutive activities both print code 120600 ('NKRA - Education' and 'NBOS - RTC'); each block's Jumlah 120600 foots against its own leaves and the code-level aggregate agrees; kept as printed",,,
+DIAGNOSIS,"core: lampiran1 5-digit aktiviti code (B.24, pdf 158): aktiviti header prints '80100 Perbadanan Perusahaan Kecil dan Sederhana Malaysia (SME Corp. Malaysia)' with the leading zero dropped; read as 080100 (its Jumlah row prints 'Jumlah 080100'), flagged here",,,
+DIAGNOSIS,"core: timeseries 2007/2008 RM350 juta printed panel inconsistency: the 10-year panel prints Pelbagai KWAK closing 2007 = 21,278 vs opening 2008 = 20,928 and Wang Deposit closing 2007 = 6,287 vs opening 2008 = 6,637 (RM350 juta moved between the two lines at the boundary); both kept as printed",,,
+DIAGNOSIS,"core: lampiran1 omitted program headers on continuation pages (3 blocks): aktiviti 010200 (T.12, pdf 82), 280100 (B.06, pdf 103) and 040100 (B.32, pdf 186) print without their program header on the continuation page; program inferred from the code prefix and back-filled, reported",,,
+DIAGNOSIS,"core: lampiran1 bare object code (B.62, pdf 242): an object row prints its 5-digit code '30000' with NO class name; the row's figures foot inside their aktiviti; objek_class taken from the standard chart of accounts and flagged here, figures kept as printed",,,
+DIAGNOSIS,"core: lampiran2 sparse right-page row (Rancangan Bekalan Air Negeri Terengganu, pdf 260): six of seven value cells print BLANK (not even a dash); only terkumpul RMKe-10 prints (51,476,481.00 = the prior cumulative; project complete, no 2014 activity); blanks resolved as 0.0 by column x-position and the per-row identities, flagged here",,,
+DIAGNOSIS,"core: lampiran2 blank Kos Keseluruhan cell (P.62 butiran 47000, pdf 271): the Kos Keseluruhan cell prints blank; kept as 0.0 (print omission), row otherwise foots",,,
+DIAGNOSIS,"core: lampiran2 P.62 RM10 pendahuluan rows (printed Nota): printed note: P.62 butiran 03000, 05000 dan 36000 carry RM10 token provisions to be tabled in the 2015 parliamentary session, dimasuk kira sebagai pendahuluan - rows kept exactly as printed with has_footnote",,,
+DIAGNOSIS,"core: cash statement Hasil Bukan Cukai vs Nota 5(a) (printed, explained in Nota 5(a)): cash-basis Hasil Bukan Cukai 52,348,131,946 differs from Nota 5(a) 53,898,784,542 by 1,550,652,596 = Akaun Premium TPK 1,550,000,000 + pelarasan pinjaman Kerajaan Negeri 123,101 + pelarasan LAD 529,495; both kept as printed, reconciliation captured in fact_other_notes",,,
+DIAGNOSIS,"core: cash statement vs Nota 6 Bilateral figures (declared non-cash transactions): Nota 6 prints Bilateral Terimaan 247,564,982 vs cash 222,744,257 (diff 24,820,725 non-cash loan-drawdown adjustment) and Bayaran (524,557,514) vs cash 516,480,465 (diff 8,077,049 non-cash repayment); both kept as printed in their own tables",,,
+DIAGNOSIS,"core: cash statement devex vs prestasi/KWP devex (declared non-cash transactions): cash statement Perbelanjaan Pembangunan 39,468,595,127 vs prestasi/Nota 7(a)(i) 39,503,487,396: printed difference 34,892,269 = 24,820,725 non-cash loan disbursement + 10,071,544 APKPS non-cash adjustments",,,
+DIAGNOSIS,"core: Nota 6 prestasi financing figure RM1 rounding: 68,968,444,110 - 26,380,357,864 - 5,400,000,000 = 37,188,086,246 vs the printed prestasi Pinjaman dan Bantuan Luar Negeri 37,188,086,245: RM1 difference consistent with the volume's declared rounding (Nota 1(i))",,,
+DIAGNOSIS,"core: Nota 8(a) declared restatement of the 2013 Pinjaman Boleh Dituntut comparative: 2013 Pinjaman Boleh Dituntut restated from 92,547,188,214 to 92,444,600,374 (forex revaluation of foreign-currency loans + reclassification of a borrower from Badan Berkanun to Syarikat) — declared in the volume, captured in fact_other_notes",,,
+DIAGNOSIS,core: Nota 4 declared reclassification of investment categories (Mulai tahun 2014): Saham reclassified into Sekuriti Tersiar/Tidak Tersiar Harga Dalam Negeri; Deposit Dalam Negeri split into short/long-term; 2013 comparatives restated to the new classification (declared in the volume),,,
+DIAGNOSIS,core: Nota 9(a) new KWPP financing split (Mulai tahun 2014): Pembiayaan Kumpulan Wang Pinjaman Perumahan newly split into Pinjaman Berjangka and Sukuk Perumahan Kerajaan (declared in the volume),,,
+DIAGNOSIS,"core: register absences in the 2014 volume (6 lampiran only): no Komitmen Jaminan register (fact_guarantees), no finance-lease disclosure (fact_finance_leases), no PFI tranche register, no Penyata Penyaluran Geran, no Komitmen Pampasan/Bayaran Balik Cukai disclosures; Nota 10 Liabiliti Luar Jangka gives two narrative totals only (fact_other_notes), and the Lampiran 6 Jaminan Berkanun register carries the full guarantee detail (fact_statutory_guarantees)",,,
+PASS,memoranda: loans: KERAJAAN NEGERI detail=baki_belum_selesai_rm = Jumlah KERAJAAN NEGERI (2014),16470077891.280003,16470077891.28,1.9073486328125e-06
+PASS,memoranda: loans: KERAJAAN NEGERI detail=pembangunan_rm = Jumlah KERAJAAN NEGERI (2014),15278085357.009998,15278085357.01,-1.9073486328125e-06
+PASS,memoranda: loans: KERAJAAN NEGERI detail=hasil_disatukan_rm = Jumlah KERAJAAN NEGERI (2014),91200550.21000001,91200550.21,1.4901161193847656e-08
+PASS,memoranda: loans: KERAJAAN NEGERI detail=amanah_lain_rm = Jumlah KERAJAAN NEGERI (2014),1100791984.0600002,1100791984.06,2.384185791015625e-07
+PASS,memoranda: loans: PIHAK BERKUASA TEMPATAN detail=baki_belum_selesai_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),451005220.94,451005220.94,0.0
+PASS,memoranda: loans: PIHAK BERKUASA TEMPATAN detail=pembangunan_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),398757214.45,398757214.45,0.0
+PASS,memoranda: loans: PIHAK BERKUASA TEMPATAN detail=hasil_disatukan_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),52248006.489999995,52248006.49,-7.450580596923828e-09
+PASS,memoranda: loans: PIHAK BERKUASA TEMPATAN detail=amanah_lain_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),0.0,0.0,0.0
+PASS,memoranda: loans: BADAN BERKANUN detail=baki_belum_selesai_rm = Jumlah BADAN BERKANUN (2014),6820864168.240001,6820864168.24,9.5367431640625e-07
+PASS,memoranda: loans: BADAN BERKANUN detail=pembangunan_rm = Jumlah BADAN BERKANUN (2014),5133226688.2,5133226688.2,0.0
+PASS,memoranda: loans: BADAN BERKANUN detail=hasil_disatukan_rm = Jumlah BADAN BERKANUN (2014),481426234.07000005,481426234.07,5.960464477539063e-08
+PASS,memoranda: loans: BADAN BERKANUN detail=amanah_lain_rm = Jumlah BADAN BERKANUN (2014),1206211245.97,1206211245.97,0.0
+PASS,memoranda: loans: KOPERASI detail=baki_belum_selesai_rm = Jumlah KOPERASI (2014),158302635.39,158302635.39,0.0
+PASS,memoranda: loans: KOPERASI detail=pembangunan_rm = Jumlah KOPERASI (2014),6120210.0,6120210.0,0.0
+PASS,memoranda: loans: KOPERASI detail=hasil_disatukan_rm = Jumlah KOPERASI (2014),5585595.24,5585595.24,0.0
+PASS,memoranda: loans: KOPERASI detail=amanah_lain_rm = Jumlah KOPERASI (2014),146596830.15,146596830.15,0.0
+PASS,memoranda: loans: SYARIKAT detail=baki_belum_selesai_rm = Jumlah SYARIKAT (2014),28856676215.31,28856676215.31,0.0
+PASS,memoranda: loans: SYARIKAT detail=pembangunan_rm = Jumlah SYARIKAT (2014),17492007790.739998,17492007790.74,-3.814697265625e-06
+PASS,memoranda: loans: SYARIKAT detail=hasil_disatukan_rm = Jumlah SYARIKAT (2014),2631546789.0499997,2631546789.05,-4.76837158203125e-07
+PASS,memoranda: loans: SYARIKAT detail=amanah_lain_rm = Jumlah SYARIKAT (2014),8733121635.52,8733121635.52,0.0
+PASS,memoranda: loans: PERSEORANGAN detail=baki_belum_selesai_rm = Jumlah PERSEORANGAN (2014),44061429757.73,44061429757.73,0.0
+PASS,memoranda: loans: PERSEORANGAN detail=pembangunan_rm = Jumlah PERSEORANGAN (2014),0.0,0.0,0.0
+PASS,memoranda: loans: PERSEORANGAN detail=hasil_disatukan_rm = Jumlah PERSEORANGAN (2014),0.0,0.0,0.0
+PASS,memoranda: loans: PERSEORANGAN detail=amanah_lain_rm = Jumlah PERSEORANGAN (2014),44061429757.73,44061429757.73,0.0
+PASS,memoranda: loans: PELBAGAI detail=baki_belum_selesai_rm = Jumlah PELBAGAI (2014),2217667709.6800003,2217667709.68,4.76837158203125e-07
+PASS,memoranda: loans: PELBAGAI detail=pembangunan_rm = Jumlah PELBAGAI (2014),772367709.68,772367709.68,0.0
+PASS,memoranda: loans: PELBAGAI detail=hasil_disatukan_rm = Jumlah PELBAGAI (2014),0.0,0.0,0.0
+PASS,memoranda: loans: PELBAGAI detail=amanah_lain_rm = Jumlah PELBAGAI (2014),1445300000.0,1445300000.0,0.0
+PASS,memoranda: loans: sum(category subtotals)=baki_belum_selesai_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),99036023598.57,99036023598.57,0.0
+PASS,memoranda: loans: sum(category subtotals)=pembangunan_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),39080564970.08,39080564970.08,0.0
+PASS,memoranda: loans: sum(category subtotals)=hasil_disatukan_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),3262007175.0600004,3262007175.06,4.76837158203125e-07
+PASS,memoranda: loans: sum(category subtotals)=amanah_lain_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),56693451453.43001,56693451453.43,7.62939453125e-06
+PASS,memoranda: loans: KERAJAAN NEGERI detail=baki_belum_selesai_rm = Jumlah KERAJAAN NEGERI (2013),15940499634.240004,15940499634.24,3.814697265625e-06
+PASS,memoranda: loans: PIHAK BERKUASA TEMPATAN detail=baki_belum_selesai_rm = Jumlah PIHAK BERKUASA TEMPATAN (2013),457717393.28000003,457717393.28,5.960464477539063e-08
+PASS,memoranda: loans: BADAN BERKANUN detail=baki_belum_selesai_rm = Jumlah BADAN BERKANUN (2013),6655453658.090001,6655453658.09,9.5367431640625e-07
+PASS,memoranda: loans: KOPERASI detail=baki_belum_selesai_rm = Jumlah KOPERASI (2013),178271903.98000002,178271903.98,2.9802322387695312e-08
+PASS,memoranda: loans: SYARIKAT detail=baki_belum_selesai_rm = Jumlah SYARIKAT (2013),29624251367.19,29624251367.19,0.0
+PASS,memoranda: loans: PERSEORANGAN detail=baki_belum_selesai_rm = Jumlah PERSEORANGAN (2013),36460363861.200005,36460363861.2,7.62939453125e-06
+PASS,memoranda: loans: PELBAGAI detail=baki_belum_selesai_rm = Jumlah PELBAGAI (2013),3128042555.7799997,3128042555.78,-4.76837158203125e-07
+PASS,memoranda: loans: sum(category subtotals)=baki_belum_selesai_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2013),92444600373.76,92444600373.76,0.0
+PASS,memoranda: loans: pembangunan+hasil+amanah_lain = baki 2014 on every detail row (violations),0.0,0.0,0.0
+PASS,"memoranda: loans: grand total 2014 = printed 99,036,023,598.57",99036023598.57,99036023598.57,0.0
+PASS,"memoranda: loans: grand total 2013 = printed 92,444,600,373.76",92444600373.76,92444600373.76,0.0
+PASS,"memoranda: loans: grand pembangunan 2014 = printed 39,080,564,970.08",39080564970.08,39080564970.08,0.0
+PASS,"memoranda: loans: grand hasil disatukan 2014 = printed 3,262,007,175.06",3262007175.06,3262007175.06,0.0
+PASS,"memoranda: loans: grand amanah lain 2014 = printed 56,693,451,453.43",56693451453.43,56693451453.43,0.0
+PASS,memoranda: loans: grand total 2014 = Nota 8 Pinjaman Boleh Dituntut (rounded RM),99036023599.0,99036023599.0,0.0
+PASS,"memoranda: loans: Jumlah Kerajaan Negeri 2014 = printed 16,470,077,891.28 (= Nota 8 rounded)",16470077891.28,16470077891.28,0.0
+PASS,memoranda: loans: Jumlah Kerajaan Negeri 2014 = Nota 8 (rounded RM),16470077891.0,16470077891.0,0.0
+PASS,memoranda: loans: Jumlah Pihak Berkuasa Tempatan 2014 = Nota 8 (rounded RM),451005221.0,451005221.0,0.0
+PASS,memoranda: loans: Jumlah Badan Berkanun 2014 = Nota 8 (rounded RM),6820864168.0,6820864168.0,0.0
+PASS,memoranda: loans: Jumlah Koperasi 2014 = Nota 8 (rounded RM),158302635.0,158302635.0,0.0
+PASS,memoranda: loans: Jumlah Syarikat 2014 = Nota 8 (rounded RM),28856676215.0,28856676215.0,0.0
+PASS,memoranda: loans: Jumlah Perseorangan 2014 = Nota 8 (rounded RM),44061429758.0,44061429758.0,0.0
+PASS,memoranda: loans: Jumlah Pelbagai 2014 = Nota 8 (rounded RM),2217667710.0,2217667710.0,0.0
+PASS,memoranda: investments: AGENSI ANTARABANGSA details = Jumlah Agensi Antarabangsa (2014),38574228.53,38574228.53,0.0
+PASS,memoranda: investments: BADAN BERKANUN details = Jumlah Badan Berkanun (2014),1218852876.4499998,1218852876.45,-2.384185791015625e-07
+PASS,memoranda: investments: SYARIKAT details = Jumlah Syarikat (2014),28625590153.739998,28625590153.74,-3.814697265625e-06
+PASS,memoranda: investments: sum(section subtotals) = JUMLAH PELABURAN (2014),29883017258.72,29883017258.72,0.0
+PASS,memoranda: investments: AGENSI ANTARABANGSA details = Jumlah Agensi Antarabangsa (2013),38574228.53,38574228.53,0.0
+PASS,memoranda: investments: BADAN BERKANUN details = Jumlah Badan Berkanun (2013),1218852876.4499998,1218852876.45,-2.384185791015625e-07
+PASS,memoranda: investments: SYARIKAT details = Jumlah Syarikat (2013),28421710693.739998,28421710693.74,-3.814697265625e-06
+PASS,memoranda: investments: sum(section subtotals) = JUMLAH PELABURAN (2013),29679137798.72,29679137798.72,0.0
+PASS,"memoranda: investments: Jumlah Syarikat 2014 = printed 28,625,590,153.74",28625590153.74,28625590153.74,0.0
+PASS,"memoranda: investments: JUMLAH PELABURAN 2014 = printed 29,883,017,258.72",29883017258.72,29883017258.72,0.0
+PASS,"memoranda: investments: JUMLAH PELABURAN 2013 = printed 29,679,137,798.72",29679137798.72,29679137798.72,0.0
+PASS,memoranda: investments: JUMLAH PELABURAN 2014 = Nota 8(b) (rounded RM),29883017259.0,29883017259.0,0.0
+PASS,memoranda: debt: TERBITAN PELABURAN KERAJAAN series sum = printed Jumlah,185500000000.0,185500000000.0,0.0
+PASS,memoranda: debt: TERBITAN PELABURAN KERAJAAN = control (Nota 9(a)),185500000000.0,185500000000.0,0.0
+PASS,memoranda: debt: TERBITAN PELABURAN KERAJAAN dibenarkan sum = printed Jumlah,185500000000.0,185500000000.0,0.0
+PASS,memoranda: debt: TERBITAN PELABURAN KERAJAAN dibenarkan = printed control,185500000000.0,185500000000.0,0.0
+PASS,memoranda: debt: SEKURITI KERAJAAN MALAYSIA series sum = printed Jumlah,329632319000.0,329632319000.0,0.0
+PASS,memoranda: debt: SEKURITI KERAJAAN MALAYSIA = control (Nota 9(a)),329632319000.0,329632319000.0,0.0
+PASS,memoranda: debt: SEKURITI KERAJAAN MALAYSIA dibenarkan sum = printed Jumlah,335897195000.0,335897195000.0,0.0
+PASS,memoranda: debt: SEKURITI KERAJAAN MALAYSIA dibenarkan = printed control,335897195000.0,335897195000.0,0.0
+PASS,memoranda: debt: PINJAMAN PASARAN series sum = printed Jumlah,11468925000.0,11468925000.0,0.0
+PASS,"memoranda: debt: PINJAMAN PASARAN = control 11,468,925,000 (Nota 9(a))",11468925000.0,11468925000.0,0.0
+PASS,memoranda: debt: PINJAMAN PASARAN USD sum = printed Jumlah (USD 3.25b),3250000000.0,3250000000.0,0.0
+PASS,"memoranda: debt: PINJAMAN PASARAN USD control 3,250,000,000.00",3250000000.0,3250000000.0,0.0
+PASS,memoranda: debt: Bil Perbendaharaan = control 4.32b,4320000000.0,4320000000.0,0.0
+PASS,memoranda: debt: BP+TPK+SKM = Jumlah Dalam Negeri,519452319000.0,519452319000.0,0.0
+PASS,"memoranda: debt: Jumlah Dalam Negeri = control 519,452,319,000 (Nota 9(a))",519452319000.0,519452319000.0,0.0
+PASS,memoranda: debt: KWPP financing rows sum = printed Jumlah KWPP,46600000000.0,46600000000.0,0.0
+PASS,"memoranda: debt: Jumlah KWPP = control 46,600,000,000 (Nota 9(a))",46600000000.0,46600000000.0,0.0
+PASS,memoranda: debt: KWPP dibenarkan sum = printed Jumlah (41.2b),41200000000.0,41200000000.0,0.0
+PASS,memoranda: debt: Jumlah Pinjaman Pasaran = Jumlah Luar Negeri,11468925000.0,11468925000.0,0.0
+PASS,memoranda: debt: Dalam + KWPP + Luar = JUMLAH PINJAMAN,577521244000.0,577521244000.0,0.0
+PASS,"memoranda: debt: JUMLAH PINJAMAN = control 577,521,244,000",577521244000.0,577521244000.0,0.0
+PASS,memoranda: debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_dibenarkan_fx),258588177.04000002,258588177.04,2.9802322387695312e-08
+PASS,memoranda: debt/BLN: Bank Pembangunan Islam details = Jumlah (terkumpul_keluaran_fx),165794119.47000003,165794119.47,2.9802322387695312e-08
+PASS,memoranda: debt/BLN: Bank Pembangunan Islam details = Jumlah (terkumpul_bayaran_balik_fx),88803119.77,88803119.77,0.0
+PASS,memoranda: debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_belum_selesai_fx),76990999.7,76990999.7,0.0
+PASS,"memoranda: debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_belum_selesai_rm) [printed 1-sen rounding diagnosed: rows 389,620,653.07 vs Jumlah 389,620,653.08]",389620653.07,389620653.08,-0.009999990463256836
+PASS,memoranda: debt/BLN: Bank Pembangunan Asia details = Jumlah (amaun_dibenarkan_fx),225738373.14,225738373.14,0.0
+PASS,memoranda: debt/BLN: Bank Pembangunan Asia details = Jumlah (terkumpul_keluaran_fx),225738373.14,225738373.14,0.0
+PASS,memoranda: debt/BLN: Bank Pembangunan Asia details = Jumlah (terkumpul_bayaran_balik_fx),150208476.86,150208476.86,0.0
+PASS,memoranda: debt/BLN: Bank Pembangunan Asia details = Jumlah (amaun_belum_selesai_fx),75529896.28,75529896.28,0.0
+PASS,memoranda: debt/BLN: Bank Pembangunan Asia details = Jumlah (amaun_belum_selesai_rm),266537450.98,266537450.98,0.0
+PASS,memoranda: debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_dibenarkan_fx),5900000.0,5900000.0,0.0
+PASS,memoranda: debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (terkumpul_keluaran_fx),5900000.0,5900000.0,0.0
+PASS,memoranda: debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (terkumpul_bayaran_balik_fx),548837.2,548837.2,0.0
+PASS,memoranda: debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_belum_selesai_fx),5351162.8,5351162.8,0.0
+PASS,memoranda: debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_belum_selesai_rm),18883718.4,18883718.4,0.0
+PASS,memoranda: debt/BLN: Kerajaan Kanada details = Jumlah (amaun_dibenarkan_fx),2517399.15,2517399.15,0.0
+PASS,memoranda: debt/BLN: Kerajaan Kanada details = Jumlah (terkumpul_keluaran_fx),2517399.15,2517399.15,0.0
+PASS,memoranda: debt/BLN: Kerajaan Kanada details = Jumlah (terkumpul_bayaran_balik_fx),1443723.63,1443723.63,0.0
+PASS,memoranda: debt/BLN: Kerajaan Kanada details = Jumlah (amaun_belum_selesai_fx),1073675.52,1073675.52,0.0
+PASS,memoranda: debt/BLN: Kerajaan Kanada details = Jumlah (amaun_belum_selesai_rm),3265798.83,3265798.83,0.0
+PASS,memoranda: debt/BLN: Kerajaan Perancis details = Jumlah (amaun_dibenarkan_fx),166753048.39,166753048.39,0.0
+PASS,memoranda: debt/BLN: Kerajaan Perancis details = Jumlah (terkumpul_keluaran_fx),166753048.41,166753048.41,0.0
+PASS,memoranda: debt/BLN: Kerajaan Perancis details = Jumlah (terkumpul_bayaran_balik_fx),162031864.22,162031864.22,0.0
+PASS,memoranda: debt/BLN: Kerajaan Perancis details = Jumlah (amaun_belum_selesai_fx),4721184.1899999995,4721184.19,-9.313225746154785e-10
+PASS,memoranda: debt/BLN: Kerajaan Perancis details = Jumlah (amaun_belum_selesai_rm),20254352.28,20254352.28,0.0
+PASS,memoranda: debt/BLN: Japan Bank for International Cooperation details = Jumlah (amaun_dibenarkan_fx),107666467610.0,107666467610.0,0.0
+PASS,memoranda: debt/BLN: Japan Bank for International Cooperation details = Jumlah (terkumpul_keluaran_fx),85761646423.0,85761646423.0,0.0
+PASS,memoranda: debt/BLN: Japan Bank for International Cooperation details = Jumlah (terkumpul_bayaran_balik_fx),85761646423.0,85761646423.0,0.0
+PASS,memoranda: debt/BLN: Japan Bank for International Cooperation details = Jumlah (amaun_belum_selesai_fx),0.0,0.0,0.0
+PASS,memoranda: debt/BLN: Japan Bank for International Cooperation details = Jumlah (amaun_belum_selesai_rm),0.0,0.0,0.0
+PASS,memoranda: debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_dibenarkan_fx),241309017431.0,241309017431.0,0.0
+PASS,memoranda: debt/BLN: Japan International Cooperation Agency details = Jumlah (terkumpul_keluaran_fx),209089570337.0,209089570337.0,0.0
+PASS,memoranda: debt/BLN: Japan International Cooperation Agency details = Jumlah (terkumpul_bayaran_balik_fx),52977263176.0,52977263176.0,0.0
+PASS,memoranda: debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_belum_selesai_fx),156112307161.0,156112307161.0,0.0
+PASS,memoranda: debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_belum_selesai_rm),4608435307.400001,4608435307.4,9.5367431640625e-07
+PASS,memoranda: debt/BLN: multilateral lender subtotals = JUMLAH MULTILATERAL,656158104.06,656158104.06,0.0
+PASS,memoranda: debt/BLN: bilateral lender subtotals = JUMLAH BILATERAL,4650839176.91,4650839176.91,0.0
+PASS,memoranda: debt/BLN: MULTI + BI = JUMLAH BANTUAN LUAR NEGERI,5306997280.969999,5306997280.97,-9.5367431640625e-07
+PASS,"memoranda: debt/BLN: JUMLAH BANTUAN LUAR NEGERI = control 5,306,997,280.97",5306997280.97,5306997280.97,0.0
+PASS,"memoranda: debt/BLN: JUMLAH MULTILATERAL = control 656,158,104.06",656158104.06,656158104.06,0.0
+PASS,"memoranda: debt/BLN: JUMLAH BILATERAL = control 4,650,839,176.91",4650839176.91,4650839176.91,0.0
+PASS,"memoranda: debt: JUMLAH PINJAMAN + BLN = Nota 9 HUTANG AWAM 582,828,241,281 (rounded)",582828241280.97,582828241280.97,0.0
+PASS,"memoranda: statutory: pencarum details = JUMLAH (jumlah_rm,2014)",678015728835.25,678015728835.25,0.0
+PASS,"memoranda: statutory: pinjaman/Badan Berkanun details = Jumlah (jumlah_rm,2014)",38546418571.43,38546418571.43,0.0
+PASS,"memoranda: statutory: pinjaman/Syarikat details = Jumlah (jumlah_rm,2014)",133472995395.65999,133472995395.66,-1.52587890625e-05
+PASS,"memoranda: statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (jumlah_rm,2014)",172019413967.09,172019413967.09,0.0
+PASS,"memoranda: statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (jumlah_rm,2014)",850035142802.34,850035142802.34,0.0
+PASS,"memoranda: statutory: pencarum details = JUMLAH (dalam_negeri_rm,2014)",678015728835.25,678015728835.25,0.0
+PASS,"memoranda: statutory: pinjaman/Badan Berkanun details = Jumlah (dalam_negeri_rm,2014)",38546418571.43,38546418571.43,0.0
+PASS,"memoranda: statutory: pinjaman/Syarikat details = Jumlah (dalam_negeri_rm,2014)",129292149376.43,129292149376.43,0.0
+PASS,"memoranda: statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (dalam_negeri_rm,2014)",167838567947.86,167838567947.86,0.0
+PASS,"memoranda: statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (dalam_negeri_rm,2014)",845854296783.11,845854296783.11,0.0
+PASS,"memoranda: statutory: pencarum details = JUMLAH (luar_negeri_rm,2014)",0.0,0.0,0.0
+PASS,"memoranda: statutory: pinjaman/Badan Berkanun details = Jumlah (luar_negeri_rm,2014)",0.0,0.0,0.0
+PASS,"memoranda: statutory: pinjaman/Syarikat details = Jumlah (luar_negeri_rm,2014)",4180846019.23,4180846019.23,0.0
+PASS,"memoranda: statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (luar_negeri_rm,2014)",4180846019.23,4180846019.23,0.0
+PASS,"memoranda: statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (luar_negeri_rm,2014)",4180846019.23,4180846019.23,0.0
+PASS,"memoranda: statutory: pencarum details = JUMLAH (jumlah_rm,2013)",610908127026.43,610908127026.43,0.0
+PASS,"memoranda: statutory: pinjaman/Badan Berkanun details = Jumlah (jumlah_rm,2013)",35120464286.0,35120464286.0,0.0
+PASS,"memoranda: statutory: pinjaman/Syarikat details = Jumlah (jumlah_rm,2013)",122379448945.81999,122379448945.82,-1.52587890625e-05
+PASS,"memoranda: statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (jumlah_rm,2013)",157499913231.82,157499913231.82,0.0
+PASS,"memoranda: statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (jumlah_rm,2013)",768408040258.25,768408040258.25,0.0
+PASS,memoranda: statutory: dalam+luar = jumlah 2014 per row (violations),0.0,0.0,0.0
+PASS,"memoranda: statutory: JUMLAH JAMINAN 2014 = control 850,035,142,802.34",850035142802.34,850035142802.34,0.0
+PASS,"memoranda: statutory: JUMLAH JAMINAN 2013 = control 768,408,040,258.25",768408040258.25,768408040258.25,0.0
+PASS,"memoranda: statutory: pinjaman total 2014 = Nota 10(a) 172,019,413,967",172019413967.09,172019413967.09,0.0
+PASS,"memoranda: statutory: pencarum total 2014 = Nota 10(b) 678,015,728,835",678015728835.25,678015728835.25,0.0

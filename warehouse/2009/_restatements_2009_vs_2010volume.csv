@@ -1,0 +1,31 @@
+table,key,value_2009_volume,value_2010_volume,difference,note
+fact_financial_position,AKAUN AMANAH DISATUKAN,23312462754.0,23312462754.0,0.0,match
+fact_financial_position,AKAUN HASIL DISATUKAN,11863127086.0,11863127086.0,0.0,match
+fact_financial_position,AKAUN PINJAMAN DISATUKAN,8359953459.0,8359953459.0,0.0,match
+fact_financial_position,JUMLAH WANG AWAM,43535543299.0,43535543299.0,0.0,match
+fact_financial_position,PELABURAN,21813224825.0,16015424825.0,5797800000.0,RESTATED/diff
+fact_financial_position,WANG TUNAI,21722318474.0,27520118474.0,-5797800000.0,RESTATED/diff
+fact_cash_statement,Aset,-2581505478.0,2581505478.0,0.0,match
+fact_cash_statement,Emolumen,-42778266363.0,42778266363.0,0.0,match
+fact_cash_statement,Hasil Bukan Cukai,50789238902.0,50789238902.0,0.0,match
+fact_cash_statement,Hasil Cukai,106504411011.0,106504411011.0,0.0,match
+fact_cash_statement,Inisiatif Pembiayaan Swasta (PFI),-4291992718.0,4291992718.0,0.0,match
+fact_cash_statement,Jualan Aset Modal,1340.0,1340.0,0.0,match
+fact_cash_statement,Jumlah Bayaran,-266928818302.0,261805499350.0,5123318952.0,RESTATED/reclassified
+fact_cash_statement,Jumlah Hasil,158639304228.0,158639304228.0,0.0,match
+fact_cash_statement,Jumlah Perbelanjaan Mengurus,-157066959319.0,157066959319.0,0.0,match
+fact_cash_statement,Jumlah Perbelanjaan Pembangunan,-49515355571.0,49515355570.0,1.0,RESTATED/reclassified
+fact_cash_statement,Jumlah Pinjaman,107170716371.0,50031843144.0,57138873227.0,RESTATED/reclassified
+fact_cash_statement,Jumlah Terimaan,273249151048.0,273923632097.0,-674481049.0,RESTATED/reclassified
+fact_cash_statement,Jumlah Terimaan Lain,6917440872.0,6917440872.0,0.0,match
+fact_cash_statement,Jumlah Terimaan Modal,521689577.0,1196170626.0,-674481049.0,RESTATED/reclassified
+fact_cash_statement,Langsung,-45294239673.0,45294239672.0,1.0,RESTATED/reclassified
+fact_cash_statement,Pelbagai Terimaan Modal,2900657.0,2900658.0,-1.0,RESTATED/reclassified
+fact_cash_statement,Pembelian Instrumen Kewangan,-5123318952.0,0.0,5123318952.0,RESTATED/reclassified
+fact_cash_statement,Pemberian dan Kenaan Bayaran Tetap,-84650079062.0,84650079062.0,0.0,match
+fact_cash_statement,Perbelanjaan Lain,-684976820.0,684976820.0,0.0,match
+fact_cash_statement,Perkhidmatan dan Bekalan,-26372131596.0,26372131596.0,0.0,match
+fact_cash_statement,Pinjaman,-4221115898.0,4221115898.0,0.0,match
+fact_cash_statement,Terimaan Amanah,79183036.0,79183036.0,0.0,match
+fact_cash_statement,Terimaan Balik Pinjaman,518787580.0,518787580.0,0.0,match
+fact_cash_statement,WANG TUNAI PADA 31 DISEMBER,21722318474.0,27520118474.0,-5797800000.0,RESTATED/reclassified

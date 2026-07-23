@@ -1,0 +1,9 @@
+line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+WANG TUNAI,2024,28196329803.0,total,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai
+WANG TUNAI,2023,27607017910.0,total,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2024,27598562879.0,detail,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2023,26685449061.0,detail,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2024,595166849.0,detail,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2023,918966224.0,detail,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2024,2600075.0,detail,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2023,2602625.0,detail,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,82,68,Nota 3 Wang Tunai

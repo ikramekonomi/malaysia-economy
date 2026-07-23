@@ -1,0 +1,27 @@
+group_bm,item_bm,kind,year,amount_rm,source_file,pdf_page,printed_page,statement
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2010,4320000000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2009,4320000000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2010,81500000000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2009,66000000000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2010,260992662000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2009,242270372000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2010,7143324000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2009,4909588300.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2010,353955986000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2009,317499960300.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2010,9355200000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2009,6049225000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Pembiayaan Kumpulan Wang Pinjaman Perumahan,instrument,2010,36400000000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Pembiayaan Kumpulan Wang Pinjaman Perumahan,instrument,2009,31100000000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+JUMLAH,Jumlah Pinjaman,subtotal,2010,399711186000.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+JUMLAH,Jumlah Pinjaman,subtotal,2009,354649185300.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2010,786984196.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2009,1008988053.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2010,6603065743.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2009,6727997757.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+JUMLAH,Jumlah Bantuan Luar Negeri,subtotal,2010,7390049939.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+JUMLAH,Jumlah Bantuan Luar Negeri,subtotal,2009,7736985810.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+JUMLAH,JUMLAH HUTANG AWAM,total,2010,407101235939.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+JUMLAH,JUMLAH HUTANG AWAM,total,2009,362386171110.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,57,47,Nota 9 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2010,206605049.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,58,48,Nota 9 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2009,173364115.0,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,58,48,Nota 9 Memorandum Liabiliti

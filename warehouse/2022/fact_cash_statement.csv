@@ -1,0 +1,73 @@
+flow,category_bm,item_bm,year,amount_rm,source_file,pdf_page,printed_page,statement
+TERIMAAN,Hasil,Hasil Cukai,2022,208764654710.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Cukai,2021,173703464150.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2022,78675439671.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2021,49207040855.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2022,4732771273.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2021,7743920645.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2022,687198434.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2021,515658876.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2022,231364981785.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2021,211924837275.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2021,5276558397.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2022,1143853242.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2021,975029385.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2022,300.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2021,12030.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan,2022,189293808.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan,2021,14760851.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2022,9061358342.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Akaun Amanah PFI I,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Akaun Amanah PFI I,2021,3565865.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Akaun Amanah PFI II,2022,12265507.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Akaun Amanah PFI II,2021,17128586.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2022,4915518967.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2021,7912260848.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2022,539547336039.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2021,457294237763.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,72,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2022,87789106716.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2021,85853522802.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2022,34692208653.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2021,24923626115.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2022,766110303.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2021,595703248.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2022,167018380239.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2021,117199625228.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2022,824806546.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2021,792955616.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2022,69928178120.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2021,63275221797.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2022,1645783306.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2021,981443958.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Kumpulan Wang COVID-19,Perbelanjaan COVID-19,2022,30979119546.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Kumpulan Wang COVID-19,Perbelanjaan COVID-19,2021,37611853265.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2022,131262256431.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2021,110221159429.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2021,3247600000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2022,33169600.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2021,39549628.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2022,232389316.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2021,255561500.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2021,2979195106.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Akaun Amanah PFI I,2022,200000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Akaun Amanah PFI I,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Akaun Amanah PFI II,2022,224469154.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Akaun Amanah PFI II,2021,796066263.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2022,525595977930.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2021,448773083955.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2022,13951358109.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2021,8521153808.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2022,34551543490.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2021,26030389682.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2022,48502901599.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2021,34551543490.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Penyata Penerimaan dan Pembayaran Wang Tunai

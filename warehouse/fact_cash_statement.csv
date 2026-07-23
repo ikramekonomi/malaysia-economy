@@ -1,0 +1,69 @@
+flow,category_bm,item_bm,year,amount_rm,source_file,pdf_page,printed_page,statement
+TERIMAAN,Hasil,Hasil Cukai,2024,240191461212.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Cukai,2023,229184987059.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2024,64977582665.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2023,71334504411.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2024,11441364548.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2023,5615618878.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2024,478389125.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2023,717358957.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2024,202248348425.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2023,241509299435.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2024,1579450062.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2023,937956667.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2024,52450.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2023,12611.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan,2024,350739085.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan,2023,502963492.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2024,4411914146.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Akaun Amanah PFI II,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Akaun Amanah PFI II,2023,3887973.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2024,1543959012.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2024,527223260730.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2023,549806589483.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,74,60,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2024,95935832990.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2023,91859514598.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2024,37667775975.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2023,35898118225.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2024,1188547474.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2023,1022594763.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2024,184670725033.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2023,180158627824.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2024,824116424.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2023,857255333.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2024,83216205191.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2023,94868859830.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2024,795390273.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2023,1220877293.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Kumpulan Wang COVID-19,Perbelanjaan COVID-19,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Kumpulan Wang COVID-19,Perbelanjaan COVID-19,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2024,122108483812.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2023,139927940089.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2024,27359178.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2023,27825438.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2024,199512487.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2023,220534047.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2023,6880453159.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Akaun Amanah PFI II,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Akaun Amanah PFI II,2023,435687267.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2023,17324185306.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2024,526633948837.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2023,570702473172.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2024,589311893.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2023,-20895883689.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2024,27607017910.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2023,48502901599.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2024,28196329803.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2023,27607017910.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,75,61,Penyata Penerimaan dan Pembayaran Wang Tunai

@@ -1,0 +1,9 @@
+line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+Wang Tunai Dalam Bank,2012,28543129953.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2011,23788144927.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2012,810022000.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2011,676032089.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2012,2673231.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2011,2598511.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai
+JUMLAH WANG TUNAI,2012,29355825184.0,total,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai
+JUMLAH WANG TUNAI,2011,24466775527.0,total,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 3 Wang Tunai

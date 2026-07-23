@@ -1,0 +1,24 @@
+line_item_bm,line_code,year,basis,amount_rm,source_file,pdf_page,printed_page,statement
+HASIL,revenue,2014,anggaran,225094429000.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+HASIL,revenue,2014,sebenar,220625673356.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+HASIL,revenue,2013,sebenar,213370213558.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2014,anggaran,222081271970.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2014,sebenar,219589142572.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2013,sebenar,211270336793.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2014,anggaran,3013157030.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2014,sebenar,1036530784.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2013,sebenar,2099876765.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2014,anggaran,42163431931.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2014,sebenar,39503487396.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2013,sebenar,42209801384.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2014,anggaran,-39150274901.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2014,sebenar,-38466956612.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2013,sebenar,-40109924619.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2014,sebenar,37188086245.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2013,sebenar,39305562572.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Terimaan Balik Pinjaman dan Pelbagai Terimaan,financing_capital_receipts,2014,sebenar,1113766045.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+Terimaan Balik Pinjaman dan Pelbagai Terimaan,financing_capital_receipts,2013,sebenar,1569433042.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2014,sebenar,165104322.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2013,sebenar,-765070995.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2014,sebenar,38466956612.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2013,sebenar,40109924619.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,61,36,Penyata Prestasi Kewangan

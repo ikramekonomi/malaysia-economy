@@ -1,0 +1,51 @@
+maksud_code,jenis_bm,maksud_name_bm,year,anggaran_asal_rm,anggaran_dipinda_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+T.01,Tanggungan,Peruntukan Diraja Bagi S.P.B. Yang di-Pertuan Agong,2016,13533000.0,21708750.0,21598694.0,99.49,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.02,Tanggungan,Elaun-elaun Diraja,2016,1490000.0,1493450.0,1493445.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.03,Tanggungan,"Ketua Hakim Negara, Hakim Besar dan Hakim",2016,90000000.0,104657465.0,104657424.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.04,Tanggungan,Ketua Audit Negara,2016,766000.0,766000.0,555451.0,72.51,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.05,Tanggungan,Yang di-Pertua Dewan Rakyat,2016,1618000.0,1618000.0,1577226.0,97.48,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.06,Tanggungan,Yang di-Pertua Dewan Negara,2016,1758000.0,1758000.0,1430975.0,81.4,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.07,Tanggungan,Suruhanjaya Pilihan Raya,2016,2326000.0,2326000.0,1925653.0,82.79,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.08,Tanggungan,Suruhanjaya Perkhidmatan Perundangan,2016,50000.0,50000.0,39087.0,78.17,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.09,Tanggungan,Suruhanjaya Perkhidmatan Awam,2016,10650000.0,10650000.0,4711211.0,44.24,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.10,Tanggungan,Suruhanjaya Perkhidmatan Pelajaran,2016,5000000.0,5000000.0,3813862.0,76.28,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.11,Tanggungan,Suruhanjaya Pasukan Polis,2016,1689700.0,1689700.0,1422361.0,84.18,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.12,Tanggungan,Perbendaharaan,2016,6072059700.0,6072059700.0,5418641014.0,89.24,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.13,Tanggungan,Perbelanjaan Kerana Hutang Negara,2016,26639350400.0,26639350400.0,26479617582.0,99.4,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.14,Tanggungan,"Pencen, Elaun Bersara dan Ganjaran",2016,18935953200.0,20359570583.0,20359570425.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.01,Bekalan,Parlimen,2016,131118000.0,131118000.0,131117766.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.02,Bekalan,Pejabat Penyimpan Mohor Besar Raja-Raja,2016,2132000.0,2066000.0,1906070.0,92.26,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.03,Bekalan,Jabatan Audit Negara,2016,163808000.0,161408000.0,154015421.0,95.42,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.04,Bekalan,Suruhanjaya Pilihan Raya,2016,150566000.0,156773094.0,141427701.0,90.21,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.05,Bekalan,Suruhanjaya Perkhidmatan Awam,2016,47418000.0,46218000.0,43790727.0,94.75,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.06,Bekalan,Jabatan Perdana Menteri,2016,5984170800.0,5984170800.0,5937055742.0,99.21,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.07,Bekalan,Jabatan Perkhidmatan Awam,2016,2436566000.0,2436566000.0,2436565821.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.08,Bekalan,Jabatan Peguam Negara,2016,185427000.0,185427000.0,178739539.0,96.39,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.09,Bekalan,Suruhanjaya Pencegahan Rasuah Malaysia,2016,251776000.0,247476000.0,241172869.0,97.45,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.10,Bekalan,Perbendaharaan,2016,3625969000.0,3625969000.0,3577928327.0,98.68,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.11,Bekalan,Perkhidmatan Am Perbendaharaan,2016,25885918000.0,24157227800.0,23989157580.0,99.3,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.12,Bekalan,Peruntukan kepada Kumpulan Wang Terkanun,2016,1883800100.0,1522400100.0,3597737560.0,236.32,True,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.13,Bekalan,Kementerian Luar Negeri,2016,595085000.0,619211000.0,619210901.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.20,Bekalan,Kementerian Perusahaan Perladangan dan Komoditi,2016,234810600.0,230010600.0,220208131.0,95.74,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.21,Bekalan,Kementerian Pertanian dan Industri Asas Tani,2016,3487900000.0,3397900000.0,3384641725.0,99.61,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.22,Bekalan,Kementerian Kemajuan Luar Bandar dan Wilayah,2016,5379900000.0,5379900000.0,5355245069.0,99.54,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.23,Bekalan,Kementerian Sumber Asli dan Alam Sekitar,2016,1008078000.0,1005778000.0,1003488051.0,99.77,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.24,Bekalan,Kementerian Perdagangan Antarabangsa dan Industri,2016,539258000.0,539258000.0,531698092.0,98.6,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.25,Bekalan,"Kementerian Perdagangan Dalam Negeri, Koperasi dan Kepenggunaan",2016,730101200.0,712101200.0,702272343.0,98.62,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.27,Bekalan,Kementerian Kerja Raya,2016,2223321000.0,2061804740.0,1994734420.0,96.75,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.28,Bekalan,Kementerian Pengangkutan,2016,1194152000.0,1409861466.0,1409861421.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.29,Bekalan,"Kementerian Tenaga, Teknologi Hijau dan Air",2016,125306600.0,121506600.0,118543612.0,97.56,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.30,Bekalan,"Kementerian Sains, Teknologi dan Inovasi",2016,661141000.0,641141000.0,617563851.0,96.32,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.31,Bekalan,Kementerian Pelancongan dan Kebudayaan,2016,973166000.0,948166000.0,929514705.0,98.03,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.32,Bekalan,Kementerian Wilayah Persekutuan,2016,358335000.0,343535000.0,339136876.0,98.72,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.40,Bekalan,Suruhanjaya Perkhidmatan Pelajaran,2016,16765000.0,16525000.0,15922016.0,96.35,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.42,Bekalan,Kementerian Kesihatan,2016,21430802000.0,21535202000.0,21422814524.0,99.48,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.43,Bekalan,"Kementerian Kesejahteraan Bandar, Perumahan dan Kerajaan Tempatan",2016,2477103000.0,2392603000.0,2361035533.0,98.68,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.45,Bekalan,Kementerian Belia dan Sukan,2016,473866000.0,459866000.0,459865985.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.46,Bekalan,Kementerian Sumber Manusia,2016,836128000.0,817128000.0,807875654.0,98.87,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.47,Bekalan,Kementerian Komunikasi dan Multimedia,2016,1288425000.0,1249125000.0,1195026533.0,95.67,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.48,Bekalan,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",2016,1873315000.0,2001315000.0,1998319635.0,99.85,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.60,Bekalan,Kementerian Pertahanan,2016,13457298400.0,11171307300.0,10842602853.0,97.06,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.62,Bekalan,Kementerian Dalam Negeri,2016,12251812300.0,12001812300.0,11930794623.0,99.41,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.63,Bekalan,Kementerian Pendidikan,2016,39315871000.0,39613831000.0,39613830908.0,99.99,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.64,Bekalan,Kementerian Pendidikan Tinggi,2016,11767147000.0,11752147000.0,11715221900.0,99.69,False,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,54,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud

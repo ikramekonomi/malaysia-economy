@@ -1,0 +1,238 @@
+status,check,extracted_value,printed_value,difference
+PASS,pos: Wang Awam 2024 = printed total,65943130080.0,65943130080,0.0
+PASS,pos: Kumpulan Wang Disatukan 2024 = printed total,65943130080.0,65943130080,0.0
+PASS,pos: Wang Awam 2023 = printed total,69765961233.0,69765961233,0.0
+PASS,pos: Kumpulan Wang Disatukan 2023 = printed total,69765961233.0,69765961233,0.0
+PASS,perf: Hasil sebenar 2024,324617649248.0,324617649248,0.0
+PASS,perf: Belanja Mengurus sebenar 2024,321508948391.0,321508948391,0.0
+PASS,perf: Belanja Pembangunan sebenar 2024,84011595464.0,84011595464,0.0
+PASS,perf: Kurangan Keseluruhan 2024,-80902894607.0,-80902894607,0.0
+PASS,perf: identity hasil-opex-devex=kurangan 2024,-80902894607.0,-80902894607,0.0
+PASS,perf: pembiayaan = kurangan 2024,80902894607.0,80902894607,0.0
+PASS,perf: Hasil sebenar 2023,314959481731.0,314959481731,0.0
+PASS,perf: Belanja Mengurus sebenar 2023,311266917827.0,311266917827,0.0
+PASS,perf: Belanja Pembangunan sebenar 2023,96089737123.0,96089737123,0.0
+PASS,perf: Kurangan Keseluruhan 2023,-92397173219.0,-92397173219,0.0
+PASS,perf: identity hasil-opex-devex=kurangan 2023,-92397173219.0,-92397173219,0.0
+PASS,perf: pembiayaan = kurangan 2023,92397173219.0,92397173219,0.0
+PASS,rev[anggaran_asal_rm]: sum(L1) = HASIL,307600000000.0,307600000000.0,0.0
+PASS,rev[anggaran_asal_rm]: sum(items) = HASIL CUKAI,243620003000.0,243620003000.0,0.0
+PASS,rev[anggaran_asal_rm]: sum(items) = HASIL BUKAN CUKAI,60370845000.0,60370845000.0,0.0
+PASS,rev[anggaran_asal_rm]: sum(items) = TERIMAAN BUKAN HASIL,2894576000.0,2894576000.0,0.0
+PASS,rev[anggaran_asal_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,714576000.0,714576000.0,0.0
+PASS,rev[anggaran_asal_rm]: sum(items) = Cukai Langsung,185000000000.0,185000000000.0,0.0
+PASS,rev[anggaran_asal_rm]: sum(items) = Cukai Tidak Langsung,58620003000.0,58620003000.0,0.0
+PASS,rev[anggaran_disemak_rm]: sum(L1) = HASIL,322050247000.0,322050247000.0,0.0
+PASS,rev[anggaran_disemak_rm]: sum(items) = HASIL CUKAI,241035290000.0,241035290000.0,0.0
+PASS,rev[anggaran_disemak_rm]: sum(items) = HASIL BUKAN CUKAI,72435726000.0,72435726000.0,0.0
+PASS,rev[anggaran_disemak_rm]: sum(items) = TERIMAAN BUKAN HASIL,7929665000.0,7929665000.0,0.0
+PASS,rev[anggaran_disemak_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,649566000.0,649566000.0,0.0
+PASS,rev[anggaran_disemak_rm]: sum(items) = Cukai Langsung,177060337000.0,177060337000.0,0.0
+PASS,rev[anggaran_disemak_rm]: sum(items) = Cukai Tidak Langsung,63974953000.0,63974953000.0,0.0
+PASS,rev[sebenar_rm]: sum(L1) = HASIL,324617649248.0,324617649248.0,0.0
+PASS,rev[sebenar_rm]: sum(items) = HASIL CUKAI,240191461212.0,240191461212.0,0.0
+PASS,rev[sebenar_rm]: sum(items) = HASIL BUKAN CUKAI,70098174893.0,70098174893.0,0.0
+PASS,rev[sebenar_rm]: sum(items) = TERIMAAN BUKAN HASIL,13849624018.0,13849624018.0,0.0
+PASS,rev[sebenar_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,478389125.0,478389125.0,0.0
+PASS,rev[sebenar_rm]: sum(items) = Cukai Langsung,171692768698.0,171692768698.0,0.0
+PASS,rev[sebenar_rm]: sum(items) = Cukai Tidak Langsung,68498692514.0,68498692514.0,0.0
+PASS,rev[sebenar_prior_rm]: sum(L1) = HASIL,314959481731.0,314959481731.0,0.0
+PASS,rev[sebenar_prior_rm]: sum(items) = HASIL CUKAI,229184987059.0,229184987059.0,0.0
+PASS,rev[sebenar_prior_rm]: sum(items) = HASIL BUKAN CUKAI,79032048178.0,79032048178.0,0.0
+PASS,rev[sebenar_prior_rm]: sum(items) = TERIMAAN BUKAN HASIL,6025087538.0,6025087538.0,0.0
+PASS,rev[sebenar_prior_rm]: sum(items) = HASIL WILAYAH PERSEKUTUAN,717358956.0,717358956.0,0.0
+PASS,rev[sebenar_prior_rm]: sum(items) = Cukai Langsung,171336413425.0,171336413425.0,0.0
+PASS,rev[sebenar_prior_rm]: sum(items) = Cukai Tidak Langsung,57848573634.0,57848573634.0,0.0
+PASS,rev: HASIL sebenar = perf Hasil,324617649248.0,324617649248,0.0
+PASS,opex: sum(T.*) sebenar = printed Tanggungan,91843662273.0,91843662273,0.0
+PASS,opex: sum(B.*) sebenar = printed Bekalan,232773986975.0,232773986975,0.0
+PASS,opex: T+B = printed Perbelanjaan Mengurus (incl. transfer),324617649248.0,324617649248,0.0
+PASS,opex: count of maksud = 53,53,53,0
+PASS,devex[anggaran_jumlah_rm]: sum(ministries) = grand total,85152335350.0,85152335350.0,0.0
+PASS,devex[sebenar_jumlah_rm]: sum(ministries) = grand total,84011595463.78,84011595463.78,0.0
+PASS,devex[kos_keseluruhan_rm]: sum(ministries) = grand total,1090535694216.0,1090535694216.0,0.0
+PASS,devex[terkumpul_rmke12_rm]: sum(ministries) = grand total,315931959766.68005,315931959766.68,6.103515625e-05
+PASS,devex: grand total sebenar = printed (sen),84011595463.78,84011595463.78,0.0
+PASS,devex: grand total = perf Belanja Pembangunan (rounded),84011595463.78,84011595464,-0.220001220703125
+PASS,devex row: langsung+pinjaman=jumlah [P.06],5543950156.64,5543950156.64,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.07],899726867.31,899726867.31,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.10],14454283483.32,14454283483.32,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.13],116113678.25,116113678.25,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.14],80107101.41,80107101.41,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.15],2117475134.68,2117475134.68,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.20],289325242.51,289325242.51,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.21],1595198555.57,1595198555.57,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.22],7287298904.34,7287298904.34,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.23],652797587.51,652797587.51,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.24],1015548501.93,1015548501.93,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.25],64868551.83,64868551.83,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.26],508631017.9,508631017.9,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.27],8217403753.29,8217403753.29,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.28],4090326186.05,4090326186.05,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.30],505348333.85,505348333.85,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.31],138463595.54,138463595.54,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.32],0.0,0.0,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.33],3734883223.29,3734883223.29,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.42],5794032419.66,5794032419.66,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.43],3676044367.48,3676044367.48,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.45],391341624.74,391341624.74,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.46],472048820.17,472048820.17,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.47],1118801701.58,1118801701.58,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.48],227245917.43,227245917.43,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.50],1027451178.12,1027451178.12,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.60],7349255793.59,7349255793.59,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.62],3867983826.84,3867983826.84,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.63],5316736749.29,5316736749.29,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.64],3458903189.66,3458903189.66,0.0
+PASS,devex row: langsung+pinjaman=jumlah [P.70],0.0,0.0,0.0
+PASS,cash: sum(terimaan items) 2024 = printed Jumlah Terimaan,527223260730.0,527223260730,0.0
+PASS,cash: sum(bayaran items) 2024 = printed Jumlah Bayaran,526633948837.0,526633948837,0.0
+PASS,cash: captured Jumlah Terimaan row 2024,527223260730.0,527223260730,0.0
+PASS,cash: captured Jumlah Bayaran row 2024,526633948837.0,526633948837,0.0
+PASS,cash: closing cash 2024 = printed,28196329803.0,28196329803,0.0
+PASS,cash: sum(terimaan items) 2023 = printed Jumlah Terimaan,549806589483.0,549806589483,0.0
+PASS,cash: sum(bayaran items) 2023 = printed Jumlah Bayaran,570702473172.0,570702473172,0.0
+PASS,cash: captured Jumlah Terimaan row 2023,549806589483.0,549806589483,0.0
+PASS,cash: captured Jumlah Bayaran row 2023,570702473172.0,570702473172,0.0
+PASS,cash: closing cash 2023 = printed,27607017910.0,27607017910,0.0
+PASS,cross: cash closing 2024 = position Wang Tunai,28196329803,28196329803.0,0.0
+PASS,debt: sum(DN instruments) 2024 = printed,1219637729000.0,1219637729000,0.0
+PASS,debt: Hutang Persekutuan 2024 = printed,1247613545373.0,1247613545373,0.0
+PASS,debt: DN+LN+BLN = Hutang 2024,1247613545373.0,1247613545373,0.0
+PASS,debt: sum(DN instruments) 2023 = printed,1142657729000.0,1142657729000,0.0
+PASS,debt: Hutang Persekutuan 2023 = printed,1172509451502.0,1172509451502,0.0
+PASS,debt: DN+LN+BLN = Hutang 2023,1172509451502.0,1172509451502,0.0
+PASS,cross: memo Hutang = debt Hutang 2024,1247613545373.0,1247613545373,0.0
+PASS,memo: aset parts = Jumlah Aset 2024,137848899700.0,137848899700.0,0.0
+PASS,memo: liabiliti parts = Jumlah Liabiliti 2024,1577817927079.0,1577817927079.0,0.0
+PASS,cross: memo Hutang = debt Hutang 2023,1172509451502.0,1172509451502,0.0
+PASS,memo: aset parts = Jumlah Aset 2023,133188968825.0,133188968825.0,0.0
+PASS,memo: liabiliti parts = Jumlah Liabiliti 2023,1491771487583.0,1491771487583.0,0.0
+PASS,trust row identity [KUMPULAN WANG AMANAH KERAJAAN],31636036780.0,31636036780.0,0.0
+PASS,trust row identity [Kumpulan Wang Pembangunan],-10538227052.0,-10538227052.0,0.0
+PASS,trust row identity [Kumpulan Wang COVID-19],0.0,0.0,0.0
+PASS,trust row identity [Pelbagai Kumpulan Wang Amanah ],42174263832.0,42174263832.0,0.0
+PASS,trust row identity [KUMPULAN WANG AMANAH AWAM],9620760587.0,9620760587.0,0.0
+PASS,trust row identity [Kumpulan Wang Amanah Am],5951336021.0,5951336021.0,0.0
+PASS,trust row identity [Kumpulan Wang Amanah Khas],3669424566.0,3669424566.0,0.0
+PASS,trust row identity [AKAUN DEPOSIT],12823205627.0,12823205627.0,0.0
+PASS,trust row identity [Deposit Am],12649689872.0,12649689872.0,0.0
+PASS,trust row identity [Deposit Pelarasan],173515755.0,173515755.0,0.0
+PASS,trust: sum(groups).baki_awal_rm = AKAUN AMANAH DISATUKAN,57754188413.0,57754188413.0,0.0
+PASS,trust: sum(groups).debit_rm = AKAUN AMANAH DISATUKAN,1638730587563.0,1638730587563.0,0.0
+PASS,trust: sum(groups).kredit_rm = AKAUN AMANAH DISATUKAN,1635056402144.0,1635056402144.0,0.0
+PASS,trust: sum(groups).baki_akhir_rm = AKAUN AMANAH DISATUKAN,54080002994.0,54080002994.0,0.0
+PASS,cross: trust closing = position Akaun Amanah 2024,54080002994.0,54080002994.0,0.0
+PASS,perf: financing components sum = Jumlah Pembiayaan 2024,80902894607.0,80902894607,0.0
+PASS,perf: financing components sum = Jumlah Pembiayaan 2023,92397173219.0,92397173219,0.0
+PASS,debt: 4 commitment totals sum = memo Komitmen Kewangan 2024,297164856524.0,297164856524,0.0
+PASS,debt: 4 commitment totals sum = memo Komitmen Kewangan 2023,285633903408.0,285633903408,0.0
+PASS,debt: PFI companies sum = PFI total 2024,32905600585.0,32905600585.0,0.0
+PASS,debt: PFI total = printed 2024,32905600585.0,32905600585,0.0
+PASS,debt: PFI companies sum = PFI total 2023,33470600585.0,33470600585.0,0.0
+PASS,debt: PFI total = printed 2023,33470600585.0,33470600585,0.0
+PASS,debt: pampasan items sum = printed 2024,934389799.0,934389799,0.0
+PASS,debt: pampasan items sum = printed 2023,1415747031.0,1415747031,0.0
+PASS,debt: PINJAMAN+BANTUAN = HUTANG 2024,1247613545373.0,1247613545373,0.0
+PASS,debt: PINJAMAN+BANTUAN = HUTANG 2023,1172509451502.0,1172509451502,0.0
+PASS,debt: Pelbagai Liabiliti = memo 2024,133924597.0,133924597.0,0.0
+PASS,debt: Pelbagai Liabiliti = memo 2023,157532088.0,157532088.0,0.0
+PASS,opex_detail[sebenar_rm]: maksud leaf sums = Nota 5(b) (53 maksud),53,53,0
+PASS,opex_detail[anggaran_asal_rm]: maksud leaf sums = Nota 5(b) (53 maksud),53,53,0
+PASS,opex_detail: grand total sebenar = Nota total,324617649248.33,324617649248,0.33001708984375
+PASS,devex_project: project sums = ministry totals (31 ministries),31,31,0
+PASS,devex_project: grand total = printed (sen),84011595463.78,84011595463.78,0.0
+PASS,devex_project: per-project identities (0 failures),0,0,0
+PASS,timeseries: Jumlah Hasil 2024 = warehouse (RM juta),324618.0,324618,0.0
+PASS,timeseries: Jumlah Perbelanjaan Mengurus 2024 = warehouse (RM juta),324618.0,324618,0.0
+PASS,timeseries: Wang Tunai 2024 = warehouse (RM juta),28196.0,28196,0.0
+PASS,timeseries: Akaun Amanah Disatukan 2024 = warehouse (RM juta),54080.0,54080,0.0
+PASS,timeseries: Jumlah Hutang Persekutuan 2024 = warehouse (RM juta),1247614.0,1247614,0.0
+PASS,timeseries: covers 2010-2024 (15 years),15,15,0
+PASS,nota5stmt: hasil components sum 2024,324617649248.0,324617649248.0,0.0
+PASS,nota5stmt: opex object components sum 2024,321508948391.0,321508948391.0,0.0
+PASS,nota5stmt: opex + transfer = jumlah selepas pindahan 2024,324617649248.0,324617649248.0,0.0
+PASS,nota5stmt: hasil = perf revenue 2024,324617649248.0,324617649248,0.0
+PASS,nota5stmt: opex = perf opex (before transfer) 2024,321508948391.0,321508948391,0.0
+PASS,nota5stmt: baki roll-forward 2024,11863127086.0,11863127086.0,0.0
+PASS,nota5stmt: hasil components sum 2023,314959481731.0,314959481731.0,0.0
+PASS,nota5stmt: opex object components sum 2023,311266917827.0,311266917827.0,0.0
+PASS,nota5stmt: opex + transfer = jumlah selepas pindahan 2023,314959481731.0,314959481731.0,0.0
+PASS,nota5stmt: hasil = perf revenue 2023,314959481731.0,314959481731,0.0
+PASS,nota5stmt: opex = perf opex (before transfer) 2023,311266917827.0,311266917827,0.0
+PASS,nota5stmt: baki roll-forward 2023,11863127086.0,11863127086.0,0.0
+PASS,devex: program subtotals matched by linked project sums,0,0,0
+PASS,devex: verified program-linkage groups >= 40,1,1,0
+PASS,notes-detail: Nota3 cash details sum = printed total 2024,28196329803.0,28196329803.0,0.0
+PASS,notes-detail: Nota3 cash details sum = printed total 2023,27607017910.0,27607017910.0,0.0
+PASS,notes-detail: control: Wang Tunai 2024,28196329803.0,28196329803,0.0
+PASS,notes-detail: control: Wang Tunai 2023,27607017910.0,27607017910,0.0
+PASS,notes-detail: Nota4 Pelaburan Kumpulan Wang Amanah details = Jumlah 2024,30259923642.0,30259923642.0,0.0
+PASS,notes-detail: Nota4 Pelaburan Am details = Jumlah 2024,7486876635.0,7486876635.0,0.0
+PASS,notes-detail: Nota4 subtotals = PELABURAN 2024,37746800277.0,37746800277.0,0.0
+PASS,notes-detail: Nota4 Pelaburan Kumpulan Wang Amanah details = Jumlah 2023,32759391788.0,32759391788.0,0.0
+PASS,notes-detail: Nota4 Pelaburan Am details = Jumlah 2023,9399551535.0,9399551535.0,0.0
+PASS,notes-detail: Nota4 subtotals = PELABURAN 2023,42158943323.0,42158943323.0,0.0
+PASS,notes-detail: control: Pelaburan 2024,37746800277.0,37746800277,0.0
+PASS,notes-detail: control: Pelaburan 2023,42158943323.0,42158943323,0.0
+PASS,notes-detail: Nota7(a)(i) KWP TERIMAAN details = subtotal 2024,83690747578.0,83690747578.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP BAYARAN details = subtotal 2024,84011595464.0,84011595464.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP terimaan-bayaran = Lebihan/(Kurangan) 2024,-320847886.0,-320847886.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP opening+net+pindahan = closing 2024,-10538227052.0,-10538227052.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP TERIMAAN details = subtotal 2023,97823385008.0,97823385008.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP BAYARAN details = subtotal 2023,96089737123.0,96089737123.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP terimaan-bayaran = Lebihan/(Kurangan) 2023,1733647885.0,1733647885.0,0.0
+PASS,notes-detail: Nota7(a)(i) KWP opening+net+pindahan = closing 2023,-10217379166.0,-10217379166.0,0.0
+PASS,notes-detail: control: Kumpulan Wang Pembangunan closing 2024,-10538227052.0,-10538227052,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID TERIMAAN details = subtotal 2024,0.0,0.0,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID BAYARAN details = subtotal 2024,0,0.0,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID terimaan-bayaran = Lebihan/(Kurangan) 2024,0.0,0.0,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID opening+net+pindahan = closing 2024,0.0,0.0,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID TERIMAAN details = subtotal 2023,0.0,0.0,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID BAYARAN details = subtotal 2023,0,0.0,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID terimaan-bayaran = Lebihan/(Kurangan) 2023,0.0,0.0,0.0
+PASS,notes-detail: Nota7(a)(ii) COVID opening+net+pindahan = closing 2023,0.0,0.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PENYELESAIAN details = subtotal 2024,13750011950.0,13750011950.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PERNIAGAAN details = subtotal 2024,150291462.0,150291462.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PINJAMAN details = subtotal 2024,3506557407.0,3506557407.0,0.0
+PASS,notes-detail: Nota7(a)(iii) KUMPULAN WANG LUAR JANGKA details = subtotal 2024,1449087300.0,1449087300.0,0.0
+PASS,notes-detail: Nota7(a)(iii) PELBAGAI KUMPULAN WANG details = subtotal 2024,23318315713.0,23318315713.0,0.0
+PASS,notes-detail: Nota7(a)(iii) subtotals = PELBAGAI KWAK total 2024,42174263832.0,42174263832.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PENYELESAIAN details = subtotal 2023,18881372179.0,18881372179.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PERNIAGAAN details = subtotal 2023,150174253.0,150174253.0,0.0
+PASS,notes-detail: Nota7(a)(iii) AKAUN PINJAMAN details = subtotal 2023,4551393675.0,4551393675.0,0.0
+PASS,notes-detail: Nota7(a)(iii) KUMPULAN WANG LUAR JANGKA details = subtotal 2023,721367550.0,721367550.0,0.0
+PASS,notes-detail: Nota7(a)(iii) PELBAGAI KUMPULAN WANG details = subtotal 2023,21339827491.0,21339827491.0,0.0
+PASS,notes-detail: Nota7(a)(iii) subtotals = PELBAGAI KWAK total 2023,45644135148.0,45644135148.0,0.0
+PASS,notes-detail: cross: Pelbagai KWAK total 2024 = Nota7 top-level closing,42174263832.0,42174263832,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH AM details = subtotal 2024,5951336021.0,5951336021.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH KHAS details = subtotal 2024,3669424566.0,3669424566.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM subtotals = total 2024,9620760587.0,9620760587.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH AM details = subtotal 2023,5503813531.0,5503813531.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM/AMANAH KHAS details = subtotal 2023,3557308547.0,3557308547.0,0.0
+PASS,notes-detail: Nota7 KUMPULAN WANG AMANAH AWAM subtotals = total 2023,9061122078.0,9061122078.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT AM details = subtotal 2024,12649689872.0,12649689872.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT PELARASAN details = subtotal 2024,173515755.0,173515755.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT subtotals = total 2024,12823205627.0,12823205627.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT AM details = subtotal 2023,12598594083.0,12598594083.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT/DEPOSIT PELARASAN details = subtotal 2023,667716270.0,667716270.0,0.0
+PASS,notes-detail: Nota7 AKAUN DEPOSIT subtotals = total 2023,13266310353.0,13266310353.0,0.0
+PASS,notes-detail: Nota9 PPBD details = subtotal 2024,51494274311.0,51494274311.0,0.0
+PASS,notes-detail: Nota9 Pelaburan details = subtotal 2024,34690492524.0,34690492524.0,0.0
+PASS,notes-detail: Nota9 PPBD details = subtotal 2023,52530333322.0,52530333322.0,0.0
+PASS,notes-detail: Nota9 Pelaburan details = subtotal 2023,34821492525.0,34821492525.0,0.0
+PASS,notes-detail: Nota9 PPBD + Pelbagai ABT = AKAUN BELUM TERIMA 2024,103158407176.0,103158407176,0.0
+PASS,notes-detail: control: Akaun Belum Terima 2024,103158407176.0,103158407176,0.0
+PASS,notes-detail: control: memo Pelaburan 2024,34690492524.0,34690492524,0.0
+PASS,notes-detail: Nota10 KOMITMEN JAMINAN details = printed total 2024,236229124709.0,236229124709.0,0.0
+PASS,notes-detail: Nota10 KOMITMEN JAMINAN details = printed total 2023,227404119216.0,227404119216.0,0.0
+PASS,notes-detail: Nota10 KOMITMEN PAJAKAN KEWANGAN details = printed total 2024,26659661074.0,26659661074.0,0.0
+PASS,notes-detail: Nota10 KOMITMEN PAJAKAN KEWANGAN details = printed total 2023,31302777359.0,31302777359.0,0.0
+PASS,notes-detail: Nota10 KOMITMEN BAYARAN BALIK CUKAI details = printed total 2024,33341680942.0,33341680942.0,0.0
+PASS,notes-detail: Nota10 KOMITMEN BAYARAN BALIK CUKAI details = printed total 2023,25511259802.0,25511259802.0,0.0
+PASS,notes-detail: Nota10 PELBAGAI LIABILITI details = printed total 2024,133924597.0,133924597.0,0.0
+PASS,notes-detail: Nota10 PELBAGAI LIABILITI details = printed total 2023,157532088.0,157532088.0,0.0
+PASS,notes-detail: control: Komitmen Jaminan 2024,236229124709.0,236229124709,0.0
+PASS,notes-detail: control: Pajakan 2024,26659661074.0,26659661074,0.0
+PASS,notes-detail: control: Bayaran Balik Cukai 2024,33341680942.0,33341680942,0.0
+PASS,notes-detail: control: Pelbagai Liabiliti 2024,133924597.0,133924597,0.0

@@ -1,0 +1,118 @@
+table,key,value_2017_volume,value_2018_volume,difference,note
+cash_statement,"('BAYARAN', 'Perbelanjaan Amanah', 'Pelbagai')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Jualan Aset Modal')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Jualan Instrumen Kewangan')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+memorandum_summary,Akaun Belum Terima,,88743176980.0,,present in only one volume
+memorandum_summary,Jumlah Aset,,119650904699.0,,present in only one volume
+memorandum_summary,Jumlah Liabiliti,,937295083934.0,,present in only one volume
+memorandum_summary,Komitmen Kewangan,,214269652456.0,,present in only one volume
+memorandum_summary,Liabiliti Inisiatif Pembiayaan Swasta,,35462452983.0,,present in only one volume
+memorandum_summary,Pinjaman dan Pendahuluan Boleh Dituntut,58443750298.0,,,present in only one volume
+debt_nota10,"('Aktiviti Pembangunan Khas Pembiayaan Swasta', 'pfi_component')",,18979046069.0,,present in only one volume
+debt_nota10,"('Inisiatif Pembiayaan Swasta', 'pfi_component')",,16483406914.0,,present in only one volume
+debt_nota10,"('KOMITMEN BAYARAN BALIK CUKAI', 'commitment_total')",,34259229307.0,,present in only one volume
+debt_nota10,"('KOMITMEN JAMINAN', 'commitment_total')",,139749167987.0,,present in only one volume
+debt_nota10,"('KOMITMEN PAJAKAN KEWANGAN', 'commitment_total')",,33421941407.0,,present in only one volume
+debt_nota10,"('KOMITMEN PAMPASAN', 'commitment_total')",,6839313755.0,,present in only one volume
+debt_nota10,"('LIABILITI INISIATIF PEMBIAYAAN SWASTA', 'pfi_total')",,35462452983.0,,present in only one volume
+debt_nota10,"('Pampasan Konsesi Lebuhraya', 'commitment_item')",,3719783710.0,,present in only one volume
+debt_nota10,"('Pampasan Kontrak Pengangkutan Awam', 'commitment_item')",,3119530045.0,,present in only one volume
+revenue_nota5a,Cukai Langsung,,116024199520.0,,present in only one volume
+revenue_nota5a,Cukai Tak Langsung,,61634295936.0,,present in only one volume
+investment_summary_nota4,"('Pelaburan Am', 'Sekuriti Hutang Kerajaan Luar Negeri')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Am', 'Sekuriti Hutang Kerajaan Malaysia')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Am', 'Sekuriti Hutang Swasta Dalam Negeri')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Am', 'Sekuriti Kerajaan Luar Negeri')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Am', 'Sekuriti Kerajaan Malaysia')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Am', 'Sekuriti Tersiar Harga Luar Negeri')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Sekuriti Hutang Kerajaan Luar Negeri')",,6752198170.0,,present in only one volume
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Sekuriti Hutang Kerajaan Malaysia')",,796055739.0,,present in only one volume
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Sekuriti Hutang Swasta Dalam Negeri')",,2564864713.0,,present in only one volume
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Sekuriti Kerajaan Luar Negeri')",6752198170.0,,,present in only one volume
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Sekuriti Kerajaan Malaysia')",3360920452.0,,,present in only one volume
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Sekuriti Tersiar Harga Luar Negeri')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Sumber Khas')",,343006251.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Pelbagai Amanah Am')",1626475992.0,1283469741.0,343006251.0,
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Jualan Aset Modal')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+memo_assets_nota9,Badan Berkanun,7556868254.0,7316116074.0,240752180.0,"Verifier annotation: this combined loans+investments figure is DERIVED, printed in neither volume (Nota 9 prints categories separately); direction and amount (±240,752,180.87 Bank Pertanian reclass) are print-verified via the separate register rows."
+memo_assets_nota9,Pelbagai,1864072733.0,,,present in only one volume
+memo_assets_nota9,Pelbagai Agensi,,1864072733.0,,present in only one volume
+memo_assets_nota9,Syarikat,60172075759.0,60412827939.0,-240752180.0,"Verifier annotation: this combined loans+investments figure is DERIVED, printed in neither volume (Nota 9 prints categories separately); direction and amount (±240,752,180.87 Bank Pertanian reclass) are print-verified via the separate register rows."
+commitment_detail_nota10,"('KOMITMEN BAYARAN BALIK CUKAI', 'Cukai Barangan dan Perkhidmatan')",,17864379451.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN BAYARAN BALIK CUKAI', 'Cukai Keuntungan Harta Tanah')",,444862143.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN BAYARAN BALIK CUKAI', 'Cukai Pendapatan')",,15949987713.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN JAMINAN', 'Dalam Negeri')",,96066843422.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN JAMINAN', 'Luar Negeri')",,43682324565.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN PAJAKAN KEWANGAN', 'Pajakan Kewangan Badan Berkanun')",,12119680714.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN PAJAKAN KEWANGAN', 'Pajakan Kewangan Kerajaan Persekutuan')",,21302260693.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN PAMPASAN', 'Pampasan Konsesi Lebuhraya')",,3719783710.0,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN PAMPASAN', 'Pampasan Kontrak Pengangkutan Awam')",,3119530045.0,,present in only one volume
+loan_account_stmt_nota6,"('BANTUAN LUAR NEGERI', '', 'BANTUAN LUAR NEGERI')",,-341692351.0,,present in only one volume
+loan_account_stmt_nota6,"('BANTUAN LUAR NEGERI', '', 'Jumlah Bantuan Luar Negeri pada 31 Disember')",-341692351.0,,,present in only one volume
+loan_account_stmt_nota6,"('BANTUAN LUAR NEGERI', 'Pinjaman Bilateral', 'Baki pada 1 Januari')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loan_account_stmt_nota6,"('BANTUAN LUAR NEGERI', 'Pinjaman Multilateral', 'Baki pada 1 Januari')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loan_account_stmt_nota6,"('PINJAMAN', '', 'Jumlah Pinjaman pada 31 Disember')",61056157189.0,,,present in only one volume
+loan_account_stmt_nota6,"('PINJAMAN', '', 'PINJAMAN')",,61056157189.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Kemajuan Tanah Persekutuan')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Kemajuan Tanah Sabah')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'KOPERASI', 'Koperasi Jayadiri (M) Berhad')",150000000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'KOPERASI', 'Koperasi Jayadiri (Malaysia) Berhad')",,150000000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Amanah Ikhtiar Malaysia')",,780601307.5,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Jumlah Pelbagai Agensi')",,1864072732.63,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Kelab Golf Perkhidmatan Awam Malaysia')",,2539835.13,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Amanah Saham Anak Langkawi')",,6800000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Pembangunan Ekonomi Islam Malaysia')",,994131590.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Penjaja dan Peniaga Kecil 1Malaysia')",,50000000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Usahawan Wanita Cina Malaysia')",,30000000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Amanah Ikhtiar Malaysia')",780601307.5,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Jumlah Pelbagai')",1864072732.63,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Kelab Golf Perkhidmatan Awam Malaysia')",2539835.13,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Amanah Saham Anak Langkawi')",6800000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Pembangunan Ekonomi Islam Malaysia')",994131590.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Penjaja dan Peniaga Kecil 1Malaysia')",50000000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Usahawan Wanita Cina Malaysia')",30000000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PERSEORANGAN', 'Pinjaman Perumahan Kepada Golongan Berpendapatan Rendah')",,155727501.4,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PERSEORANGAN', 'Pinjaman Perumahan kepada Golongan Berpendapatan Rendah')",155727501.4,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Bank Pembangunan Malaysia Berhad')",437698630.14,0.0,437698630.14,
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Bank Perusahaan Kecil & Sederhana Malaysia Berhad')",605741913.0,1043440543.14,-437698630.14,
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Lebuhraya DUKE Fasa 3 Sdn. Bhd')",,100000000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Lebuhraya DUKE Sdn. Bhd')",100000000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Projek Lintasan Damansara-Shah Alam Sdn. Bhd')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Puncak Niaga (M) Sdn. Bhd')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Tanjung Langsat Port Sdn Bhd')",121017709.59,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Tanjung Langsat Port Sdn. Bhd')",,121017709.59,,present in only one volume
+investments_register,"('BADAN BERKANUN', 'Bank Pertanian Malaysia Berhad')",240752180.87,,,present in only one volume
+investments_register,"('BADAN BERKANUN', 'Jumlah Badan Berkanun')",1218852876.45,978100695.58,240752180.87,
+investments_register,"('SYARIKAT', 'Actius Terra Global Holdings Sdn. Bhd')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Astronautic Technology (M) Sdn. Bhd Sdn. Bhd')",112579000.0,,,present in only one volume
+investments_register,"('SYARIKAT', 'Astronautic Technology (M) Sdn. Bhd')",,112579000.0,,present in only one volume
+investments_register,"('SYARIKAT', 'Bank Pertanian Malaysia Berhad')",,240752180.87,,present in only one volume
+investments_register,"('SYARIKAT', 'Jumlah Syarikat')",29650300613.74,29891052794.61,-240752180.86999893,
+investments_register,"('SYARIKAT', 'KUB Malaysia Berhad')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'MKD Aman Makmur Sdn. Bhd')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Mutiara Smart Sdn. Bhd')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Prasarana Malaysia Berhad')",6928648759.12,,,present in only one volume
+investments_register,"('SYARIKAT', 'Prasarana Malaysia Berhad.')",,6928648759.12,,present in only one volume
+investments_register,"('SYARIKAT', 'Sarawak Hidro Sdn. Bhd')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Suria Strategic Energy Resources Sdn. Bhd')",,30000000.0,,present in only one volume
+investments_register,"('SYARIKAT', 'Suria Strategik Energy Resources Sdn. Bhd')",30000000.0,,,present in only one volume
+statutory_guarantees_register,"('', '', 'JUMLAH JAMINAN')",1101793431422.56,1104590450002.56,-2797018580.0,
+statutory_guarantees_register,"('JAMINAN PENCARUM / PENDEPOSIT', '', 'JUMLAH JAMINAN PENCARUM / PENDEPOSIT')",863602708110.11,866399726690.11,-2797018580.0,
+statutory_guarantees_register,"('JAMINAN PENCARUM / PENDEPOSIT', '', 'Perbadanan Tabung Pendidikan Tinggi Nasional - SSPN-i')",,2797018580.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', '1Malaysia Development Berhad (1MDB)')",5000000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', '1Malaysia Development Berhad')",,5000000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Jambatan Kedua Sdn. Bhd (JKSB)')",6317729700.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Jambatan Kedua Sdn. Bhd')",,6317729700.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Malaysia Debt Ventures Berhad (MDV)')",900000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Malaysia Debt Ventures Sdn. Bhd')",,900000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Malaysian Industrial Development Finance Bhd. (MIDF)')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Pengurusan Air SPV Berhad (PAAB)')",13110000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Pengurusan Air SPV Berhad (PASB)')",,13110000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Senai Airport Terminal Service Sdn Bhd')",,330000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Senai Airport Terminal Services Sdn. Bhd')",330000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Suria Strategic Energy Resourced Sdn. Bhd (SSER)')",2940476380.85,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Suria Strategic Resources Sdn. Bhd (SSER)')",,2940476380.85,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Syarikat Perumahan negara Berhad (SPNB)')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+devex_cumulative_rmke11_2017,P.15,,0.0,,maksud present in only one volume
+devex_cumulative_rmke11_2017,P.26,,0.0,,maksud present in only one volume
+timeseries_2017col,"('Bayaran Balik Luar Negeri', 'Jumlah Bayaran Balik Luar Negeri')",0.0,404.0,-404.0,RM juta

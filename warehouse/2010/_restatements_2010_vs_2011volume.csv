@@ -1,0 +1,50 @@
+table,key,value_2010_volume,value_2011_volume,difference,note
+financial_position,PELABURAN,20343238913.0,20566225647.0,-222986734.0,
+financial_position,WANG TUNAI,21573280678.0,21350293944.0,222986734.0,
+cash_statement,"('BAYARAN', 'Perbelanjaan Modal', 'Pembelian Instrumen Kewangan')",3617286466.0,3840273200.0,-222986734.0,
+cash_statement,"('JUMLAH', 'Jumlah Bayaran', 'Jumlah Bayaran')",246909119781.0,247132106515.0,-222986734.0,
+cash_statement,"('JUMLAH', 'Tambahan / (Kurangan) Wang Tunai', 'Tambahan / (Kurangan) Wang Tunai')",-5946837796.0,,,present in only one volume
+cash_statement,"('JUMLAH', 'Tambahan/(Kurangan) Wang Tunai', 'Tambahan/(Kurangan) Wang Tunai')",,-6169824530.0,,present in only one volume
+cash_statement,"('JUMLAH', 'WANG TUNAI PADA 31 DISEMBER', 'WANG TUNAI PADA 31 DISEMBER')",21573280678.0,21350293944.0,222986734.0,
+cash_statement,"('TERIMAAN', 'Hasil', 'Hasil Wilayah Persekutuan')",,477335128.0,,present in only one volume
+cash_statement,"('TERIMAAN', 'Hasil', 'Hasil Wilayah-Wilayah Persekutuan')",477335128.0,,,present in only one volume
+cash_components_nota3,JUMLAH WANG TUNAI,21573280678.0,21350293944.0,222986734.0,
+cash_components_nota3,Wang Tunai Dalam Bank,21002073584.0,20779086850.0,222986734.0,
+investment_summary_nota4,"('', 'JUMLAH PELABURAN')",20343238913.0,,,present in only one volume
+investment_summary_nota4,"('JUMLAH PELABURAN', 'JUMLAH PELABURAN')",,20566225647.0,,present in only one volume
+investment_summary_nota4,"('Pelaburan Am', 'Deposit Dalam Negeri')",2210000000.0,2432986734.0,-222986734.0,
+investment_summary_nota4,"('Pelaburan Am', 'Jumlah')",7926471517.0,8149458251.0,-222986734.0,
+debt_nota9a,"('PELBAGAI LIABILITI', 'misc_total')",206605049.0,,,present in only one volume
+commitment_detail,"('PELBAGAI LIABILITI', 'Akaun Depositori Pusat')",14231026.0,,,present in only one volume
+commitment_detail,"('PELBAGAI LIABILITI', 'JUMLAH PELBAGAI LIABILITI')",206605049.0,,,present in only one volume
+commitment_detail,"('PELBAGAI LIABILITI', 'Nota Kena Bayar')",170518025.0,,,present in only one volume
+commitment_detail,"('PELBAGAI LIABILITI', 'Sekuriti Tak Dituntut')",21855998.0,,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'Akaun Depositori Pusat')",,14231026.0,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'JUMLAH PELBAGAI LIABILITI')",,206605049.0,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'Nota Kena Bayar')",,170518025.0,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'Sekuriti Tak Dituntut')",,21855998.0,,present in only one volume
+revenue_account_stmt,Hasil Wilayah Persekutuan,,477335128.0,,present in only one volume
+revenue_account_stmt,Hasil Wilayah-Wilayah Persekutuan,477335128.0,,,present in only one volume
+revenue_account_stmt,Jumlah Perbelanjaan Mengurus (sebelum pindahan),,151632609265.0,,present in only one volume
+revenue_account_stmt,Lebihan/(Kurangan) bagi Tahun,0.0,,,zero/nil row in only one volume
+revenue_account_stmt,Perbelanjaan Mengurus (sebelum pindahan),151632609265.0,,,present in only one volume
+loan_account_stmt_nota6,"('BAKI', '', 'BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER')",26068545555.0,,,present in only one volume
+loan_account_stmt_nota6,"('JUMLAH', '', 'BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER')",,26068545555.0,,present in only one volume
+loan_account_stmt_nota6,"('JUMLAH', '', 'JUMLAH PINJAMAN DAN BANTUAN LUAR NEGERI PADA 31 DISEMBER')",53754564636.0,,,present in only one volume
+loan_account_stmt_nota6,"('JUMLAH', '', 'Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember')",,53754564636.0,,present in only one volume
+revenue_nota5a,Cukai Jualan atas Barangan Import,,3284997419.0,,present in only one volume
+revenue_nota5a,Cukai Jualan atas Import,3284997419.0,,,present in only one volume
+revenue_nota5a,Duti Eksais Terhadap Barangan Import,2420388694.0,,,present in only one volume
+revenue_nota5a,Hasil Bukan Cukai Wilayah Persekutuan,,78659738.0,,present in only one volume
+revenue_nota5a,Hasil Bukan Cukai Wilayah-Wilayah Persekutuan,78659738.0,,,present in only one volume
+revenue_nota5a,Hasil Cukai Wilayah Persekutuan,,398675390.0,,present in only one volume
+revenue_nota5a,Hasil Cukai Wilayah-Wilayah Persekutuan,398675390.0,,,present in only one volume
+revenue_nota5a,Jumlah Hasil Wilayah Persekutuan,,477335128.0,,present in only one volume
+revenue_nota5a,Jumlah Hasil Wilayah-Wilayah Persekutuan,477335128.0,,,present in only one volume
+revenue_nota5a,NOTA KEPADA PENYATA KEWANGAN Duti Eksais Terhadap Barangan Import,,2420388694.0,,present in only one volume
+timeseries_overlap_2002_2010,"('Pelaburan', 'Jumlah Pelaburan', 2010)",20343.0,20566.0,-223.0,RM juta
+timeseries_overlap_2002_2010,"('Pelaburan', 'Pelaburan Am', 2010)",7926.0,8149.0,-223.0,RM juta
+timeseries_overlap_2002_2010,"('Wang Awam', 'Pelaburan', 2010)",20343.0,20566.0,-223.0,RM juta
+timeseries_overlap_2002_2010,"('Wang Awam', 'Wang Tunai', 2010)",21573.0,21350.0,223.0,RM juta
+timeseries_overlap_2002_2010,"('Wang Tunai', 'Jumlah Wang Tunai', 2010)",21573.0,21350.0,223.0,RM juta
+timeseries_overlap_2002_2010,"('Wang Tunai', 'Wang Tunai Dalam Bank', 2010)",21002.0,20779.0,223.0,RM juta

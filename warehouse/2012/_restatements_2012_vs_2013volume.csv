@@ -1,0 +1,237 @@
+table,key,value_2012_volume,value_2013_volume,difference,note
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Jualan Instrumen Kewangan')",,0.0,,zero/nil row in only one volume (not a value restatement)
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Perbezaan Forex Relending Loan')",,0.0,,zero/nil row in only one volume (not a value restatement)
+memorandum_summary,Pelaburan,27194316450.0,28110412577.0,-916096127.0,
+memorandum_summary,Pinjaman Boleh Dituntut,95492612803.0,95613714119.0,-121101316.0,
+debt_nota,"('BANTUAN LUAR NEGERI', 'subtotal')",,6795472868.0,,present in only one volume
+debt_nota,"('HUTANG AWAM', 'total')",,501616849368.0,,present in only one volume
+debt_nota,"('JUMLAH HUTANG AWAM', 'total')",501616849368.0,,,present in only one volume
+debt_nota,"('Jumlah Bantuan Luar Negeri', 'subtotal')",6795472868.0,,,present in only one volume
+debt_nota,"('Jumlah Pinjaman', 'subtotal')",494821376500.0,,,present in only one volume
+debt_nota,"('PINJAMAN', 'subtotal')",,494821376500.0,,present in only one volume
+revenue_nota5a,Levi,,552077479.0,,present in only one volume
+revenue_nota5a,Levi (selepas pindahan) (disambung) Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan (sebelum pindahan) NOTA KEPADA PENYATA KEWANGAN Anggaran Anggaran Asal Disemak % %,552077479.0,,,present in only one volume
+investment_summary_nota4,"('Pelaburan Am', 'Deposit Luar Negeri')",0.0,,,zero/nil row in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Deposit Luar Negeri')",0.0,,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', '', 'AKAUN DEPOSIT')",,9454478812.0,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', '', 'JUMLAH AKAUN DEPOSIT')",9454478812.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT PELARASAN', 'Pelbagai Deposit Pelarasan')",14699468.0,107.0,14699361.0,
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT PELARASAN', 'Pembatalan Pencen Skim B')",,14699361.0,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Baki pada 1 Januari')",8690055757.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Baki pada 31 Disember')",9155210611.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Debit')",2096191153.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Kredit')",2561346007.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",299483231.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",299268201.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Debit')",1608491193.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Kredit')",1608276163.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Baki pada 1 Januari')",8989538988.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Baki pada 31 Disember')",9454478812.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Debit')",3704682346.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Kredit')",4169622170.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Baki pada 1 Januari')",-3462367960.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Baki pada 31 Disember')",12637039514.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Debit')",365641909758.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Kredit')",381741317232.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', '', 'JUMLAH KUMPULAN WANG AMANAH AWAM')",9739637522.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', '', 'KUMPULAN WANG AMANAH AWAM')",,9739637522.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Industri Bekalan Elektrik')",425086933.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Pelbagai Amanah Am')",1249001834.0,1674088767.0,-425086933.0,
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH KHAS', 'Akaun Amanah Khas Warisan')",34602459.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH KHAS', 'Pelbagai Amanah Khas')",129544323.0,164146782.0,-34602459.0,
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Baki pada 1 Januari')",6319842566.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Baki pada 31 Disember')",9739637522.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Debit')",8828869793.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Kredit')",12248664749.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Baki pada 1 Januari')",5701912589.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Baki pada 31 Disember')",9101844850.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Debit')",8655946515.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Kredit')",12055878776.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Baki pada 1 Januari')",617929977.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Baki pada 31 Disember')",637792672.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Debit')",172923278.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Kredit')",192785973.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",-18771749514.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",-6557076820.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Debit')",353108357619.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Kredit')",365323030313.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'BAYARAN / Perbelanjaan Pembangunan', 'Langsung')",-44978124405.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'BAYARAN / Perbelanjaan Pembangunan', 'Pinjaman')",-1954329401.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'BAYARAN', 'Jumlah Bayaran')",-46932453806.0,46932453806.0,-93864907612.0,
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'BAYARAN', 'Langsung')",,44978124405.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'BAYARAN', 'Pinjaman')",,1954329401.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",-55235001113.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",-43824579256.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Debit')",46945799332.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Kredit')",58356221189.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Perbezaan Forex Relending Loan')",,0.0,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",1908324534.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",1515520436.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Debit')",10961105335.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Kredit')",10568301237.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'TERIMAAN / Pinjaman Perseorangan', 'Hasil Pensekuritian')",,0.0,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Amanah Negara')",,5653917035.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Amanah Pelajar Miskin')",,478656172.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Amanah Sukan Negara')",,577000.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Bantuan Bencana Negara')",,184315891.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Bantuan Mangsa Serangan Binatang Buas')",,281000.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Cadangan Untuk Negeri')",,349618591.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Jumlah Pelbagai Kumpulan Wang')",,9823718639.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kebajikan dan Kemudahan bagi Penuntut di Luar Negeri')",,2776212.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Bagi Pembangunan Projek ICT Sektor Awam')",,1000000.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Dana Automotif Bumiputra')",,40000000.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Kebudayaan dan Kebajikan Penggiat Seni')",,2566381.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Lembaga Peperiksaan Malaysia')",,125064112.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Pendidikan, Perundingan dan Penyelidikan, Institut Penilaian Negara')",,1520646.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Pengangkutan Awam')",,816477428.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Pengurusan Perolehan Setem Cukai (Banderol) untuk Rokok dan Minuman Keras')",,43075662.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Projek Pelantar Benua Malaysia')",,1016170.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Projek dan Pengukuran Sempadan Bersama Di antara Negeri-negeri Semenanjung Malaysia')",,3840995.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Sokongan Jabatan Kehakiman Syariah Malaysia')",,13030550.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kumpulan Wang Amanah Taman Laut dan Rizab Laut')",,4130965.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Kursi Pengajian Melayu Leiden University, The Netherlands')",,794.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Majlis Penyelidikan dan Kemajuan Sains Negara (MPKSN)')",,2841407.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Penjelas Hutang')",,213528635.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Perkhidmatan Kemasyarakatan dan Kebajikan')",,64092032.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Perpustakaan Negara')",,1102027.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Program Perumahan Rakyat Dimiliki')",,504485840.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Skim Biasiswa Sukan Persekutuan')",,923996.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Tabung Bantuan Perubatan (TBP)')",,17834331.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Tabung Bayaran Balik Cukai')",,1274862121.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Tabung Inovasi Negara Berhad (KWATIN)')",,22095535.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG YANG LAIN', 'Tabung Pustaka Peringatan P. Ramlee')",,87111.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Amanah Negara')",5653917035.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Amanah Pelajar Miskin')",478656172.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Amanah Sukan Negara')",577000.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Bantuan Bencana Negara')",184315891.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Bantuan Mangsa Serangan Binatang Buas')",281000.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Cadangan Untuk Negeri')",349618591.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Jumlah Pelbagai Kumpulan Wang')",9823718639.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kebajikan dan Kemudahan bagi Penuntut di Luar Negeri')",2776212.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Bagi Pembangunan Projek ICT Sektor Awam')",1000000.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Dana Automotif Bumiputra')",40000000.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Kebudayaan dan Kebajikan Penggiat Seni')",2566381.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Lembaga Peperiksaan Malaysia')",125064112.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Pendidikan, Perundingan dan Penyelidikan, Institut Penilaian Negara')",1520646.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Pengangkutan Awam')",816477428.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Pengurusan Perolehan Setem Cukai (Banderol) untuk Rokok dan Minuman Keras')",43075662.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Projek Pelantar Benua Malaysia')",1016170.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Projek dan Pengukuran Sempadan Bersama Di antara Negeri-negeri Semenanjung Malaysia')",3840995.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Sokongan Jabatan Kehakiman Syariah Malaysia')",13030550.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Taman Laut dan Rizab Laut')",4130965.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kursi Pengajian Melayu Leiden University, The Netherlands')",794.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Majlis Penyelidikan dan Kemajuan Sains Negara (MPKSN)')",2841407.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Penjelas Hutang')",213528635.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Perkhidmatan Kemasyarakatan dan Kebajikan')",64092032.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Perpustakaan Negara')",1102027.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Program Perumahan Rakyat Dimiliki')",504485840.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Skim Biasiswa Sukan Persekutuan')",923996.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Tabung Bantuan Perubatan (TBP)')",17834331.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Tabung Bayaran Balik Cukai')",1274862121.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Tabung Inovasi Negara Berhad (KWATIN)')",22095535.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Tabung Pustaka Peringatan P. Ramlee')",87111.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",34554927065.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",35751982000.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Debit')",295201452952.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Kredit')",296398507887.0,,,present in only one volume
+memo_assets_nota8,"('Pelaburan', 'JUMLAH PELABURAN')",27194316450.0,28110412577.0,-916096127.0,
+memo_assets_nota8,"('Pelaburan', 'Syarikat')",25936889345.0,26852985472.0,-916096127.0,
+memo_assets_nota8,"('Pinjaman Boleh Dituntut', 'Badan Berkanun')",14026666610.0,14073212231.0,-46545621.0,
+memo_assets_nota8,"('Pinjaman Boleh Dituntut', 'JUMLAH PINJAMAN BOLEH DITUNTUT')",95492612803.0,95613714119.0,-121101316.0,
+memo_assets_nota8,"('Pinjaman Boleh Dituntut', 'Kerajaan Negeri')",15722068018.0,15796571501.0,-74503483.0,
+memo_assets_nota8,"('Pinjaman Boleh Dituntut', 'Pihak Berkuasa Tempatan')",502753742.0,519747254.0,-16993512.0,
+memo_assets_nota8,"('Pinjaman Boleh Dituntut', 'Syarikat')",25525549127.0,25508607827.0,16941300.0,
+commitment_detail,"('PELBAGAI LIABILITI', 'JUMLAH PELBAGAI LIABILITI')",275621222.0,,,present in only one volume
+loans_receivable,"('', '', 'JUMLAH PINJAMAN BOLEH DITUNTUT')",95492612802.62,95613714118.85,-121101316.23001099,
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Jumlah Badan Berkanun')",14026666610.49,14073212231.53,-46545621.040000916,
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Air Perak')",69431530.89,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Kemajuan Pahang Tenggara')",0.0,,,zero/nil row in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Kemajuan Terengganu Tengah')",58043321.74,61264340.44,-3221018.6999999955,
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Letrik Sabah')",29068904.39,0.0,29068904.39,
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Pelabuhan Bintulu')",0.0,,,zero/nil row in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Lembaga Pembangunan Langkawi')",0.0,,,zero/nil row in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Pengurusan Aset Air Berhad (PAAB)')",4959031514.27,4957581473.78,1450040.4900007248,
+loans_receivable,"('PINJAMAN', 'BADAN BERKANUN', 'Perbadanan Aset Keretapi')",700962007.21,844237085.32,-143275078.11,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Johor')",273328152.04,338882002.81,-65553850.76999998,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Jumlah Kerajaan Negeri')",15722068017.98,15796571500.79,-74503482.81000137,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Kedah')",2600383184.63,2604929816.91,-4546632.279999733,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Kelantan')",1200229322.89,1201227035.83,-997712.9399998188,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Pahang')",2526499424.22,2520981031.31,5518392.909999847,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Perak')",397283433.73,397418400.56,-134966.8299999833,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Perlis')",342761769.46,341705055.73,1056713.7299999595,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Sarawak')",2275305230.56,2285837792.46,-10532561.900000095,
+loans_receivable,"('PINJAMAN', 'KERAJAAN NEGERI', 'Terengganu')",981899324.24,981212188.97,687135.2699999809,
+loans_receivable,"('PINJAMAN', 'KOPERASI', 'Koperasi Pegawai-pegawai Tadbir Negeri Terengganu Berhad')",0.0,,,zero/nil row in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'KOPERASI', 'Koperasi Pekebun Getah Pasir Puteh Berhad')",0.0,,,zero/nil row in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'PIHAK BERKUASA TEMPATAN', 'Dewan Bandaraya Kuala Lumpur')",315067441.43,332060953.51,-16993512.079999983,
+loans_receivable,"('PINJAMAN', 'PIHAK BERKUASA TEMPATAN', 'Jumlah Pihak Berkuasa Tempatan')",502753741.56,519747253.64,-16993512.079999983,
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Jumlah Syarikat')",25525549126.92,25508607827.22,16941299.69999695,
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Malaysia Airlines System Berhad')",10766061.82,22677680.09,-11911618.27,
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Malaysia Debt Ventures Berhad (MDV)')",575309781.47,544816399.17,30493382.30000007,
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Sistem Penyuraian Trafik KL BARAT Sdn. Bhd(SPRINT)')",,15737165.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Sistem Penyuraian Traﬁk KL BARAT Sdn. Bhd(SPRINT)')",15737165.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Syarikat Bekalan Air Selangor Sdn. Bhd (SYABAS) 222 218')",397346000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Syarikat Bekalan Air Selangor Sdn. Bhd (SYABAS)')",,397346000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Tanjung Langsat Port Sdn Bhd')",,0.0,,zero/nil row in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Telekom Malaysia Berhad')",1904461.16,3544925.49,-1640464.3300000003,
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Teras Dara Konsortium Sdn. Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('', 'JUMLAH PELABURAN')",27194316450.28,28110412577.4,-916096127.1200027,
+investments_register,"('SYARIKAT', '1Malaysia Development Berhad')",,0.0,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'AES Solutions Sdn. Bhd')",,0.0,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Bakun Hydro-Electric Corporation Sdn. Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Bank Perusahaan Kecil dan Sederhana Malaysia Berhad')",1212000000.0,,,present in only one volume
+investments_register,"('SYARIKAT', 'Dataran Perdana Sdn. Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Jumlah Syarikat')",25936889345.3,26852985472.42,-916096127.1199989,
+investments_register,"('SYARIKAT', 'Kedah Aquaculture Sdn. Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Konsortium Baja Nasional Sdn. Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'NECC Sdn. Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'PDX.Com Sdn. Bhd')",,1.0,,present in only one volume
+investments_register,"('SYARIKAT', 'PDX.com Sdn. Bhd')",1.0,,,present in only one volume
+investments_register,"('SYARIKAT', 'SDE Solutions Sdn. Bhd')",,0.0,,zero/nil row in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'Small Medium Enterprise Development Bank Malaysia Bhd.')",,1212000000.0,,present in only one volume
+investments_register,"('SYARIKAT', 'Syarikat Prasarana Negara Berhad')",3825552632.0,4741648759.12,-916096127.1199999,
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Aircraft Business Malaysia Sdn. Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Asset Global Network Sdn. Bhd')",,1011600000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Assets Global Network Sdn. Bhd')",1011600000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Bank Pembangunan Malaysia Berhad (BPMP)')",,12321495678.06,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Bank Pembangunan Malaysia Berhad')",12321495678.06,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Penerbangan Malaysia Berhad (PMB)')",,6553249169.37,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Penerbangan Malaysia Berhad')",6553249169.37,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Pengurusan Air SPV Berhad (PAAB)')",,9500000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Pengurusan Air SPV Berhad')",9500000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Prasarana Negara Berhad')",9914000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'SRC Intenational Sdn Bhd')",4000000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'SRC International Sdn Bhd')",,4000000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Sabah Electricity Sdn. Bhd (SESB)')",,23124343.45,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Sabah Electricity Sdn. Bhd')",23124343.45,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Sarawak Hidro Sdn. Bhd (SHSB)')",,5350000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Sarawak Hidro Sdn. Bhd')",5350000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Sykt Prasarana Negara Berhad (SPNB)')",,9914000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Tenaga Nasional Berhad (TNB)')",,3656193067.35,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Tenaga Nasional Berhad')",3656193067.35,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Valuecap Sdn Bhd')",0.0,,,zero/nil row in only one volume (not a value restatement)
+devex_cumulative_rmke10_2012,TOTAL,93348816232.84,,,maksud in only one volume
+timeseries_2012col,"('Bayaran Balik Dalam Negeri', 'Jumlah Bayaran Balik Dalam Negeri')",59430.0,61532.0,-2102.0,RM juta
+timeseries_2012col,"('Bayaran Balik Dalam Negeri', 'Pinjaman Lain')",0.0,2100.0,-2100.0,RM juta
+timeseries_2012col,"('Bayaran Balik Dalam Negeri', 'SUKUK')",4593.0,4594.0,-1.0,RM juta
+timeseries_2012col,"('Bayaran Balik Dalam Negeri', 'Sekuriti Kerajaan Malaysia')",39807.0,39808.0,-1.0,RM juta
+timeseries_2012col,"('Bayaran Balik Luar Negeri', 'Jumlah Bayaran Balik Luar Negeri')",698.0,697.0,1.0,RM juta
+timeseries_2012col,"('Bayaran Balik Luar Negeri', 'Jumlah Bayaran Balik')",60128.0,62229.0,-2101.0,RM juta
+timeseries_2012col,"('Bayaran Balik Luar Negeri', 'Pinjaman Projek')",698.0,697.0,1.0,RM juta
+timeseries_2012col,"('Dibiayai oleh:', 'Pinjaman Bersih Dalam Negeri')",46742.0,,,line item in only one panel
+timeseries_2012col,"('Dibiayai oleh:', 'Pinjaman Bersih Dalam Negeri2')",,46742.0,,line item in only one panel
+timeseries_2012col,"('Pinjaman Bersih Dalam Negeri', 'Jumlah Pinjaman Bersih Dalam Negeri')",43344.0,46742.0,-3398.0,RM juta
+timeseries_2012col,"('Pinjaman Bersih Dalam Negeri', 'Pinjaman Lain')",0.0,3400.0,-3400.0,RM juta
+timeseries_2012col,"('Pinjaman Bersih Dalam Negeri', 'SUKUK')",-4593.0,-4594.0,1.0,RM juta
+timeseries_2012col,"('Pinjaman Bersih Dalam Negeri', 'Sekuriti Kerajaan Malaysia')",14437.0,14436.0,1.0,RM juta
+timeseries_2012col,"('Pinjaman Bersih Luar Negeri', 'Jumlah Pinjaman Bersih')",43330.0,46728.0,-3398.0,RM juta
+timeseries_2012col,"('Pinjaman Boleh Dituntut', 'Badan Berkanun')",14027.0,14073.0,-46.0,RM juta
+timeseries_2012col,"('Pinjaman Boleh Dituntut', 'Jumlah Pinjaman Boleh Dituntut')",95493.0,95614.0,-121.0,RM juta
+timeseries_2012col,"('Pinjaman Boleh Dituntut', 'Kerajaan Negeri')",15722.0,15797.0,-75.0,RM juta
+timeseries_2012col,"('Pinjaman Boleh Dituntut', 'Pihak Berkuasa Tempatan')",503.0,520.0,-17.0,RM juta
+timeseries_2012col,"('Pinjaman Boleh Dituntut', 'Syarikat')",25526.0,25509.0,17.0,RM juta
+timeseries_2012col,"('Terimaan Pinjaman Dalam Negeri', 'Jumlah Terimaan Pinjaman Dalam Negeri')",102774.0,108274.0,-5500.0,RM juta
+timeseries_2012col,"('Terimaan Pinjaman Dalam Negeri', 'Pinjaman Lain')",0.0,5500.0,-5500.0,RM juta
+timeseries_2012col,"('Terimaan Pinjaman Luar Negeri', 'Jumlah Terimaan Pinjaman Luar Negeri')",684.0,683.0,1.0,RM juta
+timeseries_2012col,"('Terimaan Pinjaman Luar Negeri', 'Jumlah Terimaan Pinjaman')",103458.0,108957.0,-5499.0,RM juta
+timeseries_2012col,"('Terimaan Pinjaman Luar Negeri', 'Pinjaman Projek')",684.0,683.0,1.0,RM juta

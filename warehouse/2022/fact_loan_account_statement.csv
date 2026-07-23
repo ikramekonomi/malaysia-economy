@@ -1,0 +1,39 @@
+group_bm,sub_bm,line_item_bm,row_type,year,amount_rm,source_file,pdf_page,printed_page,statement
+PINJAMAN,,PINJAMAN,group_total,2022,100102725354.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,,PINJAMAN,group_total,2021,103732636243.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2022,231364981785.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2021,211924837275.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2022,-131262256431.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2021,-110221159429.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2022,100102725354.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2021,101703677846.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2021,5276558397.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2021,-3247600000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2021,2028958397.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2022,-265558916.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2021,-295111128.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2022,-33169600.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2021,-39549628.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2022,-33169600.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2021,-39549628.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2022,-232389316.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2021,-255561500.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2022,-232389316.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2021,-255561500.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2022,99837166438.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2021,103437525115.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PELARASAN,,Akaun Premium/Diskaun bagi Terbitan Pelaburan Kerajaan dan Sekuriti Kerajaan Malaysia,adjustment,2022,-416190816.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PELARASAN,,Akaun Premium/Diskaun bagi Terbitan Pelaburan Kerajaan dan Sekuriti Kerajaan Malaysia,adjustment,2021,-3120522490.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2022,-68540975622.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2021,-62317002625.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang COVID-19,transfer,2022,-30880000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang COVID-19,transfer,2021,-38000000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2022,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2021,0.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 6 Penyata Akaun Pinjaman Disatukan

@@ -1,0 +1,16 @@
+status,check,extracted_value,printed_value,difference
+PASS,opex/lampiran1: maksud totals tie to Nota 5(b) oracle (all 3 cols),50,50,0
+PASS,opex/lampiran1: grand total anggaran_asal_rm = sum(50 maksud totals),223440000000.0,223440000000.0,0.0
+PASS,opex/lampiran1: grand total anggaran_jumlah_rm = sum(50 maksud totals),221726762298.0,221726762298.0,0.0
+PASS,opex/lampiran1: grand total sebenar_rm = sum(50 maksud totals),219088760827.32,219088760827.31998,3.0517578125e-05
+INFO,opex/lampiran1: maksuds with clean leaf->aktiviti additivity (all cols),3,49,
+INFO,opex/lampiran1: leaf->aktiviti column-checks with residual OCR (see _unresolved_ocr_cells_2015.csv),1712,0,1712
+INFO,devex/lampiran2: ministry_total rows present,27,27,0
+WARN,devex/lampiran2: grand_total anggaran_jumlah_rm = sum(27 ministry totals),43025161162.0,43025221162.0,-60000.0
+PASS,devex/lampiran2: grand_total sebenar_jumlah_rm = sum(27 ministry totals),40767711666.67,40767711666.67,0.0
+PASS,devex/lampiran2: grand_total terkumpul_rmke10_rm = sum(27 ministry totals),215829816679.14,215829816679.13998,0.0
+INFO,"devex/lampiran2: (ministry,col) project rollups tying to printed ministry_total",0,54,
+INFO,devex/lampiran2: project rows with impossible negative terkumpul_rmke10_prior (OCR),168,0,168
+PASS,investments/lampiran4: JUMLAH PELABURAN 2015 = sum(subtotals),30316159988.72,30316159988.72,0.0
+PASS,investments/lampiran4: JUMLAH PELABURAN 2014 = sum(subtotals),30208017257.72,30208017257.72,0.0
+PASS,panel/perangkaan: distinct line items x years,136x10,136x10,

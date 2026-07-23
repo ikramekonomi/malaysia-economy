@@ -1,0 +1,41 @@
+group_bm,sub_bm,line_item_bm,row_type,year,amount_rm,source_file,pdf_page,printed_page,statement
+PINJAMAN,,PINJAMAN,group_total,2020,113105101567.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,,PINJAMAN,group_total,2019,70926498834.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 1 Januari,detail,2020,16277384329.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 1 Januari,detail,2019,15224123149.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2020,194555279485.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2019,131254933379.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2020,-97727562247.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2019,-82722693311.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2020,113105101567.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2019,63756363217.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2019,7170135617.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2019,7170135617.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2020,-330533374.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2019,-193083223.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2020,-69125729.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2019,-68764375.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2020,-69125729.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2019,-68764375.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2019,133815309.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2020,-261407645.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2019,-258134157.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2020,-261407645.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2019,-124318848.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2020,112774568193.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2019,70733415611.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PELARASAN,,Pelarasan Akaun Premium/Diskaun Sekuriti Kerajaan,adjustment,2020,-13683520387.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PELARASAN,,Pelarasan Akaun Premium/Diskaun Sekuriti Kerajaan,adjustment,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2020,-61071047806.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2019,-54456031282.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang COVID-19,transfer,2020,-38020000000.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang COVID-19,transfer,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2019,16277384329.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,64,Nota 6 Penyata Akaun Pinjaman Disatukan

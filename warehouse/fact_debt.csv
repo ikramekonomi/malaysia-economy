@@ -1,0 +1,43 @@
+group_bm,item_bm,kind,year,amount_rm,source_file,pdf_page,printed_page,statement
+JUMLAH,PINJAMAN,subtotal,2024,1244614579000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+JUMLAH,PINJAMAN,subtotal,2023,1168881729000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2024,1219637729000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2023,1142657729000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2024,15000000000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2023,20000000000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2024,570800000000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2023,527300000000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2024,633837729000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2023,589857729000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2023,5500000000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2024,24976850000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2023,26224000000.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2024,2998966373.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2023,3627722502.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2024,30200673.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2023,59743780.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2024,2968765700.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2023,3567978722.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2024,1247613545373.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2023,1172509451502.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2024,32905600585.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2023,33470600585.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Pembinaan PFI Sdn. Bhd.,pfi_company,2024,16697287340.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Pembinaan PFI Sdn. Bhd.,pfi_company,2023,17262287340.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,MKD Aman Makmur Sdn. Bhd.,pfi_company,2024,16208313245.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,MKD Aman Makmur Sdn. Bhd.,pfi_company,2023,16208313245.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,93,79,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2024,236229124709.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2023,227404119216.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2024,26659661074.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2023,31302777359.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2024,33341680942.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2023,25511259802.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2024,934389799.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2023,1415747031.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2024,907626322.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2023,1367626322.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kelewatan Bayaran Balik Cukai Pendapatan,commitment_item,2024,26763477.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kelewatan Bayaran Balik Cukai Pendapatan,commitment_item,2023,48120709.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,94,80,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2024,133924597.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,95,81,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2023,157532088.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,95,81,Nota 10 Memorandum Liabiliti

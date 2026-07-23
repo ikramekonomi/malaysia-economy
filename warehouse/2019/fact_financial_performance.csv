@@ -1,0 +1,24 @@
+line_item_bm,line_code,year,basis,amount_rm,source_file,pdf_page,printed_page,statement
+Hasil,revenue,2019,anggaran,263299755000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Hasil,revenue,2019,sebenar,264414755876.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Hasil,revenue,2018,sebenar,232882562288.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2019,anggaran,260546745010.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2019,sebenar,263342924643.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2018,sebenar,230960492668.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN),current_balance,2019,anggaran,2753009990.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN),current_balance,2019,sebenar,1071831233.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN),current_balance,2018,sebenar,1922069620.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2019,anggaran,53778513037.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2019,sebenar,54173235317.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2018,sebenar,56095455662.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2019,anggaran,-51025503047.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2019,sebenar,-53101404084.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2018,sebenar,-54173386042.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2019,sebenar,53101404084.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2018,sebenar,54173386042.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2019,sebenar,55509292462.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2018,sebenar,54107066253.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Terimaan Balik Pinjaman dan Pelbagai Terimaan,financing_capital_receipts,2019,sebenar,1730728126.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+Terimaan Balik Pinjaman dan Pelbagai Terimaan,financing_capital_receipts,2018,sebenar,788182523.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2019,sebenar,-4138616504.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2018,sebenar,-721862734.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,44,Penyata Prestasi Kewangan

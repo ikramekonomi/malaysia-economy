@@ -1,0 +1,43 @@
+group_bm,item_bm,kind,year,amount_rm,source_file,pdf_page,printed_page,statement
+JUMLAH,PINJAMAN,subtotal,2021,975231047500.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+JUMLAH,PINJAMAN,subtotal,2020,874339147500.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2021,950083947500.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2020,851283947500.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2021,28000000000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2020,15500000000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2021,422600000000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2020,374600000000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2021,480717530000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2020,436417530000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2021,18766417500.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2020,24766417500.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2021,25147100000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2020,23055200000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2021,4583313818.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2020,5220561310.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2021,115512192.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2020,153108619.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2021,4467801626.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2020,5067452691.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2021,979814361318.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2020,879559708810.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2021,35574695050.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2020,37034467015.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Pembinaan PFI Sdn. Bhd.,pfi_company,2021,19366381805.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Pembinaan PFI Sdn. Bhd.,pfi_company,2020,20447965015.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,MKD Aman Makmur Sdn. Bhd.,pfi_company,2021,16208313245.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,MKD Aman Makmur Sdn. Bhd.,pfi_company,2020,16586502000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2021,229391741672.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2020,216841563770.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2021,37202939956.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2020,37572297952.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2021,14683293428.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2020,14635443058.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2021,997834453.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2020,973669713.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2021,910011784.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2020,892581000.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kelewatan Bayaran Balik Cukai Pendapatan,commitment_item,2021,87822669.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kelewatan Bayaran Balik Cukai Pendapatan,commitment_item,2020,81088713.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,84,72,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2021,150953607.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,85,73,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2020,172473614.0,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,85,73,Nota 10 Memorandum Liabiliti

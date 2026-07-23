@@ -1,0 +1,156 @@
+status,check,extracted_value,printed_value
+PASS,loans: KERAJAAN NEGERI detail=baki_belum_selesai_rm = Jumlah KERAJAAN NEGERI (2014),16470077891.280003,16470077891.28
+PASS,loans: KERAJAAN NEGERI detail=pembangunan_rm = Jumlah KERAJAAN NEGERI (2014),15278085357.009998,15278085357.01
+PASS,loans: KERAJAAN NEGERI detail=hasil_disatukan_rm = Jumlah KERAJAAN NEGERI (2014),91200550.21000001,91200550.21
+PASS,loans: KERAJAAN NEGERI detail=amanah_lain_rm = Jumlah KERAJAAN NEGERI (2014),1100791984.0600002,1100791984.06
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=baki_belum_selesai_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),451005220.94,451005220.94
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=pembangunan_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),398757214.45,398757214.45
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=hasil_disatukan_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),52248006.489999995,52248006.49
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=amanah_lain_rm = Jumlah PIHAK BERKUASA TEMPATAN (2014),0.0,0.0
+PASS,loans: BADAN BERKANUN detail=baki_belum_selesai_rm = Jumlah BADAN BERKANUN (2014),6820864168.240001,6820864168.24
+PASS,loans: BADAN BERKANUN detail=pembangunan_rm = Jumlah BADAN BERKANUN (2014),5133226688.2,5133226688.2
+PASS,loans: BADAN BERKANUN detail=hasil_disatukan_rm = Jumlah BADAN BERKANUN (2014),481426234.07000005,481426234.07
+PASS,loans: BADAN BERKANUN detail=amanah_lain_rm = Jumlah BADAN BERKANUN (2014),1206211245.97,1206211245.97
+PASS,loans: KOPERASI detail=baki_belum_selesai_rm = Jumlah KOPERASI (2014),158302635.39,158302635.39
+PASS,loans: KOPERASI detail=pembangunan_rm = Jumlah KOPERASI (2014),6120210.0,6120210.0
+PASS,loans: KOPERASI detail=hasil_disatukan_rm = Jumlah KOPERASI (2014),5585595.24,5585595.24
+PASS,loans: KOPERASI detail=amanah_lain_rm = Jumlah KOPERASI (2014),146596830.15,146596830.15
+PASS,loans: SYARIKAT detail=baki_belum_selesai_rm = Jumlah SYARIKAT (2014),28856676215.31,28856676215.31
+PASS,loans: SYARIKAT detail=pembangunan_rm = Jumlah SYARIKAT (2014),17492007790.739998,17492007790.74
+PASS,loans: SYARIKAT detail=hasil_disatukan_rm = Jumlah SYARIKAT (2014),2631546789.0499997,2631546789.05
+PASS,loans: SYARIKAT detail=amanah_lain_rm = Jumlah SYARIKAT (2014),8733121635.52,8733121635.52
+PASS,loans: PERSEORANGAN detail=baki_belum_selesai_rm = Jumlah PERSEORANGAN (2014),44061429757.73,44061429757.73
+PASS,loans: PERSEORANGAN detail=pembangunan_rm = Jumlah PERSEORANGAN (2014),0.0,0.0
+PASS,loans: PERSEORANGAN detail=hasil_disatukan_rm = Jumlah PERSEORANGAN (2014),0.0,0.0
+PASS,loans: PERSEORANGAN detail=amanah_lain_rm = Jumlah PERSEORANGAN (2014),44061429757.73,44061429757.73
+PASS,loans: PELBAGAI detail=baki_belum_selesai_rm = Jumlah PELBAGAI (2014),2217667709.6800003,2217667709.68
+PASS,loans: PELBAGAI detail=pembangunan_rm = Jumlah PELBAGAI (2014),772367709.68,772367709.68
+PASS,loans: PELBAGAI detail=hasil_disatukan_rm = Jumlah PELBAGAI (2014),0.0,0.0
+PASS,loans: PELBAGAI detail=amanah_lain_rm = Jumlah PELBAGAI (2014),1445300000.0,1445300000.0
+PASS,loans: sum(category subtotals)=baki_belum_selesai_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),99036023598.57,99036023598.57
+PASS,loans: sum(category subtotals)=pembangunan_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),39080564970.08,39080564970.08
+PASS,loans: sum(category subtotals)=hasil_disatukan_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),3262007175.0600004,3262007175.06
+PASS,loans: sum(category subtotals)=amanah_lain_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2014),56693451453.43001,56693451453.43
+PASS,loans: KERAJAAN NEGERI detail=baki_belum_selesai_rm = Jumlah KERAJAAN NEGERI (2013),15940499634.240004,15940499634.24
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=baki_belum_selesai_rm = Jumlah PIHAK BERKUASA TEMPATAN (2013),457717393.28000003,457717393.28
+PASS,loans: BADAN BERKANUN detail=baki_belum_selesai_rm = Jumlah BADAN BERKANUN (2013),6655453658.090001,6655453658.09
+PASS,loans: KOPERASI detail=baki_belum_selesai_rm = Jumlah KOPERASI (2013),178271903.98000002,178271903.98
+PASS,loans: SYARIKAT detail=baki_belum_selesai_rm = Jumlah SYARIKAT (2013),29624251367.19,29624251367.19
+PASS,loans: PERSEORANGAN detail=baki_belum_selesai_rm = Jumlah PERSEORANGAN (2013),36460363861.200005,36460363861.2
+PASS,loans: PELBAGAI detail=baki_belum_selesai_rm = Jumlah PELBAGAI (2013),3128042555.7799997,3128042555.78
+PASS,loans: sum(category subtotals)=baki_belum_selesai_rm = JUMLAH PINJAMAN BOLEH DITUNTUT (2013),92444600373.76,92444600373.76
+PASS,loans: pembangunan+hasil+amanah_lain = baki 2014 on every detail row (violations),0.0,0.0
+PASS,"loans: grand total 2014 = printed 99,036,023,598.57",99036023598.57,99036023598.57
+PASS,"loans: grand total 2013 = printed 92,444,600,373.76",92444600373.76,92444600373.76
+PASS,"loans: grand pembangunan 2014 = printed 39,080,564,970.08",39080564970.08,39080564970.08
+PASS,"loans: grand hasil disatukan 2014 = printed 3,262,007,175.06",3262007175.06,3262007175.06
+PASS,"loans: grand amanah lain 2014 = printed 56,693,451,453.43",56693451453.43,56693451453.43
+PASS,loans: grand total 2014 = Nota 8 Pinjaman Boleh Dituntut (rounded RM),99036023599.0,99036023599.0
+PASS,"loans: Jumlah Kerajaan Negeri 2014 = printed 16,470,077,891.28 (= Nota 8 rounded)",16470077891.28,16470077891.28
+PASS,loans: Jumlah Kerajaan Negeri 2014 = Nota 8 (rounded RM),16470077891.0,16470077891.0
+PASS,loans: Jumlah Pihak Berkuasa Tempatan 2014 = Nota 8 (rounded RM),451005221.0,451005221.0
+PASS,loans: Jumlah Badan Berkanun 2014 = Nota 8 (rounded RM),6820864168.0,6820864168.0
+PASS,loans: Jumlah Koperasi 2014 = Nota 8 (rounded RM),158302635.0,158302635.0
+PASS,loans: Jumlah Syarikat 2014 = Nota 8 (rounded RM),28856676215.0,28856676215.0
+PASS,loans: Jumlah Perseorangan 2014 = Nota 8 (rounded RM),44061429758.0,44061429758.0
+PASS,loans: Jumlah Pelbagai 2014 = Nota 8 (rounded RM),2217667710.0,2217667710.0
+PASS,investments: AGENSI ANTARABANGSA details = Jumlah Agensi Antarabangsa (2014),38574228.53,38574228.53
+PASS,investments: BADAN BERKANUN details = Jumlah Badan Berkanun (2014),1218852876.4499998,1218852876.45
+PASS,investments: SYARIKAT details = Jumlah Syarikat (2014),28625590153.739998,28625590153.74
+PASS,investments: sum(section subtotals) = JUMLAH PELABURAN (2014),29883017258.72,29883017258.72
+PASS,investments: AGENSI ANTARABANGSA details = Jumlah Agensi Antarabangsa (2013),38574228.53,38574228.53
+PASS,investments: BADAN BERKANUN details = Jumlah Badan Berkanun (2013),1218852876.4499998,1218852876.45
+PASS,investments: SYARIKAT details = Jumlah Syarikat (2013),28421710693.739998,28421710693.74
+PASS,investments: sum(section subtotals) = JUMLAH PELABURAN (2013),29679137798.72,29679137798.72
+PASS,"investments: Jumlah Syarikat 2014 = printed 28,625,590,153.74",28625590153.74,28625590153.74
+PASS,"investments: JUMLAH PELABURAN 2014 = printed 29,883,017,258.72",29883017258.72,29883017258.72
+PASS,"investments: JUMLAH PELABURAN 2013 = printed 29,679,137,798.72",29679137798.72,29679137798.72
+PASS,investments: JUMLAH PELABURAN 2014 = Nota 8(b) (rounded RM),29883017259.0,29883017259.0
+PASS,debt: TERBITAN PELABURAN KERAJAAN series sum = printed Jumlah,185500000000.0,185500000000.0
+PASS,debt: TERBITAN PELABURAN KERAJAAN = control (Nota 9(a)),185500000000.0,185500000000.0
+PASS,debt: TERBITAN PELABURAN KERAJAAN dibenarkan sum = printed Jumlah,185500000000.0,185500000000.0
+PASS,debt: TERBITAN PELABURAN KERAJAAN dibenarkan = printed control,185500000000.0,185500000000.0
+PASS,debt: SEKURITI KERAJAAN MALAYSIA series sum = printed Jumlah,329632319000.0,329632319000.0
+PASS,debt: SEKURITI KERAJAAN MALAYSIA = control (Nota 9(a)),329632319000.0,329632319000.0
+PASS,debt: SEKURITI KERAJAAN MALAYSIA dibenarkan sum = printed Jumlah,335897195000.0,335897195000.0
+PASS,debt: SEKURITI KERAJAAN MALAYSIA dibenarkan = printed control,335897195000.0,335897195000.0
+PASS,debt: PINJAMAN PASARAN series sum = printed Jumlah,11468925000.0,11468925000.0
+PASS,"debt: PINJAMAN PASARAN = control 11,468,925,000 (Nota 9(a))",11468925000.0,11468925000.0
+PASS,debt: PINJAMAN PASARAN USD sum = printed Jumlah (USD 3.25b),3250000000.0,3250000000.0
+PASS,"debt: PINJAMAN PASARAN USD control 3,250,000,000.00",3250000000.0,3250000000.0
+PASS,debt: Bil Perbendaharaan = control 4.32b,4320000000.0,4320000000.0
+PASS,debt: BP+TPK+SKM = Jumlah Dalam Negeri,519452319000.0,519452319000.0
+PASS,"debt: Jumlah Dalam Negeri = control 519,452,319,000 (Nota 9(a))",519452319000.0,519452319000.0
+PASS,debt: KWPP financing rows sum = printed Jumlah KWPP,46600000000.0,46600000000.0
+PASS,"debt: Jumlah KWPP = control 46,600,000,000 (Nota 9(a))",46600000000.0,46600000000.0
+PASS,debt: KWPP dibenarkan sum = printed Jumlah (41.2b),41200000000.0,41200000000.0
+PASS,debt: Jumlah Pinjaman Pasaran = Jumlah Luar Negeri,11468925000.0,11468925000.0
+PASS,debt: Dalam + KWPP + Luar = JUMLAH PINJAMAN,577521244000.0,577521244000.0
+PASS,"debt: JUMLAH PINJAMAN = control 577,521,244,000",577521244000.0,577521244000.0
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_dibenarkan_fx),258588177.04000002,258588177.04
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (terkumpul_keluaran_fx),165794119.47000003,165794119.47
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (terkumpul_bayaran_balik_fx),88803119.77,88803119.77
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_belum_selesai_fx),76990999.7,76990999.7
+PASS,"debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_belum_selesai_rm) [printed 1-sen rounding diagnosed: rows 389,620,653.07 vs Jumlah 389,620,653.08]",389620653.07,389620653.08
+PASS,debt/BLN: Bank Pembangunan Asia details = Jumlah (amaun_dibenarkan_fx),225738373.14,225738373.14
+PASS,debt/BLN: Bank Pembangunan Asia details = Jumlah (terkumpul_keluaran_fx),225738373.14,225738373.14
+PASS,debt/BLN: Bank Pembangunan Asia details = Jumlah (terkumpul_bayaran_balik_fx),150208476.86,150208476.86
+PASS,debt/BLN: Bank Pembangunan Asia details = Jumlah (amaun_belum_selesai_fx),75529896.28,75529896.28
+PASS,debt/BLN: Bank Pembangunan Asia details = Jumlah (amaun_belum_selesai_rm),266537450.98,266537450.98
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_dibenarkan_fx),5900000.0,5900000.0
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (terkumpul_keluaran_fx),5900000.0,5900000.0
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (terkumpul_bayaran_balik_fx),548837.2,548837.2
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_belum_selesai_fx),5351162.8,5351162.8
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_belum_selesai_rm),18883718.4,18883718.4
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (amaun_dibenarkan_fx),2517399.15,2517399.15
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (terkumpul_keluaran_fx),2517399.15,2517399.15
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (terkumpul_bayaran_balik_fx),1443723.63,1443723.63
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (amaun_belum_selesai_fx),1073675.52,1073675.52
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (amaun_belum_selesai_rm),3265798.83,3265798.83
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (amaun_dibenarkan_fx),166753048.39,166753048.39
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (terkumpul_keluaran_fx),166753048.41,166753048.41
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (terkumpul_bayaran_balik_fx),162031864.22,162031864.22
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (amaun_belum_selesai_fx),4721184.1899999995,4721184.19
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (amaun_belum_selesai_rm),20254352.28,20254352.28
+PASS,debt/BLN: Japan Bank for International Cooperation details = Jumlah (amaun_dibenarkan_fx),107666467610.0,107666467610.0
+PASS,debt/BLN: Japan Bank for International Cooperation details = Jumlah (terkumpul_keluaran_fx),85761646423.0,85761646423.0
+PASS,debt/BLN: Japan Bank for International Cooperation details = Jumlah (terkumpul_bayaran_balik_fx),85761646423.0,85761646423.0
+PASS,debt/BLN: Japan Bank for International Cooperation details = Jumlah (amaun_belum_selesai_fx),0.0,0.0
+PASS,debt/BLN: Japan Bank for International Cooperation details = Jumlah (amaun_belum_selesai_rm),0.0,0.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_dibenarkan_fx),241309017431.0,241309017431.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (terkumpul_keluaran_fx),209089570337.0,209089570337.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (terkumpul_bayaran_balik_fx),52977263176.0,52977263176.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_belum_selesai_fx),156112307161.0,156112307161.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_belum_selesai_rm),4608435307.400001,4608435307.4
+PASS,debt/BLN: multilateral lender subtotals = JUMLAH MULTILATERAL,656158104.06,656158104.06
+PASS,debt/BLN: bilateral lender subtotals = JUMLAH BILATERAL,4650839176.91,4650839176.91
+PASS,debt/BLN: MULTI + BI = JUMLAH BANTUAN LUAR NEGERI,5306997280.969999,5306997280.97
+PASS,"debt/BLN: JUMLAH BANTUAN LUAR NEGERI = control 5,306,997,280.97",5306997280.97,5306997280.97
+PASS,"debt/BLN: JUMLAH MULTILATERAL = control 656,158,104.06",656158104.06,656158104.06
+PASS,"debt/BLN: JUMLAH BILATERAL = control 4,650,839,176.91",4650839176.91,4650839176.91
+PASS,"debt: JUMLAH PINJAMAN + BLN = Nota 9 HUTANG AWAM 582,828,241,281 (rounded)",582828241280.97,582828241280.97
+PASS,"statutory: pencarum details = JUMLAH (jumlah_rm,2014)",678015728835.25,678015728835.25
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (jumlah_rm,2014)",38546418571.43,38546418571.43
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (jumlah_rm,2014)",133472995395.65999,133472995395.66
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (jumlah_rm,2014)",172019413967.09,172019413967.09
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (jumlah_rm,2014)",850035142802.34,850035142802.34
+PASS,"statutory: pencarum details = JUMLAH (dalam_negeri_rm,2014)",678015728835.25,678015728835.25
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (dalam_negeri_rm,2014)",38546418571.43,38546418571.43
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (dalam_negeri_rm,2014)",129292149376.43,129292149376.43
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (dalam_negeri_rm,2014)",167838567947.86,167838567947.86
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (dalam_negeri_rm,2014)",845854296783.11,845854296783.11
+PASS,"statutory: pencarum details = JUMLAH (luar_negeri_rm,2014)",0.0,0.0
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (luar_negeri_rm,2014)",0.0,0.0
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (luar_negeri_rm,2014)",4180846019.23,4180846019.23
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (luar_negeri_rm,2014)",4180846019.23,4180846019.23
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (luar_negeri_rm,2014)",4180846019.23,4180846019.23
+PASS,"statutory: pencarum details = JUMLAH (jumlah_rm,2013)",610908127026.43,610908127026.43
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (jumlah_rm,2013)",35120464286.0,35120464286.0
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (jumlah_rm,2013)",122379448945.81999,122379448945.82
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (jumlah_rm,2013)",157499913231.82,157499913231.82
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (jumlah_rm,2013)",768408040258.25,768408040258.25
+PASS,statutory: dalam+luar = jumlah 2014 per row (violations),0.0,0.0
+PASS,"statutory: JUMLAH JAMINAN 2014 = control 850,035,142,802.34",850035142802.34,850035142802.34
+PASS,"statutory: JUMLAH JAMINAN 2013 = control 768,408,040,258.25",768408040258.25,768408040258.25
+PASS,"statutory: pinjaman total 2014 = Nota 10(a) 172,019,413,967",172019413967.09,172019413967.09
+PASS,"statutory: pencarum total 2014 = Nota 10(b) 678,015,728,835",678015728835.25,678015728835.25

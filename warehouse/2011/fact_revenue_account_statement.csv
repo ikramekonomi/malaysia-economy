@@ -1,0 +1,31 @@
+section_bm,line_item_bm,row_type,year,anggaran_disemak_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+,BAKI PADA 1 JANUARI,opening,2011,,11863127086.0,,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,BAKI PADA 1 JANUARI,opening,2010,,11863127086.0,,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Hasil Cukai,item,2011,129182224000.0,134884834173.0,104.41,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Hasil Cukai,item,2010,,109515185813.0,102.26,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Hasil Bukan Cukai,item,2011,53141305000.0,49423045556.0,93.0,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Hasil Bukan Cukai,item,2010,,48867434930.0,90.76,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Terimaan Bukan Hasil,item,2011,548749000.0,544133845.0,99.16,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Terimaan Bukan Hasil,item,2010,,793006447.0,102.35,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Hasil Wilayah Persekutuan,item,2011,502331000.0,566906169.0,112.86,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Hasil Wilayah Persekutuan,item,2010,,477335128.0,112.53,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Jumlah Hasil,subtotal,2011,183374609000.0,185418919743.0,101.11,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Jumlah Hasil,subtotal,2010,,159652962318.0,98.47,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Emolumen,item,2011,48638276337.0,50148348527.0,103.1,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Emolumen,item,2010,,46662939934.0,107.09,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Perkhidmatan dan Bekalan,item,2011,29259892486.0,28948592637.0,98.94,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Perkhidmatan dan Bekalan,item,2010,,23840844635.0,98.95,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Aset,item,2011,2748704758.0,2665292177.0,96.97,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Aset,item,2010,,1869375321.0,97.0,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Pemberian dan Kenaan Bayaran Tetap,item,2011,96135634314.0,99693813446.0,103.7,True,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Pemberian dan Kenaan Bayaran Tetap,item,2010,,78104600235.0,99.8,True,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Perbelanjaan-perbelanjaan lain,item,2011,1197316995.0,1137741551.0,95.02,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Perbelanjaan-perbelanjaan lain,item,2010,,1154849140.0,95.55,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Jumlah Perbelanjaan Mengurus (sebelum pindahan),subtotal,2011,177979824890.0,182593788338.0,102.59,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Jumlah Perbelanjaan Mengurus (sebelum pindahan),subtotal,2010,,151632609265.0,101.72,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan,item,2011,0.0,2825131405.0,,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan,item,2010,,8020353053.0,,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Jumlah Perbelanjaan Mengurus (selepas pindahan),subtotal,2011,177979824890.0,185418919743.0,104.18,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,Jumlah Perbelanjaan Mengurus (selepas pindahan),subtotal,2010,,159652962318.0,107.1,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,BAKI PADA 31 DISEMBER,closing,2011,,11863127086.0,,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan
+,BAKI PADA 31 DISEMBER,closing,2010,,11863127086.0,,False,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,38,Nota 5 Akaun Hasil Disatukan

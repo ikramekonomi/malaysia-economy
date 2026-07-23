@@ -1,0 +1,52 @@
+maksud_code,jenis_bm,maksud_name_bm,year,anggaran_asal_rm,anggaran_dipinda_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+T.01,Tanggungan,Peruntukan Diraja Bagi S.P.B. Yang Di-Pertuan Agong,2023,13533000.0,13533000.0,13532893.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.02,Tanggungan,Elaun-elaun Diraja,2023,1337000.0,1337000.0,1220890.0,91.32,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.03,Tanggungan,"Ketua Hakim Negara, Hakim Besar dan Hakim",2023,115000000.0,115000000.0,107256897.0,93.27,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.04,Tanggungan,Ketua Audit Negara,2023,900400.0,900400.0,873722.0,97.04,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.05,Tanggungan,Yang Di-Pertua Dewan Rakyat,2023,564000.0,564000.0,564000.0,100.0,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.06,Tanggungan,Yang Di-Pertua Dewan Negara,2023,504000.0,504000.0,497097.0,98.63,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.07,Tanggungan,Suruhanjaya Pilihan Raya,2023,2465300.0,2465300.0,2091925.0,84.85,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.08,Tanggungan,Suruhanjaya Perkhidmatan Kehakiman dan Perundangan,2023,11600.0,11600.0,5200.0,44.83,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.09,Tanggungan,Suruhanjaya Perkhidmatan Awam,2023,6291600.0,6291600.0,4914269.0,78.11,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.10,Tanggungan,Suruhanjaya Perkhidmatan Pendidikan,2023,5254500.0,5254500.0,5225826.0,99.45,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.11,Tanggungan,Suruhanjaya Pasukan Polis,2023,2132200.0,2132200.0,2042325.0,95.78,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.12,Tanggungan,Perbendaharaan,2023,6644653100.0,7348953100.0,7302103159.0,99.36,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.13,Tanggungan,Perbelanjaan Kerana Hutang Negara,2023,46100000000.0,46332606000.0,46331373466.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.14,Tanggungan,"Pencen, Elaun Bersara dan Ganjaran",2023,30500000000.0,32615000000.0,32372908762.0,99.26,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.01,Bekalan,Parlimen,2023,166731200.0,166731200.0,166730680.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.02,Bekalan,Pejabat Penyimpan Mohor Besar Raja-Raja,2023,3604700.0,3604700.0,3197022.0,88.69,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.03,Bekalan,Jabatan Audit Negara,2023,160837500.0,160837500.0,160836583.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.04,Bekalan,Suruhanjaya Pilihan Raya,2023,65543300.0,365543300.0,310946583.0,85.06,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.05,Bekalan,Suruhanjaya Perkhidmatan Awam,2023,42380200.0,42380200.0,41817960.0,98.67,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.06,Bekalan,Jabatan Perdana Menteri,2023,4333910300.0,4333910300.0,4318545152.0,99.65,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.07,Bekalan,Jabatan Perkhidmatan Awam,2023,471501600.0,471501600.0,624763806.0,132.51,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.08,Bekalan,Jabatan Peguam Negara,2023,198343100.0,198343100.0,196327809.0,98.98,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.09,Bekalan,Suruhanjaya Pencegahan Rasuah Malaysia,2023,312415600.0,312415600.0,310421264.0,99.36,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.10,Bekalan,Perbendaharaan,2023,4200000000.0,4200000000.0,4199995541.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.11,Bekalan,Perkhidmatan Am Perbendaharaan,2023,51681721500.0,51681721500.0,66155994694.0,128.01,True,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.12,Bekalan,Peruntukan kepada Kumpulan Wang Terkanun,2023,1443074500.0,1921706950.0,5647742954.0,293.89,True,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.13,Bekalan,Kementerian Luar Negeri,2023,809613800.0,809613800.0,785845852.0,97.06,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.14,Bekalan,Kementerian Perpaduan Negara,2023,541595300.0,541595300.0,541594058.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.15,Bekalan,Kementerian Ekonomi,2023,535476300.0,535476300.0,535475845.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.20,Bekalan,Kementerian Perladangan dan Komoditi,2023,397000000.0,237200000.0,228127905.0,96.18,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.21,Bekalan,Kementerian Pertanian dan Keterjaminan Makanan,2023,3775105000.0,3775105000.0,3770550943.0,99.88,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.22,Bekalan,Kementerian Kemajuan Desa dan Wilayah,2023,3616367700.0,3616367700.0,3616364806.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.23,Bekalan,"Kementerian Sumber Asli, Alam Sekitar dan Perubahan Iklim",2023,1674694400.0,1674694400.0,1654302781.0,98.78,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.24,Bekalan,"Kementerian Pelaburan, Perdagangan dan Industri",2023,625096500.0,625096500.0,620371529.0,99.24,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.25,Bekalan,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,2023,1191811400.0,1191811400.0,2365947473.0,198.52,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.26,Bekalan,Kementerian Pembangunan Usahawan dan Koperasi,2023,212141400.0,212141400.0,212140420.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.27,Bekalan,Kementerian Kerja Raya,2023,865271900.0,865271900.0,865270779.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.28,Bekalan,Kementerian Pengangkutan,2023,1544627300.0,1544627300.0,1536580092.0,99.48,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.30,Bekalan,"Kementerian Sains, Teknologi dan Inovasi",2023,673501200.0,673501200.0,667098468.0,99.05,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.31,Bekalan,"Kementerian Pelancongan, Seni dan Budaya",2023,837175600.0,837175600.0,826586631.0,98.74,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.40,Bekalan,Suruhanjaya Perkhidmatan Pendidikan,2023,21142400.0,21142400.0,21142025.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.42,Bekalan,Kementerian Kesihatan,2023,31500000000.0,31500000000.0,32187887050.0,102.18,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.43,Bekalan,Kementerian Perumahan dan Kerajaan Tempatan,2023,1774905500.0,1774905500.0,1831813922.0,103.21,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.45,Bekalan,Kementerian Belia dan Sukan,2023,621098300.0,621098300.0,653080924.0,105.15,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.46,Bekalan,Kementerian Sumber Manusia,2023,845163900.0,845163900.0,845161948.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.47,Bekalan,Kementerian Komunikasi dan Digital,2023,991449100.0,991449100.0,991445855.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.48,Bekalan,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",2023,3196960900.0,3196960900.0,3119422874.0,97.57,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.60,Bekalan,Kementerian Pertahanan,2023,11414091900.0,11414091900.0,11824621741.0,103.6,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.62,Bekalan,Kementerian Dalam Negeri,2023,13803000000.0,13803000000.0,13802997052.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.63,Bekalan,Kementerian Pendidikan,2023,49500000000.0,49500000000.0,51473721027.0,103.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.64,Bekalan,Kementerian Pendidikan Tinggi,2023,11700000000.0,11700000000.0,11699999252.0,99.99,False,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,81,69,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud

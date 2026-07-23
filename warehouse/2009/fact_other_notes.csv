@@ -1,0 +1,14 @@
+nota,line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+G3(13c),Perihal,2009,2009.0,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),Perihal,2008,2008.0,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),Nota Kena Bayar,2009,133768024.61,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),Nota Kena Bayar,2008,132364856.8,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),Sekuriti Tak Dituntut,2009,21843595.84,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),Sekuriti Tak Dituntut,2008,17688893.11,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),Akaun Depositori Pusat,2009,17752494.75,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),Akaun Depositori Pusat,2008,25649402.5,line,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),JUMLAH PELBAGAI LIABILITI,2009,173364115.2,total,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+G3(13c),JUMLAH PELBAGAI LIABILITI,2008,175703152.41,total,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,187,183,G3 Penyata Akaun Memorandum Pelbagai Liabiliti
+3,Liabiliti Luar Jangka (Third Party War Risk - MAHB),2009,467000000.0,scalar_juta_approx,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,41,34,Nota kepada Penyata Kewangan
+4,Akaun Belum Terima,2009,21930769621.0,scalar,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,41,34,Nota kepada Penyata Kewangan
+5,Wang Pendahuluan kepada Kontraktor,2009,1749364360.0,scalar,False,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,41,34,Nota kepada Penyata Kewangan

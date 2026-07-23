@@ -1,0 +1,52 @@
+status,check,extracted_value,printed_value,difference
+PASS,fin_pos WangAwam A+B=Jumlah 2009,43535543299.0,43535543299.0,0.0
+PASS,fin_pos C+D+E=Jumlah 2009,43535543299.0,43535543299.0,0.0
+PASS,cash_components sum=JUMLAH 2009,21722318474.47,21722318474.47,0.0
+PASS,inv_summary Amanah sum 2009,14834564921.4,14834564921.4,0.0
+PASS,inv_summary Am sum 2009,6978659903.44,6978659903.44,0.0
+PASS,inv_summary grand 2009,21813224824.84,21813224824.84,0.0
+PASS,cash sum TERIMAAN cats=Jumlah Terimaan 2009,273249151048.0,273249151048.0,0.0
+PASS,cash JumTerimaan-Bayaran=Tambahan 2009,6320332746.0,6320332746.0,0.0
+PASS,cash open+delta=close 2009,21722318474.0,21722318474.0,0.0
+PASS,revenue Hasil Cukai items==Jumlah 2009,106504411010.7,106504411010.7,0.0
+PASS,revenue Hasil Bukan Cukai items==Jumlah 2009,50789238901.91,50789238901.91,0.0
+PASS,revenue Pelbagai Terimaan items==Jumlah 2009,1067563070.09,1067563070.09,0.0
+PASS,revenue sum categories==JUMLAH HASIL 2009,158639304227.7,158639304227.7,0.0
+PASS,revenue JUMLAH HASIL 2009==printed,158639304227.7,158639304227.7,0.0
+PASS,timeseries Hasil components cross-foot all years,,,
+PASS,timeseries Wang Awam cross-foot all years,,,
+PASS,E2 JUMLAH AMANAH AWAM 2009==E summary,9403151496.18,9403151496.18,0.0
+PASS,E2 Khas+Am==Awam 2009,9403151496.18,9403151496.18,0.0
+PASS,"opex object->program additivity (all 360 programs, 3 cols)",360,360,0
+PASS,opex program->maksud additivity (52 maksuds),52,52,0
+PASS,opex objclass->maksud additivity (52 maksuds),52,52,0
+PASS,opex Tanggungan+Bekalan sebenar==Jumlah Hasil,158639304227.7,158639304227.7,0.0
+PASS,opex JUMLAH MENGURUS (incl pindahan)==printed,158639304227.7,158639304227.7,0.0
+PASS,opex JUMLAH KESELURUHAN (tanpa pindahan)==cash stmt,157066959319.47,157066959319.47,0.0
+PASS,opex_maksud sum sebenar==Jumlah Hasil,158639304227.7,158639304227.7,0.0
+PASS,"devex GRAND sebenar_jumlah==printed (49,515,355,570.54)",49515355570.54,49515355570.54,0.0
+PASS,devex maksud sum sebenar_pinjaman==grand,4221115898.0,4221115898.0,0.0
+PASS,devex_project rows aligned by per-row identity: 1266/1412,1266,1412,-146
+PASS,devex grand==cash stmt Perbelanjaan Pembangunan Langsung+Pinjaman,49515355570.54,49515355570.54,0.0
+PASS,fin_pos Wang Tunai==Penyata A JUMLAH (rounded),21722318474.0,21722318474.0,0.0
+PASS,fin_pos Pelaburan==Penyata B JUMLAH (rounded),21813224825.0,21813224825.0,0.0
+PASS,timeseries debt-flow components==Jumlah (8 sections x 10 yrs),80,80,0
+PASS,timeseries Jumlah Hutang Awam 2009 (juta),362386.0,362386,0.0
+PASS,timeseries section_bm labels cleaned (no wrapped-fragment),0,0,0
+PASS,revenue-acct BAKI 1 JANUARI==printed,11863127085.94,11863127085.94,0.0
+PASS,revenue-acct BAKI 31 DISEMBER==printed,11863127085.94,11863127085.94,0.0
+PASS,revenue-acct roll-forward open+Lebihan==close,11863127085.94,11863127085.94,0.0
+PASS,investments detail line nilai_buku sum==JUMLAH PELABURAN 2009,27751414083.29,27751414083.29,0.0
+PASS,investments JUMLAH PELABURAN 2009==printed,27751414083.29,27751414083.29,0.0
+PASS,investments modal_saham/nilai_nominal populated (2009 lines),245,245,0
+PASS,header-leak junk rows removed (inv+debt+loan+trust_acct+trust_detail),0,0,0
+PASS,devex ministry_total sebenar_jumlah==devex_maksud (all 29),29,29,0
+PASS,devex ministry_total no empty sebenar_jumlah,0,0,0
+PASS,devex grand_total sebenar_jumlah==audited,49515355570.54,49515355570.54,0.0
+PASS,devex grand_total relabeled (not SIMPANAN/P.70),1,1,0
+PASS,devex pindah_rm cleared of ringgit-looking ints,0,0,0
+PASS,devex pindah_ref text populated,187,187,0
+DOC,"devex sum ministry_total (49,291,023,062.69) vs grand: 224,332,507.85 gap = GENUINE 2009 reorg (P.26/P.44 transferred-out)",49291023062.69,49515355570.54,-224332507.85
+PASS,AUDITED devex grand ties,49515355570.54,49515355570.54,0.0
+PASS,AUDITED investments grand ties,27751414083.29,27751414083.29,0.0
+PASS,AUDITED hutang awam grand ties,362386171109.62,362386171109.62,0.0

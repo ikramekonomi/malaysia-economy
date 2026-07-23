@@ -1,0 +1,83 @@
+jenis_jaminan_bm,kategori_bm,agensi_bm,row_type,year,dalam_negeri_rm,luar_negeri_rm,jumlah_rm,source_file,pdf_page,printed_page,statement
+JAMINAN PENCARUM / PENDEPOSIT,,Bank Simpanan Nasional,detail,2019,28668839617.46,0.0,28668839617.46,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Bank Simpanan Nasional,detail,2018,,,26769058725.1,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Kumpulan Wang Simpanan Pekerja,detail,2019,916586743965.14,0.0,916586743965.14,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Kumpulan Wang Simpanan Pekerja,detail,2018,,,839642920247.23,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Lembaga Tabung Haji,detail,2019,69417441060.4,0.0,69417441060.4,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Lembaga Tabung Haji,detail,2018,,,74499889879.76,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Perbadanan Tabung Pendidikan Tinggi Nasional - SSPN-I,detail,2019,4689925118.52,0.0,4689925118.52,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,Perbadanan Tabung Pendidikan Tinggi Nasional - SSPN-I,detail,2018,,,3682902756.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,JUMLAH JAMINAN PENCARUM / PENDEPOSIT,subtotal,2019,1019362949761.52,0.0,1019362949761.52,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PENCARUM / PENDEPOSIT,,JUMLAH JAMINAN PENCARUM / PENDEPOSIT,subtotal,2018,,,944594771608.09,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Lembaga Kemajuan Tanah Persekutuan (FELDA),detail,2019,3900000872.62,0.0,3900000872.62,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Lembaga Kemajuan Tanah Persekutuan (FELDA),detail,2018,,,4000000872.6,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Lembaga Pembiayaan Perumahan Sektor Awam (LPPSA),detail,2019,22450000000.0,0.0,22450000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Lembaga Pembiayaan Perumahan Sektor Awam (LPPSA),detail,2018,,,17750000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Kemajuan Negeri Pahang,detail,2019,60000000.0,0.0,60000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Kemajuan Negeri Pahang,detail,2018,,,120000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan PR1MA Malaysia (PR1MA),detail,2019,5000000000.0,0.0,5000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan PR1MA Malaysia (PR1MA),detail,2018,,,5000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Tabung Pendidikan Tinggi Nasional,detail,2019,37300000000.0,0.0,37300000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Perbadanan Tabung Pendidikan Tinggi Nasional,detail,2018,,,37700000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Jumlah Badan Berkanun,subtotal,2019,68710000872.62,0.0,68710000872.62,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Badan Berkanun,Jumlah Badan Berkanun,subtotal,2018,,,64570000872.6,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,1Malaysia Development Berhad,detail,2019,5000000000.0,0.0,5000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,1Malaysia Development Berhad,detail,2018,,,5000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Assets Global Network Sdn. Bhd.,detail,2019,354060000.0,0.0,354060000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Assets Global Network Sdn. Bhd.,detail,2018,,,455220000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Pembangunan Malaysia Berhad (BPMB),detail,2019,5900000000.0,0.0,5900000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Pembangunan Malaysia Berhad (BPMB),detail,2018,,,6350000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Perusahaan Kecil & Sederhana Malaysia Bhd (SME Bank),detail,2019,2500000000.0,0.0,2500000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Bank Perusahaan Kecil & Sederhana Malaysia Bhd (SME Bank),detail,2018,,,2600000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Danainfra Nasional Berhad,detail,2019,63820000000.0,0.0,63820000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Danainfra Nasional Berhad,detail,2018,,,52740000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Govco Holdings Berhad,detail,2019,7200000000.0,0.0,7200000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Govco Holdings Berhad,detail,2018,,,7300000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jambatan Kedua Sdn. Bhd.,detail,2019,4600000000.0,1047546500.0,5647546500.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jambatan Kedua Sdn. Bhd.,detail,2018,,,5751122500.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Johor Corporation (JCorp),detail,2019,1800000000.0,0.0,1800000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Johor Corporation (JCorp),detail,2018,,,2600000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,K.L. International Airport Berhad (KLIA),detail,2019,0.0,0.0,0.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,K.L. International Airport Berhad (KLIA),detail,2018,,,94377547.1,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Khazanah Nasional Berhad,detail,2019,12500000000.0,0.0,12500000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Khazanah Nasional Berhad,detail,2018,,,15000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysia Debt Ventures Sdn. Bhd.,detail,2019,1200000000.0,0.0,1200000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysia Debt Ventures Sdn. Bhd.,detail,2018,,,930000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysia Rail-Link Sdn. Bhd.,detail,2019,5300000000.0,13205798310.71,18505798310.71,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Malaysia Rail-Link Sdn. Bhd.,detail,2018,,,18862350408.2,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,MKD Kencana Sdn. Bhd.,detail,2019,3500000000.0,0.0,3500000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,MKD Kencana Sdn. Bhd.,detail,2018,,,3500000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pelabuhan Tanjung Pelepas Sdn. Bhd.,detail,2019,1910000000.0,0.0,1910000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pelabuhan Tanjung Pelepas Sdn. Bhd.,detail,2018,,,1995000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Penerbangan Malaysia Berhad (PMB),detail,2019,388099918.2,0.0,388099918.2,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Penerbangan Malaysia Berhad (PMB),detail,2018,,,468547290.07,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pengurusan Air SPV Berhad (PASB),detail,2019,12210000000.0,0.0,12210000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Pengurusan Air SPV Berhad (PASB),detail,2018,,,13310000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Prasarana Malaysia Berhad,detail,2019,32264000000.0,0.0,32264000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Prasarana Malaysia Berhad,detail,2018,,,31414000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Projek Lebuhraya Usahasama Berhad (PLUS),detail,2019,11000000000.0,0.0,11000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Projek Lebuhraya Usahasama Berhad (PLUS),detail,2018,,,11000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sarawak Hidro Sdn. Bhd. (SHSB),detail,2019,1000000000.0,0.0,1000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sarawak Hidro Sdn. Bhd. (SHSB),detail,2018,,,1000000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Senai Airport Terminal Service Sdn. Bhd.,detail,2019,330000000.0,0.0,330000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Senai Airport Terminal Service Sdn. Bhd.,detail,2018,,,330000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sentuhan Budiman,detail,2019,800000000.0,0.0,800000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Sentuhan Budiman,detail,2018,,,800000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,SRC International Sdn. Bhd.,detail,2019,3485448214.11,0.0,3485448214.11,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,SRC International Sdn. Bhd.,detail,2018,,,3600000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Suria Strategic Resources Sdn. Bhd. (SSER),detail,2019,0.0,6707946842.66,6707946842.66,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Suria Strategic Resources Sdn. Bhd. (SSER),detail,2018,,,7925264367.51,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Syarikat Perumahan negara Berhad (SPNB),detail,2019,530300000.0,0.0,530300000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Syarikat Perumahan negara Berhad (SPNB),detail,2018,,,530300000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Tenaga Nasional Berhad (TNB),detail,2019,0.0,2434002518.9,2434002518.9,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Tenaga Nasional Berhad (TNB),detail,2018,,,2546897521.57,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,TRX City Sdn. Bhd.,detail,2019,371506737.11,0.0,371506737.11,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,TRX City Sdn. Bhd.,detail,2018,,,485398523.01,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Turus Pesawat Sdn. Bhd.,detail,2019,5310000000.0,0.0,5310000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Turus Pesawat Sdn. Bhd.,detail,2018,,,5310000000.0,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jumlah Syarikat,subtotal,2019,183273414869.42,23395294172.27,206668709041.69,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,Syarikat,Jumlah Syarikat,subtotal,2018,,,201898478157.46,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,,JUMLAH JAMINAN PINJAMAN,subtotal,2019,251983415742.04,23395294172.27,275378709914.31,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+JAMINAN PINJAMAN,,JUMLAH JAMINAN PINJAMAN,subtotal,2018,,,266468479030.06,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+,,JUMLAH JAMINAN,total,2019,1271346365503.56,23395294172.27,1294741659675.83,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun
+,,JUMLAH JAMINAN,total,2018,,,1211063250638.15,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,249,237,Penyata Akaun Memorandum Jaminan Berkanun

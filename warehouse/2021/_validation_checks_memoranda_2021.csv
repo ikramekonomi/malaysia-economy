@@ -1,0 +1,176 @@
+status,check,extracted_value,printed_value
+PASS,loans: KERAJAAN NEGERI detail=baki_belum_selesai_rm = Jumlah KERAJAAN NEGERI (2021),12917174864.069998,12917174864.07
+PASS,loans: KERAJAAN NEGERI detail=pembangunan_rm = Jumlah KERAJAAN NEGERI (2021),11153283225.64,11153283225.64
+PASS,loans: KERAJAAN NEGERI detail=amanah_rm = Jumlah KERAJAAN NEGERI (2021),1763891638.43,1763891638.43
+PASS,loans: SYARIKAT detail=baki_belum_selesai_rm = Jumlah SYARIKAT (2021),34613168836.21001,34613168836.21
+PASS,loans: SYARIKAT detail=pembangunan_rm = Jumlah SYARIKAT (2021),25760540611.09,25760540611.09
+PASS,loans: SYARIKAT detail=amanah_rm = Jumlah SYARIKAT (2021),8852628225.12,8852628225.12
+PASS,loans: BADAN BERKANUN detail=baki_belum_selesai_rm = Jumlah BADAN BERKANUN (2021),6963127525.21,6963127525.21
+PASS,loans: BADAN BERKANUN detail=pembangunan_rm = Jumlah BADAN BERKANUN (2021),4872218484.26,4872218484.26
+PASS,loans: BADAN BERKANUN detail=amanah_rm = Jumlah BADAN BERKANUN (2021),2090909040.95,2090909040.95
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=baki_belum_selesai_rm = Jumlah PIHAK BERKUASA TEMPATAN (2021),136242276.13,136242276.13
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=pembangunan_rm = Jumlah PIHAK BERKUASA TEMPATAN (2021),136242276.13,136242276.13
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=amanah_rm = Jumlah PIHAK BERKUASA TEMPATAN (2021),0.0,0.0
+PASS,loans: KOPERASI detail=baki_belum_selesai_rm = Jumlah KOPERASI (2021),237272362.48,237272362.48
+PASS,loans: KOPERASI detail=pembangunan_rm = Jumlah KOPERASI (2021),6792362.48,6792362.48
+PASS,loans: KOPERASI detail=amanah_rm = Jumlah KOPERASI (2021),230480000.0,230480000.0
+PASS,loans: PELBAGAI detail=baki_belum_selesai_rm = Jumlah PELBAGAI (2021),1523841741.98,1523841741.98
+PASS,loans: PELBAGAI detail=pembangunan_rm = Jumlah PELBAGAI (2021),97331590.0,97331590.0
+PASS,loans: PELBAGAI detail=amanah_rm = Jumlah PELBAGAI (2021),1426510151.98,1426510151.98
+PASS,loans: PERSEORANGAN detail=baki_belum_selesai_rm = Jumlah PERSEORANGAN (2021),153426846.1,153426846.1
+PASS,loans: PERSEORANGAN detail=pembangunan_rm = Jumlah PERSEORANGAN (2021),0.0,0.0
+PASS,loans: PERSEORANGAN detail=amanah_rm = Jumlah PERSEORANGAN (2021),153426846.1,153426846.1
+PASS,loans: sum(category subtotals)=baki_belum_selesai_rm = JUMLAH PINJAMAN (2021),56544254452.18,56544254452.18
+PASS,loans: pendahuluan details=baki_belum_selesai_rm = JUMLAH PENDAHULUAN (2021),1301798227.32,1301798227.32
+PASS,"loans: JUMLAH PINJAMAN + PENDAHULUAN = grand total (baki_belum_selesai_rm,2021)",57846052679.5,57846052679.5
+PASS,loans: sum(category subtotals)=pembangunan_rm = JUMLAH PINJAMAN (2021),42026408549.6,42026408549.6
+PASS,loans: pendahuluan details=pembangunan_rm = JUMLAH PENDAHULUAN (2021),0.0,0.0
+PASS,"loans: JUMLAH PINJAMAN + PENDAHULUAN = grand total (pembangunan_rm,2021)",42026408549.6,42026408549.6
+PASS,loans: sum(category subtotals)=amanah_rm = JUMLAH PINJAMAN (2021),14517845902.580002,14517845902.58
+PASS,loans: pendahuluan details=amanah_rm = JUMLAH PENDAHULUAN (2021),1301798227.32,1301798227.32
+PASS,"loans: JUMLAH PINJAMAN + PENDAHULUAN = grand total (amanah_rm,2021)",15819644129.9,15819644129.9
+PASS,loans: KERAJAAN NEGERI detail=baki_belum_selesai_rm = Jumlah KERAJAAN NEGERI (2020),14696672804.45,14696672804.45
+PASS,loans: SYARIKAT detail=baki_belum_selesai_rm = Jumlah SYARIKAT (2020),33471481387.06,33471481387.06
+PASS,loans: BADAN BERKANUN detail=baki_belum_selesai_rm = Jumlah BADAN BERKANUN (2020),7120406614.43,7120406614.43
+PASS,loans: PIHAK BERKUASA TEMPATAN detail=baki_belum_selesai_rm = Jumlah PIHAK BERKUASA TEMPATAN (2020),143178695.46,143178695.46
+PASS,loans: KOPERASI detail=baki_belum_selesai_rm = Jumlah KOPERASI (2020),237272362.48,237272362.48
+PASS,loans: PELBAGAI detail=baki_belum_selesai_rm = Jumlah PELBAGAI (2020),1687486839.4699998,1687486839.47
+PASS,loans: PERSEORANGAN detail=baki_belum_selesai_rm = Jumlah PERSEORANGAN (2020),261758811.84,261758811.84
+PASS,loans: sum(category subtotals)=baki_belum_selesai_rm = JUMLAH PINJAMAN (2020),57618257515.19,57618257515.19
+PASS,loans: pendahuluan details=baki_belum_selesai_rm = JUMLAH PENDAHULUAN (2020),1282428227.32,1282428227.32
+PASS,"loans: JUMLAH PINJAMAN + PENDAHULUAN = grand total (baki_belum_selesai_rm,2020)",58900685742.51,58900685742.51
+PASS,loans: pembangunan+amanah = baki 2021 on every detail row (count of violations),0.0,0.0
+PASS,"loans: grand total 2021 = printed 57,846,052,679.50",57846052679.5,57846052679.5
+PASS,"loans: grand total 2020 = printed 58,900,685,742.51",58900685742.51,58900685742.51
+PASS,investments: AGENSI ANTARABANGSA details = Jumlah Agensi Antarabangsa (2021),38574228.53,38574228.53
+PASS,investments: BADAN BERKANUN details = Jumlah Badan Berkanun (2021),978100695.58,978100695.58
+PASS,investments: SYARIKAT details = Jumlah Syarikat (2021),32844845784.61,32844845784.61
+PASS,investments: sum(section subtotals) = JUMLAH PELABURAN (2021),33861520708.72,33861520708.72
+PASS,investments: AGENSI ANTARABANGSA details = Jumlah Agensi Antarabangsa (2020),38574228.53,38574228.53
+PASS,investments: BADAN BERKANUN details = Jumlah Badan Berkanun (2020),978100695.58,978100695.58
+PASS,investments: SYARIKAT details = Jumlah Syarikat (2020),32174788786.61,32174788786.61
+PASS,investments: sum(section subtotals) = JUMLAH PELABURAN (2020),33191463710.72,33191463710.72
+PASS,investments: JUMLAH PELABURAN 2021 = Nota 9 (rounded RM),33861520709.0,33861520709.0
+PASS,investments: JUMLAH PELABURAN 2020 = Nota 9 (rounded RM),33191463711.0,33191463711.0
+PASS,debt: TERBITAN PELABURAN KERAJAAN series sum = printed Jumlah,422600000000.0,422600000000.0
+PASS,debt: TERBITAN PELABURAN KERAJAAN = control total,422600000000.0,422600000000.0
+PASS,debt: TERBITAN PELABURAN KERAJAAN dibenarkan sum = printed Jumlah,451600000000.0,451600000000.0
+PASS,debt: SEKURITI KERAJAAN MALAYSIA series sum = printed Jumlah,480717530000.0,480717530000.0
+PASS,debt: SEKURITI KERAJAAN MALAYSIA = control total,480717530000.0,480717530000.0
+PASS,debt: SEKURITI KERAJAAN MALAYSIA dibenarkan sum = printed Jumlah,519417530000.0,519417530000.0
+PASS,debt: SUKUK PERUMAHAN KERAJAAN series sum = printed Jumlah,18100000000.0,18100000000.0
+PASS,debt: SUKUK PERUMAHAN KERAJAAN = control total,18100000000.0,18100000000.0
+PASS,debt: SUKUK PERUMAHAN KERAJAAN dibenarkan sum = printed Jumlah,24100000000.0,24100000000.0
+PASS,debt: SUKUK PRIHATIN series sum = printed Jumlah,666417500.0,666417500.0
+PASS,debt: SUKUK PRIHATIN = control total,666417500.0,666417500.0
+PASS,debt: SUKUK PRIHATIN dibenarkan sum = printed Jumlah,666417500.0,666417500.0
+PASS,debt: PINJAMAN PASARAN series sum = printed Jumlah,25147100000.0,25147100000.0
+PASS,debt: PINJAMAN PASARAN = control total,25147100000.0,25147100000.0
+PASS,debt: Bil Perbendaharaan = control 28.0b,28000000000.0,28000000000.0
+PASS,debt: Sukuk Perumahan + Prihatin = Jumlah Sukuk aggregate,18766417500.0,18766417500.0
+PASS,debt: BP+TPK+SKM+Sukuk = Jumlah Dalam Negeri,950083947500.0,950083947500.0
+PASS,"debt: Jumlah Dalam Negeri = control 950,083,947,500",950083947500.0,950083947500.0
+PASS,debt: Jumlah Pinjaman Pasaran = Jumlah Luar Negeri,25147100000.0,25147100000.0
+PASS,debt: Dalam + Luar = JUMLAH PINJAMAN,975231047500.0,975231047500.0
+PASS,"debt: JUMLAH PINJAMAN = control 975,231,047,500",975231047500.0,975231047500.0
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_dibenarkan_fx),79775394.63,79775394.63
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (terkumpul_keluaran_fx),79775394.63,79775394.63
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (terkumpul_bayaran_balik_fx),59959603.470000006,59959603.47
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_belum_selesai_fx),19815791.16,19815791.16
+PASS,debt/BLN: Bank Pembangunan Islam details = Jumlah (amaun_belum_selesai_rm),115512191.39999999,115512191.4
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_dibenarkan_fx),5900000.0,5900000.0
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (terkumpul_keluaran_fx),5900000.0,5900000.0
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (terkumpul_bayaran_balik_fx),2469767.4,2469767.4
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_belum_selesai_fx),3430232.6,3430232.6
+PASS,debt/BLN: Kerajaan Sepanyol - ICO details = Jumlah (amaun_belum_selesai_rm),14286918.78,14286918.78
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (amaun_dibenarkan_fx),2121123.15,2121123.15
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (terkumpul_keluaran_fx),2121123.15,2121123.15
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (terkumpul_bayaran_balik_fx),1458271.65,1458271.65
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (amaun_belum_selesai_fx),662851.5,662851.5
+PASS,debt/BLN: Kerajaan Kanada details = Jumlah (amaun_belum_selesai_rm),2168187.26,2168187.26
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (amaun_dibenarkan_fx),17447766.72,17447766.72
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (terkumpul_keluaran_fx),17447766.72,17447766.72
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (terkumpul_bayaran_balik_fx),17399106.09,17399106.09
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (amaun_belum_selesai_fx),48660.63,48660.63
+PASS,debt/BLN: Kerajaan Perancis details = Jumlah (amaun_belum_selesai_rm),229395.94,229395.94
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_dibenarkan_fx),193263042981.0,193263042981.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (terkumpul_keluaran_fx),193263042981.0,193263042981.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (terkumpul_bayaran_balik_fx),70263232981.0,70263232981.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_belum_selesai_fx),122999810000.0,122999810000.0
+PASS,debt/BLN: Japan International Cooperation Agency details = Jumlah (amaun_belum_selesai_rm),4451117124.27,4451117124.27
+PASS,debt/BLN: multilateral lender subtotal = JUMLAH MULTILATERAL,115512191.4,115512191.4
+PASS,debt/BLN: bilateral lender subtotals = JUMLAH BILATERAL,4467801626.25,4467801626.25
+PASS,debt/BLN: MULTI + BI = JUMLAH BANTUAN LUAR NEGERI,4583313817.65,4583313817.65
+PASS,"debt/BLN: JUMLAH BANTUAN LUAR NEGERI = control 4,583,313,817.65",4583313817.65,4583313817.65
+PASS,"debt/BLN: JUMLAH MULTILATERAL = control 115,512,191.40",115512191.4,115512191.4
+PASS,"debt/BLN: JUMLAH BILATERAL = control 4,467,801,626.25",4467801626.25,4467801626.25
+PASS,pfi: Pembinaan PFI Sdn. Bhd. details = Jumlah (2021),19366381805.300003,19366381805.3
+PASS,pfi: MKD Aman Makmur Sdn. Bhd.* details = Jumlah (2021),16208313244.5,16208313244.5
+PASS,pfi: all details = JUMLAH (2021),35574695049.8,35574695049.8
+PASS,pfi: Pembinaan PFI Sdn. Bhd. details = Jumlah (2020),20447965015.18,20447965015.18
+PASS,pfi: MKD Aman Makmur Sdn. Bhd.* details = Jumlah (2020),16586502000.0,16586502000.0
+PASS,pfi: all details = JUMLAH (2020),37034467015.18,37034467015.18
+PASS,"pfi: total 2021 = control 35,574,695,049.80",35574695049.8,35574695049.8
+PASS,"pfi: total 2020 = control 37,034,467,015.18",37034467015.18,37034467015.18
+PASS,"guarantees: details = JUMLAH KOMITMEN JAMINAN (jumlah_rm,2021)",229391741671.56,229391741671.56
+PASS,"guarantees: details = JUMLAH KOMITMEN JAMINAN (dalam_negeri_rm,2021)",176623572551.97,176623572551.97
+PASS,"guarantees: details = JUMLAH KOMITMEN JAMINAN (luar_negeri_rm,2021)",52768169119.590004,52768169119.59
+PASS,"guarantees: details = JUMLAH KOMITMEN JAMINAN (jumlah_rm,2020)",216841563770.31003,216841563770.31
+PASS,guarantees: dalam+luar = jumlah 2021 per row (violations),0.0,0.0
+PASS,"guarantees: total 2021 = control 229,391,741,671.56",229391741671.56,229391741671.56
+PASS,"guarantees: total 2020 = control 216,841,563,770.31",216841563770.31,216841563770.31
+PASS,grants: PERUNTUKAN MENGURUS details = Jumlah (2021),449447572.12,449447572.12
+PASS,grants: PERUNTUKAN PEMBANGUNAN details = Jumlah (2021),9647346095.710001,9647346095.71
+PASS,grants: subtotals = JUMLAH KESELURUHAN PERUNTUKAN (2021),10096793667.83,10096793667.83
+PASS,grants: PERUNTUKAN MENGURUS details = Jumlah (2020),534076150.59,534076150.59
+PASS,grants: PERUNTUKAN PEMBANGUNAN details = Jumlah (2020),5128490661.4,5128490661.4
+PASS,grants: subtotals = JUMLAH KESELURUHAN PERUNTUKAN (2020),5662566811.99,5662566811.99
+PASS,"grants: total 2021 = control 10,096,793,667.83",10096793667.83,10096793667.83
+PASS,"grants: total 2020 = control 5,662,566,811.99",5662566811.99,5662566811.99
+PASS,leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN/Bangunan details = category Jumlah (2021),24107220101.43,24107220101.43
+PASS,leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN/Kelengkapan dan Peralatan details = category Jumlah (2021),748545104.0500001,748545104.05
+PASS,leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN category subtotals = sector Jumlah (2021),24855765205.48,24855765205.48
+PASS,leases: PAJAKAN KEWANGAN BADAN BERKANUN/Bangunan details = category Jumlah (2021),12347174749.980001,12347174749.98
+PASS,leases: PAJAKAN KEWANGAN BADAN BERKANUN category subtotals = sector Jumlah (2021),12347174749.98,12347174749.98
+PASS,leases: sector subtotals = JUMLAH KOMITMEN PAJAKAN KEWANGAN (2021),37202939955.46,37202939955.46
+FAIL,leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN/Bangunan details = category Jumlah (2020),26000942834.42,26000942834.41
+PASS,leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN/Kelengkapan dan Peralatan details = category Jumlah (2020),848214842.8999999,848214842.9
+PASS,leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN category subtotals = sector Jumlah (2020),26849157677.31,26849157677.31
+PASS,leases: PAJAKAN KEWANGAN BADAN BERKANUN/Bangunan details = category Jumlah (2020),10723140274.35,10723140274.35
+PASS,leases: PAJAKAN KEWANGAN BADAN BERKANUN category subtotals = sector Jumlah (2020),10723140274.35,10723140274.35
+PASS,leases: sector subtotals = JUMLAH KOMITMEN PAJAKAN KEWANGAN (2020),37572297951.66,37572297951.66
+PASS,"leases: total 2021 = control 37,202,939,955.46",37202939955.46,37202939955.46
+PASS,"leases: total 2020 = control 37,572,297,951.66 (2020 comparative as restated in this volume)",37572297951.66,37572297951.66
+PASS,compensation: Pampasan Konsesi Lebuhraya details = Jumlah (2021),910011784.37,910011784.37
+PASS,compensation: Pampasan Kelewatan Bayaran Balik Cukai Pendapatan details = Jumlah (2021),87822669.08999999,87822669.09
+PASS,compensation: subtotals = JUMLAH KOMITMEN PAMPASAN (2021),997834453.46,997834453.46
+PASS,compensation: Pampasan Konsesi Lebuhraya details = Jumlah (2020),892581000.0,892581000.0
+PASS,compensation: Pampasan Kelewatan Bayaran Balik Cukai Pendapatan details = Jumlah (2020),81088713.49000001,81088713.49
+PASS,compensation: subtotals = JUMLAH KOMITMEN PAMPASAN (2020),973669713.49,973669713.49
+PASS,"compensation: total 2021 = control 997,834,453.46",997834453.46,997834453.46
+PASS,"compensation: total 2020 = control 973,669,713.49 (restated in this volume)",973669713.49,973669713.49
+PASS,"statutory: pencarum details = JUMLAH (jumlah_rm,2021)",1116184686816.78,1116184686816.78
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (jumlah_rm,2021)",91300000872.62,91300000872.62
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (jumlah_rm,2021)",219087528375.13,219087528375.13
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (jumlah_rm,2021)",310387529247.75,310387529247.75
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (jumlah_rm,2021)",1426572216064.53,1426572216064.53
+PASS,"statutory: pencarum details = JUMLAH (dalam_negeri_rm,2021)",1116184686816.78,1116184686816.78
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (dalam_negeri_rm,2021)",91300000872.62,91300000872.62
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (dalam_negeri_rm,2021)",191309149349.35,191309149349.35
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (dalam_negeri_rm,2021)",282609150221.97,282609150221.97
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (dalam_negeri_rm,2021)",1398793837038.75,1398793837038.75
+PASS,"statutory: pencarum details = JUMLAH (luar_negeri_rm,2021)",0.0,0.0
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (luar_negeri_rm,2021)",0.0,0.0
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (luar_negeri_rm,2021)",27778379025.780003,27778379025.78
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (luar_negeri_rm,2021)",27778379025.78,27778379025.78
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (luar_negeri_rm,2021)",27778379025.78,27778379025.78
+PASS,"statutory: pencarum details = JUMLAH (jumlah_rm,2020)",1100448613908.3198,1100448613908.32
+PASS,"statutory: pinjaman/Badan Berkanun details = Jumlah (jumlah_rm,2020)",80660000872.62,80660000872.62
+PASS,"statutory: pinjaman/Syarikat details = Jumlah (jumlah_rm,2020)",214014755988.76,214014755988.76
+PASS,"statutory: pinjaman category subtotals = JUMLAH JAMINAN PINJAMAN (jumlah_rm,2020)",294674756861.38,294674756861.38
+PASS,"statutory: PENCARUM + PINJAMAN = JUMLAH JAMINAN (jumlah_rm,2020)",1395123370769.7002,1395123370769.7
+PASS,statutory: dalam+luar = jumlah 2021 per row (violations),0.0,0.0
+PASS,"statutory: JUMLAH JAMINAN 2021 = control 1,426,572,216,064.53",1426572216064.53,1426572216064.53
+PASS,"statutory: pinjaman total 2021 = Nota 11(a) 310,387,529,248",310387529247.75,310387529247.75
+PASS,"statutory: pencarum total 2021 = Nota 11(b) 1,116,184,686,817",1116184686816.78,1116184686816.78
+DIAGNOSIS,"leases: KP/Bangunan 2020 1-sen gap is a print rounding discrepancy (printed details sum 26,000,942,834.42 vs printed subtotal 26,000,942,834.41; pdf 279)",,

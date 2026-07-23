@@ -1,0 +1,8 @@
+# Rebuildable cache — regenerate with: python3 pipeline/build_duckdb.py
+warehouse/pkkp.duckdb
+*.duckdb
+# Python
+__pycache__/
+*.pyc
+# Scratch / large archives
+*.zip

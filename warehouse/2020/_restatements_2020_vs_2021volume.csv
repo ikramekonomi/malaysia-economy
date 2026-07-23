@@ -1,0 +1,219 @@
+table,key,value_2020_volume,value_2021_volume,difference,note
+memorandum_summary,Jumlah Liabiliti,1186812387405.0,1186789623932.0,22763473.0,
+memorandum_summary,Komitmen Kewangan,269940211375.0,270022974493.0,-82763118.0,
+memorandum_summary,Pelbagai Liabiliti,278000205.0,172473614.0,105526591.0,
+debt_nota10,"('KOMITMEN PAJAKAN KEWANGAN', 'commitment_total')",37570623547.0,37572297952.0,-1674405.0,
+debt_nota10,"('KOMITMEN PAMPASAN', 'commitment_total')",892581000.0,973669713.0,-81088713.0,
+debt_nota10,"('PELBAGAI LIABILITI', 'misc_total')",278000205.0,172473614.0,105526591.0,
+debt_nota10,"('Pampasan Kelewatan Bayaran Balik Cukai Pendapatan', 'commitment_item')",,81088713.0,,present in only one volume
+revenue_nota5a,Terimaan Kerajaan Lain,39850.0,,,present in only one volume
+revenue_nota5a,Terimaan Pelarasan,,39850.0,,present in only one volume
+investment_summary_nota4,"('Pelaburan Am', 'Deposit Jangka Pendek Luar Negeri Melebihi 3 - 12 Bulan')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Am', 'Sekuriti Tersiar Harga Luar Negeri')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Deposit Jangka Pendek Luar Negeri Melebihi 3 - 12 Bulan')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investment_summary_nota4,"('Pelaburan Kumpulan Wang Amanah', 'Sekuriti Tersiar Harga Luar Negeri')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT AM', 'Deposit Cagaran')",,81749045.0,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT AM', 'Deposit Wang Tak Dituntut')",247700956.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT AM', 'Pelbagai Deposit Am')",691201278.0,857153189.0,-165951911.0,
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Aktiviti Pembangunan Khas Pembiayaan Swasta')",1430138317.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Membangun/Menaiktaraf Sistem Pembetungan untuk Pembangunan Baharu')",,438084498.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Pelaksana Projek / Program / Aktiviti Menerusi Inisiatif Pembiayaan Swasta II')",,1430138317.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Sumber Khas')",441926078.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Pelbagai Amanah Am')",1969046708.0,1972888288.0,-3841580.0,
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang COVID-19', 'TERIMAAN', 'Pelbagai Terimaan')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Caruman Dari Akaun Hasil Disatukan')",474705193.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Caruman Daripada Akaun Hasil Disatukan')",,474705193.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Pindahan Dari Akaun Pinjaman Disatukan')",61071047806.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Pindahan Daripada Akaun Pinjaman Disatukan')",,61071047806.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'AKAUN PERNIAGAAN', 'AKAUN PERNIAGAAN')",,156964318.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'AKAUN PERNIAGAAN', 'Stor dan Woksyop Belum Diperuntukkan')",156964318.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'AKAUN PERNIAGAAN', 'Stor dan Woksyop Tak Beruntuk')",,156964318.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'KUMPULAN WANG LUAR JANGKA', 'KUMPULAN WANG LUAR JANGKA')",,1499999980.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kebajikan dan Kemudahan Bagi Penuntut di Luar Negeri')",,2080495.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kebajikan dan Kemudahan bagi Penuntut di Luar Negeri')",2080495.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Fi Jaminan - Urusniaga')",506131754.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Fi Jaminan')",,506131754.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Majlis Sains Dan Penyelidikan Kebangsaan')",2818236.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Majlis Sains dan Penyelidikan Kebangsaan')",,2818236.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Projek Penandaan dan Pengukuran Sempadan Bersama di Antara Negeri-negeri Semenanjung Malaysia')",,5356430.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Projek dan Pengukuran Sempadan Bersama Di antara Negeri-negeri Semenanjung Malaysia')",5356430.0,,,present in only one volume
+memo_assets_nota9,"('Akaun Belum Terima - Pelbagai Akaun Belum Terima', 'PELBAGAI AKAUN BELUM TERIMA')",47522056565.0,,,present in only one volume
+memo_assets_nota9,"('Akaun Belum Terima - Pelbagai Akaun Belum Terima', 'Pinjaman dan pendahuluan di peringkat Kementerian/Jabatan selain Kementerian Kewangan (termasuk dalam Pelbagai Akaun Belum Terima)')",732500022.0,,,present in only one volume
+memo_assets_nota9,"('Akaun Belum Terima - Pelbagai Akaun Belum Terima', 'Tunggakan Pelbagai Akaun Belum Terima')",20858823691.0,,,present in only one volume
+memo_assets_nota9,"('Akaun Belum Terima - Pelbagai Akaun Belum Terima', 'Tunggakan faedah Pinjaman Boleh Dituntut (termasuk dalam tunggakan)')",2623386842.0,,,present in only one volume
+memo_assets_nota9,"('Akaun Belum Terima', 'AKAUN BELUM TERIMA')",106422742308.0,,,present in only one volume
+commitment_detail_nota10,"('KOMITMEN PAJAKAN KEWANGAN', 'Pajakan Kewangan Kerajaan Persekutuan')",26847483272.0,26849157677.0,-1674405.0,
+commitment_detail_nota10,"('PELBAGAI LIABILITI', 'Nota Kena Bayar')",236620627.0,131094036.0,105526591.0,
+loans_receivable,"('PINJAMAN', 'KOPERASI', 'Koperasi Pembangunan Belia Negara Berhad')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'KOPERASI', 'Koperasi Polis Diraja Malaysia Berhad')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Amanah Ikhtiar Malaysia')",743101307.5,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Jumlah Pelbagai Agensi')",1687486839.47,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Kelab Golf Perkhidmatan Awam Malaysia')",653942.17,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Amanah Saham Anak Langkawi')",6800000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Pembangunan Ekonomi Islam Malaysia')",816931589.8,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Penjaja dan Peniaga Kecil Malaysia')",70000000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI AGENSI', 'Yayasan Usahawan Wanita Cina Malaysia')",50000000.0,,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Amanah Ikhtiar Malaysia')",,743101307.5,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Jumlah Pelbagai')",,1687486839.47,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Kelab Golf Perkhidmatan Awam Malaysia')",,653942.17,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Amanah Saham Anak Langkawi')",,6800000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Pembangunan Ekonomi Islam Malaysia')",,816931589.8,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Penjaja dan Peniaga Kecil Malaysia')",,70000000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'PELBAGAI', 'Yayasan Usahawan Wanita Cina Malaysia')",,50000000.0,,present in only one volume
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Lebuhraya Shapadu Sdn. Bhd')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'MIMOS Berhad')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+loans_receivable,"('PINJAMAN', 'SYARIKAT', 'Permodalan Nasional Berhad')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'ASEAN Potash Chaiyaphum Public Baht Company Limited')",15118001.47,,,present in only one volume
+investments_register,"('SYARIKAT', 'ASEAN Potash Chaiyaphum Public Company Limited')",,15118001.47,,present in only one volume
+investments_register,"('SYARIKAT', 'Digital Nasional Berhad')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'FELDA Global Ventures Holdings Bhd.')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'FGV Holdings Berhad')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+investments_register,"('SYARIKAT', 'International Rubber Consortium Baht Limited')",3939776.53,,,present in only one volume
+investments_register,"('SYARIKAT', 'International Rubber Consortium Limited')",,3939776.53,,present in only one volume
+investments_register,"('SYARIKAT', 'Malaysia Wakala Sukuk Berhad')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+pfi_register,"('MKD Aman Makmur Sdn. Bhd', 'KWSP PFI IIA')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+guarantees_register,Sentuhan Budiman,800000000.0,,,present in only one volume
+guarantees_register,Sentuhan Budiman Sdn. Bhd,,800000000.0,,present in only one volume
+grants_register,"('PERUNTUKAN MENGURUS', '1Malaysia Development Berhad')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+grants_register,"('PERUNTUKAN PEMBANGUNAN', 'Govco Holdings Berhad')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+grants_register,"('PERUNTUKAN PEMBANGUNAN', 'K.L. International Airport Berhad')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+grants_register,"('PERUNTUKAN PEMBANGUNAN', 'Prasarana Malaysia Berhad')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+grants_register,"('PERUNTUKAN PEMBANGUNAN', 'TRX City Sdn. Bhd')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+finance_leases_register,"('', '', 'JUMLAH KOMITMEN PAJAKAN KEWANGAN')",37570623546.59,37572297951.66,-1674405.0700073242,
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Jumlah Pajakan Kewangan Bangunan')",,10723140274.35,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia (UIAM) - Hospital Pengajar')",839314780.84,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia (UIAM) - Hub Pendidikan Tinggi Pagoh')",169589299.42,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia (UIAM) Cawangan Kuantan, Pahang')",372746821.49,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia (UIAM) Gambang')",457064035.89,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia - Hospital Pengajar')",,839314780.84,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia - Hub Pendidikan Tinggi Pagoh')",,169589299.42,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia Cawangan Gambang, Pahang')",,457064035.89,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Islam Antarabangsa Malaysia Cawangan Kuantan, Pahang')",,372746821.49,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Kebangsaan Malaysia - Hospital Kanak-Kanak')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknikal Malaysia Melaka')",,371674188.47,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknikal Malaysia')",371674188.47,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Bertam, Pulau Pinang')",87479451.28,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Dengkil, Selangor')",698070332.95,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Jasin, Melaka')",600660376.93,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Jengka, Pahang')",324982537.62,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Kota Samarahan, Sarawak')",656459408.83,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Lendu, Melaka')",91839797.1,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Mukah, Sarawak')",638737398.48,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Nilai, Negeri Sembilan')",182846182.72,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Pasir Gudang, Johor')",630734114.55,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Puncak Alam, Selangor (Kampus Satelit A &B)')",442696436.79,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Puncak Alam, Selangor (Kampus Satelit C)')",581376658.1,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Puncak Alam, Selangor')",342454716.71,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Raub, Pahang')",425061907.0,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Rembau, Negeri Sembilan')",550313379.14,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Seremban, Negeri Sembilan')",500871318.56,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara (UiTM) Cawangan Tapah, Perak')",449498927.17,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Bertam, Pulau Pinang')",,87479451.28,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Dengkil, Selangor')",,698070332.95,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Jasin, Melaka')",,600660376.93,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Jengka, Pahang')",,324982537.62,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Kota Samarahan, Sarawak')",,656459408.83,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Lendu, Melaka')",,91839797.1,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Mukah, Sarawak')",,638737398.48,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Nilai, Negeri Sembilan')",,182846182.72,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Pasir Gudang, Johor')",,630734114.55,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Puncak Alam, Selangor (Kampus Satelit A &B)')",,442696436.79,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Puncak Alam, Selangor (Kampus Satelit C)')",,581376658.1,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Puncak Alam, Selangor')",,342454716.71,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Raub, Pahang')",,425061907.0,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Rembau, Negeri Sembilan')",,550313379.14,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Seremban, Negeri Sembilan')",,500871318.56,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Cawangan Tapah, Perak')",,449498927.17,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN BADAN BERKANUN', 'Bangunan', 'Universiti Teknologi Mara Puncak Alam - Hospital Pengajar')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', '', 'Jumlah Pajakan Kewangan Kerajaan Persekutuan')",26847483272.23,26849157677.31,-1674405.080001831,
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Jumlah Pajakan Kewangan Bangunan')",,26000942834.41,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Alam Sekitar dan Air')",157013762.81,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Industri Utama')",69132860.92,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Kemajuan Luar Bandar dan Wilayah')",443538349.58,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Kesihatan Malaysia')",2362183183.56,2028884320.35,333298863.21000004,
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Kewangan')",779217034.81,752289223.01,26927811.799999952,
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Komunikasi dan Multimedia Malaysia')",,1701091747.33,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Komunikasi dan Multimedia')",2030391747.33,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pembangunan Luar Bandar')",,443538349.58,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pembangunan Usahawan dan Koperasi')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pembangunan Wanita, Keluarga dan Masyarakat Malaysia')",553512500.58,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pembangunan Wanita, Keluarga dan Masyarakat')",,553512500.58,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pengajian Tinggi Malaysia')",1967822484.82,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pengajian Tinggi')",,1967822484.82,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Perdagangan Dalam Negeri Koperasi dan Kepenggunaan')",307356957.03,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Perdagangan Dalam Negeri dan Hal Ehwal Pengguna')",,307356957.03,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pertanian dan Industri Asas Tani')",489137187.87,,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Pertanian dan Industri Makanan')",,489137187.87,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Bangunan', 'Kementerian Perusahaan Perladangan dan Komoditi')",,69132860.92,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Kelengkapan dan Peralatan', 'Jumlah Pajakan Kelengkapan dan Peralatan')",,848214842.9,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Kelengkapan dan Peralatan', 'Kementerian Alam Sekitar dan Air')",,157013762.81,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Kelengkapan dan Peralatan', 'Kementerian Kesihatan Malaysia')",,334973268.29,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Kelengkapan dan Peralatan', 'Kementerian Kewangan')",,26927811.8,,present in only one volume
+finance_leases_register,"('PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN', 'Kelengkapan dan Peralatan', 'Kementerian Komunikasi dan Multimedia Malaysia')",,329300000.0,,present in only one volume
+compensation_register,"('', 'JUMLAH KOMITMEN PAMPASAN KONSESI LEBUHRAYA')",892581000.0,,,present in only one volume
+compensation_register,"('', 'JUMLAH KOMITMEN PAMPASAN')",,973669713.49,,present in only one volume
+compensation_register,"('Pampasan Kelewatan Bayaran Balik Cukai Pendapatan', 'Bukan Syarikat')",,1068256.54,,present in only one volume
+compensation_register,"('Pampasan Kelewatan Bayaran Balik Cukai Pendapatan', 'Jumlah Pampasan Kelewatan Bayaran Balik Cukai Pendapatan')",,81088713.49,,present in only one volume
+compensation_register,"('Pampasan Kelewatan Bayaran Balik Cukai Pendapatan', 'Syarikat')",,80020456.95,,present in only one volume
+compensation_register,"('Pampasan Konsesi Lebuhraya', ""Jambatan Sultan Abdul Halim Mu'adzam Shah"")",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+compensation_register,"('Pampasan Konsesi Lebuhraya', 'Jumlah Pampasan Konsesi Lebuhraya')",,892581000.0,,present in only one volume
+compensation_register,"('Pampasan Konsesi Lebuhraya', 'Lebuhraya Ampang- Kuala Lumpur')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+compensation_register,"('Pampasan Konsesi Lebuhraya', 'Lebuhraya Lembah Klang Selatan')",,0.0,,zero/nil row printed in only one volume (not a value restatement)
+compensation_register,"('Pampasan Konsesi Lebuhraya', 'Lebuhraya Pantai Timur Fasa 1')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+compensation_register,"('Pampasan Konsesi Lebuhraya', 'Lebuhraya Utara-Selatan Hubungan Tengah')",0.0,,,zero/nil row printed in only one volume (not a value restatement)
+statutory_guarantees_register,"('JAMINAN PENCARUM / PENDEPOSIT', '', 'Perbadanan Tabung Pendidikan Tinggi Nasional - SSPN-I')",,6154668334.17,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PENCARUM / PENDEPOSIT', '', 'Perbadanan Tabung Pendidikan Tinggi Nasional - SSPN-i')",6154668334.17,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Badan Berkanun', 'Johor Corporation')",,1800000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Badan Berkanun', 'Jumlah Badan Berkanun')",78860000872.62,80660000872.62,-1800000000.0,
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Bank Perusahaan Kecil & Sederhana Malaysia Berhad')",,1850000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Bank Perusahaan Kecil & Sederhana Malaysia Bhd')",1850000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Johor Corporation')",1800000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Jumlah Syarikat')",215814755988.76,214014755988.76,1800000000.0,
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Sentuhan Budiman Sdn. Bhd')",,800000000.0,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Sentuhan Budiman')",800000000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Syarikat Perumahan Negara Berhad')",530300000.0,,,present in only one volume
+statutory_guarantees_register,"('JAMINAN PINJAMAN', 'Syarikat', 'Syarikat Perumahan negara Berhad')",,530300000.0,,present in only one volume
+timeseries_overlap_2012_2019,"('Akaun Amanah Disatukan', 'Baki pada 31 Disember', 2019)",31090.0,31091.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Dalam Negeri', 'Bil Perbendaharaan', 2013)",6500.0,6499.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Dalam Negeri', 'Jumlah Bayaran Balik Dalam Negeri', 2012)",61406.0,61404.0,2.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Dalam Negeri', 'Jumlah Bayaran Balik Dalam Negeri', 2013)",73031.0,73030.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Dalam Negeri', 'Sekuriti Kerajaan Malaysia', 2012)",39808.0,39807.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Dalam Negeri', 'Sukuk', 2012)",4594.0,4593.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Luar Negeri', 'Jumlah Bayaran Balik', 2012)",62103.0,62101.0,2.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Luar Negeri', 'Jumlah Bayaran Balik', 2013)",73665.0,73664.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Bayaran Balik Luar Negeri', 'Pinjaman Projek', 2016)",0.0,477.0,-477.0,RM juta
+timeseries_overlap_2012_2019,"('Hutang Persekutuan Luar Negeri', 'Jumlah Hutang Persekutuan Luar Negeri', 2018)",21503.0,21504.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Hutang Persekutuan Luar Negeri', 'Jumlah Hutang Persekutuan', 2018)",741048.0,741049.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Hutang Persekutuan Luar Negeri', 'Pinjaman Pasaran', 2018)",15906.0,15907.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Kumpulan Wang Disatukan', 'Akaun Amanah Disatukan', 2019)",31090.0,31091.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Kumpulan Wang Disatukan', 'Jumlah Kumpulan Wang Disatukan', 2019)",59230.0,59231.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pelaburan', 'Jumlah Pelaburan', 2019)",38733.0,38734.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pelaburan', 'Pelaburan Am', 2019)",12530.0,12531.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Penggunaan Dana', 'Bayaran Bersih Kumpulan Wang Amanah Lain', 2019)",0.0,35738.0,-35738.0,RM juta
+timeseries_overlap_2012_2019,"('Penggunaan Dana', 'Jumlah Penggunaan Dana', 2019)",278948.0,314686.0,-35738.0,RM juta
+timeseries_overlap_2012_2019,"('Perubahan Dalam Modal Kerja', 'Pinjaman Bersih Dalam dan Luar Negeri', 2013)",-38105.0,-38106.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Perubahan Dalam Modal Kerja', 'Pinjaman Bersih Dalam dan Luar Negeri', 2014)",-42571.0,-42588.0,17.0,RM juta
+timeseries_overlap_2012_2019,"('Perubahan Dalam Modal Kerja', 'Pinjaman Bersih Dalam dan Luar Negeri', 2015)",-43746.0,-43743.0,-3.0,RM juta
+timeseries_overlap_2012_2019,"('Perubahan Dalam Modal Kerja', 'Tambahan/(Kurangan) Modal Kerja', 2019)",-49187.0,-49188.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Perubahan Dalam Modal Kerja', 'Tambahan/(Kurangan) Wang Tunai dan Pelaburan', 2019)",6322.0,6321.0,1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Dalam Negeri', 'Bil Perbendaharaan', 2012)",-3.0,-2.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Dalam Negeri', 'Bil Perbendaharaan', 2013)",0.0,1.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Dalam Negeri', 'Jumlah Pinjaman Bersih Dalam Negeri', 2012)",46739.0,46742.0,-3.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Dalam Negeri', 'Jumlah Pinjaman Bersih Dalam Negeri', 2013)",38326.0,38327.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Dalam Negeri', 'Sekuriti Kerajaan Malaysia', 2012)",14436.0,14437.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Dalam Negeri', 'Sukuk', 2012)",-4594.0,-4593.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Jumlah Pinjaman Bersih Luar Negeri', 2015)",726.0,727.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Jumlah Pinjaman Bersih Luar Negeri', 2016)",1312.0,835.0,477.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Jumlah Pinjaman Bersih', 2012)",46725.0,46728.0,-3.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Jumlah Pinjaman Bersih', 2013)",38105.0,38106.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Jumlah Pinjaman Bersih', 2015)",43742.0,43743.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Jumlah Pinjaman Bersih', 2016)",38994.0,38517.0,477.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Pinjaman Pasaran', 2015)",883.0,884.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Pinjaman Bersih Luar Negeri', 'Pinjaman Projek', 2016)",145.0,-332.0,477.0,RM juta
+timeseries_overlap_2012_2019,"('Punca Dana', 'Jumlah Punca Dana', 2019)",229760.0,265498.0,-35738.0,RM juta
+timeseries_overlap_2012_2019,"('Punca Dana', 'Terimaan Bersih Kumpulan Wang Amanah Lain', 2019)",-35738.0,0.0,-35738.0,RM juta
+timeseries_overlap_2012_2019,"('Terimaan Pinjaman Luar Negeri', 'Jumlah Terimaan Pinjaman Luar Negeri', 2015)",5559.0,5560.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Terimaan Pinjaman Luar Negeri', 'Jumlah Terimaan Pinjaman', 2015)",121363.0,121364.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Terimaan Pinjaman Luar Negeri', 'Pinjaman Projek', 2015)",256.0,257.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Wang Awam', 'Jumlah Wang Awam', 2019)",59230.0,59231.0,-1.0,RM juta
+timeseries_overlap_2012_2019,"('Wang Awam', 'Pelaburan', 2019)",38733.0,38734.0,-1.0,RM juta

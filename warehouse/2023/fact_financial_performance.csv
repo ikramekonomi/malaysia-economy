@@ -1,0 +1,27 @@
+line_item_bm,line_code,year,basis,amount_rm,source_file,pdf_page,printed_page,statement
+Hasil,revenue,2023,anggaran,303200253000.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Hasil,revenue,2023,sebenar,314959481731.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Hasil,revenue,2022,sebenar,294356760615.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2023,anggaran,292810738450.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2023,sebenar,311266917827.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2022,sebenar,292693212510.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2023,anggaran,10389514550.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2023,sebenar,3692563904.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2022,sebenar,1663548105.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2023,anggaran,93358598110.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2023,sebenar,96089737123.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2022,sebenar,71573961426.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2023,anggaran,0.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2023,sebenar,0.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2022,sebenar,30979119546.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2023,anggaran,-82969083560.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2023,sebenar,-92397173219.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2022,sebenar,-100889532867.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2023,sebenar,92397173219.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2022,sebenar,100889532867.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2023,sebenar,101332999861.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2022,sebenar,99837166438.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+"Terimaan Balik Pinjaman, Jualan Aset Modal dan Pelbagai Terimaan",financing_capital_receipts,2023,sebenar,1510317308.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+"Terimaan Balik Pinjaman, Jualan Aset Modal dan Pelbagai Terimaan",financing_capital_receipts,2022,sebenar,1407227599.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2023,sebenar,-10446143950.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2022,sebenar,-354861170.0,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,72,60,Penyata Prestasi Kewangan

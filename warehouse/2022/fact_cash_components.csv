@@ -1,0 +1,9 @@
+line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+WANG TUNAI,2022,48502901599.0,total,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai
+WANG TUNAI,2021,34551543490.0,total,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2022,46815352167.0,detail,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2021,33594301309.0,detail,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2022,1684925057.0,detail,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2021,954475156.0,detail,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2022,2624375.0,detail,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2021,2767025.0,detail,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,80,68,Nota 3 Wang Tunai

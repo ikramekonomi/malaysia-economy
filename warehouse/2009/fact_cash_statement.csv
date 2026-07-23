@@ -1,0 +1,73 @@
+flow,category_bm,item_bm,year,amount_rm,source_file,pdf_page,printed_page,statement
+TERIMAAN,Hasil,Hasil Cukai,2009,106504411011.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Cukai,2008,112897303716.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2009,50789238902.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2008,45911453711.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Pelbagai Terimaan,2009,1067563070.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Pelbagai Terimaan,2008,692726217.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2009,278091245.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2008,291902544.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Pinjaman Dalam Negeri,2009,106719903344.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Pinjaman Dalam Negeri,2008,71683774008.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Pinjaman Luar Negeri,2009,450813027.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Pinjaman Luar Negeri,2008,472269098.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2009,518787580.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2008,958679588.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2009,1340.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2008,15236312.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan Modal,2009,2900657.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan Modal,2008,2324368.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Lain,Terimaan Amanah,2009,79183036.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Lain,Terimaan Amanah,2008,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Lain,Inisiatif Pembiayaan Swasta (PFI),2009,6838257836.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Lain,Inisiatif Pembiayaan Swasta (PFI),2008,5064523709.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2009,-42778266363.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2008,-41010761661.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2009,-26372131596.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2008,-25196743517.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2009,-2581505478.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2008,-2835362838.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2009,-84650079062.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2008,-83606847197.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan Lain,2009,-684976820.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan Lain,2008,-849169830.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2009,-45294239673.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2008,-40240305788.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2009,-4221115898.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2008,-2607029389.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Inisiatif Pembiayaan Swasta (PFI),2009,-4291992718.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Inisiatif Pembiayaan Swasta (PFI),2008,-1883253345.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2009,-5123318952.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2008,-6709844317.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Balik Pinjaman,Pinjaman Dalam Negeri,2009,-44194308344.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Balik Pinjaman,Pinjaman Dalam Negeri,2008,-33628189887.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Balik Pinjaman,Pinjaman Luar Negeri,2009,-6736883398.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Balik Pinjaman,Pinjaman Luar Negeri,2008,-946017187.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Lain,Bayaran Lain,2009,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Lain,Bayaran Lain,2008,-17370546.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Jumlah Hasil,2009,158639304228.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Jumlah Hasil,2008,159793386188.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Jumlah Pinjaman,2009,107170716371.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Jumlah Pinjaman,2008,72156043106.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jumlah Terimaan Modal,2009,521689577.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jumlah Terimaan Modal,2008,976240268.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Lain,Jumlah Terimaan Lain,2009,6917440872.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Lain,Jumlah Terimaan Lain,2008,5064523709.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Jumlah Perbelanjaan Mengurus,2009,-157066959319.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Jumlah Perbelanjaan Mengurus,2008,-153498885043.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Jumlah Perbelanjaan Pembangunan,2009,-49515355571.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Jumlah Perbelanjaan Pembangunan,2008,-42847335177.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Jumlah Perbelanjaan Modal,2009,-5123318952.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Jumlah Perbelanjaan Modal,2008,-6709844317.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Balik Pinjaman,Jumlah Bayaran Balik Pinjaman,2009,-50931191742.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bayaran Balik Pinjaman,Jumlah Bayaran Balik Pinjaman,2008,-34574207074.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,,Jumlah Terimaan,2009,273249151048.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,,Jumlah Terimaan,2008,237990193271.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,,Jumlah Bayaran,2009,-266928818302.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,,Jumlah Bayaran,2008,-239530895502.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+,,Tambahan/(Kurangan) Wang Tunai,2009,6320332746.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+,,Tambahan/(Kurangan) Wang Tunai,2008,-1540702231.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+,,Wang Tunai pada 1 Januari,2009,15401985728.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+,,Wang Tunai pada 1 Januari,2008,16942687959.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+,,WANG TUNAI PADA 31 DISEMBER,2009,21722318474.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai
+,,WANG TUNAI PADA 31 DISEMBER,2008,15401985728.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,39,32,Penyata Penerimaan dan Pembayaran Wang Tunai

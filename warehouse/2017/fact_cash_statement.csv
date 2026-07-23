@@ -1,0 +1,71 @@
+flow,category_bm,item_bm,year,amount_rm,source_file,pdf_page,printed_page,statement
+TERIMAAN,Hasil,Hasil Cukai,2017,177658495456.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Cukai,2016,169343339135.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2017,39505138495.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2016,39802803140.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2017,1743795825.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2016,1914344320.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2017,1250782606.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2016,958103848.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2017,129185006669.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2016,93876452672.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2017,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2016,5837065920.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2017,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2016,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2017,62877885.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2016,145355562.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2017,785821218.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2016,1079107702.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2017,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2016,12105.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan Modal,2017,1066363990.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan Modal,2016,267459764.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2017,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2016,2544500510.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Inisiatif Pembiayaan Swasta,2017,23329265.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Inisiatif Pembiayaan Swasta,2016,173773202.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2017,11328562739.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2016,68906161.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2017,333389570.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2016,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2017,362943563718.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2016,316011224041.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,55,44,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2017,77036397423.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2016,73108357069.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2017,34738181762.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2016,30070477311.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2017,515692603.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2016,675652714.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2017,103025278025.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2016,103681612764.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2017,1014832506.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2016,845349913.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2017,42276425979.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2016,40052263265.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2017,2607412854.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2016,1942774432.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2017,88452608728.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2016,56193846424.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2017,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2016,4670400000.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2017,104016883.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2016,156925423.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2017,300553353.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2016,320293408.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2017,810431350.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2016,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Inisiatif Pembiayaan Swasta,2017,97116854.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Inisiatif Pembiayaan Swasta,2016,989435259.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2017,9963948632.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2016,534914807.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2017,0.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2016,9678007675.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2017,360942896952.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2016,322920310464.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2017,2000666766.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2016,-6909086423.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2017,16063461692.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2016,22972548115.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2017,18064128458.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2016,16063461692.0,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,56,45,Penyata Penerimaan dan Pembayaran Wang Tunai

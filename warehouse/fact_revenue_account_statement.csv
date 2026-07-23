@@ -1,0 +1,33 @@
+section_bm,line_item_bm,row_type,year,anggaran_disemak_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+BAKI,BAKI PADA 1 JANUARI,opening,2024,,11863127086.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,BAKI PADA 1 JANUARI,opening,2023,,11863127086.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,HASIL,subtotal,2024,322050247000.0,324617649248.0,100.8,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,HASIL,subtotal,2023,,314959481731.0,103.88,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Cukai,detail,2024,241035290000.0,240191461212.0,99.65,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Cukai,detail,2023,,229184987059.0,100.07,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Bukan Cukai,detail,2024,72435726000.0,70098174893.0,96.77,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Bukan Cukai,detail,2023,,79032048178.0,114.37,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Terimaan Bukan Hasil,detail,2024,7929665000.0,13849624018.0,174.66,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Terimaan Bukan Hasil,detail,2023,,6025087538.0,130.12,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Wilayah Persekutuan,detail,2024,649566000.0,478389125.0,73.65,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+HASIL,Hasil Wilayah Persekutuan,detail,2023,,717358956.0,161.1,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,PERBELANJAAN MENGURUS,subtotal,2024,307275551900.0,321508948391.0,104.63,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,PERBELANJAAN MENGURUS,subtotal,2023,,311266917827.0,106.3,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Emolumen,detail,2024,96425914383.0,95935832990.0,99.49,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Emolumen,detail,2023,,91859514598.0,101.52,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perkhidmatan dan Bekalan,detail,2024,36771815504.0,37667775975.0,102.44,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perkhidmatan dan Bekalan,detail,2023,,35898118225.0,109.14,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Aset,detail,2024,1266491857.0,1188547474.0,93.85,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Aset,detail,2023,,1022594763.0,98.12,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Pemberian dan Kenaan Bayaran Tetap,detail,2024,171951319763.0,185865848633.0,108.09,True,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Pemberian dan Kenaan Bayaran Tetap,detail,2023,,181628774424.0,108.42,True,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perbelanjaan-perbelanjaan Lain,detail,2024,860010393.0,850943319.0,98.95,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Perbelanjaan-perbelanjaan Lain,detail,2023,,857915817.0,99.85,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PINDAHAN,Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan,transfer,2024,,3108700857.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PINDAHAN,Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan,transfer,2023,,3692563904.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Jumlah Perbelanjaan Mengurus (selepas pindahan),total_after_transfer,2024,307275551900.0,324617649248.0,105.64,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+PERBELANJAAN MENGURUS,Jumlah Perbelanjaan Mengurus (selepas pindahan),total_after_transfer,2023,,314959481731.0,107.56,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,Lebihan/(Kurangan) bagi Tahun,net,2024,,0.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,Lebihan/(Kurangan) bagi Tahun,net,2023,,0.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,BAKI PADA 31 DISEMBER,closing,2024,,11863127086.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan
+BAKI,BAKI PADA 31 DISEMBER,closing,2023,,11863127086.0,,False,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,83,69,Nota 5 Penyata Akaun Hasil Disatukan

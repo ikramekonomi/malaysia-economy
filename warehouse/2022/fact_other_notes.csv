@@ -1,0 +1,4 @@
+nota,line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+11,Pinjaman badan berkanun dan syarikat milik Kerajaan yang dijamin oleh Kerajaan Persekutuan,2022,317616866101.0,narrative,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,93,81,Nota 11 Liabiliti Luar Jangka
+11,"Simpanan pendeposit di Bank Simpanan Nasional, Kumpulan Wang Simpanan Pekerja, Lembaga Tabung Haji dan Perbadanan Tabung Pendidikan Tinggi Nasional",2022,1172780827145.0,narrative,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,93,81,Nota 11 Liabiliti Luar Jangka
+12,Wang Pendahuluan Kontraktor,2022,1878985615.0,narrative,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,93,81,Nota 12 Wang Pendahuluan Kontraktor

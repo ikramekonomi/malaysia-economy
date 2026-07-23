@@ -1,0 +1,54 @@
+maksud_code,jenis_bm,maksud_name_bm,year,anggaran_asal_rm,anggaran_dipinda_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+T.01,Tanggungan,Peruntukan Diraja Bagi S.P.B. Yang Di-Pertuan Agong,2020,13533000.0,13533000.0,13532935.0,99.99,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.02,Tanggungan,Elaun-elaun Diraja,2020,1337100.0,1337100.0,1246090.0,93.19,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.03,Tanggungan,"Ketua Hakim Negara, Hakim Besar dan Hakim",2020,129246100.0,129246100.0,98035794.0,75.85,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.04,Tanggungan,Ketua Audit Negara,2020,741800.0,741800.0,558437.0,75.28,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.05,Tanggungan,Yang Di-Pertua Dewan Rakyat,2020,1676600.0,1676600.0,1279732.0,76.33,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.06,Tanggungan,Yang Di-Pertua Dewan Negara,2020,1796600.0,1796600.0,1106450.0,61.59,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.07,Tanggungan,Suruhanjaya Pilihan Raya,2020,2482800.0,2513200.0,2513174.0,99.99,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.08,Tanggungan,Suruhanjaya Perkhidmatan Kehakiman dan Perundangan,2020,11000.0,11000.0,7800.0,70.91,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.09,Tanggungan,Suruhanjaya Perkhidmatan Awam,2020,7785000.0,7785000.0,5360163.0,68.85,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.10,Tanggungan,Suruhanjaya Perkhidmatan Pelajaran,2020,4632100.0,4632100.0,4263401.0,92.04,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.11,Tanggungan,Suruhanjaya Pasukan Polis,2020,2246100.0,2246100.0,1770548.0,78.83,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.12,Tanggungan,Perbendaharaan,2020,6273436800.0,6285386800.0,6224062592.0,99.02,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.13,Tanggungan,Perbelanjaan Kerana Hutang Negara,2020,34944860400.0,34944860400.0,34494802361.0,98.71,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.14,Tanggungan,"Pencen, Elaun Bersara dan Ganjaran",2020,26500000000.0,26500000000.0,26392152149.0,99.59,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.01,Bekalan,Parlimen,2020,145190900.0,131862480.0,126832937.0,96.19,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.02,Bekalan,Pejabat Penyimpan Mohor Besar Raja-Raja,2020,2500000.0,2500000.0,1812921.0,72.52,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.03,Bekalan,Jabatan Audit Negara,2020,156233800.0,143629812.0,138751376.0,96.6,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.04,Bekalan,Suruhanjaya Pilihan Raya,2020,71302900.0,71302900.0,166152358.0,233.02,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.05,Bekalan,Suruhanjaya Perkhidmatan Awam,2020,39575800.0,37421358.0,34379786.0,91.87,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.06,Bekalan,Jabatan Perdana Menteri,2020,4048073200.0,3799814300.0,3729842081.0,98.16,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.07,Bekalan,Jabatan Perkhidmatan Awam,2020,1623931100.0,1623931100.0,1623920321.0,99.99,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.08,Bekalan,Jabatan Peguam Negara,2020,176935000.0,168435000.0,165510334.0,98.26,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.09,Bekalan,Suruhanjaya Pencegahan Rasuah Malaysia,2020,299053300.0,267978120.0,265848905.0,99.21,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.10,Bekalan,Perbendaharaan,2020,5320637000.0,4182595000.0,3937798293.0,94.15,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.11,Bekalan,Perkhidmatan Am Perbendaharaan,2020,21027387800.0,16298257310.0,16049258468.0,98.47,True,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.12,Bekalan,Peruntukan kepada Kumpulan Wang Terkanun,2020,1782200300.0,1766200300.0,2122455193.0,120.17,True,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.13,Bekalan,Kementerian Luar Negeri,2020,724338100.0,682697000.0,645958717.0,94.62,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.14,Bekalan,Kementerian Perpaduan Negara,2020,0.0,231886000.0,222000051.0,95.74,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.15,Bekalan,Kementerian Hal Ehwal Ekonomi,2020,513313900.0,177257200.0,177098656.0,99.91,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.20,Bekalan,Kementerian Perusahaan Perladangan dan Komoditi,2020,259528700.0,253928700.0,250388500.0,98.61,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.21,Bekalan,Kementerian Pertanian dan Industri Makanan,2020,3533985900.0,3152485900.0,3101618071.0,98.39,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.22,Bekalan,Kementerian Pembangunan Luar Bandar,2020,3191709400.0,3047168000.0,2944509143.0,96.63,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.23,Bekalan,Kementerian Tenaga dan Sumber Asli,2020,1276283000.0,1131207900.0,1121976339.0,99.18,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.24,Bekalan,Kementerian Perdagangan Antarabangsa dan Industri,2020,877835800.0,731211500.0,629935782.0,86.15,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.25,Bekalan,Kementerian Perdagangan Dalam Negeri dan Hal Ehwal Pengguna,2020,1019962600.0,1019962600.0,1104355730.0,108.27,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.26,Bekalan,Kementerian Pembangunan Usahawan dan Koperasi,2020,214310900.0,214310900.0,211204646.0,98.55,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.27,Bekalan,Kementerian Kerja Raya,2020,1792114200.0,1210296100.0,1176335346.0,97.19,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.28,Bekalan,Kementerian Pengangkutan,2020,1758308000.0,1600851800.0,1594979876.0,99.63,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.30,Bekalan,"Kementerian Sains, Teknologi dan Inovasi",2020,746493000.0,492916300.0,481170538.0,97.62,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.31,Bekalan,"Kementerian Pelancongan, Seni dan Budaya",2020,921990700.0,872290700.0,822740732.0,94.32,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.32,Bekalan,Kementerian Wilayah Persekutuan,2020,364978000.0,289348800.0,284991376.0,98.49,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.33,Bekalan,Kementerian Alam Sekitar dan Air,2020,0.0,305993400.0,298384570.0,97.51,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.40,Bekalan,Suruhanjaya Perkhidmatan Pelajaran,2020,17437800.0,15776800.0,15216580.0,96.45,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.42,Bekalan,Kementerian Kesihatan,2020,27941530900.0,27010164300.0,27010111676.0,99.99,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.43,Bekalan,Kementerian Perumahan dan Kerajaan Tempatan,2020,2785425100.0,2855791100.0,2855788465.0,99.99,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.45,Bekalan,Kementerian Belia dan Sukan,2020,670903300.0,560190300.0,543307195.0,96.99,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.46,Bekalan,Kementerian Sumber Manusia,2020,834730900.0,751163600.0,742375271.0,98.83,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.47,Bekalan,Kementerian Komunikasi dan Multimedia,2020,1137926400.0,1046279920.0,1019418070.0,97.43,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.48,Bekalan,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",2020,2259671400.0,2256830200.0,2231447024.0,98.88,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.60,Bekalan,Kementerian Pertahanan,2020,12496237400.0,11032387400.0,11032382925.0,99.99,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.62,Bekalan,Kementerian Dalam Negeri,2020,13839366600.0,13273773300.0,12947203724.0,97.54,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.63,Bekalan,Kementerian Pendidikan,2020,59264811500.0,50991325100.0,50912071262.0,99.84,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.64,Bekalan,Kementerian Pengajian Tinggi,2020,0.0,5122811700.0,5094722379.0,99.45,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,79,63,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud

@@ -1,0 +1,73 @@
+flow,category_bm,item_bm,year,amount_rm,source_file,pdf_page,printed_page,statement
+TERIMAAN,Hasil,Hasil Cukai,2020,154397967932.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Cukai,2019,180565395770.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2020,56294368909.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2019,79672012513.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2020,7689626453.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2019,2850750934.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2020,676695480.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2019,731425934.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2020,194555279485.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2019,131254933379.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2019,7170135617.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2019,133815309.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2020,1180122917.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2019,1550069125.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2020,59430.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan,2020,43973080.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan,2019,127814246.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Inisiatif Pembiayaan Swasta,2020,10041781.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Inisiatif Pembiayaan Swasta,2019,20406621.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2020,41009443.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2019,4328344028.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2020,3961561547.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2020,418850706457.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2019,408405103476.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,68,52,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2020,82996331517.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2019,80534388107.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2020,29323431027.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2019,31506555860.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2020,630596360.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2019,770140555.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2020,109493399888.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2019,110269277519.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2020,944687411.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2019,1694705281.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2020,49330957654.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2019,52058496026.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2020,2028898109.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2019,2114739291.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Kumpulan Wang COVID-19,Perbelanjaan COVID-19,2020,37869238631.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Kumpulan Wang COVID-19,Perbelanjaan COVID-19,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2020,97727562247.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2019,82722693311.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2019,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2020,69125729.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2019,68764375.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2020,261407645.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2019,258134157.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2020,1768811630.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Modal,Pembelian Instrumen Kewangan,2019,9471152793.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Inisiatif Pembiayaan Swasta,2020,274373237.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Inisiatif Pembiayaan Swasta,2019,53510077.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2020,598567288.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2019,5469865863.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2020,0.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2019,34563208527.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2020,413317388373.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2019,411555631742.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2020,5533318084.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2019,-3150528266.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2020,20497071598.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2019,23647599864.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2020,26030389682.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2019,20497071598.0,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,69,53,Penyata Penerimaan dan Pembayaran Wang Tunai

@@ -1,0 +1,93 @@
+flow,category_bm,item_bm,year,amount_rm,source_file,pdf_page,printed_page,statement
+TERIMAAN,Hasil,Hasil Cukai,2014,164204887589.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Cukai,2013,155952205546.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2014,52348131946.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Bukan Cukai,2013,50241306637.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2014,1666651362.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Terimaan Bukan Hasil,2013,1580740186.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2014,855349863.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Hasil Wilayah Persekutuan,2013,1378022570.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Jumlah Hasil,2014,219075020760.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Hasil,Jumlah Hasil,2013,209152274939.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2014,108809141548.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Dalam Negeri,2013,111357188482.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2014,0.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Luar Negeri,2013,0.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Jumlah Pinjaman,2014,108809141548.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Pinjaman,Jumlah Pinjaman,2013,111357188482.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2014,26539848.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Multilateral,2013,325828.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2014,222744257.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Pinjaman Bilateral,2013,412326368.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Jumlah Bantuan Luar Negeri,2014,249284105.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Bantuan Luar Negeri,Jumlah Bantuan Luar Negeri,2013,412652196.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2014,1028450618.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pinjaman,2013,1377968465.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Perbezaan Forex Relending Loan,2014,0.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Perbezaan Forex Relending Loan,2013,6947052.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pendahuluan,2014,60728977.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Terimaan Balik Pendahuluan,2013,29508837.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2014,42799.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Aset Modal,2013,87017.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan Modal,2014,5497682.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Pelbagai Terimaan Modal,2013,24919163.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2014,617878107.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jualan Instrumen Kewangan,2013,717599227.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jumlah Terimaan Modal,2014,1712598183.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Modal,Jumlah Terimaan Modal,2013,2157029761.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Inisiatif Pembiayaan Swasta (PFI),2014,61163842.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Inisiatif Pembiayaan Swasta (PFI),2013,148775232.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2014,103256039.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2013,5054580710.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2014,0.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Pelbagai,2013,0.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Jumlah Terimaan Amanah,2014,164419881.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+TERIMAAN,Terimaan Amanah,Jumlah Terimaan Amanah,2013,5203355942.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2014,66946934325.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Emolumen,2013,61001190871.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2014,34252935877.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perkhidmatan dan Bekalan,2013,33860076805.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2014,1681823151.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Aset,2013,1414680060.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2014,112544254857.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Pemberian dan Kenaan Bayaran Tetap,2013,110424046265.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2014,1064584574.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Perbelanjaan-perbelanjaan Lain,2013,1052603153.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Jumlah Perbelanjaan Mengurus,2014,216490532784.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Mengurus,Jumlah Perbelanjaan Mengurus,2013,207752597154.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2014,37614004995.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Langsung,2013,40473294579.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2014,1854590132.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Pinjaman,2013,1736506805.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Jumlah Perbelanjaan Pembangunan,2014,39468595127.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Pembangunan,Jumlah Perbelanjaan Pembangunan,2013,42209801384.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2014,65861587665.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Dalam Negeri,2013,73030098558.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2014,0.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Luar Negeri,2013,0.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Jumlah Pinjaman,2014,65861587665.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Pinjaman,Jumlah Pinjaman,2013,73030098558.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2014,109014953.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Multilateral,2013,98564203.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2014,516480465.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Pinjaman Bilateral,2013,522458616.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Jumlah Bantuan Luar Negeri,2014,625495418.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Bantuan Luar Negeri,Jumlah Bantuan Luar Negeri,2013,621022819.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Inisiatif Pembiayaan Swasta (PFI),2014,349159690.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Inisiatif Pembiayaan Swasta (PFI),2013,1212643573.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2014,2257167555.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Aktiviti Pembangunan Khas Pembiayaan Swasta,2013,3239193138.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2014,12582294151.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Pelbagai,2013,4521930893.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Jumlah Perbelanjaan Amanah,2014,15188621396.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+BAYARAN,Perbelanjaan Amanah,Jumlah Perbelanjaan Amanah,2013,8973767604.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2014,330010464477.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Terimaan,Jumlah Terimaan,2013,328282501320.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,59,34,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2014,337634832390.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Jumlah Bayaran,Jumlah Bayaran,2013,332587287519.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2014,-7624367913.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Tambahan/(Kurangan) Wang Tunai,Tambahan/(Kurangan) Wang Tunai,2013,-4304786199.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2014,25051038985.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,Wang Tunai Pada 1 Januari,Wang Tunai Pada 1 Januari,2013,29355825184.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2014,17426671072.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai
+JUMLAH,WANG TUNAI PADA 31 DISEMBER,WANG TUNAI PADA 31 DISEMBER,2013,25051038985.0,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,35,Penyata Penerimaan dan Pembayaran Wang Tunai

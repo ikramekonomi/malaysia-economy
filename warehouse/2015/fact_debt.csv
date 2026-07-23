@@ -1,0 +1,29 @@
+group_bm,item_bm,kind,year,amount_rm,source_file,pdf_page,printed_page,statement
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2015,4700000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2014,4320000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2015,214000000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2014,185500000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2015,340062879000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2014,329632319000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2015,558762879000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2014,519452319000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2015,15179150000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2014,11468925000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Pinjaman Berjangka,instrument,2015,21900000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Pinjaman Berjangka,instrument,2014,26200000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Sukuk Perumahan Kerajaan,instrument,2015,28400000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Sukuk Perumahan Kerajaan,instrument,2014,20400000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Kumpulan Wang Pinjaman Perumahan,subtotal,2015,50300000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Kumpulan Wang Pinjaman Perumahan,Kumpulan Wang Pinjaman Perumahan,subtotal,2014,46600000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+JUMLAH,PINJAMAN,subtotal,2015,624242029000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+JUMLAH,PINJAMAN,subtotal,2014,577521244000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2015,647112909.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2014,656158104.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2015,5651294201.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2014,4650839177.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2015,6298407110.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2014,5306997281.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+JUMLAH,HUTANG AWAM,total,2015,630540436110.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+JUMLAH,HUTANG AWAM,total,2014,582828241281.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2015,710116666.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,62,Nota 9 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2014,318104801.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,62,Nota 9 Memorandum Liabiliti

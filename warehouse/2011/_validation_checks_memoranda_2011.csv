@@ -1,0 +1,11 @@
+status,check,extracted_value,printed_value,difference
+PASS,"L3 loans_receivable grand baki = Nota 8(a) 88,838,070,548",88838070548.42,88838070548.00,0.42
+PASS,L3 sum(detail baki) = grand,88838070548.42,88838070548.42,0.00
+PASS,"L4 investments grand nilai_buku = Nota 8(b) 28,222,949,922",28222949922.29,28222949922.00,0.29
+PASS,L4 AGENSI ANTARABANGSA sum(detail)=Nota8b,38574228.53,38574229.00,-0.47
+PASS,L4 BADAN BERKANUN sum(detail)=Nota8b,1218852876.45,1218852876.00,0.45
+PASS,L4 SYARIKAT sum(detail)=Nota8b,26965522817.31,26965522817.00,0.31
+PASS,"L5 guarantees grand jumlah = Nota 10(a) 116,757,672,552",116757672551.75,116757672552.00,-0.25
+PASS,L5 sum(detail dalam+luar)=grand jumlah,116757672551.75,116757672551.75,0.00
+PASS,"Nota8 memo assets Pinjaman Boleh Dituntut items=88,838,070,548",88838070548.00,88838070548.00,0.00
+PASS,"Nota8 memo assets Pelaburan items=28,222,949,922",28222949922.00,28222949922.00,0.00

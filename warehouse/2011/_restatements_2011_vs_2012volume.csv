@@ -1,0 +1,156 @@
+table,key,value_2011_volume,value_2012_volume,difference,note
+cash_statement,"('BAYARAN', 'Bantuan Luar Negeri', 'Jumlah Bantuan Luar Negeri')",703077337.0,690047835.0,13029502.0,
+cash_statement,"('BAYARAN', 'Bantuan Luar Negeri', 'Pinjaman Bilateral')",596867056.0,583837554.0,13029502.0,
+cash_statement,"('BAYARAN', 'Bayaran Lain', 'Akaun Amanah')",0.0,,,zero/nil row in only one volume (not a value restatement)
+cash_statement,"('BAYARAN', 'Inisiatif Pembiayaan Swasta (PFI)', 'Inisiatif Pembiayaan Swasta (PFI)')",3584962054.0,,,present in only one volume
+cash_statement,"('BAYARAN', 'Perbelanjaan Amanah', 'Aktiviti Pembangunan Khas Pembiayaan Swasta')",,0.0,,zero/nil row in only one volume (not a value restatement)
+cash_statement,"('BAYARAN', 'Perbelanjaan Amanah', 'Inisiatif Pembiayaan Swasta (PFI)')",,3584962054.0,,present in only one volume
+cash_statement,"('BAYARAN', 'Perbelanjaan Amanah', 'Jumlah Perbelanjaan Amanah')",,9764341510.0,,present in only one volume
+cash_statement,"('BAYARAN', 'Perbelanjaan Amanah', 'Pelbagai')",,6179379456.0,,present in only one volume
+cash_statement,"('BAYARAN', 'Perbelanjaan Mengurus', 'Jumlah Perbelanjaan Mengurus')",182593788338.0,175503793685.0,7089994653.0,
+cash_statement,"('BAYARAN', 'Perbelanjaan Mengurus', 'Pemberian dan Kenaan Bayaran Tetap')",99693813446.0,92603818793.0,7089994653.0,
+cash_statement,"('BAYARAN', 'Perbelanjaan Mengurus', 'Perbelanjaan Lain')",1137741551.0,,,present in only one volume
+cash_statement,"('BAYARAN', 'Perbelanjaan Mengurus', 'Perbelanjaan-perbelanjaan Lain')",,1137741551.0,,present in only one volume
+cash_statement,"('BAYARAN', 'Perbelanjaan Modal', 'Jumlah Perbelanjaan Modal')",,2061487565.0,,present in only one volume
+cash_statement,"('JUMLAH', 'Jumlah Bayaran', 'Jumlah Bayaran')",300005496842.0,299081852143.0,923644699.0,
+cash_statement,"('JUMLAH', 'Jumlah Terimaan', 'Jumlah Terimaan')",303121978425.0,302198333726.0,923644699.0,
+cash_statement,"('TERIMAAN', 'Terimaan Amanah', 'Aktiviti Pembangunan Khas Pembiayaan Swasta')",,0.0,,zero/nil row in only one volume (not a value restatement)
+cash_statement,"('TERIMAAN', 'Terimaan Amanah', 'Inisiatif Pembiayaan Swasta (PFI)')",,2385876399.0,,present in only one volume
+cash_statement,"('TERIMAAN', 'Terimaan Amanah', 'Jumlah Terimaan Amanah')",,2385876399.0,,present in only one volume
+cash_statement,"('TERIMAAN', 'Terimaan Amanah', 'Pelbagai')",,0.0,,zero/nil row in only one volume (not a value restatement)
+cash_statement,"('TERIMAAN', 'Terimaan Lain', 'Inisiatif Pembiayaan Swasta (PFI)')",2385876399.0,,,present in only one volume
+cash_statement,"('TERIMAAN', 'Terimaan Lain', 'Jumlah Terimaan Lain')",3276491596.0,,,present in only one volume
+cash_statement,"('TERIMAAN', 'Terimaan Lain', 'Terimaan Amanah')",890615197.0,,,present in only one volume
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Jualan Instrumen Kewangan')",0.0,,,zero/nil row in only one volume (not a value restatement)
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Jumlah Terimaan Modal')",866446256.0,833416754.0,33029502.0,
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Terimaan Balik Pendahuluan')",,0.0,,zero/nil row in only one volume (not a value restatement)
+cash_statement,"('TERIMAAN', 'Terimaan Modal', 'Terimaan Balik Pinjaman')",866221436.0,833191934.0,33029502.0,
+memorandum_summary,Pelaburan,28222949922.0,28834528313.0,-611578391.0,
+debt_nota,"('PELBAGAI LIABILITI', 'misc_total')",,241513526.0,,present in only one volume
+revenue_nota5a,Aktiviti Carigali Minyak dan Gas MTJA,,1408561569.0,,present in only one volume
+revenue_nota5a,Aktiviti Mencari Gali Minyak dan Gas,1408561569.0,,,present in only one volume
+revenue_nota5a,Duti Eksais Terhadap Barangan Import,,3102383919.0,,present in only one volume
+revenue_nota5a,HASIL,,185418919743.0,,present in only one volume
+revenue_nota5a,HASIL BUKAN CUKAI,,49423045556.0,,present in only one volume
+revenue_nota5a,HASIL CUKAI,,134884834173.0,,present in only one volume
+revenue_nota5a,HASIL WILAYAH PERSEKUTUAN,,566906169.0,,present in only one volume
+revenue_nota5a,JUMLAH HASIL,185418919743.0,,,present in only one volume
+revenue_nota5a,Jumlah Hasil Bukan Cukai,49423045556.0,,,present in only one volume
+revenue_nota5a,Jumlah Hasil Cukai,134884834173.0,,,present in only one volume
+revenue_nota5a,Jumlah Hasil Wilayah Persekutuan,566906169.0,,,present in only one volume
+revenue_nota5a,Jumlah Terimaan Bukan Hasil,544133845.0,,,present in only one volume
+revenue_nota5a,Levi,919424973.0,,,present in only one volume
+revenue_nota5a,Levi (selepas pindahan) (disambung) Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan (sebelum pindahan) NOTA KEPADA PENYATA KEWANGAN Anggaran Anggaran Asal Disemak % %,,919424973.0,,present in only one volume
+revenue_nota5a,NOTA KEPADA PENYATA KEWANGAN Duti Eksais Terhadap Barangan Import,3102383919.0,,,present in only one volume
+revenue_nota5a,Sumbangan dan Bayaran Ganti dari Luar Negeri dan Sumbangan Tempatan,3271035.0,,,present in only one volume
+revenue_nota5a,Sumbangan dan Bayaran Ganti daripada Luar Negeri dan Sumbangan Tempatan,,3271035.0,,present in only one volume
+revenue_nota5a,TERIMAAN BUKAN HASIL,,544133845.0,,present in only one volume
+revenue_account_stmt,Lebihan/(Kurangan) bagi Tahun,,0.0,,zero/nil row in only one volume (not a value restatement)
+revenue_account_stmt,Perbelanjaan-perbelanjaan Lain,,1137741551.0,,present in only one volume
+revenue_account_stmt,Perbelanjaan-perbelanjaan lain,1137741551.0,,,present in only one volume
+investment_summary_nota4,"('', 'JUMLAH PELABURAN')",,22843463212.0,,present in only one volume
+investment_summary_nota4,"('JUMLAH PELABURAN', 'JUMLAH PELABURAN')",22843463212.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT AM', 'Wang Jaminan Pelaksanaan')",,1673641083.0,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT AM', 'Wang Jaminan Perlaksanaan')",1673641083.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT PELARASAN', 'Bayaran Kepada Commerce Dot Com (CDC)')",,18245371.0,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', '', 'DEPOSIT PELARASAN', 'Pelbagai Deposit Pelarasan')",18245371.0,0.0,18245371.0,
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Baki pada 1 Januari')",8258680212.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Baki pada 31 Disember')",8690055757.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Debit')",2605348107.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Am', 'Penyata Ringkasan', 'Kredit')",3036723652.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",367139212.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",299483231.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Debit')",2452049738.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Deposit Pelarasan', 'Penyata Ringkasan', 'Kredit')",2384393757.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Baki pada 1 Januari')",8625819424.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Baki pada 31 Disember')",8989538988.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Debit')",5057397845.0,,,present in only one volume
+trust_fund_detail_nota7,"('AKAUN DEPOSIT', 'Jumlah Akaun Deposit', 'Penyata Ringkasan', 'Kredit')",5421117409.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Baki pada 1 Januari')",3984846950.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Baki pada 31 Disember')",-3462367960.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Debit')",471667316993.0,,,present in only one volume
+trust_fund_detail_nota7,"('JUMLAH AKAUN AMANAH DISATUKAN', 'JUMLAH AKAUN AMANAH DISATUKAN', 'Penyata Ringkasan', 'Kredit')",464220102083.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Aktiviti Pembangunan Khas Pembiayaan Swasta')",,0.0,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Membangun/Menaiktaraf Sistem Pembentungan untuk Pembangunan Baru')",597912481.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH AM', 'Akaun Amanah Membangun/Menaiktaraf Sistem Pembetungan untuk Pembangunan Baru')",,597912481.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH KHAS', 'Faedah atas Pelaburan untuk Deposit Mahkamah')",,217674942.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', '', 'AMANAH KHAS', 'Faedah atas pelaburan Untuk Deposit Mahkamah')",217674942.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Baki pada 1 Januari')",7721630171.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Baki pada 31 Disember')",6319842566.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Debit')",8197921484.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Jumlah Kumpulan Wang Amanah Awam', 'Penyata Ringkasan', 'Kredit')",6796133879.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Baki pada 1 Januari')",7139541106.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Baki pada 31 Disember')",5701912589.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Debit')",7977808251.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Am', 'Penyata Ringkasan', 'Kredit')",6540179734.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Baki pada 1 Januari')",582089065.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Baki pada 31 Disember')",617929977.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Debit')",220113233.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH AWAM', 'Kumpulan Wang Amanah Khas', 'Penyata Ringkasan', 'Kredit')",255954145.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",-12362602645.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",-18771749514.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Debit')",458411997664.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Jumlah Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Kredit')",452002850795.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",-45496256660.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",-55235001113.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Debit')",46432690220.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'Penyata Ringkasan', 'Kredit')",36693945767.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Pelarasan')",0.0,,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pembangunan', 'TERIMAAN', 'Terimaan Balik Pendahuluan')",,0.0,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'PINDAHAN DARI / (KE)', 'Akaun Amanah Pensekuritian')",0.0,,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",3213459959.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",1908324534.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Debit')",13264423972.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'Penyata Ringkasan', 'Kredit')",11959288547.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Kumpulan Wang Pinjaman Perumahan', 'TERIMAAN / Pinjaman Perseorangan', 'Hasil Pensekuritian')",0.0,,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Bagi Pembangunan Projek ICT Sektor Awam')",,0.0,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Dana Automotif Bumiputra')",,0.0,,zero/nil row in only one volume (not a value restatement)
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Kebudayaan dan Kebajikan Penggiat Seni (U)')",3235048.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'PELBAGAI KUMPULAN WANG', 'Kumpulan Wang Amanah Kebudayaan dan Kebajikan Penggiat Seni')",,3235048.0,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 1 Januari')",29920194056.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Baki pada 31 Disember')",34554927065.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Debit')",398714883472.0,,,present in only one volume
+trust_fund_detail_nota7,"('KUMPULAN WANG AMANAH KERAJAAN', 'Pelbagai Kumpulan Wang Amanah Kerajaan', 'Penyata Ringkasan', 'Kredit')",403349616481.0,,,present in only one volume
+memo_assets_nota8,"('Pelaburan', 'JUMLAH PELABURAN')",28222949922.0,28834528313.0,-611578391.0,
+memo_assets_nota8,"('Pelaburan', 'Syarikat')",26965522817.0,27577101208.0,-611578391.0,
+commitment_detail,"('PELBAGAI LIABILITI', 'Akaun Depositori Pusat')",,15809492.0,,present in only one volume
+commitment_detail,"('PELBAGAI LIABILITI', 'JUMLAH PELBAGAI LIABILITI')",,241513526.0,,present in only one volume
+commitment_detail,"('PELBAGAI LIABILITI', 'Nota Kena Bayar')",,203612505.0,,present in only one volume
+commitment_detail,"('PELBAGAI LIABILITI', 'Sekuriti Tak Dituntut')",,22091529.0,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'Akaun Depositori Pusat')",15809492.0,,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'JUMLAH PELBAGAI LIABILITI')",241513526.0,,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'Nota Kena Bayar')",203612505.0,,,present in only one volume
+commitment_detail,"('Pelbagai Liabiliti', 'Sekuriti Tak Dituntut')",22091529.0,,,present in only one volume
+other_notes,"('10(a)', 'Pinjaman badan berkanun dan syarikat milik kerajaan yang dijamin oleh Kerajaan Persekutuan [Akta 96]')",116757672552.0,,,present in only one volume
+other_notes,"('10(b)', 'Simpanan pendeposit di Bank Simpanan Nasional, Kumpulan Wang Simpanan Guru-Guru, Kumpulan Wang Simpanan Pekerja dan Lembaga Tabung Haji')",471085369744.0,,,present in only one volume
+other_notes,"('10(c)', 'Third Party War Risk Liability dengan Malaysia Airports Holdings Berhad mengikut perjanjian indemniti')",475000000.0,,,present in only one volume
+other_notes,"('11', 'Akaun Belum Terima berdasarkan rekod Kementerian/Jabatan (maklumat tambahan)')",21478375650.0,,,present in only one volume
+other_notes,"('12', 'Wang pendahuluan kepada kontraktor yang belum diimbuh balik berdasarkan rekod Kementerian/Jabatan (maklumat tambahan)')",1535759271.0,,,present in only one volume
+other_notes,"('5(b)', 'Pelarasan bayaran balik pinjaman Perbadanan Aset Keretapi (komponen penyata semula Pemberian 2011)')",,20000000.0,,present in only one volume
+other_notes,"('5(b)', 'Perbelanjaan Pemberian dan Kenaan Bayaran Tetap 2011 di Penyata Penerimaan dan Pembayaran Wang Tunai (sebelum penyata semula)')",,99693813446.0,,present in only one volume
+other_notes,"('5(b)', 'Perbelanjaan Pemberian dan Kenaan Bayaran Tetap 2011 dinyatakan semula di Penyata Penerimaan dan Pembayaran Wang Tunai')",,92603818793.0,,present in only one volume
+other_notes,"('5(b)', 'Pindahan peruntukan Kumpulan Wang Terkanun kepada Kumpulan Wang Amanah Kerajaan (komponen penyata semula Pemberian 2011)')",,7069994653.0,,present in only one volume
+other_notes,"('6', 'Bantuan Luar Negeri yang belum diterima bagi membiayai projek pembangunan')",,2563921396.0,,present in only one volume
+other_notes,"('6', 'Bayaran balik Pinjaman Bilateral 2011 dinyatakan semula di Penyata Penerimaan dan Pembayaran Wang Tunai')",,583837554.0,,present in only one volume
+other_notes,"('6', 'Pelarasan urus niaga bukan tunai (komponen penyata semula bayaran balik Pinjaman Bilateral 2011)')",,13029502.0,,present in only one volume
+other_notes,"('7', 'Pelbagai Perbelanjaan Amanah dinyatakan semula di Penyata Penerimaan dan Pembayaran Wang Tunai 2011')",,6179379456.0,,present in only one volume
+other_notes,"('7(a)(i)', 'Pelarasan urus niaga bukan tunai (komponen penyata semula Terimaan Balik Pinjaman KWP 2011)')",,33029502.0,,present in only one volume
+other_notes,"('7(a)(i)', 'Terimaan Balik Pinjaman Kumpulan Wang Pembangunan 2011 di Penyata Penerimaan dan Pembayaran Wang Tunai (sebelum penyata semula)')",,866221436.0,,present in only one volume
+other_notes,"('7(a)(i)', 'Terimaan Balik Pinjaman Kumpulan Wang Pembangunan 2011 dinyatakan semula')",,833191934.0,,present in only one volume
+other_notes,"('8(b)', 'Nilai Buku Pelaburan Memorandum Aset 2011 dinyatakan semula')",,28834528313.0,,present in only one volume
+other_notes,"('8(b)', 'Nilai Buku Pelaburan Memorandum Aset 2011 sebelum penyata semula')",,28222949922.0,,present in only one volume
+other_notes,"('8(b)', 'Pelarasan pengurangan nilai buku Khazanah Nasional Berhad')",,54000000.0,,present in only one volume
+other_notes,"('8(b)', 'Pelarasan pertambahan nilai buku pegangan saham Malaysia Debt Ventures Berhad')",,150000000.0,,present in only one volume
+other_notes,"('8(b)', 'Pengambilalihan ekuiti UDA Holdings Berhad (176,577,186 unit) oleh Menteri Kewangan Diperbadankan melalui set off pembayaran dividen Khazanah Nasional Berhad')",529731558.0,,,present in only one volume
+other_notes,"('8(b)', 'Pengambilalihan saham UDA oleh MKD 176,577,186 unit @ RM3/unit melalui set off dividen Khazanah Nasional Berhad')",,529731558.0,,present in only one volume
+other_notes,"('8(b)', 'Pengurangan nilai buku penjualan saham KLIA Consultancy Services, Malaysian Resources Corporation Berhad dan Media Prima Berhad')",,14153167.0,,present in only one volume
+trust_accounts_nota7,AKAUN AMANAH DISATUKAN,,-3462367960.0,,present in only one volume
+trust_accounts_nota7,AKAUN DEPOSIT,,8989538988.0,,present in only one volume
+trust_accounts_nota7,JUMLAH AKAUN AMANAH DISATUKAN,-3462367960.0,,,present in only one volume
+trust_accounts_nota7,Jumlah Akaun Deposit,8989538988.0,,,present in only one volume
+trust_accounts_nota7,Jumlah Kumpulan Wang Amanah Awam,6319842566.0,,,present in only one volume
+trust_accounts_nota7,Jumlah Kumpulan Wang Amanah Kerajaan,-18771749514.0,,,present in only one volume
+trust_accounts_nota7,KUMPULAN WANG AMANAH AWAM,,6319842566.0,,present in only one volume
+trust_accounts_nota7,KUMPULAN WANG AMANAH KERAJAAN,,-18771749514.0,,present in only one volume
+loan_account_stmt_nota6,"('BAKI', '', 'BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER')",,38909479613.0,,present in only one volume
+loan_account_stmt_nota6,"('JUMLAH', '', 'BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER')",38909479613.0,,,present in only one volume

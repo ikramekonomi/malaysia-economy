@@ -1,0 +1,27 @@
+line_item_bm,line_code,year,basis,amount_rm,source_file,pdf_page,printed_page,statement
+Hasil,revenue,2022,anggaran,285217488000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Hasil,revenue,2022,sebenar,294356760615.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Hasil,revenue,2021,sebenar,233752055029.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2022,anggaran,236966039423.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2022,sebenar,292693212510.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Mengurus,opex,2021,sebenar,231516358812.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2022,anggaran,48251448577.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2022,sebenar,1663548105.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+LEBIHAN/(KURANGAN) HASIL,current_balance,2021,sebenar,2235696217.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2022,anggaran,68503312870.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2022,sebenar,71573961426.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Pembangunan,devex,2021,sebenar,64256665755.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2022,anggaran,34000000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2022,sebenar,30979119546.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Belanja Kumpulan Wang COVID-19,covid_fund_exp,2021,sebenar,37711016365.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2022,anggaran,-54251864293.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2022,sebenar,-100889532867.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+KURANGAN KESELURUHAN,overall_deficit,2021,sebenar,-99731985903.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2022,sebenar,100889532867.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+JUMLAH PEMBIAYAAN,total_financing,2021,sebenar,99731985903.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2022,sebenar,99837166438.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+Pinjaman dan Bantuan Luar Negeri,financing_net_borrowing,2021,sebenar,103437525115.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+"Terimaan Balik Pinjaman, Jualan Aset Modal dan Pelbagai Terimaan",financing_capital_receipts,2022,sebenar,1407227599.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+"Terimaan Balik Pinjaman, Jualan Aset Modal dan Pelbagai Terimaan",financing_capital_receipts,2021,sebenar,991824003.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2022,sebenar,-354861170.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan
+"Perubahan Tunai, Pelaburan dan Amanah",financing_cash_inv_trust_change,2021,sebenar,-4697363215.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Penyata Prestasi Kewangan

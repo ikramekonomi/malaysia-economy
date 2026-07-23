@@ -1,0 +1,43 @@
+group_bm,item_bm,kind,year,amount_rm,source_file,pdf_page,printed_page,statement
+JUMLAH,PINJAMAN,subtotal,2022,1075620129000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+JUMLAH,PINJAMAN,subtotal,2021,975231047500.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2022,1050077729000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2021,950083947500.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2022,31500000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2021,28000000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2022,471300000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2021,422600000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2022,538177729000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2021,480717530000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2022,9100000000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2021,18766417500.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2022,25542400000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2021,25147100000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2022,3970388115.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2021,4583313818.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2022,83127568.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2021,115512192.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2022,3887260547.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2021,4467801626.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2022,1079590517115.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2021,979814361318.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2022,34492348126.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2021,35574695050.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Pembinaan PFI Sdn. Bhd.,pfi_company,2022,18284034881.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Pembinaan PFI Sdn. Bhd.,pfi_company,2021,19366381805.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,MKD Aman Makmur Sdn. Bhd.,pfi_company,2022,16208313245.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,MKD Aman Makmur Sdn. Bhd.,pfi_company,2021,16208313245.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,91,79,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2022,224115577507.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2021,229391741672.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2022,34551706062.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2021,37280233968.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2022,25721574279.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2021,21836502399.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2022,535409173.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2021,997834453.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2022,432340000.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2021,910011784.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kelewatan Bayaran Balik Cukai Pendapatan,commitment_item,2022,103069173.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kelewatan Bayaran Balik Cukai Pendapatan,commitment_item,2021,87822669.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,92,80,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2022,155342175.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,93,81,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2021,150953607.0,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,93,81,Nota 10 Memorandum Liabiliti

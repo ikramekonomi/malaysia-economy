@@ -1,0 +1,31 @@
+category_bm,line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+,JUMLAH PELABURAN,2012,24049136708.0,total,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+,JUMLAH PELABURAN,2011,22843463212.0,total,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Sekuriti Kerajaan Luar Negeri,2012,3488419954.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Sekuriti Kerajaan Luar Negeri,2012,0.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Sekuriti Kerajaan Luar Negeri,2011,2561909810.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Sekuriti Kerajaan Luar Negeri,2011,0.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Sekuriti Kerajaan Malaysia,2012,1238248943.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Sekuriti Kerajaan Malaysia,2012,0.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Sekuriti Kerajaan Malaysia,2011,936001984.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Sekuriti Kerajaan Malaysia,2011,0.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Saham,2012,784811.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Saham,2012,5563998987.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Saham,2011,784811.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Saham,2011,5563998987.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Deposit Luar Negeri,2012,0.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Deposit Luar Negeri,2012,0.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Deposit Luar Negeri,2011,75996238.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Deposit Luar Negeri,2011,0.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Deposit Dalam Negeri,2012,8133614560.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Deposit Dalam Negeri,2012,5093996935.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Deposit Dalam Negeri,2011,8502089818.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Deposit Dalam Negeri,2011,4258392284.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Pelbagai,2012,528401960.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Pelbagai,2012,1670558.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Pelbagai,2011,942618722.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Pelbagai,2011,1670558.0,detail,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Jumlah,2012,13389470228.0,subtotal,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Jumlah,2012,10659666480.0,subtotal,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Kumpulan Wang Amanah,Jumlah,2011,13019401383.0,subtotal,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan
+Pelaburan Am,Jumlah,2011,9824061829.0,subtotal,False,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,53,31,Nota 4 Pelaburan

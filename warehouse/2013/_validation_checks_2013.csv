@@ -1,0 +1,100 @@
+status,check,extracted_value,printed_value,difference
+PASS,FP WANG TUNAI+PELABURAN=JUMLAH WANG AWAM 2013,49083585341.00,49083585341.00,0.00
+PASS,FP KWD components=JUMLAH KWD 2013,49083585341.00,49083585341.00,0.00
+PASS,FP WANG AWAM==KWD balance 2013,49083585341.00,49083585341.00,0.00
+PASS,FP WANG TUNAI+PELABURAN=JUMLAH WANG AWAM 2012,53404961892.00,53404961892.00,0.00
+PASS,FP KWD components=JUMLAH KWD 2012,53404961892.00,53404961892.00,0.00
+PASS,FP WANG AWAM==KWD balance 2012,53404961892.00,53404961892.00,0.00
+PASS,FP JUMLAH WANG AWAM 2013,49083585341.00,49083585341.00,0.00
+PASS,PRESTASI HASIL-opex=LEBIHAN 2013,2099876765.00,2099876765.00,0.00
+PASS,PRESTASI LEBIHAN-devex=KURANGAN 2013,-40109924619.00,-40109924619.00,0.00
+PASS,PRESTASI financing=-KURANGAN 2013,40109924619.00,40109924619.00,0.00
+PASS,PRESTASI HASIL-opex=LEBIHAN 2012,2375673144.00,2375673144.00,0.00
+PASS,PRESTASI LEBIHAN-devex=KURANGAN 2012,-44556780662.00,-44556780662.00,0.00
+PASS,PRESTASI financing=-KURANGAN 2012,44556780662.00,44556780662.00,0.00
+PASS,PRESTASI HASIL sebenar 2013,213370213558.00,213370213558.00,0.00
+PASS,PRESTASI devex sebenar 2013,42209801384.00,42209801384.00,0.00
+PASS,REV anggaran_asal_rm items->HASIL CUKAI,158624500000.00,158624500000.00,0.00
+PASS,REV anggaran_asal_rm items->HASIL BUKAN CUKAI,48320130000.00,48320130000.00,0.00
+PASS,REV anggaran_asal_rm items->TERIMAAN BUKAN HASIL,583241000.00,583241000.00,0.00
+PASS,REV anggaran_asal_rm items->HASIL WILAYAH PERSEKUTUAN,592648000.00,592648000.00,0.00
+PASS,REV anggaran_asal_rm L1->grand,208120519000.00,208120519000.00,0.00
+PASS,REV anggaran_disemak_rm items->HASIL CUKAI,163506687000.00,163506687000.00,0.00
+PASS,REV anggaran_disemak_rm items->HASIL BUKAN CUKAI,54428125000.00,54428125000.00,0.00
+PASS,REV anggaran_disemak_rm items->TERIMAAN BUKAN HASIL,1526031000.00,1526031000.00,0.00
+PASS,REV anggaran_disemak_rm items->HASIL WILAYAH PERSEKUTUAN,961584000.00,961584000.00,0.00
+PASS,REV anggaran_disemak_rm L1->grand,220422427000.00,220422427000.00,0.00
+PASS,REV sebenar_rm items->HASIL CUKAI,155952205546.00,155952205546.00,0.00
+PASS,REV sebenar_rm items->HASIL BUKAN CUKAI,54450479701.00,54450479701.00,0.00
+PASS,REV sebenar_rm items->TERIMAAN BUKAN HASIL,1589505741.00,1589505741.00,0.00
+PASS,REV sebenar_rm items->HASIL WILAYAH PERSEKUTUAN,1378022570.00,1378022570.00,0.00
+PASS,REV sebenar_rm L1->grand,213370213558.00,213370213558.00,0.00
+PASS,REV sebenar_prior_rm items->HASIL CUKAI,151643090263.00,151643090263.00,0.00
+PASS,REV sebenar_prior_rm items->HASIL BUKAN CUKAI,54909327554.00,54909327554.00,0.00
+PASS,REV sebenar_prior_rm items->TERIMAAN BUKAN HASIL,876912254.00,876912254.00,0.00
+PASS,REV sebenar_prior_rm items->HASIL WILAYAH PERSEKUTUAN,483424598.00,483424598.00,0.00
+PASS,REV sebenar_prior_rm L1->grand,207912754669.00,207912754669.00,0.00
+PASS,REV grand sebenar 2013,213370213558.00,213370213558.00,0.00
+PASS,CASH Hasil items->Jumlah Hasil 2013,209152274939.00,209152274939.00,0.00
+INFO,CASH Pinjaman items->Jumlah Pinjaman 2013 [self-computed cross-side aggregate; NOT a printed figure — verifier flag. Genuinely-printed same-side subtotals are validated separately and stored in fact_cash_statement.],184387287040.00,,0.00
+INFO,CASH Bantuan Luar Negeri items->Jumlah Bantuan Luar Negeri 2013 [self-computed cross-side aggregate; NOT a printed figure — verifier flag. Genuinely-printed same-side subtotals are validated separately and stored in fact_cash_statement.],1033675015.00,,0.00
+PASS,CASH Terimaan Modal items->Jumlah Terimaan Modal 2013,2157029761.00,2157029761.00,0.00
+PASS,CASH Terimaan Amanah items->Jumlah Terimaan Amanah 2013,5203355942.00,5203355942.00,0.00
+PASS,CASH Perbelanjaan Mengurus items->Jumlah Perbelanjaan Mengurus 2013,207752597154.00,207752597154.00,0.00
+PASS,CASH Perbelanjaan Pembangunan items->Jumlah Perbelanjaan Pembangunan 2013,42209801384.00,42209801384.00,0.00
+PASS,CASH Perbelanjaan Amanah items->Jumlah Perbelanjaan Amanah 2013,8973767604.00,8973767604.00,0.00
+PASS,CASH Perbelanjaan Modal items->Jumlah Perbelanjaan Modal 2013,0.00,0.00,0.00
+PASS,CASH Jum Terimaan-Jum Bayaran=Tambahan 2013,-4304786199.00,-4304786199.00,0.00
+PASS,CASH awal+tambahan=akhir 2013,25051038985.00,25051038985.00,0.00
+PASS,CASH Hasil items->Jumlah Hasil 2012,203908063285.00,203908063285.00,0.00
+INFO,CASH Pinjaman items->Jumlah Pinjaman 2012 [self-computed cross-side aggregate; NOT a printed figure — verifier flag. Genuinely-printed same-side subtotals are validated separately and stored in fact_cash_statement.],169548861051.00,,0.00
+INFO,CASH Bantuan Luar Negeri items->Jumlah Bantuan Luar Negeri 2012 [self-computed cross-side aggregate; NOT a printed figure — verifier flag. Genuinely-printed same-side subtotals are validated separately and stored in fact_cash_statement.],1368996025.00,,0.00
+PASS,CASH Terimaan Modal items->Jumlah Terimaan Modal 2012,2607990583.00,2607990583.00,0.00
+PASS,CASH Terimaan Amanah items->Jumlah Terimaan Amanah 2012,7136865740.00,7136865740.00,0.00
+PASS,CASH Perbelanjaan Mengurus items->Jumlah Perbelanjaan Mengurus 2012,199665975101.00,199665975101.00,0.00
+PASS,CASH Perbelanjaan Pembangunan items->Jumlah Perbelanjaan Pembangunan 2012,46932453806.00,46932453806.00,0.00
+PASS,CASH Perbelanjaan Amanah items->Jumlah Perbelanjaan Amanah 2012,7699440026.00,7699440026.00,0.00
+PASS,CASH Perbelanjaan Modal items->Jumlah Perbelanjaan Modal 2012,1205673496.00,1205673496.00,0.00
+PASS,CASH Jum Terimaan-Jum Bayaran=Tambahan 2012,4889049657.00,4889049657.00,0.00
+PASS,CASH awal+tambahan=akhir 2012,29355825184.00,29355825184.00,0.00
+PASS,CASH Jumlah Terimaan 2013,328282501320.00,328282501320.00,0.00
+PASS,OPEX5b grand anggaran_asal_rm,201917000000.00,201917000000.00,0.00
+PASS,OPEX5b grand anggaran_dipinda_rm,216647067943.00,216647067943.00,0.00
+PASS,OPEX5b grand sebenar_rm,213370213558.00,213370213558.00,0.00
+PASS,OPEX5b Tanggungan sebenar,38997954127.00,38997954127.00,0.00
+PASS,OPEX5b Bekalan sebenar,174372259431.00,174372259431.00,0.00
+PASS,OPEX5b n_maksud,50.00,50.00,0.00
+PASS,L1 grand sebenar rounds to Nota5b,213370213558.00,213370213558.00,0.00
+PASS,L1 sum(jumlah_maksud sebenar)->grand,213370213558.00,213370213558.00,0.00
+PASS,L1<->Nota5b maksud sebenar (all within RM1),0.00,0.00,0.00
+PASS,DEVEX per-row identity anggaran L+P=J (fails),0.00,0.00,0.00
+PASS,DEVEX per-row identity sebenar L+P=J (fails),0.00,0.00,0.00
+PASS,DEVEX per-row identity prior+2013=terkumpul (fails),0.00,0.00,0.00
+PASS,DEVEX grand sebenar_jumlah->42.2bn,42209801384.00,42209801384.00,0.00
+PASS,DEVEX project->ministry_total sebenar (fails),0.00,0.00,0.00
+PASS,DEVEX sum(ministry_total)->grand,42209801384.00,42209801384.00,0.00
+PASS,DEBT DN instruments->subtotal 2013,481895000000.00,481895000000.00,0.00
+PASS,DEBT Jumlah Pinjaman 2013,533886300000.00,533886300000.00,0.00
+PASS,DEBT Hutang Awam 2013,539857759215.00,539857759215.00,0.00
+PASS,DEBT DN instruments->subtotal 2012,442368801500.00,442368801500.00,0.00
+PASS,DEBT Jumlah Pinjaman 2012,494821376500.00,494821376500.00,0.00
+PASS,DEBT Hutang Awam 2012,501616849368.00,501616849368.00,0.00
+PASS,DEBT Hutang Awam 2013,539857759215.00,539857759215.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [Kumpulan Wang Pembangunan],-40535070833.00,-40535070833.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [Kumpulan Wang Pinjaman Pe],1324944951.00,1324944951.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [Pelbagai Kumpulan Wang Am],29605216930.00,29605216930.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [KUMPULAN WANG AMANAH KERA],-9604908952.00,-9604908952.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [Kumpulan Wang Amanah Khas],646842019.00,646842019.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [Kumpulan Wang Amanah Am],10059927940.00,10059927940.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [KUMPULAN WANG AMANAH AWAM],10706769959.00,10706769959.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [Deposit Am],9465977654.00,9465977654.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [Deposit Pelarasan],272261730.00,272261730.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [AKAUN DEPOSIT],9738239384.00,9738239384.00,0.00
+PASS,TRUST roll baki_awal+kredit-debit=akhir [AKAUN AMANAH DISATUKAN],10840100391.00,10840100391.00,0.00
+PASS,TRUST grand baki_akhir->position 2013,10840100391.00,10840100391.00,0.00
+PASS,NOTA5 stmt Jumlah Hasil sebenar 2013,213370213558.00,213370213558.00,0.00
+PASS,NOTA5 stmt opening==closing 2013,11863127086.00,11863127086.00,0.00
+PASS,NOTA6 loan stmt closing 2013->position,26380357864.00,26380357864.00,0.00
+PASS,CASHCOMP items->JUMLAH 2013,25051038985.00,25051038985.00,0.00
+PASS,INVSUM JUMLAH PELABURAN 2013,24032546356.00,24032546356.00,0.00
+PASS,TS rows,1360.00,1360.00,0.00

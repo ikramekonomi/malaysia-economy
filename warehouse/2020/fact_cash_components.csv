@@ -1,0 +1,9 @@
+line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+WANG TUNAI,2020,26030389682.0,total,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai
+WANG TUNAI,2019,20497071598.0,total,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2020,23386390316.0,detail,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2019,19723454334.0,detail,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2020,2641122146.0,detail,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2019,770744244.0,detail,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2020,2877220.0,detail,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2019,2873020.0,detail,False,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,60,Nota 3 Wang Tunai

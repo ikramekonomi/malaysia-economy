@@ -1,0 +1,51 @@
+jenis_jaminan_bm,kategori_bm,agensi_bm,row_type,year,dalam_negeri_rm,luar_negeri_rm,jumlah_rm,source_file,pdf_page,printed_page,statement
+Badan Berkanun,,Bank Pertanian Malaysia,line,2009,0.0,84357748.99,84357748.99,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Badan Berkanun,,Bank Pertanian Malaysia,line,2008,,,109499808.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Badan Berkanun,,Perbadanan Tabung Pendidikan Tinggi Nasional,line,2009,14000000000.0,0.0,14000000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Badan Berkanun,,Perbadanan Tabung Pendidikan Tinggi Nasional,line,2008,,,11000000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Badan Berkanun,,Jumlah Badan Berkanun,subtotal,2009,14000000000.0,84357748.99,14084357748.99,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Badan Berkanun,,Jumlah Badan Berkanun,subtotal,2008,,,11109499808.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,1Malaysia Development Berhad,line,2009,5000000000.0,0.0,5000000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,1Malaysia Development Berhad,line,2008,,,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Aircraft Business Malaysia Sdn. Bhd.,line,2009,0.0,765034504.78,765034504.78,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Aircraft Business Malaysia Sdn. Bhd.,line,2008,,,948161490.17,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Assets Global Network Sdn. Bhd.,line,2009,1011600000.0,0.0,1011600000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Assets Global Network Sdn. Bhd.,line,2008,,,1011600000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Bank Pembangunan Malaysia Berhad,line,2009,6350000000.0,1723640031.47,8073640031.47,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Bank Pembangunan Malaysia Berhad,line,2008,,,9419936522.7,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Bank Perusahaan Kecil & Sederhana,line,2009,0.0,271623352.05,271623352.05,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Bank Perusahaan Kecil & Sederhana,line,2008,,,406493401.6,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Jambatan Kedua Sdn Bhd,line,2009,719045345.5,0.0,719045345.5,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Jambatan Kedua Sdn Bhd,line,2008,,,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Khazanah Nasional Berhad,line,2009,10500000000.0,0.0,10500000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Khazanah Nasional Berhad,line,2008,,,10350000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,K.L. International Airport Berhad,line,2009,6860000000.0,929643222.08,7789643222.08,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,K.L. International Airport Berhad,line,2008,,,8421909129.6,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Lembaga Kemajuan Tanah Persekutuan (FELDA),line,2009,1500000000.0,0.0,1500000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Lembaga Kemajuan Tanah Persekutuan (FELDA),line,2008,,,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Malaysia Debt Ventures Sdn Bhd,line,2009,500000000.0,0.0,500000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Malaysia Debt Ventures Sdn Bhd,line,2008,,,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Malaysian Industrial Development Finance Bhd. (MIDF),line,2009,0.0,151478999.05,151478999.05,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Malaysian Industrial Development Finance Bhd. (MIDF),line,2008,,,188074270.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Pelabuhan Tanjung Pelepas Sdn Bhd,line,2009,715000000.0,0.0,715000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Pelabuhan Tanjung Pelepas Sdn Bhd,line,2008,,,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Penerbangan Malaysia Berhad,line,2009,7686954755.77,0.0,7686954755.77,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Penerbangan Malaysia Berhad,line,2008,,,8565027919.13,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Prasarana Negara Berhad,line,2009,9101000000.0,0.0,9101000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Prasarana Negara Berhad,line,2008,,,7101000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Sabah Electricity Sdn. Bhd.,line,2009,0.0,36430012.09,36430012.09,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Sabah Electricity Sdn. Bhd.,line,2008,,,42135519.6,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Sarawak Capital Resources Ltd.,line,2009,933309000.0,276557604.38,1209866604.38,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Sarawak Capital Resources Ltd.,line,2008,,,1463837242.5,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Sarawak Hidro Sdn. Bhd.,line,2009,4000000000.0,0.0,4000000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Sarawak Hidro Sdn. Bhd.,line,2008,,,4000000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Silterra Malaysia Sdn. Bhd.,line,2009,1800000000.0,0.0,1800000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Silterra Malaysia Sdn. Bhd.,line,2008,,,1800000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Tenaga Nasional Berhad,line,2009,0.0,4398975819.92,4398975819.92,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Tenaga Nasional Berhad,line,2008,,,4408032319.02,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Valuecap Sdn Bhd,line,2009,5000000000.0,0.0,5000000000.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Valuecap Sdn Bhd,line,2008,,,0.0,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Jumlah Syarikat,subtotal,2009,61676909101.27,8553383545.82,70230292647.09,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,Jumlah Syarikat,subtotal,2008,,,58126207814.32,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,JUMLAH JAMINAN,total,2009,75676909101.27,8637741294.81,84314650396.08,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan
+Syarikat,,JUMLAH JAMINAN,total,2008,,,69235707622.32,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,186,182,G2 Penyata Akaun Memorandum Jaminan

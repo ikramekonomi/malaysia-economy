@@ -1,0 +1,51 @@
+maksud_code,jenis_bm,maksud_name_bm,year,anggaran_asal_rm,anggaran_dipinda_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+T.01,Tanggungan,Peruntukan Diraja Bagi S.P.B. Yang di-Pertuan Agong,2019,13533000.0,13533000.0,13533000.0,100.0,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.02,Tanggungan,Elaun-elaun Diraja,2019,1327100.0,1327100.0,1324042.0,99.77,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.03,Tanggungan,"Ketua Hakim Negara, Hakim Besar dan Hakim",2019,112000000.0,112000000.0,91217795.0,81.44,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.04,Tanggungan,Ketua Audit Negara,2019,925800.0,925800.0,773263.0,83.52,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.05,Tanggungan,Yang di-Pertua Dewan Rakyat,2019,1980900.0,1980900.0,1265526.0,63.89,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.06,Tanggungan,Yang di-Pertua Dewan Negara,2019,1718600.0,1718600.0,1259086.0,73.26,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.07,Tanggungan,Suruhanjaya Pilihan Raya,2019,3032100.0,3032100.0,2906052.0,95.84,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.08,Tanggungan,Suruhanjaya Perkhidmatan Kehakiman dan Perundangan,2019,11000.0,11000.0,10900.0,99.09,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.09,Tanggungan,Suruhanjaya Perkhidmatan Awam,2019,7785000.0,7785000.0,5805751.0,74.58,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.10,Tanggungan,Suruhanjaya Perkhidmatan Pelajaran,2019,5669700.0,5669700.0,5531109.0,97.56,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.11,Tanggungan,Suruhanjaya Pasukan Polis,2019,2261000.0,2261000.0,1566224.0,69.27,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.12,Tanggungan,Perbendaharaan,2019,6045189100.0,6305189100.0,6116274618.0,97.0,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.13,Tanggungan,Perbelanjaan Kerana Hutang Negara,2019,33000000000.0,33000000000.0,32932714314.0,99.8,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.14,Tanggungan,"Pencen, Elaun Bersara dan Ganjaran",2019,26000000000.0,26000000000.0,24905541979.0,95.79,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.01,Bekalan,Parlimen,2019,137435200.0,137435200.0,134622601.0,97.95,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.02,Bekalan,Pejabat Penyimpan Mohor Besar Raja-Raja,2019,2531000.0,2531000.0,2290416.0,90.49,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.03,Bekalan,Jabatan Audit Negara,2019,152723700.0,152723700.0,145366800.0,95.18,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.04,Bekalan,Suruhanjaya Pilihan Raya,2019,58596000.0,74246000.0,71276666.0,96.0,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.05,Bekalan,Suruhanjaya Perkhidmatan Awam,2019,39899200.0,39899200.0,37746647.0,94.61,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.06,Bekalan,Jabatan Perdana Menteri,2019,3693538800.0,3693538800.0,3565610391.0,96.54,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.07,Bekalan,Jabatan Perkhidmatan Awam,2019,1491250100.0,1491250100.0,1491234093.0,99.99,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.08,Bekalan,Jabatan Peguam Negara,2019,169324700.0,169324700.0,163430916.0,96.52,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.09,Bekalan,Suruhanjaya Pencegahan Rasuah Malaysia,2019,286774900.0,286774900.0,267415186.0,93.25,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.10,Bekalan,Perbendaharaan,2019,4354352100.0,4354352100.0,5117261124.0,117.52,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.11,Bekalan,Perkhidmatan Am Perbendaharaan,2019,18633916100.0,19346916100.0,20402812495.0,105.46,True,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.12,Bekalan,Peruntukan kepada Kumpulan Wang Terkanun,2019,38798900100.0,38823900100.0,39894731233.0,102.76,True,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.13,Bekalan,Kementerian Luar Negeri,2019,632223700.0,632223700.0,646153871.0,102.2,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.15,Bekalan,Kementerian Hal Ehwal Ekonomi,2019,461336900.0,461336900.0,500708611.0,108.53,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.20,Bekalan,Kementerian Industri Utama,2019,125598600.0,125598600.0,165956069.0,132.13,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.21,Bekalan,Kementerian Pertanian dan Industri Asas Tani,2019,3057153800.0,3057153800.0,3370421454.0,110.25,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.22,Bekalan,Kementerian Pembangunan Luar Bandar,2019,2992260500.0,2992260500.0,2992260471.0,99.99,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.23,Bekalan,"Kementerian Air, Tanah dan Sumber Asli",2019,1172508300.0,1172508300.0,1230752542.0,104.97,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.24,Bekalan,Kementerian Perdagangan Antarabangsa dan Industri,2019,517474400.0,517474400.0,594437171.0,114.87,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.25,Bekalan,Kementerian Perdagangan Dalam Negeri dan Hal Ehwal Pengguna,2019,1190830900.0,916105900.0,864684544.0,94.39,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.26,Bekalan,Kementerian Pembangunan Usahawan,2019,196408800.0,196408800.0,193756363.0,98.65,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.27,Bekalan,Kementerian Kerja Raya,2019,1048874800.0,1048874800.0,1064849275.0,101.52,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.28,Bekalan,Kementerian Pengangkutan,2019,1749943300.0,1749943350.0,1735168551.0,99.16,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.30,Bekalan,"Kementerian Tenaga, Sains, Teknologi, Alam Sekitar dan Perubahan Iklim",2019,751225700.0,751225700.0,685496242.0,91.25,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.31,Bekalan,"Kementerian Pelancongan, Seni dan Budaya",2019,858217400.0,858217400.0,829857938.0,96.7,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.32,Bekalan,Kementerian Wilayah Persekutuan,2019,345167000.0,320207800.0,313753584.0,97.98,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.40,Bekalan,Suruhanjaya Perkhidmatan Pelajaran,2019,16000000.0,16000000.0,15484105.0,96.78,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.42,Bekalan,Kementerian Kesihatan,2019,26498317300.0,26498317300.0,27678237694.0,104.45,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.43,Bekalan,Kementerian Perumahan dan Kerajaan Tempatan,2019,2434341300.0,2459300500.0,3070326055.0,124.85,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.45,Bekalan,Kementerian Belia dan Sukan,2019,663610000.0,661610000.0,631660509.0,95.47,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.46,Bekalan,Kementerian Sumber Manusia,2019,885120000.0,844939960.0,790674983.0,93.58,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.47,Bekalan,Kementerian Komunikasi dan Multimedia,2019,1072811900.0,1072811900.0,1007116436.0,93.88,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.48,Bekalan,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",2019,2201600000.0,2201600000.0,2160866743.0,98.15,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.60,Bekalan,Kementerian Pertahanan,2019,10270468200.0,10270468200.0,10633350143.0,103.53,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.62,Bekalan,Kementerian Dalam Negeri,2019,12565363700.0,12565363700.0,12113094218.0,96.4,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.63,Bekalan,Kementerian Pendidikan,2019,55128468300.0,55128468300.0,55752166077.0,101.13,False,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,62,50,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud

@@ -1,0 +1,43 @@
+group_bm,item_bm,kind,year,amount_rm,source_file,pdf_page,printed_page,statement
+JUMLAH,PINJAMAN,subtotal,2018,735451589000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+JUMLAH,PINJAMAN,subtotal,2017,681152106000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2018,719545169000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Dalam Negeri,subtotal,2017,665571726000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2018,6500000000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Bil Perbendaharaan,instrument,2017,4500000000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2018,304300000000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Terbitan Pelaburan Kerajaan,instrument,2017,268000000000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2018,380345169000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sekuriti Kerajaan Malaysia,instrument,2017,364671726000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2018,28400000000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Dalam Negeri,Sukuk,instrument,2017,28400000000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2018,15906420000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Pinjaman Luar Negeri,Pinjaman Pasaran,instrument,2017,15580380000.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2018,5597125484.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+JUMLAH,BANTUAN LUAR NEGERI,subtotal,2017,5684542477.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2018,288885562.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Multilateral,instrument,2017,370607027.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2018,5308239922.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Bantuan Luar Negeri,Pinjaman Bilateral,instrument,2017,5313935450.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2018,741048714484.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+JUMLAH,HUTANG PERSEKUTUAN,total,2017,686836648477.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2018,36416442980.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,LIABILITI INISIATIF PEMBIAYAAN SWASTA,pfi_total,2017,35462452983.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Inisiatif Pembiayaan Swasta,pfi_component,2018,14833406915.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Inisiatif Pembiayaan Swasta,pfi_component,2017,16483406914.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Aktiviti Pembangunan Khas Pembiayaan Swasta,pfi_component,2018,21583036065.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Liabiliti PFI,Aktiviti Pembangunan Khas Pembiayaan Swasta,pfi_component,2017,18979046069.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,73,61,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2018,164908473346.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN JAMINAN,commitment_total,2017,139749167987.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2018,31517888277.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAJAKAN KEWANGAN,commitment_total,2017,33421941407.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2018,44372590815.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN BAYARAN BALIK CUKAI,commitment_total,2017,34259229307.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2018,2169792773.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Kewangan,KOMITMEN PAMPASAN,commitment_total,2017,6839313755.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2018,2169792773.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Konsesi Lebuhraya,commitment_item,2017,3719783710.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kontrak Pengangkutan Awam,commitment_item,2018,0.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Komitmen Pampasan,Pampasan Kontrak Pengangkutan Awam,commitment_item,2017,3119530045.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,74,62,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2018,786190452.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,63,Nota 10 Memorandum Liabiliti
+Pelbagai Liabiliti,PELBAGAI LIABILITI,misc_total,2017,726330018.0,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,63,Nota 10 Memorandum Liabiliti

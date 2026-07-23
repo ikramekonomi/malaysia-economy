@@ -1,0 +1,53 @@
+maksud_code,jenis_bm,maksud_name_bm,year,anggaran_asal_rm,anggaran_dipinda_rm,sebenar_rm,pct_anggaran,has_footnote,source_file,pdf_page,printed_page,statement
+T.01,Tanggungan,Peruntukan Diraja Bagi S.P.B. Yang Di-Pertuan Agong,2022,13533000.0,13533000.0,13532639.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.02,Tanggungan,Elaun-elaun Diraja,2022,1337000.0,1337000.0,1246090.0,93.2,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.03,Tanggungan,"Ketua Hakim Negara, Hakim Besar dan Hakim",2022,110000000.0,110000000.0,108190977.0,98.36,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.04,Tanggungan,Ketua Audit Negara,2022,836700.0,836700.0,739548.0,88.39,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.05,Tanggungan,Yang Di-Pertua Dewan Rakyat,2022,564000.0,564000.0,497696.0,88.24,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.06,Tanggungan,Yang Di-Pertua Dewan Negara,2022,504000.0,504000.0,503612.0,99.92,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.07,Tanggungan,Suruhanjaya Pilihan Raya,2022,2465300.0,2465300.0,2449599.0,99.36,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.08,Tanggungan,Suruhanjaya Perkhidmatan Kehakiman dan Perundangan,2022,11000.0,11000.0,8600.0,78.18,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.09,Tanggungan,Suruhanjaya Perkhidmatan Awam,2022,7340000.0,7340000.0,5927764.0,80.76,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.10,Tanggungan,Suruhanjaya Perkhidmatan Pelajaran,2022,5254500.0,5254500.0,5203331.0,99.03,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.11,Tanggungan,Suruhanjaya Pasukan Polis,2022,1969500.0,1969500.0,1646894.0,83.62,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.12,Tanggungan,Perbendaharaan,2022,6343326200.0,6767226200.0,6755254015.0,99.82,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.13,Tanggungan,Perbelanjaan Kerana Hutang Negara,2022,43100000000.0,43100000000.0,41268936922.0,95.75,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+T.14,Tanggungan,"Pencen, Elaun Bersara dan Ganjaran",2022,27500000000.0,30281000000.0,30260472195.0,99.93,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.01,Bekalan,Parlimen,2022,148382900.0,138382900.0,129817806.0,93.81,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.02,Bekalan,Pejabat Penyimpan Mohor Besar Raja-Raja,2022,2500000.0,2500000.0,2212056.0,88.48,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.03,Bekalan,Jabatan Audit Negara,2022,154467500.0,153467500.0,151537543.0,98.74,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.04,Bekalan,Suruhanjaya Pilihan Raya,2022,188676800.0,273499400.0,267421527.0,97.78,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.05,Bekalan,Suruhanjaya Perkhidmatan Awam,2022,41622000.0,40122000.0,39145703.0,97.57,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.06,Bekalan,Jabatan Perdana Menteri,2022,4523964100.0,4503964100.0,4469844057.0,99.24,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.07,Bekalan,Jabatan Perkhidmatan Awam,2022,466501600.0,466501600.0,466501068.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.08,Bekalan,Jabatan Peguam Negara,2022,182181600.0,182181600.0,182181165.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.09,Bekalan,Suruhanjaya Pencegahan Rasuah Malaysia,2022,303871600.0,290491600.0,288816264.0,99.42,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.10,Bekalan,Perbendaharaan,2022,3925875500.0,3925875500.0,5117203733.0,130.35,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.11,Bekalan,Perkhidmatan Am Perbendaharaan,2022,10635228700.0,10635228700.0,63411572624.0,596.24,True,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.12,Bekalan,Peruntukan kepada Kumpulan Wang Terkanun,2022,1385330400.0,1963330400.0,3620878105.0,184.43,True,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.13,Bekalan,Kementerian Luar Negeri,2022,760304100.0,753304100.0,739912054.0,98.22,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.14,Bekalan,Kementerian Perpaduan Negara,2022,342528400.0,353626000.0,353625908.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.20,Bekalan,Kementerian Perusahaan Perladangan dan Komoditi,2022,417482300.0,237482300.0,225036867.0,94.76,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.21,Bekalan,Kementerian Pertanian dan Industri Makanan,2022,3281428300.0,3281428300.0,3305957590.0,100.75,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.22,Bekalan,Kementerian Pembangunan Luar Bandar,2022,3520264300.0,3490264300.0,3469064309.0,99.39,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.23,Bekalan,Kementerian Tenaga dan Sumber Asli,2022,1120915300.0,1117734963.0,1111897323.0,99.48,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.24,Bekalan,Kementerian Perdagangan Antarabangsa dan Industri,2022,585753000.0,580753000.0,550445384.0,94.78,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.25,Bekalan,Kementerian Perdagangan Dalam Negeri dan Hal Ehwal Pengguna,2022,1094676700.0,1094676700.0,3152820226.0,288.01,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.26,Bekalan,Kementerian Pembangunan Usahawan dan Koperasi,2022,195036300.0,195036300.0,193970217.0,99.45,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.27,Bekalan,Kementerian Kerja Raya,2022,823509000.0,820509000.0,820449684.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.28,Bekalan,Kementerian Pengangkutan,2022,1526793800.0,1481196900.0,1474182463.0,99.53,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.30,Bekalan,"Kementerian Sains, Teknologi dan Inovasi",2022,520275300.0,520275300.0,520275109.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.31,Bekalan,"Kementerian Pelancongan, Seni dan Budaya",2022,1009695500.0,957315150.0,923694380.0,96.49,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.32,Bekalan,Kementerian Wilayah Persekutuan,2022,256601400.0,252601400.0,249842895.0,98.91,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.33,Bekalan,Kementerian Alam Sekitar dan Air,2022,565535200.0,565535200.0,564904143.0,99.89,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.40,Bekalan,Suruhanjaya Perkhidmatan Pelajaran,2022,18065900.0,18015900.0,18006437.0,99.95,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.42,Bekalan,Kementerian Kesihatan,2022,28030000000.0,28030000000.0,28705509220.0,102.41,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.43,Bekalan,Kementerian Perumahan dan Kerajaan Tempatan,2022,1767450800.0,1764325610.0,1764119741.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.45,Bekalan,Kementerian Belia dan Sukan,2022,622025400.0,607525400.0,603298756.0,99.3,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.46,Bekalan,Kementerian Sumber Manusia,2022,835666800.0,830166800.0,814796937.0,98.15,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.47,Bekalan,Kementerian Komunikasi dan Multimedia,2022,888362300.0,888362300.0,888362131.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.48,Bekalan,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",2022,2506876600.0,2501876600.0,2475388651.0,98.94,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.60,Bekalan,Kementerian Pertahanan,2022,11105479300.0,11105479300.0,11409205703.0,102.73,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.62,Bekalan,Kementerian Dalam Negeri,2022,13513284200.0,13513284200.0,13513283812.0,99.99,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.63,Bekalan,Kementerian Pendidikan,2022,47590933700.0,47590933700.0,48394543644.0,101.69,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud
+B.64,Bekalan,Kementerian Pengajian Tinggi,2022,11546744200.0,11546744200.0,11542425498.0,99.96,False,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,83,71,Nota 5(b) Perbelanjaan Mengurus Mengikut Maksud

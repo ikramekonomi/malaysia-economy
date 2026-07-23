@@ -1,0 +1,82 @@
+maksud_code,code_num,jenis,name_bm,name_en,note,year
+B.01,1,Bekalan,Parlimen,Parliament,,2023
+B.02,2,Bekalan,Pejabat Penyimpan Mohor Besar Raja-Raja,Office of the Keeper of the Rulers' Seal,,2023
+B.03,3,Bekalan,Jabatan Audit Negara,National Audit Department,,2023
+B.04,4,Bekalan,Suruhanjaya Pilihan Raya,Election Commission,,2023
+B.05,5,Bekalan,Suruhanjaya Perkhidmatan Awam,Public Service Commission,,2023
+B.06,6,Bekalan,Jabatan Perdana Menteri,Prime Minister's Department,,2023
+B.07,7,Bekalan,Jabatan Perkhidmatan Awam,Public Service Department,,2023
+B.08,8,Bekalan,Jabatan Peguam Negara,Attorney General's Chambers,,2023
+B.09,9,Bekalan,Suruhanjaya Pencegahan Rasuah Malaysia,Malaysian Anti-Corruption Commission,,2023
+B.10,10,Bekalan,Perbendaharaan,Treasury,,2023
+B.11,11,Bekalan,Perkhidmatan Am Perbendaharaan,Treasury General Services,,2023
+B.12,12,Bekalan,Peruntukan kepada Kumpulan Wang Terkanun,Contributions to Statutory Funds,,2023
+B.13,13,Bekalan,Kementerian Luar Negeri,Ministry of Foreign Affairs,,2023
+B.14,14,Bekalan,Kementerian Perpaduan Negara,Ministry of National Unity,,2023
+B.15,15,Bekalan,Kementerian Ekonomi,Ministry of Economy,,2023
+B.20,20,Bekalan,Kementerian Perladangan dan Komoditi,Ministry of Plantation and Commodities,,2023
+B.21,21,Bekalan,Kementerian Pertanian dan Keterjaminan Makanan,Ministry of Agriculture and Food Security,,2023
+B.22,22,Bekalan,Kementerian Kemajuan Desa dan Wilayah,Ministry of Rural and Regional Development,,2023
+B.23,23,Bekalan,"Kementerian Sumber Asli, Alam Sekitar dan Perubahan Iklim","Ministry of Natural Resources, Environment and Climate Change",,2023
+B.24,24,Bekalan,"Kementerian Pelaburan, Perdagangan dan Industri","Ministry of Investment, Trade and Industry",,2023
+B.25,25,Bekalan,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,Ministry of Domestic Trade and Cost of Living,,2023
+B.26,26,Bekalan,Kementerian Pembangunan Usahawan dan Koperasi,Ministry of Entrepreneur and Cooperatives Development,,2023
+B.27,27,Bekalan,Kementerian Kerja Raya,Ministry of Works,,2023
+B.28,28,Bekalan,Kementerian Pengangkutan,Ministry of Transport,,2023
+B.30,30,Bekalan,"Kementerian Sains, Teknologi dan Inovasi","Ministry of Science, Technology and Innovation",,2023
+B.31,31,Bekalan,"Kementerian Pelancongan, Seni dan Budaya","Ministry of Tourism, Arts and Culture",,2023
+B.40,40,Bekalan,Suruhanjaya Perkhidmatan Pendidikan,Education Service Commission,,2023
+B.42,42,Bekalan,Kementerian Kesihatan,Ministry of Health,,2023
+B.43,43,Bekalan,Kementerian Perumahan dan Kerajaan Tempatan,Ministry of Housing and Local Government,,2023
+B.45,45,Bekalan,Kementerian Belia dan Sukan,Ministry of Youth and Sports,,2023
+B.46,46,Bekalan,Kementerian Sumber Manusia,Ministry of Human Resources,,2023
+B.47,47,Bekalan,Kementerian Komunikasi dan Digital,Ministry of Communications and Digital,,2023
+B.48,48,Bekalan,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat","Ministry of Women, Family and Community Development",,2023
+B.60,60,Bekalan,Kementerian Pertahanan,Ministry of Defence,,2023
+B.62,62,Bekalan,Kementerian Dalam Negeri,Ministry of Home Affairs,,2023
+B.63,63,Bekalan,Kementerian Pendidikan,Ministry of Education,,2023
+B.64,64,Bekalan,Kementerian Pendidikan Tinggi,Ministry of Higher Education,,2023
+P.06,6,Pembangunan,Jabatan Perdana Menteri,Prime Minister's Department,,2023
+P.07,7,Pembangunan,Jabatan Perkhidmatan Awam,Public Service Department,,2023
+P.10,10,Pembangunan,Perbendaharaan,Treasury,,2023
+P.13,13,Pembangunan,Kementerian Luar Negeri,Ministry of Foreign Affairs,,2023
+P.14,14,Pembangunan,Kementerian Perpaduan Negara,Ministry of National Unity,,2023
+P.15,15,Pembangunan,Kementerian Ekonomi,Ministry of Economy,,2023
+P.20,20,Pembangunan,Kementerian Perladangan Dan Komoditi,Ministry of Plantation and Commodities,,2023
+P.21,21,Pembangunan,Kementerian Pertanian Dan Keterjaminan Makanan,Ministry of Agriculture and Food Security,,2023
+P.22,22,Pembangunan,Kementerian Kemajuan Desa Dan Wilayah,Ministry of Rural and Regional Development,,2023
+P.23,23,Pembangunan,"Kementerian Sumber Asli, Alam Sekitar Dan Perubahan Iklim","Ministry of Natural Resources, Environment and Climate Change",,2023
+P.24,24,Pembangunan,"Kementerian Pelaburan, Perdagangan Dan Industri","Ministry of Investment, Trade and Industry",,2023
+P.25,25,Pembangunan,Kementerian Perdagangan Dalam Negeri Dan Kos Sara Hidup,Ministry of Domestic Trade and Cost of Living,,2023
+P.26,26,Pembangunan,Kementerian Pembangunan Usahawan Dan Koperasi,Ministry of Entrepreneur and Cooperatives Development,,2023
+P.27,27,Pembangunan,Kementerian Kerja Raya,Ministry of Works,,2023
+P.28,28,Pembangunan,Kementerian Pengangkutan,Ministry of Transport,,2023
+P.30,30,Pembangunan,"Kementerian Sains, Teknologi Dan Inovasi","Ministry of Science, Technology and Innovation",,2023
+P.31,31,Pembangunan,"Kementerian Pelancongan, Seni Dan Budaya","Ministry of Tourism, Arts and Culture",,2023
+P.32,32,Pembangunan,Kementerian Wilayah Persekutuan,Ministry of Federal Territories,Ministry abolished December 2022; row is a residual account with cumulative balances only.,2023
+P.33,33,Pembangunan,Kementerian Alam Sekitar Dan Air,Ministry of Environment and Water,Ministry (Alam Sekitar dan Air) abolished December 2022; row is a residual account with cumulative balances only.,2023
+P.42,42,Pembangunan,Kementerian Kesihatan,Ministry of Health,,2023
+P.43,43,Pembangunan,Kementerian Perumahan Dan Kerajaan Tempatan,Ministry of Housing and Local Government,,2023
+P.45,45,Pembangunan,Kementerian Belia Dan Sukan,Ministry of Youth and Sports,,2023
+P.46,46,Pembangunan,Kementerian Sumber Manusia,Ministry of Human Resources,,2023
+P.47,47,Pembangunan,Kementerian Komunikasi Dan Digital,Ministry of Communications and Digital,,2023
+P.48,48,Pembangunan,"Kementerian Pembangunan Wanita, Keluarga Dan Masyarakat","Ministry of Women, Family and Community Development",,2023
+P.60,60,Pembangunan,Kementerian Pertahanan,Ministry of Defence,,2023
+P.62,62,Pembangunan,Kementerian Dalam Negeri,Ministry of Home Affairs,,2023
+P.63,63,Pembangunan,Kementerian Pendidikan,Ministry of Education,,2023
+P.64,64,Pembangunan,Kementerian Pengajian Tinggi,Ministry of Higher Education,,2023
+P.70,70,Pembangunan,Simpanan Luar Jangka,Contingency Reserve,"Contingency reserve vote, not a ministry.",2023
+T.01,1,Tanggungan,Peruntukan Diraja Bagi S.P.B. Yang Di-Pertuan Agong,Royal Provision for HM the Yang di-Pertuan Agong,,2023
+T.02,2,Tanggungan,Elaun-elaun Diraja,Royal Allowances,,2023
+T.03,3,Tanggungan,"Ketua Hakim Negara, Hakim Besar dan Hakim","Chief Justice, Chief Judges and Judges",,2023
+T.04,4,Tanggungan,Ketua Audit Negara,Auditor General,,2023
+T.05,5,Tanggungan,Yang Di-Pertua Dewan Rakyat,Speaker of the House of Representatives,,2023
+T.06,6,Tanggungan,Yang Di-Pertua Dewan Negara,President of the Senate,,2023
+T.07,7,Tanggungan,Suruhanjaya Pilihan Raya,Election Commission,,2023
+T.08,8,Tanggungan,Suruhanjaya Perkhidmatan Kehakiman dan Perundangan,Judicial and Legal Service Commission,,2023
+T.09,9,Tanggungan,Suruhanjaya Perkhidmatan Awam,Public Service Commission,,2023
+T.10,10,Tanggungan,Suruhanjaya Perkhidmatan Pendidikan,Education Service Commission,,2023
+T.11,11,Tanggungan,Suruhanjaya Pasukan Polis,Police Force Commission,,2023
+T.12,12,Tanggungan,Perbendaharaan,Treasury,,2023
+T.13,13,Tanggungan,Perbelanjaan Kerana Hutang Negara,National Debt Charges,,2023
+T.14,14,Tanggungan,"Pencen, Elaun Bersara dan Ganjaran","Pensions, Retirement Allowances and Gratuities",,2023

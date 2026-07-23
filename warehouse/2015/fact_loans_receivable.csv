@@ -1,0 +1,229 @@
+section_bm,category_no,category_bm,peminjam_bm,row_type,year,pembangunan_rm,hasil_disatukan_rm,amanah_lain_rm,baki_belum_selesai_rm,source_file,pdf_page,printed_page,statement
+PINJAMAN,I,KERAJAAN NEGERI,Johor,detail,2015,349494109.95,1502698.88,84000000.0,434996808.83,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Johor,detail,2014,,,,452814350.1,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Kedah,detail,2015,2190800763.53,7255809.65,113333333.33,2311389906.51,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Kedah,detail,2014,,,,2616902315.51,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Kelantan,detail,2015,1309731075.72,80850.73,45000000.0,1354811926.45,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Kelantan,detail,2014,,,,1293560341.47,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Melaka,detail,2015,413217515.16,44105086.65,400947352.18,858269953.99,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Melaka,detail,2014,,,,867448016.77,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Negeri Sembilan,detail,2015,853494940.2,183059.93,81993300.0,935671300.13,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Negeri Sembilan,detail,2014,,,,912694439.65,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Pahang,detail,2015,2572401273.35,9369485.16,338185351.62,2919956110.13,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Pahang,detail,2014,,,,2728499663.54,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Perak,detail,2015,607080545.63,0.0,0.0,607080545.63,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Perak,detail,2014,,,,558400417.41,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Perlis,detail,2015,287206252.42,5917818.71,61301207.54,354425278.67,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Perlis,detail,2014,,,,355996070.45,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Pulau Pinang,detail,2015,69191008.96,6858.4,0.0,69197867.36,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Pulau Pinang,detail,2014,,,,61268809.29,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Sabah,detail,2015,2529544777.8,0.0,69315582.25,2598860360.05,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Sabah,detail,2014,,,,2411279636.74,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Sarawak,detail,2015,2543970652.04,290909.91,11162693.8,2555424255.75,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Sarawak,detail,2014,,,,2344507308.13,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Selangor,detail,2015,1013596029.92,685534.44,14077904.17,1028359468.53,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Selangor,detail,2014,,,,957194787.85,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Terengganu,detail,2015,887189706.01,17314404.67,0.0,904504110.68,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Terengganu,detail,2014,,,,909511734.37,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Jumlah Kerajaan Negeri,subtotal,2015,15626918650.69,86712517.13,1219316724.89,16932947892.71,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,I,KERAJAAN NEGERI,Jumlah Kerajaan Negeri,subtotal,2014,,,,16470077891.28,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Dewan Bandaraya Kuala Lumpur,detail,2015,286986578.24,24936610.96,0.0,311923189.2,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Dewan Bandaraya Kuala Lumpur,detail,2014,,,,318663133.9,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Majlis Perbandaran Pulau Pinang,detail,2015,15130668.8,4085203.07,0.0,19215871.87,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Majlis Perbandaran Pulau Pinang,detail,2014,,,,19215871.87,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Majlis Perbandaran Seberang Perai,detail,2015,90106876.31,23019338.86,0.0,113126215.17,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Majlis Perbandaran Seberang Perai,detail,2014,,,,113126215.17,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Jumlah Pihak Berkuasa Tempatan,subtotal,2015,392224123.35,52041152.89,0.0,444265276.24,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,II,PIHAK BERKUASA TEMPATAN,Jumlah Pihak Berkuasa Tempatan,subtotal,2014,,,,451005220.94,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Kelantan Selatan,detail,2015,10000000.0,0.0,0.0,10000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Kelantan Selatan,detail,2014,,,,10000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Tanah Sabah,detail,2015,1817560.13,0.0,0.0,1817560.13,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Tanah Sabah,detail,2014,,,,2670730.89,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Terengganu Tengah,detail,2015,27876219.26,0.0,0.0,27876219.26,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Terengganu Tengah,detail,2014,,,,32942659.94,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Wilayah Kedah,detail,2015,2215498.4,0.0,0.0,2215498.4,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Wilayah Kedah,detail,2014,,,,2500269.29,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Wilayah Pulau Pinang,detail,2015,6271650.5,0.0,0.0,6271650.5,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Kemajuan Wilayah Pulau Pinang,detail,2014,,,,6295341.21,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Lebuhraya Malaysia,detail,2015,771477449.89,0.0,0.0,771477449.89,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Lebuhraya Malaysia,detail,2014,,,,771477449.89,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Pelabuhan Kelang,detail,2015,2658611617.66,323185470.16,798811245.97,3780608333.79,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Pelabuhan Kelang,detail,2014,,,,3780608333.79,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Pelabuhan-pelabuhan Sabah Malaysia,detail,2015,86373909.52,15482393.02,0.0,101856302.54,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Pelabuhan-pelabuhan Sabah Malaysia,detail,2014,,,,124919903.8,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Perindustrian Kayu Malaysia,detail,2015,564000000.0,60671368.27,180000000.0,804671368.27,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Lembaga Perindustrian Kayu Malaysia,detail,2014,,,,687956471.01,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Majlis Amanah Rakyat,detail,2015,330000000.0,0.0,60000000.0,390000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Majlis Amanah Rakyat,detail,2014,,,,400000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Perbadanan Aset Keretapi,detail,2015,295425738.53,0.0,0.0,295425738.53,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Perbadanan Aset Keretapi,detail,2014,,,,831752403.73,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Perbadanan Kemajuan Ekonomi Negeri Perlis,detail,2015,5420400.0,1782.05,0.0,5422182.05,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Perbadanan Kemajuan Ekonomi Negeri Perlis,detail,2014,,,,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Perbadanan Pembangunan Pulau Pinang,detail,2015,0.0,0.0,160200000.0,160200000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Perbadanan Pembangunan Pulau Pinang,detail,2014,,,,167400000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Pihak Berkuasa Kemajuan Pekebun Kecil Perusahaan Getah,detail,2015,0.0,0.0,0.0,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Pihak Berkuasa Kemajuan Pekebun Kecil Perusahaan Getah,detail,2014,,,,2340604.69,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Jumlah Badan Berkanun,subtotal,2015,4759490043.89,399341013.5,1199011245.97,6357842303.36,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,III,BADAN BERKANUN,Jumlah Badan Berkanun,subtotal,2014,,,,6820864168.24,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Belia Nasional Berhad,detail,2015,6120210.0,812152.48,0.0,6932362.48,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Belia Nasional Berhad,detail,2014,,,,6932362.48,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Jayadiri (M) Berhad,detail,2015,0.0,0.0,50000000.0,50000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Jayadiri (M) Berhad,detail,2014,,,,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Pegawai-pegawai Melayu Malaysia Berhad,detail,2015,0.0,2280000.0,78200000.0,80480000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Pegawai-pegawai Melayu Malaysia Berhad,detail,2014,,,,80480000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Pembangunan Belia Negara Berhad,detail,2015,0.0,0.0,6060761.3,6060761.3,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Pembangunan Belia Negara Berhad,detail,2014,,,,6060761.3,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Polis Diraja Malaysia Berhad,detail,2015,0.0,2493442.76,62336068.85,64829511.61,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Koperasi Polis Diraja Malaysia Berhad,detail,2014,,,,64829511.61,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Jumlah Koperasi,subtotal,2015,6120210.0,5585595.24,196596830.15,208302635.39,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,IV,KOPERASI,Jumlah Koperasi,subtotal,2014,,,,158302635.39,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Agro Qas Sdn. Bhd.,detail,2015,0.0,449715.41,7371962.75,7821678.16,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Agro Qas Sdn. Bhd.,detail,2014,,,,7821678.16,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Airport Limo (M) Sdn. Bhd.,detail,2015,0.0,0.0,45750196.2,45750196.2,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Airport Limo (M) Sdn. Bhd.,detail,2014,,,,46950196.2,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Asia E-Learning Sdn. Bhd.,detail,2015,0.0,0.0,77000000.0,77000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Asia E-Learning Sdn. Bhd.,detail,2014,,,,80000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,AUO SunPower Sdn. Bhd.,detail,2015,250000000.0,28255616.43,0.0,278255616.43,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,AUO SunPower Sdn. Bhd.,detail,2014,,,,833575068.49,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,A-Winn Global Market Services Sdn. Bhd.,detail,2015,0.0,0.0,4960000.0,4960000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,A-Winn Global Market Services Sdn. Bhd.,detail,2014,,,,4960000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Bank Pembangunan Malaysia Berhad,detail,2015,127259123.0,43819178.09,400000000.0,571078301.09,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Bank Pembangunan Malaysia Berhad,detail,2014,,,,588690932.92,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Bank Pertanian Malaysia,detail,2015,754925982.09,0.0,1239182396.62,1994108378.71,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Bank Pertanian Malaysia,detail,2014,,,,1895108378.71,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Bank Perusahaan Kecil & Sederhana Malaysia Berhad,detail,2015,703959154.0,0.0,360000000.0,1063959154.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Bank Perusahaan Kecil & Sederhana Malaysia Berhad,detail,2014,,,,997133118.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,275,261,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Credit Guarantee Corporation Malaysia Berhad,detail,2015,109000000.0,0.0,0.0,109000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Credit Guarantee Corporation Malaysia Berhad,detail,2014,,,,113000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Cyberview Sdn. Bhd.,detail,2015,439000000.0,112337500.0,60500000.0,611837500.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Cyberview Sdn. Bhd.,detail,2014,,,,617637500.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,EKVE Sdn. Bhd.,detail,2015,43315106.67,0.0,0.0,43315106.67,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,EKVE Sdn. Bhd.,detail,2014,,,,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Equal Concept Sdn. Bhd.,detail,2015,0.0,0.0,83440000.0,83440000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Equal Concept Sdn. Bhd.,detail,2014,,,,83440000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,FELCRA Berhad,detail,2015,1719152522.66,0.0,0.0,1719152522.66,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,FELCRA Berhad,detail,2014,,,,1560377272.33,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Indah Water Konsortium Sdn. Bhd.,detail,2015,715000000.0,1173277163.47,210000000.0,2098277163.47,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Indah Water Konsortium Sdn. Bhd.,detail,2014,,,,2098266572.32,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Iskandar Investment Berhad,detail,2015,0.0,33859097.3,490994299.25,524853396.55,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Iskandar Investment Berhad,detail,2014,,,,554423396.55,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,JKP Sdn. Bhd.,detail,2015,0.0,0.0,18596214.27,18596214.27,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,JKP Sdn. Bhd.,detail,2014,,,,18957652.97,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Kedah Aquaculture Sdn. Bhd.,detail,2015,0.0,0.0,0.0,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Kedah Aquaculture Sdn. Bhd.,detail,2014,,,,71997206.6,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Keretapi Tanah Melayu Berhad,detail,2015,855504289.0,0.0,25000000.0,880504289.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Keretapi Tanah Melayu Berhad,detail,2014,,,,880504289.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Kuantan Port Consortium Sdn. Bhd.,detail,2015,111000000.0,0.0,0.0,111000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Kuantan Port Consortium Sdn. Bhd.,detail,2014,,,,118000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,KUB - BERJAYA Enviro Sdn. Bhd.,detail,2015,0.0,0.0,32871197.69,32871197.69,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,KUB - BERJAYA Enviro Sdn. Bhd.,detail,2014,,,,34772155.73,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Kumpulan Modal Perdana Sdn. Bhd.,detail,2015,227500000.0,4080000.0,0.0,231580000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Kumpulan Modal Perdana Sdn. Bhd.,detail,2014,,,,214500000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Lebuhraya Shapadu Sdn. Bhd.,detail,2015,0.0,32743909.3,0.0,32743909.3,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Lebuhraya Shapadu Sdn. Bhd.,detail,2014,,,,32743909.3,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,M.Y. Ikan Sdn. Bhd.,detail,2015,0.0,0.0,10000000.0,10000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,M.Y. Ikan Sdn. Bhd.,detail,2014,,,,10000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Airlines System Berhad,detail,2015,0.0,0.0,0.0,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Airlines System Berhad,detail,2014,,,,2598301.96,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Building Society Berhad,detail,2015,52623311.76,9005159.88,0.0,61628471.64,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Building Society Berhad,detail,2014,,,,62736956.44,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Debt Ventures Berhad,detail,2015,40000000.0,0.0,0.0,40000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Debt Ventures Berhad,detail,2014,,,,290000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Venture Capital Management Berhad,detail,2015,464310622.5,0.0,0.0,464310622.5,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysia Venture Capital Management Berhad,detail,2014,,,,481744023.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysian Industrial Development Finance Berhad,detail,2015,324135703.0,0.0,0.0,324135703.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysian Industrial Development Finance Berhad,detail,2014,,,,331120201.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysian Technology Development Corporation Sdn. Bhd.,detail,2015,391940000.0,0.0,169999999.99999997,561940000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Malaysian Technology Development Corporation Sdn. Bhd.,detail,2014,,,,690900000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,MIMOS Berhad,detail,2015,2850000.0,0.0,0.0,2850000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,MIMOS Berhad,detail,2014,,,,14850000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,MSU Holdings Sdn. Bhd.,detail,2015,0.0,0.0,250000000.0,250000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,MSU Holdings Sdn. Bhd.,detail,2014,,,,250000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Multimedia Development Corporation Sdn. Bhd.,detail,2015,0.0,0.0,14895038.0,14895038.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Multimedia Development Corporation Sdn. Bhd.,detail,2014,,,,14895038.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,National Feedlot Corporation Sdn. Bhd,detail,2015,0.0,0.0,224765230.4,224765230.4,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,National Feedlot Corporation Sdn. Bhd,detail,2014,,,,224765230.4,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Pengurusan Aset Air Berhad,detail,2015,4742855712.31,0.0,367290000.0,5110145712.31,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Pengurusan Aset Air Berhad,detail,2014,,,,5102614325.44,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Perbadanan Usahawan Nasional Berhad,detail,2015,0.0,0.0,571840361.83,571840361.83,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Perbadanan Usahawan Nasional Berhad,detail,2014,,,,682400000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Permodalan Nasional Berhad,detail,2015,0.0,0.0,73396975.0,73396975.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Permodalan Nasional Berhad,detail,2014,,,,88076475.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Perwaja Terengganu Sdn. Bhd.,detail,2015,0.0,0.0,2979481336.5,2979481336.5,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Perwaja Terengganu Sdn. Bhd.,detail,2014,,,,3179481336.5,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Perwaja Steel Sdn. Bhd.,detail,2015,117131169.0,0.0,0.0,117131169.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Perwaja Steel Sdn. Bhd.,detail,2014,,,,117131169.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Piramid Pertama Sdn. Bhd.,detail,2015,460000000.0,0.0,0.0,460000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Piramid Pertama Sdn. Bhd.,detail,2014,,,,460000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,PKPS Agro Industries Sdn. Bhd.,detail,2015,0.0,3135000.0,40100000.0,43235000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,PKPS Agro Industries Sdn. Bhd.,detail,2014,,,,43235000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Plenitude Mentari Sdn. Bhd,detail,2015,0.0,0.0,950000000.0,950000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Plenitude Mentari Sdn. Bhd,detail,2014,,,,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Premium Agro Products Sdn. Bhd.,detail,2015,0.0,0.0,50200000.0,50200000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Premium Agro Products Sdn. Bhd.,detail,2014,,,,50200000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Projek Lintasan Kota Sdn. Bhd.,detail,2015,134203484.06,29389792.88,0.0,163593276.94,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Projek Lintasan Kota Sdn. Bhd.,detail,2014,,,,175535173.66,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Puncak Niaga (M) Sdn. Bhd.,detail,2015,16512508.4,0.0,0.0,16512508.4,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Puncak Niaga (M) Sdn. Bhd.,detail,2014,,,,24409829.36,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Q - Cells Malaysia Sdn. Bhd.,detail,2015,841000000.0,0.0,0.0,841000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Q - Cells Malaysia Sdn. Bhd.,detail,2014,,,,844000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Sabah Electricity Sdn. Bhd.,detail,2015,1486841539.45,322786201.23,5000000.0,1814627740.68,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Sabah Electricity Sdn. Bhd.,detail,2014,,,,1691222307.09,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Sistem Penyuraian Trafik KL BARAT Sdn. Bhd.,detail,2015,0.0,0.0,15137165.0,15137165.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Sistem Penyuraian Trafik KL BARAT Sdn. Bhd.,detail,2014,,,,15337165.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,SME Ordnance Sdn. Bhd.,detail,2015,9674560.0,0.0,0.0,9674560.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,SME Ordnance Sdn. Bhd.,detail,2014,,,,9674560.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,SRC International Sdn. Bhd.,detail,2015,0.0,0.0,91005498.57,91005498.57,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,SRC International Sdn. Bhd.,detail,2014,,,,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Bekalan Air Selangor Sdn. Bhd.,detail,2015,577500000.0,8357287.4,0.0,585857287.4,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Bekalan Air Selangor Sdn. Bhd.,detail,2014,,,,581641612.06,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Jengka Sdn. Bhd.,detail,2015,5316280.0,8601892.59,0.0,13918172.59,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Jengka Sdn. Bhd.,detail,2014,,,,14343980.62,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Perumahan Negara Berhad,detail,2015,223400000.0,0.0,0.0,223400000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Perumahan Negara Berhad,detail,2014,,,,223400000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Prasarana Negara Berhad,detail,2015,0.0,0.0,0.0,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Syarikat Prasarana Negara Berhad,detail,2014,,,,474815881.73,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Tanjung Langsat Port Sdn Bhd,detail,2015,110800000.0,10416306.85,0.0,121216306.85,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Tanjung Langsat Port Sdn Bhd,detail,2014,,,,116784306.85,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,TEKUN Nasional,detail,2015,1705999962.0,0.0,0.0,1705999962.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,TEKUN Nasional,detail,2014,,,,1455999962.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Telekom Malaysia Berhad,detail,2015,3068433.92,0.0,0.0,3068433.92,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Telekom Malaysia Berhad,detail,2014,,,,3145263.56,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,UDA Holdings Berhad,detail,2015,220127103.78,15913384.4,0.0,236040488.18,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,UDA Holdings Berhad,detail,2014,,,,261508789.36,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Warisan Jengka Holdings (M) Sdn. Bhd.,detail,2015,0.0,0.0,4602477.13,4602477.13,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Warisan Jengka Holdings (M) Sdn. Bhd.,detail,2014,,,,4850000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,West Coast Expressway Sdn. Bhd.,detail,2015,250000000.0,0.0,0.0,250000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,West Coast Expressway Sdn. Bhd.,detail,2014,,,,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,White Heron Dairy Farm Sdn. Bhd.,detail,2015,0.0,0.0,10400000.0,10400000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,White Heron Dairy Farm Sdn. Bhd.,detail,2014,,,,10400000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Jumlah Syarikat,subtotal,2015,18235906567.6,1836427205.23,8883780349.21,28956114122.04,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,V,SYARIKAT,Jumlah Syarikat,subtotal,2014,,,,28856676215.31,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,276,262,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Kenderaan,detail,2015,0.0,0.0,-984835.07,-984835.07,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Kenderaan,detail,2014,,,,-1405512.56,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Komputer,detail,2015,0.0,0.0,60779569.43,60779569.43,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Komputer,detail,2014,,,,60100986.64,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Perumahan,detail,2015,0.0,0.0,50924736484.89,50924736484.89,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Perumahan,detail,2014,,,,43897886130.67,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Perumahan kepada Golongan Berpendapatan Rendah,detail,2015,0.0,0.0,118185488.71,118185488.71,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Pinjaman Perumahan kepada Golongan Berpendapatan Rendah,detail,2014,,,,104848152.98,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Jumlah Perseorangan,subtotal,2015,0.0,0.0,51102716707.96,51102716707.96,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VI,PERSEORANGAN,Jumlah Perseorangan,subtotal,2014,,,,44061429757.73,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Amanah Ikhtiar Malaysia,detail,2015,194101307.5,0.0,586500000.0,780601307.5,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Amanah Ikhtiar Malaysia,detail,2014,,,,782601307.5,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,"Bahagian Pinjaman Perumahan, Perbendaharaan",detail,2015,0.0,0.0,0.0,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,"Bahagian Pinjaman Perumahan, Perbendaharaan",detail,2014,,,,473417858.04,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Kelab Golf Perkhidmatan Awam Malaysia,detail,2015,3736272.2,0.0,0.0,3736272.2,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Kelab Golf Perkhidmatan Awam Malaysia,detail,2014,,,,4316954.14,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Amanah Saham Anak Langkawi,detail,2015,0.0,0.0,6800000.0,6800000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Amanah Saham Anak Langkawi,detail,2014,,,,6800000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Pembangunan Ekonomi Islam Malaysia,detail,2015,68131590.0,0.0,812000000.0,880131590.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Pembangunan Ekonomi Islam Malaysia,detail,2014,,,,920531590.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Usahawan Wanita Cina Malaysia,detail,2015,0.0,0.0,30000000.0,30000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Usahawan Wanita Cina Malaysia,detail,2014,,,,30000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Penjaja dan Peniaga Kecil 1Malaysia,detail,2015,0.0,0.0,30000000.0,30000000.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Yayasan Penjaja dan Peniaga Kecil 1Malaysia,detail,2014,,,,0.0,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Jumlah Pelbagai,subtotal,2015,265969169.7,0.0,1465300000.0,1731269169.7,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+PINJAMAN,VII,PELBAGAI,Jumlah Pelbagai,subtotal,2014,,,,2217667709.68,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+,,,JUMLAH PINJAMAN BOLEH DITUNTUT,total,2015,39286628765.23,2380107483.99,64066721858.18,105733458107.4,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut
+,,,JUMLAH PINJAMAN BOLEH DITUNTUT,total,2014,,,,99036023598.57,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,277,263,Penyata Akaun Memorandum Pinjaman Boleh Dituntut

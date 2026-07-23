@@ -1,0 +1,11 @@
+status,check,extracted_value,printed_value,difference
+PASS,LOANS grand baki_belum_selesai (register),82319087677.88,82319087677.88,0.0
+PASS,"LOANS grand==Nota8 Pinjaman Boleh Dituntut 82,319,087,678",82319087677.88,82319087678.0,-0.12
+PASS,LOANS detail row count (123),123,123,0.0
+PASS,"INV grand nilai_buku==Nota8 Pelaburan 27,723,148,058",27723148058.29,27723148058.0,0.29
+PASS,GUAR DN+LN==Jumlah [Perbadanan Tabung Pendid],17000000000.0,17000000000.0,0.0
+PASS,GUAR grand DN+LN==Jumlah,96906893914.51,96906893914.51,0.0
+PASS,MEMO Pinjaman Boleh Dituntut stmt==Nota8 register total,82319087678.0,82319087678.0,0.0
+PASS,MEMO Pelaburan stmt==Nota8 register total,27723148058.0,27723148058.0,0.0
+PASS,"DEBT Jumlah Hutang Awam==Penyata Memo Hutang Awam 407,101,235,939",407101235939.0,407101235939.0,0.0
+PASS,"INVSUM Nota4 total==FP Pelaburan 20,343,238,913",20343238913.0,20343238913.0,0.0

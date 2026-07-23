@@ -1,0 +1,16 @@
+nota,line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+4,Pembelian instrumen kewangan di Penyata Penerimaan dan Pembayaran Wang Tunai,2015,1864888405.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,51,Nota 4 Pelaburan
+4,Urus niaga bukan tunai pelarasan pertukaran pinjaman kepada pegangan ekuiti (tidak termasuk dalam pembelian instrumen kewangan),2015,474815882.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,65,51,Nota 4 Pelaburan
+7,Akaun Penyelesaian Utama Perbendaharaan: debit tidak melibatkan terimaan atau bayaran sebenar,2015,365031631878.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,56,Nota 7 Akaun Amanah Disatukan
+7,Akaun Penyelesaian Utama Perbendaharaan: kredit tidak melibatkan terimaan atau bayaran sebenar,2015,365118437677.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,56,Nota 7 Akaun Amanah Disatukan
+7,Pelbagai Terimaan Amanah di Penyata Penerimaan dan Pembayaran Wang Tunai (baki bersih semasa Akaun Amanah),2015,478238962.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,56,Nota 7 Akaun Amanah Disatukan
+7(a)(i),Terimaan Balik Pinjaman Kumpulan Wang Pembangunan di Penyata Penerimaan dan Pembayaran Wang Tunai,2015,779787608.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,56,Nota 7(a)(i) Kumpulan Wang Pembangunan
+7(a)(i),Pelarasan pertukaran pinjaman kepada pegangan ekuiti (komponen perbezaan Terimaan Balik Pinjaman),2015,425452238.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,56,Nota 7(a)(i) Kumpulan Wang Pembangunan
+7(a)(i),Pelarasan pembayaran balik pinjaman (komponen perbezaan Terimaan Balik Pinjaman),2015,27298070.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,70,56,Nota 7(a)(i) Kumpulan Wang Pembangunan
+8(b),Nilai buku Pelaburan 2014 sebelum penyata semula,2014,29883017259.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 8 Memorandum Aset
+8(b),Pelarasan pertambahan nilai buku bagi pegangan saham dalam tiga (3) buah syarikat (penyata semula 2014),2014,324999999.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 8 Memorandum Aset
+9(a),Pegangan Bukan Pemastautin bagi Pinjaman Dalam Negeri dan Sukuk Perumahan Kerajaan,2015,177114249000.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,75,61,Nota 9 Memorandum Liabiliti
+10,Pinjaman Badan Berkanun dan syarikat milik kerajaan yang dijamin oleh Kerajaan Persekutuan [Akta 96],2015,177728501888.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,62,Nota 10 Liabiliti Luar Jangka
+10,"Simpanan pendeposit di Bank Simpanan Nasional, Kumpulan Wang Simpanan Guru-Guru, Kumpulan Wang Simpanan Pekerja dan Lembaga Tabung Haji",2015,742608289422.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,62,Nota 10 Liabiliti Luar Jangka
+11,Akaun Belum Terima (maklumat tambahan berdasarkan rekod Kementerian/Jabatan),2015,22630780943.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,62,Nota 11 Akaun Belum Terima
+12,Wang pendahuluan kepada kontraktor yang belum dibayar balik,2015,939006676.0,narrative,False,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,76,62,Nota 12 Wang Pendahuluan Kepada Kontraktor

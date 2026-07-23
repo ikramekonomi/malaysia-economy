@@ -1,0 +1,49 @@
+group_bm,sub_bm,line_item_bm,row_type,year,amount_rm,source_file,pdf_page,printed_page,statement
+PINJAMAN,Dalam Negeri,Baki pada 1 Januari,detail,2016,28385609134.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 1 Januari,detail,2015,39592120099.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2016,93876452672.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2015,107804279579.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2016,-56193846424.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2015,-68488110445.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2016,66068215382.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2015,78908289233.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Kumpulan Wang Pinjaman Perumahan,Terimaan,detail,2016,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Kumpulan Wang Pinjaman Perumahan,Terimaan,detail,2015,8000000000.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Kumpulan Wang Pinjaman Perumahan,Bayaran,detail,2016,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Kumpulan Wang Pinjaman Perumahan,Bayaran,detail,2015,-4300000000.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Kumpulan Wang Pinjaman Perumahan,Baki pada 31 Disember,detail,2016,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Kumpulan Wang Pinjaman Perumahan,Baki pada 31 Disember,detail,2015,3700000000.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2016,5837065920.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2015,5303204400.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2016,-4670400000.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2015,-4420000000.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2016,1166665920.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2015,883204400.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,,PINJAMAN,group_total,2016,67234881302.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,,PINJAMAN,group_total,2015,83491493633.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 1 Januari,detail,2016,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 1 Januari,detail,2015,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2016,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2015,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2016,-156925423.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2015,-127773160.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2016,-156925423.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2015,-127773160.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 1 Januari,detail,2016,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 1 Januari,detail,2015,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2016,145355562.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2015,256238110.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2016,-320293408.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2015,-284889446.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2016,-174937846.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2015,-28651336.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2016,-331863269.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2015,-156424496.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2016,66903018033.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2015,83335069137.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2016,-46579258785.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2015,-49249460003.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pinjaman Perumahan,transfer,2016,0.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pinjaman Perumahan,transfer,2015,-5700000000.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2016,20323759248.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2015,28385609134.0,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,66,55,Nota 6 Penyata Akaun Pinjaman Disatukan

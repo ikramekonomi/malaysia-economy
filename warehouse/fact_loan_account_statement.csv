@@ -1,0 +1,47 @@
+group_bm,sub_bm,line_item_bm,row_type,year,amount_rm,source_file,pdf_page,printed_page,statement
+PINJAMAN,,PINJAMAN,group_total,2024,80288510347.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,,PINJAMAN,group_total,2023,101581359346.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 1 Januari,detail,2024,148645734.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 1 Januari,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2024,202248348425.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Terimaan,detail,2023,241509299435.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2024,-122108483812.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Bayaran,detail,2023,-139927940089.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2024,80288510347.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Dalam Negeri,Baki pada 31 Disember,detail,2023,101581359346.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 1 Januari,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 1 Januari,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Terimaan,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Bayaran,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINJAMAN,Luar Negeri,Baki pada 31 Disember,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2024,-226871665.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,,BANTUAN LUAR NEGERI,group_total,2023,-248359485.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 1 Januari,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 1 Januari,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Terimaan,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2024,-27359178.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Bayaran,detail,2023,-27825438.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2024,-27359178.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Multilateral,Baki pada 31 Disember,detail,2023,-27825438.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 1 Januari,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 1 Januari,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Terimaan,detail,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2024,-199512487.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Bayaran,detail,2023,-220534047.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2024,-199512487.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BANTUAN LUAR NEGERI,Pinjaman Bilateral,Baki pada 31 Disember,detail,2023,-220534047.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2024,80061638682.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+JUMLAH,,Jumlah Pinjaman dan Bantuan Luar Negeri pada 31 Disember,total,2023,101332999861.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PELARASAN,,Akaun Premium/Diskaun bagi Terbitan Pelaburan Kerajaan dan Sekuriti Kerajaan Malaysia,adjustment,2024,-3067273618.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PELARASAN,,Akaun Premium/Diskaun bagi Terbitan Pelaburan Kerajaan dan Sekuriti Kerajaan Malaysia,adjustment,2023,-8775782404.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2024,-76994365064.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang Pembangunan,transfer,2023,-92408571723.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang COVID-19,transfer,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+PINDAHAN KE,,Kumpulan Wang COVID-19,transfer,2023,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2024,0.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan
+BAKI,,BAKI AKAUN PINJAMAN DISATUKAN PADA 31 DISEMBER,closing,2023,148645734.0,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,86,72,Nota 6 Penyata Akaun Pinjaman Disatukan

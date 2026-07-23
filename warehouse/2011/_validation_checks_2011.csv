@@ -1,0 +1,67 @@
+status,check,extracted_value,printed_value,difference
+PASS,finpos: Wang Tunai+Pelaburan=Jumlah Wang Awam,47310238739.00,47310238739.00,0.00
+PASS,finpos: Hasil+Pinjaman+Amanah Disatukan=Jumlah KWD,47310238739.00,47310238739.00,0.00
+PASS,finpos: Wang Awam=KWD (balance),47310238739.00,47310238739.00,0.00
+PASS,cash: Jumlah Hasil,185418919743.00,185418919743.00,0.00
+PASS,cash: Jumlah Terimaan,303121978425.00,303121978425.00,0.00
+PASS,cash: Jumlah Bayaran,300005496842.00,300005496842.00,0.00
+PASS,cash: Tambahan tunai = Terimaan-Bayaran,3116481583.00,3116481583.00,0.00
+PASS,cash: 31 Dis = 1 Jan + Tambahan,24466775527.00,24466775527.00,0.00
+PASS,cash: 31 Dis = finpos Wang Tunai,24466775527.00,24466775527.00,0.00
+PASS,prestasi: Lebihan Hasil = Hasil-Belanja Mengurus,2825131405.00,2825131405.00,0.00
+PASS,prestasi: Kurangan Keseluruhan = Lebihan-Belanja Pembangunan,-43591231022.00,-43591231022.00,0.00
+PASS,prestasi: Jumlah Pembiayaan = 3 komponen,43591231022.00,43591231022.00,0.00
+PASS,prestasi: Pembiayaan = -Kurangan,43591231022.00,43591231022.00,0.00
+PASS,revenue HASIL CUKAI items=Jumlah [anggaran_asal_rm],115597675000.00,115597675000.00,0.00
+PASS,revenue HASIL BUKAN CUKAI items=Jumlah [anggaran_asal_rm],49337659000.00,49337659000.00,0.00
+PASS,revenue TERIMAAN BUKAN HASIL items=Jumlah [anggaran_asal_rm],555766000.00,555766000.00,0.00
+PASS,revenue HASIL WILAYAH PERSEKUTUAN items=Jumlah [anggaran_asal_rm],431032000.00,431032000.00,0.00
+PASS,revenue sum(Jumlah L1)=JUMLAH HASIL [anggaran_asal_rm],165922132000.00,165922132000.00,0.00
+PASS,revenue HASIL CUKAI items=Jumlah [anggaran_disemak_rm],129182224000.00,129182224000.00,0.00
+PASS,revenue HASIL BUKAN CUKAI items=Jumlah [anggaran_disemak_rm],53141305000.00,53141305000.00,0.00
+PASS,revenue TERIMAAN BUKAN HASIL items=Jumlah [anggaran_disemak_rm],548749000.00,548749000.00,0.00
+PASS,revenue HASIL WILAYAH PERSEKUTUAN items=Jumlah [anggaran_disemak_rm],502331000.00,502331000.00,0.00
+PASS,revenue sum(Jumlah L1)=JUMLAH HASIL [anggaran_disemak_rm],183374609000.00,183374609000.00,0.00
+PASS,revenue HASIL CUKAI items=Jumlah [sebenar_rm],134884834173.00,134884834173.00,0.00
+PASS,revenue HASIL BUKAN CUKAI items=Jumlah [sebenar_rm],49423045556.00,49423045556.00,0.00
+PASS,revenue TERIMAAN BUKAN HASIL items=Jumlah [sebenar_rm],544133845.00,544133845.00,0.00
+PASS,revenue HASIL WILAYAH PERSEKUTUAN items=Jumlah [sebenar_rm],566906169.00,566906169.00,0.00
+PASS,revenue sum(Jumlah L1)=JUMLAH HASIL [sebenar_rm],185418919743.00,185418919743.00,0.00
+PASS,revenue: JUMLAH HASIL sebenar = Penyata Prestasi Hasil,185418919743.00,185418919743.00,0.00
+PASS,opex: T count=14,14.00,14.00,0.00
+PASS,opex: B count=36,36.00,36.00,0.00
+PASS,opex: total maksud=50,50.00,50.00,0.00
+PASS,opex: Jumlah Tanggungan sebenar,33040593756.00,33040593756.00,0.00
+PASS,opex: Jumlah Bekalan sebenar,152378325987.00,152378325987.00,0.00
+PASS,opex: grand sebenar (selepas pindahan),185418919743.00,185418919743.00,0.00
+PASS,opex: grand anggaran asal,162805323000.00,162805323000.00,0.00
+PASS,opex: grand anggaran dipinda,177979824890.00,177979824890.00,0.00
+PASS,"opex_detail: grand JUMLAH sebenar = 185,418,919,743 (sen)",185418919742.91,185418919742.91,0.00
+DISCREPANCY,"Nota5b vs Lampiran1 B.47 sebenar (source RM-rounding, kept)",1653822937.99,1653822939.00,-1.01
+PASS,Nota5b vs Lampiran1 per-maksud sebenar exact matches,49.00,49.00,0.00
+PASS,devex: per-project langsung+pinjaman=jumlah (violations),0.00,0.00,0.00
+PASS,devex: RMKe-10 yr1 terkumpul=sebenar_jumlah (violations),0.00,0.00,0.00
+PASS,devex: grand sebenar_jumlah = Prestasi Belanja Pembangunan,46416362426.91,46416362427.00,-0.09
+PASS,devex: grand sebenar_langsung (=cash Langsung),44917440270.51,44917440271.00,-0.49
+PASS,devex: grand sebenar_pinjaman (=cash Pinjaman),1498922156.40,1498922156.00,0.40
+PASS,trust rollfwd Kumpulan Wang Pembangunan,-55235001113.00,-55235001113.00,0.00
+PASS,trust rollfwd Kumpulan Wang Pinjaman Per,1908324534.00,1908324534.00,0.00
+PASS,trust rollfwd Pelbagai Kumpulan Wang Ama,34554927065.00,34554927065.00,0.00
+PASS,trust rollfwd Jumlah Kumpulan Wang Amana,-18771749514.00,-18771749514.00,0.00
+PASS,trust rollfwd Kumpulan Wang Amanah Khas,617929977.00,617929977.00,0.00
+PASS,trust rollfwd Kumpulan Wang Amanah Am,5701912589.00,5701912589.00,0.00
+PASS,trust rollfwd Jumlah Kumpulan Wang Amana,6319842566.00,6319842566.00,0.00
+PASS,trust rollfwd Deposit Am,8690055757.00,8690055757.00,0.00
+PASS,trust rollfwd Deposit Pelarasan,299483231.00,299483231.00,0.00
+PASS,trust rollfwd Jumlah Akaun Deposit,8989538988.00,8989538988.00,0.00
+PASS,trust rollfwd JUMLAH AKAUN AMANAH DISATU,-3462367960.00,-3462367960.00,0.00
+PASS,trust: grand baki 31 Dis = finpos Akaun Amanah,-3462367960.00,-3462367960.00,0.00
+PASS,loan: Baki Akaun Pinjaman Disatukan = finpos,38909479613.00,38909479613.00,0.00
+PASS,debt: JUMLAH HUTANG AWAM = memorandum Hutang Awam,456127663265.00,456127663265.00,0.00
+PASS,debt: Jumlah Pinjaman + Jumlah Bantuan LN = JUMLAH HUTANG AWAM,456127663265.00,456127663265.00,0.00
+PASS,timeseries 2011 Wang Tunai (RM juta),24467.00,24467.00,0.00
+PASS,timeseries 2011 Pelaburan (RM juta),22843.00,22843.00,0.00
+PASS,timeseries 2011 Jumlah Wang Awam (RM juta),47310.00,47310.00,0.00
+PASS,timeseries 2011 Akaun Hasil Disatukan (RM juta),11863.00,11863.00,0.00
+PASS,timeseries 2011 Akaun Pinjaman Disatukan (RM juta),38909.00,38909.00,0.00
+PASS,timeseries 2011 Akaun Amanah Disatukan (RM juta),-3462.00,-3462.00,0.00

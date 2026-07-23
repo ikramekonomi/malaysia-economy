@@ -1,0 +1,9 @@
+line_item_bm,year,amount_rm,row_type,has_footnote,source_file,pdf_page,printed_page,statement
+WANG TUNAI,2017,18064128458.0,total,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
+WANG TUNAI,2016,16063461692.0,total,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2017,16663516979.0,detail,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
+Wang Tunai Dalam Bank,2016,14879566399.0,detail,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2017,1397584959.0,detail,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
+Wang Tunai Dalam Perjalanan,2016,1180511453.0,detail,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2017,3026520.0,detail,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
+Wang Tunai Dalam Tangan,2016,3383840.0,detail,False,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,60,49,Nota 3 Wang Tunai
