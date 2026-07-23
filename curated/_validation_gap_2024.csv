@@ -1,0 +1,7 @@
+check,status,printed_value,extracted_value,difference
+opex: curated actual sum = Nota 5(b) total (53 maksud),PASS,324617649248.0,324617649248.0,0.0
+opex: curated budget(original) sum = Nota 5(b) total,PASS,303800000000.0,303800000000.0,0.0
+opex: maksud count = 53,PASS,53.0,53.0,0.0
+devex: curated actual sum = Lampiran 2 grand total,PASS,84011595463.78,84011595463.77998,-1.52587890625e-05
+devex: curated budget sum = Lampiran 2 grand total,PASS,85152335350.0,85152335350.0,0.0
+identity: variance_rm = actual - budget (all rows),PASS,0.0,0.0,0.0

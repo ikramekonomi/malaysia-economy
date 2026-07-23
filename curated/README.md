@@ -13,5 +13,16 @@ Planned contents (build as sources land):
 - **Gap views:** budgeted vs actual, estimate vs collected, audited vs headline-reported,
   planned vs delivered — see `docs/SOURCES.md` for the pairings.
 
-Nothing here yet — PKKP is the only source so far. First curated task lands with source #2
-(the federal budget estimates), enabling the first budget-vs-actual gap view.
+## Here now
+
+- **`fact_budget_vs_actual.csv`** — the first **budget-vs-actual gap view** (pilot **FY2024**),
+  per ministry vote (`maksud`), split operating vs development, with variance and %
+  utilisation. Built by `pipeline/build_gap_views.py`; reconciled to the sen
+  (`_validation_gap_2024.csv`, 6/6 PASS) and independently verified. **Full schema, the
+  important "what budget means" caveat, and the FY2024 findings are in
+  [`GAP_VIEWS.md`](GAP_VIEWS.md) — read it before using the data.**
+
+  Interim note: the independent *Anggaran Perbelanjaan* budget book (source #2) is not yet
+  ingested (not machine-readable; its host is blocked by the current egress policy), so this
+  pilot's "budget" is PKKP's own recorded appropriation. It slots an independent budget — and
+  an Anggaran-vs-PKKP cross-check — in as soon as source #2 lands.
