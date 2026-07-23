@@ -1,0 +1,7 @@
+# Query + build the warehouse
+duckdb>=0.10
+# Extraction (only needed to re-run pipelines / add years)
+pdfplumber>=0.11
+# System tools also required for extraction (install via apt, not pip):
+#   poppler-utils   (pdftotext, pdftoppm)
+#   tesseract-ocr   (OCR for scanned volumes, e.g. FY2015)
