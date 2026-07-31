@@ -59,14 +59,35 @@ bil 80; ministry groups dropped on continuation pages) are fixed and re-validate
 Source inconsistency (kept as printed): FY2023 prose says 129+10+3 agencies, its own
 register prints 130+9+3 — `data/_source_anomalies_agensi.csv`.
 
+### LKAN audit inventory + findings register (`data/fact_lkan_audits.csv`, `data/fact_lkan_findings.csv`)
+
+The five Aktiviti-bearing volumes (LKAN 2/2024 ×2, 2/2025, 3/2025, 1/2026 vol 2):
+`fact_lkan_audits.csv` — 33 audits (ministry, entity, topic, chapter architecture,
+pdf range, each cross-checked against its chapter-head pages);
+`fact_lkan_findings.csv` — 425 finding units with per-unit `section_path`
+(`5.x`/`5.x.y` heading numbers, or the paragraph range a margin sub-topic label
+spans), verbatim heading/label, `pdf_page`, ordered `RM…` amount tokens,
+`Maklum balas` responses as `entity|dates`, and `Pendapat Audit` box text.
+Pipeline `pipeline/extract_lkan_findings.py` (three chapter architectures —
+numbered skeleton, CMD.9-style margin-label, register; structural map with
+text-layer hazards in `pipeline/STRUCTURE_NOTES.md`), validation
+`pipeline/validate_lkan_findings.py`: **44/44 PASS**
+(`data/_validation_lkan_findings.csv`) — per-volume response-marker recounts by
+an independent scanner, section-path continuity incl. zero interior paragraph
+gaps in every margin chapter, pdf-page ranges, chapter counts, RM-token
+normalisation. Source wording variants kept as printed and documented in
+`data/_source_anomalies_lkan.csv`.
+
 ## Planned next extraction
 
 1. The Penyata Kewangan volumes' own summary tables of federal finances (revenue,
    opex, DE, deficit, debt) — a third independent restatement to triangulate against
-   PKKP (audited) and BNM (reported).
-2. Findings registers from the Aktiviti volumes: per-ministry findings with amounts
-   (kelemahan/teguran), keyed to `maksud` where the report names votes, joining PKKP
-   for the "planned vs delivered vs audited-verdict" pairing in docs/SOURCES.md.
+   PKKP (audited) and BNM (reported). (CMD.14.2025 Bahagian II, pdf 30–81,
+   JADUAL 1–33, pairs with PKKP FY2024.)
+2. Deepen the findings register: key findings to `maksud` where the report names
+   votes, joining PKKP for the "planned vs delivered vs audited-verdict" pairing
+   in docs/SOURCES.md; quantify the Ringkasan/Infografik per-chapter digests as a
+   cross-check on the register's RM tokens.
 
 Then the standard discipline: reconcile to the report's own printed totals +
 independent adversarial verifier pass before any curated/dashboard exposure.

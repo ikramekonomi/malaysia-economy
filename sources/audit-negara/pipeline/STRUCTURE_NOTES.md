@@ -66,3 +66,26 @@ Not a fielded value: harvest `RM[\d.,]+\s*(juta|bilion)?` from finding
 paragraphs. Systematic in the KAA/2026 chapters, frequent elsewhere. The
 Ringkasan/Infografik parts carry quantified per-chapter digests usable to
 cross-check register totals.
+
+## Corrections from the extraction pass (2026-07-31)
+
+Verified against the text while building `extract_lkan_findings.py`:
+
+- **CMD.5.2025 DOES have two-line `Pendapat`/`Audit` boxes** (35 occurrences,
+  e.g. pdf 24 after 5.1.1) — the "NO Pendapat boxes" note above is wrong.
+- **CMD.8.2024 response markers are mostly lowercase-b** (`Maklum balas <ENTITI>
+  yang diterima pada <tarikh>`); chapter 3 uses the inverted `Maklum balas yang
+  diterima daripada <ENTITI> pada <tarikh>` (pdf 123) and chapter 6 the range
+  form `... diterima antara <tarikh> hingga <tarikh>` (pdf 243). Capital-B
+  `Maklum Balas <ENTITI> [Bb]ertarikh/Pada <tarikh>` occurrences are wrapped
+  `Sumber:` table citations (pdf 120/123/125), not response headings.
+- **CMD.14.2025 IV.3, IV.4 and V.2 are margin-label chapters** (continuous
+  per-audit paragraph numbering, no `2.x.` tiers); only IV.1/IV.2 carry the
+  short KAA skeleton with `2.x.`/`2.x.y.`, V.1 numbers findings `4.x.`/`4.x.y.`
+  under `4. PENEMUAN AUDIT`, VI `5.x.`/`5.x.y.` under `5. PENEMUAN AUDIT`.
+  IV.3/IV.4 have no PENEMUAN divider at all — topical labels open directly
+  under LATAR BELAKANG.
+- **CMD.9.2024 `Pendapat Audit` margin labels: 96** inside the eight audits
+  (16/10/12/11/20/12/9/6), not 92.
+- CMD.2.2026 I.1 also uses the no-`diterima` variant `Maklum Balas MyIPO pada
+  9 Disember 2025` (pdf 34) — the master regex needs the bare-`pada` branch.
