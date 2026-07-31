@@ -16,11 +16,13 @@ provenance, and validation; comparison happens in `curated/`. Prefer machine-rea
   (official 2025–26 projections, debt, nominal GDP), adversarially verified.
 - ✅ **dosm** — GDP/GNI, population, households (OpenDOSM canonical files + API
   cross-check + vintage tracking with a weekly detection routine).
-- 🚧 **audit-negara** / **bnm** — egress opened 2026-07-31, but both portals' WAFs
-  reject non-browser clients and browser traffic cannot traverse this environment's
-  proxy; scaffolds with acquisition notes in `sources/audit-negara/` and
-  `sources/bnm/` (supply files via an attached repo, or retry from a
-  browser-capable egress).
+- ✅ **bnm** — quarterly federal finance + debt-by-holder/maturity via the BNM
+  OpenAPI (`api.bnm.gov.my/public/msb/3.1*`), 1996–1Q2026, triangulated against
+  PKKP to RM1–2m per year; FY2025 measured intra-year.
+- 🚧 **audit-negara** — egress open but the portal's F5 WAF rejects non-browser
+  clients and browser traffic cannot traverse this environment's proxy; scaffold
+  with acquisition notes in `sources/audit-negara/` (supply LKAN PDFs via an
+  attached repo).
 
 ## Tier 1 — highest value; pairs directly with PKKP
 - **Anggaran Perbelanjaan Persekutuan** (Federal Expenditure Estimates) — MOF/Treasury. The

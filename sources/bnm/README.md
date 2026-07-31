@@ -1,28 +1,44 @@
-# Source: Bank Negara Malaysia — SCAFFOLD, fiscal series not machine-reachable
+# Source: Bank Negara Malaysia — fiscal tables via BNM OpenAPI
 
-Higher-frequency (monthly) federal government finance, debt and public-sector
-statistics — the Tier-2 cross-check for PKKP annual actuals (docs/SOURCES.md).
+Quarterly federal government finance and federal debt series, machine-read from the
+**BNM OpenAPI** (no WAF, no manual downloads): `api.bnm.gov.my/public/msb/<table>`
+with header `Accept: application/vnd.BNM.API.v1+json`. Catalogue discovered via
+`api.bnm.gov.my/api/specification/categories` (portal: apikijangportal.bnm.gov.my).
 
-## Status (2026-07-31): egress open; API live but carries no fiscal series; site WAF-blocked
+## Status: INGESTED via API (2026-07-31); www.bnm.gov.my file downloads unnecessary
 
-- **BNM OpenAPI** (`api.bnm.gov.my`, header `Accept: application/vnd.BNM.API.v1+json`)
-  is reachable and serves rates/FX/kijang-emas resources — probed for fiscal
-  endpoints (`msb`, `government-finance`, `public-finance`, `fiscal`, auction data):
-  all 404. The Monthly Statistical Bulletin tables (federal government finance) are
-  **not in the API**.
-- **www.bnm.gov.my** (where the MSB XLS/CSV files live) sits behind a JS-challenge
-  WAF (HTTP 202 interstitial) that non-browser clients cannot pass, and browser
-  traffic cannot traverse this environment's egress proxy.
+| table | content | coverage |
+|---|---|---|
+| `msb_3_1.csv` | Federal Government Finance (quarterly: revenue, opex, current balance, gross/net DE, financing) | 1996–1Q2026 |
+| `msb_3_1_1.csv` | Federal Government Revenue (components) | 1996–2026 |
+| `msb_3_1_2.csv` | Operating Expenditure by Object | 1996–2026 |
+| `msb_3_1_3.csv` | Development Expenditure by Function | 1996–2025 |
+| `msb_3_1_4.csv` | Federal Debt by Remaining Maturity | 2008–2026 |
+| `msb_3_1_5.csv` | Federal Domestic Debt **by Holder** | 2008–2026 |
+| `msb_3_1_6.csv` | Federal Debt by Currency & Remaining Maturity | 1999–2026 |
 
-## Ways in
+Values verbatim as served (RM million); every row carries endpoint + retrieval date +
+the API's own `last_updated`. Refresh = re-run `pipeline/fetch_bnm_fiscal.py`
+(explicit, provenance-updating — same discipline as sources/dosm).
 
-1. Supply the MSB "Government finance" table files (XLS/CSV, monthly) via a GitHub
-   repo and attach it — smallest useful set: Table 3.x federal government revenue,
-   expenditure and financing, plus federal debt outstanding.
-2. Retry from an environment whose egress path carries browser traffic.
+## Basis discipline (why this is namespaced, never blended)
 
-## Planned first use
+The **fiscal aggregates (3.1–3.1.3) are BNM-compiled from MOF/AGD** — a *reported*
+basis, not the source of truth; PKKP (audited) and the budget books stay canonical for
+annual figures. The **debt tables (3.1.4–3.1.6)** are closer to BNM's own
+administrative domain (it is the government's fiscal agent). Cross-source
+disagreement is a finding, not something to resolve by overwriting.
 
-Monthly revenue/expenditure profile → within-year utilisation curves (sharpening the
-FY2025 nowcast), and an independent debt-outstanding series to cross-check the PKKP
-debt register and the stock-flow model in `curated/forecast/`.
+## Validation (`pipeline/validate_bnm.py` → `data/_validation_bnm.csv`, 197/197 PASS)
+
+- Internal: quarterly balance = revenue − opex (BNM serves the balance rounded to RM1m).
+- **Triangulation:** BNM annual sums equal audited PKKP revenue / opex / DE to within
+  RM1–2 million for every year FY2010–FY2024. BNM's DE follows PKKP's
+  performance-statement presentation (which differs from the by-vote register in
+  2019–2020 — an intra-PKKP presentational difference, documented in the validator).
+- **FY2025 measured** (sum of four quarters, all now published) vs the official
+  revised estimates: revenue **336.07** vs 334.12; opex **330.78** vs 332.15; gross DE
+  **81.92** vs 80.0; overall deficit **−75.29 vs −76.71** (RM bil) — the year landed
+  slightly better than MOF's own revision, and well below the signature-nowcast OE mid
+  (343.6), i.e. FY2025 broke the historical overshoot pattern. Audited PKKP 2025 will
+  adjudicate finally.
