@@ -1,0 +1,29 @@
+{
+  "gdp_gni_annual_nominal": {
+    "file": "gdp_gni_annual_nominal.csv",
+    "data_as_of": "2025",
+    "last_updated": "2026-02-13 12:00",
+    "next_update": "2027-02-12 12:00",
+    "api_total_rows": 1,
+    "storage_etag": "bfc98eff38dd5cf5981e6dc224d83bc2",
+    "storage_last_modified": "Wed, 22 Jul 2026 15:46:49 GMT"
+  },
+  "population_malaysia": {
+    "file": "population_malaysia.csv",
+    "data_as_of": "2026",
+    "last_updated": "2026-07-31 12:00",
+    "next_update": "2027-07-31 12:00",
+    "api_total_rows": 1,
+    "storage_etag": "8eea8354bdf678ab878f0e0bc390ada9",
+    "storage_last_modified": "Fri, 31 Jul 2026 04:48:25 GMT"
+  },
+  "hh_profile": {
+    "file": "hh_lq.csv",
+    "data_as_of": "2024",
+    "last_updated": "2024-07-31 12:00",
+    "next_update": "2025-07-31 12:00",
+    "api_total_rows": 1,
+    "storage_etag": "ee145acd0155ae760c46994500f845b2",
+    "storage_last_modified": "Sat, 21 Sep 2024 10:26:48 GMT"
+  }
+}

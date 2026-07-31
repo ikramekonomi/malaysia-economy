@@ -26,6 +26,25 @@ into the audited fiscal tables.
 - The CSVs are byte-for-byte as downloaded — **never edit them**; re-download to refresh
   (that is a new vintage: update this README's retrieval date and vintages).
 
+## Keeping it fresh (updates are pulled, never silent)
+
+The warehouse pins a retrieval vintage on purpose — an upstream revision changing every
+%GDP ratio silently would break provenance. To detect and apply DOSM updates:
+
+- `python3 sources/dosm/pipeline/refresh.py` — **check** (safe): compares the OpenDOSM
+  static API metadata (`data_as_of`, `last_updated` via
+  `api.data.gov.my/opendosm?id=…&meta=true`) and the storage ETag against the recorded
+  baseline in `data/_vintage.json`; exits non-zero if a new vintage exists.
+- `python3 sources/dosm/pipeline/refresh.py --apply` — pulls the new vintage with a
+  row-level diff report, updates `_vintage.json`, rebuilds the derived denominators and
+  re-runs the API cross-check. Then update the vintage table above, rebuild the
+  dashboard, and commit the refresh as its own change.
+- `python3 sources/dosm/pipeline/verify_against_api.py` — independent value-level
+  cross-check of the canonical CSVs against the API (same publication, second door).
+
+Per the API, the next scheduled DOSM releases are recorded in `data/_vintage.json`
+(`next_update` per dataset).
+
 ## Derived output
 
 `pipeline/build_denominators.py` regenerates `curated/dashboard/external_denominators.csv`
