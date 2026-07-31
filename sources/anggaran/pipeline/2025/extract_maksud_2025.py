@@ -103,10 +103,18 @@ def main():
                 label = AMT.sub("", s).replace("..", "").strip().rstrip("-").strip()
                 for prefix, comp, rtype in COMPONENT_LABELS:
                     if label.startswith(prefix):
-                        if comp == "jumlah" and cur[0] == "P":
-                            # "Jumlah <ministry>" after a P.x block is the combined
-                            # B.x + P.x ministry total, not a P-maksud figure — skip
-                            # (checked arithmetically by validate_2025.py instead)
+                        if comp == "jumlah":
+                            # a Jumlah row closes the current maksud; capture it only
+                            # for T/B maksud own totals ("Jumlah ..") — a "Jumlah
+                            # <ministry>" after a P.x block is the combined B+P
+                            # ministry total, not a P-maksud figure (checked
+                            # arithmetically by validate_2025.py instead). Closing
+                            # cur also drops the unlabelled ministry roll-up blocks
+                            # that follow multi-vote ministries (e.g. Kementerian
+                            # Kewangan after B.12).
+                            if cur[0] != "P" and len(vals) == 4:
+                                rows.append(make_row(cur, comp, rtype, vals, pnum, printed))
+                            cur = None
                             break
                         if len(vals) == 4:
                             rows.append(make_row(cur, comp, rtype, vals, pnum, printed))
