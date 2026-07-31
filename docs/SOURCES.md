@@ -19,11 +19,13 @@ provenance, and validation; comparison happens in `curated/`. Prefer machine-rea
 - ✅ **bnm** — quarterly federal finance + debt-by-holder/maturity via the BNM
   OpenAPI (`api.bnm.gov.my/public/msb/3.1*`), 1996–1Q2026, triangulated against
   PKKP to RM1–2m per year; FY2025 measured intra-year.
-- 🚧 **audit-negara** — all 8 federal LKAN volumes 2024–2026 acquired &
-  cover-verified via parlimen.gov.my Command Papers (audit.gov.my's WAF blocks
-  non-browsers; Parliament serves the same tabled reports at stable URLs —
-  manifest with sha256 in `sources/audit-negara/data/lkan_reports.csv`).
-  Extraction pending: audit opinions, findings registers, summary triangulation.
+- ✅ **audit-negara** — all 8 federal LKAN volumes 2024–2026 acquired via
+  parlimen.gov.my Command Papers (manifest + sha256 in
+  `sources/audit-negara/data/lkan_reports.csv`); extracted & adversarially
+  verified: per-agency sijil registers FY2023+FY2024 (285 agencies × opinion)
+  and the per-audit findings register (34 audits, 426 findings, 1,080 RM
+  tokens, 405 ministry responses). Remaining targets in the source README:
+  LKAN 3/2025 Bahagian II fiscal tables (pairs with PKKP FY2024).
 
 ## Tier 1 — highest value; pairs directly with PKKP
 - **Anggaran Perbelanjaan Persekutuan** (Federal Expenditure Estimates) — MOF/Treasury. The
