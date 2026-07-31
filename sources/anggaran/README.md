@@ -62,6 +62,10 @@ differs from 2025: vote code inline on the first component row), all **83 votes*
 still listed), columns sebenar 2021/2022, anggaran asal 2023, anggaran 2024
 (2025-style layout; pipeline `pipeline/2024/`). Validation: **368/368 PASS** — the
 2024 book is fully arithmetically consistent as printed. Crosswalk: all 83 matched.
+**Adversarial verifier:** blind two-engine re-derivation — zero disagreements
+(288/288 cells engine-to-engine; 242 row-quadruples diffed cell-by-cell against this
+extraction, zero mismatches); confirms the book is internally consistent to the
+ringgit everywhere.
 **Key evidence:** the tabled 2024 OE equals PKKP's recorded `anggaran_asal` 2024
 exactly on every comparable vote, and the book's asal-2023 column equals PKKP's 2023
 record — the audited PKKP appropriation series IS the budget as tabled (see
