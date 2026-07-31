@@ -208,6 +208,51 @@ d["covid"] = [{"year": int(x.year), "spend": r(x.v)} for x in
 # ---- policy constants (Fiscal Responsibility Act guardrails; no data source needed) ----
 d["fra"] = {"debt_gdp_ceiling": 60, "debt_gdp_ceiling_temp": 65, "deficit_gdp_target": 3.0, "debtsvc_rev_limit": 15}
 
+# ---- 2025-26 outlook: three non-audited bases, kept separate (never blended) ----
+# official_projection / official_revised — MOF Fiscal Outlook (sources/mof-fiscal-outlook)
+# budget                                — Anggaran 2025 as tabled (sources/anggaran)
+# model_projection                      — curated/forecast bands (cross-check only)
+ROOT = os.path.join(HERE, "..", "..")
+off = []
+with open(os.path.join(ROOT, "sources", "mof-fiscal-outlook", "data", "fiscal_outlook_headline.csv")) as f:
+    for row in _csv.DictReader(f):
+        if int(row["target_year"]) >= 2024 and row["line"] in (
+                "revenue", "operating_expenditure", "development_expenditure",
+                "overall_deficit", "deficit_pct_gdp", "nominal_gdp"):
+            off.append({"edition": int(row["edition_year"]), "year": int(row["target_year"]),
+                        "line": row["line"], "v": float(row["amount_rm_bil"]), "basis": row["basis"]})
+bud = {"opex": 0.0, "devex": 0.0}
+with open(os.path.join(ROOT, "sources", "anggaran", "data", "2025", "fact_anggaran_maksud_2025.csv")) as f:
+    for row in _csv.DictReader(f):
+        if row["measure"] != "anggaran_2025":
+            continue
+        c, comp = row["maksud_code"], row["component"]
+        if (c.startswith("T.") and comp == "jumlah") or (c.startswith("B.") and comp == "mengurus"):
+            bud["opex"] += int(row["amount_rm"]) / 1e9
+        elif c.startswith("P.") and comp == "pembangunan":
+            bud["devex"] += int(row["amount_rm"]) / 1e9
+model = []
+with open(os.path.join(ROOT, "curated", "forecast", "fact_projection_headline.csv")) as f:
+    for row in _csv.DictReader(f):
+        model.append({"year": int(row["year"]), "series": row["series"], "lo": float(row["lo_rm_bil"]),
+                      "mid": float(row["mid_rm_bil"]), "hi": float(row["hi_rm_bil"])})
+now_oe = None
+with open(os.path.join(ROOT, "curated", "forecast", "fact_nowcast_2025.csv")) as f:
+    for row in _csv.DictReader(f):
+        if row["maksud_code"] == "TOTAL_OE":
+            now_oe = {"lo": r(float(row["expected_lo_rm"]) / 1e9), "mid": r(float(row["expected_mid_rm"]) / 1e9),
+                      "hi": r(float(row["expected_hi_rm"]) / 1e9)}
+d["outlook"] = {
+    "official": off,
+    "budget2025": {"opex": r(bud["opex"], 3), "devex": r(bud["devex"], 3),
+                   "total": r(bud["opex"] + bud["devex"], 3), "basis": "budget (as tabled, incl. P.70 contingency reserve)"},
+    "model": model,
+    "nowcast_oe_2025": now_oe,
+    "note": ("2025-26 are NOT audited: official = MOF Fiscal Outlook (Budget 2025/2026 editions), "
+             "budget = Anggaran Perbelanjaan 2025 as tabled, model = curated/forecast bands. "
+             "Audited actuals end at FY2024."),
+}
+
 # ---- page-level provenance (every warehouse row carries statement + printed_page) ----
 def pv(sql):
     r = q(sql)

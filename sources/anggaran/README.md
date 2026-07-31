@@ -25,6 +25,11 @@ long format with per-row `pdf_page`/`printed_page`.
   inconsistencies (RM1 sen-rounding differences and an RM8m emolumen/lain split
   disagreement in the printed roll-up), catalogued with proofs in
   `data/2025/_source_anomalies_2025.csv` — kept as printed, never corrected.
+- **Adversarial verifier:** independent agent, blind to the extraction, re-derived all
+  226 vote-component cells with two engines (pdftotext + pdfplumber): **full agreement**
+  — same 85 votes, same values, same 8 printed-source mismatches and nothing else;
+  59 other printed "Jumlah" rows (incl. the unlabelled Kementerian Kewangan roll-up and
+  combined B+P ministry totals) reconcile exactly.
 - **Crosswalk:** `data/2025/_crosswalk_pkkp_2025.csv` — AP vote codes ("B. 62")
   normalised to PKKP `dim_maksud` codes ("B.62"/zero-padded); all 85 matched with
   name-level evidence, none guessed.

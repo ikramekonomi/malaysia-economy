@@ -158,7 +158,7 @@
         <button data-u="rev" aria-pressed="false" type="button">% of revenue</button>
         <button data-u="gdp" aria-pressed="false" type="button">% of GDP</button></div></div>
     <nav class="nav" aria-label="Sections">
-      <a href="#overview">Overview</a><a href="#in">Money in</a><a href="#out">Money out</a><a href="#squeeze">The squeeze</a><a href="#risk">Debt &amp; risk</a></nav>
+      <a href="#overview">Overview</a><a href="#in">Money in</a><a href="#out">Money out</a><a href="#squeeze">The squeeze</a><a href="#risk">Debt &amp; risk</a><a href="#outlook">Outlook</a></nav>
   </div>
 
   <section class="hero" id="overview">
@@ -258,10 +258,26 @@
       </div></section>
   </div>
 
-  <footer><b>Source &amp; method.</b> Federal Government Financial Statements (<i>Penyata Kewangan Kerajaan Persekutuan</i>), audited by the National Audit Department, FY2009–FY2024 — each year taken from its own audited volume, amounts exact Ringgit as printed, reconciled to the government's own printed totals. Operating = <i>Belanja Mengurus</i>; Development = <i>Belanja Pembangunan</i>; a ministry line is a <i>vote (maksud)</i>. Budget-vs-actual compares each vote's original estimate (<i>anggaran asal</i>) to actual (<i>sebenar</i>). <b>GDP &amp; population are official DOSM series</b> (OpenDOSM: annual nominal GDP, population, households — ingested as <i>sources/dosm</i>, external to the audited warehouse) — used only for ratios and per-household context. The pension projection and reform simulator are <b>illustrative</b>. RM b = billion; RM tn = trillion.
+  <div class="sec" id="outlook"><span class="ey">05</span><h3>The outlook — 2025&ndash;26, before the audit</h3><span class="th">The government's own forward numbers vs this warehouse's model. Nothing here is audited.</span></div>
+  <div class="grid">
+    <section class="card col6" data-embed-id="outlook-rev"><button class="share" data-share="outlook" title="Share">⤓</button>
+      <h4>Revenue &amp; spending to 2026 <span class="pill" style="font-size:10px;vertical-align:2px">unaudited beyond 2024</span></h4>
+      <p class="desc"><b>Solid</b> = audited actuals (PKKP, to FY2024). <b>Dashed</b> = the government's own projections (MOF Fiscal Outlook; 2025 revised, 2026 budget estimate — its 2024 anchor is the as-reported outturn, not the audited figure). <b>Shaded cone</b> = this warehouse's model band (rev only), fitted on audited history. ◆ = Budget 2025 total as tabled. Bases are never blended.</p>
+      <div class="legend" id="lg-outlook"></div><div class="chart" id="c-outlook"></div>
+      <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-outlook"></div></details>
+      <div class="srcnote" id="src-outlook"></div></section>
+    <section class="card col6" data-embed-id="outlook-def">
+      <h4>The deficit path to 2026 <span class="pill" style="font-size:10px;vertical-align:2px">unaudited beyond 2024</span></h4>
+      <p class="desc">Overall deficit, RM b. <b>Solid</b> = audited. <b>Dashed</b> = MOF's own path — 3.8% of GDP in 2025, 3.5% in 2026, still above the 3% Act 850 anchor. <b>Cone</b> = model band (wide by design: historical-quantile growth, not a forecast of policy).</p>
+      <div class="legend" id="lg-outdef"></div><div class="chart" id="c-outdef"></div>
+      <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-outdef"></div></details>
+      <div class="srcnote">Official: MOF Fiscal Outlook (Tinjauan Fiskal) Budget 2025 &amp; 2026 editions, page-level provenance in <i>sources/mof-fiscal-outlook</i>. Model: <i>curated/forecast</i> (method &amp; caveats documented there); 12 of 13 comparable official figures fall inside the model bands.</div></section>
+  </div>
+
+  <footer><b>Source &amp; method.</b> Federal Government Financial Statements (<i>Penyata Kewangan Kerajaan Persekutuan</i>), audited by the National Audit Department, FY2009–FY2024 — each year taken from its own audited volume, amounts exact Ringgit as printed, reconciled to the government's own printed totals. Operating = <i>Belanja Mengurus</i>; Development = <i>Belanja Pembangunan</i>; a ministry line is a <i>vote (maksud)</i>. Budget-vs-actual compares each vote's original estimate (<i>anggaran asal</i>) to actual (<i>sebenar</i>). <b>GDP &amp; population are official DOSM series</b> (OpenDOSM: annual nominal GDP, population, households — ingested as <i>sources/dosm</i>, external to the audited warehouse) — used only for ratios and per-household context. The pension projection and reform simulator are <b>illustrative</b>. The <b>2025–26 outlook is unaudited</b>: official figures are the MOF <i>Tinjauan Fiskal / Fiscal Outlook</i> (Budget 2025 &amp; 2026 editions, ingested as <i>sources/mof-fiscal-outlook</i> with page-level provenance), the tabled budget is <i>Anggaran Perbelanjaan Persekutuan 2025</i> (<i>sources/anggaran</i>, reconciled to the book's printed totals), and model bands are <i>curated/forecast</i> — three bases, never blended with audited actuals. RM b = billion; RM tn = trillion.
   Peer comparisons are <b>IMF/national figures, external and indicative</b> — cross-country debt definitions differ.
   <div class="srcnote" style="margin-top:10px">A data warehouse for Malaysia's public finances. Every figure is traceable to an audited source page.
-  <br>Embed a single chart by adding <code>#embed=revenue|debt|rigidity|gap|pension|covid|contingent|compare</code> to the URL (combine with <code>y=</code> and <code>u=</code>).</div></footer>
+  <br>Embed a single chart by adding <code>#embed=revenue|debt|rigidity|gap|pension|covid|contingent|compare|outlook-rev|outlook-def</code> to the URL (combine with <code>y=</code> and <code>u=</code>).</div></footer>
 <div class="tip" id="tip"></div>
 </div>
 <div class="modal" id="modal"><div class="modal-in"><canvas id="cardcanvas" width="1000" height="525"></canvas>
@@ -396,6 +412,45 @@ function waterfall(host,{steps}){const W=760,Hc=270,m={t:16,r:14,b:44,l:46};cons
     s.appendChild(E('text',{class:'glab tnum',x:X(i),y:y0-5,'text-anchor':'middle'},(p.v<0?'−':'')+fmt(Math.abs(p.v),0)));
     String(p.l).split(' ').forEach((w,j)=>s.appendChild(E('text',{class:'axis',x:X(i),y:Hc-m.b+14+j*11,'text-anchor':'middle'},w)));});
   host.innerHTML='';host.appendChild(s);}
+
+// Outlook chart: audited solid / official dashed / model cone / budget marker — bases never blended.
+function outlookChart(host,{series,cones,markers,horizon,lbl,ymaxPad}){
+  const W=760,Hc=330,m={t:22,r:64,b:30,l:46};const s=svg(W,Hc,lbl||'Outlook chart');
+  const xs=series.flatMap(se=>se.pts.map(p=>p.x)).concat((cones||[]).flatMap(c=>c.pts.map(p=>p.x)));
+  const xmin=Math.min(...xs),xmax=Math.max(...xs);
+  const X=x=>m.l+(W-m.l-m.r)*((x-xmin)/(xmax-xmin||1));
+  const vals=series.flatMap(se=>se.pts.map(p=>p.v)).concat((cones||[]).flatMap(c=>c.pts.map(p=>p.hi))).concat((markers||[]).map(mk=>mk.v)).filter(v=>v!=null&&isFinite(v));
+  const ymax=Math.max(...vals)*(ymaxPad||1.08);
+  const Y=v=>Hc-m.b-(Hc-m.t-m.b)*(v/ymax);
+  niceTicks(ymax).forEach(t=>{s.appendChild(E('line',{class:'gridline',x1:m.l,x2:W-m.r,y1:Y(t),y2:Y(t)}));s.appendChild(E('text',{class:'axis tnum',x:m.l-8,y:Y(t)+3,'text-anchor':'end'},fmt(t,0)));});
+  for(let y=xmin;y<=xmax;y++)if((y-xmin)%2===0||y===xmax)s.appendChild(E('text',{class:'axis',x:X(y),y:Hc-m.b+15,'text-anchor':'middle'},y));
+  if(horizon!=null){s.appendChild(E('line',{class:'ev',x1:X(horizon),x2:X(horizon),y1:m.t,y2:Hc-m.b}));
+    s.appendChild(E('text',{class:'evlab',x:X(horizon)-4,y:m.t-6,'text-anchor':'end'},'audited'));
+    s.appendChild(E('text',{class:'evlab',x:X(horizon)+4,y:m.t-6,'text-anchor':'start'},'unaudited'));}
+  (cones||[]).forEach(c=>{const col=css(c.c);const up=c.pts.map(p=>`${X(p.x)},${Y(p.hi)}`),dn=c.pts.slice().reverse().map(p=>`${X(p.x)},${Y(p.lo)}`);
+    s.appendChild(E('polygon',{points:up.concat(dn).join(' '),fill:col,opacity:.13}));
+    s.appendChild(E('path',{d:c.pts.map((p,i)=>(i?'L':'M')+X(p.x)+','+Y((p.lo+p.hi)/2)).join(' '),fill:'none',stroke:col,'stroke-width':1.4,'stroke-dasharray':'2 4',opacity:.75}));});
+  series.forEach(se=>{const col=css(se.c);const pts=se.pts.filter(p=>p.v!=null&&isFinite(p.v));if(!pts.length)return;
+    s.appendChild(E('path',{d:pts.map((p,i)=>(i?'L':'M')+X(p.x)+','+Y(p.v)).join(' '),fill:'none',stroke:col,'stroke-width':se.bold?2.8:2.2,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':se.dash||''}));
+    pts.forEach(p=>{if(se.dots)s.appendChild(E('circle',{cx:X(p.x),cy:Y(p.v),r:3,fill:col,stroke:'var(--surface)','stroke-width':1.6}));});
+    const lp=pts[pts.length-1];
+    if(se.label)s.appendChild(E('text',{class:'glab',x:X(lp.x)+6,y:Y(lp.v)+4,fill:col},se.label===true?fmt(lp.v,0):se.label));});
+  (markers||[]).forEach(mk=>{const col=css(mk.c);const x=X(mk.x),y=Y(mk.v);
+    s.appendChild(E('path',{d:`M ${x} ${y-6} L ${x+6} ${y} L ${x} ${y+6} L ${x-6} ${y} Z`,fill:col,stroke:'var(--surface)','stroke-width':1.5}));
+    if(mk.label)s.appendChild(E('text',{class:'glab',x:x+9,y:y+4,fill:col},mk.label));});
+  // hover: nearest year column
+  const allYears=[...new Set(xs)].sort();
+  const hl=E('line',{class:'baseline',x1:0,x2:0,y1:m.t,y2:Hc-m.b,opacity:0});s.appendChild(hl);
+  s.appendChild(E('rect',{x:m.l,y:m.t,width:W-m.l-m.r,height:Hc-m.t-m.b,fill:'transparent'}));
+  s.addEventListener('mousemove',ev=>{const px=relX(s,ev,W);let best=allYears[0];allYears.forEach(y=>{if(Math.abs(X(y)-px)<Math.abs(X(best)-px))best=y;});
+    hl.setAttribute('x1',X(best));hl.setAttribute('x2',X(best));hl.setAttribute('opacity',1);
+    let rows='';series.forEach(se=>{const p=se.pts.find(q=>q.x===best);if(p&&p.v!=null)rows+=`<div class="row"><span class="k"><span class="dot" style="background:${css(se.c)}"></span>${se.n}</span><span class="v">${fmt(p.v,1)}</span></div>`;});
+    (cones||[]).forEach(c=>{const p=c.pts.find(q=>q.x===best);if(p&&p.lo!==p.hi)rows+=`<div class="row"><span class="k"><span class="dot" style="background:${css(c.c)}"></span>${c.n}</span><span class="v">${fmt(p.lo,0)}–${fmt(p.hi,0)}</span></div>`;});
+    (markers||[]).forEach(mk=>{if(mk.x===best)rows+=`<div class="row"><span class="k"><span class="dot" style="background:${css(mk.c)}"></span>${mk.n}</span><span class="v">${fmt(mk.v,1)}</span></div>`;});
+    if(rows)showTip(ev,`<div class="th">${best} &middot; RM b</div>`+rows);});
+  s.addEventListener('mouseleave',()=>{hideTip();hl.setAttribute('opacity',0);});
+  host.innerHTML='';host.appendChild(s);
+}
 
 const SIM={age:60,idx:3,dc:0};
 function pensionModel({age,idx,dc}){const base=DATA.rigidity[DATA.rigidity.length-1].pension,y0=2024;
@@ -543,6 +598,57 @@ function render(){
     document.getElementById('cov-big').innerHTML=`<div><div class="n tnum">${fmt(tot,0)}<span class="u"> RM b</span></div><div class="l">total, ${cov.length?cov[0].year+'–'+cov[cov.length-1].year:''} · ≈ a full year of tax</div></div>`;
     vbars(document.getElementById('c-cov'),{rows:cov.map(c=>({k:c.year,v:c.spend,gl:'RM b spent'})),color:'--s2'});});
 
+  safe('c-outlook',()=>{const O=DATA.outlook;if(!O)return;
+    const OFF={};O.official.forEach(r=>{const k=r.year+':'+r.line;if(!OFF[k]||r.edition>OFF[k].edition)OFF[k]=r;});
+    const ov=(y,l)=>OFF[y+':'+l]?OFF[y+':'+l].v:null;
+    const audited=H.filter(d=>d.year>=2015);
+    const aud=k=>audited.map(d=>({x:d.year,v:k==='totexp'?d.opex+d.devex:d[k]}));
+    const offRev=[2024,2025,2026].map(y=>({x:y,v:ov(y,'revenue')}));
+    const offTot=[2024,2025,2026].map(y=>({x:y,v:(ov(y,'operating_expenditure')!=null&&ov(y,'development_expenditure')!=null)?ov(y,'operating_expenditure')+ov(y,'development_expenditure'):null}));
+    const a24=byY[2024];
+    const mrow=(y,s)=>O.model.find(m=>m.year===y&&m.series===s);
+    const revCone={n:'Model band (revenue)',c:'--s1',pts:[{x:2024,lo:a24.rev,hi:a24.rev},
+      ...[2025,2026].map(y=>{const m=mrow(y,'rev');return{x:y,lo:m.lo,hi:m.hi};})]};
+    legend('lg-outlook',[{n:'Audited revenue',c:css('--s1')},{n:'Audited total spend',c:css('--s7')},
+      {n:'Official (MOF, dashed)',c:css('--s4')},{n:'Model band (rev)',c:css('--s1')},{n:'◆ Budget 2025 as tabled',c:css('--s5')}]);
+    outlookChart(document.getElementById('c-outlook'),{lbl:'Revenue and spending outlook to 2026',horizon:2024,
+      series:[{n:'Audited revenue',c:'--s1',pts:aud('rev'),bold:true},
+              {n:'Audited total spend',c:'--s7',pts:aud('totexp'),bold:true},
+              {n:'Official revenue',c:'--s4',pts:offRev,dash:'6 4',dots:true,label:true},
+              {n:'Official total spend',c:'--s4',pts:offTot,dash:'2 3',dots:true,label:true}],
+      cones:[revCone],
+      markers:[{n:'Budget 2025 as tabled (OE+DE)',x:2025,v:O.budget2025.total,c:'--s5',label:'◆ '+fmt(O.budget2025.total,0)}]});
+    const e26=OFF['2026:revenue']?OFF['2026:revenue'].basis:'';
+    setTxt('src-outlook','Official 2025 = revised estimate, 2026 = budget estimate excl. Budget-2026 measures ('+e26+'); official 2024 anchor = as-reported outturn. Budget 2025 as tabled: OE RM'+fmt(O.budget2025.opex,1)+'b + DE RM'+fmt(O.budget2025.devex,1)+'b (incl. RM2b contingency reserve) = RM'+fmt(O.budget2025.total,1)+'b. Signature nowcast expects FY2025 OE outturn ≈ RM'+fmt(O.nowcast_oe_2025.mid,0)+'b (p25–p75 RM'+fmt(O.nowcast_oe_2025.lo,0)+'–'+fmt(O.nowcast_oe_2025.hi,0)+'b).');
+    table('t-outlook',['Year','Basis','Revenue','Op. spend','Dev. spend','Total'],[
+      ...audited.slice(-3).map(d=>[d.year,'audited (PKKP)',fmt(d.rev,1),fmt(d.opex,1),fmt(d.devex,1),fmt(d.opex+d.devex,1)]),
+      [2024,'official outturn (unaudited)',fmt(ov(2024,'revenue'),1),fmt(ov(2024,'operating_expenditure'),1),fmt(ov(2024,'development_expenditure'),1),fmt(ov(2024,'operating_expenditure')+ov(2024,'development_expenditure'),1)],
+      [2025,'official revised',fmt(ov(2025,'revenue'),1),fmt(ov(2025,'operating_expenditure'),1),fmt(ov(2025,'development_expenditure'),1),fmt(ov(2025,'operating_expenditure')+ov(2025,'development_expenditure'),1)],
+      [2025,'budget as tabled','–',fmt(O.budget2025.opex,1),fmt(O.budget2025.devex,1),fmt(O.budget2025.total,1)],
+      [2026,'official budget est.',fmt(ov(2026,'revenue'),1),fmt(ov(2026,'operating_expenditure'),1),fmt(ov(2026,'development_expenditure'),1),fmt(ov(2026,'operating_expenditure')+ov(2026,'development_expenditure'),1)]]);});
+
+  safe('c-outdef',()=>{const O=DATA.outlook;if(!O)return;
+    const OFF={};O.official.forEach(r=>{const k=r.year+':'+r.line;if(!OFF[k]||r.edition>OFF[k].edition)OFF[k]=r;});
+    const ov=(y,l)=>OFF[y+':'+l]?OFF[y+':'+l].v:null;
+    const audited=H.filter(d=>d.year>=2015).map(d=>({x:d.year,v:Math.abs(d.deficit)}));
+    const offDef=[2024,2025,2026].map(y=>({x:y,v:ov(y,'overall_deficit')!=null?Math.abs(ov(y,'overall_deficit')):null}));
+    const a24=Math.abs(byY[2024].deficit);
+    const mrow=y=>O.model.find(m=>m.year===y&&m.series==='deficit');
+    const cone={n:'Model band (deficit)',c:'--bad',pts:[{x:2024,lo:a24,hi:a24},
+      ...[2025,2026].map(y=>{const m=mrow(y);return{x:y,lo:Math.abs(m.lo),hi:Math.abs(m.hi)};})]};
+    // model deficit band: lo/hi are signed (lo least negative); magnitudes may swap order
+    cone.pts.forEach(p=>{if(p.lo>p.hi){const t=p.lo;p.lo=p.hi;p.hi=t;}});
+    legend('lg-outdef',[{n:'Audited deficit',c:css('--bad')},{n:'Official (MOF, dashed)',c:css('--s4')},{n:'Model band',c:css('--bad')}]);
+    outlookChart(document.getElementById('c-outdef'),{lbl:'Overall deficit outlook to 2026',horizon:2024,ymaxPad:1.15,
+      series:[{n:'Audited deficit',c:'--bad',pts:audited,bold:true},
+              {n:'Official deficit',c:'--s4',pts:offDef,dash:'6 4',dots:true,label:true}],
+      cones:[cone]});
+    table('t-outdef',['Year','Basis','Deficit RM b','% of GDP'],[
+      ...H.filter(d=>d.year>=2022).map(d=>[d.year,'audited (PKKP)',fmt(Math.abs(d.deficit),1),fmt(100*Math.abs(d.deficit)/gdpOf(d.year),1)+'%']),
+      [2024,'official outturn',fmt(Math.abs(ov(2024,'overall_deficit')),1),fmt(Math.abs(ov(2024,'deficit_pct_gdp')),1)+'%'],
+      [2025,'official revised',fmt(Math.abs(ov(2025,'overall_deficit')),1),fmt(Math.abs(ov(2025,'deficit_pct_gdp')),1)+'%'],
+      [2026,'official budget est.',fmt(Math.abs(ov(2026,'overall_deficit')),1),fmt(Math.abs(ov(2026,'deficit_pct_gdp')),1)+'%']]);});
+
   safe('c-pen',()=>pensionChart(document.getElementById('c-pen')));
   legend('lg-pen',[{n:'Actual',c:css('--s1')},{n:'Your reform',c:css('--s5')},{n:'No reform',c:css('--muted')}]);
   table('t-pen',['Year','Pension RM b','% of revenue'],DATA.rigidity.filter(d=>d.pension!=null).map(d=>[d.year,fmt(d.pension,1),fmt(100*d.pension/d.rev,1)]));
@@ -568,7 +674,9 @@ function shareOf(key){const yr=state.year,cur=byY[yr]||H[H.length-1];const rg=DA
     debt:['Debt is '+fmt(100*cur.debt/gdpOf(yr),0)+'% of GDP','RM'+fmt(cur.debt,0)+'b','Tripled since 2010; '+fmt(cur.debt/cur.rev,1)+'× annual revenue.'],
     rigidity:['Pre-committed',fmt(core,0)+'%','of revenue goes to pay, pensions and interest before any service ('+yr+').'],
     pension:['Pensions grow 9.3%/yr','RM'+fmt(DATA.rigidity[DATA.rigidity.length-1].pension,0)+'b','Nearly double revenue growth — an unfunded, rising claim.'],
-    covid:['COVID-19 Fund','RM'+fmt((DATA.covid||[]).reduce((a,c)=>a+c.spend,0),0)+'b','Pandemic response run outside the ordinary budget, 2020–2022.']};
+    covid:['COVID-19 Fund','RM'+fmt((DATA.covid||[]).reduce((a,c)=>a+c.spend,0),0)+'b','Pandemic response run outside the ordinary budget, 2020–2022.'],
+    outlook:(()=>{const O=DATA.outlook||{};let v=null;(O.official||[]).forEach(r=>{if(r.year===2026&&r.line==='overall_deficit')v=Math.abs(r.v);});
+      return ['The official 2026 path','RM'+fmt(v,0)+'b','MOF projects the deficit at 3.5% of GDP in 2026 — unaudited; audited actuals end at FY2024.'];})()};
   const m=P[key]||['','',''];drawCard(m[0],m[1],m[2]);}
 
 let EMBED=null;
