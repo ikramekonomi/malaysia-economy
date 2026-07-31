@@ -1,0 +1,11 @@
+year,series,lo_rm_bil,mid_rm_bil,hi_rm_bil,basis,method,data_through,superseded_by
+2025,rev,314.7,337.1,347.3,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2026,rev,305.2,350.1,371.6,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2025,opex,311.4,333.0,341.9,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2026,opex,301.6,344.9,363.6,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2025,devex,79.6,89.8,105.0,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2026,devex,75.5,96.0,131.2,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2025,debt,1321.4,1346.1,1374.7,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2026,debt,1399.6,1452.3,1514.6,model_projection,"log-growth median & p25/p75, FY2015-FY2024",2024,sources/mof-fiscal-outlook (official) once ingested
+2025,deficit,-43.7,-85.7,-132.2,model_projection,identity from rev/opex/devex bands,2024,sources/mof-fiscal-outlook (official) once ingested
+2026,deficit,-5.5,-90.8,-189.6,model_projection,identity from rev/opex/devex bands,2024,sources/mof-fiscal-outlook (official) once ingested

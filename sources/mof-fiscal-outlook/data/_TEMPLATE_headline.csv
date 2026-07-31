@@ -1,0 +1,4 @@
+edition_year,target_year,line,amount_rm_bil,basis,source_file,pdf_page,printed_page,retrieved_from,retrieved_date,note
+# EXAMPLE ROW (delete before use) — never fill from memory; every figure must be read off the named PDF page:
+# 2025,2025,revenue,,official_projection,fiscal_outlook_2025.pdf,,,https://belanjawan.mof.gov.my/...,YYYY-MM-DD,
+# lines: revenue | operating_expenditure | development_expenditure | overall_deficit | deficit_pct_gdp | federal_debt | debt_pct_gdp

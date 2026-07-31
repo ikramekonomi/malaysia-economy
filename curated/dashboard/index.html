@@ -494,7 +494,7 @@ function render(){
 
   safe('c-gap',()=>{const gap=(DATA.gap_by_year[yr]||DATA.gap_by_year[2024]).filter(g=>g.variance!=null).slice().sort((a,b)=>b.variance-a.variance).slice(0,12);
     legend('lg-gap',[{n:'Over budget',c:css('--bad')},{n:'Under budget',c:css('--good')}]);
-    divBars(document.getElementById('c-gap'),{rows:gap});
+    divBars(document.getElementById('c-gap'),{rows:gap.map(g=>({...g,v:g.variance}))});
     const big=gap[0];setTxt('tk-gap',`Biggest ${yr} surprise: ${big.short} ${big.variance>=0?'overshot':'came in under'} by RM${fmt(Math.abs(big.variance),1)}b${big.util?` (${fmt(big.util,0)}% of plan)`:''}.`);
     table('t-gap',['Vote','Name','Original','Revised','Actual','Variance'],gap.map(g=>[g.code,g.short,fmt(g.budget,2),fmt(g.revised,2),fmt(g.actual,2),(g.variance>=0?'+':'−')+fmt(Math.abs(g.variance),2)]));});
 
