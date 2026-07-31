@@ -139,7 +139,7 @@
   <header class="top"><div class="top-in">
     <div class="brand"><div class="mark">RM</div>
       <div><h1>How Malaysia spends, taxes &amp; borrows</h1>
-        <p class="sub">Fifteen years of audited federal accounts, FY2010–FY2024</p></div></div>
+        <p class="sub">Fifteen years of audited federal accounts, FY2010–FY2024 — plus the official 2025–26 outlook</p></div></div>
     <span class="pill">Audited &middot; reconciled to the sen</span>
     <button class="tgl" id="themeBtn" type="button">◐ Theme</button>
   </div></header>
@@ -148,10 +148,11 @@
     <div class="ctl"><span class="cl">Year</span>
       <button class="play" id="play" type="button" aria-label="Play through years">▶</button>
       <span class="cl" style="font-weight:600">2010</span>
-      <input type="range" id="yr" min="2010" max="2024" step="1" value="2024" list="yrticks" aria-label="Fiscal year" aria-valuetext="2024">
-      <datalist id="yrticks"><option value="2010"></option><option value="2015"></option><option value="2020"></option><option value="2024"></option></datalist>
-      <span class="cl" style="font-weight:600">2024</span>
-      <span class="yrval" id="yrval">2024</span></div>
+      <input type="range" id="yr" min="2010" max="2026" step="1" value="2024" list="yrticks" aria-label="Fiscal year" aria-valuetext="2024">
+      <datalist id="yrticks"><option value="2010"></option><option value="2015"></option><option value="2020"></option><option value="2024"></option><option value="2026"></option></datalist>
+      <span class="cl" style="font-weight:600">2026</span>
+      <span class="yrval" id="yrval">2024</span>
+      <span class="pill" id="yrbasis" style="display:none;background:var(--bad-fill);color:var(--warn)">official est. · unaudited</span></div>
     <div class="ctl"><span class="cl">Units</span>
       <div class="seg" id="unit" role="group" aria-label="Units">
         <button data-u="rm" aria-pressed="true" type="button">RM bil</button>
@@ -179,10 +180,10 @@
 
   <div class="sec" id="in"><span class="ey">01</span><h3>Money in</h3><span class="th">Where revenue comes from — and how petroleum swings it.</span></div>
   <div class="grid">
-    <section class="card col8" id="c-taxringgit-card"><button class="share" data-share="ringgit" title="Share">⤓</button>
+    <section class="card col8" id="c-taxringgit-card" data-clamp><button class="share" data-share="ringgit" title="Share">⤓</button>
       <h4>Where your tax ringgit goes</h4><p class="desc">Of every <b>RM100</b> the federal government spends in operating costs, this is roughly how it splits — three of the biggest slices buy no current service.</p>
       <div class="ringgit" id="c-ringgit"></div></section>
-    <section class="card col4"><h4>Revenue mix &middot; <span class="acc" id="rc-yr">2024</span></h4><p class="desc">Tax vs non-tax vs one-off receipts.</p>
+    <section class="card col4" data-clamp><h4>Revenue mix &middot; <span class="acc" id="rc-yr">2024</span></h4><p class="desc">Tax vs non-tax vs one-off receipts.</p>
       <div class="chart" id="c-compbar"></div></section>
     <section class="card col6" data-prov="perf" data-embed-id="revenue"><button class="share" data-share="revenue" title="Share">⤓</button>
       <h4>Revenue barely covers the bills</h4><p class="desc">Revenue against <b>operating</b> and <b>total</b> spending. The shaded wedge is the overall <b>deficit</b> — entirely development spending, paid for by borrowing.</p>
@@ -199,10 +200,10 @@
     <section class="card col6" data-prov="obj"><h4>Spending is a payroll-and-transfer machine</h4><p class="desc">Operating spend by economic type. <b>Grants &amp; fixed charges</b> (subsidies, transfers, interest, pensions) tripled to RM189b; assets bought through operating are a rounding error.</p>
       <div class="legend" id="lg-obj"></div><div class="chart" id="c-obj"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-obj"></div></details></section>
-    <section class="card col6"><h4>The biggest lines aren't services &middot; <span id="fn-yr">2024</span></h4><p class="desc">Operating spend by function. Of the five largest claims, three deliver <b>no current public service</b> — subsidies, debt interest and pensions.</p>
+    <section class="card col6" data-clamp><h4>The biggest lines aren't services &middot; <span id="fn-yr">2024</span></h4><p class="desc">Operating spend by function. Of the five largest claims, three deliver <b>no current public service</b> — subsidies, debt interest and pensions.</p>
       <div class="take" id="tk-fn"></div><div class="legend" id="lg-fn"></div><div class="chart" id="c-fn"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-fn"></div></details></section>
-    <section class="card col6"><h4>Winners &amp; losers &middot; 2010 → <span id="db-yr">2024</span></h4><p class="desc">Operating spend then vs now, per function, sorted by growth. The dashed line is <b>revenue's own growth</b> — anything past it outran the nation's income.</p>
+    <section class="card col6" data-clamp><h4>Winners &amp; losers &middot; 2010 → <span id="db-yr">2024</span></h4><p class="desc">Operating spend then vs now, per function, sorted by growth. The dashed line is <b>revenue's own growth</b> — anything past it outran the nation's income.</p>
       <div class="legend" id="lg-db"></div><div class="chart" id="c-db"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-db"></div></details></section>
     <section class="card col6" data-prov="devex"><h4>A RM1.1-trillion pipeline, 29% delivered</h4><p class="desc">Development projects: bar length = <b>approved cost</b>, filled = <b>spent so far</b>. Some of the biggest approvals have barely broken ground.</p>
@@ -219,7 +220,7 @@
       <h4>Two-thirds of revenue is spoken for</h4><p class="desc">Salaries, pensions and debt interest are locked in regardless of policy. The bold line is the combined <b>pre-committed core</b>; the dashed line is the 15%-of-revenue debt-service guardrail.</p>
       <div class="take" id="tk-rig"></div><div class="legend" id="lg-rig"></div><div class="chart" id="c-rig"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-rig"></div></details></section>
-    <section class="card col6" data-prov="opex" data-embed-id="gap"><h4>Where ministries blew past budget &middot; <span id="gap-yr">2024</span></h4><p class="desc">Actual minus the <b>original</b> approved budget, per ministry line (<i>vote</i>). Bars over budget in red, under in green; hover for original → revised → actual.</p>
+    <section class="card col6" data-prov="opex" data-embed-id="gap" data-clamp><h4>Where ministries blew past budget &middot; <span id="gap-yr">2024</span></h4><p class="desc">Actual minus the <b>original</b> approved budget, per ministry line (<i>vote</i>). Bars over budget in red, under in green; hover for original → revised → actual.</p>
       <div class="take" id="tk-gap"></div><div class="legend" id="lg-gap"></div><div class="chart" id="c-gap"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-gap"></div></details></section>
     <section class="card" data-embed-id="pension"><button class="share" data-share="pension" title="Share">⤓</button>
@@ -245,7 +246,7 @@
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-debt"></div></details></section>
     <section class="card col6"><h4>The refinancing wall &middot; 2024</h4><p class="desc">When today's debt comes due (RM b maturing by year). Near-term maturities are large — but almost all debt is <b>ringgit &amp; domestic</b>, which contains the risk.</p>
       <div class="chart" id="c-mat"></div><div class="legend" id="lg-inst" style="margin-top:8px"></div><div class="chart" id="c-inst"></div></section>
-    <section class="card" data-prov="guarantees" data-embed-id="contingent"><h4>The bigger picture is off the books</h4><p class="desc">Direct debt is only part of the state's obligations. On-balance-sheet debt plus guarantees, PFI and leases build the total; <b>statutory guarantees</b> (mostly deposit-insurance-type) are shown separately because they overlap and must not be added.</p>
+    <section class="card" data-prov="guarantees" data-embed-id="contingent" data-clamp><h4>The bigger picture is off the books</h4><p class="desc">Direct debt is only part of the state's obligations. On-balance-sheet debt plus guarantees, PFI and leases build the total; <b>statutory guarantees</b> (mostly deposit-insurance-type) are shown separately because they overlap and must not be added.</p>
       <div class="chart" id="c-con"></div>
       <p class="desc" style="margin:14px 0 6px"><b>Who the guarantees are for</b> (2024, largest exposures):</p><div class="chart" id="c-gent"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-con"></div></details></section>
@@ -290,7 +291,14 @@ const css=k=>getComputedStyle(document.documentElement).getPropertyValue(k).trim
 const fmt=(v,d=1)=>v==null||isNaN(v)?"–":v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
 const tip=document.getElementById('tip'),SVGNS="http://www.w3.org/2000/svg";
 const H=DATA.headline, byY=Object.fromEntries(H.map(d=>[d.year,d])), EXT=DATA.external.by_year;
-const gdpOf=y=>(EXT[y]||EXT[2024]).gdp, revOf=y=>(byY[y]||H[H.length-1]).rev, hhOf=y=>(EXT[y]||EXT[2024]).hh;
+// Official MOF figures per target year (latest edition wins) — the unaudited basis for 2025-26
+const OFFY={};(DATA.outlook&&DATA.outlook.official||[]).forEach(r=>{const o=OFFY[r.year]=OFFY[r.year]||{_ed:{}};
+  if(!(r.line in o._ed)||r.edition>o._ed[r.line]){o._ed[r.line]=r.edition;o[r.line]=r.v;}});
+const offv=(y,l)=>OFFY[y]&&OFFY[y][l]!=null?OFFY[y][l]:null;
+const offObj=y=>({rev:offv(y,'revenue'),opex:offv(y,'operating_expenditure'),devex:offv(y,'development_expenditure'),deficit:offv(y,'overall_deficit'),debt:offv(y,'federal_debt')});
+const gdpOf=y=>y>2024?(offv(y,'nominal_gdp')||offv(2024,'nominal_gdp')):(EXT[y]||EXT[2024]).gdp;
+const revOf=y=>y>2024?(offv(y,'revenue')||H[H.length-1].rev):(byY[y]||H[H.length-1]).rev;
+const hhOf=y=>(EXT[Math.min(y,2024)]||EXT[2024]).hh;
 const HUE={revenue:'--s1',expenditure:'--s2',operating:'--s2',development:'--s4',debt:'--s6',tax:'--s1',nontax:'--s2',investment:'--s3',
   emol:'--s1',supplies:'--s3',grants:'--s2',assets:'--s4',pension:'--s5',debtsvc:'--s7',subsidies:'--s2'};
 function E(t,a={},k=[]){const e=document.createElementNS(SVGNS,t);for(const x in a)e.setAttribute(x,a[x]);
@@ -414,7 +422,7 @@ function waterfall(host,{steps}){const W=760,Hc=270,m={t:16,r:14,b:44,l:46};cons
   host.innerHTML='';host.appendChild(s);}
 
 // Outlook chart: audited solid / official dashed / model cone / budget marker — bases never blended.
-function outlookChart(host,{series,cones,markers,horizon,lbl,ymaxPad}){
+function outlookChart(host,{series,cones,markers,horizon,lbl,ymaxPad,markYear}){
   const W=760,Hc=330,m={t:22,r:64,b:30,l:46};const s=svg(W,Hc,lbl||'Outlook chart');
   const xs=series.flatMap(se=>se.pts.map(p=>p.x)).concat((cones||[]).flatMap(c=>c.pts.map(p=>p.x)));
   const xmin=Math.min(...xs),xmax=Math.max(...xs);
@@ -424,6 +432,7 @@ function outlookChart(host,{series,cones,markers,horizon,lbl,ymaxPad}){
   const Y=v=>Hc-m.b-(Hc-m.t-m.b)*(v/ymax);
   niceTicks(ymax).forEach(t=>{s.appendChild(E('line',{class:'gridline',x1:m.l,x2:W-m.r,y1:Y(t),y2:Y(t)}));s.appendChild(E('text',{class:'axis tnum',x:m.l-8,y:Y(t)+3,'text-anchor':'end'},fmt(t,0)));});
   for(let y=xmin;y<=xmax;y++)if((y-xmin)%2===0||y===xmax)s.appendChild(E('text',{class:'axis',x:X(y),y:Hc-m.b+15,'text-anchor':'middle'},y));
+  if(markYear!=null&&markYear>=xmin&&markYear<=xmax){s.appendChild(E('line',{class:'markline',x1:X(markYear),x2:X(markYear),y1:m.t,y2:Hc-m.b}));}
   if(horizon!=null){s.appendChild(E('line',{class:'ev',x1:X(horizon),x2:X(horizon),y1:m.t,y2:Hc-m.b}));
     s.appendChild(E('text',{class:'evlab',x:X(horizon)-4,y:m.t-6,'text-anchor':'end'},'audited'));
     s.appendChild(E('text',{class:'evlab',x:X(horizon)+4,y:m.t-6,'text-anchor':'start'},'unaudited'));}
@@ -477,108 +486,130 @@ function pensionChart(host){const W=760,Hc=330,m={t:16,r:70,b:30,l:44};const s=s
 
 function render(){
   const yr=state.year,U=state.unit;tip.style.opacity=0;
-  document.getElementById('yrval').textContent=yr;document.getElementById('yr').setAttribute('aria-valuetext','Fiscal year '+yr);
-  setTxt('fn-yr',yr);setTxt('gap-yr',yr);setTxt('db-yr',yr>2010?yr:2011);setTxt('rc-yr',yr);
-  const cur=byY[yr]||H[H.length-1],prev=byY[yr-1];
+  const eff=Math.min(yr,2024),future=yr>2024;   // audited data ends at FY2024; beyond it, official MOF figures only
+  document.getElementById('yrval').textContent=yr;document.getElementById('yr').setAttribute('aria-valuetext','Fiscal year '+yr+(future?' (official estimate, unaudited)':''));
+  document.getElementById('yrbasis').style.display=future?'':'none';
+  setTxt('fn-yr',eff);setTxt('gap-yr',eff);setTxt('db-yr',eff>2010?eff:2011);setTxt('rc-yr',eff);
+  const cur=byY[eff]||H[H.length-1],prev=byY[eff-1];
+  const fcur=future?offObj(yr):null,fprev=future?offObj(yr-1):null;
 
-  if(prev){const dr=(cur.rev-prev.rev)/prev.rev*100,dd=cur.debt-prev.debt,topRise=(()=>{const t=DATA.func_trend;const i=t.years.indexOf(yr),ip=t.years.indexOf(yr-1);let best=null;Object.entries(t.series).forEach(([f,a])=>{if(a[ip]){const g=a[i]-a[ip];if(!best||g>best.g)best={f,g};}});return best;})();
-    document.getElementById('digest').innerHTML=`<b>${yr} in a line:</b> revenue ${dr>=0?'rose':'fell'} ${fmt(Math.abs(dr),1)}% to RM${fmt(cur.rev,0)}b, the deficit was RM${fmt(Math.abs(cur.deficit),1)}b (${fmt(100*Math.abs(cur.deficit)/gdpOf(yr),1)}% of GDP), and federal debt ${dd>=0?'grew':'fell'} RM${fmt(Math.abs(dd),0)}b to RM${fmt(cur.debt,0)}b (${fmt(100*cur.debt/gdpOf(yr),0)}% of GDP).${topRise?' Fastest-rising ministry: '+topRise.f+'.':''}`;}
-  else document.getElementById('digest').innerHTML=`<b>${yr}:</b> revenue RM${fmt(cur.rev,0)}b, deficit RM${fmt(Math.abs(cur.deficit),1)}b, debt RM${fmt(cur.debt,0)}b.`;
+  document.querySelectorAll('[data-clamp]').forEach(card=>{let el=card.querySelector('.srcnote.clamp');
+    if(future){if(!el){el=document.createElement('div');el.className='srcnote clamp';card.appendChild(el);}
+      el.innerHTML=`<b>FY${yr} is not yet audited</b> — showing FY2024, the latest audited year. Official 2025–26 figures: <a href="#outlook">the outlook</a>.`;}
+    else if(el)el.remove();});
+
+  if(future){const dpc=offv(yr,'deficit_pct_gdp'),db=offv(yr,'federal_debt');
+    document.getElementById('digest').innerHTML=`<b>${yr} (official ${yr===2025?'revised estimate':'budget estimate'}, unaudited):</b> revenue RM${fmt(fcur.rev,1)}b, spending RM${fmt(fcur.opex+fcur.devex,1)}b, deficit RM${fmt(Math.abs(fcur.deficit),1)}b (${fmt(Math.abs(dpc),1)}% of GDP — MOF's own figures)${db!=null?`; federal debt RM${fmt(db,0)}b as at end-June ${yr}`:''}. Audited actuals end at FY2024; cards without an official figure show FY2024.`;}
+  else if(prev){const dr=(cur.rev-prev.rev)/prev.rev*100,dd=cur.debt-prev.debt,topRise=(()=>{const t=DATA.func_trend;const i=t.years.indexOf(eff),ip=t.years.indexOf(eff-1);let best=null;Object.entries(t.series).forEach(([f,a])=>{if(a[ip]){const g=a[i]-a[ip];if(!best||g>best.g)best={f,g};}});return best;})();
+    document.getElementById('digest').innerHTML=`<b>${eff} in a line:</b> revenue ${dr>=0?'rose':'fell'} ${fmt(Math.abs(dr),1)}% to RM${fmt(cur.rev,0)}b, the deficit was RM${fmt(Math.abs(cur.deficit),1)}b (${fmt(100*Math.abs(cur.deficit)/gdpOf(eff),1)}% of GDP), and federal debt ${dd>=0?'grew':'fell'} RM${fmt(Math.abs(dd),0)}b to RM${fmt(cur.debt,0)}b (${fmt(100*cur.debt/gdpOf(eff),0)}% of GDP).${topRise?' Fastest-rising ministry: '+topRise.f+'.':''}`;}
+  else document.getElementById('digest').innerHTML=`<b>${eff}:</b> revenue RM${fmt(cur.rev,0)}b, deficit RM${fmt(Math.abs(cur.deficit),1)}b, debt RM${fmt(cur.debt,0)}b.`;
 
   const K=[{lab:'Revenue',k:'rev',dir:1,hero:1},{lab:'Overall deficit',k:'deficit',defc:1,hero:1},{lab:'Federal debt',k:'debt',dir:-1,hero:1},
     {lab:'Operating spend',k:'opex',dir:0},{lab:'Development spend',k:'devex',dir:0},{lab:'Debt ÷ revenue',ratio:1,dir:-1}];
   const kel=document.getElementById('kpis');kel.innerHTML='';
-  K.forEach(o=>{const raw=o.ratio?cur.debt/cur.rev:cur[o.k];const pvRaw=prev?(o.ratio?prev.debt/prev.rev:prev[o.k]):null;
-    let disp,unit;if(o.ratio){disp=fmt(raw,2);unit='×';}else{const cv=conv(Math.abs(raw),yr);unit=U==='rm'?'RM b':unitLabel();disp=(o.defc?'−':'')+fmt(cv,1);}
-    let chip='';if(pvRaw!=null){if(o.defc){const impr=raw-pvRaw>0;chip=`<span class="delta ${impr?'up':'down'}">${impr?'↓':'↑'} ${fmt(Math.abs((raw-pvRaw)/pvRaw*100),1)}%</span><span class="yr">vs ${yr-1}</span>`;}
-      else{const p=(raw-pvRaw)/Math.abs(pvRaw)*100;const good=o.dir===0?null:(p>=0)===(o.dir>0);chip=`<span class="delta ${o.dir===0?'flat':(good?'up':'down')}">${p>=0?'↑':'↓'} ${p>=0?'+':'−'}${fmt(Math.abs(p),1)}%</span><span class="yr">vs ${yr-1}</span>`;}}else chip='<span class="yr">first year</span>';
-    const per=o.ratio?'':`≈ RM${fmt(Math.abs(raw)*1000/hhOf(yr),0)} per household`;
+  K.forEach(o=>{const S=future?fcur:cur,P=future?fprev:prev;
+    const raw=o.ratio?(S&&S.debt!=null&&S.rev?S.debt/S.rev:null):(S?S[o.k]:null);
+    const pvRaw=P?(o.ratio?(P.debt!=null&&P.rev?P.debt/P.rev:null):P[o.k]):null;
+    let disp,unit;
+    if(raw==null){disp='–';unit='';}
+    else if(o.ratio){disp=fmt(raw,2);unit='×';}
+    else{const cv=conv(Math.abs(raw),yr);unit=U==='rm'?'RM b':unitLabel();disp=(o.defc?'−':'')+fmt(cv,1);}
+    const vsLab=future?`vs ${yr-1} (official)`:`vs ${yr-1}`;
+    let chip='';
+    if(raw==null)chip='<span class="yr">no official projection</span>';
+    else if(pvRaw!=null){if(o.defc){const impr=raw-pvRaw>0;chip=`<span class="delta ${impr?'up':'down'}">${impr?'↓':'↑'} ${fmt(Math.abs((raw-pvRaw)/pvRaw*100),1)}%</span><span class="yr">${vsLab}</span>`;}
+      else{const p=(raw-pvRaw)/Math.abs(pvRaw)*100;const good=o.dir===0?null:(p>=0)===(o.dir>0);chip=`<span class="delta ${o.dir===0?'flat':(good?'up':'down')}">${p>=0?'↑':'↓'} ${p>=0?'+':'−'}${fmt(Math.abs(p),1)}%</span><span class="yr">${vsLab}</span>`;}}
+    else chip=future?'<span class="yr">official estimate</span>':'<span class="yr">first year</span>';
+    let per='';
+    if(raw!=null){if(o.ratio)per=future?'end-Jun debt ÷ estimated revenue':'';
+      else if(future)per=o.k==='debt'?`as at end-June ${yr} — MOF publishes no year-end projection`:'official estimate — unaudited';
+      else per=`≈ RM${fmt(Math.abs(raw)*1000/hhOf(eff),0)} per household`;}
     const d=document.createElement('div');d.className='kpi'+(o.hero?' hero-k':'');
-    d.innerHTML=`<button class="share" data-share="kpi:${o.k}${o.ratio?':ratio':''}" title="Share">⤓</button><div class="lab">${o.lab}</div><div class="val tnum">${disp}<span class="u">${unit}</span></div>${per?`<div class="per">${per}</div>`:''}<div class="foot">${chip}</div><div class="spark"></div>`;kel.appendChild(d);
+    d.innerHTML=`<button class="share" data-share="kpi:${o.k}${o.ratio?':ratio':''}" title="Share">⤓</button><div class="lab">${o.lab}${future?' <span style="color:var(--warn)">· official</span>':''}</div><div class="val tnum">${disp}<span class="u">${unit}</span></div>${per?`<div class="per">${per}</div>`:''}<div class="foot">${chip}</div><div class="spark"></div>`;kel.appendChild(d);
     const sp=d.querySelector('.spark'),ser=o.ratio?H.map(x=>x.debt/x.rev):H.map(x=>o.defc?-x[o.k]:x[o.k]);
     const Wc=180,Hc=30,mm=3,sg=svg(Wc,Hc);sg.setAttribute('preserveAspectRatio','none');const mn=Math.min(...ser),mx=Math.max(...ser);const Xs=i=>mm+(Wc-2*mm)*(i/(ser.length-1)),Ys=v=>Hc-mm-(Hc-2*mm)*((v-mn)/((mx-mn)||1));
     const col=o.defc?'--bad':(o.k==='debt'||o.ratio?'--s6':o.k==='rev'?'--s1':'--s2');
     sg.appendChild(E('path',{d:ser.map((v,i)=>(i?'L':'M')+Xs(i)+','+Ys(v)).join(' '),fill:'none',stroke:css(col),'stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'}));
-    const mi=H.findIndex(x=>x.year==yr);if(mi>=0)sg.appendChild(E('circle',{cx:Xs(mi),cy:Ys(ser[mi]),r:3,fill:css(col)}));sp.appendChild(sg);});
+    const mi=H.findIndex(x=>x.year==eff);if(mi>=0)sg.appendChild(E('circle',{cx:Xs(mi),cy:Ys(ser[mi]),r:3,fill:css(col)}));sp.appendChild(sg);});
 
-  safe('c-ringgit',()=>{const fnd=DATA.func_by_year[yr]||DATA.func_by_year[2024];const tot=fnd.reduce((a,f)=>a+f.spend,0);
+  safe('c-ringgit',()=>{const fnd=DATA.func_by_year[eff]||DATA.func_by_year[2024];const tot=fnd.reduce((a,f)=>a+f.spend,0);
     const OVER=new Set(['Subsidies & refunds','Debt service','Pensions','Transfers to funds']);
     const host=document.getElementById('c-ringgit');host.innerHTML='';const wrap=document.createElement('div');wrap.className='coinwrap';
     fnd.slice(0,8).forEach(f=>{const cents=100*f.spend/tot;const row=document.createElement('div');row.className='coinrow';
       row.innerHTML=`<span class="coinbar" style="width:${Math.max(cents*2.4,6)}px;background:${css(OVER.has(f.func)?'--s2':'--s1')}"></span><span class="coinlab">${f.func}</span><span class="coinval">RM${fmt(cents,2)}</span>`;wrap.appendChild(row);});
     host.appendChild(wrap);const aside=document.createElement('div');aside.style.cssText='flex:1;min-width:170px;font-size:13px;color:var(--ink-2)';
     const fixed=fnd.filter(f=>OVER.has(f.func)).reduce((a,f)=>a+f.spend,0);
-    aside.innerHTML=`<div style="font-size:34px;font-weight:800;letter-spacing:-1px;color:var(--ink)">RM${fmt(100*fixed/tot,0)}<span style="font-size:14px;color:var(--ink-2)"> of every RM100</span></div><div style="margin-top:4px">goes to <b style="color:var(--ink)">fixed commitments</b> — subsidies, debt interest and pensions — before any service is funded. <span style="color:var(--muted)">${yr}, operating spend.</span></div>`;host.appendChild(aside);});
+    aside.innerHTML=`<div style="font-size:34px;font-weight:800;letter-spacing:-1px;color:var(--ink)">RM${fmt(100*fixed/tot,0)}<span style="font-size:14px;color:var(--ink-2)"> of every RM100</span></div><div style="margin-top:4px">goes to <b style="color:var(--ink)">fixed commitments</b> — subsidies, debt interest and pensions — before any service is funded. <span style="color:var(--muted)">${eff}, operating spend.</span></div>`;host.appendChild(aside);});
 
   safe('c-rev',()=>{const base=H.map(d=>({year:d.year,rev:conv(d.rev,d.year),opex:conv(d.opex,d.year),totexp:conv(d.opex+d.devex,d.year)}));
     legend('lg-rev',[{n:'Revenue',c:css(HUE.revenue)},{n:'Operating',c:css(HUE.operating)},{n:'Total spend',c:css('--s7')},{n:'Deficit',c:css('--bad')}]);
-    lineChart(document.getElementById('c-rev'),{data:base,x:'year',markYear:yr,fill:['totexp','rev'],events:EVENTS,fmtYf:fmtY,unit:unitLabel(),
+    lineChart(document.getElementById('c-rev'),{data:base,x:'year',markYear:eff,fill:['totexp','rev'],events:EVENTS,fmtYf:fmtY,unit:unitLabel(),
       series:[{k:'rev',n:'Revenue',c:HUE.revenue},{k:'opex',n:'Operating',c:HUE.operating},{k:'totexp',n:'Total spend',c:'--s7'}]});
-    const d0=byY[yr]||H[H.length-1];setTxt('tk-rev',`In ${yr}, spending ran RM${fmt(d0.opex+d0.devex-d0.rev,1)}b beyond revenue — a ${fmt(100*Math.abs(d0.deficit)/gdpOf(yr),1)}% of GDP deficit.`);
-    setTxt('src-rev',`Operating = Belanja Mengurus (RM${fmt(d0.opex,1)}b). The by-vote total used in "budget vs actual" (RM${fmt(DATA.gap_totals_by_year[yr]?DATA.gap_totals_by_year[yr].op_actual:d0.opex,1)}b) additionally includes the transfer to the Development Fund.`);
+    const d0=byY[eff]||H[H.length-1];setTxt('tk-rev',`In ${eff}, spending ran RM${fmt(d0.opex+d0.devex-d0.rev,1)}b beyond revenue — a ${fmt(100*Math.abs(d0.deficit)/gdpOf(eff),1)}% of GDP deficit.`);
+    setTxt('src-rev',`Operating = Belanja Mengurus (RM${fmt(d0.opex,1)}b). The by-vote total used in "budget vs actual" (RM${fmt(DATA.gap_totals_by_year[eff]?DATA.gap_totals_by_year[eff].op_actual:d0.opex,1)}b) additionally includes the transfer to the Development Fund.`);
     table('t-rev',['Year','Revenue','Operating','Development','Deficit'],H.map(d=>[d.year,fmt(d.rev,1),fmt(d.opex,1),fmt(d.devex,1),fmt(d.deficit,1)]));});
 
   safe('c-comp',()=>{const c0=DATA.revenue_comp.filter(d=>d.tax!=null).map(d=>({year:d.year,tax:conv(d.tax,d.year),nontax:conv(d.nontax,d.year),investment:conv(d.investment,d.year)}));
     legend('lg-comp',[{n:'Tax',c:css(HUE.tax)},{n:'Non-tax',c:css(HUE.nontax)},{n:'of which investment/PETRONAS',c:css(HUE.investment)}]);
-    lineChart(document.getElementById('c-comp'),{data:c0,x:'year',markYear:yr,events:EVENTS,fmtYf:fmtY,unit:unitLabel(),
+    lineChart(document.getElementById('c-comp'),{data:c0,x:'year',markYear:eff,events:EVENTS,fmtYf:fmtY,unit:unitLabel(),
       series:[{k:'tax',n:'Tax',c:HUE.tax},{k:'nontax',n:'Non-tax',c:HUE.nontax},{k:'investment',n:'Investment income',c:HUE.investment,dash:'4 3'}]});
     table('t-comp',['Year','Tax','Non-tax','Investment','Total'],DATA.revenue_comp.filter(d=>d.tax!=null).map(d=>[d.year,fmt(d.tax,1),fmt(d.nontax,1),fmt(d.investment,1),fmt(d.total,1)]));});
-  safe('c-compbar',()=>{const c=DATA.revenue_comp.find(d=>d.year==yr)||DATA.revenue_comp[DATA.revenue_comp.length-1];
+  safe('c-compbar',()=>{const c=DATA.revenue_comp.find(d=>d.year==eff)||DATA.revenue_comp[DATA.revenue_comp.length-1];
     if(!c||c.tax==null){document.getElementById('c-compbar').innerHTML='<div class="srcnote">Revenue split not itemised before FY2012.</div>';return;}
     hbars(document.getElementById('c-compbar'),{unit:'RM b',rows:[{n:'Tax',v:c.tax,c:HUE.tax,gl:'RM b'},{n:'Non-tax',v:c.nontax,c:HUE.nontax,gl:'RM b'},{n:'One-off receipts',v:c.nonrev,c:'--muted',gl:'RM b'}]});});
 
   safe('c-obj',()=>{const o=DATA.rigidity.filter(d=>d.emol!=null).map(d=>({year:d.year,emol:conv(d.emol,d.year),supplies:conv(d.supplies,d.year),grants:conv(d.grants,d.year),assets:conv(d.assets,d.year)}));
     legend('lg-obj',[{n:'Emoluments',c:css(HUE.emol)},{n:'Grants & fixed charges',c:css(HUE.grants)},{n:'Supplies',c:css(HUE.supplies)},{n:'Assets',c:css(HUE.assets)}]);
-    stackedArea(document.getElementById('c-obj'),{data:o,x:'year',markYear:yr,pctAxis:U!=='rm',unit:unitLabel(),events:EVENTS,
+    stackedArea(document.getElementById('c-obj'),{data:o,x:'year',markYear:eff,pctAxis:U!=='rm',unit:unitLabel(),events:EVENTS,
       series:[{k:'emol',n:'Emoluments',c:HUE.emol},{k:'grants',n:'Grants & fixed charges',c:HUE.grants},{k:'supplies',n:'Supplies',c:HUE.supplies},{k:'assets',n:'Assets',c:HUE.assets}]});
     table('t-obj',['Year','Emoluments','Grants','Supplies','Assets'],DATA.rigidity.filter(d=>d.emol!=null).map(d=>[d.year,fmt(d.emol,1),fmt(d.grants,1),fmt(d.supplies,1),fmt(d.assets,1)]));});
 
-  safe('c-fn',()=>{const OVER=new Set(['Subsidies & refunds','Debt service','Pensions','Transfers to funds']);const fnd=DATA.func_by_year[yr]||DATA.func_by_year[2024];const revY=revOf(yr);
+  safe('c-fn',()=>{const OVER=new Set(['Subsidies & refunds','Debt service','Pensions','Transfers to funds']);const fnd=DATA.func_by_year[eff]||DATA.func_by_year[2024];const revY=revOf(eff);
     legend('lg-fn',[{n:'Ministries / services',c:css('--s1')},{n:'Fixed commitments',c:css('--s2')}]);
-    hbars(document.getElementById('c-fn'),{suffix:U==='rm'?'':'%',unit:unitLabel(),rows:fnd.map(f=>({n:f.func,v:U==='rm'?f.spend:(U==='rev'?100*f.spend/revY:100*f.spend/gdpOf(yr)),c:OVER.has(f.func)?'--s2':'--s1',gl:OVER.has(f.func)?'Fixed commitment':'Ministry / service'}))});
+    hbars(document.getElementById('c-fn'),{suffix:U==='rm'?'':'%',unit:unitLabel(),rows:fnd.map(f=>({n:f.func,v:U==='rm'?f.spend:(U==='rev'?100*f.spend/revY:100*f.spend/gdpOf(eff)),c:OVER.has(f.func)?'--s2':'--s1',gl:OVER.has(f.func)?'Fixed commitment':'Ministry / service'}))});
     const fixed=fnd.filter(f=>OVER.has(f.func)).reduce((a,f)=>a+f.spend,0),tot=fnd.reduce((a,f)=>a+f.spend,0);
-    setTxt('tk-fn',`In ${yr}, ${fmt(100*fixed/tot,0)}% of operating spend was fixed commitments, not services.`);
+    setTxt('tk-fn',`In ${eff}, ${fmt(100*fixed/tot,0)}% of operating spend was fixed commitments, not services.`);
     table('t-fn',['Function','RM b','% of op.','Type'],fnd.map(f=>[f.func,fmt(f.spend,2),fmt(100*f.spend/tot,1),OVER.has(f.func)?'Fixed':'Service']));});
 
-  safe('c-db',()=>{const T=DATA.func_trend,i0=T.years.indexOf(2010),iy=T.years.indexOf(yr>2010?yr:2011);
+  safe('c-db',()=>{const T=DATA.func_trend,i0=T.years.indexOf(2010),iy=T.years.indexOf(eff>2010?eff:2011);
     const revMult=byY[T.years[iy]].rev/byY[2010].rev;
     const rows=Object.entries(T.series).map(([f,a])=>({n:f,a:a[i0],b:a[iy],m:a[i0]?a[iy]/a[i0]:0})).sort((x,y)=>y.m-x.m);
     legend('lg-db',[{n:'2010',hollow:true},{n:String(T.years[iy]),c:css('--s1')},{n:`outran revenue (×${revMult.toFixed(1)})`,c:css('--s2')},{n:'⌇ where it would be at revenue’s pace',c:css('--warn')}]);
     dumbbell(document.getElementById('c-db'),{rows,ya:'2010',yb:String(T.years[iy]),refMult:revMult});
     table('t-db',['Function','2010','Now','Growth','vs revenue'],rows.map(r=>[r.n,fmt(r.a,1),fmt(r.b,1),'×'+r.m.toFixed(2),r.m>=revMult?'outran':'lagged']));});
 
-  safe('c-gap',()=>{const gap=(DATA.gap_by_year[yr]||DATA.gap_by_year[2024]).filter(g=>g.variance!=null).slice().sort((a,b)=>b.variance-a.variance).slice(0,12);
+  safe('c-gap',()=>{const gap=(DATA.gap_by_year[eff]||DATA.gap_by_year[2024]).filter(g=>g.variance!=null).slice().sort((a,b)=>b.variance-a.variance).slice(0,12);
     legend('lg-gap',[{n:'Over budget',c:css('--bad')},{n:'Under budget',c:css('--good')}]);
     divBars(document.getElementById('c-gap'),{rows:gap.map(g=>({...g,v:g.variance}))});
-    const big=gap[0];setTxt('tk-gap',`Biggest ${yr} surprise: ${big.short} ${big.variance>=0?'overshot':'came in under'} by RM${fmt(Math.abs(big.variance),1)}b${big.util?` (${fmt(big.util,0)}% of plan)`:''}.`);
+    const big=gap[0];setTxt('tk-gap',`Biggest ${eff} surprise: ${big.short} ${big.variance>=0?'overshot':'came in under'} by RM${fmt(Math.abs(big.variance),1)}b${big.util?` (${fmt(big.util,0)}% of plan)`:''}.`);
     table('t-gap',['Vote','Name','Original','Revised','Actual','Variance'],gap.map(g=>[g.code,g.short,fmt(g.budget,2),fmt(g.revised,2),fmt(g.actual,2),(g.variance>=0?'+':'−')+fmt(Math.abs(g.variance),2)]));});
 
   safe('c-rig',()=>{const rig=DATA.rigidity.filter(d=>d.emol!=null).map(d=>{const f=U==='rm'?1:(U==='rev'?100/d.rev:100/gdpOf(d.year));
       return{year:d.year,Emoluments:d.emol*f,Pensions:d.pension*f,DebtService:d.debtsvc*f,total:(d.emol+d.pension+d.debtsvc)*f};});
     legend('lg-rig',[{n:'Emoluments',c:css(HUE.emol)},{n:'Pensions',c:css(HUE.pension)},{n:'Debt service',c:css(HUE.debtsvc)},{n:'Pre-committed core',c:css('--s6')}]);
     const refs=(U==='rev')?[{v:15,l:'15% debt-service guardrail'}]:[];
-    stackedArea(document.getElementById('c-rig'),{data:rig,x:'year',markYear:yr,pctAxis:U!=='rm',unit:unitLabel(),overlay:[{k:'total',n:'Pre-committed core',c:'--s6'}],refs,
+    stackedArea(document.getElementById('c-rig'),{data:rig,x:'year',markYear:eff,pctAxis:U!=='rm',unit:unitLabel(),overlay:[{k:'total',n:'Pre-committed core',c:'--s6'}],refs,
       series:[{k:'Emoluments',n:'Emoluments',c:HUE.emol},{k:'Pensions',n:'Pensions',c:HUE.pension},{k:'DebtService',n:'Debt service',c:HUE.debtsvc}]});
-    const r=DATA.rigidity.find(d=>d.year==yr)||DATA.rigidity[DATA.rigidity.length-1];const tp=100*(r.emol+r.pension+r.debtsvc)/r.rev;
-    setTxt('tk-rig',`In ${yr}, ${fmt(tp,0)}% of revenue was pre-committed to pay, pensions and interest — debt service alone was ${fmt(100*r.debtsvc/r.rev,1)}%.`);
+    const r=DATA.rigidity.find(d=>d.year==eff)||DATA.rigidity[DATA.rigidity.length-1];const tp=100*(r.emol+r.pension+r.debtsvc)/r.rev;
+    setTxt('tk-rig',`In ${eff}, ${fmt(tp,0)}% of revenue was pre-committed to pay, pensions and interest — debt service alone was ${fmt(100*r.debtsvc/r.rev,1)}%.`);
     table('t-rig',['Year','Emoluments','Pensions','Debt service','Core % rev'],DATA.rigidity.filter(d=>d.emol!=null).map(d=>[d.year,fmt(d.emol,1),fmt(d.pension,1),fmt(d.debtsvc,1),fmt(100*(d.emol+d.pension+d.debtsvc)/d.rev,0)+'%']));});
 
   safe('c-debt',()=>{const dd=H.map(d=>({year:d.year,debt:conv(d.debt,d.year)}));const refs=U==='gdp'?[{v:65,l:'65% ceiling (temp)'},{v:60,l:'60% statutory'}]:[];
     legend('lg-debt',[{n:U==='gdp'?'Debt (% of GDP)':U==='rev'?'Debt (% of revenue)':'Federal debt (RM b)',c:css(HUE.debt)}]);
-    lineChart(document.getElementById('c-debt'),{data:dd,x:'year',markYear:yr,events:[{y:2020,l:'COVID'}],refs,fmtYf:fmtY,unit:unitLabel(),series:[{k:'debt',n:'Debt',c:HUE.debt,area:true}]});
-    setTxt('tk-debt',`${yr}: RM${fmt(cur.debt,0)}b — ${fmt(100*cur.debt/gdpOf(yr),0)}% of GDP, ${fmt(cur.debt/cur.rev,1)}× annual revenue.`);
+    lineChart(document.getElementById('c-debt'),{data:dd,x:'year',markYear:eff,events:[{y:2020,l:'COVID'}],refs,fmtYf:fmtY,unit:unitLabel(),series:[{k:'debt',n:'Debt',c:HUE.debt,area:true}]});
+    setTxt('tk-debt',`${eff}: RM${fmt(cur.debt,0)}b — ${fmt(100*cur.debt/gdpOf(eff),0)}% of GDP, ${fmt(cur.debt/cur.rev,1)}× annual revenue.`);
     table('t-debt',['Year','Debt RM b','% of GDP','× revenue'],H.map(d=>[d.year,fmt(d.debt,0),fmt(100*d.debt/gdpOf(d.year),0)+'%',fmt(d.debt/d.rev,2)+'×']));});
 
   safe('c-mat',()=>vbars(document.getElementById('c-mat'),{rows:DATA.debt_maturity.filter(m=>m.year<=2035).map(m=>({k:m.year,v:m.v,gl:'RM b maturing'})),color:'--s6'}));
   safe('c-inst',()=>{legend('lg-inst',[{n:'Domestic securities (MGS/MGII)',c:css('--s1')},{n:'Other',c:css('--s3')}]);
     hbars(document.getElementById('c-inst'),{unit:'RM b',rows:DATA.debt_instruments.map(x=>({n:x.name.length>26?x.name.slice(0,24)+'…':x.name,v:x.v,c:/SEKURITI|PELABURAN/.test(x.name)?'--s1':'--s3',gl:'RM b'}))});});
 
-  safe('c-con',()=>{const c=DATA.contingent_by_year[yr]||DATA.contingent_by_year[2024];
+  safe('c-con',()=>{const c=DATA.contingent_by_year[eff]||DATA.contingent_by_year[2024];
     const steps=[{l:'Direct debt',v:c.debt},{l:'+ Guarantees',v:c.guarantees||0},{l:'+ PFI',v:c.pfi||0},{l:'+ Leases',v:c.leases||0},{l:'Total on-book + contingent',v:(c.debt||0)+(c.guarantees||0)+(c.pfi||0)+(c.leases||0),total:1}];
     waterfall(document.getElementById('c-con'),{steps});
-    const host=document.getElementById('c-con');const note=document.createElement('div');note.className='srcnote';note.innerHTML=`<b>Plus statutory guarantees ≈ RM${fmt(c.statutory,0)}b</b> (${fmt(100*c.statutory/gdpOf(yr),0)}% of GDP) — mostly deposit-insurance-type cover; overlaps the above and is <b>not</b> added here.`;host.appendChild(note);});
+    const host=document.getElementById('c-con');const note=document.createElement('div');note.className='srcnote';note.innerHTML=`<b>Plus statutory guarantees ≈ RM${fmt(c.statutory,0)}b</b> (${fmt(100*c.statutory/gdpOf(eff),0)}% of GDP) — mostly deposit-insurance-type cover; overlaps the above and is <b>not</b> added here.`;host.appendChild(note);});
   safe('c-gent',()=>hbars(document.getElementById('c-gent'),{unit:'RM b',rows:DATA.guarantee_entities.map(e=>({n:e.name.length>28?e.name.slice(0,26)+'…':e.name,v:e.v,c:'--s2',gl:'RM b guaranteed'}))}));
-  safe('t-con',()=>{const c=DATA.contingent_by_year[yr]||DATA.contingent_by_year[2024];table('t-con',['Item','RM b','% of GDP'],[['Direct federal debt',fmt(c.debt,1),fmt(100*c.debt/gdpOf(yr),0)],['Guarantees',fmt(c.guarantees,1),fmt(100*c.guarantees/gdpOf(yr),0)],['PFI',fmt(c.pfi,1),c.pfi?fmt(100*c.pfi/gdpOf(yr),0):'–'],['Leases',fmt(c.leases,1),c.leases?fmt(100*c.leases/gdpOf(yr),0):'–'],['Statutory (non-additive)',fmt(c.statutory,1),fmt(100*c.statutory/gdpOf(yr),0)]]);});
+  safe('t-con',()=>{const c=DATA.contingent_by_year[eff]||DATA.contingent_by_year[2024];table('t-con',['Item','RM b','% of GDP'],[['Direct federal debt',fmt(c.debt,1),fmt(100*c.debt/gdpOf(eff),0)],['Guarantees',fmt(c.guarantees,1),fmt(100*c.guarantees/gdpOf(eff),0)],['PFI',fmt(c.pfi,1),c.pfi?fmt(100*c.pfi/gdpOf(eff),0):'–'],['Leases',fmt(c.leases,1),c.leases?fmt(100*c.leases/gdpOf(eff),0):'–'],['Statutory (non-additive)',fmt(c.statutory,1),fmt(100*c.statutory/gdpOf(eff),0)]]);});
 
   safe('pl-list',()=>{const pl=DATA.pipeline,drawn=100*pl.cum/pl.approved;
     document.getElementById('pl-big').innerHTML=`<div><div class="n tnum">${fmt(pl.approved,0)}<span class="u"> RM b approved</span></div><div class="l">${pl.n} projects</div></div><div><div class="n tnum">${fmt(pl.cum,0)}<span class="u"> RM b spent</span></div><div class="l">${fmt(drawn,0)}% delivered</div></div><div><div class="n tnum">~${Math.round((pl.approved-pl.cum)/pl.annual)}<span class="u"> yrs</span></div><div class="l">backlog at RM${fmt(pl.annual,0)}b/yr</div></div>`;
@@ -611,7 +642,7 @@ function render(){
       ...[2025,2026].map(y=>{const m=mrow(y,'rev');return{x:y,lo:m.lo,hi:m.hi};})]};
     legend('lg-outlook',[{n:'Audited revenue',c:css('--s1')},{n:'Audited total spend',c:css('--s7')},
       {n:'Official (MOF, dashed)',c:css('--s4')},{n:'Model band (rev)',c:css('--s1')},{n:'◆ Budget 2025 as tabled',c:css('--s5')}]);
-    outlookChart(document.getElementById('c-outlook'),{lbl:'Revenue and spending outlook to 2026',horizon:2024,
+    outlookChart(document.getElementById('c-outlook'),{lbl:'Revenue and spending outlook to 2026',horizon:2024,markYear:yr,
       series:[{n:'Audited revenue',c:'--s1',pts:aud('rev'),bold:true},
               {n:'Audited total spend',c:'--s7',pts:aud('totexp'),bold:true},
               {n:'Official revenue',c:'--s4',pts:offRev,dash:'6 4',dots:true,label:true},
@@ -639,7 +670,7 @@ function render(){
     // model deficit band: lo/hi are signed (lo least negative); magnitudes may swap order
     cone.pts.forEach(p=>{if(p.lo>p.hi){const t=p.lo;p.lo=p.hi;p.hi=t;}});
     legend('lg-outdef',[{n:'Audited deficit',c:css('--bad')},{n:'Official (MOF, dashed)',c:css('--s4')},{n:'Model band',c:css('--bad')}]);
-    outlookChart(document.getElementById('c-outdef'),{lbl:'Overall deficit outlook to 2026',horizon:2024,ymaxPad:1.15,
+    outlookChart(document.getElementById('c-outdef'),{lbl:'Overall deficit outlook to 2026',horizon:2024,ymaxPad:1.15,markYear:yr,
       series:[{n:'Audited deficit',c:'--bad',pts:audited,bold:true},
               {n:'Official deficit',c:'--s4',pts:offDef,dash:'6 4',dots:true,label:true}],
       cones:[cone]});
@@ -663,10 +694,12 @@ function drawCard(title,value,sub){const cv=document.getElementById('cardcanvas'
   x.fillStyle=dark?'#f3f6f4':'#0d1210';x.font='700 40px system-ui';wrapText(x,title,52,130,W-100,46);
   x.fillStyle='#0e6a63';x.font='800 96px system-ui';x.fillText(value,50,300);
   x.fillStyle=dark?'#b2bcb7':'#4a544f';x.font='400 27px system-ui';wrapText(x,sub,52,350,W-100,36);
-  x.fillStyle=dark?'#828c86':'#727b76';x.font='400 21px system-ui';x.fillText('Source: audited PKKP, reconciled to the sen · FY'+state.year,52,Hh-30);
+  x.fillStyle=dark?'#828c86':'#727b76';x.font='400 21px system-ui';x.fillText(state.year>2024?'Official MOF estimate · unaudited · '+state.year:'Source: audited PKKP, reconciled to the sen · FY'+state.year,52,Hh-30);
   document.getElementById('modal').classList.add('on');}
 function wrapText(ctx,t,x,y,maxW,lh){const words=String(t).split(' ');let line='',yy=y;words.forEach(w=>{if(ctx.measureText(line+w).width>maxW&&line){ctx.fillText(line,x,yy);line=w+' ';yy+=lh;}else line+=w+' ';});ctx.fillText(line,x,yy);}
-function shareOf(key){const yr=state.year,cur=byY[yr]||H[H.length-1];const rg=DATA.rigidity.find(d=>d.year==yr)||DATA.rigidity[DATA.rigidity.length-1];
+function shareOf(key){const yr=Math.min(state.year,2024),future=state.year>2024,cur=byY[yr]||H[H.length-1];const rg=DATA.rigidity.find(d=>d.year==yr)||DATA.rigidity[DATA.rigidity.length-1];
+  if(future&&key.startsWith('kpi:')){const k=key.split(':')[1],f=offObj(state.year);if(key.includes('ratio')||f[k]==null)return;
+    const map={rev:['Revenue','RM'+fmt(f.rev,0)+'b','Official '+state.year+' estimate — unaudited (MOF Fiscal Outlook).'],deficit:['Overall deficit','RM'+fmt(Math.abs(f.deficit),0)+'b',fmt(Math.abs(offv(state.year,'deficit_pct_gdp')),1)+'% of GDP — official '+state.year+' estimate, unaudited.'],debt:['Federal debt','RM'+fmt(f.debt,0)+'b','As at end-June '+state.year+' (official, unaudited).'],opex:['Operating spend','RM'+fmt(f.opex,0)+'b','Official '+state.year+' estimate — unaudited.'],devex:['Development spend','RM'+fmt(f.devex,0)+'b','Official '+state.year+' estimate — unaudited.']};const m=map[k]||['','',''];drawCard(m[0],m[1],m[2]);return;}
   if(key.startsWith('kpi:')){const k=key.split(':')[1];if(key.includes('ratio')){drawCard('Debt is',fmt(cur.debt/cur.rev,1)+'×','times annual revenue in '+yr+'.');return;}
     const map={rev:['Revenue','RM'+fmt(cur.rev,0)+'b','Federal revenue in '+yr+' — '+fmt(100*cur.rev/gdpOf(yr),0)+'% of GDP.'],deficit:['Overall deficit','RM'+fmt(Math.abs(cur.deficit),0)+'b',fmt(100*Math.abs(cur.deficit)/gdpOf(yr),1)+'% of GDP in '+yr+'.'],debt:['Federal debt','RM'+fmt(cur.debt,0)+'b',fmt(100*cur.debt/gdpOf(yr),0)+'% of GDP · RM'+fmt(cur.debt*1000/hhOf(yr),0)+' per household.'],opex:['Operating spend','RM'+fmt(cur.opex,0)+'b','Belanja Mengurus, '+yr+'.'],devex:['Development spend','RM'+fmt(cur.devex,0)+'b','Belanja Pembangunan, '+yr+'.']};const m=map[k]||['','',''];drawCard(m[0],m[1],m[2]);return;}
   const core=100*(rg.emol+rg.pension+rg.debtsvc)/cur.rev;
@@ -681,7 +714,7 @@ function shareOf(key){const yr=state.year,cur=byY[yr]||H[H.length-1];const rg=DA
 
 let EMBED=null;
 function writeHash(){try{history.replaceState(null,'','#y='+state.year+'&u='+state.unit+(EMBED?'&embed='+EMBED:''));}catch(e){}}
-function readHash(){const h=new URLSearchParams(location.hash.replace(/^#/,''));if(h.get('y'))state.year=Math.min(2024,Math.max(2010,+h.get('y')||2024));if(['rm','rev','gdp'].includes(h.get('u')))state.unit=h.get('u');EMBED=h.get('embed')||null;}
+function readHash(){const h=new URLSearchParams(location.hash.replace(/^#/,''));if(h.get('y'))state.year=Math.min(2026,Math.max(2010,+h.get('y')||2024));if(['rm','rev','gdp'].includes(h.get('u')))state.unit=h.get('u');EMBED=h.get('embed')||null;}
 function applyEmbed(){if(!EMBED)return;const target=document.querySelector(`[data-embed-id="${EMBED}"]`);if(!target)return;
   // hide everything except the target card; keep tooltip + modal live
   document.querySelectorAll('header.top,.controls,.hero,.sec,.storyrail,footer').forEach(e=>e.style.display='none');
@@ -693,7 +726,7 @@ function applyEmbed(){if(!EMBED)return;const target=document.querySelector(`[dat
 document.getElementById('yr').addEventListener('input',e=>{state.year=+e.target.value;render();});
 document.querySelectorAll('#unit button').forEach(b=>b.addEventListener('click',()=>{state.unit=b.dataset.u;document.querySelectorAll('#unit button').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
 let playing=null;document.getElementById('play').addEventListener('click',function(){if(playing){clearInterval(playing);playing=null;this.textContent='▶';return;}
-  this.textContent='⏸';let y=state.year>=2024?2010:state.year;playing=setInterval(()=>{y++;if(y>2024){clearInterval(playing);playing=null;this.textContent='▶';return;}state.year=y;document.getElementById('yr').value=y;render();},650);});
+  this.textContent='⏸';let y=state.year>=2026?2010:state.year;playing=setInterval(()=>{y++;if(y>2026){clearInterval(playing);playing=null;this.textContent='▶';return;}state.year=y;document.getElementById('yr').value=y;render();},650);});
 document.getElementById('themeBtn').addEventListener('click',()=>{const cur=document.documentElement.getAttribute('data-theme');const dark=cur?cur==='dark':matchMedia('(prefers-color-scheme:dark)').matches;document.documentElement.setAttribute('data-theme',dark?'light':'dark');render();});
 matchMedia('(prefers-color-scheme:dark)').addEventListener('change',()=>{if(!document.documentElement.getAttribute('data-theme'))render();});
 ['age','idx','dc'].forEach(k=>{document.getElementById('s-'+k).addEventListener('input',e=>{SIM[k]=+e.target.value;

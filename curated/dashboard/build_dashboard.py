@@ -218,7 +218,8 @@ with open(os.path.join(ROOT, "sources", "mof-fiscal-outlook", "data", "fiscal_ou
     for row in _csv.DictReader(f):
         if int(row["target_year"]) >= 2024 and row["line"] in (
                 "revenue", "operating_expenditure", "development_expenditure",
-                "overall_deficit", "deficit_pct_gdp", "nominal_gdp"):
+                "overall_deficit", "deficit_pct_gdp", "nominal_gdp",
+                "federal_debt", "debt_pct_gdp"):
             off.append({"edition": int(row["edition_year"]), "year": int(row["target_year"]),
                         "line": row["line"], "v": float(row["amount_rm_bil"]), "basis": row["basis"]})
 bud = {"opex": 0.0, "devex": 0.0}
