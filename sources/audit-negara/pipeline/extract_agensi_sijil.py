@@ -41,6 +41,15 @@ NOISE = re.compile(r"^(RAHSIA|Lampiran \d|BIL\.?|JENIS PENDAPAT AUDIT|20\d\d|"
 MINISTRY = re.compile(r"^[A-Z]{1,2}$")
 BIL = re.compile(r"^(\d{1,3})\.$")
 OPINIONS = ("Tanpa Teguran", "Berteguran", "Bertentangan", "Penafian")
+# cells whose only usable text layer is the per-character-spaced duplicate, where
+# the generic fold cannot recover printed word spacing; values are the printed
+# readings confirmed by the independent two-engine verifier pass (pdftotext
+# -layout in-box + pdfplumber) against the page itself
+LAYOUT_REPAIRS = {
+    (2023, 80): {"agency_name_bm": "Yayasan Pelajaran Persatuan Peladang dan "
+                                   "Pertubuhan Peladang Mada (YP MADA)",
+                 "agency_abbr": "YP MADA"},
+}
 QUALIFIERS = ("Penegasan Perkara dan Hal-hal Lain", "Penegasan Perkara",
               "Hal-hal Lain", "Perkara Utama Audit")
 QUAL_LEAK = re.compile(r"^\(?(Penegasan|Perkara|Hal-hal|dan Hal-hal)")
@@ -140,9 +149,12 @@ def extract(year):
         for mp, my, kind, payload in marks:
             if (mp, my - 8) <= (a["page"], a["y"]):
                 if kind == "section":
+                    if payload != a["section"]:
+                        # ministry groups restart per sub-register (Lain has
+                        # none) — but the section title also repeats as a table
+                        # header on every page, which must NOT reset anything
+                        a["ministry_group"], a["ministry_bm"] = "", ""
                     a["section"] = payload
-                    # ministry groups restart per sub-register (Lain has none)
-                    a["ministry_group"], a["ministry_bm"] = "", ""
                 else:
                     a["ministry_group"], a["ministry_bm"] = payload
         a["Lparts"], a["Rparts"] = [], []
@@ -167,11 +179,28 @@ def extract(year):
             blob = f"{blob} {leak.group(0)}"
             name = name[:leak.start()].strip()
         opinion, qualifier = parse_opinion(blob.strip())
+        # rows the duplicated text layer renders with per-character spacing:
+        # fold runs of single-character tokens back into words
+        if len([t for t in name.split() if len(t) == 1]) >= 3:
+            folded, carry = [], ""
+            for tok in name.split():
+                if len(tok) == 1 and tok not in "-–":
+                    carry += tok
+                else:
+                    folded.append(carry + tok)
+                    carry = ""
+            if carry:
+                folded.append(carry)
+            name = " ".join(folded)
+        am = re.search(r"\(([^()]+)\)\s*$", name)
+        fix = LAYOUT_REPAIRS.get((year, a["bil"]), {})
+        name = fix.get("agency_name_bm", name)
         am = re.search(r"\(([^()]+)\)\s*$", name)
         recs.append({
             "year": year, "register": a["section"], "bil": a["bil"],
             "ministry_group": a["ministry_group"], "ministry_bm": a["ministry_bm"],
-            "agency_name_bm": name, "agency_abbr": am.group(1) if am else "",
+            "agency_name_bm": name,
+            "agency_abbr": fix.get("agency_abbr", am.group(1) if am else ""),
             "opinion": opinion, "opinion_qualifier": qualifier,
             "incorporating_act": act, "report": report,
             "source_file": fname, "pdf_page": a["page"],

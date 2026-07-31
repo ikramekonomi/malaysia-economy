@@ -40,15 +40,31 @@ details and findings tables is the next step (below).
   never disabled). Network policy note: the egress proxy honours allowlist entries for
   HTTPS only (plain HTTP and HTTP-only hosts like crt.sectigo.com are blocked).
 
-## Planned first extraction
+## Extracted datasets
 
-1. `fact_audit_opinion.csv` — per audited year: opinion type, sijil date, emphasis
-   paragraphs (from the two Penyata Kewangan volumes' Sijil + Lampiran sections), with
-   `pdf_page` provenance. Cross-links to PKKP years as the audited-quality attestation.
-2. The Penyata Kewangan volumes' own summary tables of federal finances (revenue,
+### Per-agency sijil registers (`data/fact_agensi_sijil_{2023,2024}.csv`)
+
+One row per federal agency certified by the Auditor-General (Lampiran 2 of the two
+Agensi volumes): 142 rows FY2023, 143 rows FY2024 — badan berkanun / kumpulan wang /
+agensi lain sub-registers, ministry groups, opinion + qualifier, incorporating act for
+the Lain register, per-row `pdf_page`. Pipeline `pipeline/extract_agensi_sijil.py`
+(the PDFs carry duplicated offset text layers and out-of-page-box neighbour text —
+see the script's layout notes), validation `pipeline/validate_agensi.py`:
+**17/17 PASS** against the reports' own printed tallies (FY2023: 133 Tanpa Teguran /
+8 Berteguran / 1 Bertentangan — MADA's adverse opinion; FY2024: 128 / 15).
+**Adversarial verifier:** independent blind two-engine re-derivation (pdftotext
+-layout + pdfplumber) — AGREE on every row of both years, all opinions/qualifiers
+identical; the two artifacts it flagged (spaced-duplicate name capture on FY2023
+bil 80; ministry groups dropped on continuation pages) are fixed and re-validated.
+Source inconsistency (kept as printed): FY2023 prose says 129+10+3 agencies, its own
+register prints 130+9+3 — `data/_source_anomalies_agensi.csv`.
+
+## Planned next extraction
+
+1. The Penyata Kewangan volumes' own summary tables of federal finances (revenue,
    opex, DE, deficit, debt) — a third independent restatement to triangulate against
    PKKP (audited) and BNM (reported).
-3. Findings registers from the Aktiviti volumes: per-ministry findings with amounts
+2. Findings registers from the Aktiviti volumes: per-ministry findings with amounts
    (kelemahan/teguran), keyed to `maksud` where the report names votes, joining PKKP
    for the "planned vs delivered vs audited-verdict" pairing in docs/SOURCES.md.
 
