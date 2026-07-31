@@ -188,6 +188,23 @@ d["covid"] = [{"year": int(x.year), "spend": r(x.v)} for x in
 # ---- policy constants (Fiscal Responsibility Act guardrails; no data source needed) ----
 d["fra"] = {"debt_gdp_ceiling": 60, "debt_gdp_ceiling_temp": 65, "deficit_gdp_target": 3.0, "debtsvc_rev_limit": 15}
 
+# ---- page-level provenance (every warehouse row carries statement + printed_page) ----
+def pv(sql):
+    r = q(sql)
+    if not len(r): return None
+    row = r.iloc[0]
+    pg = row.get("printed_page")
+    return {"statement": (row.get("statement") or "").strip(), "page": (int(pg) if pg is not None and str(pg) != "nan" else None)}
+d["prov"] = {
+    "perf":       pv("SELECT statement,printed_page FROM fact_financial_performance WHERE source_file ILIKE '2024_%' LIMIT 1"),
+    "revenue":    pv("SELECT statement,printed_page FROM fact_revenue WHERE source_file ILIKE '2024_%' AND year=2024 AND level=0 LIMIT 1"),
+    "opex":       pv("SELECT statement,printed_page FROM fact_opex_maksud WHERE source_file ILIKE '2024_%' AND year=2024 LIMIT 1"),
+    "obj":        pv("SELECT statement,printed_page FROM fact_opex_detail WHERE source_file ILIKE '2024_%' AND year=2024 AND row_type='object_aktiviti' LIMIT 1"),
+    "devex":      pv("SELECT statement,printed_page FROM fact_devex_project WHERE source_file ILIKE '2024_%' AND row_type='project' LIMIT 1"),
+    "debt":       pv("SELECT statement,printed_page FROM fact_debt_issues WHERE source_file ILIKE '2024_%' AND year=2024 AND row_type='detail' LIMIT 1"),
+    "guarantees": pv("SELECT statement,printed_page FROM fact_guarantees WHERE source_file ILIKE '2024_%' AND year=2024 AND row_type='detail' LIMIT 1"),
+}
+
 out_json = os.path.join(HERE, "data.json")
 json.dump(d, open(out_json, "w"))
 print("data.json:", os.path.getsize(out_json), "bytes; keys:", len(d))
