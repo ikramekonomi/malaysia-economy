@@ -50,7 +50,7 @@ d["external"] = {"note": "GDP & population are DOSM figures, external to the aud
 peers = []
 with open(PEERS) as f:
     for row in _csv.DictReader(f):
-        peers.append({"country": row["country"], "debt_gdp": float(row["debt_gdp"]), "deficit_gdp": float(row["deficit_gdp"]), "is_malaysia": row["is_malaysia"] == "1"})
+        peers.append({"country": row["country"], "debt_gdp": float(row["debt_gdp"]), "deficit_gdp": float(row["deficit_gdp"]), "is_malaysia": row["is_malaysia"] == "1", "note": row.get("note", "")})
 d["peers"] = peers
 
 # ---- headline (validated Penyata Prestasi Kewangan) ----

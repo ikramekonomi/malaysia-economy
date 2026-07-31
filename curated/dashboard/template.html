@@ -22,8 +22,10 @@
     --good-fill:rgba(34,180,34,.16);--bad-fill:rgba(224,86,70,.16);--warn:#e0b13a;--shadow:0 1px 2px rgba(0,0,0,.4);}
 
   *{box-sizing:border-box}
+  body{margin:0;background:var(--plane)}
   .wrap{font-family:var(--font);background:var(--plane);color:var(--ink);min-height:100vh;position:relative;
-    -webkit-font-smoothing:antialiased;line-height:1.5;padding:0 clamp(14px,3vw,40px) 60px}
+    -webkit-font-smoothing:antialiased;line-height:1.5;padding:0 clamp(14px,3vw,40px) 60px;
+    max-width:1460px;margin:0 auto}
   .tnum{font-variant-numeric:tabular-nums}
   a{color:var(--accent)}
 
@@ -81,7 +83,7 @@
   .kpi .foot{display:flex;align-items:center;gap:7px;margin-top:6px;font-size:11.5px}
   .delta{display:inline-flex;align-items:center;gap:3px;font-weight:700;padding:1px 6px;border-radius:999px}
   .delta.up{color:var(--good-ink);background:var(--good-fill)} .delta.down{color:var(--bad-ink);background:var(--bad-fill)} .delta.flat{color:var(--ink-2);background:var(--surface-2)}
-  .kpi .yr{color:var(--muted)} .kpi .spark{margin-top:9px;height:30px}
+  .kpi .yr{color:var(--muted)} .kpi .spark{margin-top:9px;height:30px} .kpi .spark svg{width:100%;height:100%}
   .share{position:absolute;top:10px;right:10px;width:24px;height:24px;border-radius:7px;border:1px solid var(--border);background:var(--surface);color:var(--muted);cursor:pointer;font-size:12px;display:grid;place-items:center;opacity:0;transition:opacity .12s}
   .kpi:hover .share,.card:hover .share{opacity:1} .share:hover{color:var(--accent);border-color:var(--accent)} .share:focus-visible{opacity:1;outline:2px solid var(--accent)}
 
@@ -91,7 +93,7 @@
   .card h4{font-size:15px;margin:0 32px 0 0;font-weight:700;letter-spacing:-.2px;text-wrap:balance}
   .card .desc{font-size:12.5px;color:var(--ink-2);margin:3px 0 10px;max-width:64ch} .card .desc b{color:var(--ink);font-weight:650}
   .take{font-size:12.5px;font-weight:650;color:var(--accent);margin:0 0 10px} .take::before{content:"→ "}
-  .chart{width:100%;position:relative} .chart svg{width:100%;height:auto;display:block;overflow:visible}
+  .chart{width:100%;position:relative} .chart svg{width:100%;height:auto;display:block;overflow:visible;max-width:860px;margin-inline:auto}
   .cerr{font-size:12px;color:var(--bad);padding:10px 0}
   .legend{display:flex;flex-wrap:wrap;gap:9px 14px;margin:2px 0 9px;font-size:12px;color:var(--ink-2)}
   .legend span{display:inline-flex;align-items:center;gap:6px} .swatch{width:11px;height:11px;border-radius:3px;flex:none} .swatch.hollow{background:none!important;border:2px solid var(--muted)}
@@ -102,7 +104,7 @@
   .markline{stroke:var(--accent);stroke-width:1.5;opacity:.5} .refline{stroke:var(--warn);stroke-width:1.5;stroke-dasharray:5 4;opacity:.9}
   .ev{stroke:var(--muted);stroke-width:1;stroke-dasharray:2 3;opacity:.6} .evlab{fill:var(--muted);font-size:9.5px}
 
-  .tip{position:absolute;pointer-events:none;z-index:40;background:var(--surface);border:1px solid var(--border);border-radius:9px;box-shadow:0 4px 16px rgba(0,0,0,.18);padding:8px 10px;font-size:12px;min-width:130px;opacity:0;transition:opacity .1s;transform:translate(-50%,0)}
+  .tip{position:absolute;pointer-events:none;z-index:40;background:var(--surface);color:var(--ink);font-family:var(--font);border:1px solid var(--border);border-radius:9px;box-shadow:0 4px 16px rgba(0,0,0,.18);padding:8px 10px;font-size:12px;min-width:130px;opacity:0;transition:opacity .1s;transform:translate(-50%,0)}
   .tip .th{font-weight:700;margin-bottom:5px} .tip .row{display:flex;gap:8px;justify-content:space-between;margin:2px 0}
   .tip .row .k{display:inline-flex;align-items:center;gap:6px;color:var(--ink-2)} .tip .row .v{font-weight:700;font-variant-numeric:tabular-nums} .dot{width:9px;height:9px;border-radius:50%;flex:none}
 
@@ -248,7 +250,7 @@
       <p class="desc" style="margin:14px 0 6px"><b>Who the guarantees are for</b> (2024, largest exposures):</p><div class="chart" id="c-gent"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-con"></div></details></section>
     <section class="card" data-embed-id="compare"><button class="share" data-share="compare" title="Share">⤓</button>
-      <h4>How Malaysia compares to its neighbours</h4><p class="desc">Federal debt and fiscal deficit against regional peers, % of GDP (2024). <b>Indicative</b> — cross-country debt definitions differ, so read the ranking, not the decimals.</p>
+      <h4>How Malaysia compares — region and beyond</h4><p class="desc">Government debt and fiscal balance against regional and global peers, % of GDP (2024). <b>Indicative</b> — cross-country debt definitions differ (Singapore's gross debt, for instance, is backed by assets that exceed it), so read the ranking, not the decimals.</p>
       <div class="legend" id="lg-peer"></div>
       <div style="display:grid;grid-template-columns:1fr;gap:14px">
         <div><div class="srcnote" style="margin:0 0 2px"><b>Government debt, % of GDP</b></div><div class="chart" id="c-peer-debt"></div></div>
@@ -260,8 +262,8 @@
   Peer comparisons are <b>IMF/national figures, external and indicative</b> — cross-country debt definitions differ.
   <div class="srcnote" style="margin-top:10px">A data warehouse for Malaysia's public finances. Every figure is traceable to an audited source page.
   <br>Embed a single chart by adding <code>#embed=revenue|debt|rigidity|gap|pension|covid|contingent|compare</code> to the URL (combine with <code>y=</code> and <code>u=</code>).</div></footer>
-</div>
 <div class="tip" id="tip"></div>
+</div>
 <div class="modal" id="modal"><div class="modal-in"><canvas id="cardcanvas" width="1000" height="525"></canvas>
   <div class="modal-row"><button class="tgl" id="dlcard" type="button">⤓ Download PNG</button><button class="tgl" id="closecard" type="button">Close</button></div></div></div>
 
@@ -352,8 +354,8 @@ function hbars(host,{rows,unit,suffix}){const W=760,rh=30,m={t:6,r:58,b:4,l:152}
   const max=Math.max(...rows.map(r=>r.v))*1.02;const X=v=>m.l+(W-m.l-m.r)*(v/max);
   rows.forEach((r,i)=>{const y=m.t+i*rh;s.appendChild(E('text',{class:'axis',x:m.l-9,y:y+rh/2+4,'text-anchor':'end',fill:'var(--ink)'},r.n));
     const rect=E('rect',{x:m.l,y:y+6,width:Math.max(X(r.v)-m.l,1),height:rh-13,rx:4,fill:css(r.c)});s.appendChild(rect);
-    s.appendChild(E('text',{class:'glab tnum',x:X(r.v)+6,y:y+rh/2+4},fmt(r.v,1)+(suffix||'')));
-    rect.addEventListener('mousemove',ev=>showTip(ev,`<div class="th">${r.full||r.n}</div><div class="row"><span class="k">${r.gl||''}</span><span class="v">${fmt(r.v,2)}${suffix||' '+(unit||'')}</span></div>`));rect.addEventListener('mouseleave',hideTip);});
+    s.appendChild(E('text',{class:'glab tnum',x:X(r.v)+6,y:y+rh/2+4},r.lab!=null?r.lab:fmt(r.v,1)+(suffix||'')));
+    rect.addEventListener('mousemove',ev=>showTip(ev,`<div class="th">${r.full||r.n}</div><div class="row"><span class="k">${r.gl||''}</span><span class="v">${r.lab!=null?r.lab:fmt(r.v,2)+(suffix||' '+(unit||''))}</span></div>`));rect.addEventListener('mouseleave',hideTip);});
   host.innerHTML='';host.appendChild(s);}
 function vbars(host,{rows,color}){const W=760,Hc=250,m={t:16,r:12,b:34,l:40};const s=svg(W,Hc,host.dataset.lbl);
   const max=Math.max(...rows.map(r=>r.v))*1.1;const bw=(W-m.l-m.r)/rows.length*.62;const X=i=>m.l+(W-m.l-m.r)*((i+.5)/rows.length);const Y=v=>Hc-m.b-(Hc-m.t-m.b)*(v/max);
@@ -439,7 +441,7 @@ function render(){
     const d=document.createElement('div');d.className='kpi'+(o.hero?' hero-k':'');
     d.innerHTML=`<button class="share" data-share="kpi:${o.k}${o.ratio?':ratio':''}" title="Share">⤓</button><div class="lab">${o.lab}</div><div class="val tnum">${disp}<span class="u">${unit}</span></div>${per?`<div class="per">${per}</div>`:''}<div class="foot">${chip}</div><div class="spark"></div>`;kel.appendChild(d);
     const sp=d.querySelector('.spark'),ser=o.ratio?H.map(x=>x.debt/x.rev):H.map(x=>o.defc?-x[o.k]:x[o.k]);
-    const Wc=180,Hc=30,mm=3,sg=svg(Wc,Hc);const mn=Math.min(...ser),mx=Math.max(...ser);const Xs=i=>mm+(Wc-2*mm)*(i/(ser.length-1)),Ys=v=>Hc-mm-(Hc-2*mm)*((v-mn)/((mx-mn)||1));
+    const Wc=180,Hc=30,mm=3,sg=svg(Wc,Hc);sg.setAttribute('preserveAspectRatio','none');const mn=Math.min(...ser),mx=Math.max(...ser);const Xs=i=>mm+(Wc-2*mm)*(i/(ser.length-1)),Ys=v=>Hc-mm-(Hc-2*mm)*((v-mn)/((mx-mn)||1));
     const col=o.defc?'--bad':(o.k==='debt'||o.ratio?'--s6':o.k==='rev'?'--s1':'--s2');
     sg.appendChild(E('path',{d:ser.map((v,i)=>(i?'L':'M')+Xs(i)+','+Ys(v)).join(' '),fill:'none',stroke:css(col),'stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'}));
     const mi=H.findIndex(x=>x.year==yr);if(mi>=0)sg.appendChild(E('circle',{cx:Xs(mi),cy:Ys(ser[mi]),r:3,fill:css(col)}));sp.appendChild(sg);});
@@ -530,10 +532,12 @@ function render(){
     document.getElementById('pl-stall').innerHTML=DATA.stalled_projects.map(p=>bullet(p,1)).join('');});
 
   safe('c-peer-debt',()=>{const ps=(DATA.peers||[]).slice().sort((a,b)=>b.debt_gdp-a.debt_gdp);
-    legend('lg-peer',[{n:'Malaysia (federal, this dashboard)',c:css('--accent')},{n:'Peers (IMF/national, indicative)',c:css('--muted')}]);
-    hbars(document.getElementById('c-peer-debt'),{suffix:'%',rows:ps.map(p=>({n:p.country,v:p.debt_gdp,c:p.is_malaysia?'--accent':'--muted',gl:p.is_malaysia?'Federal debt (PKKP) / GDP':'General-govt debt / GDP (indicative)'}))});
+    legend('lg-peer',[{n:'Malaysia (federal, this dashboard)',c:css('--accent')},{n:'Peers (IMF/national, indicative)',c:css('--muted')},{n:'runs a surplus',c:css('--good')}]);
+    hbars(document.getElementById('c-peer-debt'),{suffix:'%',rows:ps.map(p=>({n:p.country,v:p.debt_gdp,c:p.is_malaysia?'--accent':'--muted',full:p.country,gl:p.is_malaysia?'Federal debt (PKKP) / GDP':(p.note&&p.note.includes('net creditor')?'Gross debt — net creditor; assets exceed debt':'General-govt debt / GDP (indicative)')}))});
     const pd=(DATA.peers||[]).slice().sort((a,b)=>b.deficit_gdp-a.deficit_gdp);
-    hbars(document.getElementById('c-peer-def'),{suffix:'%',rows:pd.map(p=>({n:p.country,v:p.deficit_gdp,c:p.is_malaysia?'--accent':'--muted',gl:'Fiscal deficit / GDP 2024'}))});});
+    hbars(document.getElementById('c-peer-def'),{suffix:'%',rows:pd.map(p=>{const sur=p.deficit_gdp<0;
+      return {n:p.country,v:sur?0.3:p.deficit_gdp,lab:sur?('+'+fmt(Math.abs(p.deficit_gdp),1)+'% surplus'):(fmt(p.deficit_gdp,1)+'%'),
+        c:p.is_malaysia?'--accent':(sur?'--good':'--muted'),full:p.country,gl:sur?'Fiscal surplus / GDP 2024':'Fiscal deficit / GDP 2024'};})});});
 
   safe('c-cov',()=>{const cov=DATA.covid||[];const tot=cov.reduce((a,c)=>a+c.spend,0);
     document.getElementById('cov-big').innerHTML=`<div><div class="n tnum">${fmt(tot,0)}<span class="u"> RM b</span></div><div class="l">total, ${cov.length?cov[0].year+'–'+cov[cov.length-1].year:''} · ≈ a full year of tax</div></div>`;
