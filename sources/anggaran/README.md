@@ -6,7 +6,7 @@ budget-vs-actual gap (vs the interim view in `curated/`, which uses PKKP's own r
 `anggaran_asal`) and — via `curated/forecast/fact_utilisation_signatures.csv` — expected-
 actual nowcasts for un-audited years.
 
-## Status: Budget 2025 AND Budget 2026 ingested at maksud grain (2026-07-31)
+## Status: Budget 2024, 2025 AND 2026 ingested at maksud grain (2026-07-31)
 
 `data/2025/fact_anggaran_maksud_2025.csv` — the book's "Ringkasan Perbelanjaan Sebenar dan
 Anggaran Mengurus dan Pembangunan" (printed pages 21–31), all 85 votes (14 Tanggungan,
@@ -56,7 +56,28 @@ differs from 2025: vote code inline on the first component row), all **83 votes*
   self-inconsistency (printed 408,629,244,715 vs its own component lines' 417).
 - **Crosswalk:** `_crosswalk_pkkp_2026.csv` — all 83 codes matched with name evidence.
 
-Program/objek grain is the documented follow-up (the books' per-vote detail sections).
+### Budget 2024 book (`data/2024/`)
+
+`fact_anggaran_maksud_2024.csv` — 83 votes (B/P.50 Digital not yet created; B/P.32
+still listed), columns sebenar 2021/2022, anggaran asal 2023, anggaran 2024
+(2025-style layout; pipeline `pipeline/2024/`). Validation: **368/368 PASS** — the
+2024 book is fully arithmetically consistent as printed. Crosswalk: all 83 matched.
+**Key evidence:** the tabled 2024 OE equals PKKP's recorded `anggaran_asal` 2024
+exactly on every comparable vote, and the book's asal-2023 column equals PKKP's 2023
+record — the audited PKKP appropriation series IS the budget as tabled (see
+`curated/GAP_VIEWS.md` for the DE-side exception and its decomposition).
+
+### Program/objek grain — scoped next step
+
+The books' per-vote detail sections are regular: `Butiran | Program/Aktiviti | Kod
+(Objek Am) | Anggaran <yr-1> | Anggaran <yr> | Bil. Jawatan` — program (xx0000) and
+aktiviti (xx0100) rows with objek-am (10000–50000) breakdowns and per-vote `JUMLAH
+ANGGARAN PERBELANJAAN MENGURUS` totals. Extraction plan: parse per-vote sections
+(85/83 votes × 2–3 books), reconcile every vote's detail total against the
+already-verified summary figures (built-in anchor), then the standard adversarial
+verifier pass. This joins to PKKP's program/aktiviti/objek actuals for the full-depth
+budget-vs-actual gap. Headcount (Bil. Jawatan) comes free — a new analytical axis.
+
 
 ## Where the documents live
 

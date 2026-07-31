@@ -104,3 +104,26 @@ volume for a clean series.
   add `budget_source='anggaran:...'` rows and an Anggaran-vs-PKKP-`anggaran_asal` cross-check.
 - Extend to program / object grain (PKKP `fact_opex_detail` supports it) for finer variance.
 - Scale the pilot across FY2009–FY2024.
+
+
+## Planning efficiency, FY2010-FY2024 (`fact_planning_efficiency.csv`)
+
+Original budget vs actual for every audited year (build:
+`curated/pipeline/build_planning_efficiency.py`). The ingested budget books prove the
+baseline: **the tabled Budget 2024 equals PKKP's recorded original OE appropriation
+exactly, vote for vote** (and AP2024's asal-2023 column equals PKKP's 2023 record;
+AP2025/AP2026 confirm 2024/2025) - so PKKP's `anggaran_asal` doubles as the budget as
+tabled, and the audited series measures true planning accuracy.
+
+Headlines: total utilisation ran 108-110% in 2010-2012, tightened to ~100+/-3% in
+2013-2021 (COVID 2020: 94%), then blew out to **121% in 2022** (subsidy surge),
+107% (2023), 105% (2024). Operating spend chronically exceeds plan; development spend
+mostly underspends its appropriation.
+
+**Documented gap - development votes:** the tabled DE 2024 (RM92.0b incl the RM2.0b
+P.70 reserve) does not equal PKKP's recorded original DE appropriation (RM85.15b).
+Beyond the reserve, the difference decomposes into post-tabling machinery-of-government
+restructuring: P.33 (re-created Energy Transition ministry, tabled 0) records RM3.76b
+and P.50 (Digital, created 2024) RM1.03b, absorbed from P.23 (-RM4.78b), P.06
+(-RM1.53b), P.62/P.15/P.47 and others. OE shows no such gap. Recorded per-vote
+evidence, not interpretation; cause-tracing at program grain is the follow-up.

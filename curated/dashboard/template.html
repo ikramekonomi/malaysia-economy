@@ -223,6 +223,11 @@
     <section class="card col6" data-prov="opex" data-embed-id="gap" data-clamp><h4>Where ministries blew past budget &middot; <span id="gap-yr">2024</span></h4><p class="desc">Actual minus the <b>original</b> approved budget, per ministry line (<i>vote</i>). Bars over budget in red, under in green; hover for original → revised → actual.</p>
       <div class="take" id="tk-gap"></div><div class="legend" id="lg-gap"></div><div class="chart" id="c-gap"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-gap"></div></details></section>
+    <section class="card col6" data-embed-id="planacc"><h4>How accurate is the plan?</h4>
+      <p class="desc">Actual spend as % of the <b>original budget as tabled</b>, per year (the ingested budget books prove PKKP's recorded original appropriation equals the tabled budget). Above 100% = the year outran its plan.</p>
+      <div class="take" id="tk-eff"></div><div class="legend" id="lg-eff"></div><div class="chart" id="c-eff"></div>
+      <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-eff"></div></details>
+      <div class="srcnote">Audited PKKP appropriations vs actuals, FY2010-24 (curated/fact_planning_efficiency.csv); 2022's overshoot is the subsidy surge.</div></section>
     <section class="card" data-embed-id="pension"><button class="share" data-share="pension" title="Share">⤓</button>
       <h4>The pension timebomb — and your reform levers</h4><p class="desc">The civil-service pension bill grew <b>9.3% a year</b>, nearly double revenue. It's an unfunded promise. Pull the levers to see how policy bends the 2025–2040 path — the fix is a long fuse, so acting early matters.</p>
       <div class="sim">
@@ -735,6 +740,14 @@ function render(){
       [2024,'official outturn',fmt(Math.abs(ov(2024,'overall_deficit')),1),fmt(Math.abs(ov(2024,'deficit_pct_gdp')),1)+'%'],
       [2025,'official revised',fmt(Math.abs(ov(2025,'overall_deficit')),1),fmt(Math.abs(ov(2025,'deficit_pct_gdp')),1)+'%'],
       [2026,'official budget est.',fmt(Math.abs(ov(2026,'overall_deficit')),1),fmt(Math.abs(ov(2026,'deficit_pct_gdp')),1)+'%']]);});
+
+  safe('c-eff',()=>{const G=DATA.gap_totals_by_year;const yrs=Object.keys(G).map(Number).sort();
+    const data=yrs.map(y=>{const g=G[y];return{year:y,oe:g.op_budget?100*g.op_actual/g.op_budget:null,de:g.dev_budget?100*g.dev_actual/g.dev_budget:null};});
+    legend('lg-eff',[{n:'Operating (actual ÷ tabled)',c:css('--s2')},{n:'Development',c:css('--s4')},{n:'100% = on plan',c:css('--warn')}]);
+    lineChart(document.getElementById('c-eff'),{data,x:'year',markYear:eff,refs:[{v:100,l:'on plan'}],fmtYf:v=>fmt(v,0)+'%',unit:'% of original budget',
+      series:[{k:'oe',n:'Operating',c:'--s2'},{k:'de',n:'Development',c:'--s4'}]});
+    const last=data[data.length-1];setTxt('tk-eff',`${last.year}: operating ran ${fmt(last.oe,0)}% of plan, development ${fmt(last.de,0)}% — the plan is systematically outrun on the operating side.`);
+    table('t-eff',['Year','OE %','DE %'],data.map(d=>[d.year,fmt(d.oe,1),fmt(d.de,1)]));});
 
   safe('c-pen',()=>pensionChart(document.getElementById('c-pen')));
   legend('lg-pen',[{n:'Actual',c:css('--s1')},{n:'Your reform',c:css('--s5')},{n:'No reform',c:css('--muted')}]);
