@@ -126,6 +126,7 @@
   .tbl{overflow-x:auto;margin-top:8px} table{border-collapse:collapse;width:100%;font-size:11.5px;font-variant-numeric:tabular-nums}
   th,td{text-align:right;padding:4px 9px;border-bottom:1px solid var(--border);white-space:nowrap} th:first-child,td:first-child{text-align:left} thead th{color:var(--muted);font-weight:600}
   footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--border);color:var(--muted);font-size:12px;max-width:84ch} footer b{color:var(--ink-2)}
+  footer code{overflow-wrap:anywhere;word-break:break-word;background:var(--surface-2);padding:1px 5px;border-radius:5px}
   .modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;display:none;place-items:center;padding:20px} .modal.on{display:grid}
   .modal-in{background:var(--surface);border-radius:14px;padding:16px;max-width:560px;width:100%;box-shadow:0 12px 40px rgba(0,0,0,.4)}
   .modal-in canvas{width:100%;height:auto;border-radius:8px;border:1px solid var(--border)} .modal-row{display:flex;gap:9px;justify-content:flex-end;margin-top:12px}
@@ -181,7 +182,7 @@
       <div class="ringgit" id="c-ringgit"></div></section>
     <section class="card col4"><h4>Revenue mix &middot; <span class="acc" id="rc-yr">2024</span></h4><p class="desc">Tax vs non-tax vs one-off receipts.</p>
       <div class="chart" id="c-compbar"></div></section>
-    <section class="card col6" data-prov="perf"><button class="share" data-share="revenue" title="Share">⤓</button>
+    <section class="card col6" data-prov="perf" data-embed-id="revenue"><button class="share" data-share="revenue" title="Share">⤓</button>
       <h4>Revenue barely covers the bills</h4><p class="desc">Revenue against <b>operating</b> and <b>total</b> spending. The shaded wedge is the overall <b>deficit</b> — entirely development spending, paid for by borrowing.</p>
       <div class="take" id="tk-rev"></div><div class="legend" id="lg-rev"></div><div class="chart" id="c-rev"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-rev"></div></details>
@@ -205,21 +206,21 @@
     <section class="card col6" data-prov="devex"><h4>A RM1.1-trillion pipeline, 29% delivered</h4><p class="desc">Development projects: bar length = <b>approved cost</b>, filled = <b>spent so far</b>. Some of the biggest approvals have barely broken ground.</p>
       <div class="bignum" id="pl-big"></div><div class="plist" id="pl-list"></div>
       <p class="desc" style="margin:14px 0 4px"><b>Least delivered</b> (largest approvals, lowest drawdown):</p><div class="plist" id="pl-stall"></div></section>
-    <section class="card col6" data-prov="perf"><button class="share" data-share="covid" title="Share">⤓</button>
+    <section class="card col6" data-prov="perf" data-embed-id="covid"><button class="share" data-share="covid" title="Share">⤓</button>
       <h4>The pandemic budget, off to one side</h4><p class="desc">The <b>COVID-19 Fund</b> ran the pandemic response <b>outside</b> the ordinary operating and development accounts — a special fund, opened in 2020 and closed at end-2022.</p>
       <div class="bignum" id="cov-big"></div><div class="chart" id="c-cov"></div></section>
   </div>
 
   <div class="sec" id="squeeze"><span class="ey">03</span><h3>The squeeze</h3><span class="th">Fixed costs, budget overshoots, and the pension fuse.</span></div>
   <div class="grid">
-    <section class="card col6" data-prov="opex"><button class="share" data-share="rigidity" title="Share">⤓</button>
+    <section class="card col6" data-prov="opex" data-embed-id="rigidity"><button class="share" data-share="rigidity" title="Share">⤓</button>
       <h4>Two-thirds of revenue is spoken for</h4><p class="desc">Salaries, pensions and debt interest are locked in regardless of policy. The bold line is the combined <b>pre-committed core</b>; the dashed line is the 15%-of-revenue debt-service guardrail.</p>
       <div class="take" id="tk-rig"></div><div class="legend" id="lg-rig"></div><div class="chart" id="c-rig"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-rig"></div></details></section>
-    <section class="card col6" data-prov="opex"><h4>Where ministries blew past budget &middot; <span id="gap-yr">2024</span></h4><p class="desc">Actual minus the <b>original</b> approved budget, per ministry line (<i>vote</i>). Bars over budget in red, under in green; hover for original → revised → actual.</p>
+    <section class="card col6" data-prov="opex" data-embed-id="gap"><h4>Where ministries blew past budget &middot; <span id="gap-yr">2024</span></h4><p class="desc">Actual minus the <b>original</b> approved budget, per ministry line (<i>vote</i>). Bars over budget in red, under in green; hover for original → revised → actual.</p>
       <div class="take" id="tk-gap"></div><div class="legend" id="lg-gap"></div><div class="chart" id="c-gap"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-gap"></div></details></section>
-    <section class="card"><button class="share" data-share="pension" title="Share">⤓</button>
+    <section class="card" data-embed-id="pension"><button class="share" data-share="pension" title="Share">⤓</button>
       <h4>The pension timebomb — and your reform levers</h4><p class="desc">The civil-service pension bill grew <b>9.3% a year</b>, nearly double revenue. It's an unfunded promise. Pull the levers to see how policy bends the 2025–2040 path — the fix is a long fuse, so acting early matters.</p>
       <div class="sim">
         <div class="simctl">
@@ -236,20 +237,29 @@
 
   <div class="sec" id="risk"><span class="ey">04</span><h3>Debt &amp; hidden risk</h3><span class="th">The borrowing, when it comes due, and what's off the books.</span></div>
   <div class="grid">
-    <section class="card col6" data-prov="debt"><button class="share" data-share="debt" title="Share">⤓</button>
+    <section class="card col6" data-prov="debt" data-embed-id="debt"><button class="share" data-share="debt" title="Share">⤓</button>
       <h4>Debt tripled to 65% of GDP</h4><p class="desc">Federal debt against the <b>60% statutory ceiling</b> (temporarily raised to 65%). Switch to <i>% of GDP</i> to see the guardrail.</p>
       <div class="take" id="tk-debt"></div><div class="legend" id="lg-debt"></div><div class="chart" id="c-debt"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-debt"></div></details></section>
     <section class="card col6"><h4>The refinancing wall &middot; 2024</h4><p class="desc">When today's debt comes due (RM b maturing by year). Near-term maturities are large — but almost all debt is <b>ringgit &amp; domestic</b>, which contains the risk.</p>
       <div class="chart" id="c-mat"></div><div class="legend" id="lg-inst" style="margin-top:8px"></div><div class="chart" id="c-inst"></div></section>
-    <section class="card" data-prov="guarantees"><h4>The bigger picture is off the books</h4><p class="desc">Direct debt is only part of the state's obligations. On-balance-sheet debt plus guarantees, PFI and leases build the total; <b>statutory guarantees</b> (mostly deposit-insurance-type) are shown separately because they overlap and must not be added.</p>
+    <section class="card" data-prov="guarantees" data-embed-id="contingent"><h4>The bigger picture is off the books</h4><p class="desc">Direct debt is only part of the state's obligations. On-balance-sheet debt plus guarantees, PFI and leases build the total; <b>statutory guarantees</b> (mostly deposit-insurance-type) are shown separately because they overlap and must not be added.</p>
       <div class="chart" id="c-con"></div>
       <p class="desc" style="margin:14px 0 6px"><b>Who the guarantees are for</b> (2024, largest exposures):</p><div class="chart" id="c-gent"></div>
       <details class="data"><summary>View the numbers</summary><div class="tbl" id="t-con"></div></details></section>
+    <section class="card" data-embed-id="compare"><button class="share" data-share="compare" title="Share">⤓</button>
+      <h4>How Malaysia compares to its neighbours</h4><p class="desc">Federal debt and fiscal deficit against regional peers, % of GDP (2024). <b>Indicative</b> — cross-country debt definitions differ, so read the ranking, not the decimals.</p>
+      <div class="legend" id="lg-peer"></div>
+      <div style="display:grid;grid-template-columns:1fr;gap:14px">
+        <div><div class="srcnote" style="margin:0 0 2px"><b>Government debt, % of GDP</b></div><div class="chart" id="c-peer-debt"></div></div>
+        <div><div class="srcnote" style="margin:0 0 2px"><b>Fiscal deficit, % of GDP</b></div><div class="chart" id="c-peer-def"></div></div>
+      </div></section>
   </div>
 
   <footer><b>Source &amp; method.</b> Federal Government Financial Statements (<i>Penyata Kewangan Kerajaan Persekutuan</i>), audited by the National Audit Department, FY2009–FY2024 — each year taken from its own audited volume, amounts exact Ringgit as printed, reconciled to the government's own printed totals. Operating = <i>Belanja Mengurus</i>; Development = <i>Belanja Pembangunan</i>; a ministry line is a <i>vote (maksud)</i>. Budget-vs-actual compares each vote's original estimate (<i>anggaran asal</i>) to actual (<i>sebenar</i>). <b>GDP &amp; population are DOSM figures, external to the audited warehouse and provisional</b> — used only for ratios and per-household context, pending ingestion of the DOSM source. The pension projection and reform simulator are <b>illustrative</b>. RM b = billion; RM tn = trillion.
-  <div class="srcnote" style="margin-top:10px">A data warehouse for Malaysia's public finances. Every figure is traceable to an audited source page.</div></footer>
+  Peer comparisons are <b>IMF/national figures, external and indicative</b> — cross-country debt definitions differ.
+  <div class="srcnote" style="margin-top:10px">A data warehouse for Malaysia's public finances. Every figure is traceable to an audited source page.
+  <br>Embed a single chart by adding <code>#embed=revenue|debt|rigidity|gap|pension|covid|contingent|compare</code> to the URL (combine with <code>y=</code> and <code>u=</code>).</div></footer>
 </div>
 <div class="tip" id="tip"></div>
 <div class="modal" id="modal"><div class="modal-in"><canvas id="cardcanvas" width="1000" height="525"></canvas>
@@ -480,7 +490,7 @@ function render(){
     dumbbell(document.getElementById('c-db'),{rows,ya:'2010',yb:String(T.years[iy]),refMult:revMult});
     table('t-db',['Function','2010','Now','Growth','vs revenue'],rows.map(r=>[r.n,fmt(r.a,1),fmt(r.b,1),'×'+r.m.toFixed(2),r.m>=revMult?'outran':'lagged']));});
 
-  safe('c-gap',()=>{const gap=(DATA.gap_by_year[yr]||DATA.gap_by_year[2024]).slice().sort((a,b)=>b.variance-a.variance).slice(0,12);
+  safe('c-gap',()=>{const gap=(DATA.gap_by_year[yr]||DATA.gap_by_year[2024]).filter(g=>g.variance!=null).slice().sort((a,b)=>b.variance-a.variance).slice(0,12);
     legend('lg-gap',[{n:'Over budget',c:css('--bad')},{n:'Under budget',c:css('--good')}]);
     divBars(document.getElementById('c-gap'),{rows:gap});
     const big=gap[0];setTxt('tk-gap',`Biggest ${yr} surprise: ${big.short} ${big.variance>=0?'overshot':'came in under'} by RM${fmt(Math.abs(big.variance),1)}b${big.util?` (${fmt(big.util,0)}% of plan)`:''}.`);
@@ -519,6 +529,12 @@ function render(){
     document.getElementById('pl-list').innerHTML=DATA.top_projects.map(p=>bullet(p,0)).join('');
     document.getElementById('pl-stall').innerHTML=DATA.stalled_projects.map(p=>bullet(p,1)).join('');});
 
+  safe('c-peer-debt',()=>{const ps=(DATA.peers||[]).slice().sort((a,b)=>b.debt_gdp-a.debt_gdp);
+    legend('lg-peer',[{n:'Malaysia (federal, this dashboard)',c:css('--accent')},{n:'Peers (IMF/national, indicative)',c:css('--muted')}]);
+    hbars(document.getElementById('c-peer-debt'),{suffix:'%',rows:ps.map(p=>({n:p.country,v:p.debt_gdp,c:p.is_malaysia?'--accent':'--muted',gl:p.is_malaysia?'Federal debt (PKKP) / GDP':'General-govt debt / GDP (indicative)'}))});
+    const pd=(DATA.peers||[]).slice().sort((a,b)=>b.deficit_gdp-a.deficit_gdp);
+    hbars(document.getElementById('c-peer-def'),{suffix:'%',rows:pd.map(p=>({n:p.country,v:p.deficit_gdp,c:p.is_malaysia?'--accent':'--muted',gl:'Fiscal deficit / GDP 2024'}))});});
+
   safe('c-cov',()=>{const cov=DATA.covid||[];const tot=cov.reduce((a,c)=>a+c.spend,0);
     document.getElementById('cov-big').innerHTML=`<div><div class="n tnum">${fmt(tot,0)}<span class="u"> RM b</span></div><div class="l">total, ${cov.length?cov[0].year+'–'+cov[cov.length-1].year:''} · ≈ a full year of tax</div></div>`;
     vbars(document.getElementById('c-cov'),{rows:cov.map(c=>({k:c.year,v:c.spend,gl:'RM b spent'})),color:'--s2'});});
@@ -551,8 +567,17 @@ function shareOf(key){const yr=state.year,cur=byY[yr]||H[H.length-1];const rg=DA
     covid:['COVID-19 Fund','RM'+fmt((DATA.covid||[]).reduce((a,c)=>a+c.spend,0),0)+'b','Pandemic response run outside the ordinary budget, 2020–2022.']};
   const m=P[key]||['','',''];drawCard(m[0],m[1],m[2]);}
 
-function writeHash(){try{history.replaceState(null,'','#y='+state.year+'&u='+state.unit);}catch(e){}}
-function readHash(){const h=new URLSearchParams(location.hash.replace(/^#/,''));if(h.get('y'))state.year=Math.min(2024,Math.max(2010,+h.get('y')||2024));if(['rm','rev','gdp'].includes(h.get('u')))state.unit=h.get('u');}
+let EMBED=null;
+function writeHash(){try{history.replaceState(null,'','#y='+state.year+'&u='+state.unit+(EMBED?'&embed='+EMBED:''));}catch(e){}}
+function readHash(){const h=new URLSearchParams(location.hash.replace(/^#/,''));if(h.get('y'))state.year=Math.min(2024,Math.max(2010,+h.get('y')||2024));if(['rm','rev','gdp'].includes(h.get('u')))state.unit=h.get('u');EMBED=h.get('embed')||null;}
+function applyEmbed(){if(!EMBED)return;const target=document.querySelector(`[data-embed-id="${EMBED}"]`);if(!target)return;
+  // hide everything except the target card; keep tooltip + modal live
+  document.querySelectorAll('header.top,.controls,.hero,.sec,.storyrail,footer').forEach(e=>e.style.display='none');
+  document.querySelectorAll('.grid').forEach(g=>{let any=false;g.querySelectorAll('.card').forEach(c=>{if(c===target){any=true;c.style.gridColumn='span 12';}else c.style.display='none';});if(!any)g.style.display='none';});
+  const bar=document.createElement('div');bar.className='srcnote';bar.style.cssText='padding:8px 2px 14px;grid-column:span 12';
+  bar.innerHTML=`<b>Malaysia Federal Finances</b> · audited PKKP, reconciled to the sen · FY${state.year} · <a href="#y=${state.year}&u=${state.unit}" onclick="location.hash='y=${state.year}&u=${state.unit}';location.reload();return false;">open the full dashboard</a>`;
+  target.parentNode.insertBefore(bar,target.nextSibling);
+  document.querySelector('.wrap').style.padding='10px clamp(10px,2vw,20px) 20px';}
 document.getElementById('yr').addEventListener('input',e=>{state.year=+e.target.value;render();});
 document.querySelectorAll('#unit button').forEach(b=>b.addEventListener('click',()=>{state.unit=b.dataset.u;document.querySelectorAll('#unit button').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
 let playing=null;document.getElementById('play').addEventListener('click',function(){if(playing){clearInterval(playing);playing=null;this.textContent='▶';return;}
@@ -569,5 +594,5 @@ document.getElementById('dlcard').addEventListener('click',()=>{const a=document
 readHash();document.getElementById('yr').value=state.year;document.querySelectorAll('#unit button').forEach(x=>x.setAttribute('aria-pressed',x.dataset.u===state.unit));
 setTxt('v-age',SIM.age);setTxt('v-idx',SIM.idx.toFixed(1)+'%');setTxt('v-dc','off');
 try{const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting)x.target.classList.add('in');}),{threshold:.15});document.querySelectorAll('.beat').forEach(b=>io.observe(b));}catch(e){document.querySelectorAll('.beat').forEach(b=>b.classList.add('in'));}
-render();
+render();applyEmbed();
 </script>

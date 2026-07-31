@@ -18,11 +18,23 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 DB   = os.path.join(ROOT, "sources", "pkkp", "pkkp.duckdb")
 EXT  = os.path.join(HERE, "external_denominators.csv")
+PEERS = os.path.join(HERE, "external_peers.csv")
 YEARS = list(range(2010, 2025))
 con = duckdb.connect(DB, read_only=True)
 def q(sql): return con.sql(sql).df()
+import math
 def r(v, d=2):
-    return None if v is None else round(float(v), d)
+    if v is None: return None
+    try:
+        f = float(v)
+    except (TypeError, ValueError):
+        return None
+    return None if math.isnan(f) or math.isinf(f) else round(f, d)
+def sanitize(o):
+    if isinstance(o, dict): return {k: sanitize(v) for k, v in o.items()}
+    if isinstance(o, list): return [sanitize(v) for v in o]
+    if isinstance(o, float) and (math.isnan(o) or math.isinf(o)): return None
+    return o
 
 OWN = "source_file ILIKE year || '_PENYATA%'"   # each year from its own volume (case-insensitive)
 d = {}
@@ -34,6 +46,12 @@ with open(EXT) as f:
         ext[int(row["year"])] = {k: (float(row[k]) if k in ("gdp_rm_bil","population_mil","households_mil") else row[k]) for k in row}
 d["external"] = {"note": "GDP & population are DOSM figures, external to the audited warehouse and provisional (see docs/SOURCES.md).",
                  "by_year": {str(y): {"gdp": ext[y]["gdp_rm_bil"], "pop": ext[y]["population_mil"], "hh": ext[y]["households_mil"]} for y in YEARS if y in ext}}
+# ---- peer benchmarks (external, IMF/national, indicative) ----
+peers = []
+with open(PEERS) as f:
+    for row in _csv.DictReader(f):
+        peers.append({"country": row["country"], "debt_gdp": float(row["debt_gdp"]), "deficit_gdp": float(row["deficit_gdp"]), "is_malaysia": row["is_malaysia"] == "1"})
+d["peers"] = peers
 
 # ---- headline (validated Penyata Prestasi Kewangan) ----
 fp = q(f"""SELECT year,
@@ -166,7 +184,8 @@ mat = q("""SELECT TRY_CAST(right(tarikh_tebusan,4) AS INT) yr, sum(amaun_belum_s
 d["debt_maturity"] = [{"year": int(x.yr), "v": r(x.b)} for x in mat.itertuples() if 2025 <= int(x.yr) <= 2060]
 d["debt_instruments"] = [{"name": x.instrument_bm, "v": r(x.b)} for x in
     q("""SELECT instrument_bm, sum(amaun_belum_selesai_rm)/1e9 b FROM fact_debt_issues
-      WHERE source_file ILIKE '2024_%' AND year=2024 AND row_type='detail' GROUP BY 1 ORDER BY b DESC LIMIT 6""").itertuples()]
+      WHERE source_file ILIKE '2024_%' AND year=2024 AND row_type='detail' AND instrument_bm IS NOT NULL
+      GROUP BY 1 HAVING sum(amaun_belum_selesai_rm)/1e9 > 0.1 ORDER BY b DESC LIMIT 6""").itertuples()]
 
 # ---- development pipeline + worst-delivery projects (2024) ----
 pl = q("""SELECT sum(kos_keseluruhan_rm)/1e9 approved, sum(terkumpul_rmke12_rm)/1e9 cum,
@@ -205,13 +224,14 @@ d["prov"] = {
     "guarantees": pv("SELECT statement,printed_page FROM fact_guarantees WHERE source_file ILIKE '2024_%' AND year=2024 AND row_type='detail' LIMIT 1"),
 }
 
+d = sanitize(d)
 out_json = os.path.join(HERE, "data.json")
-json.dump(d, open(out_json, "w"))
+json.dump(d, open(out_json, "w"), allow_nan=False)
 print("data.json:", os.path.getsize(out_json), "bytes; keys:", len(d))
 
 # ---- inject into template -> index.html ----
 tpl = open(os.path.join(HERE, "template.html")).read()
-html = tpl.replace("__DATA__", json.dumps(d, separators=(",", ":")))
+html = tpl.replace("__DATA__", json.dumps(d, separators=(",", ":"), allow_nan=False))
 assert "__DATA__" not in html, "placeholder not replaced"
 open(os.path.join(HERE, "index.html"), "w").write(html)
 print("index.html:", os.path.getsize(os.path.join(HERE, "index.html")), "bytes")

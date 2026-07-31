@@ -23,6 +23,7 @@ publish as an artifact). Re-run it whenever the warehouse changes and the dashbo
 | `build_dashboard.py` | the pipeline (DuckDB + external CSV → `data.json` → `index.html`) |
 | `template.html` | the UI (HTML/CSS/JS) with a `__DATA__` placeholder; **edit this**, not `index.html` |
 | `external_denominators.csv` | GDP & population (DOSM) — **external, provisional** (see caveat) |
+| `external_peers.csv` | regional debt/deficit benchmarks (IMF/national) — **external, indicative** |
 | `data.json` | built payload (gitignored; embedded into `index.html`) |
 | `index.html` | built, self-contained dashboard (the deliverable) |
 
@@ -35,8 +36,14 @@ delivered) · fiscal rigidity with the 15%-of-revenue debt-service guardrail · 
 by vote · the pension timebomb with an interactive **reform simulator** (retirement age /
 indexation / DC-switch) · debt vs the 60/65%-of-GDP ceiling · the refinancing wall & instrument
 mix · contingent exposure (additive waterfall, with statutory guarantees shown separately as
-non-additive). Controls: fiscal-year slider (with play), unit toggle, section nav, deep-linkable
-URL (`#y=2020&u=gdp`), light/dark, per-card data tables, and shareable stat cards.
+non-additive) · the COVID-19 Fund · regional peer benchmarks (debt & deficit vs
+Thailand/Indonesia/Philippines/Vietnam, indicative). Controls: fiscal-year slider (with play),
+unit toggle, section nav, deep-linkable URL (`#y=2020&u=gdp`), light/dark, per-card data tables,
+page-level source provenance, keyboard-accessible chart tooltips, and shareable stat cards.
+
+**Embed mode:** append `#embed=<id>` to render one card chrome-free for an iframe —
+ids: `revenue, debt, rigidity, gap, pension, covid, contingent, compare` (combine with
+`y=`/`u=`, e.g. `#y=2022&u=gdp&embed=pension`).
 
 ## ⚠️ On the external denominators
 
