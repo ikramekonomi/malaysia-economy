@@ -38,6 +38,43 @@ outturn (median vote utilisation > 1) — while MOF's own Budget-2026-edition re
 RM332.15b, inside the band but below the signature median. FY2025 audited actuals will
 adjudicate.
 
+## 4. `fact_projection_detail.csv` + `fact_gap_projection.csv` (built by `build_forecast2026.py`)
+Every dashboard series estimated to FY2025-FY2026 so the whole dashboard can run to 2026.
+
+**Model families considered (brainstorm), and why the hybrid won:**
+- *Pure univariate trend (ETS/ARIMA/log-growth) per series* — rejected as the sole method:
+  n=15 annual points, misses turning points, and lets components drift away from their
+  own totals (violates accounting identities).
+- *Pure share/compositional models* — right for components, but need an anchor.
+- *Driver-based structural models* (elasticities to GDP, effective interest rate x debt
+  stock) — attractive but demands assumptions we cannot source-verify; deferred.
+- *Judgemental copy of official figures only* — respects sources but leaves component
+  charts empty and carries no uncertainty.
+- **Chosen: hierarchical anchor-and-share with identity constraints.** Aggregates are
+  pinned to the best available basis in this order: official MOF projection > tabled
+  budget x utilisation signature > stock-flow identity > own-history quantile growth.
+  Components are modelled as shares of their anchor and re-normalised so identities
+  hold by construction. Bands are historical p25/p75 quantiles — honest spread, not
+  confidence intervals.
+
+**Per group:** headline mids = official MOF (band = §2 trend band around them); debt =
+stock-flow `debt_t = debt_{t-1} + |deficit_t| + ε` with ε quantiles from FY2015-24
+residuals (band conditional on the official deficit path — deficit uncertainty is shown
+separately, not propagated); revenue composition & OE object classes = 5-year share
+quantiles normalised to official anchors (FY2015 excluded: OCR-provisional); emoluments
+2025 = tabled Budget-2025 emoluments x aggregate-OE utilisation quantiles; pensions /
+debt service = tabled T.14/T.13 x their own vote signatures; functions = per-vote
+signature nowcast aggregated (2025) then grown by own-function log-growth quantiles
+(2026) — deliberately NOT normalised to official OE, preserving the historical
+overshoot bias (difference reported in `_validation_projection_2026.csv`); per-vote gap
+2026 budgets = 2025 tabled x uniform official OE growth (**weakest layer**, flagged on
+every row); contingent items = own log-growth quantiles.
+
+**Known weaknesses (by design, documented):** quantile bands understate tail risk
+(2020-style shocks); the 2026 per-vote budget scaling is uniform; investment income is
+modelled only as a min/max share band; no policy reaction function. Supersession: any
+newly ingested official/budget source replaces the corresponding model rows.
+
 ## Official cross-check (2026-07-31)
 `official_vs_model_2025_26.csv`: 12 of 13 comparable official Fiscal Outlook figures for
 2025-26 fall INSIDE the §2 model bands. The exception is federal debt 2025, where the

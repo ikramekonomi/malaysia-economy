@@ -295,6 +295,8 @@ const H=DATA.headline, byY=Object.fromEntries(H.map(d=>[d.year,d])), EXT=DATA.ex
 const OFFY={};(DATA.outlook&&DATA.outlook.official||[]).forEach(r=>{const o=OFFY[r.year]=OFFY[r.year]||{_ed:{}};
   if(!(r.line in o._ed)||r.edition>o._ed[r.line]){o._ed[r.line]=r.edition;o[r.line]=r.v;}});
 const offv=(y,l)=>OFFY[y]&&OFFY[y][l]!=null?OFFY[y][l]:null;
+const PJ=DATA.proj||{detail:{},gap:{}};
+const pj=(y,g,se)=>{const d=PJ.detail[String(y)];return d&&d[g]&&d[g][se]||null;};
 const offObj=y=>({rev:offv(y,'revenue'),opex:offv(y,'operating_expenditure'),devex:offv(y,'development_expenditure'),deficit:offv(y,'overall_deficit'),debt:offv(y,'federal_debt')});
 const gdpOf=y=>y>2024?(offv(y,'nominal_gdp')||offv(2024,'nominal_gdp')):(EXT[y]||EXT[2024]).gdp;
 const revOf=y=>y>2024?(offv(y,'revenue')||H[H.length-1].rev):(byY[y]||H[H.length-1]).rev;
@@ -320,10 +322,10 @@ const unitSuffix=()=>state.unit==='rm'?'':'%';
 const fmtY=v=>state.unit==='rm'?fmt(v,0):fmt(v,0)+'%';
 const EVENTS=[{y:2015,l:'GST'},{y:2018,l:'SST'},{y:2020,l:'COVID'},{y:2022,l:'subsidy surge'}];
 
-function lineChart(host,{data,x,series,fill,markYear,refs,events,fmtYf,unit}){
+function lineChart(host,{data,x,series,fill,markYear,refs,events,fmtYf,unit,bands,horizon}){
   const W=760,Hc=330,m={t:16,r:54,b:30,l:46};const s=svg(W,Hc,host.dataset.lbl);
   const X=i=>m.l+(W-m.l-m.r)*(i/(data.length-1));
-  const vals=series.flatMap(se=>data.map(d=>d[se.k]).filter(v=>v!=null));
+  const vals=series.flatMap(se=>data.map(d=>d[se.k]).filter(v=>v!=null)).concat((bands||[]).flatMap(bd=>data.map(d=>d[bd.hi]).filter(v=>v!=null)));
   let ymax=Math.max(...vals)*1.08;(refs||[]).forEach(rf=>{if(rf.v>ymax)ymax=rf.v*1.08;});
   const Y=v=>Hc-m.b-(Hc-m.t-m.b)*(v/ymax);const FY=fmtYf||(v=>fmt(v,0));
   niceTicks(ymax).forEach(t=>{s.appendChild(E('line',{class:'gridline',x1:m.l,x2:W-m.r,y1:Y(t),y2:Y(t)}));s.appendChild(E('text',{class:'axis tnum',x:m.l-8,y:Y(t)+3,'text-anchor':'end'},FY(t)));});
@@ -331,19 +333,25 @@ function lineChart(host,{data,x,series,fill,markYear,refs,events,fmtYf,unit}){
   (events||[]).forEach(ev=>{const i=data.findIndex(d=>d[x]==ev.y);if(i<0)return;s.appendChild(E('line',{class:'ev',x1:X(i),x2:X(i),y1:m.t,y2:Hc-m.b}));s.appendChild(E('text',{class:'evlab',x:X(i),y:m.t-4,'text-anchor':'middle'},ev.l));});
   (refs||[]).forEach(rf=>{s.appendChild(E('line',{class:'refline',x1:m.l,x2:W-m.r,y1:Y(rf.v),y2:Y(rf.v)}));s.appendChild(E('text',{class:'axis',x:W-m.r,y:Y(rf.v)-4,'text-anchor':'end',fill:'var(--warn)'},rf.l));});
   if(markYear!=null){const i=data.findIndex(d=>d[x]==markYear);if(i>=0)s.appendChild(E('line',{class:'markline',x1:X(i),x2:X(i),y1:m.t,y2:Hc-m.b}));}
-  if(fill){const[a,b]=fill;s.appendChild(E('polygon',{points:data.map((d,i)=>`${X(i)},${Y(d[a])}`).concat(data.map((d,i)=>`${X(data.length-1-i)},${Y(data[data.length-1-i][b])}`)).join(' '),fill:'var(--bad-fill)'}));}
+  if(fill){const[a,b]=fill;const idx=data.map((d,i)=>i).filter(i=>data[i][a]!=null&&data[i][b]!=null);
+    if(idx.length>1)s.appendChild(E('polygon',{points:idx.map(i=>`${X(i)},${Y(data[i][a])}`).concat(idx.slice().reverse().map(i=>`${X(i)},${Y(data[i][b])}`)).join(' '),fill:'var(--bad-fill)'}));}
+  (bands||[]).forEach(bd=>{const col=css(bd.c);const idx=data.map((d,i)=>i).filter(i=>data[i][bd.lo]!=null&&data[i][bd.hi]!=null);
+    if(idx.length>1){s.appendChild(E('polygon',{points:idx.map(i=>`${X(i)},${Y(data[i][bd.hi])}`).concat(idx.slice().reverse().map(i=>`${X(i)},${Y(data[i][bd.lo])}`)).join(' '),fill:col,opacity:.12}));}});
+  if(horizon!=null){const hz=data.findIndex(d=>d[x]==horizon);if(hz>=0){s.appendChild(E('line',{class:'ev',x1:X(hz),x2:X(hz),y1:m.t,y2:Hc-m.b}));
+    s.appendChild(E('text',{class:'evlab',x:X(hz)-4,y:m.t-6,'text-anchor':'end'},'audited'));
+    s.appendChild(E('text',{class:'evlab',x:X(hz)+4,y:m.t-6,'text-anchor':'start'},'projected'));}}
   series.forEach(se=>{const col=css(se.c);
-    if(se.area)s.appendChild(E('polygon',{points:`${X(0)},${Y(0)} `+data.map((d,i)=>`${X(i)},${Y(d[se.k])}`).join(' ')+` ${X(data.length-1)},${Y(0)}`,fill:col,opacity:.12}));
+    if(se.area){const ai=data.map((d,i)=>i).filter(i=>data[i][se.k]!=null);if(ai.length>1)s.appendChild(E('polygon',{points:`${X(ai[0])},${Y(0)} `+ai.map(i=>`${X(i)},${Y(data[i][se.k])}`).join(' ')+` ${X(ai[ai.length-1])},${Y(0)}`,fill:col,opacity:.12}));}
     const pts=data.map((d,i)=>d[se.k]==null?null:`${X(i)},${Y(d[se.k])}`).filter(Boolean);
     s.appendChild(E('path',{d:pts.map((p,i)=>(i?'L':'M')+p).join(' '),fill:'none',stroke:col,'stroke-width':se.bold?3:2.2,'stroke-linejoin':'round','stroke-linecap':'round','stroke-dasharray':se.dash||''}));
-    const li=data.length-1;if(data[li][se.k]!=null){s.appendChild(E('circle',{cx:X(li),cy:Y(data[li][se.k]),r:3.4,fill:col,stroke:'var(--surface)','stroke-width':2}));s.appendChild(E('text',{class:'glab',x:X(li)+6,y:Y(data[li][se.k])+4,fill:col},FY(data[li][se.k])));}});
+    let li=-1;data.forEach((d,i)=>{if(d[se.k]!=null)li=i;});if(li>=0&&!se.nolabel){s.appendChild(E('circle',{cx:X(li),cy:Y(data[li][se.k]),r:3.4,fill:col,stroke:'var(--surface)','stroke-width':2}));s.appendChild(E('text',{class:'glab',x:X(li)+6,y:Y(data[li][se.k])+4,fill:col},FY(data[li][se.k])));}});
   const hl=E('line',{class:'baseline',x1:0,x2:0,y1:m.t,y2:Hc-m.b,opacity:0});s.appendChild(hl);
   const dots=series.map(se=>{const c=E('circle',{r:4,fill:css(se.c),stroke:'var(--surface)','stroke-width':2,opacity:0});s.appendChild(c);return c;});
   s.appendChild(E('rect',{x:m.l,y:m.t,width:W-m.l-m.r,height:Hc-m.t-m.b,fill:'transparent'}));
   function paint(i,ev){const d=data[i];hl.setAttribute('x1',X(i));hl.setAttribute('x2',X(i));hl.setAttribute('opacity',1);
     dots.forEach((c,j)=>{const v=d[series[j].k];if(v==null){c.setAttribute('opacity',0);return;}c.setAttribute('cx',X(i));c.setAttribute('cy',Y(v));c.setAttribute('opacity',1);});
     let rows=series.map(se=>`<div class="row"><span class="k"><span class="dot" style="background:${css(se.c)}"></span>${se.n}</span><span class="v">${d[se.k]==null?'–':fmt(d[se.k],1)}${unitSuffix()}</span></div>`).join('');
-    if(fill)rows+=`<div class="row"><span class="k"><span class="dot" style="background:var(--bad)"></span>Deficit</span><span class="v">${fmt(d[fill[0]]-d[fill[1]],1)}${unitSuffix()}</span></div>`;
+    if(fill&&d[fill[0]]!=null&&d[fill[1]]!=null)rows+=`<div class="row"><span class="k"><span class="dot" style="background:var(--bad)"></span>Deficit</span><span class="v">${fmt(d[fill[0]]-d[fill[1]],1)}${unitSuffix()}</span></div>`;
     if(!ev){const b=s.getBoundingClientRect();const yv=Math.max(...series.map(se=>d[se.k]||0));ev={clientX:b.left+X(i)/W*b.width,clientY:b.top+Y(yv)/Hc*b.height};}
     showTip(ev,`<div class="th">${d[x]} &middot; ${unit||unitLabel()}</div>${rows}`);}
   const clear=()=>{hideTip();hl.setAttribute('opacity',0);dots.forEach(c=>c.setAttribute('opacity',0));};
@@ -355,7 +363,7 @@ function lineChart(host,{data,x,series,fill,markYear,refs,events,fmtYf,unit}){
   s.addEventListener('blur',clear);
   host.innerHTML='';host.appendChild(s);
 }
-function stackedArea(host,{data,x,series,unit,pctAxis,markYear,events,overlay,refs}){
+function stackedArea(host,{data,x,series,unit,pctAxis,markYear,events,overlay,refs,horizon}){
   const W=760,Hc=330,m={t:16,r:16,b:30,l:46};const s=svg(W,Hc,host.dataset.lbl);
   const X=i=>m.l+(W-m.l-m.r)*(i/(data.length-1));const tot=data.map(d=>series.reduce((a,se)=>a+(d[se.k]||0),0));
   let ymax=Math.max(...tot)*1.06;(overlay||[]).forEach(o=>{const mx=Math.max(...data.map(d=>d[o.k]||0));if(mx>ymax)ymax=mx*1.06;});(refs||[]).forEach(rf=>{if(rf.v>ymax)ymax=rf.v*1.06;});
@@ -364,10 +372,18 @@ function stackedArea(host,{data,x,series,unit,pctAxis,markYear,events,overlay,re
   data.forEach((d,i)=>{if(i%2===0||i===data.length-1)s.appendChild(E('text',{class:'axis',x:X(i),y:Hc-m.b+15,'text-anchor':'middle'},d[x]));});
   (events||[]).forEach(ev=>{const i=data.findIndex(d=>d[x]==ev.y);if(i<0)return;s.appendChild(E('line',{class:'ev',x1:X(i),x2:X(i),y1:m.t,y2:Hc-m.b}));s.appendChild(E('text',{class:'evlab',x:X(i),y:m.t-4,'text-anchor':'middle'},ev.l));});
   const cum=data.map(()=>0);
+  const hz=horizon!=null?data.findIndex(d=>d[x]==horizon):-1;
+  const polyFor=(top,a,b,col,op)=>{const pts=[];for(let i=a;i<=b;i++)pts.push(`${X(i)},${Y(top[i].t)}`);for(let i=b;i>=a;i--)pts.push(`${X(i)},${Y(top[i].b)}`);return E('polygon',{points:pts.join(' '),fill:col,opacity:op});};
   series.forEach(se=>{const col=css(se.c);const top=data.map((d,i)=>{const b=cum[i];cum[i]+=(d[se.k]||0);return{b,t:cum[i]};});
-    s.appendChild(E('polygon',{points:top.map((p,i)=>`${X(i)},${Y(p.t)}`).concat(top.map((p,i)=>`${X(data.length-1-i)},${Y(top[data.length-1-i].b)}`)).join(' '),fill:col,opacity:.9}));});
+    if(hz>=0&&hz<data.length-1){s.appendChild(polyFor(top,0,hz,col,.9));s.appendChild(polyFor(top,hz,data.length-1,col,.4));}
+    else s.appendChild(polyFor(top,0,data.length-1,col,.9));});
+  if(hz>=0&&hz<data.length-1){s.appendChild(E('line',{class:'ev',x1:X(hz),x2:X(hz),y1:m.t,y2:Hc-m.b}));
+    s.appendChild(E('text',{class:'evlab',x:X(hz)-4,y:m.t-6,'text-anchor':'end'},'audited'));
+    s.appendChild(E('text',{class:'evlab',x:X(hz)+4,y:m.t-6,'text-anchor':'start'},'projected'));}
   (refs||[]).forEach(rf=>{s.appendChild(E('line',{class:'refline',x1:m.l,x2:W-m.r,y1:Y(rf.v),y2:Y(rf.v)}));s.appendChild(E('text',{class:'axis',x:W-m.r,y:Y(rf.v)-4,'text-anchor':'end',fill:'var(--warn)'},rf.l));});
-  (overlay||[]).forEach(o=>{s.appendChild(E('path',{d:data.map((d,i)=>(i?'L':'M')+X(i)+','+Y(d[o.k])).join(' '),fill:'none',stroke:css(o.c),'stroke-width':3,'stroke-linejoin':'round'}));const li=data.length-1;s.appendChild(E('text',{class:'glab',x:X(li)-2,y:Y(data[li][o.k])-6,'text-anchor':'end',fill:css(o.c)},(pctAxis?fmt(data[li][o.k],0)+'%':fmt(data[li][o.k],0))));});
+  (overlay||[]).forEach(o=>{const seg=(a,b,dash)=>{const pts=[];for(let i=a;i<=b;i++)pts.push((pts.length?'L':'M')+X(i)+','+Y(data[i][o.k]));return E('path',{d:pts.join(' '),fill:'none',stroke:css(o.c),'stroke-width':3,'stroke-linejoin':'round','stroke-dasharray':dash||''});};
+    if(hz>=0&&hz<data.length-1){s.appendChild(seg(0,hz));s.appendChild(seg(hz,data.length-1,'5 4'));}else s.appendChild(seg(0,data.length-1));
+    const li=data.length-1;s.appendChild(E('text',{class:'glab',x:X(li)-2,y:Y(data[li][o.k])-6,'text-anchor':'end',fill:css(o.c)},(pctAxis?fmt(data[li][o.k],0)+'%':fmt(data[li][o.k],0))));});
   if(markYear!=null){const i=data.findIndex(d=>d[x]==markYear);if(i>=0)s.appendChild(E('line',{class:'markline',x1:X(i),x2:X(i),y1:m.t,y2:Hc-m.b}));}
   const hl=E('line',{class:'baseline',x1:0,x2:0,y1:m.t,y2:Hc-m.b,opacity:0});s.appendChild(hl);s.appendChild(E('rect',{x:m.l,y:m.t,width:W-m.l-m.r,height:Hc-m.t-m.b,fill:'transparent'}));
   s.addEventListener('mousemove',ev=>{let i=Math.round((relX(s,ev,W)-m.l)/((W-m.l-m.r)/(data.length-1)));i=Math.max(0,Math.min(data.length-1,i));const d=data[i];hl.setAttribute('x1',X(i));hl.setAttribute('x2',X(i));hl.setAttribute('opacity',1);
@@ -395,7 +411,7 @@ function divBars(host,{rows}){const W=760,rh=30,m={t:6,r:14,b:4,l:170};const Hc=
     s.appendChild(E('text',{class:'axis',x:m.l-9,y:y+rh/2+4,'text-anchor':'end',fill:'var(--ink)'},r.short));
     const w=Math.abs(sc(r.v)),x0=over?zx:zx-w;const rect=E('rect',{x:x0,y:y+6,width:Math.max(w,1),height:rh-13,rx:4,fill:col});s.appendChild(rect);
     s.appendChild(E('text',{class:'glab tnum',x:over?zx+w+6:zx-w-6,y:y+rh/2+4,'text-anchor':over?'start':'end',fill:col},(over?'+':'−')+fmt(Math.abs(r.v),1)));
-    rect.addEventListener('mousemove',ev=>showTip(ev,`<div class="th">${r.code} · ${r.name}</div><div class="row"><span class="k">Original budget</span><span class="v">${fmt(r.budget,2)}</span></div><div class="row"><span class="k">Revised</span><span class="v">${fmt(r.revised,2)}</span></div><div class="row"><span class="k">Actual</span><span class="v">${fmt(r.actual,2)}</span></div><div class="row"><span class="k">Variance</span><span class="v" style="color:${col}">${over?'+':'−'}${fmt(Math.abs(r.v),2)}</span></div>${r.util!=null?`<div class="row"><span class="k">Utilisation</span><span class="v">${fmt(r.util,0)}%</span></div>`:''}`));rect.addEventListener('mouseleave',hideTip);});
+    rect.addEventListener('mousemove',ev=>showTip(ev,r.tip||`<div class="th">${r.code} · ${r.name}</div><div class="row"><span class="k">Original budget</span><span class="v">${fmt(r.budget,2)}</span></div><div class="row"><span class="k">Revised</span><span class="v">${fmt(r.revised,2)}</span></div><div class="row"><span class="k">Actual</span><span class="v">${fmt(r.actual,2)}</span></div><div class="row"><span class="k">Variance</span><span class="v" style="color:${col}">${over?'+':'−'}${fmt(Math.abs(r.v),2)}</span></div>${r.util!=null?`<div class="row"><span class="k">Utilisation</span><span class="v">${fmt(r.util,0)}%</span></div>`:''}`));rect.addEventListener('mouseleave',hideTip);});
   host.innerHTML='';host.appendChild(s);}
 function dumbbell(host,{rows,ya,yb,refMult}){const W=760,rh=32,m={t:8,r:60,b:4,l:150};const Hc=m.t+m.b+rows.length*rh;const s=svg(W,Hc,host.dataset.lbl);
   const max=Math.max(...rows.flatMap(r=>[r.a,r.b]))*1.04;const X=v=>m.l+(W-m.l-m.r)*(v/max);
@@ -489,17 +505,18 @@ function render(){
   const eff=Math.min(yr,2024),future=yr>2024;   // audited data ends at FY2024; beyond it, official MOF figures only
   document.getElementById('yrval').textContent=yr;document.getElementById('yr').setAttribute('aria-valuetext','Fiscal year '+yr+(future?' (official estimate, unaudited)':''));
   document.getElementById('yrbasis').style.display=future?'':'none';
-  setTxt('fn-yr',eff);setTxt('gap-yr',eff);setTxt('db-yr',eff>2010?eff:2011);setTxt('rc-yr',eff);
+  setTxt('fn-yr',yr);setTxt('gap-yr',yr);setTxt('db-yr',yr>2010?yr:2011);setTxt('rc-yr',yr);
   const cur=byY[eff]||H[H.length-1],prev=byY[eff-1];
   const fcur=future?offObj(yr):null,fprev=future?offObj(yr-1):null;
+  if(future&&fcur.debt==null){const dm=pj(yr,'headline','debt');if(dm){fcur.debt=dm.mid;fcur.debtModel=dm;}}
 
   document.querySelectorAll('[data-clamp]').forEach(card=>{let el=card.querySelector('.srcnote.clamp');
     if(future){if(!el){el=document.createElement('div');el.className='srcnote clamp';card.appendChild(el);}
-      el.innerHTML=`<b>FY${yr} is not yet audited</b> — showing FY2024, the latest audited year. Official 2025–26 figures: <a href="#outlook">the outlook</a>.`;}
+      el.innerHTML=`<b>FY${yr} is a model projection</b> — built from official MOF anchors, the tabled Budget 2025 and utilisation signatures (<i>curated/forecast</i>, method &amp; bands documented there). Unaudited; audited data ends FY2024.`;}
     else if(el)el.remove();});
 
   if(future){const dpc=offv(yr,'deficit_pct_gdp'),db=offv(yr,'federal_debt');
-    document.getElementById('digest').innerHTML=`<b>${yr} (official ${yr===2025?'revised estimate':'budget estimate'}, unaudited):</b> revenue RM${fmt(fcur.rev,1)}b, spending RM${fmt(fcur.opex+fcur.devex,1)}b, deficit RM${fmt(Math.abs(fcur.deficit),1)}b (${fmt(Math.abs(dpc),1)}% of GDP — MOF's own figures)${db!=null?`; federal debt RM${fmt(db,0)}b as at end-June ${yr}`:''}. Audited actuals end at FY2024; cards without an official figure show FY2024.`;}
+    document.getElementById('digest').innerHTML=`<b>${yr} (official ${yr===2025?'revised estimate':'budget estimate'}, unaudited):</b> revenue RM${fmt(fcur.rev,1)}b, spending RM${fmt(fcur.opex+fcur.devex,1)}b, deficit RM${fmt(Math.abs(fcur.deficit),1)}b (${fmt(Math.abs(dpc),1)}% of GDP — MOF's own figures)${db!=null?`; federal debt RM${fmt(db,0)}b as at end-June ${yr}`:''}. Audited actuals end at FY2024; component charts show model projections (<i>curated/forecast</i>), labelled as such.`;}
   else if(prev){const dr=(cur.rev-prev.rev)/prev.rev*100,dd=cur.debt-prev.debt,topRise=(()=>{const t=DATA.func_trend;const i=t.years.indexOf(eff),ip=t.years.indexOf(eff-1);let best=null;Object.entries(t.series).forEach(([f,a])=>{if(a[ip]){const g=a[i]-a[ip];if(!best||g>best.g)best={f,g};}});return best;})();
     document.getElementById('digest').innerHTML=`<b>${eff} in a line:</b> revenue ${dr>=0?'rose':'fell'} ${fmt(Math.abs(dr),1)}% to RM${fmt(cur.rev,0)}b, the deficit was RM${fmt(Math.abs(cur.deficit),1)}b (${fmt(100*Math.abs(cur.deficit)/gdpOf(eff),1)}% of GDP), and federal debt ${dd>=0?'grew':'fell'} RM${fmt(Math.abs(dd),0)}b to RM${fmt(cur.debt,0)}b (${fmt(100*cur.debt/gdpOf(eff),0)}% of GDP).${topRise?' Fastest-rising ministry: '+topRise.f+'.':''}`;}
   else document.getElementById('digest').innerHTML=`<b>${eff}:</b> revenue RM${fmt(cur.rev,0)}b, deficit RM${fmt(Math.abs(cur.deficit),1)}b, debt RM${fmt(cur.debt,0)}b.`;
@@ -520,9 +537,10 @@ function render(){
     else if(pvRaw!=null){if(o.defc){const impr=raw-pvRaw>0;chip=`<span class="delta ${impr?'up':'down'}">${impr?'↓':'↑'} ${fmt(Math.abs((raw-pvRaw)/pvRaw*100),1)}%</span><span class="yr">${vsLab}</span>`;}
       else{const p=(raw-pvRaw)/Math.abs(pvRaw)*100;const good=o.dir===0?null:(p>=0)===(o.dir>0);chip=`<span class="delta ${o.dir===0?'flat':(good?'up':'down')}">${p>=0?'↑':'↓'} ${p>=0?'+':'−'}${fmt(Math.abs(p),1)}%</span><span class="yr">${vsLab}</span>`;}}
     else chip=future?'<span class="yr">official estimate</span>':'<span class="yr">first year</span>';
+    if(future&&o.k==='debt'&&fcur&&fcur.debtModel)chip='<span class="yr">model projection (stock-flow)</span>';
     let per='';
-    if(raw!=null){if(o.ratio)per=future?'end-Jun debt ÷ estimated revenue':'';
-      else if(future)per=o.k==='debt'?`as at end-June ${yr} — MOF publishes no year-end projection`:'official estimate — unaudited';
+    if(raw!=null){if(o.ratio)per=future?(fcur&&fcur.debtModel?'model debt ÷ official revenue':'end-Jun debt ÷ estimated revenue'):'';
+      else if(future)per=o.k==='debt'?(fcur&&fcur.debtModel?`model mid — band RM${fmt(fcur.debtModel.lo,0)}–${fmt(fcur.debtModel.hi,0)}b (stock-flow)`:`as at end-June ${yr} — MOF publishes no year-end projection`):'official estimate — unaudited';
       else per=`≈ RM${fmt(Math.abs(raw)*1000/hhOf(eff),0)} per household`;}
     const d=document.createElement('div');d.className='kpi'+(o.hero?' hero-k':'');
     d.innerHTML=`<button class="share" data-share="kpi:${o.k}${o.ratio?':ratio':''}" title="Share">⤓</button><div class="lab">${o.lab}${future?' <span style="color:var(--warn)">· official</span>':''}</div><div class="val tnum">${disp}<span class="u">${unit}</span></div>${per?`<div class="per">${per}</div>`:''}<div class="foot">${chip}</div><div class="spark"></div>`;kel.appendChild(d);
@@ -532,53 +550,80 @@ function render(){
     sg.appendChild(E('path',{d:ser.map((v,i)=>(i?'L':'M')+Xs(i)+','+Ys(v)).join(' '),fill:'none',stroke:css(col),'stroke-width':2,'stroke-linecap':'round','stroke-linejoin':'round'}));
     const mi=H.findIndex(x=>x.year==eff);if(mi>=0)sg.appendChild(E('circle',{cx:Xs(mi),cy:Ys(ser[mi]),r:3,fill:css(col)}));sp.appendChild(sg);});
 
-  safe('c-ringgit',()=>{const fnd=DATA.func_by_year[eff]||DATA.func_by_year[2024];const tot=fnd.reduce((a,f)=>a+f.spend,0);
+  safe('c-ringgit',()=>{const fnd=future?Object.entries(PJ.detail[String(yr)].functions).map(([f,v])=>({func:f,spend:v.mid})).sort((a,b)=>b.spend-a.spend):(DATA.func_by_year[eff]||DATA.func_by_year[2024]);const tot=fnd.reduce((a,f)=>a+f.spend,0);
     const OVER=new Set(['Subsidies & refunds','Debt service','Pensions','Transfers to funds']);
     const host=document.getElementById('c-ringgit');host.innerHTML='';const wrap=document.createElement('div');wrap.className='coinwrap';
     fnd.slice(0,8).forEach(f=>{const cents=100*f.spend/tot;const row=document.createElement('div');row.className='coinrow';
       row.innerHTML=`<span class="coinbar" style="width:${Math.max(cents*2.4,6)}px;background:${css(OVER.has(f.func)?'--s2':'--s1')}"></span><span class="coinlab">${f.func}</span><span class="coinval">RM${fmt(cents,2)}</span>`;wrap.appendChild(row);});
     host.appendChild(wrap);const aside=document.createElement('div');aside.style.cssText='flex:1;min-width:170px;font-size:13px;color:var(--ink-2)';
     const fixed=fnd.filter(f=>OVER.has(f.func)).reduce((a,f)=>a+f.spend,0);
-    aside.innerHTML=`<div style="font-size:34px;font-weight:800;letter-spacing:-1px;color:var(--ink)">RM${fmt(100*fixed/tot,0)}<span style="font-size:14px;color:var(--ink-2)"> of every RM100</span></div><div style="margin-top:4px">goes to <b style="color:var(--ink)">fixed commitments</b> — subsidies, debt interest and pensions — before any service is funded. <span style="color:var(--muted)">${eff}, operating spend.</span></div>`;host.appendChild(aside);});
+    aside.innerHTML=`<div style="font-size:34px;font-weight:800;letter-spacing:-1px;color:var(--ink)">RM${fmt(100*fixed/tot,0)}<span style="font-size:14px;color:var(--ink-2)"> of every RM100</span></div><div style="margin-top:4px">goes to <b style="color:var(--ink)">fixed commitments</b> — subsidies, debt interest and pensions — before any service is funded. <span style="color:var(--muted)">${yr}${future?' expected (model)':''}, operating spend.</span></div>`;host.appendChild(aside);});
 
   safe('c-rev',()=>{const base=H.map(d=>({year:d.year,rev:conv(d.rev,d.year),opex:conv(d.opex,d.year),totexp:conv(d.opex+d.devex,d.year)}));
-    legend('lg-rev',[{n:'Revenue',c:css(HUE.revenue)},{n:'Operating',c:css(HUE.operating)},{n:'Total spend',c:css('--s7')},{n:'Deficit',c:css('--bad')}]);
-    lineChart(document.getElementById('c-rev'),{data:base,x:'year',markYear:eff,fill:['totexp','rev'],events:EVENTS,fmtYf:fmtY,unit:unitLabel(),
-      series:[{k:'rev',n:'Revenue',c:HUE.revenue},{k:'opex',n:'Operating',c:HUE.operating},{k:'totexp',n:'Total spend',c:'--s7'}]});
+    const a24=byY[2024];base.find(d=>d.year===2024).revP=conv(a24.rev,2024);base.find(d=>d.year===2024).totexpP=conv(a24.opex+a24.devex,2024);
+    [2025,2026].forEach(y=>{const rv=pj(y,'headline','rev'),oe=pj(y,'headline','opex'),de=pj(y,'headline','devex');if(!rv||!oe||!de)return;
+      base.push({year:y,rev:null,opex:null,totexp:null,revP:conv(rv.mid,y),totexpP:conv(oe.mid+de.mid,y),revLo:conv(rv.lo,y),revHi:conv(rv.hi,y)});});
+    legend('lg-rev',[{n:'Revenue',c:css(HUE.revenue)},{n:'Operating',c:css(HUE.operating)},{n:'Total spend',c:css('--s7')},{n:'Deficit',c:css('--bad')},{n:'2025–26 official (dashed) · rev model band',c:css('--s4')}]);
+    lineChart(document.getElementById('c-rev'),{data:base,x:'year',markYear:yr,fill:['totexp','rev'],events:EVENTS,fmtYf:fmtY,unit:unitLabel(),horizon:2024,
+      bands:[{lo:'revLo',hi:'revHi',c:'--s1'}],
+      series:[{k:'rev',n:'Revenue',c:HUE.revenue},{k:'opex',n:'Operating',c:HUE.operating},{k:'totexp',n:'Total spend',c:'--s7'},
+              {k:'revP',n:'Revenue (official)',c:'--s4',dash:'6 4',nolabel:true},{k:'totexpP',n:'Total spend (official)',c:'--s4',dash:'2 3',nolabel:true}]});
     const d0=byY[eff]||H[H.length-1];setTxt('tk-rev',`In ${eff}, spending ran RM${fmt(d0.opex+d0.devex-d0.rev,1)}b beyond revenue — a ${fmt(100*Math.abs(d0.deficit)/gdpOf(eff),1)}% of GDP deficit.`);
     setTxt('src-rev',`Operating = Belanja Mengurus (RM${fmt(d0.opex,1)}b). The by-vote total used in "budget vs actual" (RM${fmt(DATA.gap_totals_by_year[eff]?DATA.gap_totals_by_year[eff].op_actual:d0.opex,1)}b) additionally includes the transfer to the Development Fund.`);
     table('t-rev',['Year','Revenue','Operating','Development','Deficit'],H.map(d=>[d.year,fmt(d.rev,1),fmt(d.opex,1),fmt(d.devex,1),fmt(d.deficit,1)]));});
 
   safe('c-comp',()=>{const c0=DATA.revenue_comp.filter(d=>d.tax!=null).map(d=>({year:d.year,tax:conv(d.tax,d.year),nontax:conv(d.nontax,d.year),investment:conv(d.investment,d.year)}));
-    legend('lg-comp',[{n:'Tax',c:css(HUE.tax)},{n:'Non-tax',c:css(HUE.nontax)},{n:'of which investment/PETRONAS',c:css(HUE.investment)}]);
-    lineChart(document.getElementById('c-comp'),{data:c0,x:'year',markYear:eff,events:EVENTS,fmtYf:fmtY,unit:unitLabel(),
-      series:[{k:'tax',n:'Tax',c:HUE.tax},{k:'nontax',n:'Non-tax',c:HUE.nontax},{k:'investment',n:'Investment income',c:HUE.investment,dash:'4 3'}]});
+    const l24=c0[c0.length-1];l24.taxP=l24.tax;l24.nontaxP=l24.nontax;
+    [2025,2026].forEach(y=>{const t=pj(y,'revenue_comp','tax'),nt=pj(y,'revenue_comp','nontax'),iv=pj(y,'revenue_comp','investment');if(!t||!nt||!iv)return;
+      c0.push({year:y,tax:null,nontax:null,investment:null,taxP:conv(t.mid,y),nontaxP:conv(nt.mid,y),invLo:conv(iv.lo,y),invHi:conv(iv.hi,y)});});
+    legend('lg-comp',[{n:'Tax',c:css(HUE.tax)},{n:'Non-tax',c:css(HUE.nontax)},{n:'of which investment/PETRONAS',c:css(HUE.investment)},{n:'2025–26 model (dashed) · investment swing band',c:css(HUE.investment)}]);
+    lineChart(document.getElementById('c-comp'),{data:c0,x:'year',markYear:yr,events:EVENTS,fmtYf:fmtY,unit:unitLabel(),horizon:2024,
+      bands:[{lo:'invLo',hi:'invHi',c:HUE.investment}],
+      series:[{k:'tax',n:'Tax',c:HUE.tax},{k:'nontax',n:'Non-tax',c:HUE.nontax},{k:'investment',n:'Investment income',c:HUE.investment,dash:'4 3'},
+              {k:'taxP',n:'Tax (model)',c:HUE.tax,dash:'6 4',nolabel:true},{k:'nontaxP',n:'Non-tax (model)',c:HUE.nontax,dash:'6 4',nolabel:true}]});
     table('t-comp',['Year','Tax','Non-tax','Investment','Total'],DATA.revenue_comp.filter(d=>d.tax!=null).map(d=>[d.year,fmt(d.tax,1),fmt(d.nontax,1),fmt(d.investment,1),fmt(d.total,1)]));});
-  safe('c-compbar',()=>{const c=DATA.revenue_comp.find(d=>d.year==eff)||DATA.revenue_comp[DATA.revenue_comp.length-1];
+  safe('c-compbar',()=>{
+    if(future){const t=pj(yr,'revenue_comp','tax'),nt=pj(yr,'revenue_comp','nontax'),nr=pj(yr,'revenue_comp','nonrev');
+      if(t&&nt&&nr){hbars(document.getElementById('c-compbar'),{unit:'RM b',rows:[
+        {n:'Tax',v:t.mid,c:HUE.tax,gl:'RM b, model mid'},{n:'Non-tax',v:nt.mid,c:HUE.nontax,gl:'RM b, model mid'},
+        {n:'One-off receipts',v:nr.mid,c:'--muted',gl:'RM b, model mid'}]});return;}}
+    const c=DATA.revenue_comp.find(d=>d.year==eff)||DATA.revenue_comp[DATA.revenue_comp.length-1];
     if(!c||c.tax==null){document.getElementById('c-compbar').innerHTML='<div class="srcnote">Revenue split not itemised before FY2012.</div>';return;}
     hbars(document.getElementById('c-compbar'),{unit:'RM b',rows:[{n:'Tax',v:c.tax,c:HUE.tax,gl:'RM b'},{n:'Non-tax',v:c.nontax,c:HUE.nontax,gl:'RM b'},{n:'One-off receipts',v:c.nonrev,c:'--muted',gl:'RM b'}]});});
 
   safe('c-obj',()=>{const o=DATA.rigidity.filter(d=>d.emol!=null).map(d=>({year:d.year,emol:conv(d.emol,d.year),supplies:conv(d.supplies,d.year),grants:conv(d.grants,d.year),assets:conv(d.assets,d.year)}));
-    legend('lg-obj',[{n:'Emoluments',c:css(HUE.emol)},{n:'Grants & fixed charges',c:css(HUE.grants)},{n:'Supplies',c:css(HUE.supplies)},{n:'Assets',c:css(HUE.assets)}]);
-    stackedArea(document.getElementById('c-obj'),{data:o,x:'year',markYear:eff,pctAxis:U!=='rm',unit:unitLabel(),events:EVENTS,
+    [2025,2026].forEach(y=>{const e=pj(y,'objects','emol'),g=pj(y,'objects','grants'),sp=pj(y,'objects','supplies'),a=pj(y,'objects','assets');if(!e||!g||!sp||!a)return;
+      o.push({year:y,emol:conv(e.mid,y),grants:conv(g.mid,y),supplies:conv(sp.mid,y),assets:conv(a.mid,y)});});
+    legend('lg-obj',[{n:'Emoluments',c:css(HUE.emol)},{n:'Grants & fixed charges',c:css(HUE.grants)},{n:'Supplies',c:css(HUE.supplies)},{n:'Assets',c:css(HUE.assets)},{n:'2025–26 = model mids (faded)',c:css('--muted')}]);
+    stackedArea(document.getElementById('c-obj'),{data:o,x:'year',markYear:yr,pctAxis:U!=='rm',unit:unitLabel(),events:EVENTS,horizon:2024,
       series:[{k:'emol',n:'Emoluments',c:HUE.emol},{k:'grants',n:'Grants & fixed charges',c:HUE.grants},{k:'supplies',n:'Supplies',c:HUE.supplies},{k:'assets',n:'Assets',c:HUE.assets}]});
     table('t-obj',['Year','Emoluments','Grants','Supplies','Assets'],DATA.rigidity.filter(d=>d.emol!=null).map(d=>[d.year,fmt(d.emol,1),fmt(d.grants,1),fmt(d.supplies,1),fmt(d.assets,1)]));});
 
-  safe('c-fn',()=>{const OVER=new Set(['Subsidies & refunds','Debt service','Pensions','Transfers to funds']);const fnd=DATA.func_by_year[eff]||DATA.func_by_year[2024];const revY=revOf(eff);
+  safe('c-fn',()=>{const OVER=new Set(['Subsidies & refunds','Debt service','Pensions','Transfers to funds']);const fnd=future?Object.entries(PJ.detail[String(yr)].functions).map(([f,v])=>({func:f,spend:v.mid})).sort((a,b)=>b.spend-a.spend):(DATA.func_by_year[eff]||DATA.func_by_year[2024]);const revY=revOf(yr);
     legend('lg-fn',[{n:'Ministries / services',c:css('--s1')},{n:'Fixed commitments',c:css('--s2')}]);
-    hbars(document.getElementById('c-fn'),{suffix:U==='rm'?'':'%',unit:unitLabel(),rows:fnd.map(f=>({n:f.func,v:U==='rm'?f.spend:(U==='rev'?100*f.spend/revY:100*f.spend/gdpOf(eff)),c:OVER.has(f.func)?'--s2':'--s1',gl:OVER.has(f.func)?'Fixed commitment':'Ministry / service'}))});
+    hbars(document.getElementById('c-fn'),{suffix:U==='rm'?'':'%',unit:unitLabel(),rows:fnd.map(f=>({n:f.func,v:U==='rm'?f.spend:(U==='rev'?100*f.spend/revY:100*f.spend/gdpOf(yr)),c:OVER.has(f.func)?'--s2':'--s1',gl:OVER.has(f.func)?'Fixed commitment':'Ministry / service'}))});
     const fixed=fnd.filter(f=>OVER.has(f.func)).reduce((a,f)=>a+f.spend,0),tot=fnd.reduce((a,f)=>a+f.spend,0);
-    setTxt('tk-fn',`In ${eff}, ${fmt(100*fixed/tot,0)}% of operating spend was fixed commitments, not services.`);
+    setTxt('tk-fn',`In ${yr}${future?' (model projection)':''}, ${fmt(100*fixed/tot,0)}% of operating spend ${future?'is expected to be':'was'} fixed commitments, not services.`);
     table('t-fn',['Function','RM b','% of op.','Type'],fnd.map(f=>[f.func,fmt(f.spend,2),fmt(100*f.spend/tot,1),OVER.has(f.func)?'Fixed':'Service']));});
 
   safe('c-db',()=>{const T=DATA.func_trend,i0=T.years.indexOf(2010),iy=T.years.indexOf(eff>2010?eff:2011);
-    const revMult=byY[T.years[iy]].rev/byY[2010].rev;
-    const rows=Object.entries(T.series).map(([f,a])=>({n:f,a:a[i0],b:a[iy],m:a[i0]?a[iy]/a[i0]:0})).sort((x,y)=>y.m-x.m);
-    legend('lg-db',[{n:'2010',hollow:true},{n:String(T.years[iy]),c:css('--s1')},{n:`outran revenue (×${revMult.toFixed(1)})`,c:css('--s2')},{n:'⌇ where it would be at revenue’s pace',c:css('--warn')}]);
-    dumbbell(document.getElementById('c-db'),{rows,ya:'2010',yb:String(T.years[iy]),refMult:revMult});
-    table('t-db',['Function','2010','Now','Growth','vs revenue'],rows.map(r=>[r.n,fmt(r.a,1),fmt(r.b,1),'×'+r.m.toFixed(2),r.m>=revMult?'outran':'lagged']));});
+    const bOf=f=>future?(pj(yr,'functions',f)||{mid:null}).mid:T.series[f][iy];
+    const revMult=(future?revOf(yr):byY[T.years[iy]].rev)/byY[2010].rev;
+    const rows=Object.entries(T.series).map(([f,a])=>({n:f,a:a[i0],b:bOf(f),m:a[i0]&&bOf(f)!=null?bOf(f)/a[i0]:0})).filter(r=>r.b!=null).sort((x,y)=>y.m-x.m);
+    const yb=future?yr+' (model)':String(T.years[iy]);
+    legend('lg-db',[{n:'2010',hollow:true},{n:yb,c:css('--s1')},{n:`outran revenue (×${revMult.toFixed(1)})`,c:css('--s2')},{n:'⌇ where it would be at revenue’s pace',c:css('--warn')}]);
+    dumbbell(document.getElementById('c-db'),{rows,ya:'2010',yb,refMult:revMult});
+    table('t-db',['Function','2010',yb,'Growth','vs revenue'],rows.map(r=>[r.n,fmt(r.a,1),fmt(r.b,1),'×'+r.m.toFixed(2),r.m>=revMult?'outran':'lagged']));});
 
-  safe('c-gap',()=>{const gap=(DATA.gap_by_year[eff]||DATA.gap_by_year[2024]).filter(g=>g.variance!=null).slice().sort((a,b)=>b.variance-a.variance).slice(0,12);
+  safe('c-gap',()=>{
+    if(future){const gap=(PJ.gap[String(yr)]||[]).slice().sort((a,b)=>b.variance-a.variance);
+      if(gap.length){legend('lg-gap',[{n:'Expected over budget (model)',c:css('--bad')},{n:'Expected under budget (model)',c:css('--good')}]);
+      divBars(document.getElementById('c-gap'),{rows:gap.map(g=>({...g,v:g.variance,tip:`<div class="th">${g.code} · ${g.name}</div><div class="row"><span class="k">${yr===2026?'Budget (scaled, model)':'Budget (tabled)'}</span><span class="v">${fmt(g.budget,2)}</span></div><div class="row"><span class="k">Expected actual (model)</span><span class="v">${fmt(g.mid,2)}</span></div><div class="row"><span class="k">p25–p75 band</span><span class="v">${fmt(g.lo,2)}–${fmt(g.hi,2)}</span></div><div class="row"><span class="k">Median utilisation</span><span class="v">${fmt(g.util,0)}%</span></div>`}))});
+      const big=gap.slice().sort((a,b)=>Math.abs(b.variance)-Math.abs(a.variance))[0];
+      setTxt('tk-gap',`Model expects ${big.short} to ${big.variance>=0?'overshoot':'come in under'} by RM${fmt(Math.abs(big.variance),1)}b in ${yr} (signature-based).`);
+      table('t-gap',['Vote','Name','Budget','Expected lo','Expected mid','Expected variance'],gap.map(g=>[g.code,g.short,fmt(g.budget,2),fmt(g.lo,2),fmt(g.mid,2),(g.variance>=0?'+':'−')+fmt(Math.abs(g.variance),2)]));
+      return;}}
+    const gap=(DATA.gap_by_year[eff]||DATA.gap_by_year[2024]).filter(g=>g.variance!=null).slice().sort((a,b)=>b.variance-a.variance).slice(0,12);
     legend('lg-gap',[{n:'Over budget',c:css('--bad')},{n:'Under budget',c:css('--good')}]);
     divBars(document.getElementById('c-gap'),{rows:gap.map(g=>({...g,v:g.variance}))});
     const big=gap[0];setTxt('tk-gap',`Biggest ${eff} surprise: ${big.short} ${big.variance>=0?'overshot':'came in under'} by RM${fmt(Math.abs(big.variance),1)}b${big.util?` (${fmt(big.util,0)}% of plan)`:''}.`);
@@ -586,17 +631,25 @@ function render(){
 
   safe('c-rig',()=>{const rig=DATA.rigidity.filter(d=>d.emol!=null).map(d=>{const f=U==='rm'?1:(U==='rev'?100/d.rev:100/gdpOf(d.year));
       return{year:d.year,Emoluments:d.emol*f,Pensions:d.pension*f,DebtService:d.debtsvc*f,total:(d.emol+d.pension+d.debtsvc)*f};});
-    legend('lg-rig',[{n:'Emoluments',c:css(HUE.emol)},{n:'Pensions',c:css(HUE.pension)},{n:'Debt service',c:css(HUE.debtsvc)},{n:'Pre-committed core',c:css('--s6')}]);
+    [2025,2026].forEach(y=>{const e=pj(y,'rigidity','emol'),pn=pj(y,'rigidity','pension'),ds=pj(y,'rigidity','debtsvc');if(!e||!pn||!ds)return;
+      const f=U==='rm'?1:(U==='rev'?100/revOf(y):100/gdpOf(y));
+      rig.push({year:y,Emoluments:e.mid*f,Pensions:pn.mid*f,DebtService:ds.mid*f,total:(e.mid+pn.mid+ds.mid)*f});});
+    legend('lg-rig',[{n:'Emoluments',c:css(HUE.emol)},{n:'Pensions',c:css(HUE.pension)},{n:'Debt service',c:css(HUE.debtsvc)},{n:'Pre-committed core',c:css('--s6')},{n:'2025–26 = model mids (faded)',c:css('--muted')}]);
     const refs=(U==='rev')?[{v:15,l:'15% debt-service guardrail'}]:[];
-    stackedArea(document.getElementById('c-rig'),{data:rig,x:'year',markYear:eff,pctAxis:U!=='rm',unit:unitLabel(),overlay:[{k:'total',n:'Pre-committed core',c:'--s6'}],refs,
+    stackedArea(document.getElementById('c-rig'),{data:rig,x:'year',markYear:yr,pctAxis:U!=='rm',unit:unitLabel(),overlay:[{k:'total',n:'Pre-committed core',c:'--s6'}],refs,horizon:2024,
       series:[{k:'Emoluments',n:'Emoluments',c:HUE.emol},{k:'Pensions',n:'Pensions',c:HUE.pension},{k:'DebtService',n:'Debt service',c:HUE.debtsvc}]});
     const r=DATA.rigidity.find(d=>d.year==eff)||DATA.rigidity[DATA.rigidity.length-1];const tp=100*(r.emol+r.pension+r.debtsvc)/r.rev;
     setTxt('tk-rig',`In ${eff}, ${fmt(tp,0)}% of revenue was pre-committed to pay, pensions and interest — debt service alone was ${fmt(100*r.debtsvc/r.rev,1)}%.`);
     table('t-rig',['Year','Emoluments','Pensions','Debt service','Core % rev'],DATA.rigidity.filter(d=>d.emol!=null).map(d=>[d.year,fmt(d.emol,1),fmt(d.pension,1),fmt(d.debtsvc,1),fmt(100*(d.emol+d.pension+d.debtsvc)/d.rev,0)+'%']));});
 
   safe('c-debt',()=>{const dd=H.map(d=>({year:d.year,debt:conv(d.debt,d.year)}));const refs=U==='gdp'?[{v:65,l:'65% ceiling (temp)'},{v:60,l:'60% statutory'}]:[];
-    legend('lg-debt',[{n:U==='gdp'?'Debt (% of GDP)':U==='rev'?'Debt (% of revenue)':'Federal debt (RM b)',c:css(HUE.debt)}]);
-    lineChart(document.getElementById('c-debt'),{data:dd,x:'year',markYear:eff,events:[{y:2020,l:'COVID'}],refs,fmtYf:fmtY,unit:unitLabel(),series:[{k:'debt',n:'Debt',c:HUE.debt,area:true}]});
+    dd[dd.length-1].debtP=dd[dd.length-1].debt;
+    [2025,2026].forEach(y=>{const dm=pj(y,'headline','debt');if(!dm)return;
+      dd.push({year:y,debt:null,debtP:conv(dm.mid,y),dLo:conv(dm.lo,y),dHi:conv(dm.hi,y)});});
+    legend('lg-debt',[{n:U==='gdp'?'Debt (% of GDP)':U==='rev'?'Debt (% of revenue)':'Federal debt (RM b)',c:css(HUE.debt)},{n:'2025–26 stock-flow model (dashed + band)',c:css(HUE.debt)}]);
+    lineChart(document.getElementById('c-debt'),{data:dd,x:'year',markYear:yr,events:[{y:2020,l:'COVID'}],refs,fmtYf:fmtY,unit:unitLabel(),horizon:2024,
+      bands:[{lo:'dLo',hi:'dHi',c:HUE.debt}],
+      series:[{k:'debt',n:'Debt',c:HUE.debt,area:true},{k:'debtP',n:'Debt (model)',c:HUE.debt,dash:'6 4'}]});
     setTxt('tk-debt',`${eff}: RM${fmt(cur.debt,0)}b — ${fmt(100*cur.debt/gdpOf(eff),0)}% of GDP, ${fmt(cur.debt/cur.rev,1)}× annual revenue.`);
     table('t-debt',['Year','Debt RM b','% of GDP','× revenue'],H.map(d=>[d.year,fmt(d.debt,0),fmt(100*d.debt/gdpOf(d.year),0)+'%',fmt(d.debt/d.rev,2)+'×']));});
 
@@ -604,12 +657,15 @@ function render(){
   safe('c-inst',()=>{legend('lg-inst',[{n:'Domestic securities (MGS/MGII)',c:css('--s1')},{n:'Other',c:css('--s3')}]);
     hbars(document.getElementById('c-inst'),{unit:'RM b',rows:DATA.debt_instruments.map(x=>({n:x.name.length>26?x.name.slice(0,24)+'…':x.name,v:x.v,c:/SEKURITI|PELABURAN/.test(x.name)?'--s1':'--s3',gl:'RM b'}))});});
 
-  safe('c-con',()=>{const c=DATA.contingent_by_year[eff]||DATA.contingent_by_year[2024];
+  const contFor=()=>{if(!future)return DATA.contingent_by_year[eff]||DATA.contingent_by_year[2024];
+    const g=pj(yr,'contingent','guarantees'),pf=pj(yr,'contingent','pfi'),le=pj(yr,'contingent','leases'),db=pj(yr,'headline','debt');
+    return{debt:db?db.mid:null,guarantees:g?g.mid:null,pfi:pf?pf.mid:null,leases:le?le.mid:null,statutory:null};};
+  safe('c-con',()=>{const c=contFor();
     const steps=[{l:'Direct debt',v:c.debt},{l:'+ Guarantees',v:c.guarantees||0},{l:'+ PFI',v:c.pfi||0},{l:'+ Leases',v:c.leases||0},{l:'Total on-book + contingent',v:(c.debt||0)+(c.guarantees||0)+(c.pfi||0)+(c.leases||0),total:1}];
     waterfall(document.getElementById('c-con'),{steps});
-    const host=document.getElementById('c-con');const note=document.createElement('div');note.className='srcnote';note.innerHTML=`<b>Plus statutory guarantees ≈ RM${fmt(c.statutory,0)}b</b> (${fmt(100*c.statutory/gdpOf(eff),0)}% of GDP) — mostly deposit-insurance-type cover; overlaps the above and is <b>not</b> added here.`;host.appendChild(note);});
+    const host=document.getElementById('c-con');const note=document.createElement('div');note.className='srcnote';note.innerHTML=c.statutory!=null?`<b>Plus statutory guarantees ≈ RM${fmt(c.statutory,0)}b</b> (${fmt(100*c.statutory/gdpOf(eff),0)}% of GDP) — mostly deposit-insurance-type cover; overlaps the above and is <b>not</b> added here.`:`<b>${yr} bars are model mids</b> (guarantees/PFI/leases: own-history growth quantiles; debt: stock-flow) — statutory guarantees not projected.`;host.appendChild(note);});
   safe('c-gent',()=>hbars(document.getElementById('c-gent'),{unit:'RM b',rows:DATA.guarantee_entities.map(e=>({n:e.name.length>28?e.name.slice(0,26)+'…':e.name,v:e.v,c:'--s2',gl:'RM b guaranteed'}))}));
-  safe('t-con',()=>{const c=DATA.contingent_by_year[eff]||DATA.contingent_by_year[2024];table('t-con',['Item','RM b','% of GDP'],[['Direct federal debt',fmt(c.debt,1),fmt(100*c.debt/gdpOf(eff),0)],['Guarantees',fmt(c.guarantees,1),fmt(100*c.guarantees/gdpOf(eff),0)],['PFI',fmt(c.pfi,1),c.pfi?fmt(100*c.pfi/gdpOf(eff),0):'–'],['Leases',fmt(c.leases,1),c.leases?fmt(100*c.leases/gdpOf(eff),0):'–'],['Statutory (non-additive)',fmt(c.statutory,1),fmt(100*c.statutory/gdpOf(eff),0)]]);});
+  safe('t-con',()=>{const c=contFor();table('t-con',['Item','RM b','% of GDP'],[['Direct federal debt',fmt(c.debt,1),fmt(100*c.debt/gdpOf(eff),0)],['Guarantees',fmt(c.guarantees,1),fmt(100*c.guarantees/gdpOf(eff),0)],['PFI',fmt(c.pfi,1),c.pfi?fmt(100*c.pfi/gdpOf(eff),0):'–'],['Leases',fmt(c.leases,1),c.leases?fmt(100*c.leases/gdpOf(eff),0):'–'],['Statutory (non-additive)',fmt(c.statutory,1),fmt(100*c.statutory/gdpOf(eff),0)]]);});
 
   safe('pl-list',()=>{const pl=DATA.pipeline,drawn=100*pl.cum/pl.approved;
     document.getElementById('pl-big').innerHTML=`<div><div class="n tnum">${fmt(pl.approved,0)}<span class="u"> RM b approved</span></div><div class="l">${pl.n} projects</div></div><div><div class="n tnum">${fmt(pl.cum,0)}<span class="u"> RM b spent</span></div><div class="l">${fmt(drawn,0)}% delivered</div></div><div><div class="n tnum">~${Math.round((pl.approved-pl.cum)/pl.annual)}<span class="u"> yrs</span></div><div class="l">backlog at RM${fmt(pl.annual,0)}b/yr</div></div>`;

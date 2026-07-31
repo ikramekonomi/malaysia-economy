@@ -1,0 +1,57 @@
+year,grp,series,lo_rm_bil,mid_rm_bil,hi_rm_bil,basis,method,anchor,note
+2025,headline,rev,314.7,334.115,347.3,official_revised,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2025,headline,opex,311.4,332.15,341.9,official_revised,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2025,headline,devex,79.6,80.0,105.0,official_revised,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2025,headline,deficit,-132.2,-76.714,-43.7,official_revised,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2026,headline,rev,305.2,343.124,371.6,official_projection,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2026,headline,opex,301.6,338.202,363.6,official_projection,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2026,headline,devex,75.5,81.0,131.2,official_projection,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2026,headline,deficit,-189.6,-74.578,-5.5,official_projection,mid=official MOF; band=v1 trend p25/p75,MOF Fiscal Outlook (Budget 2026 ed.),
+2025,headline,debt,1320.884,1323.196,1324.728,model_projection,stock-flow: debt24 + |official deficit| + eps(p25/med/p75 of FY2015-24 residuals),PKKP debt 2024 + MOF deficit path,official end-Jun-2025 level 1304.176; band is conditional on the official deficit path (deficit uncertainty not propagated - see headline deficit band)
+2026,headline,debt,1392.018,1396.641,1399.707,model_projection,stock-flow compounded from 2025 quantile paths,PKKP debt 2024 + MOF deficit path,band conditional on official deficit path (deficit uncertainty not propagated)
+2025,revenue_comp,tax,236.962,239.783,247.219,model_projection,median share of last 5 audited years x official revenue; mids normalised,official revenue 334.115,
+2025,revenue_comp,nontax,73.072,82.687,90.361,model_projection,median share of last 5 audited years x official revenue; mids normalised,official revenue 334.115,
+2025,revenue_comp,nonrev,6.392,11.645,12.022,model_projection,median share of last 5 audited years x official revenue; mids normalised,official revenue 334.115,
+2025,revenue_comp,investment,45.751,59.219,75.889,model_projection,"share of revenue, min/median/max of last 7 years (petroleum swing risk)",official revenue 334.115,"memo item - subset of non-tax, not additive"
+2026,revenue_comp,tax,243.352,246.249,253.885,model_projection,median share of last 5 audited years x official revenue; mids normalised,official revenue 343.124,
+2026,revenue_comp,nontax,75.042,84.916,92.798,model_projection,median share of last 5 audited years x official revenue; mids normalised,official revenue 343.124,
+2026,revenue_comp,nonrev,6.564,11.959,12.346,model_projection,median share of last 5 audited years x official revenue; mids normalised,official revenue 343.124,
+2026,revenue_comp,investment,46.984,60.816,77.935,model_projection,"share of revenue, min/median/max of last 7 years (petroleum swing risk)",official revenue 343.124,"memo item - subset of non-tax, not additive"
+2025,objects,emol,104.567,106.53,112.043,model_projection,2025: tabled emoluments x aggregate-OE utilisation quantiles; 2026: x own log-growth quantiles,Budget 2025 emoluments 105.909; official OE 332.15,
+2025,objects,grants,186.479,186.59,187.141,model_projection,"median share of non-emoluments OE (last 5 audited yrs), mids normalised to OE anchor",official OE 332.15,
+2025,objects,supplies,37.302,38.023,38.228,model_projection,"median share of non-emoluments OE (last 5 audited yrs), mids normalised to OE anchor",official OE 332.15,
+2025,objects,assets,0.914,1.007,1.038,model_projection,"median share of non-emoluments OE (last 5 audited yrs), mids normalised to OE anchor",official OE 332.15,
+2026,objects,emol,107.66,110.404,117.07,model_projection,2025: tabled emoluments x aggregate-OE utilisation quantiles; 2026: x own log-growth quantiles,Budget 2025 emoluments 105.909; official OE 338.202,
+2026,objects,grants,188.278,188.39,188.947,model_projection,"median share of non-emoluments OE (last 5 audited yrs), mids normalised to OE anchor",official OE 338.202,
+2026,objects,supplies,37.662,38.39,38.597,model_projection,"median share of non-emoluments OE (last 5 audited yrs), mids normalised to OE anchor",official OE 338.202,
+2026,objects,assets,0.923,1.017,1.048,model_projection,"median share of non-emoluments OE (last 5 audited yrs), mids normalised to OE anchor",official OE 338.202,
+2025,rigidity,pension,39.479,41.457,44.775,model_projection,T.14 tabled budget x its own utilisation signature quantiles,Budget 2025 T.14 39.084,
+2026,rigidity,pension,41.673,44.196,48.167,model_projection,2025 quantiles x T.14 FY2016-24 log-growth quantiles,Budget 2025 T.14 39.084,
+2025,rigidity,debtsvc,52.375,53.89,54.591,model_projection,T.13 tabled budget x its own utilisation signature quantiles,Budget 2025 T.13 54.700,
+2026,rigidity,debtsvc,56.124,58.569,59.948,model_projection,2025 quantiles x T.13 FY2016-24 log-growth quantiles,Budget 2025 T.13 54.700,
+2025,rigidity,emol,104.567,106.53,112.043,model_projection,shared with objects.emol,,
+2026,rigidity,emol,107.66,110.404,117.07,model_projection,shared with objects.emol,,
+2025,functions,Debt service,52.375,53.89,54.591,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Debt service,56.124,58.569,59.948,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Defence,13.274,13.798,14.128,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Defence,13.599,14.308,15.167,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Education,68.508,72.35,73.42,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Education,68.801,75.455,77.56,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Health,38.519,39.347,41.027,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Health,39.847,42.306,45.89,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Home Affairs,15.121,15.528,16.579,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Home Affairs,15.273,15.944,17.365,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Other ministries,47.213,49.875,53.702,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Other ministries,45.877,50.262,58.805,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Pensions,39.479,41.457,44.775,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Pensions,41.673,44.196,48.167,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Subsidies & refunds,46.212,53.583,65.471,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Subsidies & refunds,40.634,54.687,74.159,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,functions,Transfers to funds,2.706,3.768,5.462,model_projection,sum of per-vote signature nowcast (budget x utilisation quantiles),Budget 2025 per vote,"function totals sum to 343.6, not the official OE (signature bias kept)"
+2026,functions,Transfers to funds,2.148,3.861,9.311,model_projection,2025 nowcast x own-function FY2016-24 log-growth quantiles,Budget 2025 per vote,
+2025,contingent,guarantees,343.885,353.455,370.811,model_projection,FY2024 level x own log-growth quantiles (n=15 years),PKKP 2024 332.8,
+2026,contingent,guarantees,355.319,375.37,413.14,model_projection,compounded quantile paths,PKKP 2024 332.8,
+2025,contingent,pfi,31.609,31.904,31.931,model_projection,FY2024 level x own log-growth quantiles (n=6 years),PKKP 2024 32.9,
+2026,contingent,pfi,30.363,30.934,30.985,model_projection,compounded quantile paths,PKKP 2024 32.9,
+2025,contingent,leases,24.303,25.566,27.581,model_projection,FY2024 level x own log-growth quantiles (n=7 years),PKKP 2024 26.7,
+2026,contingent,leases,22.155,24.517,28.534,model_projection,compounded quantile paths,PKKP 2024 26.7,

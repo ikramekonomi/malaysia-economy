@@ -243,6 +243,27 @@ with open(os.path.join(ROOT, "curated", "forecast", "fact_nowcast_2025.csv")) as
         if row["maksud_code"] == "TOTAL_OE":
             now_oe = {"lo": r(float(row["expected_lo_rm"]) / 1e9), "mid": r(float(row["expected_mid_rm"]) / 1e9),
                       "hi": r(float(row["expected_hi_rm"]) / 1e9)}
+# detail projections (build first: python3 curated/forecast/build_forecast2026.py)
+proj = {"detail": {}, "gap": {}}
+with open(os.path.join(ROOT, "curated", "forecast", "fact_projection_detail.csv")) as f:
+    for row in _csv.DictReader(f):
+        y = row["year"]
+        proj["detail"].setdefault(y, {}).setdefault(row["grp"], {})[row["series"]] = {
+            "lo": float(row["lo_rm_bil"]), "mid": float(row["mid_rm_bil"]),
+            "hi": float(row["hi_rm_bil"]), "basis": row["basis"]}
+with open(os.path.join(ROOT, "curated", "forecast", "fact_gap_projection.csv")) as f:
+    for row in _csv.DictReader(f):
+        proj["gap"].setdefault(row["year"], []).append({
+            "code": row["maksud_code"], "name": row["name_bm"], "short": row["short"],
+            "budget": r(float(row["budget_rm_bil"]), 3),
+            "lo": r(float(row["expected_lo_rm_bil"]), 3), "mid": r(float(row["expected_mid_rm_bil"]), 3),
+            "hi": r(float(row["expected_hi_rm_bil"]), 3),
+            "variance": r(float(row["variance_mid_rm_bil"]), 3),
+            "util": float(row["util_median_pct"]) if row["util_median_pct"] else None})
+for y in proj["gap"]:
+    proj["gap"][y] = sorted(proj["gap"][y], key=lambda g: -abs(g["variance"]))[:12]
+d["proj"] = proj
+
 d["outlook"] = {
     "official": off,
     "budget2025": {"opex": r(bud["opex"], 3), "devex": r(bud["devex"], 3),
