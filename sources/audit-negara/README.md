@@ -62,9 +62,10 @@ register prints 130+9+3 — `data/_source_anomalies_agensi.csv`.
 ### LKAN audit inventory + findings register (`data/fact_lkan_audits.csv`, `data/fact_lkan_findings.csv`)
 
 The five Aktiviti-bearing volumes (LKAN 2/2024 ×2, 2/2025, 3/2025, 1/2026 vol 2):
-`fact_lkan_audits.csv` — 33 audits (ministry, entity, topic, chapter architecture,
-pdf range, each cross-checked against its chapter-head pages);
-`fact_lkan_findings.csv` — 425 finding units with per-unit `section_path`
+`fact_lkan_audits.csv` — 34 audits (ministry, entity, topic, chapter architecture,
+pdf range, each cross-checked against its chapter-head pages; incl. the two
+register-style e-SelfAudit censuses, CMD.2.2026 II.3 and CMD.14.2025 VII);
+`fact_lkan_findings.csv` — 426 finding units with per-unit `section_path`
 (`5.x`/`5.x.y` heading numbers, or the paragraph range a margin sub-topic label
 spans), verbatim heading/label, `pdf_page`, ordered `RM…` amount tokens,
 `Maklum balas` responses as `entity|dates`, and `Pendapat Audit` box text.
@@ -76,7 +77,9 @@ text-layer hazards in `pipeline/STRUCTURE_NOTES.md`), validation
 an independent scanner, section-path continuity incl. zero interior paragraph
 gaps in every margin chapter, pdf-page ranges, chapter counts, RM-token
 normalisation. Source wording variants kept as printed and documented in
-`data/_source_anomalies_lkan.csv`.
+`data/_source_anomalies_lkan.csv`. An independent adversarial verifier
+re-derived the datasets from the PDFs (30-row deep sample all confirmed); the
+margin-label defects it flagged are fixed and re-validated.
 
 ## Planned next extraction
 

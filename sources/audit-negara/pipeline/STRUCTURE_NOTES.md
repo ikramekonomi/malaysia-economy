@@ -89,3 +89,15 @@ Verified against the text while building `extract_lkan_findings.py`:
   (16/10/12/11/20/12/9/6), not 92.
 - CMD.2.2026 I.1 also uses the no-`diterima` variant `Maklum Balas MyIPO pada
   9 Disember 2025` (pdf 34) — the master regex needs the bare-`pada` branch.
+- **CMD.14.2025 has a second e-SelfAudit register chapter**: Bahagian VII
+  (divider pdf 202, text pdf 204–211, 1,856 badan lain termasuk syarikat for
+  2025) — analogous to CMD.2.2026 II.3; Bahagian VI's content ends pdf 201.
+- **CMD.2.2026 divider pages**: I.2 pdf 63, II.3 pdf 83, III.4 pdf 129 — each
+  audit's range starts at its own divider (I.1 has none, starts pdf 25).
+- **CMD.9.2024 layout hazards for the margin parser** (found by the
+  adversarial verifier): pdf 143 has an umbrella ALL-CAPS topic label
+  (`AKTIVITI PENGURUSAN HARTANAH`, para 60) outside the section vocabulary
+  with `Sumber dan Perbelanjaan Dana` (paras 61–65) beneath it; wrapped
+  margin labels can skip past full-width italic lines (pdf 197); pdf 217 is a
+  geometry-shifted continuation page whose whole text column collapses onto
+  the margin (its stray `5 Januari 2022.` line is not a label).

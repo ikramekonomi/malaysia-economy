@@ -32,7 +32,7 @@ sys.path.insert(0, HERE)
 from extract_lkan_findings import volume_pages, NOISE, MONTHS  # noqa: E402
 
 EXPECT_CHAPTERS = {"CMD.8.2024.pdf": 9, "CMD.9.2024.pdf": 8, "CMD.5.2025.pdf": 5,
-                   "CMD.2.2026.pdf": 4, "CMD.14.2025.pdf": 7}
+                   "CMD.2.2026.pdf": 4, "CMD.14.2025.pdf": 8}
 MARGIN = "margin_label"
 RM_OK = re.compile(r"^RM[\d.,]+( (juta|bilion))?$")
 MARKER = re.compile(
@@ -66,8 +66,9 @@ def count_fullwidth(lines):
                 break
             para.append(nxt)
         m = MARKER.match(re.sub(r"\s+", " ", " ".join(para)))
-        if not m or (m.group("ent") and m.group("ent").strip().islower()):
-            continue                      # not a heading / prose mention
+        if not m or (m.group("ent") and m.group("ent").strip().islower()) \
+                or len(m.group("ent").split()) > 8:
+            continue                      # not a heading / prose or table cell
         prev = lines[i - 1].strip() if i else ""
         if prev and (prev.endswith((" dan", ",")) or "Sumber:" in prev):
             continue                      # wrapped table-source citation

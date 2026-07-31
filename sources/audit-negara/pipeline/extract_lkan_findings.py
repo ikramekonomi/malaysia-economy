@@ -127,15 +127,17 @@ INVENTORY = [
      "KPT; MOSTI; MITI; KPKM; Kementerian Ekonomi; MOF", "",
      "Pengauditan Program Penyelidikan, Pembangunan, Pengkomersialan dan Inovasi "
      "(R&D&C&I)", A, 25, 62, "numbered", 5),
+    # boundary convention: each audit starts at its own divider page where one
+    # exists (I.2 divider pdf 63, II.3 pdf 83, III.4 pdf 129; I.1 has none)
     ("LKAN 1/2026", "CMD.2.2026.pdf", "I.2", "MOSTI; KDN", "MIMOS Berhad",
      "Pengauditan Pematuhan Perbelanjaan Projek Pembangunan MyDigital ID",
-     A, 63, 84, "numbered", 5),
+     A, 63, 82, "numbered", 5),
     ("LKAN 1/2026", "CMD.2.2026.pdf", "II.3", "",
      "852 badan lain termasuk syarikat diwartakan",
      "Pengauditan Badan Lain Termasuk Syarikat Melalui Sistem e-SelfAudit",
-     "register", 85, 130, "register", None),
+     "register", 83, 128, "register", None),
     ("LKAN 1/2026", "CMD.2.2026.pdf", "III.4", "Jabatan Perdana Menteri / YPB",
-     "Pelaburan Hartanah Berhad (PHB)", "Pengurusan syarikat", A, 131, 174, "numbered", 5),
+     "Pelaburan Hartanah Berhad (PHB)", "Pengurusan syarikat", A, 129, 174, "numbered", 5),
 
     ("LKAN 3/2025", "CMD.14.2025.pdf", "IV.1", "Kementerian Pengangkutan",
      "Jabatan Pengangkutan Jalan",
@@ -158,7 +160,11 @@ INVENTORY = [
      "Pengauditan Pejabat Perwakilan", "margin_label", 158, 167, "margin", "all"),
     ("LKAN 3/2025", "CMD.14.2025.pdf", "VI", "KDN; KKR; ESSCOM; JKR", "",
      "Pengauditan Status Penyiapan Projek Pangkalan Operasi Hadapan (FOB) "
-     "Pulau Mabul, Semporna, Sabah", A, 168, 203, "numbered", 5),
+     "Pulau Mabul, Semporna, Sabah", A, 168, 201, "numbered", 5),
+    ("LKAN 3/2025", "CMD.14.2025.pdf", "VII", "",
+     "1,856 badan lain termasuk syarikat diwartakan",
+     "Pengauditan Badan Lain Termasuk Syarikat Melalui Sistem e-SelfAudit "
+     "Bagi Tahun 2025", "register", 202, 211, "register", None),
 ]
 
 # ------------------------------------------------------------ text plumbing
@@ -241,7 +247,10 @@ def chapter_lines(pages, start, end):
 
 
 def squash(text):
-    return re.sub(r"\s+", " ", text).strip()
+    """Collapse whitespace; heal hyphen line-wraps ("masing- masing") that the
+    line joins leave behind — the printed text has no space after the hyphen."""
+    text = re.sub(r"\s+", " ", text).strip()
+    return re.sub(r"([A-Za-z])- (?=[a-z])", r"\1-", text)
 
 
 def rm_tokens(text):
@@ -262,9 +271,13 @@ def parse_marker(text):
     m = MB_HEAD.match(text)
     if not m:
         return None
-    if m.group("ent") and m.group("ent").strip().islower():
+    ent = m.group("ent").strip() if m.group("ent") else ""
+    if ent and ent.islower():
         return None       # prose ("Maklum balas telah diterima pada ..."),
                           # not a response heading — entities are proper nouns
+    if len(ent.split()) > 8:
+        return None       # a real entity is short — a long "entity" is prose
+                          # or a table cell that happens to contain the phrase
     dates = []
     for tok in m.group("tail").split():
         if DATE_TOK.match(tok) and (dates or tok[0].isdigit()):
@@ -276,7 +289,11 @@ def parse_marker(text):
     while dates and not (dates[-1].rstrip(".,").isdigit()
                          or re.match(r"^(%s)[.,]?$" % MONTHS, dates[-1])):
         dates.pop()          # never end on a dangling 'dan'/'pada'/acronym
-    return "%s|%s" % (squash(m.group("ent")), squash(" ".join(dates)).rstrip(".,"))
+
+    def tidy(s):             # hyphen line-wraps ("masing- masing") and
+        s = re.sub(r"([A-Za-z])-\s+(?=[a-z])", r"\1-", squash(s))
+        return re.sub(r"\b(\w+) \1\b", r"\1", s)   # doubled-layer word dupes
+    return "%s|%s" % (tidy(ent), tidy(" ".join(dates)).rstrip(".,"))
 
 
 # ------------------------------------------------- numbered-skeleton chapters
@@ -397,6 +414,9 @@ def margin_indent(lines):
     return cnt.most_common(1)[0][0]
 
 
+FURNITURE = re.compile(r"^(Sumber|Nota)\s*:|^(Jadual|Carta|Rajah|Foto|Gambar)\b")
+
+
 def split_margin(lines, mx):
     """Per line: (page, label, body). Split at the nearest pure-body indent."""
     indents = []
@@ -407,37 +427,40 @@ def split_margin(lines, mx):
                         if i is not None and mx + 8 < i < mx + 60)
     fallback = body_mode.most_common(1)[0][0] if body_mode else mx + 18
     out = []
-    for k, (page, ln) in enumerate(lines):
+    last_cut = None                            # (line_index, column) of the
+    for k, (page, ln) in enumerate(lines):     # previous successful label cut
         st = ln.lstrip()
         ind = indents[k]
         if not st:
             out.append((page, "", ""))
             continue
-        if ind > mx + 6:
-            out.append((page, "", st))
+        if ind > mx + 6 or ind < mx - 2:
+            out.append((page, "", st))         # pure body / full-width divider
             continue
-        if ind < mx - 2:                       # dividers/full-width heads: body
-            out.append((page, "", st))
+        if FURNITURE.match(st):
+            out.append((page, "", st))         # table furniture, never a label
             continue
         # a narrow label chunk directly followed by a paragraph number is the
         # strongest cut signal ("PENEMUAN AUDIT 8. Pengauditan ...")
-        m = re.match(r"^(\S.{0,22}?)\s+\d{1,3}\.\s", st)
-        if m and not re.match(r"^(Sumber|Nota|Jadual|Carta|Rajah|Foto|Gambar)\b",
-                              st):
-            out.append((page, m.group(1).strip(),
-                        st[m.end(1):].strip()))
+        m = re.match(r"^(\s*\S.{0,22}?)\s+(?=\d{1,3}\.\s)", ln)
+        if m:
+            last_cut = (k, m.end())
+            out.append((page, m.group(1).strip(), ln[m.end():].strip()))
             continue
-        # body column: nearest pure-body indents that cut this line cleanly
-        # (label column is at most ~16 chars wide, so candidates below mx+16
-        # would truncate multi-word labels)
-        cands = []
+        # body column: the previous label line's cut (labels in one block share
+        # it), then nearby pure-body indents, cutting this line cleanly (label
+        # column is at most ~16 chars wide, so lower candidates would truncate
+        # multi-word labels)
+        cands = [last_cut[1]] if last_cut and k - last_cut[0] <= 2 else []
+        near = []
         for j in list(range(k + 1, k + 9)) + list(range(k - 1, k - 9, -1)):
             if 0 <= j < len(lines) and indents[j] is not None \
                     and mx + 12 < indents[j] < mx + 60 \
-                    and indents[j] not in cands:
-                cands.append(indents[j])
+                    and indents[j] not in near:
+                near.append(indents[j])
+        cands += sorted(near) + [fallback]
         bc = None
-        for c in sorted(cands) + [fallback]:
+        for c in cands:
             for d in (0, 1, -1, 2, -2, 3, -3):  # columns jitter by a few chars
                 t = c + d
                 clean = t > mx + 12 and (len(ln) <= t or
@@ -453,14 +476,12 @@ def split_margin(lines, mx):
             out.append((page, "", st))         # word straddles the column: no label
             continue
         lab = ln[:bc].strip()
-        if re.match(r"^(Sumber|Nota|Jadual|Carta|Rajah|Foto|Gambar)\b", lab):
-            out.append((page, "", st))         # table furniture, never a label
-            continue
         body = ln[bc:].strip()
         m = re.search(r"(?:^|\s)(\d{1,3}\.)$", lab)
         if m:                                  # para number glued onto the label
             lab = lab[:m.start()].strip()
             body = (m.group(1) + " " + body).strip()
+        last_cut = (k, bc)
         out.append((page, lab, body))
     return out
 
@@ -474,13 +495,31 @@ DATE_WORD = re.compile(r"^(?:\d{1,2}|\d{4}|%s|dan|hingga|serta|pada|"
                        r"masing-masing|,)[.,]?$" % MONTHS)
 
 
-def label_blocks(split):
-    """Group contiguous label-bearing lines into classified blocks."""
+def label_blocks(split, paras_at):
+    """Group label-bearing lines into classified blocks.
+
+    A run is contiguous label lines, except that a wrapped label may bridge
+    1-2 label-less body lines (full-width italics push the label column empty
+    for a line, e.g. CMD.9 pdf 197): the run continues when the label line
+    beyond the gap reads as a continuation — mixed-case, not a Maklum/Pendapat
+    marker, and not opening a numbered paragraph of its own.
+    """
     blocks, run = [], []
     for k, (page, lab, body) in enumerate(split):
         if lab:
             run.append(k)
-        elif run:
+            continue
+        if run and body:
+            nxt = next((j for j in (k + 1, k + 2) if j < len(split)
+                        and split[j][1]), None)
+            if nxt is not None and nxt - run[-1] <= 3:
+                nlab = split[nxt][1]
+                if not is_caps(nlab) and not is_caps(split[run[-1]][1]) \
+                        and nxt not in paras_at \
+                        and not any(j in paras_at for j in range(k, nxt)) \
+                        and not re.match(r"^(Maklum\b|Pendapat\b)", nlab):
+                    continue                    # wrapped label, keep the run
+        if run:
             blocks.extend(cut_run(split, run))
             run = []
     if run:
@@ -584,8 +623,8 @@ def para_chain(split):
 def extract_margin(chap, lines):
     mx = margin_indent(lines)
     split = split_margin(lines, mx)
-    blocks = label_blocks(split)
     paras_at = para_chain(split)
+    blocks = label_blocks(split, paras_at)
     include = CONTENT if chap["scope"] == "content" else None
     section, rows, open_row = None, [], None
 
@@ -625,6 +664,10 @@ def extract_margin(chap, lines):
 
     for blk in blocks:
         head = split[blk[0]][1]
+        label = squash(" ".join(split[k][1] for k in blk))
+        wanted = (section in include) if include is not None else \
+            (section is None or section not in FRONT_BACK
+             or section == "LATAR BELAKANG")
         if is_caps(head):
             secs = match_sections([split[k][1] for k in blk])
             if secs:
@@ -636,6 +679,12 @@ def extract_margin(chap, lines):
                     # paragraphs (and responses) before any sub-topic label —
                     # empty spans are dropped again inside close()
                     open_row = (blk[0], split[blk[0]][0], section)
+            elif any(k in paras_at for k in blk) and wanted:
+                # an umbrella ALL-CAPS topic label outside the section
+                # vocabulary ("AKTIVITI PENGURUSAN HARTANAH", CMD.9 pdf 143)
+                # still bounds the previous unit and owns its own paragraph
+                close(open_row, blk[0])
+                open_row = (blk[0], split[blk[0]][0], label)
             continue
         if head.startswith("Maklum") or head.startswith("Pendapat"):
             continue                            # harvested inside close()
@@ -645,16 +694,15 @@ def extract_margin(chap, lines):
                         for k in range(blk[-1] + 1, blk[-1] + 3))
         if not opens or not re.match(r"[A-Z0-9(]", head):
             continue                            # labels are Title Case
+        if all(DATE_WORD.match(w) for w in label.split()):
+            continue                            # a stray date line, not a label
         # scope "all" (CMD.14 margin chapters): no PENEMUAN divider exists, and
         # the topical labels open while LATAR BELAKANG is still the last section
-        # head — so only the true front/back sections excise topics there.
-        wanted = (section in include) if include is not None else \
-            (section is None or section not in FRONT_BACK
-             or section == "LATAR BELAKANG")
+        # head — so only the true front/back sections excise topics there
+        # (that rule is the `wanted` computed at the top of the loop).
         if not wanted:
             continue
         close(open_row, blk[0])
-        label = squash(" ".join(split[k][1] for k in blk))
         open_row = (blk[0], split[blk[0]][0], label)
     close(open_row, len(split))
     return rows
