@@ -6,7 +6,7 @@ budget-vs-actual gap (vs the interim view in `curated/`, which uses PKKP's own r
 `anggaran_asal`) and — via `curated/forecast/fact_utilisation_signatures.csv` — expected-
 actual nowcasts for un-audited years.
 
-## Status: Budget 2025 ingested at maksud grain (2026-07-31)
+## Status: Budget 2025 AND Budget 2026 ingested at maksud grain (2026-07-31)
 
 `data/2025/fact_anggaran_maksud_2025.csv` — the book's "Ringkasan Perbelanjaan Sebenar dan
 Anggaran Mengurus dan Pembangunan" (printed pages 21–31), all 85 votes (14 Tanggungan,
@@ -37,7 +37,26 @@ long format with per-row `pdf_page`/`printed_page`.
   `curated/forecast/build_nowcast_2025.py`) applies per-vote utilisation signatures to
   the anggaran_2025 figures (`basis=model_projection`).
 
-Program/objek grain is the documented follow-up (the book's per-vote detail sections).
+### Budget 2026 book (`data/2026/`)
+
+`fact_anggaran_maksud_2026.csv` — the AP2026 book's Ringkasan (printed pp. 5–33; layout
+differs from 2025: vote code inline on the first component row), all **83 votes**
+(B/P.32 Wilayah Persekutuan has left the book), four columns (sebenar 2023, sebenar
+2024, anggaran asal 2025, anggaran 2026). Pipeline: `pipeline/2026/`.
+- **Validation** (`_validation_2026.csv`): 456 checks — the only FAILs are the book's
+  own ±RM1 sen-rounding rows (catalogued in `_source_anomalies_2026.csv`).
+- **Cross-book:** every tabled-2025 value identical to the 2025 book; exactly one 2023
+  restatement (P.15, RM1 — the 2026 book *corrects* the inconsistency catalogued in the
+  2025 book); the 2026 book's 2025 emoluments roll-up sides with the per-vote rows on
+  the 2025 book's RM8m roll-up discrepancy.
+- **Cross-source:** sebenar 2024 reconciles with audited PKKP FY2024 to whole-RM
+  rounding (OE within RM4 of 324.6b; DE within RM2 of 84.0b).
+- **Adversarial verifier:** blind two-engine re-derivation — zero disagreements on all
+  300 rows; independently confirmed the same printed ±RM1 set and the JUMLAH BESAR 2024
+  self-inconsistency (printed 408,629,244,715 vs its own component lines' 417).
+- **Crosswalk:** `_crosswalk_pkkp_2026.csv` — all 83 codes matched with name evidence.
+
+Program/objek grain is the documented follow-up (the books' per-vote detail sections).
 
 ## Where the documents live
 

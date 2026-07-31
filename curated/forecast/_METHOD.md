@@ -63,12 +63,14 @@ residuals (band conditional on the official deficit path — deficit uncertainty
 separately, not propagated); revenue composition & OE object classes = 5-year share
 quantiles normalised to official anchors (FY2015 excluded: OCR-provisional); emoluments
 2025 = tabled Budget-2025 emoluments x aggregate-OE utilisation quantiles; pensions /
-debt service = tabled T.14/T.13 x their own vote signatures; functions = per-vote
-signature nowcast aggregated (2025) then grown by own-function log-growth quantiles
-(2026) — deliberately NOT normalised to official OE, preserving the historical
-overshoot bias (difference reported in `_validation_projection_2026.csv`); per-vote gap
-2026 budgets = 2025 tabled x uniform official OE growth (**weakest layer**, flagged on
-every row); contingent items = own log-growth quantiles.
+debt service = tabled T.14/T.13 x their own vote signatures; functions and the per-vote gap use
+each year's own tabled budgets x utilisation signatures (Budget 2025 and — since the
+AP2026 book was ingested — the real tabled Budget 2026 figures; the earlier
+uniform-growth scaling layer is retired). Function totals are deliberately NOT
+normalised to official OE, preserving the historical overshoot bias (difference
+reported in `_validation_projection_2026.csv`). Revenue-composition and investment
+mids are the official Anggaran Hasil estimates by kod section (`sources/anggaran-hasil`),
+with share-quantile bands; contingent items = own log-growth quantiles.
 
 **Known weaknesses (by design, documented):** quantile bands understate tail risk
 (2020-style shocks); the 2026 per-vote budget scaling is uniform; investment income is

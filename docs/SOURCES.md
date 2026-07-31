@@ -7,6 +7,15 @@ provenance, and validation; comparison happens in `curated/`. Prefer machine-rea
 
 ## Status
 - ✅ **pkkp** — Federal audited actuals, FY2009–FY2024 (in repo). Provenance to PDF + page.
+- ✅ **anggaran** — Anggaran Perbelanjaan Persekutuan, Budget 2025 + 2026 books at maksud
+  grain (sebenar 2022–2024, anggaran asal, tabled), crosswalked to PKKP, adversarially
+  verified. Program/objek grain = follow-up.
+- ✅ **anggaran-hasil** — Anggaran Hasil (revenue estimates by kod hasil), Budget 2025 +
+  2026 editions incl. tax-measure impacts and revenue-after-measures headline.
+- ✅ **mof-fiscal-outlook** — Fiscal Outlook Budget 2025 + 2026 editions, headline grain
+  (official 2025–26 projections, debt, nominal GDP), adversarially verified.
+- ✅ **dosm** — GDP/GNI, population, households (OpenDOSM canonical files + API
+  cross-check + vintage tracking with a weekly detection routine).
 
 ## Tier 1 — highest value; pairs directly with PKKP
 - **Anggaran Perbelanjaan Persekutuan** (Federal Expenditure Estimates) — MOF/Treasury. The

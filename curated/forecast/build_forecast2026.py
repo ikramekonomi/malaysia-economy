@@ -65,6 +65,8 @@ ROOT = os.path.dirname(os.path.dirname(HERE))
 DB = os.path.join(ROOT, "sources", "pkkp", "pkkp.duckdb")
 OFF_CSV = os.path.join(ROOT, "sources", "mof-fiscal-outlook", "data", "fiscal_outlook_headline.csv")
 AP_CSV = os.path.join(ROOT, "sources", "anggaran", "data", "2025", "fact_anggaran_maksud_2025.csv")
+AP26_CSV = os.path.join(ROOT, "sources", "anggaran", "data", "2026", "fact_anggaran_maksud_2026.csv")
+HASIL26_CSV = os.path.join(ROOT, "sources", "anggaran-hasil", "data", "2026", "fact_hasil_ringkasan_2026.csv")
 SIG_CSV = os.path.join(HERE, "fact_utilisation_signatures.csv")
 NOW_CSV = os.path.join(HERE, "fact_nowcast_2025.csv")
 V1_CSV = os.path.join(HERE, "fact_projection_headline.csv")
@@ -106,6 +108,30 @@ OFF_BASIS = {y: off[(y, "revenue")][2] for y in YEARS}
 v1 = {}
 for r in csv.DictReader(open(V1_CSV)):
     v1[(int(r["year"]), r["series"])] = (float(r["lo_rm_bil"]), float(r["hi_rm_bil"]))
+
+# Budget 2026 tabled figures (real, from the AP2026 book - replaces growth/uniform scaling)
+emol26_budget = pension26_budget = debtsvc26_budget = 0.0
+vote_budget26 = {}
+vote_name26 = {}
+for r in csv.DictReader(open(AP26_CSV)):
+    if r["measure"] != "anggaran_2026":
+        continue
+    c, cp, amt = r["maksud_code"], r["component"], int(r["amount_rm"]) / 1e9
+    if cp == "emolumen":
+        emol26_budget += amt
+    if c.startswith(("T.", "B.")) and cp == "mengurus":
+        vote_budget26[c] = amt
+        vote_name26[c] = r["maksud_name_bm"]
+    if c == "T.14" and cp == "mengurus":
+        pension26_budget = amt
+    if c == "T.13" and cp == "mengurus":
+        debtsvc26_budget = amt
+
+# official revenue estimates by category (anggaran-hasil, Budget 2026 edition)
+hasil = {}
+for r in csv.DictReader(open(HASIL26_CSV)):
+    hasil.setdefault(r["measure"], {})[r["kod"]] = int(r["amount_rm"]) / 1e9
+
 
 # ---------------- history ----------------
 H = con.sql(f"""SELECT year,
@@ -170,17 +196,24 @@ shares = {k: [r[i] / r[5] for r in last5] for i, k in ((1, "tax"), (2, "nontax")
 mids = {k: q1(v, .5) for k, v in shares.items()}
 norm = sum(mids.values())
 inv7 = [r[4] / r[5] for r in comp[-7:]]
+HASIL_COL = {2025: "anggaran_disemak_2025", 2026: "anggaran_2026"}
 for y in YEARS:
     rev = ANCH[y]["revenue"]
+    hc = hasil[HASIL_COL[y]]
+    # official mids straight from the revenue estimates book (kod hasil sections);
+    # the book splits WP collections into 90000 - PKKP counts them under non-tax
+    off_mid = {"tax": hc["60000"], "nontax": hc["70000"] + hc.get("90000", 0.0),
+               "nonrev": hc["80000"]}
     for k in ("tax", "nontax", "nonrev"):
-        add(y, "revenue_comp", k, q1(shares[k], .25) * rev, mids[k] / norm * rev,
-            q1(shares[k], .75) * rev, "model_projection",
-            "median share of last 5 audited years x official revenue; mids normalised",
-            f"official revenue {rev}")
-    add(y, "revenue_comp", "investment", min(inv7) * rev, q1(inv7, .5) * rev, max(inv7) * rev,
-        "model_projection", "share of revenue, min/median/max of last 7 years (petroleum swing risk)",
-        f"official revenue {rev}", "memo item - subset of non-tax, not additive")
-    tot = sum(mids[k] / norm * rev for k in mids)
+        add(y, "revenue_comp", k, q1(shares[k], .25) * rev, off_mid[k],
+            q1(shares[k], .75) * rev, "official_estimate",
+            "mid = Anggaran Hasil official estimate by kod section; band = 5-yr share quantiles",
+            f"sources/anggaran-hasil {HASIL_COL[y]}")
+    add(y, "revenue_comp", "investment", min(inv7) * rev, hc.get("75000", q1(inv7, .5) * rev),
+        max(inv7) * rev, "official_estimate",
+        "mid = kod 75000 Faedah dan Pulangan Pelaburan official estimate; band = 7-yr share min/max",
+        f"sources/anggaran-hasil {HASIL_COL[y]}", "memo item - subset of non-tax, not additive")
+    tot = sum(off_mid.values())
     checks.append([f"revcomp_additivity_{y}", "tax+nontax+nonrev == official revenue",
                    f"{tot:.3f} vs {rev:.3f}", "PASS" if abs(tot - rev) < 0.01 else "FAIL"])
 
@@ -220,10 +253,8 @@ obj = con.sql(f"""SELECT year,
   sum(CASE WHEN objek_code='40000' THEN sebenar_rm END)/1e9 grants
  FROM fact_opex_detail WHERE {OWN} AND row_type='object_aktiviti'
  GROUP BY year HAVING year BETWEEN 2016 AND 2024 ORDER BY year""").fetchall()
-emol_hist = [r[1] for r in obj]
-eg25, eg50, eg75 = gq(emol_hist)
-em = {2025: (emol_budget * u25, emol_budget * u50, emol_budget * u75)}
-em[2026] = (em[2025][0] * eg25, em[2025][1] * eg50, em[2025][2] * eg75)
+em = {2025: (emol_budget * u25, emol_budget * u50, emol_budget * u75),
+      2026: (emol26_budget * u25, emol26_budget * u50, emol26_budget * u75)}
 rest_shares = {}
 for i, k in ((2, "supplies"), (3, "assets"), (4, "grants")):
     rest_shares[k] = [r[i] / (r[2] + r[3] + r[4]) for r in obj[-5:]]
@@ -233,8 +264,8 @@ for y in YEARS:
     oe = ANCH[y]["operating_expenditure"]
     lo, mid, hi = em[y]
     add(y, "objects", "emol", lo, mid, hi, "model_projection",
-        "2025: tabled emoluments x aggregate-OE utilisation quantiles; 2026: x own log-growth quantiles",
-        f"Budget 2025 emoluments {emol_budget:.3f}; official OE {oe}")
+        "tabled emoluments (own Budget book) x aggregate-OE utilisation quantiles",
+        f"tabled emoluments {emol_budget if y==2025 else emol26_budget:.3f}; official OE {oe}")
     rest = oe - mid
     for k in ("grants", "supplies", "assets"):
         add(y, "objects", k, q1(rest_shares[k], .25) * rest, rmids[k] / rnorm * rest,
@@ -250,16 +281,14 @@ rg_hist = con.sql(f"""SELECT year,
   sum(CASE WHEN maksud_code='T.13' THEN sebenar_rm END)/1e9 dsvc,
   sum(CASE WHEN maksud_code='T.14' THEN sebenar_rm END)/1e9 pens
  FROM fact_opex_maksud WHERE {OWN} GROUP BY year HAVING year BETWEEN 2016 AND 2024 ORDER BY year""").fetchall()
-for series, budget, code, hist_i in (("pension", pension_budget, "T.14", 2),
-                                     ("debtsvc", debtsvc_budget, "T.13", 1)):
+for series, b25, b26, code in (("pension", pension_budget, pension26_budget, "T.14"),
+                               ("debtsvc", debtsvc_budget, debtsvc26_budget, "T.13")):
     s25, s50, s75 = sig[code]
-    v25 = (budget * s25, budget * s50, budget * s75)
-    g25, g50, g75 = gq([r[hist_i] for r in rg_hist])
-    v26 = (v25[0] * g25, v25[1] * g50, v25[2] * g75)
-    add(2025, "rigidity", series, *v25, "model_projection",
-        f"{code} tabled budget x its own utilisation signature quantiles", f"Budget 2025 {code} {budget:.3f}")
-    add(2026, "rigidity", series, *v26, "model_projection",
-        f"2025 quantiles x {code} FY2016-24 log-growth quantiles", f"Budget 2025 {code} {budget:.3f}")
+    add(2025, "rigidity", series, b25 * s25, b25 * s50, b25 * s75, "model_projection",
+        f"{code} tabled budget x its own utilisation signature quantiles", f"Budget 2025 {code} {b25:.3f}")
+    add(2026, "rigidity", series, b26 * s25, b26 * s50, b26 * s75, "model_projection",
+        f"{code} tabled Budget-2026 figure x its own utilisation signature quantiles",
+        f"Budget 2026 {code} {b26:.3f}")
 for y in YEARS:
     add(y, "rigidity", "emol", *em[y], "model_projection", "shared with objects.emol", "")
 
@@ -296,14 +325,23 @@ for r in csv.DictReader(open(NOW_CSV)):
     cur[1] += float(r["expected_mid_rm"]) / 1e9
     cur[2] += float(r["expected_hi_rm"]) / 1e9
 ftot25 = sum(v[1] for v in f25.values())
+f26 = {}
+for c, b in vote_budget26.items():
+    q = sig.get(c, (1.0, 1.0, 1.0))
+    cur = f26.setdefault(fn(vote_name26[c]), [0.0, 0.0, 0.0])
+    cur[0] += b * q[0]
+    cur[1] += b * q[1]
+    cur[2] += b * q[2]
+ftot26 = sum(v[1] for v in f26.values())
 for f, (lo, mid, hi) in sorted(f25.items()):
     add(2025, "functions", f, lo, mid, hi, "model_projection",
         "sum of per-vote signature nowcast (budget x utilisation quantiles)",
         "Budget 2025 per vote", f"function totals sum to {ftot25:.1f}, not the official OE (signature bias kept)")
-    series = [fhist[f][y] for y in range(2016, 2025) if f in fhist and y in fhist[f] and fhist[f][y] > 0]
-    g = gq(series) if len(series) >= 4 else (1.0, 1.0, 1.0)
-    add(2026, "functions", f, lo * g[0], mid * g[1], hi * g[2], "model_projection",
-        "2025 nowcast x own-function FY2016-24 log-growth quantiles", "Budget 2025 per vote")
+for f, (lo, mid, hi) in sorted(f26.items()):
+    add(2026, "functions", f, lo, mid, hi, "model_projection",
+        "sum of per-vote signature nowcast (tabled Budget-2026 x utilisation quantiles)",
+        "Budget 2026 per vote", f"function totals sum to {ftot26:.1f}, not the official OE (signature bias kept)")
+
 checks.append(["functions_vs_official_2025", "signature total vs official OE (INFO, by design)",
                f"{ftot25:.1f} vs {ANCH[2025]['operating_expenditure']:.1f}", "INFO"])
 
@@ -326,7 +364,6 @@ def short(name):
     return (name[:26] + '…') if len(name) > 26 else name
 
 
-scale26 = ANCH[2026]["operating_expenditure"] / ANCH[2025]["operating_expenditure"]
 gap_rows = []
 for r in csv.DictReader(open(NOW_CSV)):
     if r["maksud_code"] == "TOTAL_OE" or r["signature"] == "fallback_no_history":
@@ -338,12 +375,15 @@ for r in csv.DictReader(open(NOW_CSV)):
     gap_rows.append([2025, c, r["name_bm"], short(r["name_bm"]), b25, lo, mid, hi,
                      mid - b25, round(s[1] * 100, 1) if s else "", "model_projection",
                      "tabled Budget 2025 x own utilisation signature"])
-    if s:
-        b26 = b25 * scale26
-        gap_rows.append([2026, c, r["name_bm"], short(r["name_bm"]), b26,
-                         b26 * s[0], b26 * s[1], b26 * s[2], b26 * s[1] - b26,
-                         round(s[1] * 100, 1), "model_projection",
-                         "2025 budget scaled by official OE growth (uniform - weakest layer) x signature"])
+for c, b26 in sorted(vote_budget26.items()):
+    s = sig.get(c)
+    if not s:
+        continue
+    nm = vote_name26[c]
+    gap_rows.append([2026, c, nm, short(nm), b26,
+                     b26 * s[0], b26 * s[1], b26 * s[2], b26 * s[1] - b26,
+                     round(s[1] * 100, 1), "model_projection",
+                     "tabled Budget 2026 (AP2026 book) x own utilisation signature"])
 
 # ---------------- contingent ----------------
 cont = {"guarantees": [v for _, v in sorted(
