@@ -3,14 +3,15 @@
 
 Run:  python3 curated/dashboard/build_dashboard.py
 Reads : sources/pkkp/pkkp.duckdb  (rebuild first: python3 pipeline/build_duckdb.py)
-        curated/dashboard/external_denominators.csv  (GDP/population — EXTERNAL, provisional)
+        curated/dashboard/external_denominators.csv  (GDP/population — EXTERNAL, from sources/dosm)
 Writes: curated/dashboard/data.json        (the payload)
         curated/dashboard/index.html       (self-contained artifact = template.html + data)
 
 Source of truth = the PKKP CSVs (the .duckdb is a rebuildable cache). Each year is taken
 from its OWN audited volume (source_file '<year>_...'), amounts exact Ringgit as printed.
 GDP/population are namespaced external denominators (not blended into audited tables) and are
-flagged provisional until the DOSM source is ingested (docs/SOURCES.md).
+derived from sources/dosm (DOSM/OpenDOSM datasets, full provenance there) by
+sources/dosm/pipeline/build_denominators.py.
 """
 import duckdb, json, os, csv as _csv
 
@@ -43,8 +44,8 @@ d = {}
 ext = {}
 with open(EXT) as f:
     for row in _csv.DictReader(f):
-        ext[int(row["year"])] = {k: (float(row[k]) if k in ("gdp_rm_bil","population_mil","households_mil") else row[k]) for k in row}
-d["external"] = {"note": "GDP & population are DOSM figures, external to the audited warehouse and provisional (see docs/SOURCES.md).",
+        ext[int(row["year"])] = {k: ((float(row[k]) if row[k] != "" else None) if k in ("gdp_rm_bil","population_mil","households_mil") else row[k]) for k in row}
+d["external"] = {"note": "GDP & population are DOSM figures (sources/dosm), external to the audited warehouse (see docs/SOURCES.md).",
                  "by_year": {str(y): {"gdp": ext[y]["gdp_rm_bil"], "pop": ext[y]["population_mil"], "hh": ext[y]["households_mil"]} for y in YEARS if y in ext}}
 # ---- peer benchmarks (external, IMF/national, indicative) ----
 peers = []
