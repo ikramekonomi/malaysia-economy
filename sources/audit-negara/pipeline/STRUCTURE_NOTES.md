@@ -101,3 +101,26 @@ Verified against the text while building `extract_lkan_findings.py`:
   margin labels can skip past full-width italic lines (pdf 197); pdf 217 is a
   geometry-shifted continuation page whose whole text column collapses onto
   the margin (its stray `5 Januari 2022.` line is not a label).
+
+## CMD.14.2025 Bahagian II fiscal tables (pdf 30–81) — layout notes
+
+Parsed by `extract_lkan_fiscal.py` (JADUAL 1–33 + II.a 1–4 + II.b 1–11):
+
+- Tables run `JADUAL n` → CAPS title → header block → data → `Sumber:`; the
+  running footers name the section (`NN Analisis Kewangan…`, `Pengurusan
+  Hutang/Pelbagai…`), not the LKAN, and some `Sumber:` citations themselves
+  cite the LKAN — footer stripping must spare them.
+- Value columns are right-aligned; %/nisbah cells of the same column are
+  centred (overlap merge, e.g. J1); tightly-packed year columns overlap but
+  co-occur on every line (must NOT merge, II.a J3).
+- Multi-page tables (J27, J30, J32) shift x AND respacing between pages and
+  reprint their header block — cluster per page, map columns by aligned
+  right edge.
+- II.a/II.b run inside the margin-label narrative (labels x≈22–40); cut all
+  segments ending left of x=45 before parsing. II.b J9's `JADUAL 9` head
+  shares its line with a margin label.
+- II.a J3 is gridless (every row centred independently) and its `Jumlah`
+  rows are levels, not sums — ordinal fallback + validator NON_ADDITIVE.
+- Misprints found (kept as printed, `_source_anomalies_lkan.csv`): J21
+  pdf 53 omits the parentheses on the Pelbagai Liabiliti decrease; J1 pdf 31
+  truncates devex FY2023 (96.089 for audited 96.0897).

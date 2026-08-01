@@ -1,0 +1,19 @@
+check,scope,expected,actual,status,note
+tables_extracted,Bahagian II,33,33,PASS,
+tables_extracted,Bahagian II.a,4,4,PASS,
+tables_extracted,Bahagian II.b,11,11,PASS,
+v1_additivity,II J21,printed sums,"5 ok, 1 off",INFO,documented source misprint — see _source_anomalies_lkan.csv; PERUBAHAN 'JUMLAH LIABILITI'=86.047 vs 86.093/86.093
+v1_additivity,all tables,printed Jumlah rows re-sum,"173 ok, 0 off (1 documented misprints)",PASS,
+header_reconstruction,all tables,"labels built from each table's own header words, or explicitly positional","14 tables positional: ['II J4', 'II J6', 'II J9', 'II J20', 'II J24', 'II J26', 'II J30', 'II J32', 'II J33', 'II.a J2', 'II.b J2', 'II.b J4', 'II.b J7', 'II.b J9']",PASS,positional tables carry 'lajur N (kepala tidak boleh dibina semula)' — treat column identity by position (col order per page)
+v2_vs_pkkp_audited,devex FY2024,AG 84.012 RM bilion,PKKP 84.011595 RM bilion,PASS,tolerance ±0.001 (one unit in the AG's last printed dp)
+v2_vs_pkkp_audited,opex FY2024,AG 321.509 RM bilion,PKKP 321.508948 RM bilion,PASS,tolerance ±0.001 (one unit in the AG's last printed dp)
+v2_vs_pkkp_audited,revenue FY2024,AG 324.618 RM bilion,PKKP 324.617649 RM bilion,PASS,tolerance ±0.001 (one unit in the AG's last printed dp)
+v2_vs_pkkp_audited,devex FY2023,AG 96.089 RM bilion,PKKP 96.089737 RM bilion,PASS,tolerance ±0.001 (one unit in the AG's last printed dp); AG truncated rather than rounded — documented in _source_anomalies_lkan.csv
+v2_vs_pkkp_audited,opex FY2023,AG 311.267 RM bilion,PKKP 311.266918 RM bilion,PASS,tolerance ±0.001 (one unit in the AG's last printed dp)
+v2_vs_pkkp_audited,revenue FY2023,AG 314.959 RM bilion,PKKP 314.959482 RM bilion,PASS,tolerance ±0.001 (one unit in the AG's last printed dp)
+v3_vs_bnm_reported,devex FY2024,AG 84012.0 RM juta,BNM 84011.595 RM juta,PASS,
+v3_vs_bnm_reported,opex FY2024,AG 321509.0 RM juta,BNM 321508.852 RM juta,PASS,
+v3_vs_bnm_reported,revenue FY2024,AG 324618.0 RM juta,BNM 324617.600 RM juta,PASS,
+v3_vs_bnm_reported,devex FY2023,AG 96089.0 RM juta,BNM 96090.984 RM juta,FAIL,"BNM diverges from the audited figure by RM1.984 juta (AG agrees with PKKP); reported vs audited gap, kept as published"
+v3_vs_bnm_reported,opex FY2023,AG 311267.0 RM juta,BNM 311266.918 RM juta,PASS,
+v3_vs_bnm_reported,revenue FY2023,AG 314959.0 RM juta,BNM 314959.482 RM juta,PASS,

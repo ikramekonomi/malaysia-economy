@@ -81,16 +81,40 @@ normalisation. Source wording variants kept as printed and documented in
 re-derived the datasets from the PDFs (30-row deep sample all confirmed); the
 margin-label defects it flagged are fixed and re-validated.
 
+### AG federal fiscal tables (`data/fact_lkan_fiscal_tables_2024.csv`)
+
+The Auditor-General's own Analisis Kewangan Kerajaan Persekutuan tables
+(LKAN 3/2025 Bahagian II pdf 30-67 JADUAL 1-33, II.a Pengurusan Hutang pdf
+68-73 JADUAL 1-4, II.b Pengurusan Pelbagai ABT Hasil pdf 74-81 JADUAL 1-11):
+48/48 tables, 1,567 cells in long format (verbatim values incl. parentheses
+negatives/en-dash nils, row hierarchy + JUMLAH row types, per-column printed
+heading and unit, `pdf_page`). Pipeline `pipeline/extract_lkan_fiscal.py`,
+validation `pipeline/validate_lkan_fiscal.py` (`data/_validation_lkan_fiscal.csv`):
+internal additivity of every printed JUMLAH row (183 recomputations, all pass
+except one **documented sign misprint in JADUAL 21**, pdf 53), an independent
+header re-read of every reconstructed column label, and the
+**three-source triangulation** this dataset exists for — AG vs PKKP audited:
+revenue/opex/gross DE FY2024+FY2023 all six agree to the AG's printed rounding
+(incl. one documented truncation, devex FY2023 96.089 vs audited 96.0897);
+AG/PKKP vs BNM MSB 3.1: five of six agree, **BNM's FY2023 gross development
+expenditure (96,090.984 RM juta) diverges from the audited figure by
+RM1.247 juta** — a real reported-vs-audited gap, kept as published.
+Conventions/caveats: nil cells are stored as ASCII hyphen `-` (that is what
+the text layer yields for the printed en-dash nil glyph — same concept as the
+warehouse's en-dash = 0.0 convention); in 14 complex-header tables (stacked/
+wrapped multi-row headings) the column heading could not be reconstructed
+reliably, so `col_label_bm` is `lajur N (kepala tidak boleh dibina semula)` —
+**in complex-header tables, column identity should be treated positionally
+(col order per page)**; unit and values are verified either way.
+
 ## Planned next extraction
 
-1. The Penyata Kewangan volumes' own summary tables of federal finances (revenue,
-   opex, DE, deficit, debt) — a third independent restatement to triangulate against
-   PKKP (audited) and BNM (reported). (CMD.14.2025 Bahagian II, pdf 30–81,
-   JADUAL 1–33, pairs with PKKP FY2024.)
-2. Deepen the findings register: key findings to `maksud` where the report names
+1. Deepen the findings register: key findings to `maksud` where the report names
    votes, joining PKKP for the "planned vs delivered vs audited-verdict" pairing
    in docs/SOURCES.md; quantify the Ringkasan/Infografik per-chapter digests as a
    cross-check on the register's RM tokens.
+2. The Penyata Kewangan volumes' sijil + findings tables (CMD.18.2024 for FY2023,
+   CMD.14.2025 Bahagian I/III for FY2024) to extend the audited-restatement series.
 
 Then the standard discipline: reconcile to the report's own printed totals +
 independent adversarial verifier pass before any curated/dashboard exposure.

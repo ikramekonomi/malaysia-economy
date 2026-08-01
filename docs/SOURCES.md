@@ -30,9 +30,11 @@ scope, cash-basis accounting, and the economy beyond the fiscal accounts.
   parlimen.gov.my Command Papers (manifest + sha256 in
   `sources/audit-negara/data/lkan_reports.csv`); extracted & adversarially
   verified: per-agency sijil registers FY2023+FY2024 (285 agencies × opinion)
-  and the per-audit findings register (34 audits, 426 findings, 1,080 RM
-  tokens, 405 ministry responses). Remaining targets in the source README:
-  LKAN 3/2025 Bahagian II fiscal tables (pairs with PKKP FY2024).
+  the per-audit findings register (34 audits, 426 findings, 1,080 RM
+  tokens, 405 ministry responses), and the AG's own federal fiscal tables
+  (48 tables / 1,569 cells, FY2024 vs FY2023) — completing the first
+  three-source triangulation: AG = PKKP audited on all six headline lines;
+  BNM's reported FY2023 gross DE exceeds the audited figure by RM1.247 juta.
 
 ## Tier 1 — highest value; pairs directly with PKKP
 - **Anggaran Perbelanjaan Persekutuan** (Federal Expenditure Estimates) — MOF/Treasury. The
