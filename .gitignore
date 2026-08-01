@@ -11,3 +11,7 @@ curated/dashboard/data.json
 curated/dashboard/_shot_*.png
 # Raw source documents (PDFs) — CSVs are canonical
 sources/*/raw/
+
+# State-source text extraction cache (rebuildable)
+sources/*/.textcache/
+sources/*/pipeline/__pycache__/

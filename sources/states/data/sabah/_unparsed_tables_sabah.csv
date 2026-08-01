@@ -1,0 +1,9 @@
+state,fiscal_year,spec_id,jadual,source_file,pdf_page,printed_page,heading,reason
+Sabah,2014,hasil_penyumbang_utama,4.13,CMD.59.2015.pdf,32,14,Penyumbang Utama Hasil Kerajaan Negeri Bagi Tahun 2010 Hingga 2014 Tahun,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2010', '2011', '2012', '2014'] header years=['2010', '2011', '2012', '2013', '2014']"
+Sabah,2015,pelaburan,4.4,CMD.43.2016.pdf,27,11,Pelaburan Bagi Tahun 2011 Hingga 2015,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2011', '2012', '2014', '2015'] header years=['2011', '2012', '2013', '2014', '2015']"
+Sabah,2015,hasil_penyumbang_utama,4.13,CMD.43.2016.pdf,32,16,Penyumbang Utama Hasil Kerajaan Negeri Bagi Tahun 2011 Hingga 2015,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2011', '2012', '2013', '2015'] header years=['2011', '2012', '2013', '2014', '2015']"
+Sabah,2019,hasil_penyumbang_utama,11,CMD.38.2020.pdf,37,11,PENYUMBANG UTAMA HASIL KERAJAAN NEGERI PADA TAHUN 2019 BERBANDING TAHUN 2018,no money column with a resolvable year
+Sabah,2022,akaun_pinjaman_disatukan,26,CMD.47.2023.pdf,59,51,AKAUN PINJAMAN DISATUKAN BAGI TAHUN 2022 BERBANDING TAHUN 2021 Baki pada 1 Januari - - - -,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2022'] header years=['2022', '2021']"
+Sabah,2024,hasil_kategori,5,CMD.24.2025.pdf,40,32,PRESTASI KUTIPAN HASIL PADA TAHUN 2024 BERBANDING 2023 RM JUTA % RM JUTA % RM JUTA %,no money column with a resolvable year
+Sabah,2024,perbelanjaan_mengurus,8,CMD.24.2025.pdf,45,37,PRESTASI PERBELANJAAN MENGURUS PADA TAHUN 2024 BERBANDING 2023 RM JUTA % RM JUTA % RM JUTA %,no money column with a resolvable year
+Sabah,2024,akaun_belum_terima,27,CMD.24.2025.pdf,62,54,KEDUDUKAN ABT PADA TAHUN 2024 BERBANDING 2023 PENGUSIAAN Jualan Air,no money column with a resolvable year

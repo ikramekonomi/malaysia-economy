@@ -1,0 +1,10 @@
+state,fiscal_year,spec_id,jadual,source_file,pdf_page,printed_page,heading,reason
+Kedah,2014,pelaburan,4.5,CMD.50.2015.pdf,27,11,Pelaburan Bagi Tahun 2010 Hingga Tahun 2014 Tahun 1. Pelaburan Kumpulan Wang,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2010', '2011', '2012', '2013'] header years=['2010', '2011', '2012', '2013', '2014']"
+Kedah,2014,hutang_awam,4.41,CMD.50.2015.pdf,51,35,Hutang Awam Kerajaan Negeri Bagi Tahun 2010 Hingga Tahun 2014 Tahun,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2010', '2012', '2013', '2014'] header years=['2010', '2011', '2012', '2013', '2014']"
+Kedah,2015,pelaburan,4.3,CMD.34.2016.pdf,27,11,Pelaburan Tahun 2015 Berbanding Tahun 2014 Tahun Perubahan Pelaburan Am,no money column with a resolvable year
+Kedah,2015,hutang_awam,4.45,CMD.34.2016.pdf,55,39,Hutang Awam Kerajaan Negeri Bagi Tahun 2011 Hingga Tahun 2015 Tahun,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2011', '2013', '2014', '2015'] header years=['2011', '2012', '2013', '2014', '2015']"
+Kedah,2016,wang_tunai,4.3,CMD.34.2017.pdf,27,11,WANG TUNAI TAHUN 2016 BERBANDING TAHUN 2015 TAHUN Wang Tunai,no money column with a resolvable year
+Kedah,2017,hasil_penyumbang_utama,4.13,CMD.34.2018.pdf,35,19,PENYUMBANG UTAMA HASIL KERAJAAN NEGERI BAGI TAHUN 2017 DAN TAHUN 2016,no money column with a resolvable year
+Kedah,2020,pelaburan,52,CMD.40.2021.pdf,69,53,KEDUDUKAN PELABURAN SAHAM BAGI TAHUN 2016 HINGGA TAHUN 2020,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2016', '2017', '2018', '2020'] header years=['2016', '2017', '2018', '2019', '2020']"
+Kedah,2024,hasil_kategori,7,CMD.16.2025.pdf,39,31,PRESTASI KUTIPAN HASIL PADA TAHUN 2024 BERBANDING 2023 RM Juta % RM Juta %,no money column with a resolvable year
+Kedah,2024,perbelanjaan_mengurus,10,CMD.16.2025.pdf,42,34,PRESTASI PERBELANJAAN MENGURUS PADA TAHUN 2024 BERBANDING 2023 RM Juta % RM Juta %,no money column with a resolvable year

@@ -1,0 +1,7 @@
+state,fiscal_year,spec_id,jadual,source_file,pdf_page,printed_page,heading,reason
+Pulau Pinang,2014,akaun_hasil_disatukan,4.6,CMD.58.2015.pdf,29,11,Kedudukan Akaun Hasil Disatukan Bagi Tahun 2010 Hingga 2014 Tahun,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2010', '2011', '2013', '2014'] header years=['2010', '2011', '2012', '2013', '2014']"
+Pulau Pinang,2014,hasil_penyumbang_utama,4.11,CMD.58.2015.pdf,32,14,Penyumbang Utama Hasil Negeri Bagi Tahun 2010 Hingga 2014 Tahun 1. Premium Tanah – Pemberian,"column/year geometry unresolved (a printed year column could not be matched): money columns=['2010', '2011', '2012', '2014'] header years=['2010', '2011', '2012', '2013', '2014']"
+Pulau Pinang,2021,prestasi_kewangan,1,CMD.49.2022.pdf,36,28,Pinjaman KEDUDUKAN PRESTASI KEWANGAN Tolak: Hasil PADA AKHIR TAHUN 2021 BERBANDING 2020 3.2. 3.3. 3.4.,no money column with a resolvable year
+Pulau Pinang,2021,perbelanjaan_mengurus,18,CMD.49.2022.pdf,50,42,"PERBELANJAAN MENGURUS BAGI TAHUN 2021 BERBANDING 2020 PERBELANJAAN MENGURUS BAGI TAHUN 2021 BERBANDING 2020 Warisan, semula ini",no money column with a resolvable year
+Pulau Pinang,2023,hasil_kategori,7,CMD.27.2024.pdf,44,36,PRESTASI TERIMAAN HASIL PADA TAHUN 2023 BERBANDING 2022 RM Juta % RM Juta % RM Juta %,no money column with a resolvable year
+Pulau Pinang,2023,perbelanjaan_mengurus,8,CMD.27.2024.pdf,46,38,PRESTASI PERBELANJAAN MENGURUS PADA TAHUN 2023 BERBANDING 2022 RM Juta % RM Juta % RM Juta %,no money column with a resolvable year
