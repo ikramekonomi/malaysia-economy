@@ -71,16 +71,60 @@ exactly on every comparable vote, and the book's asal-2023 column equals PKKP's 
 record — the audited PKKP appropriation series IS the budget as tabled (see
 `curated/GAP_VIEWS.md` for the DE-side exception and its decomposition).
 
-### Program/objek grain — scoped next step
+### Program/objek grain — extracted (all three books, 2026-08-01)
 
-The books' per-vote detail sections are regular: `Butiran | Program/Aktiviti | Kod
-(Objek Am) | Anggaran <yr-1> | Anggaran <yr> | Bil. Jawatan` — program (xx0000) and
-aktiviti (xx0100) rows with objek-am (10000–50000) breakdowns and per-vote `JUMLAH
-ANGGARAN PERBELANJAAN MENGURUS` totals. Extraction plan: parse per-vote sections
-(85/83 votes × 2–3 books), reconcile every vote's detail total against the
-already-verified summary figures (built-in anchor), then the standard adversarial
-verifier pass. This joins to PKKP's program/aktiviti/objek actuals for the full-depth
-budget-vs-actual gap. Headcount (Bil. Jawatan) comes free — a new analytical axis.
+`data/<year>/fact_anggaran_detail_<year>.csv` — the books' per-vote DETAIL sections:
+`Butiran | Program/Aktiviti | Kod (Objek Am) | Anggaran <yr-1> | Anggaran <yr> |
+Bil. Jawatan <yr-1>/<yr>` — program (xx0000) and aktiviti (xx0100…) rows with their
+objek-am (10000–50000) breakdowns, closing per vote with `JUMLAH ANGGARAN
+PERBELANJAAN MENGURUS`. Long format, one row per printed line per measure
+(`anggaran_<yr-1>`/`anggaran_<yr>`), `row_kind` in
+program|aktiviti|objek_am|jumlah_maksud (`jumlah_butiran` reserved — no book prints
+per-butiran subtotal lines), headcount columns `bil_jawatan_<yr-1>/<yr>` where
+printed (the 10000 objek rows and the JUMLAH row), full per-row provenance.
+**Mengurus (T/B votes) only** — the books present P votes as a project list
+(`Butiran (Projek)` layout, five columns incl. total project cost), a different
+grain left for a later pass.
+
+- **Pipeline:** shared parser `pipeline/detail_common.py` (the three books are one
+  layout family; per-era quirks are config + documented in the module docstring)
+  driven by thin per-year `pipeline/<year>/extract_detail_<year>.py` /
+  `validate_detail_<year>.py`.
+- **Coverage:** 2024 book 51 votes (1,284 butiran, 2,764 objek lines, 8,198 rows);
+  2025 book 53 votes (1,408 / 3,022 / 8,966); 2026 book 53 votes (1,408 / 3,030 /
+  8,982).
+- **Validation** (`data/<year>/_validation_detail_<year>.csv`): V1 internal sums
+  (every butiran total = its objek-am lines; every program = its aktiviti; every
+  vote JUMLAH = its programs), V2 anchor (vote total == the adversarially verified
+  `fact_anggaran_maksud_<year>.csv` figure — detail `anggaran_<yr-1>` against the
+  summary's `anggaran_asal_<yr-1>`, `anggaran_<yr>` against `anggaran_<yr>`),
+  V3 coverage, V4 Bil. Jawatan (vote JUMLAH headcount = sum of program-level
+  headcounts). **2024: 3,369 PASS / 0 FAIL; 2025: 3,733 PASS / 0 FAIL; 2026:
+  3,729 PASS / 0 FAIL** — the detail sections are arithmetically consistent as
+  printed in all three books, and every vote reconciles exactly to the verified
+  maksud-grain anchor. No new source anomalies at this grain.
+- **Documented absences (V3):** B.32 Wilayah Persekutuan (2024 & 2025 books) and
+  B.33 Alam Sekitar dan Air (2024 book) — ministries dissolved in 2023, kept in
+  the summary for historical actuals with zero budget-year allocation; the books
+  print no detail section for them. The 2026 book covers all 53 T/B votes.
+- **Era differences found:** 2024/2025 print `…  …` dot leaders in the Kod column
+  on butiran rows, 2026 drops them; every vote opens with a per-objek-am
+  RINGKASAN block — its own pages (without the Bil. Jawatan header) in 2026,
+  sharing the first detail page of small votes in 2024/2025, with the total line
+  worded differently per era (never extracted — pages are gated on the full
+  detail header and objek/jumlah rows are only accepted once a butiran is open);
+  the 2026 book can print a post-table footnote starting with a butiran code
+  ("022400 - Peruntukan Skim Pinjaman Rumah Panjang (SPRP).", pdf p.197 —
+  logged, not data); butiran names embed bare numbers ("Kepengerusian ASEAN
+  2025") and wrap across lines, sometimes sharing a line with an objek row; the
+  2024 book prints year-on-year headcount changes (13 rows, e.g. B.15 010000
+  `3 → 7`, B.43 JUMLAH `18,477 → 18,497`), while the 2025 and 2026 books print
+  identical Bil. Jawatan pairs throughout. En-dash nils, parenthesised negatives
+  and footnote asterisks never occur in the detail tables of any of the three
+  books (support kept per repo convention).
+- **Next:** the standard independent adversarial verifier pass, then join to
+  PKKP's program/aktiviti/objek actuals in `curated/` for the full-depth
+  budget-vs-actual gap; P-vote (pembangunan) project lists as a separate grain.
 
 
 ## Where the documents live
