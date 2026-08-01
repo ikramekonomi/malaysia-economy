@@ -683,6 +683,39 @@ def state_section_end(pages: list[str], first_table_page: int) -> int:
 
 KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     dict(
+        state="Sarawak",
+        source_file="CMD.49.2021.pdf", pdf_page="", printed_page="",
+        jadual="8",
+        match=dict(target="finance", jadual="8",
+                   line_code=("revenue_total",),
+                   is_canonical=("yes",),
+                   checks=()),
+        affected_rows="0 rows carry a wrong figure; 1 printed row per Sarawak "
+                      "year is MISSING (the head itself)",
+        defect="Sarawak prints a FOURTH revenue head, `Pemberian Kerajaan "
+               "Persekutuan dan Bayaran Balik` (FY2020: 248.34), which is not "
+               "emitted as a row. `revenue_total` (10,646.69) is correct, but "
+               "tax + nontax + nonrevenue = 10,398.35 falls short by that head, "
+               "so Sarawak's revenue components do not sum to its total.",
+        diagnosis="Surfaced by the DOSM cross-check "
+                  "(sources/dosm/data/_crosscheck_state_finance_vs_audited.csv): "
+                  "DOSM reports Sarawak non-revenue receipts as 279.09, and "
+                  "30.75 + 248.34 = 279.09 exactly - DOSM folds the head into "
+                  "non-revenue receipts, proving the printed head exists and "
+                  "our figure for it is right. The validator already uses it "
+                  "in the four-head reconciliation proof, so the head is "
+                  "recognised during checking but never written to the fact file.",
+        why_unfixed="Needs a revenue-head row emitted under a conformed code "
+                    "(e.g. revenue_federal_grants) plus a decision on whether "
+                    "other states' equivalent heads conform to the same code - "
+                    "a dictionary change, not taken unilaterally. "
+                    "sources/dosm/pipeline/crosscheck_state_finance.py already "
+                    "carries the COMBINES entry that will re-adjudicate the "
+                    "DOSM comparison to DEFINITIONAL once the code exists.",
+        impact_on_data="No figure in the panel is wrong. Do not derive Sarawak "
+                       "revenue by summing components; use revenue_total.",
+    ),
+    dict(
         state="Negeri Sembilan",
         source_file="CMD.34.2019.pdf", pdf_page="38", printed_page="22",
         jadual="11",

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate the BNM fiscal tables against themselves and the rest of the warehouse.
+"""Validate the BNM MSB tables against themselves and the rest of the warehouse.
 
   V1 internal: per-quarter current surplus/deficit == revenue - opex (table 3.1);
      annual rows (period='') vs sum of quarters where both exist
@@ -8,7 +8,21 @@
      (BNM serves RM million floats; PKKP is sen-exact)
   V3 FY2025 measured (sum of quarters) vs MOF official revised estimate and the
      warehouse signature nowcast — reported as INFO findings, not pass/fail
-Writes data/_validation_bnm.csv. Discrepancies reported, never corrected.
+  V4 component-vs-total identities inside each table that prints subtotals
+     (3.1.1-3.1.6 and, where present, the wider MSB tables from
+     fetch_bnm_msb_wide.py: 1.1 reserve money, 1.3 monetary aggregates,
+     3.8 reserves)
+  V5 grain consistency for the fiscal tables (the 3.1.x set serves quarterly +
+     annual, no monthly): annual == sum of quarters for flows, annual == 4Q for
+     stocks — across every numeric column
+  V6 grain consistency for the wider monthly tables: annual row == December for
+     stocks / end-period columns, annual == sum of months for flows (2.9/2.10)
+
+Identity breaks beyond printed-rounding tolerance are recorded with status
+SOURCE_DIVERGENCE (the CSVs are the API verbatim, so the inconsistency is the
+source's own — a finding, kept as printed). FAIL is reserved for genuine
+pipeline/extraction problems. Writes data/_validation_bnm.csv. Discrepancies
+reported, never corrected.
 """
 import csv
 import os
@@ -99,15 +113,285 @@ rec("V3_fy2025_measured", "overall deficit RM bil: BNM measured vs MOF revised",
 rec("V3_fy2025_measured", "opex RM bil: BNM measured vs signature-nowcast mid",
     round(now_mid, 3), round(m25["cur_bud_exp"], 3), status="INFO")
 
+# ---------------------------------------------------------------------------
+# V4-V6: identities + grain consistency, tables from both fetchers (additive)
+# ---------------------------------------------------------------------------
+TOL = 2.5  # RM million; BNM prints components rounded to RM1m, so sums of many
+           # components can drift by a couple of million — beyond that it is the
+           # source's own inconsistency (SOURCE_DIVERGENCE), kept as printed
+
+
+def load(name):
+    path = os.path.join(DATA, f"msb_{name.replace('.', '_')}.csv")
+    if not os.path.exists(path):
+        return []
+    return list(csv.DictReader(open(path)))
+
+
+def fl(v):
+    return None if v in (None, "", "None") else float(v)
+
+
+def rec_id(check, scope, expected, got, tol=TOL):
+    ok = "PASS" if abs(expected - got) <= tol else "SOURCE_DIVERGENCE"
+    out.append([check, scope, round(expected, 3), round(got, 3), ok])
+
+
+def period_of(r):
+    # fiscal tables: period (1Q..4Q / '' = annual); monthly tables: month_dt / ''
+    if "period" in r:
+        return r["period"] or "annual"
+    return r.get("month_dt") or "annual"
+
+
+# V4: component-vs-total identities (skip a row when the total or every
+# component is blank — era differences, not divergences)
+IDENTITIES = {  # table -> [(name, total_col, [component_cols])]
+    "3.1.1": [
+        ("direct_tax_subtotal", "tax_rev_dir_tax_sub_tot",
+         ["tax_rev_dir_tax_com_inc_tax", "tax_rev_dir_tax_ind_inc_tax",
+          "tax_rev_dir_tax_pet_inc_tax", "tax_rev_dir_tax_sta_dut", "tax_rev_dir_tax_oth"]),
+        ("indirect_tax_subtotal", "tax_rev_ind_tax_sub_tot",
+         ["tax_rev_ind_tax_exc_dut", "tax_rev_ind_tax_exp_dut", "tax_rev_ind_tax_imp_dut",
+          "tax_rev_ind_tax_goo_and_ser_tax", "tax_rev_ind_tax_sal_tax",
+          "tax_rev_ind_tax_ser_tax", "tax_rev_ind_tax_oth"]),
+        ("nontax_subtotal", "non_tax_rev_sub_tot",
+         ["non_tax_rev_int_and_ret_on_inv", "non_tax_rev_lic_and_per",
+          "non_tax_rev_pet_roy", "non_tax_rev_oth"]),
+        ("revenue_total", "total",
+         ["tax_rev_dir_tax_sub_tot", "tax_rev_ind_tax_sub_tot",
+          "non_tax_rev_sub_tot", "non_rev_rec"]),
+    ],
+    "3.1.2": [
+        ("debt_service_total", "deb_ser_cha_tot", ["deb_ser_cha_dom", "deb_ser_cha_ext"]),
+        ("opex_total", "total",
+         ["emoluments", "pen_and_gra", "deb_ser_cha_tot", "sup_and_ser",
+          "subsidies", "ass_acq", "gra_and_tra", "oth_exp"]),
+    ],
+    "3.1.3": [
+        ("economic_subtotal", "eco_ser_sub_tot",
+         ["eco_ser_agr_and_rur_dev", "eco_ser_pub_uti", "eco_ser_tra",
+          "eco_ser_tra_and_ind", "eco_ser_oth"]),
+        ("social_subtotal", "soc_ser_sub_tot",
+         ["soc_ser_edu", "soc_ser_hea", "soc_ser_hou", "soc_ser_soc_and_com_ser"]),
+        ("devex_total", "total",
+         ["def_and_sec", "gen_adm", "eco_ser_sub_tot", "soc_ser_sub_tot"]),
+    ],
+    "3.1.4": [
+        ("mgs_maturity_subtotal", "dom_deb_mas_gov_sec_sub_tot",
+         ["dom_deb_mas_gov_sec_les_thr_yr", "dom_deb_mas_gov_sec_thr_to_fiv_yr",
+          "dom_deb_mas_gov_sec_fiv_to_ten_yr", "dom_deb_mas_gov_sec_ten_to_fif_yr",
+          "dom_deb_mas_gov_sec_abo_fif_yr"]),
+        ("mgii_maturity_subtotal", "dom_deb_mas_gov_inv_sub_tot",
+         ["dom_deb_mas_gov_inv_les_thr_yr", "dom_deb_mas_gov_inv_thr_to_fiv_yr",
+          "dom_deb_mas_gov_inv_fiv_to_ten_yr", "dom_deb_mas_gov_inv_ten_to_fif_yr",
+          "dom_deb_mas_gov_inv_fif_yr"]),
+        ("domestic_debt_subtotal", "dom_deb_sub_tot",
+         ["dom_deb_mas_gov_sec_sub_tot", "dom_deb_mas_gov_inv_sub_tot",
+          "dom_deb_tre_bil", "dom_deb_oth_loa"]),
+        ("external_debt_subtotal", "ext_deb_sub_tot",
+         ["ext_deb_for_cur_deb_mar_loa", "ext_deb_for_cur_deb_pro_loa",
+          "ext_deb_non_res_hol"]),
+        ("debt_total", "tot", ["dom_deb_sub_tot", "ext_deb_sub_tot"]),
+    ],
+    "3.1.5": [
+        ("mgs_holder_subtotal", "mgs_sub_tot",
+         ["mgs_fin_sec_bnm", "mgs_fin_sec_ban_ins", "mgs_fin_sec_dev_fin_ins",
+          "mgs_fin_sec_non_ban_fin_ins", "mgs_soc_sec_emp_pro_fun",
+          "mgs_soc_sec_ins_kwap", "mgs_ins_com", "mgs_for_hol", "mgs_oth"]),
+        ("mgii_holder_subtotal", "mgii_sub_tot",
+         ["mgii_fin_sec_bnm", "mgii_fin_sec_ban_ins", "mgii_fin_sec_dev_fin_ins",
+          "mgii_fin_sec_non_ban_fin_ins", "mgii_soc_sec_emp_pro_fun",
+          "mgii_soc_sec_kwap", "mgii_ins_com", "mgii_for_hol", "mgii_oth"]),
+        ("trebil_holder_subtotal", "tre_bil_sub_tot",
+         ["tre_bil_bnm", "tre_bil_ban_ins", "tre_bil_for_hol", "tre_bil_oth"]),
+        ("holders_total", "tot",
+         ["mgs_sub_tot", "mgii_sub_tot", "tre_bil_sub_tot", "oth_loan"]),
+    ],
+    "3.1.6": [
+        ("currency_total", "out_fed_gov_deb_by_cur_tot",
+         ["out_fed_gov_deb_by_cur_rm", "out_fed_gov_deb_by_cur_usd",
+          "out_fed_gov_deb_by_cur_yen", "out_fed_gov_deb_by_cur_oth"]),
+    ],
+    # wider tables (fetch_bnm_msb_wide.py)
+    "1.1": [
+        ("reserve_money_components", "tot_res_mon",
+         ["com_res_mon_cur_in_cir", "com_res_mon_req_res",
+          "com_res_mon_exc_res", "com_res_mon_dep_pri_sec"]),
+        ("reserve_money_factors", "tot_res_mon",
+         ["net_claim_gov_tot", "cla_pri_sec", "ext_ope", "oth_infl"]),
+    ],
+    "1.3": [
+        ("m1", "m_one_tot", ["cur_in_cir", "dem_dep"]),
+        ("m2", "m_two_tot",
+         ["m_one_tot", "nqm_fix_dep", "nqm_sav_dep", "nqm_nid", "nqm_rep",
+          "nqm_for_cur_dep", "nqm_oth_dep"]),
+        ("m3", "m_thr_tot", ["m_two_tot", "dep_pla_oth_ban_ins"]),
+    ],
+    "3.8": [
+        ("net_international_reserves", "bnm_net_int_res",
+         ["bnm_gro_int_res_tot", "-bnm_ext_lia"]),
+    ],
+}
+for table, specs in IDENTITIES.items():
+    trs = load(table)
+    for name, total_col, comps in specs:
+        n = 0
+        for r in trs:
+            t = fl(r.get(total_col))
+            if t is None:
+                continue
+            vals = []
+            for c in comps:
+                sign = -1.0 if c.startswith("-") else 1.0
+                vals.append((sign, fl(r.get(c.lstrip("-")))))
+            if all(v is None for _, v in vals):
+                continue
+            s = sum(sign * v for sign, v in vals if v is not None)
+            n += 1
+            if abs(s - t) > TOL:
+                rec_id(f"V4_{table}_{name}", f"{r['year_dt']} {period_of(r)}", t, s)
+        if n:
+            passed = n - len([o for o in out if o[0] == f"V4_{table}_{name}"])
+            out.append([f"V4_{table}_{name}", f"all rows ({n} checked)", n, passed,
+                        "PASS" if passed == n else "SOURCE_DIVERGENCE"])
+
+# V5: fiscal-table grain consistency (quarterly vs annual; the 3.1.x tables
+# serve no monthly rows — checked against the API 2026-07-31)
+FISCAL_GRAIN = {"3.1": "flow", "3.1.1": "flow", "3.1.2": "flow", "3.1.3": "flow",
+                "3.1.4": "stock", "3.1.5": "stock", "3.1.6": "stock"}
+for table, kind in FISCAL_GRAIN.items():
+    trs = load(table)
+    qq, aa = defaultdict(dict), {}
+    num_cols = [c for c in (trs[0] if trs else {})
+                if c not in ("year_dt", "period", "endpoint", "retrieved_date",
+                             "api_last_updated", "_year_requested")]
+    for r in trs:
+        y = int(r["year_dt"])
+        if r["period"] in ("1Q", "2Q", "3Q", "4Q"):
+            qq[y][r["period"]] = r
+        elif r["period"] == "":
+            aa[y] = r
+    n = div = 0
+    for y in sorted(set(aa) & set(qq)):
+        for c in num_cols:
+            a = fl(aa[y].get(c))
+            if a is None:
+                continue
+            if kind == "flow":
+                if len(qq[y]) < 4 or any(fl(qq[y][p].get(c)) is None for p in qq[y]):
+                    continue
+                s = sum(fl(qq[y][p][c]) for p in qq[y])
+            else:
+                s = fl(qq[y].get("4Q", {}).get(c))
+                if s is None:
+                    continue
+            n += 1
+            if abs(s - a) > TOL:
+                div += 1
+                rec_id(f"V5_{table}_annual_vs_quarters", f"{y} {c}", a, s)
+    if n:
+        out.append([f"V5_{table}_annual_vs_quarters", f"all cols ({n} checked)", n,
+                    n - div, "PASS" if div == 0 else "SOURCE_DIVERGENCE"])
+
+# V6: monthly-table grain consistency (annual row vs the 12 months)
+# stocks/end-period: annual == December; flows: annual == sum of months
+MONTHLY_GRAIN = {"1.1": "stock", "1.2": "stock", "1.4": "stock", "1.5": "stock",
+                 "2.9": "flow", "2.10": "flow", "3.8": "stock",
+                 # 2.6 exchange rates: only the end-period (_ep) columns are a stock;
+                 # the annual average (_ap) columns are not December values
+                 "2.6": "stock_ep_only"}
+for table, kind in MONTHLY_GRAIN.items():
+    trs = load(table)
+    if not trs:
+        continue
+    num_cols = [c for c in trs[0]
+                if c not in ("year_dt", "month_dt", "period", "endpoint",
+                             "retrieved_date", "api_last_updated", "_year_requested")]
+    if kind == "stock_ep_only":
+        kind = "stock"
+        num_cols = [c for c in num_cols if c.endswith("_ep")]
+    mm, aa = defaultdict(dict), {}
+    for r in trs:
+        y = int(r["year_dt"])
+        if r.get("month_dt"):
+            mm[y][int(float(r["month_dt"]))] = r
+        else:
+            aa[y] = r
+    n = div = 0
+    for y in sorted(set(aa) & set(mm)):
+        if len(mm[y]) < 12:
+            continue
+        for c in num_cols:
+            a = fl(aa[y].get(c))
+            if a is None:
+                continue
+            if kind == "flow":
+                if any(fl(mm[y][m].get(c)) is None for m in mm[y]):
+                    continue
+                s = sum(fl(mm[y][m][c]) for m in mm[y])
+            else:
+                s = fl(mm[y][12].get(c))
+                if s is None:
+                    continue
+            n += 1
+            if abs(s - a) > TOL:
+                div += 1
+                rec_id(f"V6_{table}_annual_vs_months", f"{y} {c}", a, s)
+    if n:
+        out.append([f"V6_{table}_annual_vs_months", f"all cols ({n} checked)", n,
+                    n - div, "PASS" if div == 0 else "SOURCE_DIVERGENCE"])
+
+# V7: banking-system tables served with an institution-type breakdown
+# (Commercial / Islamic / Investment banks + a printed Total row per month):
+# Total row == sum of the three institution rows, every numeric column
+META_COLS = {"year_dt", "month_dt", "period", "endpoint", "retrieved_date",
+             "api_last_updated", "_year_requested"}
+for table in ("1.7", "1.9", "1.10", "1.12", "1.14", "1.18"):
+    trs = load(table)
+    if not trs:
+        continue
+    dim_col = next((c for c in trs[0] if c not in META_COLS and
+                    any(not r[c].replace(".", "").replace("-", "").isdigit()
+                        for r in trs[:8] if r[c])), None)
+    if dim_col is None:
+        continue
+    num_cols = [c for c in trs[0] if c not in META_COLS and c != dim_col]
+    groups = defaultdict(list)
+    for r in trs:
+        groups[(r["year_dt"], r.get("month_dt") or "annual")].append(r)
+    n = div = 0
+    for key, rs in groups.items():
+        tot_row = next((r for r in rs if "Total" in r[dim_col]), None)
+        parts = [r for r in rs if "Total" not in r[dim_col]]
+        if tot_row is None or not parts:
+            continue
+        for c in num_cols:
+            t = fl(tot_row.get(c))
+            vals = [fl(p.get(c)) for p in parts]
+            if t is None or all(v is None for v in vals):
+                continue
+            s = sum(v for v in vals if v is not None)
+            n += 1
+            if abs(s - t) > TOL:
+                div += 1
+                rec_id(f"V7_{table}_bank_type_total", f"{key[0]} m{key[1]} {c}", t, s)
+    if n:
+        out.append([f"V7_{table}_bank_type_total", f"all cols ({n} checked)", n,
+                    n - div, "PASS" if div == 0 else "SOURCE_DIVERGENCE"])
+
 dest = os.path.join(DATA, "_validation_bnm.csv")
 with open(dest, "w", newline="") as f:
     w = csv.writer(f)
     w.writerow(["check", "scope", "expected", "got", "status"])
     w.writerows(out)
 fails = [r for r in out if r[-1] == "FAIL"]
-print(f"{len(out)} checks, {len(fails)} FAIL -> {dest}")
+divs = [r for r in out if r[-1] == "SOURCE_DIVERGENCE"]
+print(f"{len(out)} checks, {len(fails)} FAIL, {len(divs)} SOURCE_DIVERGENCE -> {dest}")
 for r in fails[:15]:
     print("FAIL:", r)
+for r in divs[:40]:
+    print("SOURCE_DIVERGENCE:", r)
 for r in out:
     if r[0] == "V3_fy2025_measured":
         print("INFO:", r[1], "| official/model:", r[2], "| measured:", r[3])

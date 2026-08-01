@@ -196,3 +196,86 @@ V3_fy2025_measured,opex RM bil: BNM measured vs MOF revised,332.15,330.776,INFO
 V3_fy2025_measured,gross DE RM bil: BNM measured vs MOF revised,80.0,81.921,INFO
 V3_fy2025_measured,overall deficit RM bil: BNM measured vs MOF revised,-76.714,-75.288,INFO
 V3_fy2025_measured,opex RM bil: BNM measured vs signature-nowcast mid,343.596,330.776,INFO
+V4_3.1.1_direct_tax_subtotal,all rows (151 checked),151,151,PASS
+V4_3.1.1_indirect_tax_subtotal,all rows (151 checked),151,151,PASS
+V4_3.1.1_nontax_subtotal,all rows (151 checked),151,151,PASS
+V4_3.1.1_revenue_total,2023 2Q,72221.139,72209.542,SOURCE_DIVERGENCE
+V4_3.1.1_revenue_total,2023 1Q,76184.845,76196.443,SOURCE_DIVERGENCE
+V4_3.1.1_revenue_total,all rows (151 checked),151,149,SOURCE_DIVERGENCE
+V4_3.1.2_debt_service_total,all rows (136 checked),136,136,PASS
+V4_3.1.2_opex_total,all rows (136 checked),136,136,PASS
+V4_3.1.3_economic_subtotal,all rows (150 checked),150,150,PASS
+V4_3.1.3_social_subtotal,all rows (150 checked),150,150,PASS
+V4_3.1.3_devex_total,2018 1Q,10917.692,10912.789,SOURCE_DIVERGENCE
+V4_3.1.3_devex_total,2018 annual,62430.584,56360.341,SOURCE_DIVERGENCE
+V4_3.1.3_devex_total,all rows (150 checked),150,148,SOURCE_DIVERGENCE
+V4_3.1.4_mgs_maturity_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_mgii_maturity_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_domestic_debt_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_external_debt_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_debt_total,all rows (91 checked),91,91,PASS
+V4_3.1.5_mgs_holder_subtotal,2017 3Q,365852.726,365892.726,SOURCE_DIVERGENCE
+V4_3.1.5_mgs_holder_subtotal,2017 4Q,364671.726,364711.726,SOURCE_DIVERGENCE
+V4_3.1.5_mgs_holder_subtotal,2023 annual,589857.729,589827.729,SOURCE_DIVERGENCE
+V4_3.1.5_mgs_holder_subtotal,all rows (91 checked),91,88,SOURCE_DIVERGENCE
+V4_3.1.5_mgii_holder_subtotal,2018 1Q,282000.0,282150.0,SOURCE_DIVERGENCE
+V4_3.1.5_mgii_holder_subtotal,all rows (91 checked),91,90,SOURCE_DIVERGENCE
+V4_3.1.5_trebil_holder_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.5_holders_total,all rows (91 checked),91,91,PASS
+V4_3.1.6_currency_total,all rows (106 checked),106,106,PASS
+V4_1.1_reserve_money_components,all rows (392 checked),392,392,PASS
+V4_1.1_reserve_money_factors,all rows (392 checked),392,392,PASS
+V4_1.3_m1,all rows (161 checked),161,161,PASS
+V4_1.3_m2,all rows (161 checked),161,161,PASS
+V4_1.3_m3,all rows (161 checked),161,161,PASS
+V4_3.8_net_international_reserves,all rows (377 checked),377,377,PASS
+V5_3.1_annual_vs_quarters,1997 sou_fin_dom_bor_les_dom_rep,3000.0,4480.0,SOURCE_DIVERGENCE
+V5_3.1_annual_vs_quarters,1997 sou_fin_dom_bor_net_dom_bor,5048.0,6528.0,SOURCE_DIVERGENCE
+V5_3.1_annual_vs_quarters,all cols (383 checked),383,381,SOURCE_DIVERGENCE
+V5_3.1.1_annual_vs_quarters,2001 tax_rev_dir_tax_oth,383.0,380.0,SOURCE_DIVERGENCE
+V5_3.1.1_annual_vs_quarters,all cols (610 checked),610,609,SOURCE_DIVERGENCE
+V5_3.1.2_annual_vs_quarters,all cols (286 checked),286,286,PASS
+V5_3.1.3_annual_vs_quarters,2018 gen_adm,2455.493,2190.607,SOURCE_DIVERGENCE
+V5_3.1.3_annual_vs_quarters,2018 total,62430.584,56100.359,SOURCE_DIVERGENCE
+V5_3.1.3_annual_vs_quarters,all cols (336 checked),336,334,SOURCE_DIVERGENCE
+V5_3.1.4_annual_vs_quarters,all cols (360 checked),360,360,PASS
+V5_3.1.5_annual_vs_quarters,2010 tre_bil_ban_ins,1978.679,1846.679,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2010 tre_bil_oth,1392.548,1524.548,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2013 mgii_fin_sec_ban_ins,59505.817,59445.817,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2013 mgii_fin_sec_dev_fin_ins,19102.74,19162.74,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgii_fin_sec_ban_ins,100759.574,100790.0,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgii_for_hol,18495.737,18465.737,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgs_fin_sec_ban_ins,55995.291,56045.291,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgs_for_hol,164399.032,164389.032,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgii_fin_sec_ban_ins,125431.69,125461.69,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgii_for_hol,15892.525,15862.525,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgs_fin_sec_ban_ins,75073.619,78681.727,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgs_for_hol,146151.974,142543.864,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2023 mgs_ins_com,37872.541,37902.541,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,all cols (449 checked),449,436,SOURCE_DIVERGENCE
+V6_1.1_annual_vs_months,all cols (280 checked),280,280,PASS
+V6_1.2_annual_vs_months,all cols (477 checked),477,477,PASS
+V6_1.4_annual_vs_months,2019 gol_for_exc,422211.132,414843.753,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,2019 tot_ass,458967.476,451600.097,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,2020 gol_for_exc,421775.202,421645.94,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,2020 tot_ass,488043.568,487914.013,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,all cols (269 checked),269,265,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2019 reserves,150533.338,143166.0,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2019 tot_lia,458967.476,451600.097,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2020 reserves,170575.679,170446.905,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2020 tot_lia,488043.568,487914.013,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,all cols (120 checked),120,116,SOURCE_DIVERGENCE
+V6_2.9_annual_vs_months,all cols (236 checked),236,236,PASS
+V6_2.10_annual_vs_months,2012 cor_bon_isl_bon,11668.165,11628.165,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,2012 cor_bon_new_iss_cor_bon,121162.685,121122.685,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,2012 net_fun_rai_pri_sec,90788.035,90748.035,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,2012 new_iss_cor_bon_suk,63383.522,63343.522,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,all cols (342 checked),342,338,SOURCE_DIVERGENCE
+V6_3.8_annual_vs_months,all cols (224 checked),224,224,PASS
+V6_2.6_annual_vs_months,all cols (317 checked),317,317,PASS
+V7_1.7_bank_type_total,all cols (6219 checked),6219,6219,PASS
+V7_1.9_bank_type_total,all cols (5515 checked),5515,5515,PASS
+V7_1.10_bank_type_total,all cols (944 checked),944,944,PASS
+V7_1.12_bank_type_total,all cols (944 checked),944,944,PASS
+V7_1.14_bank_type_total,all cols (944 checked),944,944,PASS
+V7_1.18_bank_type_total,all cols (1239 checked),1239,1239,PASS

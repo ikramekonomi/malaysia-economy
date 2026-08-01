@@ -23,6 +23,7 @@ import os
 import subprocess
 import sys
 import urllib.request
+from datetime import date
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
@@ -35,10 +36,18 @@ DATASETS = {  # catalogue id -> (csv filename, storage url)
                             "https://storage.dosm.gov.my/population/population_malaysia.csv"),
     "hh_profile": ("hh_lq.csv", "https://storage.dosm.gov.my/demography/hh_lq.csv"),
 }
+# Expansion datasets (GFS / state GDP / CPI / labour / trade): defined once in
+# ingest_expansion.py; their canonical CSVs carry appended provenance columns and are
+# re-ingested through that script's writer, and verified by verify_expansion.py.
+from ingest_expansion import EXPANSION, download_with_provenance  # noqa: E402
+
+for _ds, (_url, _route) in EXPANSION.items():
+    DATASETS[_ds] = (f"{_ds}.csv", _url)
 
 
 def api_meta(ds):
-    url = f"https://api.data.gov.my/opendosm?id={ds}&meta=true&limit=1"
+    route = EXPANSION[ds][1] if ds in EXPANSION else "opendosm"
+    url = f"https://api.data.gov.my/{route}?id={ds}&meta=true&limit=1"
     with urllib.request.urlopen(url, timeout=60) as r:
         return json.loads(r.read())["meta"]
 
@@ -58,6 +67,9 @@ def current_state():
                    "last_updated": m.get("last_updated"), "next_update": m.get("next_update"),
                    "api_total_rows": m.get("total"), "storage_etag": etag,
                    "storage_last_modified": lastmod}
+        if ds in EXPANSION:
+            out[ds]["api_route"] = EXPANSION[ds][1]
+            out[ds]["provenance_columns"] = True
     return out
 
 
@@ -98,15 +110,20 @@ def main():
         fname, url = DATASETS[ds]
         dest = os.path.join(DATA, fname)
         tmp = dest + ".new"
-        urllib.request.urlretrieve(url, tmp)
+        if ds in EXPANSION:  # expansion files carry appended provenance columns
+            download_with_provenance(url, tmp, retrieved_date=date.today().isoformat())
+        else:  # original denominator files stay byte-for-byte as downloaded
+            urllib.request.urlretrieve(url, tmp)
         added, removed, total = diff_csv(dest, tmp)
         os.replace(tmp, dest)
         print(f"applied      {ds}: {fname} now {total} rows (+{added} new/changed, "
               f"-{removed} removed/changed vs previous vintage)")
     json.dump(live, open(VINTAGE, "w"), indent=2)
-    print("vintage baseline updated; rebuilding derived denominators + re-running API cross-check")
+    print("vintage baseline updated; rebuilding derived denominators + re-running API cross-checks")
     subprocess.run([sys.executable, os.path.join(HERE, "build_denominators.py")], check=True)
     subprocess.run([sys.executable, os.path.join(HERE, "verify_against_api.py")], check=True)
+    if any(ds in EXPANSION for ds in stale):
+        subprocess.run([sys.executable, os.path.join(HERE, "verify_expansion.py")], check=True)
     print("REMEMBER: update the vintage table in sources/dosm/README.md, rebuild the "
           "dashboard, and commit the new vintage as its own change (never silently).")
 

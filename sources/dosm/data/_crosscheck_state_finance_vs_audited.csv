@@ -1,0 +1,139 @@
+state,fiscal_year,line,dosm_category,audited_line_code,dosm_rm_mil,audited_rm_mil,diff_rm_mil,diff_pct,verdict
+Johor,2022,DOSM internal: revenue components vs total,revenue:total,-,1547.786,1547.786,0.0,0.0,MATCH
+Johor,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,1627.06,1627.06,0.0,0.0,MATCH
+Johor,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,2362.63,2362.63,0.0,0.0,MATCH
+Kedah,2022,DOSM internal: revenue components vs total,revenue:total,-,597.17,597.17,0.0,0.0,MATCH
+Kedah,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,607.54,607.54,0.0,0.0,MATCH
+Kedah,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,752.54,752.54,0.0,0.0,MATCH
+Kelantan,2022,DOSM internal: revenue components vs total,revenue:total,-,983.42,983.42,0.0,0.0,MATCH
+Kelantan,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,818.805,818.805,0.0,0.0,MATCH
+Kelantan,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,1179.035,1179.035,0.0,0.0,MATCH
+Melaka,2022,DOSM internal: revenue components vs total,revenue:total,-,452.749,452.749,0.0,0.0,MATCH
+Melaka,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,417.9,417.9,0.0,0.0,MATCH
+Melaka,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,495.21,495.21,0.0,0.0,MATCH
+Negeri Sembilan,2022,DOSM internal: revenue components vs total,revenue:total,-,521.218,521.218,0.0,0.0,MATCH
+Negeri Sembilan,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,400.524,400.524,0.0,0.0,MATCH
+Negeri Sembilan,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,515.434,515.434,0.0,0.0,MATCH
+Pahang,2022,DOSM internal: revenue components vs total,revenue:total,-,1288.028,1288.028,0.0,0.0,MATCH
+Pahang,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,1195.22,1195.22,0.0,0.0,MATCH
+Pahang,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,1313.49,1313.49,0.0,0.0,MATCH
+Perak,2022,DOSM internal: revenue components vs total,revenue:total,-,1093.747,1093.747,0.0,0.0,MATCH
+Perak,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,784.62,784.62,0.0,0.0,MATCH
+Perak,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,1127.693,1127.693,0.0,0.0,MATCH
+Perlis,2022,DOSM internal: revenue components vs total,revenue:total,-,151.996,151.996,-0.0,0.0,MATCH
+Perlis,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,149.35,149.35,0.0,0.0,MATCH
+Perlis,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,207.45,207.45,0.0,0.0,MATCH
+Pulau Pinang,2022,DOSM internal: revenue components vs total,revenue:total,-,595.063,595.063,0.0,0.0,MATCH
+Pulau Pinang,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,755.02,755.02,0.0,0.0,MATCH
+Pulau Pinang,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,980.74,980.74,0.0,0.0,MATCH
+Sabah,2022,DOSM internal: revenue components vs total,revenue:total,-,6960.591,6960.591,-0.0,0.0,MATCH
+Sabah,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,4105.777,4105.777,0.0,0.0,MATCH
+Sabah,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,5486.809,5486.809,0.0,0.0,MATCH
+Sarawak,2020,DOSM internal: revenue components vs total,revenue:total,-,10646.688,10646.688,-0.0,0.0,MATCH
+Sarawak,2020,DOSM internal: OE objects vs OE total,expenditure:oe,-,10646.688,10646.688,-0.0,0.0,MATCH
+Sarawak,2020,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,16093.648,16093.648,0.0,0.0,MATCH
+Selangor,2022,DOSM internal: revenue components vs total,revenue:total,-,2533.83,2533.83,0.0,0.0,MATCH
+Selangor,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,1390.887,1390.887,0.0,0.0,MATCH
+Selangor,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,2410.426,2410.426,0.0,0.0,MATCH
+Terengganu,2022,DOSM internal: revenue components vs total,revenue:total,-,1778.535,1778.535,0.0,0.0,MATCH
+Terengganu,2022,DOSM internal: OE objects vs OE total,expenditure:oe,-,1354.278,1354.278,0.0,0.0,MATCH
+Terengganu,2022,DOSM internal: OE+DE vs expenditure total,expenditure:total,-,2385.738,2385.738,0.0,0.0,MATCH
+Johor,2022,tax revenue,revenue:revenue_60000,revenue_tax,678.636,678.64,-0.004,0.0,MATCH
+Johor,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,621.715,704.57,-82.855,11.76,DIVERGENT
+Johor,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,247.435,247.43,0.005,0.0,MATCH
+Johor,2022,total revenue,revenue:total,revenue_total,1547.786,1630.64,-82.854,5.08,DIVERGENT
+Johor,2022,operating expenditure,expenditure:oe,opex_before_transfer,1627.06,1087.05,540.01,49.68,DIVERGENT
+Johor,2022,development expenditure,expenditure:de,devex_total,735.57,735.57,0.0,0.0,MATCH
+Johor,2022,operating expenditure (vs opex_total),expenditure:oe,opex_total,1627.06,1627.06,0.0,0.0,MATCH
+Johor,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,1627.06,1627.06,0.0,0.0,MATCH
+Kedah,2022,tax revenue,revenue:revenue_60000,revenue_tax,259.817,259.82,-0.003,0.0,MATCH
+Kedah,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,170.809,170.81,-0.001,0.0,MATCH
+Kedah,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,166.544,165.54,1.004,0.61,CLOSE
+Kedah,2022,total revenue,revenue:total,revenue_total,597.17,596.17,1.0,0.17,MATCH
+Kedah,2022,operating expenditure,expenditure:oe,opex_before_transfer,607.54,,,,NO_AUDITED
+Kedah,2022,development expenditure,expenditure:de,devex_total,145.0,173.54,-28.54,16.45,DIVERGENT
+Kedah,2022,operating expenditure (vs opex_after_transfer),expenditure:oe,opex_after_transfer,607.54,596.17,11.37,1.91,CLOSE
+Kedah,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,607.54,607.54,0.0,0.0,MATCH
+Kelantan,2022,tax revenue,revenue:revenue_60000,revenue_tax,163.916,,,,NO_AUDITED
+Kelantan,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,333.373,,,,NO_AUDITED
+Kelantan,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,486.13,,,,NO_AUDITED
+Kelantan,2022,total revenue,revenue:total,revenue_total,983.42,,,,NO_AUDITED
+Kelantan,2022,operating expenditure,expenditure:oe,opex_before_transfer,818.805,,,,NO_AUDITED
+Kelantan,2022,development expenditure,expenditure:de,devex_total,360.23,,,,NO_AUDITED
+Melaka,2022,tax revenue,revenue:revenue_60000,revenue_tax,122.436,122.43,0.006,0.01,MATCH
+Melaka,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,264.369,264.37,-0.001,0.0,MATCH
+Melaka,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,65.943,65.94,0.003,0.0,MATCH
+Melaka,2022,total revenue,revenue:total,revenue_total,452.749,452.74,0.009,0.0,MATCH
+Melaka,2022,operating expenditure,expenditure:oe,opex_before_transfer,417.9,369.08,48.82,13.23,DIVERGENT
+Melaka,2022,development expenditure,expenditure:de,devex_total,77.31,77.31,0.0,0.0,MATCH
+Melaka,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,417.9,417.89,0.01,0.0,MATCH
+Negeri Sembilan,2022,tax revenue,revenue:revenue_60000,revenue_tax,160.649,160.65,-0.001,0.0,MATCH
+Negeri Sembilan,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,297.529,297.53,-0.001,0.0,MATCH
+Negeri Sembilan,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,63.041,63.04,0.001,0.0,MATCH
+Negeri Sembilan,2022,total revenue,revenue:total,revenue_total,521.218,521.22,-0.002,0.0,MATCH
+Negeri Sembilan,2022,operating expenditure,expenditure:oe,opex_before_transfer,400.524,400.52,0.004,0.0,MATCH
+Negeri Sembilan,2022,development expenditure,expenditure:de,devex_total,114.91,114.91,0.0,0.0,MATCH
+Negeri Sembilan,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,400.524,400.52,0.004,0.0,MATCH
+Pahang,2022,tax revenue,revenue:revenue_60000,revenue_tax,469.22,469.22,-0.0,0.0,MATCH
+Pahang,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,547.147,547.15,-0.003,0.0,MATCH
+Pahang,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,271.661,271.66,0.001,0.0,MATCH
+Pahang,2022,total revenue,revenue:total,revenue_total,1288.028,1288.03,-0.002,0.0,MATCH
+Pahang,2022,operating expenditure,expenditure:oe,opex_before_transfer,1195.22,1049.08,146.14,13.93,DIVERGENT
+Pahang,2022,development expenditure,expenditure:de,devex_total,118.27,118.27,0.0,0.0,MATCH
+Pahang,2022,operating expenditure (vs opex_total),expenditure:oe,opex_total,1195.22,1195.23,-0.01,0.0,MATCH
+Pahang,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,1195.22,1195.22,0.0,0.0,MATCH
+Perak,2022,tax revenue,revenue:revenue_60000,revenue_tax,507.778,507.78,-0.002,0.0,MATCH
+Perak,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,381.383,381.38,0.003,0.0,MATCH
+Perak,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,204.586,204.58,0.006,0.0,MATCH
+Perak,2022,total revenue,revenue:total,revenue_total,1093.747,1093.74,0.007,0.0,MATCH
+Perak,2022,operating expenditure,expenditure:oe,opex_before_transfer,784.62,784.62,0.0,0.0,MATCH
+Perak,2022,development expenditure,expenditure:de,devex_total,343.073,267.32,75.753,28.34,DIVERGENT
+Perak,2022,operating expenditure (vs opex_total),expenditure:oe,opex_total,784.62,1064.12,-279.5,26.27,DIVERGENT
+Perak,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,784.62,1064.12,-279.5,26.27,DIVERGENT
+Perlis,2022,tax revenue,revenue:revenue_60000,revenue_tax,21.375,21.37,0.005,0.02,MATCH
+Perlis,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,45.045,45.04,0.005,0.01,MATCH
+Perlis,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,85.576,85.58,-0.004,0.0,MATCH
+Perlis,2022,total revenue,revenue:total,revenue_total,151.996,151.99,0.006,0.0,MATCH
+Perlis,2022,operating expenditure,expenditure:oe,opex_before_transfer,149.35,156.2,-6.85,4.39,DIVERGENT
+Perlis,2022,development expenditure,expenditure:de,devex_total,58.1,58.1,0.0,0.0,MATCH
+Perlis,2022,operating expenditure (vs opex_total),expenditure:oe,opex_total,149.35,156.2,-6.85,4.39,DIVERGENT
+Perlis,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,149.35,156.2,-6.85,4.39,DIVERGENT
+Pulau Pinang,2022,tax revenue,revenue:revenue_60000,revenue_tax,148.329,148.33,-0.001,0.0,MATCH
+Pulau Pinang,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,336.32,336.32,-0.0,0.0,MATCH
+Pulau Pinang,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,110.414,110.41,0.004,0.0,MATCH
+Pulau Pinang,2022,total revenue,revenue:total,revenue_total,595.063,595.06,0.003,0.0,MATCH
+Pulau Pinang,2022,operating expenditure,expenditure:oe,opex_before_transfer,755.02,665.02,90.0,13.53,DIVERGENT
+Pulau Pinang,2022,development expenditure,expenditure:de,devex_total,225.72,225.72,-0.0,0.0,MATCH
+Pulau Pinang,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,755.02,665.02,90.0,13.53,DIVERGENT
+Sabah,2022,tax revenue,revenue:revenue_60000,revenue_tax,3770.54,3770.54,-0.0,0.0,MATCH
+Sabah,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,2564.202,2564.2,0.002,0.0,MATCH
+Sabah,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,625.849,625.85,-0.001,0.0,MATCH
+Sabah,2022,total revenue,revenue:total,revenue_total,6960.591,7319.13,-358.539,4.9,DIVERGENT
+Sabah,2022,operating expenditure,expenditure:oe,opex_before_transfer,4105.777,4105.78,-0.003,0.0,MATCH
+Sabah,2022,development expenditure,expenditure:de,devex_total,1381.032,1375.33,5.702,0.41,MATCH
+Sabah,2022,operating expenditure (vs opex_total),expenditure:oe,opex_total,4105.777,4955.78,-850.003,17.15,DIVERGENT
+Sabah,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,4105.777,4955.78,-850.003,17.15,DIVERGENT
+Sarawak,2020,tax revenue,revenue:revenue_60000,revenue_tax,6390.696,6390.7,-0.004,0.0,MATCH
+Sarawak,2020,non-tax revenue,revenue:revenue_70000,revenue_nontax,3976.902,3976.9,0.002,0.0,MATCH
+Sarawak,2020,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,279.09,30.75,248.34,807.61,DIVERGENT
+Sarawak,2020,total revenue,revenue:total,revenue_total,10646.688,10646.69,-0.002,0.0,MATCH
+Sarawak,2020,operating expenditure,expenditure:oe,opex_before_transfer,10646.688,4430.06,6216.628,140.33,DIVERGENT
+Sarawak,2020,development expenditure,expenditure:de,devex_total,5446.96,5446.96,0.0,0.0,MATCH
+Sarawak,2020,operating expenditure (vs opex_total),expenditure:oe,opex_total,10646.688,10280.06,366.628,3.57,DIVERGENT
+Sarawak,2020,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,10646.688,10280.06,366.628,3.57,DIVERGENT
+Selangor,2022,tax revenue,revenue:revenue_60000,revenue_tax,722.502,722.5,0.002,0.0,MATCH
+Selangor,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,1543.176,1543.18,-0.004,0.0,MATCH
+Selangor,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,268.152,268.15,0.002,0.0,MATCH
+Selangor,2022,total revenue,revenue:total,revenue_total,2533.83,2533.83,0.0,0.0,MATCH
+Selangor,2022,operating expenditure,expenditure:oe,opex_before_transfer,1390.887,1390.89,-0.003,0.0,MATCH
+Selangor,2022,development expenditure,expenditure:de,devex_total,1019.539,1025.61,-6.071,0.59,CLOSE
+Selangor,2022,operating expenditure (vs opex_total),expenditure:oe,opex_total,1390.887,2396.28,-1005.393,41.96,DIVERGENT
+Selangor,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,1390.887,2396.28,-1005.393,41.96,DIVERGENT
+Terengganu,2022,tax revenue,revenue:revenue_60000,revenue_tax,75.274,75.27,0.004,0.01,MATCH
+Terengganu,2022,non-tax revenue,revenue:revenue_70000,revenue_nontax,217.378,217.38,-0.002,0.0,MATCH
+Terengganu,2022,non-revenue receipts,revenue:revenue_80000,revenue_nonrevenue_receipts,1485.883,1485.88,0.003,0.0,MATCH
+Terengganu,2022,total revenue,revenue:total,revenue_total,1778.535,1778.53,0.005,0.0,MATCH
+Terengganu,2022,operating expenditure,expenditure:oe,opex_before_transfer,1354.278,1354.27,0.008,0.0,MATCH
+Terengganu,2022,development expenditure,expenditure:de,devex_total,1031.46,1046.84,-15.38,1.47,CLOSE
+Terengganu,2022,operating expenditure (vs opex_total),expenditure:oe,opex_total,1354.278,1934.27,-579.992,29.99,DIVERGENT
+Terengganu,2022,operating expenditure (vs opex_total_by_maksud),expenditure:oe,opex_total_by_maksud,1354.278,1934.27,-579.992,29.99,DIVERGENT

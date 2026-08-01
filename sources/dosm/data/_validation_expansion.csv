@@ -1,0 +1,35 @@
+dataset,check,expected,got,status
+federal_finance_year,row_count,594,594,PASS
+federal_finance_year,"latest_period_values (2023-01-01, 11 rows x 1 cols)",0,0,PASS
+federal_finance_year_revenue,row_count,1134,1134,PASS
+federal_finance_year_revenue,"latest_period_values (2023-01-01, 21 rows x 1 cols)",0,0,PASS
+federal_finance_year_oe,row_count,495,495,PASS
+federal_finance_year_oe,"latest_period_values (2023-01-01, 11 rows x 1 cols)",0,0,PASS
+federal_finance_year_de,row_count,756,756,PASS
+federal_finance_year_de,"latest_period_values (2023-01-01, 14 rows x 1 cols)",0,0,PASS
+federal_finance_qtr,row_count,1243,1243,PASS
+federal_finance_qtr,"latest_period_values (2024-01-01, 11 rows x 1 cols)",0,0,PASS
+federal_finance_qtr_revenue,row_count,2373,2373,PASS
+federal_finance_qtr_revenue,"latest_period_values (2024-01-01, 21 rows x 1 cols)",0,0,PASS
+federal_finance_qtr_oe,row_count,1111,1111,PASS
+federal_finance_qtr_oe,"latest_period_values (2024-01-01, 11 rows x 1 cols)",0,0,PASS
+federal_finance_qtr_de,row_count,1582,1582,PASS
+federal_finance_qtr_de,"latest_period_values (2024-01-01, 14 rows x 1 cols)",0,0,PASS
+lookup_federal_finance,row_count,57,57,PASS
+lookup_federal_finance,"full_content (API lookup codes financing block as 'borrowing/borrowing_*'; storage CSV + data files use 'financing/*' — stale API lookup, documented)",57,52,INFO
+state_finance_revenue,row_count,52,52,PASS
+state_finance_revenue,"latest_period_values (2022-01-01, 48 rows x 1 cols)",0,0,PASS
+state_finance_expenditure,row_count,104,104,PASS
+state_finance_expenditure,"latest_period_values (2022-01-01, 96 rows x 1 cols)",0,0,PASS
+gdp_state_real_supply,row_count,2163,2163,PASS
+gdp_state_real_supply,"latest_period_values (2025-01-01, 210 rows x 1 cols)",0,0,PASS
+cpi_headline,row_count,7812,7812,PASS
+cpi_headline,"latest_period_values (2026-06-01, 14 rows x 1 cols)",0,0,PASS
+cpi_state,row_count,44352,44352,PASS
+cpi_state,"latest_period_values (2026-06-01, 224 rows x 1 cols)",0,0,PASS
+lfs_month,row_count,197,197,PASS
+lfs_month,"latest_period_values (2026-05-01, 1 rows x 7 cols)",0,0,PASS
+trade_headline,row_count,743,743,PASS
+trade_headline,"latest_period_values (2026-04-01, 3 rows x 4 cols)",0,0,PASS
+trade_sitc_1d,row_count,3487,3487,PASS
+trade_sitc_1d,"latest_period_values (2026-05-01, 11 rows x 2 cols)",0,0,PASS

@@ -25,5 +25,192 @@
     "api_total_rows": 1,
     "storage_etag": "ee145acd0155ae760c46994500f845b2",
     "storage_last_modified": "Sat, 21 Sep 2024 10:26:48 GMT"
+  },
+  "federal_finance_year": {
+    "file": "federal_finance_year.csv",
+    "data_as_of": "2023",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2025-05-31 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "59b229ee051e89d3253163cd5f5bfd73",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:41:43 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "federal_finance_year_revenue": {
+    "file": "federal_finance_year_revenue.csv",
+    "data_as_of": "2023",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2025-05-31 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "028498f6653110b980600e177bcb1ca2",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:41:54 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "federal_finance_year_oe": {
+    "file": "federal_finance_year_oe.csv",
+    "data_as_of": "2023",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2025-05-31 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "afada58611f76785a3b8a32f88df5297",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:42:01 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "federal_finance_year_de": {
+    "file": "federal_finance_year_de.csv",
+    "data_as_of": "2023",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2025-05-31 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "a5b2c5b585727e7bbb4441a764f4f054",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:42:19 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "federal_finance_qtr": {
+    "file": "federal_finance_qtr.csv",
+    "data_as_of": "2024-Q1",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2024-08-30 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "15a6e6e501aba528876e12a75a3e2e7f",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:41:41 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "federal_finance_qtr_revenue": {
+    "file": "federal_finance_qtr_revenue.csv",
+    "data_as_of": "2024-Q1",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2024-08-30 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "c367e77b7faf4329e274859f805ac86c",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:41:52 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "federal_finance_qtr_oe": {
+    "file": "federal_finance_qtr_oe.csv",
+    "data_as_of": "2024-Q1",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2024-08-30 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "32f522c2e3264de0537ad79397ed69e8",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:41:59 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "federal_finance_qtr_de": {
+    "file": "federal_finance_qtr_de.csv",
+    "data_as_of": "2024-Q1",
+    "last_updated": "2024-05-31 15:00",
+    "next_update": "2024-08-30 15:00",
+    "api_total_rows": 1,
+    "storage_etag": "cfabb2930fa9d61d675fe7def3340182",
+    "storage_last_modified": "Wed, 05 Jun 2024 08:42:08 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "lookup_federal_finance": {
+    "file": "lookup_federal_finance.csv",
+    "data_as_of": "2024-01",
+    "last_updated": "2024-02-13 00:01",
+    "next_update": "-",
+    "api_total_rows": 1,
+    "storage_etag": "24ffc79ee1b7d4b2885f5f4aa50ec995",
+    "storage_last_modified": "Mon, 12 Feb 2024 16:40:43 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "state_finance_revenue": {
+    "file": "state_finance_revenue.csv",
+    "data_as_of": "2022",
+    "last_updated": "2024-09-01 12:00",
+    "next_update": "\u2014",
+    "api_total_rows": 1,
+    "storage_etag": "dc06c253c18be6e07d4c610df0c4e067",
+    "storage_last_modified": "Sat, 14 Sep 2024 00:53:59 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "state_finance_expenditure": {
+    "file": "state_finance_expenditure.csv",
+    "data_as_of": "2022",
+    "last_updated": "2024-09-01 12:00",
+    "next_update": "\u2014",
+    "api_total_rows": 1,
+    "storage_etag": "6ae07b003ff2ae7b13afaefa7a89f353",
+    "storage_last_modified": "Fri, 13 Sep 2024 14:23:18 GMT",
+    "api_route": "data-catalogue",
+    "provenance_columns": true
+  },
+  "gdp_state_real_supply": {
+    "file": "gdp_state_real_supply.csv",
+    "data_as_of": "2025",
+    "last_updated": "2026-07-01 12:30",
+    "next_update": "2027-07-01 12:30",
+    "api_total_rows": 1,
+    "storage_etag": "d787191ed0d108cde9268d0cd35ce3be",
+    "storage_last_modified": "Wed, 22 Jul 2026 15:47:32 GMT",
+    "api_route": "opendosm",
+    "provenance_columns": true
+  },
+  "cpi_headline": {
+    "file": "cpi_headline.csv",
+    "data_as_of": "2026-06",
+    "last_updated": "2026-07-17 14:26",
+    "next_update": "2026-08-17 12:30",
+    "api_total_rows": 1,
+    "storage_etag": "1d1b53199c7c850c5f128b1c06345799",
+    "storage_last_modified": "Fri, 17 Jul 2026 06:26:50 GMT",
+    "api_route": "opendosm",
+    "provenance_columns": true
+  },
+  "cpi_state": {
+    "file": "cpi_state.csv",
+    "data_as_of": "2026-06",
+    "last_updated": "2026-07-17 14:26",
+    "next_update": "2026-08-17 12:30",
+    "api_total_rows": 1,
+    "storage_etag": "94444651e98ee2f15178ffd9c6be0f5c",
+    "storage_last_modified": "Fri, 17 Jul 2026 06:26:52 GMT",
+    "api_route": "opendosm",
+    "provenance_columns": true
+  },
+  "lfs_month": {
+    "file": "lfs_month.csv",
+    "data_as_of": "2026-05",
+    "last_updated": "2026-07-10 12:30",
+    "next_update": "2026-08-11 12:30",
+    "api_total_rows": 1,
+    "storage_etag": "11df9fcc296a2733a45d05eb87a5aa48",
+    "storage_last_modified": "Fri, 17 Jul 2026 06:46:50 GMT",
+    "api_route": "opendosm",
+    "provenance_columns": true
+  },
+  "trade_headline": {
+    "file": "trade_headline.csv",
+    "data_as_of": "2026-05",
+    "last_updated": "2026-06-26 12:30",
+    "next_update": "2026-07-28 12:30",
+    "api_total_rows": 1,
+    "storage_etag": "95e5891fa6e74a01f81d00279da13c0d",
+    "storage_last_modified": "Wed, 20 May 2026 04:27:07 GMT",
+    "api_route": "opendosm",
+    "provenance_columns": true
+  },
+  "trade_sitc_1d": {
+    "file": "trade_sitc_1d.csv",
+    "data_as_of": "2026-05",
+    "last_updated": "2026-06-26 12:30",
+    "next_update": "2026-07-28 12:30",
+    "api_total_rows": 1,
+    "storage_etag": "7d6a64d10a18397c74a48717ce9b1490",
+    "storage_last_modified": "Mon, 20 Jul 2026 05:27:27 GMT",
+    "api_route": "opendosm",
+    "provenance_columns": true
   }
 }

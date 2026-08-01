@@ -1,0 +1,53 @@
+state,date,category,revenue,retrieved_from,retrieved_date
+Johor,2022-01-01,revenue_60000,678.63569664,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Johor,2022-01-01,revenue_70000,621.715,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Johor,2022-01-01,revenue_80000,247.43509152000001,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Johor,2022-01-01,total,1547.78578816,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kedah,2022-01-01,revenue_60000,259.81713685,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kedah,2022-01-01,revenue_70000,170.80886082000004,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kedah,2022-01-01,revenue_80000,166.54368768,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kedah,2022-01-01,total,597.16968535,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kelantan,2022-01-01,revenue_60000,163.916086,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kelantan,2022-01-01,revenue_70000,333.373361,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kelantan,2022-01-01,revenue_80000,486.130475,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Kelantan,2022-01-01,total,983.419922,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Melaka,2022-01-01,revenue_60000,122.43625692,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Melaka,2022-01-01,revenue_70000,264.36939957000004,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Melaka,2022-01-01,revenue_80000,65.94297705999999,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Melaka,2022-01-01,total,452.74863355,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Negeri Sembilan,2022-01-01,revenue_60000,160.64862012,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Negeri Sembilan,2022-01-01,revenue_70000,297.52906333000004,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Negeri Sembilan,2022-01-01,revenue_80000,63.04075166999999,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Negeri Sembilan,2022-01-01,total,521.2184351200001,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pahang,2022-01-01,revenue_60000,469.21999728,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pahang,2022-01-01,revenue_70000,547.14673188,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pahang,2022-01-01,revenue_80000,271.66089557,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pahang,2022-01-01,total,1288.0276247299998,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perak,2022-01-01,revenue_60000,507.77770561999995,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perak,2022-01-01,revenue_70000,381.3832110199999,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perak,2022-01-01,revenue_80000,204.58602947999998,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perak,2022-01-01,total,1093.7469461199998,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perlis,2022-01-01,revenue_60000,21.37517181,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perlis,2022-01-01,revenue_70000,45.04516559,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perlis,2022-01-01,revenue_80000,85.57612827999999,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Perlis,2022-01-01,total,151.99646567999997,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pulau Pinang,2022-01-01,revenue_60000,148.32929931,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pulau Pinang,2022-01-01,revenue_70000,336.31967790000004,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pulau Pinang,2022-01-01,revenue_80000,110.41376620999999,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Pulau Pinang,2022-01-01,total,595.0627434200001,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sabah,2022-01-01,revenue_60000,3770.5398150799997,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sabah,2022-01-01,revenue_70000,2564.20176635,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sabah,2022-01-01,revenue_80000,625.8490014600001,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sabah,2022-01-01,total,6960.5905828899995,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sarawak,2020-01-01,revenue_60000,6390.696264,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sarawak,2020-01-01,revenue_70000,3976.901615,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sarawak,2020-01-01,revenue_80000,279.090313,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Sarawak,2020-01-01,total,10646.688192,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Selangor,2022-01-01,revenue_60000,722.50230772,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Selangor,2022-01-01,revenue_70000,1543.17599943,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Selangor,2022-01-01,revenue_80000,268.15207363,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Selangor,2022-01-01,total,2533.83038078,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Terengganu,2022-01-01,revenue_60000,75.27398787,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Terengganu,2022-01-01,revenue_70000,217.37804481,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Terengganu,2022-01-01,revenue_80000,1485.88308542,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
+Terengganu,2022-01-01,total,1778.5351181,https://storage.data.gov.my/publicadmin/state_finance_revenue.csv,2026-07-31
