@@ -156,7 +156,29 @@ do not treat its JUMLAH as the population total.
 Then the standard discipline: reconcile to the report's own printed totals +
 independent adversarial verifier pass before any curated/dashboard exposure.
 
-## Not yet acquired
+## Historical backfill (`data/lkan_reports_backfill.csv`, 2026-07-31)
 
-State LKAN volumes (13 per tabling day, same URL pattern — cover-verify before use)
-and pre-2024 federal LKANs (probe earlier tabling dates the same way).
+**402 further volumes acquired and cover-verified** — 49 federal + 353 state
+(all 13 states), tabling years 2015–2026, 12.35 GB in `raw/backfill/`
+(gitignored; manifest carries sha256 + the live-verified source URL per file).
+
+Route improvement: Parliament publishes a JSON catalogue of every tabled paper
+2013–2026 at `/risalat.html?uweb=dr&ajx=1&arkib=yes` (and `uweb=dn`) — no URL
+guessing. Pre-2018 catalogue links are dead but the files were migrated to
+`/ipms/eps/<sitting-date>/CMD.<n>.<year> - <free-form name>.pdf`; those were
+resolved by probing name variants using directory existence (403 vs 404) as an
+oracle.
+
+Audit-year coverage: **2017–2022 essentially complete** (federal 6/6, 8/8, 7/7,
+4/4, 7/7, 5/5; state sets near-complete), 2014–2016 partial, **2009–2013
+unavailable** — Parliament's online archive simply begins mid-2013 and holds no
+LKAN entries before April 2014 (the 2014 tabling directories 404 under every
+probed pattern; audit.gov.my remains WAF-blocked; Wayback CDX is blocked by this
+environment's egress proxy). ~104 catalogued items unobtainable, each with the
+attempts recorded.
+
+**Two server-side mislabels found and excluded, not silently corrected:**
+`CMD.31.2016` (catalogued as "Aktiviti … Siri 2") is byte-identical (sha256) to
+the Siri 1 volume, and `CMD.42.2017` (catalogued as Sarawak Penyata Kewangan) is
+byte-identical to the Selangor volume — so AY2015 Siri 2 Aktiviti (federal) and
+Sarawak PK 2016 are effectively unavailable from this route.
