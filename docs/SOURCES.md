@@ -20,7 +20,9 @@ scope, cash-basis accounting, and the economy beyond the fiscal accounts.
 - ✅ **anggaran-hasil** — Anggaran Hasil (revenue estimates by kod hasil), Budget 2025 +
   2026 editions incl. tax-measure impacts and revenue-after-measures headline.
 - ✅ **mof-fiscal-outlook** — Fiscal Outlook Budget 2025 + 2026 editions, headline grain
-  (official 2025–26 projections, debt, nominal GDP), adversarially verified.
+  (official 2025–26 projections, debt, nominal GDP), adversarially verified; plus the
+  Seksyen 5 contingent-liability / guarantee tables (Jadual 5.1–5.4 of both editions)
+  feeding `curated/fact_obligations.csv`.
 - ✅ **dosm** — GDP/GNI, population, households (OpenDOSM canonical files + API
   cross-check + vintage tracking with a weekly detection routine).
 - ✅ **bnm** — quarterly federal finance + debt-by-holder/maturity via the BNM

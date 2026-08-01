@@ -26,3 +26,13 @@ Planned contents (build as sources land):
   ingested (not machine-readable; its host is blocked by the current egress policy), so this
   pilot's "budget" is PKKP's own recorded appropriation. It slots an independent budget — and
   an Anggaran-vs-PKKP cross-check — in as soon as source #2 lands.
+
+- **`fact_obligations.csv`** — the **obligations layer**: what the federal government owes
+  (debt, PFI, financial commitments incl. unpaid tax refunds, committed guarantees by
+  entity, statutory/contingent guarantees) and is owed (receivables / revenue arrears),
+  unified across PKKP's audited Penyata Akaun Memorandum (FY2009–FY2024), the
+  Auditor-General's LKAN 3/2025 fiscal tables and the MOF Fiscal Outlook fiscal-risk
+  tables. Built by `pipeline/build_obligations.py`; `_validation_obligations.csv`
+  (94/94 PASS) ties every register to its own printed total and cross-checks the three
+  sources against each other. **Class map, do-not-sum warnings and era caveats are in
+  [`OBLIGATIONS.md`](OBLIGATIONS.md) — read it before using the data.**

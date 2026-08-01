@@ -31,6 +31,19 @@ figure-for-figure on everything extracted.
   Table 1.1 bold rows are missing from the PDF text layer (font defect), so the headline
   CSV cites the Key Data spread for those figures.
 
+## Also extracted — `data/fact_contingent_liabilities.csv`
+
+The Seksyen 5 (Risiko Fiskal dan Liabiliti) guarantee / contingent-liability tables of both
+editions — Jadual 5.1 (Pendedahan Hutang dan Liabiliti), 5.2 (Jaminan Kewangan by
+instrument under Akta 850), 5.3 (Penerima Utama Jaminan di bawah Akta 96) and 5.4
+(Komitmen Jaminan by entity, incl. 1MDB) — one row per (edition × table × line × column
+year), amounts as printed (`value_printed` + normalised `amount_rm`), with share-% and
+%KDNK columns where printed. **The second column of every table is an end-June position**
+(`asof`). Extracted by `pipeline/extract_contingent_liabilities.py`;
+`data/_validation_contingent_liabilities.csv` reconciles every table to its own printed
+totals plus cross-table identities (32/32 PASS). Feeds `curated/fact_obligations.csv`
+(see `curated/OBLIGATIONS.md`).
+
 ## Entry contract — `data/fiscal_outlook_headline.csv`
 
 One row per (edition_year × target_year × line). Template: `data/_TEMPLATE_headline.csv`.
