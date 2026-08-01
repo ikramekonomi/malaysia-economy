@@ -5,6 +5,13 @@ Sources to ingest or connect, prioritised by value and by how directly they enab
 provenance, and validation; comparison happens in `curated/`. Prefer machine-readable feeds
 (APIs / open data) over PDF extraction wherever available.
 
+**Architecture (see CLAUDE.md): hub-per-domain, truth-by-reconciliation.** PKKP anchors
+the federal-fiscal domain only; agencies/GLCs, states, the real economy (DOSM) and
+monetary/financial (BNM) each have their own hub, joined through conformed dimensions in
+`curated/`. The catalogue below is organised by how directly a source serves a domain's
+reconciliation web — and by the three blind spots of any single-hub view: off-budget
+scope, cash-basis accounting, and the economy beyond the fiscal accounts.
+
 ## Status
 - ✅ **pkkp** — Federal audited actuals, FY2009–FY2024 (in repo). Provenance to PDF + page.
 - ✅ **anggaran** — Anggaran Perbelanjaan Persekutuan, Budget 2025 + 2026 books at maksud

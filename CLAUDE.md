@@ -9,6 +9,31 @@ fiscal behaviour**. Multiple official sources are ingested (each with complete p
 then curated into a comparable layer so the same concept can be traced and cross-checked
 across sources.
 
+## Architecture: hub-per-domain, truth-by-reconciliation
+No single source is "the truth" for the whole warehouse. Each **domain** has a hub —
+the record others in that domain reconcile against when they disagree — and the
+warehouse's real product is the **reconciliation layer**: where independent
+institutions agree to the ringgit, and where they diverge, by how much, kept as
+published.
+
+| Domain | Hub (anchor of last resort) | Reconciled against it |
+|---|---|---|
+| Federal fiscal | **PKKP** (audited actuals) | budgets, BNM fiscal series, AG tables, MOF outlook |
+| Agencies & GLCs | AG certifications + company accounts | e-SelfAudit censuses, findings |
+| States | each state's audited statements | state budgets, state LKAN |
+| Real economy | DOSM national accounts | GFS, CPI, state GDP |
+| Monetary/financial | BNM | debt issuance, holdings |
+
+Domains join only through conformed dimensions (year, jurisdiction, entity, economic
+classification) in `curated/`. PKKP is the *federal fiscal* hub — never the warehouse's
+identity. Three known blind spots of a PKKP-centric view, tracked as first-class work:
+**(1) scope** — statutory bodies, GLCs and off-budget vehicles sit outside the
+consolidated fund (guarantees/contingent-liability registers + agency accounts cover
+this); **(2) accounting basis** — PKKP is modified-cash, so commitments, PFI
+liabilities, guarantees and revenue arrears live in memorandum accounts and AG
+analyses, not expenditure lines (the obligations layer covers this); **(3) domain** —
+the economy's backbone is DOSM/BNM, not any fiscal document.
+
 ## Sources
 - **pkkp** (in repo) — audited *Penyata Kewangan Kerajaan Persekutuan* (Federal Government
   Financial Statements), FY2009–FY2024, to object-level grain. The foundational source:
