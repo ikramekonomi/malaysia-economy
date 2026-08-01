@@ -53,21 +53,49 @@ provenance, and validation; comparison happens in `curated/`. Prefer machine-rea
   behind PKKP revenue lines.
 
 ## Tier 3 — state & local, specialised (needed for a true multi-level warehouse)
+- **State LKAN volumes** — 13 per tabling day on the SAME parlimen.gov.my Command-Paper
+  route as the federal volumes (audited analysis + sijil of every state's finances,
+  per year). Acquisition folded into the LKAN backfill crawl (state volumes kept and
+  manifested with `scope=state:<Negeri>`). The cheapest entry into state coverage.
 - **State Government Financial Statements (Penyata Kewangan Kerajaan Negeri)** — 13 states +
   Federal Territories, audited by the Auditor-General. The **state equivalent of PKKP**
   (audited state actuals). Start with the largest / most-scrutinised: Selangor, Johor,
   Sarawak, Sabah, Penang, Terengganu, Kelantan.
 - **State Budgets (Belanjawan / Enakmen Perbekalan Negeri)** — state budgeted vs state
-  actuals; and **federal transfers to states**.
+  actuals; and **federal transfers to states** (pairs state books ↔ PKKP transfer lines).
 - **Petroleum / PETRONAS revenue & royalties** — federal dividends plus oil royalties to
   Terengganu / Sabah / Sarawak / Kelantan; a major fiscal channel under-detailed in PKKP.
 - **Local authority (PBT) finances** — municipal / city-council budgets & accounts (deepest
-  tier).
+  tier; fragmented publication — deliberately last).
+
+## Tier 4 — accountability & flow detail (enabled by the audit-negara datasets)
+- **PAC reports (Jawatankuasa Kira-Kira Wang Negara)** — tabled on the same
+  parlimen.gov.my route (`DR.<n>.<year>` papers). Closes the loop in the data:
+  audit finding → PAC hearing → government undertaking; joins to
+  `fact_lkan_findings.csv`.
+- **MyProcurement / ePerolehan tender awards** — procurement award registers
+  (value, winner, ministry); pairs with the procurement findings in the LKAN
+  registers.
+- **LHDN & JKDM annual reports** — tax-type collection detail behind PKKP revenue
+  lines (CIT/PIT split, SST by sector).
+- **GLC / MKD company accounts** — financials of the companies the AG audits
+  (joins the Syarikat audit findings to actual company statements).
+- **DOSM Government Finance Statistics + state GDP** — via the existing OpenDOSM
+  API pipeline; consolidated general-government series and state-ratio
+  denominators. Machine-readable: do before further PDF sources.
 
 ## Benchmarking / independent validation
 - **IMF** — Article IV, WEO, Government Finance Statistics for Malaysia (independent check on
   headline aggregates).
 - **World Bank** — Malaysia public finance reviews & open data.
+
+## Roadmap (agreed 2026-07-31)
+In flight: LKAN backfill 2009–2023 (federal + state volumes), AP + hasil book
+backfill 2010–2023, Laporan Ekonomi ~2009–2018 (the pre-2019 Fiscal Outlook
+equivalent) — each acquisition → manifest → era-specific extraction →
+adversarial verification. Then, in order: DOSM GFS + state GDP (machine-readable)
+→ pilot state financial statements (Selangor or Sarawak) → PAC reports →
+remaining Tier 4 by earned priority.
 
 ## Gap-analysis pairings (why we consolidate)
 | Question | Compare |
