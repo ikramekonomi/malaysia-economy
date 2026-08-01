@@ -102,6 +102,26 @@ Verified against the text while building `extract_lkan_findings.py`:
   geometry-shifted continuation page whose whole text column collapses onto
   the margin (its stray `5 Januari 2022.` line is not a label).
 
+## e-SelfAudit census registers (CMD.2.2026 II.3, CMD.14.2025 VII) — layout notes
+
+Parsed by `extract_eselfaudit.py` (31 JADUAL, pdfplumber — found while
+building it, relevant to any coordinate-level pass over these volumes):
+
+- Every register JADUAL is a ruled table whose cell borders survive as thin
+  vertical rects: x positions = column boundaries, y extents = the printed
+  row bands (wrapped labels and in-cell bullet lists band correctly, which
+  the pdftotext -layout cache cannot do). Padding doubles some borders
+  (spurious empty columns — drop columns no data band uses).
+- The duplicated text layer also renders a ghost copy of the NEIGHBOUR
+  page's full text at negative x (CMD.2.2026): it contains lookalike
+  `JADUAL n` / `Sumber:` lines, so clip words to the page box before any
+  heading/stop detection.
+- pdfplumber default y_tolerance interleaves two printed lines into
+  letter-fragment words where ghost lines sit between baselines
+  (II.3 Prestasi J7 row 4) — use y_tolerance=1.
+- II.3's jadual numbering restarts per sub-report (intro / Mandat /
+  Tatakelola / Prestasi Kewangan, divider pages 91-92, 99-100, 109-110).
+
 ## CMD.14.2025 Bahagian II fiscal tables (pdf 30–81) — layout notes
 
 Parsed by `extract_lkan_fiscal.py` (JADUAL 1–33 + II.a 1–4 + II.b 1–11):

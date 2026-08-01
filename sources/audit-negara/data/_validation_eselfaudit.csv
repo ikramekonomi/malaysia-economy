@@ -1,0 +1,82 @@
+check,scope,expected,actual,status,note
+tables_extracted,II.3,4,4,PASS,
+tables_extracted,II.3 Mandat,6,6,PASS,
+tables_extracted,II.3 Tatakelola,4,4,PASS,
+tables_extracted,II.3 Prestasi,12,12,PASS,
+tables_extracted,VII,5,5,PASS,
+v1_column_additivity,II.3 Prestasi J3,printed sums,"PERUBAHAN RM Juta JUMLAH=(7,495.56) vs -7498.56",INFO,documented source misprint — see _source_anomalies_lkan.csv
+v1_column_additivity,all tables,printed JUMLAH rows re-sum,"45 ok, 0 off (1 documented misprints)",PASS,
+v1_row_additivity,II.3 J4; VII J3/J5; Prestasi J9/J11/J12,JUMLAH column = sum of category columns,"46 ok, 0 off",PASS,
+v1_derived_perubahan,II.3 Prestasi J3,PERUBAHAN = 2023-2022; % = PERUBAHAN/2022,"32 ok, 0 off, 1 documented",PASS,"JUMLAH PERUBAHAN (7,495.56) vs -7498.56 (documented misprint)"
+v1_bullet_subcounts,II.3 J3 row 4,15+153+40 = printed 208,15+153+40 = 208.0,PASS,
+register_row_counts,named-entity registers,17 dividend payers; 13 MKD non-payers; 9 grant; 10 support; 13 states; 14 census rows; 4+2 named; 2 jenis,all match,PASS,
+v2_vs_prose,warta 2024,"II.3 J1 JUMLAH = 1,856","1,856",PASS,"prose pdf 85 para 1.3: 1,856 entiti diwartakan"
+v2_vs_prose,warta split,"852 Persekutuan + 1,004 Negeri = 1,856","1,856",PASS,prose pdf 85 para 1.4 (constants restated)
+v2_vs_prose,warta rollout,"206 rintis + 1,650 baki = 1,856","1,856",PASS,prose pdf 86 para 2.1
+v2_vs_prose,federal census 2024,II.3 J3 JUMLAH = 852,852,PASS,prose pdf 87 para 3.1: 852 entiti Persekutuan diwarta
+v2_vs_prose,federal census 2024 status,II.3 J3 'Syarikat Kerajaan Persekutua' = 641,641,PASS,prose pdf 87 para 3.1 bullets: 641/1/2/208
+v2_vs_prose,federal census 2024 status,II.3 J3 'Badan Lain yang kemuka' = 1,1,PASS,prose pdf 87 para 3.1 bullets: 641/1/2/208
+v2_vs_prose,federal census 2024 status,II.3 J3 'Tidak kemuka' = 2,2,PASS,prose pdf 87 para 3.1 bullets: 641/1/2/208
+v2_vs_prose,federal census 2024 status,II.3 J3 'Status Winding' = 208,208,PASS,prose pdf 87 para 3.1 bullets: 641/1/2/208
+v2_vs_prose,responders by type,II.3 J4 JUMLAH JUMLAH = 641,641,PASS,prose pdf 89 para 5.1: 641 syarikat maklum balas
+v2_vs_prose,responders by type,II.3 J4 CLBS/JUMLAH = 575,575,PASS,prose pdf 89 para 5.1: 575 CLBS/66 CLBG; 114 SPV/411/116
+v2_vs_prose,responders by type,II.3 J4 CLBG/JUMLAH = 66,66,PASS,prose pdf 89 para 5.1: 575 CLBS/66 CLBG; 114 SPV/411/116
+v2_vs_prose,responders by type,II.3 J4 JUMLAH/AKTIF SPV = 114,114,PASS,prose pdf 89 para 5.1: 575 CLBS/66 CLBG; 114 SPV/411/116
+v2_vs_prose,responders by type,II.3 J4 JUMLAH/AKTIF BUKAN SPV = 411,411,PASS,prose pdf 89 para 5.1: 575 CLBS/66 CLBG; 114 SPV/411/116
+v2_vs_prose,responders by type,II.3 J4 JUMLAH/DORMAN = 116,116,PASS,prose pdf 89 para 5.1: 575 CLBS/66 CLBG; 114 SPV/411/116
+v2_vs_prose,mandat scope,II.3 Mandat J1 JUMLAH (525 aktif - 12) = 513,513,PASS,prose pdf 93 para 1.2: 525-12 = 513 syarikat dinilai
+v2_vs_prose,mandat scope,II.3 Mandat J3 JUMLAH = 513,513,PASS,prose pdf 95/96: analisis terhadap 513 syarikat
+v2_vs_prose,mandat scope,II.3 Mandat J4 JUMLAH = 513,513,PASS,prose pdf 95/96: analisis terhadap 513 syarikat
+v2_vs_prose,KPI providers,II.3 Mandat J5 JUMLAH (437+14) = 451,451,PASS,prose pdf 97 para 2.3.5: 451 syarikat menyediakan KPI
+v2_vs_prose,tatakelola scope,II.3 Tatakelola J1 JUMLAH = 401,401,PASS,prose pdf 102 para 2.1.3: 401 daripada 411 syarikat aktif bukan SPV
+v2_vs_prose,tatakelola scope,II.3 Tatakelola J2 JUMLAH = 401,401,PASS,prose pdf 102 para 2.1.3: 401 daripada 411 syarikat aktif bukan SPV
+v2_vs_prose,tatakelola scope,II.3 Tatakelola J3 JUMLAH = 401,401,PASS,prose pdf 102 para 2.1.3: 401 daripada 411 syarikat aktif bukan SPV
+v2_vs_prose,JKA reporting,II.3 Tatakelola J4 JUMLAH (= J3 row 1) = 202,202,PASS,prose pdf 106 para 3.2.2: daripada 202 syarikat dengan JKA
+v2_vs_prose,CLBS aktif 2022,Prestasi J1 untung+rugi = II.3 J4 CLBS aktif (111+349) = 460,460,PASS,prose pdf 111 para 1.1: 460 syarikat CLBS aktif
+v2_vs_prose,CLBS aktif 2023,Prestasi J1 untung+rugi = II.3 J4 CLBS aktif (111+349) = 460,460,PASS,prose pdf 111 para 1.1: 460 syarikat CLBS aktif
+v2_vs_prose,CLBG aktif 2022,Prestasi J2 bilangan = II.3 J4 CLBG aktif (3+62) = 65,65,PASS,prose pdf 112 para 1.2: 65 syarikat CLBG aktif
+v2_vs_prose,CLBG aktif 2023,Prestasi J2 bilangan = II.3 J4 CLBG aktif (3+62) = 65,65,PASS,prose pdf 112 para 1.2: 65 syarikat CLBG aktif
+v2_vs_prose,dividen kepada Kerajaan 2023,"Prestasi J3 JUMLAH TAHUN 2023 = 43,278.88","43,278.88",PASS,prose pdf 114 para b / rumusan pdf 116: RM43.279 bilion
+v2_vs_prose,dividen kepada Kerajaan 2022,"Prestasi J3 JUMLAH TAHUN 2022 = 50,777.44","50,777.44",PASS,prose pdf 114 para b / rumusan pdf 116: RM50.777 bilion
+v2_vs_prose,payers 2022,Prestasi J3 non-nil TAHUN 2022 cells = 15,15,PASS,prose pdf 114 para b: 15 syarikat bayar dividen kpd Kerajaan 2022
+v2_vs_prose,payers 2023,Prestasi J3 non-nil TAHUN 2023 cells = 16,16,PASS,prose pdf 114 para b: 16 syarikat bayar dividen kpd Kerajaan 2023
+v2_vs_prose,going concern sijil,Prestasi J5 JUMLAH = 64,64,PASS,prose pdf 118 para a: 64 syarikat Penegasan Perkara
+v2_vs_prose,going concern nota,Prestasi J6 JUMLAH = 77,77,PASS,prose pdf 119 para a: 77 syarikat pendedahan Nota
+v2_vs_prose,going concern all,J5 + J6 JUMLAH = 141,141,PASS,prose pdf 119 para b: 141 syarikat isu usaha berterusan
+v2_vs_prose,geran tertunda,"Prestasi J7 JUMLAH = 1,996.88","1,996.88",PASS,"prose pdf 119 para b / rumusan pdf 122: RM1.997 bilion, 9 syarikat"
+v2_vs_prose,sokongan kewangan top-10,"Prestasi J8 JUMLAH = 9,857.81","9,857.81",PASS,prose pdf 121 para d: RM9.858 bilion baki tertinggi 10 syarikat (EXCERPT of 119 syarikat / RM13.784 bilion)
+v2_vs_prose,dorman,II.3 J4 JUMLAH DORMAN = 116,116,PASS,prose pdf 123 para 4.2.1: 116 (18.1%) daripada 641 dorman
+v2_vs_prose,dorman analysed,Prestasi J9 JUMLAH BILANGAN (62+17) = 79,79,PASS,"prose pdf 123 para 4.2.1-4.2.2: 79 dianalisis, 62 >=5 tahun, 17 kurang"
+v2_vs_prose,dorman fi audit,Prestasi J9 JUMLAH JUMLAH = 0.55,0.55,PASS,prose pdf 123 para 4.2.2: RM0.55 juta (0.29 + 0.26)
+v2_vs_prose,dorman >=5y obligasi,Prestasi J10 obligasi rows (4+36) = 40,40,PASS,prose pdf 123 para a: 40 syarikat masih mempunyai obligasi; pdf 124 para b: 4 aset bersih / 36 liabiliti bersih
+v2_vs_prose,dorman liabiliti bersih RM,"Prestasi J10 Liabiliti Bersih RM = 1,248.47","1,248.47",PASS,prose pdf 124 para b: RM1.248 bilion
+v2_vs_prose,dorman perbelanjaan 36 syk,Prestasi J11 JUMLAH JUMLAH = 87.74,87.74,PASS,prose pdf 124 para d: RM34.74 juta (2022) + RM53.00 juta (2023)
+v2_vs_prose,dorman perbelanjaan 4 syk,Prestasi J12 JUMLAH JUMLAH = 3.29,3.29,PASS,"prose pdf 125 para e: RM3.29 juta keseluruhan (2022 printed 0.02 RM juta = prose RM19,810)"
+v2_vs_prose,warta 2025 census,"VII J1 JUMLAH = 1,856","1,856",PASS,"prose pdf 204 para 3: 1,856 diwartakan (925 pada 2022)"
+v2_vs_prose,warta split 2025,"850 Persekutuan + 1,006 Negeri = 1,856","1,856",PASS,prose pdf 204 para 4 (constants restated)
+v2_vs_prose,federal census 2025,VII J2 JUMLAH = 850,850,PASS,prose pdf 204 para 4 / pdf 205 para 10: 850 badan lain termasuk syarikat Persekutuan
+v2_vs_prose,federal census 2025 status,VII J2 'Syarikat yang kemuka' = 641,641,PASS,prose pdf 205 para 10 bullets: 641/1/34/174
+v2_vs_prose,federal census 2025 status,VII J2 'Badan lain yang kemuka' = 1,1,PASS,prose pdf 205 para 10 bullets: 641/1/34/174
+v2_vs_prose,federal census 2025 status,VII J2 'Tidak kemuka' = 34,34,PASS,prose pdf 205 para 10 bullets: 641/1/34/174
+v2_vs_prose,federal census 2025 status,VII J2 'Status Winding' = 174,174,PASS,prose pdf 205 para 10 bullets: 641/1/34/174
+v2_vs_prose,state census 2025,VII J3 JUMLAH MAKLUM BALAS (Sistem e = 887,887,PASS,prose pdf 206 para 11: 2 badan lain + 885 syarikat
+v2_vs_prose,state census 2025,VII J3 JUMLAH MAKLUM BALAS (Sistem e = 19,19,PASS,prose pdf 206 para 11: 19 tidak kemuka
+v2_vs_prose,state census 2025,VII J3 JUMLAH STATUS (Winding Up/Dis = 100,100,PASS,prose pdf 206 para 11: 100 winding up
+v2_vs_prose,state census 2025,"VII J3 JUMLAH JUMLAH = 1,006","1,006",PASS,"prose pdf 206 para 11: 1,006 Negeri"
+v2_vs_prose,responders 2025,"VII J5 JUMLAH JUMLAH = 1,526","1,526",PASS,"prose pdf 205 para 9: 3 badan lain + 1,526 syarikat (82.4% of 1,856); pdf 207 para 14: 1,526 tidak termasuk 3 badan lain"
+v2_vs_prose,responders 2025 federal,VII J5 Persekutuan JUMLAH = 641,641,PASS,prose pdf 208 para 15: 641 syarikat Persekutuan
+v2_vs_prose,responders 2025 federal,VII J5 Persekutuan 397 aktif = 397,397,PASS,prose pdf 208 para 15: 397 aktif
+v2_vs_prose,responders 2025 federal,VII J5 Persekutuan 116 SPV = 116,116,PASS,prose pdf 208 para 15: 116 SPV
+v2_vs_prose,responders 2025 federal,VII J5 Persekutuan 109 dorman = 109,109,PASS,prose pdf 208 para 15: 109 dorman
+v2_vs_prose,responders 2025 federal,VII J5 Persekutuan 19 winding up/dissolved = 19,19,PASS,prose pdf 208 para 15: 19 winding up/dissolved
+v3_cross_report,warta komposisi: syarikat Akta 777,"CMD.2 II.3 J1 = 1,851","CMD.14 VII J1 = 1,851",PASS,identical warta register printed in both reports
+v3_cross_report,warta komposisi: badan lain ROS,CMD.2 II.3 J1 = 4,CMD.14 VII J1 = 4,PASS,identical warta register printed in both reports
+v3_cross_report,warta komposisi: badan lain BHEUU,CMD.2 II.3 J1 = 1,CMD.14 VII J1 = 1,PASS,identical warta register printed in both reports
+v3_cross_report,warta komposisi: jumlah warta,"CMD.2 II.3 J1 = 1,856","CMD.14 VII J1 = 1,856",PASS,identical warta register printed in both reports
+v3_cross_report,federal total,CMD.2 II.3 J3 JUMLAH = 852,CMD.14 VII J2 JUMLAH = 850,INFO,"snapshots differ: CMD.14 VII as at 31 Jul 2025, CMD.2 II.3 as at 31 Dec 2025 (both over the same P.U.(A) 331/2024 warta); CMD.2 pdf 85 says 852/1,004 federal/state, CMD.14 pdf 204 says 850/1,006 — two entities re-attributed between levels"
+v3_cross_report,federal syarikat responders,CMD.2 II.3 J3 = 641,CMD.14 VII J2 = 641,PASS,641 in both reports
+v3_cross_report,federal badan lain responders,CMD.2 II.3 J3 = 1,CMD.14 VII J2 = 1,PASS,1 in both reports
+v3_cross_report,federal non-responders,CMD.2 II.3 J3 tidak kemuka = 2,CMD.14 VII J2 tidak kemuka = 34,INFO,"snapshots differ: CMD.14 VII as at 31 Jul 2025, CMD.2 II.3 as at 31 Dec 2025 (both over the same P.U.(A) 331/2024 warta); 32 of CMD.14's 34 non-responders were resolved/reclassified by Dec 2025 (CMD.2 pdf 88 para 3.3 names the last two)"
+v3_cross_report,federal winding up/dissolved,CMD.2 II.3 J3 = 208,CMD.14 VII J2 = 174,INFO,"snapshots differ: CMD.14 VII as at 31 Jul 2025, CMD.2 II.3 as at 31 Dec 2025 (both over the same P.U.(A) 331/2024 warta)"
+v3_cross_report,federal dorman,CMD.2 II.3 J4 DORMAN = 116,CMD.14 VII J5 Persekutuan DORMAN = 109,INFO,"snapshots differ: CMD.14 VII as at 31 Jul 2025, CMD.2 II.3 as at 31 Dec 2025 (both over the same P.U.(A) 331/2024 warta); CMD.14's snapshot still carried 19 winding-up companies inside the 641"
+v3_cross_report,federal SPV,CMD.2 II.3 J4 AKTIF SPV = 114,CMD.14 VII J5 Persekutuan SPV = 116,INFO,"snapshots differ: CMD.14 VII as at 31 Jul 2025, CMD.2 II.3 as at 31 Dec 2025 (both over the same P.U.(A) 331/2024 warta)"

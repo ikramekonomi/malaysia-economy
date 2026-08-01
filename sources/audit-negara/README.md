@@ -107,6 +107,43 @@ reliably, so `col_label_bm` is `lajur N (kepala tidak boleh dibina semula)` —
 **in complex-header tables, column identity should be treated positionally
 (col order per page)**; unit and values are verified either way.
 
+### e-SelfAudit census registers of off-budget entities (`data/fact_eselfaudit_registers.csv`)
+
+The Auditor-General's census of gazetted **badan lain termasuk syarikat** —
+companies and other bodies outside the consolidated fund (P.U.(A) 331/2024,
+1,856 entities) — the off-budget scope register. Two chapters, 31 tables,
+561 cells in long format (one row per printed register cell, verbatim values,
+`row_type` line/total/group, per-row `pdf_page`):
+**CMD.2.2026 Bahagian II.3** (pdf 85-126; the FY2024 e-SelfAudit round over
+the 852 federal entities: census + composition, mandate compliance,
+tatakelola, and the Prestasi Kewangan registers — CLBS profit/loss, the 17
+CLBS companies paying dividends to the Federal Government 2022-23, the 13
+MKD companies profitable-but-not-paying, going-concern counts, deferred-grant
+and financial-support balances, dormant-company registers) and
+**CMD.14.2025 Bahagian VII** (pdf 204-207; the 2025 census announcement:
+warta composition, federal + 13-state implementation status, the 1,526
+responding companies by type/status). Named companies are kept verbatim
+(incl. `**` note markers and `> 10` ratio cells); jadual numbering restarts
+per sub-report, so `bahagian` distinguishes `II.3` / `II.3 Mandat` /
+`II.3 Tatakelola` / `II.3 Prestasi` / `VII`. `unit` = `bilangan` marks
+entity-count columns; column labels are declared from each table's printed
+(stacked/merged) header. Pipeline `pipeline/extract_eselfaudit.py`
+(pdfplumber cell-border banding — the volumes' doubled text layers put a
+ghost copy of the neighbouring page at negative x and ghost lines between
+baselines; see the docstring), validation `pipeline/validate_eselfaudit.py`
+(`data/_validation_eselfaudit.csv`): **75 PASS / 6 INFO / 0 FAIL** — every
+printed JUMLAH re-summed (column-, row- and derived-difference-wise), census
+totals vs the chapters' own prose with page evidence (852 / 1,856 / 641 /
+513 / 401 …), and the FY2024-vs-FY2025 cross-report reconciliation (641+1
+responders identical; the 850/1,006 vs 852/1,004 federal/state split and the
+34→2 non-responder / 174→208 winding-up moves are dated snapshots, INFO).
+Source quirks kept as printed in `data/_source_anomalies_lkan.csv`: Prestasi
+J3's JUMLAH PERUBAHAN misprint (RM3.00 juta off its own columns), the
+`Jawatakuasa` typo, the cross-report census split, and Prestasi J8's
+double-counted RM1.4 bilion pass-through (its own Nota explains). **Prestasi
+J8 is a top-10 excerpt** (10 of 119 companies, RM9.858 of RM13.784 bilion) —
+do not treat its JUMLAH as the population total.
+
 ## Planned next extraction
 
 1. Deepen the findings register: key findings to `maksud` where the report names
