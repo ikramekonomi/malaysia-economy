@@ -1,0 +1,32 @@
+bec_code,end_use,desc_en,desc_bm,retrieved_from,retrieved_date
+000,mixed,All uses,Semua kegunaan,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+100,mixed,Food and beverages,Makanan dan minuman,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+110,mixed,Food and beverages: Primary,Makanan dan minuman: Utama,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+111,intermediate,Food and beverages: Primary: Mainly for industry,Makanan dan minuman: Utama: Khusus untuk industri,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+112,consumption,Food and beverages: Primary: Mainly for household consumption,Makanan dan minuman: Utama: Khusus untuk penggunaan isi rumah,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+120,mixed,Food and beverages: Processed,Makanan dan minuman: Diproses,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+121,intermediate,Food and beverages: Processed: Mainly for industry,Makanan dan minuman: Diproses: Khusus untuk industri,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+122,consumption,Food and beverages: Processed: Mainly for household consumption,Makanan dan minuman: Diproses: Khusus untuk penggunaan isi rumah,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+200,intermediate,Industrial supplies not elsewhere specified,Bekalan perindustrian tidak tersenarai di tempat lain,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+210,intermediate,Industrial supplies not elsewhere specified: Primary,Bekalan perindustrian tidak tersenarai di tempat lain: Utama,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+220,intermediate,Industrial supplies not elsewhere specified: Processed,Bekalan perindustrian tidak tersenarai di tempat lain: Diproses,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+300,mixed,Fuels and lubricants,Bahan api dan pelincir,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+310,intermediate,Fuels and lubricants: Primary,Bahan api dan pelincir: Utama,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+320,mixed,Fuels and lubricants: Processed,Bahan api dan pelincir: Diproses,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+321,dual_use,Fuels and lubricants: Processed: Motor spirit,Bahan api dan pelincir: Diproses: Minyak kenderaan,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+322,intermediate,Fuels and lubricants: Processed: Others,Bahan api dan pelincir: Diproses: Lain-lain,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+400,mixed,Capital goods (except transport equipment) and parts and accessories thereof,Barangan modal (kecuali alat kelengkapan pengangkutan) dan alat ganti dan aksesori,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+410,capital,Capital goods (except transport equipment) and parts and accessories thereof: Capital goods (except transport equipment),Barangan modal (kecuali alat kelengkapan pengangkutan) dan alat ganti dan aksesori: Barangan modal (kecuali alat kelengkapan pengangkutan),https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+420,intermediate,Capital goods (except transport equipment) and parts and accessories thereof: Parts and accessories,Barangan modal (kecuali alat kelengkapan pengangkutan) dan alat ganti dan aksesori: Alat ganti dan aksesori,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+500,mixed,Transport equipment and parts and accessories thereof,Alat kelengkapan pengangkutan dan alat ganti dan aksesori,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+510,dual_use,Transport equipment and parts and accessories thereof: Passenger motor vehicles,Alat kelengkapan pengangkutan dan alat ganti dan aksesori: Motokar penumpang,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+520,mixed,Transport equipment and parts and accessories thereof: Other,Alat kelengkapan pengangkutan dan alat ganti dan aksesori: Lain-lain,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+521,capital,Transport equipment and parts and accessories thereof: Other: Industrial,Alat kelengkapan pengangkutan dan alat ganti dan aksesori: Lain-lain: Perindustrian,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+522,consumption,Transport equipment and parts and accessories thereof: Other: Non-industrial,Alat kelengkapan pengangkutan dan alat ganti dan aksesori: Lain-lain: Bukan perindustrian,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+530,intermediate,Transport equipment and parts and accessories thereof: Parts and accessories,Alat kelengkapan pengangkutan dan alat ganti dan aksesori: Alat ganti dan aksesori untuk alat kelengkapan pengangkutan,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+600,consumption,Consumer goods not elsewhere specified,Barangan penggunaan tidak tersenarai di tempat lain,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+610,consumption,Consumer goods not elsewhere specified: Durable,Barangan penggunaan tidak tersenarai di tempat lain: Barangan tahan lama,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+620,consumption,Consumer goods not elsewhere specified: Semi-durable,Barangan penggunaan tidak tersenarai di tempat lain: Barangan separa tahan lama,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+630,consumption,Consumer goods not elsewhere specified: Non-durable,Barangan penggunaan tidak tersenarai di tempat lain: Barangan tidak tahan lama,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+700,nes,Goods not elsewhere specified,Barangan tidak tersenarai di tempat lain,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03
+800,below_5000,Transactions under RM5000,Transaksi bawah RM5000,https://storage.dosm.gov.my/dictionaries/bec.csv,2026-08-03

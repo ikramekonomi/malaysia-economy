@@ -40,13 +40,29 @@ DATASETS = {  # catalogue id -> (csv filename, storage url)
 # ingest_expansion.py; their canonical CSVs carry appended provenance columns and are
 # re-ingested through that script's writer, and verified by verify_expansion.py.
 from ingest_expansion import EXPANSION, download_with_provenance  # noqa: E402
+# Real-economy datasets (national accounts, HIES, labour/productivity, activity indices,
+# trade depth): same writer, verified by verify_realeconomy.py. Vintage tracking is
+# mandatory here, not optional — these are survey estimates that get revised, and the
+# series-break register (data/_series_breaks_dosm.csv) depends on knowing which vintage
+# a number came from.
+from ingest_realeconomy import REALECONOMY  # noqa: E402
 
-for _ds, (_url, _route) in EXPANSION.items():
+for _ds, (_url, _route) in list(EXPANSION.items()) + list(REALECONOMY.items()):
     DATASETS[_ds] = (f"{_ds}.csv", _url)
+
+CATALOGUE_META = ("https://raw.githubusercontent.com/data-gov-my/datagovmy-meta/main/"
+                  "data-catalogue/{}.json")
 
 
 def api_meta(ds):
-    route = EXPANSION[ds][1] if ds in EXPANSION else "opendosm"
+    route = (EXPANSION.get(ds) or REALECONOMY.get(ds) or (None, "opendosm"))[1]
+    if route == "meta":
+        # exclude_openapi in the catalogue: the static API does not serve this dataset,
+        # so its vintage fields come from the catalogue repo instead. The storage ETag
+        # (checked alongside) is what actually detects a new file either way.
+        with urllib.request.urlopen(CATALOGUE_META.format(ds), timeout=60) as r:
+            m = json.loads(r.read())
+        return {k: m.get(k) for k in ("data_as_of", "last_updated", "next_update")}
     url = f"https://api.data.gov.my/{route}?id={ds}&meta=true&limit=1"
     with urllib.request.urlopen(url, timeout=60) as r:
         return json.loads(r.read())["meta"]
@@ -70,6 +86,10 @@ def current_state():
         if ds in EXPANSION:
             out[ds]["api_route"] = EXPANSION[ds][1]
             out[ds]["provenance_columns"] = True
+        elif ds in REALECONOMY:
+            out[ds]["api_route"] = REALECONOMY[ds][1]
+            out[ds]["provenance_columns"] = True
+            out[ds]["block"] = "realeconomy"
     return out
 
 
@@ -110,7 +130,7 @@ def main():
         fname, url = DATASETS[ds]
         dest = os.path.join(DATA, fname)
         tmp = dest + ".new"
-        if ds in EXPANSION:  # expansion files carry appended provenance columns
+        if ds in EXPANSION or ds in REALECONOMY:  # appended provenance columns
             download_with_provenance(url, tmp, retrieved_date=date.today().isoformat())
         else:  # original denominator files stay byte-for-byte as downloaded
             urllib.request.urlretrieve(url, tmp)
@@ -124,8 +144,15 @@ def main():
     subprocess.run([sys.executable, os.path.join(HERE, "verify_against_api.py")], check=True)
     if any(ds in EXPANSION for ds in stale):
         subprocess.run([sys.executable, os.path.join(HERE, "verify_expansion.py")], check=True)
+    if any(ds in REALECONOMY for ds in stale):
+        subprocess.run([sys.executable, os.path.join(HERE, "verify_realeconomy.py")], check=True)
+        subprocess.run([sys.executable, os.path.join(HERE, "series_breaks.py")], check=True)
     print("REMEMBER: update the vintage table in sources/dosm/README.md, rebuild the "
           "dashboard, and commit the new vintage as its own change (never silently).")
+    if any(ds in REALECONOMY for ds in stale):
+        print("REMEMBER (real economy): a survey revision can move a whole series. Check "
+              "data/_series_breaks_dosm.csv still describes the new vintage, and diff the "
+              "revised years rather than assuming only the newest period changed.")
 
 
 if __name__ == "__main__":

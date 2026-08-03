@@ -1,0 +1,1861 @@
+dataset,identity,key,published,implied,note
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1982-01,62.5,62.667,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1983-01,62.8,63.151,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1984-01,62.1,61.975,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1985-01,61.3,62.023,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1986-01,60.5,61.21,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1987-01,61.1,61.671,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1988-01,61.1,61.953,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1989-01,61.6,62.393,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1990-01,62.7,63.546,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1992-01,62.2,63.479,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1993-01,63.2,63.787,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1995-01,61.4,62.711,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1996-01,65.4,64.635,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1997-01,64.6,64.001,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1998-01,62.8,62.237,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 1999-01,62.5,62.02,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2000-01,63.7,63.396,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2001-01,62.5,62.634,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2002-01,61.9,62.127,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2003-01,62.2,62.872,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2004-01,61.0,62.074,tol 1.000
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2005-01,59.7,61.023,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2006-01,59.3,61.04,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2007-01,59.1,61.198,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2008-01,58.1,60.553,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2009-01,57.8,60.605,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2014-01,65.3,65.7,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2015-01,65.2,65.774,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2016-01,64.5,65.405,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2017-01,64.9,65.669,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2018-01,65.4,66.039,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2020-01,65.5,65.387,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,both 2021-01,65.6,65.497,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1982-01,42.6,42.447,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1984-01,42.8,42.36,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1985-01,42.6,42.817,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1986-01,42.5,42.634,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1988-01,43.6,43.733,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1992-01,44.7,44.973,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1995-01,42.3,42.992,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 1996-01,45.7,45.541,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2000-01,46.1,45.724,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2002-01,45.2,44.929,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2003-01,45.8,45.992,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2004-01,45.2,45.443,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2005-01,43.8,44.223,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2006-01,43.6,44.213,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2008-01,43.0,44.039,tol 1.000
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2009-01,43.4,44.608,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2014-01,51.8,51.948,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2015-01,51.9,52.27,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2016-01,51.6,52.182,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2018-01,52.9,53.226,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,female 2021-01,52.8,52.694,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1982-01,82.3,83.025,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1983-01,81.9,82.765,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1984-01,81.3,81.625,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1985-01,79.6,81.251,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1986-01,78.2,79.799,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1987-01,78.2,79.776,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1988-01,78.2,80.172,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1989-01,79.2,81.054,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1990-01,79.8,81.876,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1992-01,79.3,81.941,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1993-01,81.8,82.774,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1995-01,79.9,81.953,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1996-01,84.3,82.796,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1997-01,83.8,82.376,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1998-01,82.0,80.537,tol 1.000
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 1999-01,81.3,79.884,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2001-01,79.2,79.554,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2002-01,77.8,78.835,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2003-01,77.6,79.166,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2004-01,76.1,78.134,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2005-01,74.6,77.232,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2006-01,74.0,77.292,tol 1.000
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2007-01,73.2,77.04,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2008-01,72.2,76.5,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2009-01,71.2,76.06,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2014-01,77.9,78.429,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2015-01,77.4,78.287,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2016-01,76.4,77.654,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2017-01,76.9,77.453,tol 0.100
+lfs_year_sex,ep_ratio == 100*lf_employed/lf+lf_outside,male 2021-01,77.1,76.943,tol 0.100
+lfs_state_sex,lf == lf_employed + lf_unemployed,Melaka male 2004-01,169.0,169.3,tol 0.15
+lfs_state_sex,u_rate == 100*lf_unemployed/lf,Perak female 1989-01,5.4,5.073,tol 0.100
+lfs_state_sex,u_rate == 100*lf_unemployed/lf,Selangor both 1990-01,2.1,1.943,tol 0.100
+lfs_state_sex,p_rate == 100*lf/lf+lf_outside,Selangor female 1999-01,49.2,50.619,tol 0.100
+lfs_state_sex,p_rate == 100*lf/lf+lf_outside,Selangor female 2004-01,50.8,50.903,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1982-01,63.4,63.134,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1983-01,60.5,62.683,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1984-01,61.7,61.992,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1985-01,61.2,63.158,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1986-01,61.7,62.592,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1987-01,62.6,63.061,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1988-01,65.7,64.208,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1989-01,66.3,63.196,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1990-01,71.6,65.354,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1992-01,68.5,66.091,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1993-01,69.7,68.2,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1995-01,59.6,63.172,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1996-01,64.4,65.285,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1997-01,66.2,66.432,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1998-01,62.2,63.781,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 1999-01,60.2,61.646,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2000-01,68.0,65.448,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2001-01,68.4,63.533,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2002-01,65.9,64.758,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2003-01,66.5,65.199,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2004-01,62.9,63.895,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2005-01,61.4,62.676,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2006-01,60.9,62.514,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2007-01,60.7,62.482,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2008-01,59.1,61.035,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2009-01,58.8,60.991,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2014-01,64.5,65.824,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2015-01,63.5,65.045,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2016-01,62.5,64.257,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2017-01,63.0,64.715,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2018-01,65.0,66.842,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2019-01,67.3,68.403,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor both 2020-01,68.4,68.156,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1982-01,44.7,43.588,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1983-01,43.3,44.159,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1984-01,42.4,41.82,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1985-01,42.1,43.206,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1987-01,44.4,44.033,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1988-01,45.9,44.61,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1989-01,46.2,43.226,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1990-01,52.3,46.313,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1992-01,49.0,46.899,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1993-01,51.5,49.779,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1995-01,41.1,42.429,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1996-01,43.9,44.575,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1998-01,39.2,41.218,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 1999-01,39.7,40.848,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2000-01,47.9,45.842,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2001-01,48.9,44.903,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2002-01,48.6,46.87,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2003-01,49.0,47.384,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2006-01,43.8,43.9,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2014-01,48.8,49.342,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2015-01,48.3,48.95,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2016-01,47.1,47.999,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2017-01,47.1,48.371,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2018-01,51.5,52.553,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2019-01,54.3,55.121,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor female 2020-01,48.6,48.452,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1982-01,82.0,83.405,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1983-01,77.5,81.516,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1984-01,80.6,82.459,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1985-01,79.8,82.766,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1986-01,79.5,81.899,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1987-01,80.1,81.926,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1988-01,84.7,83.1,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1989-01,85.3,82.946,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1990-01,89.9,84.49,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1992-01,86.9,84.453,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1993-01,86.7,85.901,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1995-01,76.7,83.464,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1996-01,83.4,84.34,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1997-01,85.6,84.826,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1998-01,83.2,83.557,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 1999-01,79.1,80.436,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2000-01,86.3,83.554,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2001-01,86.2,80.802,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2002-01,81.4,81.536,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2003-01,82.3,81.656,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2004-01,78.1,80.687,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2005-01,76.4,79.49,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2006-01,76.0,79.816,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2007-01,75.3,79.564,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2008-01,74.4,79.062,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2009-01,72.2,77.432,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2014-01,78.1,80.353,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2015-01,76.7,79.301,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2016-01,75.9,78.647,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2017-01,76.9,78.962,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2018-01,76.9,79.51,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2019-01,78.8,80.191,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Johor male 2021-01,84.9,84.669,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1982-01,58.3,58.664,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1983-01,54.4,60.768,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1984-01,59.8,58.089,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1985-01,58.1,57.361,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1986-01,57.5,55.644,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1987-01,56.8,56.178,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1988-01,61.1,58.0,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1990-01,59.9,59.167,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1992-01,60.8,60.395,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1993-01,56.9,60.315,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1995-01,59.5,60.104,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1996-01,59.8,58.8,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1997-01,65.4,60.42,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1998-01,60.3,59.149,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 1999-01,70.4,60.393,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2000-01,63.4,60.444,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2001-01,69.0,59.035,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2002-01,61.8,59.059,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2003-01,61.4,60.439,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2008-01,56.1,56.31,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2009-01,56.9,57.098,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2015-01,62.6,62.891,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2016-01,61.9,62.305,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2017-01,62.6,62.898,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2018-01,62.2,61.616,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2019-01,63.0,61.52,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah both 2023-01,63.5,63.371,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1982-01,37.4,37.866,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1983-01,38.6,41.708,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1984-01,39.2,38.137,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1985-01,39.7,38.746,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1986-01,36.9,35.113,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1987-01,36.6,36.211,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1988-01,42.0,38.943,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1989-01,37.9,38.612,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1990-01,38.5,38.265,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1992-01,41.4,41.244,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1993-01,35.8,37.909,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1995-01,39.2,39.859,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1997-01,43.4,40.647,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1998-01,40.4,39.722,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 1999-01,46.8,40.883,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2000-01,44.0,41.911,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2001-01,50.0,41.64,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2002-01,43.3,41.245,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2003-01,43.5,43.156,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2004-01,43.9,43.423,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2005-01,42.1,41.511,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2006-01,40.4,39.706,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2007-01,40.9,40.248,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2008-01,40.6,39.882,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2009-01,41.2,40.408,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2015-01,50.1,50.393,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2016-01,49.3,49.569,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2017-01,50.4,50.638,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2018-01,49.2,48.551,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2019-01,48.3,47.254,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2021-01,45.7,45.588,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah female 2023-01,47.7,47.595,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1982-01,80.4,80.296,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1983-01,71.1,82.17,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1984-01,81.4,78.886,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1986-01,78.9,77.738,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1987-01,77.9,76.95,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1988-01,80.9,78.899,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1989-01,78.9,78.642,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1990-01,82.4,80.605,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1992-01,81.2,80.52,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1993-01,79.1,83.811,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1995-01,80.7,81.042,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1996-01,80.5,79.085,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1997-01,88.5,80.457,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1998-01,81.0,79.354,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 1999-01,94.9,80.018,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2000-01,83.6,79.819,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2001-01,88.7,78.074,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2002-01,80.8,77.507,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2003-01,79.7,77.766,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2004-01,75.7,76.678,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2005-01,74.2,75.322,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2006-01,73.8,75.208,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2007-01,72.9,74.412,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2008-01,71.4,73.241,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2009-01,72.4,74.221,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2011-01,74.7,74.819,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2015-01,74.7,74.923,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2016-01,74.1,74.568,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2017-01,74.3,74.65,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2018-01,74.7,74.231,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2019-01,77.1,75.235,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kedah male 2023-01,78.5,78.344,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1982-01,59.5,59.866,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1983-01,53.6,54.558,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1984-01,59.9,58.166,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1985-01,59.1,58.076,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1986-01,60.7,58.025,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1987-01,61.3,59.126,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1988-01,61.8,62.109,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1989-01,60.5,59.464,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1990-01,61.1,61.837,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1992-01,59.0,60.493,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1993-01,60.1,58.883,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1995-01,61.8,60.852,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1996-01,66.2,61.305,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1997-01,60.8,58.639,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1998-01,62.6,58.96,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 1999-01,62.6,58.607,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2000-01,60.3,58.62,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2001-01,59.1,56.308,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2002-01,55.5,56.753,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2003-01,60.4,58.598,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2005-01,52.7,52.332,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2006-01,53.5,52.909,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2007-01,53.6,52.772,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2008-01,53.5,52.904,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2012-01,56.7,56.897,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2016-01,55.8,56.885,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2017-01,58.3,58.926,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2018-01,57.7,58.025,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan both 2019-01,56.8,56.588,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1982-01,45.2,44.771,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1984-01,44.3,42.847,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1985-01,44.3,43.143,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1986-01,44.5,42.705,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1987-01,46.6,44.415,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1988-01,48.7,49.311,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1989-01,45.6,44.671,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1993-01,42.6,41.375,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1995-01,46.9,45.869,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1996-01,51.9,46.787,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1997-01,45.7,42.981,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1998-01,48.4,44.271,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 1999-01,45.4,42.358,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2000-01,44.3,42.362,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2001-01,41.2,38.876,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2002-01,40.2,41.139,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2003-01,45.9,43.985,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2005-01,36.3,36.089,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2006-01,38.6,38.066,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2008-01,38.5,37.978,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2010-01,40.6,40.705,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2014-01,46.8,47.062,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2017-01,46.1,46.719,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan female 2019-01,42.2,41.747,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1982-01,74.7,76.371,tol 0.102
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1983-01,71.3,72.044,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1984-01,76.6,74.524,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1985-01,74.5,74.225,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1986-01,77.8,74.024,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1987-01,76.6,74.939,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1988-01,75.6,75.382,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1989-01,76.1,75.0,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1990-01,75.6,77.17,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1992-01,72.9,75.999,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1993-01,78.7,77.93,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1995-01,77.4,76.871,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1996-01,81.1,77.464,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1997-01,76.6,75.849,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1998-01,77.3,75.216,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 1999-01,80.5,75.562,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2000-01,76.9,75.99,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2001-01,77.6,74.615,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2002-01,71.2,72.802,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2003-01,75.4,73.902,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2005-01,69.3,68.882,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2006-01,68.7,68.042,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2007-01,69.4,68.557,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2008-01,68.5,68.025,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2011-01,69.2,69.491,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2012-01,70.4,70.595,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2013-01,70.6,70.775,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2014-01,69.1,69.609,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2015-01,70.9,71.977,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2016-01,68.5,69.75,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2017-01,70.2,70.923,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2018-01,71.3,71.816,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Kelantan male 2019-01,71.2,71.334,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1982-01,59.8,59.144,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1983-01,58.0,60.712,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1984-01,56.2,57.706,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1985-01,58.1,59.496,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1986-01,57.2,56.449,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1987-01,58.9,57.166,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1988-01,57.8,57.264,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1989-01,60.6,59.813,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1990-01,57.8,61.121,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1992-01,64.2,62.772,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1993-01,65.9,64.837,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1995-01,63.9,60.2,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1996-01,66.4,64.175,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1997-01,70.2,65.105,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1998-01,64.6,60.404,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 1999-01,63.1,61.203,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2000-01,64.2,62.919,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2001-01,65.6,60.952,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2002-01,54.4,59.022,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2003-01,62.5,60.993,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2004-01,58.9,61.408,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2005-01,58.2,61.238,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2006-01,56.7,60.635,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2007-01,56.9,61.791,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2008-01,55.4,61.112,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2009-01,52.9,59.514,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2013-01,63.9,64.013,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2014-01,65.9,66.314,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2015-01,64.9,65.944,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2016-01,63.9,64.844,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2017-01,64.4,64.935,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2018-01,65.4,65.881,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka both 2022-01,68.8,68.657,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1982-01,39.6,40.234,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1983-01,41.9,42.526,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1984-01,40.3,40.784,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1985-01,40.4,41.605,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1986-01,42.2,41.074,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1987-01,42.8,40.797,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1988-01,41.9,41.315,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1989-01,45.6,43.451,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1990-01,43.1,45.01,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1992-01,47.8,46.117,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1993-01,46.3,46.973,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1995-01,42.8,40.408,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1996-01,46.2,45.572,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1997-01,50.8,47.912,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1998-01,43.9,42.703,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 1999-01,45.1,43.795,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2000-01,47.0,45.896,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2001-01,47.6,44.078,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2002-01,39.6,42.748,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2003-01,48.6,45.918,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2004-01,44.1,45.876,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2005-01,44.2,46.317,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2006-01,43.2,45.918,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2007-01,44.8,48.477,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2008-01,42.2,46.476,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2009-01,40.2,45.229,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2013-01,52.2,52.327,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2014-01,54.5,54.746,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2015-01,54.2,54.998,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2016-01,52.7,53.406,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2017-01,52.4,53.357,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2018-01,55.2,55.453,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2019-01,55.6,55.71,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka female 2022-01,57.6,57.489,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1982-01,82.2,78.867,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1983-01,75.6,82.007,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1984-01,73.5,76.773,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1985-01,77.1,78.626,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1986-01,73.4,73.525,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1987-01,76.2,75.395,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1988-01,74.9,74.436,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1989-01,76.5,78.615,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1990-01,73.4,78.66,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1992-01,81.5,80.758,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1993-01,86.3,82.404,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1995-01,85.7,80.334,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1996-01,87.0,82.482,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1997-01,90.1,81.968,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1998-01,85.4,77.001,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 1999-01,81.4,78.711,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2000-01,81.6,80.141,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2001-01,83.7,78.005,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2002-01,69.1,75.516,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2003-01,76.5,76.983,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2004-01,73.7,77.108,tol 0.109
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2005-01,72.1,76.152,tol 0.107
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2006-01,70.1,75.456,tol 0.106
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2007-01,68.8,75.0,tol 0.104
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2008-01,68.4,75.68,tol 0.103
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2009-01,65.4,73.704,tol 0.102
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2014-01,77.1,77.645,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2015-01,75.4,76.706,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2016-01,74.8,76.101,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2017-01,76.2,76.066,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2018-01,75.6,76.168,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2021-01,76.8,76.689,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2022-01,78.7,78.513,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Melaka male 2023-01,78.9,78.78,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1982-01,63.1,61.223,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1983-01,61.0,59.955,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1984-01,61.8,59.866,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1985-01,57.1,59.164,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1986-01,56.7,58.735,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1987-01,57.8,58.006,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1988-01,58.3,61.822,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1989-01,57.3,62.65,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1990-01,52.7,61.891,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1992-01,58.3,61.936,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1993-01,64.0,65.14,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1995-01,62.9,61.941,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1996-01,65.9,65.23,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1997-01,61.8,63.292,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1998-01,59.5,62.492,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 1999-01,52.3,57.441,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2000-01,64.5,61.259,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2001-01,63.5,62.254,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2002-01,57.3,61.902,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2003-01,58.4,63.291,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2004-01,60.4,60.841,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2005-01,60.9,61.498,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2006-01,60.3,61.169,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2007-01,59.2,60.428,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2008-01,58.6,60.137,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2009-01,57.1,58.9,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2014-01,62.9,63.015,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2015-01,62.5,62.862,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2016-01,61.5,62.941,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2017-01,61.9,62.96,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2018-01,62.9,63.828,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Negeri Sembilan both 2021-01,61.9,61.704,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1982-01,57.9,64.595,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1983-01,69.1,65.534,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1984-01,61.7,63.331,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1986-01,59.8,63.474,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1987-01,62.0,63.75,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1988-01,63.1,62.678,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1989-01,66.2,62.734,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1990-01,72.6,62.344,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1992-01,66.8,62.763,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1993-01,58.9,60.631,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1995-01,54.4,58.766,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1996-01,57.8,60.071,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1997-01,54.6,58.883,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1998-01,49.0,55.113,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 1999-01,50.1,56.788,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2000-01,56.7,60.493,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2001-01,54.1,61.0,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2002-01,49.0,60.121,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2003-01,54.1,60.734,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2004-01,60.6,58.905,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2005-01,59.2,57.628,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2006-01,61.6,59.64,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2007-01,60.8,58.709,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2008-01,62.6,60.184,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2009-01,62.9,60.364,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2014-01,64.3,64.715,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2015-01,64.8,65.333,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2016-01,63.4,64.271,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2017-01,62.2,63.414,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2018-01,63.7,64.874,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang both 2019-01,63.7,64.471,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1982-01,38.3,41.481,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1983-01,45.9,42.341,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1984-01,40.9,40.67,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1985-01,41.5,41.041,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1986-01,39.4,40.843,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1988-01,41.9,40.146,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1989-01,41.5,38.269,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1990-01,46.8,38.231,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1992-01,43.1,39.121,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1993-01,37.7,37.349,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1995-01,30.9,32.989,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1996-01,33.4,34.362,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1997-01,33.1,34.791,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1998-01,26.6,29.027,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 1999-01,27.0,30.379,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2000-01,36.8,38.781,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2001-01,35.5,39.413,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2002-01,31.9,38.924,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2003-01,35.5,38.961,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2004-01,38.8,37.263,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2005-01,36.0,34.854,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2006-01,38.6,37.058,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2007-01,39.4,37.711,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2008-01,41.8,39.696,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2009-01,42.7,40.425,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2013-01,45.2,45.321,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2015-01,49.3,49.613,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2016-01,48.4,49.012,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2018-01,47.3,47.905,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2019-01,46.5,47.184,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang female 2022-01,45.9,45.776,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1982-01,75.4,86.244,tol 0.113
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1983-01,89.7,87.286,tol 0.102
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1984-01,80.1,84.807,tol 0.104
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1985-01,84.0,85.865,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1986-01,77.8,84.597,tol 0.102
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1987-01,79.8,84.185,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1988-01,81.9,84.093,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1989-01,88.1,85.668,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1990-01,95.6,85.957,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1992-01,88.1,85.457,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1993-01,77.8,83.123,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1995-01,75.4,82.117,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1996-01,79.4,83.263,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1997-01,73.6,81.146,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1998-01,68.7,79.468,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 1999-01,70.4,80.369,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2000-01,74.2,80.005,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2001-01,70.5,80.542,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2002-01,64.2,78.908,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2003-01,70.5,80.678,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2004-01,79.7,78.318,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2005-01,79.4,77.752,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2006-01,81.6,79.617,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2007-01,79.4,77.29,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2008-01,80.7,78.379,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2009-01,80.3,78.063,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2013-01,78.6,78.753,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2014-01,78.1,78.772,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2015-01,77.9,78.744,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2016-01,76.1,77.284,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2017-01,75.9,77.575,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2018-01,77.6,79.488,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pahang male 2019-01,78.3,79.298,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1982-01,57.3,60.479,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1983-01,62.3,62.853,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1984-01,60.4,61.404,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1985-01,60.8,60.652,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1986-01,60.2,59.547,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1987-01,59.9,60.308,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1988-01,58.5,58.939,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1989-01,60.8,59.625,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1990-01,59.6,61.072,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1992-01,59.5,59.774,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1993-01,56.7,59.143,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1995-01,52.5,55.935,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1996-01,59.3,60.746,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1997-01,60.5,59.469,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1998-01,55.3,58.263,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 1999-01,54.9,57.194,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2000-01,59.2,59.381,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2001-01,56.8,57.319,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2002-01,59.9,56.4,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2003-01,54.6,56.673,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2004-01,57.5,57.64,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2007-01,58.3,58.494,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2008-01,57.6,57.971,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2009-01,58.6,59.16,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2013-01,58.1,58.226,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2015-01,59.1,59.463,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2016-01,58.9,59.58,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2017-01,59.8,60.698,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2018-01,60.7,61.195,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2019-01,60.9,61.445,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak both 2021-01,61.9,61.796,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1982-01,40.3,41.975,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1983-01,44.9,45.636,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1984-01,42.9,43.338,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1985-01,43.7,43.193,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1986-01,43.8,43.112,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1988-01,41.8,41.661,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1989-01,43.8,42.583,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1992-01,44.0,42.996,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1993-01,39.1,39.976,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1995-01,34.9,35.91,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1996-01,42.4,42.598,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1997-01,41.8,40.189,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1998-01,38.8,40.197,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 1999-01,36.7,38.128,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2002-01,41.4,38.522,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2003-01,37.5,38.426,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2004-01,40.6,40.339,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2005-01,40.6,40.157,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2007-01,42.4,41.862,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2008-01,41.7,41.333,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2009-01,43.4,43.151,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2010-01,38.6,38.725,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2013-01,40.9,41.042,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2015-01,44.1,44.263,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2016-01,44.1,44.577,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2017-01,46.3,47.283,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2018-01,47.4,47.879,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak female 2019-01,46.3,46.808,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1982-01,75.2,80.45,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1984-01,78.7,80.58,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1985-01,78.6,79.288,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1986-01,77.3,76.857,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1987-01,76.2,77.303,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1988-01,75.8,77.325,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1989-01,78.3,77.726,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1990-01,76.0,79.876,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1992-01,75.5,78.159,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1993-01,74.7,79.634,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1995-01,70.4,77.854,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1996-01,76.5,79.927,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1997-01,79.4,79.937,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1998-01,72.0,77.112,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 1999-01,73.1,76.536,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2000-01,77.6,77.927,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2001-01,74.5,75.227,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2002-01,78.1,74.585,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2003-01,71.4,75.151,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2005-01,73.1,74.001,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2006-01,73.4,74.609,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2007-01,73.6,75.014,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2008-01,72.8,74.512,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2009-01,73.2,74.993,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2010-01,73.9,74.026,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2014-01,72.9,73.24,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2015-01,73.5,74.019,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2017-01,72.8,73.4,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2018-01,73.4,73.972,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perak male 2019-01,75.1,75.429,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1982-01,59.6,58.081,tol 0.163
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1983-01,67.3,57.117,tol 0.146
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1984-01,63.6,58.969,tol 0.154
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1985-01,61.3,60.926,tol 0.162
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1986-01,57.2,57.658,tol 0.158
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1987-01,59.0,57.116,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1988-01,62.9,54.222,tol 0.136
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1989-01,62.5,56.667,tol 0.141
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1990-01,52.2,56.035,tol 0.154
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1992-01,59.3,59.573,tol 0.148
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1993-01,62.1,57.998,tol 0.139
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1995-01,61.2,58.08,tol 0.139
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1996-01,60.1,58.957,tol 0.142
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1997-01,59.7,58.319,tol 0.140
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1998-01,59.7,55.512,tol 0.132
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 1999-01,65.3,57.848,tol 0.129
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2000-01,61.5,59.084,tol 0.136
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2001-01,66.7,56.742,tol 0.123
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2002-01,44.9,56.213,tol 0.155
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2003-01,59.1,56.324,tol 0.128
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2004-01,55.7,55.447,tol 0.129
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2005-01,54.7,54.492,tol 0.127
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2007-01,55.9,56.378,tol 0.125
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2008-01,55.3,56.285,tol 0.123
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2009-01,53.5,55.329,tol 0.122
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2010-01,51.6,51.793,tol 0.115
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2016-01,59.6,59.761,tol 0.116
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2017-01,58.4,57.882,tol 0.113
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2018-01,61.4,60.571,tol 0.114
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2019-01,64.2,62.536,tol 0.115
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis both 2021-01,56.6,56.99,tol 0.102
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1982-01,36.9,35.51,tol 0.225
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1983-01,35.2,30.826,tol 0.198
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1984-01,37.3,33.952,tol 0.206
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1985-01,35.3,36.364,tol 0.228
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1986-01,35.2,34.902,tol 0.216
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1987-01,33.5,32.89,tol 0.208
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1988-01,33.6,28.0,tol 0.175
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1989-01,37.0,33.969,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1990-01,30.3,32.609,tol 0.213
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1992-01,35.7,35.366,tol 0.199
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1993-01,34.6,31.529,tol 0.180
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1995-01,35.0,33.172,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1996-01,36.6,35.94,tol 0.193
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1997-01,37.3,36.86,tol 0.194
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1998-01,34.8,32.917,tol 0.179
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 1999-01,45.0,39.291,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2000-01,41.3,39.389,tol 0.186
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2001-01,42.9,36.255,tol 0.165
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2002-01,28.4,35.509,tol 0.214
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2003-01,38.9,36.963,tol 0.175
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2004-01,38.9,37.807,tol 0.177
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2005-01,38.7,37.712,tol 0.174
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2006-01,36.1,35.124,tol 0.167
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2007-01,40.2,39.648,tol 0.171
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2009-01,37.5,38.07,tol 0.165
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2014-01,41.7,41.971,tol 0.162
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2015-01,42.8,43.289,tol 0.163
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2016-01,44.2,44.617,tol 0.163
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2017-01,43.1,42.608,tol 0.158
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2018-01,45.5,44.844,tol 0.160
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2019-01,50.4,49.195,tol 0.164
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2022-01,44.2,43.802,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis female 2023-01,44.5,44.377,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1982-01,83.1,81.663,tol 0.331
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1983-01,99.8,82.024,tol 0.280
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1984-01,90.2,85.462,tol 0.316
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1985-01,87.6,84.646,tol 0.315
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1986-01,79.6,81.224,tol 0.318
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1987-01,85.1,80.935,tol 0.295
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1988-01,92.1,82.333,tol 0.277
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1989-01,88.0,79.054,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1990-01,74.0,79.142,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1992-01,83.2,84.882,tol 0.296
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1993-01,90.4,86.125,tol 0.280
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1995-01,88.1,83.555,tol 0.272
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1996-01,84.3,82.483,tol 0.275
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1997-01,82.7,79.933,tol 0.267
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1998-01,85.4,78.213,tol 0.251
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 1999-01,86.7,77.914,tol 0.246
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2000-01,82.5,80.033,tol 0.263
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2001-01,91.6,78.501,tol 0.232
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2002-01,62.1,78.093,tol 0.310
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2003-01,80.3,76.737,tol 0.241
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2004-01,73.3,74.608,tol 0.245
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2005-01,71.3,72.881,tol 0.239
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2006-01,72.0,73.795,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2007-01,72.4,74.559,tol 0.233
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2008-01,70.5,73.199,tol 0.228
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2009-01,70.2,74.079,tol 0.226
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2012-01,71.1,71.392,tol 0.204
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2014-01,74.5,74.115,tol 0.202
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2015-01,75.2,74.88,tol 0.200
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2016-01,75.1,74.762,tol 0.199
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2017-01,73.8,73.397,tol 0.197
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2018-01,77.7,76.464,tol 0.198
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2019-01,78.2,76.069,tol 0.196
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2021-01,69.3,70.259,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2022-01,71.3,71.862,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Perlis male 2023-01,73.4,73.651,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1982-01,62.1,61.811,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1983-01,64.4,61.83,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1985-01,59.2,58.195,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1986-01,58.4,57.348,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1987-01,59.2,57.738,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1988-01,57.3,57.946,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1989-01,61.5,61.781,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1990-01,63.2,64.376,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1992-01,68.4,62.896,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1993-01,69.4,63.547,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1995-01,60.7,62.234,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1996-01,54.9,60.185,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1997-01,66.0,67.498,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1998-01,68.5,66.644,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 1999-01,69.1,67.628,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2000-01,75.4,69.477,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2001-01,78.8,69.489,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2002-01,69.3,66.969,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2003-01,71.0,65.565,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2004-01,64.3,64.868,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2005-01,62.5,63.405,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2006-01,63.6,64.88,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2007-01,62.7,64.308,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2008-01,63.3,65.423,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2009-01,63.3,65.608,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2011-01,67.9,68.01,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2012-01,67.4,67.539,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2013-01,68.1,68.238,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2015-01,68.3,68.721,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2016-01,66.8,67.526,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2017-01,65.4,66.158,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2018-01,65.2,66.226,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang both 2019-01,65.4,65.982,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1982-01,41.1,41.424,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1983-01,44.5,42.991,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1984-01,38.5,38.867,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1985-01,38.3,37.606,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1986-01,38.4,37.799,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1987-01,40.6,39.814,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1988-01,38.0,39.134,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1989-01,43.3,44.132,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1990-01,46.6,47.558,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1992-01,49.7,45.556,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1993-01,47.4,44.005,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1995-01,42.6,43.922,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1996-01,36.0,39.701,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1997-01,49.9,51.692,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1998-01,51.9,51.284,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 1999-01,55.2,53.991,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2000-01,65.1,58.129,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2001-01,62.5,56.119,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2002-01,54.5,52.307,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2003-01,56.1,51.367,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2004-01,50.7,50.399,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2007-01,50.6,50.793,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2009-01,53.3,53.893,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2010-01,54.7,54.853,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2014-01,60.3,60.181,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2015-01,57.7,58.223,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2017-01,53.7,54.52,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang female 2019-01,52.8,53.089,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1982-01,83.8,82.554,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1983-01,85.1,81.2,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1984-01,81.7,80.718,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1985-01,80.9,79.713,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1986-01,79.2,77.583,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1987-01,78.6,76.192,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1988-01,77.4,76.757,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1989-01,80.3,79.674,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1990-01,80.6,81.728,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1992-01,87.7,80.818,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1993-01,92.0,83.002,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1995-01,79.3,80.675,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1996-01,74.3,80.824,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1997-01,82.4,83.228,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1998-01,85.6,81.83,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 1999-01,83.2,81.618,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2000-01,85.8,81.864,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2001-01,95.3,82.578,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2002-01,84.2,81.944,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2003-01,86.0,80.026,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2004-01,78.0,79.772,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2005-01,77.0,79.341,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2006-01,76.4,79.38,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2007-01,74.8,78.317,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2008-01,74.5,78.861,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2009-01,73.1,77.812,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2011-01,79.5,79.667,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2012-01,79.5,79.62,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2013-01,79.9,80.013,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2014-01,79.1,79.493,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2015-01,78.8,79.036,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2016-01,77.4,78.163,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2018-01,76.3,77.543,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2019-01,77.8,78.876,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2021-01,78.5,78.309,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Pulau Pinang male 2022-01,80.6,80.479,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1982-01,54.1,58.07,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1983-01,56.0,61.077,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1984-01,55.8,64.533,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1985-01,52.8,63.981,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1986-01,49.8,61.814,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1987-01,49.0,62.26,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1988-01,46.1,60.278,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1989-01,45.4,60.831,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1990-01,42.5,58.207,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1992-01,45.1,61.033,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1993-01,59.6,60.486,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1995-01,58.9,62.323,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1996-01,77.5,66.198,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1997-01,74.6,62.734,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1998-01,76.2,62.69,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 1999-01,75.0,61.632,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2001-01,61.5,61.397,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2002-01,62.2,62.348,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2003-01,62.5,62.92,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2004-01,60.7,61.363,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2005-01,59.7,60.726,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2006-01,60.1,61.644,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2007-01,59.7,61.723,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2008-01,58.9,61.356,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2009-01,58.5,61.468,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2015-01,66.3,66.103,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2016-01,66.5,67.035,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2017-01,64.1,64.571,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2018-01,64.1,64.299,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah both 2019-01,66.8,65.95,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1982-01,24.7,25.839,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1983-01,30.0,32.317,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1984-01,35.7,40.563,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1985-01,34.1,40.56,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1986-01,31.2,37.998,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1987-01,31.1,38.643,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1988-01,28.1,35.888,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1989-01,27.9,36.483,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1990-01,25.5,34.102,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1992-01,27.5,36.492,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1993-01,33.8,34.445,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1995-01,34.7,36.906,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1996-01,47.3,41.937,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1997-01,42.0,36.666,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1998-01,42.2,36.587,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 1999-01,41.8,35.973,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2004-01,41.5,41.606,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2005-01,40.5,40.791,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2006-01,42.3,42.849,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2007-01,41.7,42.486,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2008-01,41.1,42.101,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2009-01,41.7,43.008,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2014-01,49.7,49.473,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2015-01,48.7,48.527,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2017-01,46.6,47.2,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah female 2019-01,50.2,49.394,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1982-01,79.4,87.063,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1983-01,78.3,86.286,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1984-01,73.0,85.771,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1985-01,68.8,84.756,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1986-01,65.7,83.007,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1987-01,64.3,83.338,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1988-01,61.6,82.109,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1989-01,60.4,82.694,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1990-01,57.1,79.858,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1992-01,60.5,83.321,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1993-01,82.4,83.174,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1995-01,80.6,84.841,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1996-01,104.7,86.605,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1997-01,104.4,84.739,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1998-01,107.3,84.395,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 1999-01,105.7,83.287,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2002-01,80.2,80.692,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2003-01,79.5,80.455,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2004-01,78.3,79.785,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2005-01,77.3,79.353,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2006-01,76.4,79.192,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2007-01,76.0,79.739,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2008-01,75.0,79.386,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2009-01,73.7,78.79,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2014-01,81.2,81.39,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2015-01,82.2,81.944,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2016-01,80.4,81.163,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2018-01,80.2,80.504,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2019-01,81.8,81.015,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sabah male 2022-01,76.6,76.735,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1984-01,69.5,69.014,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1985-01,68.6,69.379,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1986-01,69.4,69.767,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1987-01,70.3,70.464,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1988-01,67.6,69.88,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1989-01,70.8,70.345,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1992-01,67.6,67.003,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1993-01,69.8,69.603,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1995-01,69.5,69.089,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1996-01,71.5,70.323,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1997-01,69.9,68.651,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1998-01,67.7,66.401,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 1999-01,69.5,67.284,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2002-01,68.7,65.592,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2003-01,66.4,66.625,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2004-01,65.4,65.708,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2005-01,63.2,63.677,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2006-01,62.2,62.889,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2008-01,59.3,60.487,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2009-01,61.4,62.898,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2010-01,64.1,64.206,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2014-01,68.5,68.104,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2015-01,66.2,66.033,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2016-01,64.9,65.403,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2019-01,66.7,66.232,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2020-01,63.2,63.371,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak both 2022-01,64.8,64.959,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1982-01,50.7,50.141,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1983-01,50.9,50.161,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1984-01,54.1,52.922,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1985-01,53.9,53.571,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1986-01,55.9,55.101,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1987-01,55.8,54.748,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1988-01,54.5,54.787,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1989-01,56.6,54.77,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1990-01,57.9,56.049,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1992-01,51.3,49.303,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1993-01,52.4,52.224,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 1999-01,51.7,50.64,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2001-01,50.8,50.593,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2002-01,54.6,49.424,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2003-01,50.4,49.955,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2004-01,49.9,49.381,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2005-01,48.2,47.662,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2006-01,45.5,45.062,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2007-01,48.6,48.248,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2008-01,43.4,43.156,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2009-01,46.8,46.658,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2014-01,53.2,53.065,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2016-01,48.8,49.293,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2017-01,50.2,50.452,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak female 2023-01,50.8,50.636,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1982-01,85.3,86.426,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1983-01,84.0,85.264,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1984-01,84.6,85.301,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1985-01,82.9,85.355,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1986-01,82.4,84.577,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1987-01,84.2,86.262,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1988-01,80.1,85.131,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1989-01,84.3,86.005,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1990-01,81.5,83.407,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1992-01,83.0,84.699,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1993-01,86.4,85.999,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1995-01,87.2,86.217,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1996-01,88.7,86.003,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1997-01,88.6,85.687,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1998-01,86.4,83.144,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 1999-01,86.7,83.011,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2001-01,83.2,83.474,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2002-01,82.1,82.759,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2003-01,81.6,82.717,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2004-01,79.9,81.462,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2005-01,77.2,79.092,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2006-01,77.6,80.024,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2007-01,76.2,79.043,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2008-01,73.9,77.061,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2009-01,74.7,78.431,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2014-01,82.2,81.538,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2015-01,80.2,79.848,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2016-01,79.2,79.752,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2018-01,80.3,80.096,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2019-01,82.0,80.883,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2020-01,77.6,77.864,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2022-01,79.1,79.469,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Sarawak male 2023-01,81.9,81.352,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1982-01,68.0,64.528,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1983-01,70.6,66.033,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1984-01,62.6,62.772,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1985-01,60.8,62.283,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1986-01,63.4,62.923,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1987-01,67.1,63.093,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1988-01,66.0,62.722,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1990-01,70.4,65.998,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1992-01,65.2,66.143,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1993-01,61.4,65.496,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1996-01,62.6,68.271,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1997-01,57.3,66.485,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1998-01,57.9,63.903,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 1999-01,54.3,64.147,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2000-01,60.3,65.321,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2001-01,52.6,65.387,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2002-01,58.7,63.059,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2003-01,59.2,64.911,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2004-01,61.3,64.796,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2005-01,59.3,63.806,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2006-01,58.0,63.53,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2007-01,57.2,63.631,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2008-01,56.0,62.999,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2009-01,54.3,61.863,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2010-01,64.8,64.032,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2014-01,69.9,70.269,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2015-01,70.7,71.307,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2016-01,71.3,71.804,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2018-01,74.3,74.15,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2019-01,75.0,73.778,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2020-01,72.4,72.236,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor both 2021-01,73.1,72.991,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1982-01,46.3,44.171,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1983-01,48.5,46.191,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1984-01,42.3,42.426,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1985-01,41.6,42.236,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1986-01,43.9,43.798,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1987-01,48.3,45.546,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1988-01,47.7,44.926,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1989-01,46.4,45.657,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1990-01,50.3,47.811,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1992-01,46.8,48.383,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1993-01,44.5,47.326,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1995-01,48.5,49.572,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1996-01,45.7,51.302,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1997-01,41.3,49.175,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1998-01,42.7,47.516,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 1999-01,41.1,49.844,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2000-01,46.1,49.679,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2001-01,38.3,48.357,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2002-01,42.8,46.364,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2003-01,44.7,49.304,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2004-01,47.6,49.601,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2005-01,46.1,48.825,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2006-01,45.4,48.83,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2007-01,45.3,49.337,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2008-01,44.4,48.848,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2009-01,42.9,47.668,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2010-01,50.8,50.102,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2014-01,58.8,59.13,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2015-01,61.2,61.574,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2016-01,62.4,62.807,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2017-01,66.1,66.745,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2018-01,67.9,67.56,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2019-01,68.8,67.71,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2020-01,66.7,66.505,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2021-01,67.1,66.949,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor female 2023-01,68.5,68.398,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1982-01,89.3,84.199,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1983-01,92.2,84.749,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1984-01,82.3,82.638,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1985-01,79.5,82.108,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1986-01,82.5,81.25,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1987-01,85.5,79.974,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1988-01,83.8,80.248,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1989-01,80.4,81.512,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1990-01,89.9,83.081,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1993-01,77.6,83.106,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1996-01,78.7,83.604,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1997-01,72.6,82.189,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1998-01,72.3,79.263,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 1999-01,66.9,79.142,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2000-01,73.8,80.374,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2001-01,66.2,80.983,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2002-01,73.6,78.54,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2003-01,72.8,79.337,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2004-01,74.0,79.361,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2005-01,71.5,78.153,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2006-01,69.6,77.626,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2007-01,68.2,77.385,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2008-01,66.7,76.597,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2009-01,64.8,75.535,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2010-01,77.6,76.791,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2014-01,79.9,80.418,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2015-01,79.5,80.204,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2016-01,79.5,80.017,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2017-01,80.1,79.687,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2019-01,80.6,79.377,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2020-01,77.3,77.13,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Selangor male 2021-01,78.4,78.202,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1982-01,70.4,63.334,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1983-01,72.2,62.048,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1984-01,60.4,58.567,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1985-01,60.7,59.496,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1986-01,60.3,59.656,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1987-01,55.8,59.078,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1988-01,59.1,62.77,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1989-01,57.2,59.683,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1990-01,54.5,62.856,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1992-01,57.2,61.533,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1993-01,62.6,60.111,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1995-01,58.1,58.618,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1996-01,63.6,63.015,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 1997-01,59.2,59.885,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2000-01,60.7,60.45,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2001-01,57.4,59.458,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2002-01,52.2,58.752,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2003-01,62.7,59.455,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2004-01,59.6,57.867,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2005-01,59.0,56.669,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2006-01,59.1,56.123,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2007-01,59.5,56.122,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2008-01,60.0,56.12,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2009-01,61.0,56.541,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2011-01,57.9,58.037,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2013-01,57.9,58.002,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2014-01,57.2,57.963,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2015-01,56.8,57.492,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2016-01,56.6,57.532,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2017-01,56.5,57.467,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu both 2018-01,56.8,57.3,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1982-01,48.7,44.189,tol 0.104
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1983-01,48.4,41.518,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1984-01,37.3,36.118,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1985-01,40.2,38.753,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1986-01,43.2,41.902,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1987-01,39.7,41.08,tol 0.101
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1988-01,43.9,46.294,tol 0.103
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1989-01,37.0,38.96,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1990-01,38.9,44.388,tol 0.103
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1992-01,40.7,43.229,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1993-01,41.1,40.439,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1996-01,45.6,44.219,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1997-01,37.6,38.17,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1998-01,40.5,40.252,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 1999-01,39.5,40.484,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2000-01,40.6,40.952,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2001-01,38.0,39.769,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2002-01,35.2,39.249,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2003-01,44.0,41.634,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2005-01,41.7,40.252,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2006-01,41.1,39.269,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2007-01,40.9,38.901,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2008-01,41.4,38.969,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2009-01,42.2,39.431,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2010-01,38.9,39.044,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2011-01,41.6,41.822,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2014-01,42.1,42.406,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2015-01,42.4,42.54,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2016-01,41.6,41.962,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2017-01,41.9,42.6,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu female 2018-01,41.7,42.01,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1982-01,92.1,82.269,tol 0.125
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1983-01,96.0,82.643,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1984-01,83.4,80.844,tol 0.125
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1985-01,80.9,80.552,tol 0.124
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1987-01,71.4,77.361,tol 0.122
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1988-01,73.8,78.899,tol 0.120
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1989-01,76.5,79.165,tol 0.115
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1990-01,69.3,80.794,tol 0.121
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1992-01,73.1,79.537,tol 0.113
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1993-01,83.3,78.115,tol 0.103
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1995-01,77.3,78.961,tol 0.106
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1996-01,80.7,81.757,tol 0.106
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1997-01,79.8,80.488,tol 0.104
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 1999-01,80.9,78.982,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2000-01,79.9,78.552,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2001-01,76.0,77.829,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2002-01,68.5,77.713,tol 0.103
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2003-01,80.5,76.536,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2004-01,76.4,73.781,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2005-01,75.4,72.203,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2006-01,76.2,72.031,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2007-01,77.2,72.259,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2008-01,77.9,72.261,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2009-01,78.9,72.579,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2010-01,72.3,72.415,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2012-01,72.5,72.66,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2013-01,72.7,72.946,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2014-01,71.5,72.954,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2015-01,70.6,72.006,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2016-01,70.9,72.657,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2017-01,70.5,71.637,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2018-01,71.2,71.977,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,Terengganu male 2023-01,74.5,74.389,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1982-01,70.3,68.307,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1983-01,63.9,69.189,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1984-01,70.5,64.02,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1985-01,69.8,64.954,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1987-01,61.9,63.15,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1988-01,61.9,63.382,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1990-01,61.9,65.331,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1992-01,65.8,65.939,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1993-01,67.6,67.903,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1995-01,65.9,65.407,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1996-01,76.6,67.485,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1997-01,74.5,67.632,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1998-01,70.8,63.196,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 1999-01,71.8,64.218,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2000-01,68.0,63.202,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2001-01,71.0,63.874,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2002-01,78.4,64.336,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2003-01,69.0,63.61,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2004-01,63.2,66.067,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2005-01,61.9,65.668,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2006-01,60.5,65.139,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2007-01,59.4,65.136,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2008-01,58.0,64.664,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2009-01,56.3,63.677,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2010-01,64.1,64.211,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2012-01,65.6,65.785,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2013-01,69.4,69.639,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2014-01,67.1,67.818,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2015-01,65.6,68.152,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2016-01,63.3,65.855,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2017-01,64.5,66.569,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2018-01,63.2,66.404,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2019-01,64.9,68.208,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2021-01,68.5,68.227,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur both 2023-01,71.6,71.913,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1982-01,49.4,48.327,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1983-01,45.8,49.603,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1984-01,48.7,44.979,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1985-01,47.9,45.881,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1986-01,44.3,44.823,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1987-01,45.8,47.062,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1988-01,46.0,47.423,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1989-01,46.1,46.331,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1990-01,44.3,48.117,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1992-01,49.5,49.14,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1993-01,48.6,50.929,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1996-01,60.0,53.159,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1997-01,59.6,53.15,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1998-01,52.9,47.135,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 1999-01,53.8,49.263,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2000-01,50.1,47.489,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2001-01,54.5,49.386,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2002-01,61.1,50.957,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2003-01,54.2,49.153,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2004-01,51.5,53.364,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2005-01,50.1,52.636,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2006-01,48.5,51.631,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2007-01,47.2,51.099,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2008-01,46.6,51.271,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2009-01,44.4,49.526,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2010-01,52.5,52.644,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2012-01,53.5,53.717,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2013-01,59.3,59.521,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2014-01,56.4,57.189,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2015-01,55.3,57.034,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2016-01,53.3,54.93,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2017-01,53.0,55.199,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2018-01,52.7,55.007,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur female 2019-01,56.0,58.462,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1982-01,89.7,86.742,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1983-01,80.9,87.644,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1984-01,91.3,81.556,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1985-01,91.0,82.295,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1986-01,81.4,79.801,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1987-01,77.8,78.738,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1988-01,77.9,78.974,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1989-01,84.0,81.248,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1990-01,79.8,81.726,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1992-01,81.1,82.093,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1993-01,85.4,82.753,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1996-01,92.6,80.988,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1997-01,88.7,82.054,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1998-01,88.0,78.768,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 1999-01,89.1,78.037,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2000-01,85.5,77.856,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2001-01,86.9,77.691,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2002-01,95.2,76.812,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2003-01,83.1,78.005,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2004-01,74.5,78.476,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2005-01,73.3,78.434,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2006-01,71.9,78.423,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2007-01,71.2,78.907,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2008-01,68.9,77.849,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2009-01,67.7,77.583,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2012-01,77.2,77.414,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2013-01,79.1,79.374,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2014-01,77.5,78.061,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2015-01,75.3,78.907,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2016-01,72.9,76.425,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2017-01,75.5,77.241,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2018-01,73.1,77.396,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2019-01,73.4,77.582,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2020-01,76.6,76.412,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2021-01,74.7,74.343,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Kuala Lumpur male 2023-01,77.2,77.71,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 1992-01,44.9,59.839,tol 0.491
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 1993-01,49.9,53.894,tol 0.374
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 1995-01,82.7,60.388,tol 0.264
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 1996-01,95.7,62.023,tol 0.236
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 1997-01,84.8,63.787,tol 0.259
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 1998-01,86.7,64.236,tol 0.248
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 1999-01,93.4,60.322,tol 0.212
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2000-01,55.2,59.765,tol 0.308
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2001-01,57.7,59.649,tol 0.290
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2002-01,68.3,63.76,tol 0.270
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2003-01,64.1,66.112,tol 0.291
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2004-01,63.3,64.343,tol 0.278
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2005-01,58.4,60.039,tol 0.267
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2006-01,56.6,58.317,tol 0.257
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2007-01,59.0,60.708,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2008-01,57.3,58.453,tol 0.245
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2009-01,60.9,62.063,tol 0.246
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2014-01,63.4,64.557,tol 0.231
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2015-01,60.4,61.335,tol 0.223
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2016-01,60.3,61.374,tol 0.220
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2017-01,57.2,58.422,tol 0.215
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2018-01,60.8,60.584,tol 0.211
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2019-01,58.7,57.819,tol 0.205
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2020-01,60.6,59.97,tol 0.217
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan both 2023-01,63.8,63.358,tol 0.215
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 1992-01,23.8,30.0,tol 0.717
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 1993-01,21.0,22.297,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 1995-01,30.8,23.767,tol 0.381
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 1996-01,48.6,30.742,tol 0.335
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 1997-01,39.6,31.76,tol 0.401
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 1998-01,49.0,36.466,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 1999-01,53.4,34.277,tol 0.315
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2000-01,31.3,33.668,tol 0.470
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2001-01,32.9,33.488,tol 0.438
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2002-01,40.7,38.819,tol 0.425
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2003-01,42.5,43.805,tol 0.465
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2004-01,43.6,44.681,tol 0.453
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2005-01,34.3,35.565,tol 0.408
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2006-01,34.6,35.887,tol 0.396
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2007-01,37.0,38.431,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2008-01,34.5,35.849,tol 0.374
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2009-01,40.4,41.912,tol 0.388
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2014-01,45.5,46.645,tol 0.359
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2015-01,42.2,42.812,tol 0.340
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2016-01,42.6,43.519,tol 0.339
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2017-01,38.2,39.506,tol 0.326
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2020-01,44.3,43.987,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2021-01,47.5,46.632,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan female 2022-01,47.8,47.539,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 1992-01,61.7,88.976,tol 1.144
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 1993-01,74.1,81.395,tol 0.814
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 1995-01,125.9,88.356,tol 0.524
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 1996-01,134.7,89.688,tol 0.487
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 1997-01,123.5,87.5,tol 0.491
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 1998-01,119.7,87.781,tol 0.493
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 1999-01,127.8,83.014,tol 0.414
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2000-01,75.4,83.111,tol 0.642
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2001-01,79.0,82.573,tol 1.050
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2002-01,91.5,84.946,tol 0.534
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2003-01,83.7,85.938,tol 0.581
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2005-01,79.7,81.784,tol 0.540
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2006-01,77.2,78.909,tol 0.519
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2007-01,78.6,81.139,tol 0.517
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2008-01,78.2,79.038,tol 0.493
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2009-01,79.8,80.602,tol 0.487
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2013-01,81.4,81.962,tol 0.468
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2014-01,81.1,81.875,tol 0.462
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2015-01,78.2,79.385,tol 0.448
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2016-01,78.1,78.852,tol 0.439
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2018-01,77.5,77.035,tol 0.419
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2019-01,76.8,74.857,tol 0.407
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Labuan male 2023-01,78.9,77.963,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2011-01,80.7,81.018,tol 0.306
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2012-01,79.3,79.644,tol 0.306
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2013-01,79.6,80.754,tol 0.309
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2014-01,79.6,80.119,tol 0.309
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2015-01,75.0,77.465,tol 1.000
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2016-01,74.3,76.248,tol 0.302
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2017-01,71.7,75.248,tol 0.298
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2018-01,63.6,75.294,tol 0.296
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2019-01,58.6,75.0,tol 0.296
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2021-01,75.4,75.714,tol 0.230
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya both 2023-01,78.7,77.987,tol 0.222
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2011-01,77.6,78.136,tol 0.509
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2013-01,77.7,78.214,tol 0.508
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2015-01,74.4,75.445,tol 0.496
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2016-01,72.5,74.021,tol 0.491
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2017-01,70.2,72.887,tol 0.483
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2018-01,62.6,74.035,tol 0.485
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2019-01,55.9,71.986,tol 0.483
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2020-01,76.1,75.723,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2021-01,76.8,76.299,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2022-01,77.4,77.512,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya female 2023-01,78.6,78.125,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2011-01,84.5,85.281,tol 0.636
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2012-01,82.3,82.969,tol 0.631
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2013-01,82.1,83.929,tol 0.648
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2015-01,76.9,79.724,tol 0.648
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2016-01,76.7,79.452,tol 0.641
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2017-01,74.4,78.733,tol 0.633
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2018-01,64.6,76.889,tol 0.614
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2019-01,62.0,78.761,tol 1.070
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2021-01,74.1,75.161,tol 0.100
+lfs_state_sex,ep_ratio == 100*lf_employed/lf+lf_outside,W.P. Putrajaya male 2023-01,79.4,77.916,tol 0.100
+lfs_district,lf == lf_employed + lf_unemployed,Tongod Sabah 2020-01,83.0,14.6,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Tuaran Sabah 2020-01,90.1,54.1,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Asajaya Sarawak 2023-01,15.2,15.4,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Bintulu Sarawak 2023-01,100.5,102.4,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Daro Sarawak 2023-01,8.7,9.2,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Kapit Sarawak 2023-01,16.2,16.4,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Kuching Sarawak 2023-01,312.4,315.1,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Lawas Sarawak 2023-01,17.1,16.1,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Lundu Sarawak 2023-01,15.6,15.9,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Miri Sarawak 2023-01,135.8,137.2,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Mukah Sarawak 2023-01,21.1,21.3,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Serian Sarawak 2023-01,39.8,34.3,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Sibu Sarawak 2023-01,129.2,128.2,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Simunjan Sarawak 2023-01,15.6,15.8,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Tatau Sarawak 2023-01,15.9,16.2,tol 0.15
+lfs_district,lf == lf_employed + lf_unemployed,Tebedu Sarawak 2023-01,9.5,8.7,tol 0.15
+lfs_district,u_rate == 100*lf_unemployed/lf,Kulai Johor 2019-01,3.5,2.733,tol 0.100
+lfs_district,u_rate == 100*lf_unemployed/lf,Pendang Kedah 2019-01,4.2,2.851,tol 0.163
+lfs_district,u_rate == 100*lf_unemployed/lf,Tongod Sabah 2020-01,11.4,2.048,tol 0.111
+lfs_district,u_rate == 100*lf_unemployed/lf,Tuaran Sabah 2020-01,9.5,5.66,tol 0.109
+lfs_district,u_rate == 100*lf_unemployed/lf,Serian Sarawak 2023-01,6.9,6.03,tol 0.183
+lfs_district,u_rate == 100*lf_unemployed/lf,Tebedu Sarawak 2023-01,5.9,5.263,tol 0.604
+lfs_district,p_rate == 100*lf/lf+lf_outside,Tongod Sabah 2020-01,48.9,84.521,tol 0.187
+lfs_district,p_rate == 100*lf/lf+lf_outside,Tuaran Sabah 2020-01,62.9,73.792,tol 0.151
+lfs_district,p_rate == 100*lf/lf+lf_outside,Bintulu Sarawak 2023-01,73.5,73.144,tol 0.140
+lfs_district,p_rate == 100*lf/lf+lf_outside,Daro Sarawak 2023-01,67.5,66.412,tol 0.939
+lfs_district,p_rate == 100*lf/lf+lf_outside,Kuching Sarawak 2023-01,71.4,71.275,tol 0.100
+lfs_district,p_rate == 100*lf/lf+lf_outside,Lawas Sarawak 2023-01,64.0,65.267,tol 1.000
+lfs_district,p_rate == 100*lf/lf+lf_outside,Miri Sarawak 2023-01,72.4,72.234,tol 0.115
+lfs_district,p_rate == 100*lf/lf+lf_outside,Serian Sarawak 2023-01,57.5,61.043,tol 0.220
+lfs_district,p_rate == 100*lf/lf+lf_outside,Sibu Sarawak 2023-01,70.1,70.217,tol 0.115
+lfs_district,p_rate == 100*lf/lf+lf_outside,Tebedu Sarawak 2023-01,48.6,50.532,tol 0.585
+lfs_parlimen,lf == lf_employed + lf_unemployed,P.116 Wangsa Maju W.P. Kuala Lumpur 2022-01,90.5,90.0,tol 0.15
+lfs_parlimen,lf == lf_employed + lf_unemployed,P.117 Segambut W.P. Kuala Lumpur 2022-01,123.2,123.9,tol 0.15
+lfs_parlimen,lf == lf_employed + lf_unemployed,P.119 Titiwangsa W.P. Kuala Lumpur 2022-01,57.6,59.0,tol 0.15
+lfs_parlimen,lf == lf_employed + lf_unemployed,P.120 Bukit Bintang W.P. Kuala Lumpur 2022-01,52.8,53.9,tol 0.15
+lfs_parlimen,lf == lf_employed + lf_unemployed,P.122 Seputeh W.P. Kuala Lumpur 2022-01,144.9,143.7,tol 0.15
+lfs_parlimen,lf == lf_employed + lf_unemployed,P.124 Bandar Tun Razak W.P. Kuala Lumpur 2022-01,87.7,86.2,tol 0.15
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.001 Padang Besar Perlis 2021-01,4.1,4.587,tol 0.210
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.003 Arau Perlis 2021-01,4.7,4.326,tol 0.183
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.004 Langkawi Kedah 2021-01,6.8,7.085,tol 0.158
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.024 Kubang Kerian Kelantan 2021-01,5.2,4.195,tol 0.120
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.025 Bachok Kelantan 2021-01,3.6,3.859,tol 0.137
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.026 Ketereh Kelantan 2021-01,5.2,4.661,tol 0.161
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.027 Tanah Merah Kelantan 2021-01,2.8,2.335,tol 0.159
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.028 Pasir Puteh Kelantan 2021-01,3.2,3.523,tol 0.151
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.029 Machang Kelantan 2021-01,5.3,5.923,tol 0.171
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.031 Kuala Krai Kelantan 2021-01,2.8,2.472,tol 0.165
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.033 Besut Terengganu 2021-01,4.1,4.428,tol 0.146
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.034 Setiu Terengganu 2021-01,4.2,4.364,tol 0.145
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.039 Dungun Terengganu 2021-01,3.9,3.416,tol 0.130
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.040 Kemaman Terengganu 2021-01,3.7,3.372,tol 0.104
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.041 Kepala Batas Pulau Pinang 2021-01,3.8,4.22,tol 0.146
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.042 Tasek Gelugor Pulau Pinang 2021-01,3.7,3.393,tol 0.153
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.043 Bagan Pulau Pinang 2021-01,3.6,3.113,tol 0.150
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.044 Permatang Pauh Pulau Pinang 2021-01,4.7,5.138,tol 0.119
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.045 Bukit Mertajam Pulau Pinang 2021-01,2.4,3.133,tol 0.112
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.046 Batu Kawan Pulau Pinang 2021-01,3.7,4.656,tol 0.105
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.047 Nibong Tebal Pulau Pinang 2021-01,3.3,4.218,tol 0.121
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.048 Bukit Bendera Pulau Pinang 2021-01,3.7,4.068,tol 0.138
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.050 Jelutong Pulau Pinang 2021-01,4.5,3.966,tol 0.140
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.051 Bukit Gelugor Pulau Pinang 2021-01,3.8,3.125,tol 0.102
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.052 Bayan Baru Pulau Pinang 2021-01,2.9,2.576,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.053 Balik Pulau Pulau Pinang 2021-01,2.8,2.368,tol 0.121
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.054 Gerik Perak 2021-01,4.2,4.781,tol 0.259
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.055 Lenggong Perak 2021-01,3.8,4.294,tol 0.370
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.057 Parit Buntar Perak 2021-01,5.6,6.27,tol 0.217
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.058 Bagan Serai Perak 2021-01,4.5,3.912,tol 0.177
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.060 Taiping Perak 2021-01,4.7,5.245,tol 0.142
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.061 Padang Rengas Perak 2021-01,5.1,5.732,tol 0.387
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.062 Sungai Siput Perak 2021-01,5.5,6.287,tol 0.209
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.063 Tambun Perak 2021-01,3.8,4.308,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.064 Ipoh Timor Perak 2021-01,4.8,5.445,tol 0.146
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.065 Ipoh Barat Perak 2021-01,4.3,4.778,tol 0.139
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.066 Batu Gajah Perak 2021-01,5.4,6.034,tol 0.141
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.067 Kuala Kangsar Perak 2021-01,4.9,5.381,tol 0.286
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.068 Beruas Perak 2021-01,5.1,5.741,tol 0.148
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.069 Parit Perak 2021-01,6.3,5.449,tol 0.219
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.070 Kampar Perak 2021-01,4.4,4.931,tol 0.153
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.071 Gopeng Perak 2021-01,3.9,4.394,tol 0.112
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.072 Tapah Perak 2021-01,4.4,4.975,tol 0.181
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.073 Pasir Salak Perak 2021-01,5.6,5.946,tol 0.193
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.074 Lumut Perak 2021-01,5.6,6.055,tol 0.142
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.075 Bagan Datuk Perak 2021-01,5.3,4.61,tol 0.235
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.076 Teluk Intan Perak 2021-01,5.4,6.321,tol 0.170
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.077 Tanjong Malim Perak 2021-01,4.4,5.067,tol 0.128
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.081 Jerantut Pahang 2021-01,3.2,3.426,tol 0.161
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.085 Pekan Pahang 2021-01,2.7,3.069,tol 0.116
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.087 Kuala Krau Pahang 2021-01,4.2,4.516,tol 0.219
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.090 Bera Pahang 2021-01,3.3,3.896,tol 0.185
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.091 Rompin Pahang 2021-01,3.4,3.968,tol 0.153
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.094 Hulu Selangor Selangor 2021-01,2.6,2.403,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.095 Tanjong Karang Selangor 2021-01,2.9,2.564,tol 0.214
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.096 Kuala Selangor Selangor 2021-01,4.2,4.313,tol 0.109
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.098 Gombak Selangor 2021-01,3.9,4.088,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.099 Ampang Selangor 2021-01,5.6,5.723,tol 0.103
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.103 Puchong Selangor 2021-01,4.9,4.53,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.104 Subang Selangor 2021-01,4.9,4.792,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.106 Damansara Selangor 2021-01,5.1,4.905,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.112 Kuala Langat Selangor 2021-01,3.4,3.003,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.113 Sepang Selangor 2021-01,3.6,3.77,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.115 Batu W.P. Kuala Lumpur 2021-01,4.8,4.545,tol 0.111
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.116 Wangsa Maju W.P. Kuala Lumpur 2021-01,3.4,3.913,tol 0.106
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.117 Segambut W.P. Kuala Lumpur 2021-01,4.5,4.674,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.119 Titiwangsa W.P. Kuala Lumpur 2021-01,3.6,4.014,tol 0.141
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.121 Lembah Pantai W.P. Kuala Lumpur 2021-01,3.3,3.863,tol 0.127
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.122 Seputeh W.P. Kuala Lumpur 2021-01,3.5,3.883,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.123 Cheras W.P. Kuala Lumpur 2021-01,3.7,3.956,tol 0.132
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.124 Bandar Tun Razak W.P. Kuala Lumpur 2021-01,4.4,4.649,tol 0.109
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.127 Jempol Negeri Sembilan 2021-01,3.9,4.218,tol 0.179
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.128 Seremban Negeri Sembilan 2021-01,3.6,4.86,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.129 Kuala Pilah Negeri Sembilan 2021-01,4.1,4.714,tol 0.226
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.130 Rasah Negeri Sembilan 2021-01,3.8,3.966,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.131 Rembau Negeri Sembilan 2021-01,3.6,3.436,tol 0.109
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.133 Tampin Negeri Sembilan 2021-01,4.1,4.545,tol 0.199
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.135 Alor Gajah Melaka 2021-01,2.6,2.384,tol 0.122
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.137 Hang Tuah Jaya Melaka 2021-01,2.3,2.165,tol 0.124
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.138 Kota Melaka Melaka 2021-01,2.4,2.111,tol 0.101
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.141 Sekijang Johor 2021-01,4.1,4.67,tol 0.194
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.142 Labis Johor 2021-01,4.3,4.663,tol 0.321
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.143 Pagoh Johor 2021-01,2.1,2.376,tol 0.161
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.144 Ledang Johor 2021-01,2.9,3.356,tol 0.137
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.145 Bakri Johor 2021-01,2.8,3.193,tol 0.137
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.146 Muar Johor 2021-01,2.4,2.57,tol 0.170
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.147 Parit Sulong Johor 2021-01,2.7,3.014,tol 0.191
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.148 Ayer Hitam Johor 2021-01,2.5,2.795,tol 0.210
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.150 Batu Pahat Johor 2021-01,1.9,2.08,tol 0.121
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.151 Simpang Renggam Johor 2021-01,4.8,5.587,tol 0.197
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.152 Kluang Johor 2021-01,4.4,5.207,tol 0.112
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.155 Tenggara Johor 2021-01,3.2,3.472,tol 0.170
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.157 Pengerang Johor 2021-01,3.9,4.444,tol 0.216
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.159 Pasir Gudang Johor 2021-01,4.3,4.977,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.160 Johor Bahru Johor 2021-01,3.5,3.67,tol 0.109
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.162 Iskandar Puteri Johor 2021-01,3.8,3.994,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.164 Pontian Johor 2021-01,4.3,4.819,tol 0.208
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.165 Tanjung Piai Johor 2021-01,3.9,4.359,tol 0.184
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.167 Kudat Sabah 2021-01,9.1,9.549,tol 0.145
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.168 Kota Marudu Sabah 2021-01,8.6,8.142,tol 0.146
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.169 Kota Belud Sabah 2021-01,9.7,9.886,tol 0.154
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.170 Tuaran Sabah 2021-01,5.9,6.555,tol 0.124
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.172 Kota Kinabalu Sabah 2021-01,6.5,6.835,tol 0.118
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.173 Putatan Sabah 2021-01,7.5,7.703,tol 0.125
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.174 Penampang Sabah 2021-01,8.7,9.36,tol 0.102
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.176 Kimanis Sabah 2021-01,8.1,7.256,tol 0.219
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.178 Sipitang Sabah 2021-01,6.4,6.757,tol 0.194
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.179 Ranau Sabah 2021-01,8.8,8.487,tol 0.127
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.180 Keningau Sabah 2021-01,6.3,6.871,tol 0.128
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.181 Tenom Sabah 2021-01,6.1,6.62,tol 0.236
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.185 Batu Sapi Sabah 2021-01,7.7,7.445,tol 0.119
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.187 Kinabatangan Sabah 2021-01,9.7,10.158,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.188 Lahad Datu Sabah 2021-01,9.7,9.935,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.193 Santubong Sarawak 2021-01,4.5,4.214,tol 0.134
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.194 Petra Jaya Sarawak 2021-01,4.5,4.359,tol 0.115
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.196 Stampin Sarawak 2021-01,4.9,5.526,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.199 Serian Sarawak 2021-01,4.9,5.78,tol 0.203
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.202 Sri Aman Sarawak 2021-01,4.5,4.19,tol 0.196
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.204 Betong Sarawak 2021-01,4.8,5.587,tol 0.345
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.207 Igan Sarawak 2021-01,5.9,6.711,tol 0.408
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.208 Sarikei Sarawak 2021-01,5.0,6.087,tol 1.000
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.209 Julau Sarawak 2021-01,4.8,5.699,tol 0.324
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.210 Kanowit Sarawak 2021-01,4.8,5.556,tol 0.469
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.211 Lanang Sarawak 2021-01,5.3,6.066,tol 0.147
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.214 Selangau Sarawak 2021-01,4.3,3.943,tol 0.236
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.215 Kapit Sarawak 2021-01,5.8,6.41,tol 0.277
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.217 Bintulu Sarawak 2021-01,3.5,3.345,tol 0.100
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.220 Baram Sarawak 2021-01,4.8,5.479,tol 0.194
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.221 Limbang Sarawak 2021-01,5.6,6.531,tol 0.267
+lfs_parlimen,u_rate == 100*lf_unemployed/lf,P.222 Lawas Sarawak 2021-01,5.2,6.0,tol 0.315
+lfs_parlimen,p_rate == 100*lf/lf+lf_outside,P.116 Wangsa Maju W.P. Kuala Lumpur 2022-01,70.6,70.264,tol 0.143
+lfs_parlimen,p_rate == 100*lf/lf+lf_outside,P.117 Segambut W.P. Kuala Lumpur 2022-01,74.4,74.939,tol 0.126
+lfs_parlimen,p_rate == 100*lf/lf+lf_outside,P.119 Titiwangsa W.P. Kuala Lumpur 2022-01,75.7,76.393,tol 0.218
+lfs_parlimen,p_rate == 100*lf/lf+lf_outside,P.122 Seputeh W.P. Kuala Lumpur 2022-01,70.3,69.831,tol 0.108
+lfs_parlimen,p_rate == 100*lf/lf+lf_outside,P.123 Cheras W.P. Kuala Lumpur 2022-01,73.6,73.846,tol 0.197
+lfs_dun,lf == lf_employed + lf_unemployed,N.03 Kota Siputeh P.005 Jerlun Kedah 2021-01,38.2,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.03 Kota Siputeh P.005 Jerlun Kedah 2022-01,40.8,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.04 Ayer Hitam P.005 Jerlun Kedah 2021-01,14.6,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.04 Ayer Hitam P.005 Jerlun Kedah 2022-01,22.6,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.05 Bukit Kayu Hitam P.006 Kubang Pasu Kedah 2021-01,18.7,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.05 Bukit Kayu Hitam P.006 Kubang Pasu Kedah 2022-01,25.7,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.06 Jitra P.006 Kubang Pasu Kedah 2021-01,21.2,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.06 Jitra P.006 Kubang Pasu Kedah 2022-01,18.5,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.07 Kuala Nerang P.007 Padang Terap Kedah 2021-01,26.7,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.07 Kuala Nerang P.007 Padang Terap Kedah 2022-01,18.8,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.08 Pedu P.007 Padang Terap Kedah 2021-01,13.0,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.08 Pedu P.007 Padang Terap Kedah 2022-01,15.0,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.09 Bukit Lada P.008 Pokok Sena Kedah 2021-01,12.4,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.09 Bukit Lada P.008 Pokok Sena Kedah 2022-01,15.3,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.10 Bukit Pinang P.008 Pokok Sena Kedah 2021-01,28.4,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.10 Bukit Pinang P.008 Pokok Sena Kedah 2022-01,28.0,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.11 Derga P.008 Pokok Sena Kedah 2021-01,54.0,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.11 Derga P.008 Pokok Sena Kedah 2022-01,19.2,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.12 Suka Menanti P.009 Alor Setar Kedah 2021-01,25.5,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.12 Suka Menanti P.009 Alor Setar Kedah 2022-01,48.7,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.13 Kota Darul Aman P.009 Alor Setar Kedah 2021-01,38.0,25.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.13 Kota Darul Aman P.009 Alor Setar Kedah 2022-01,20.4,14.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.01 Buloh Kasap P.140 Segamat Johor 2023-01,16.2,8.4,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.02 Jementah P.140 Segamat Johor 2023-01,24.2,8.5,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.03 Pemanis P.141 Sekijang Johor 2023-01,15.7,6.2,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.04 Kemelah P.141 Sekijang Johor 2023-01,23.3,10.5,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.05 Tenang P.142 Labis Johor 2023-01,10.3,4.2,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.06 Bekok P.142 Labis Johor 2023-01,10.6,4.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.07 Bukit Kepong P.143 Pagoh Johor 2023-01,16.7,7.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.08 Bukit Pasir P.143 Pagoh Johor 2023-01,30.7,16.5,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.09 Gambir P.144 Ledang Johor 2023-01,18.2,9.3,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.10 Tangkak P.144 Ledang Johor 2023-01,26.3,14.6,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.11 Serom P.144 Ledang Johor 2023-01,23.6,14.2,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.12 Bentayan P.145 Bakri Johor 2023-01,17.7,7.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.13 Simpang Jeram P.145 Bakri Johor 2023-01,32.2,15.2,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.14 Bukit Naning P.145 Bakri Johor 2023-01,16.7,9.3,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.15 Maharani P.146 Muar Johor 2023-01,28.3,13.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.16 Sungai Balang P.146 Muar Johor 2023-01,19.9,9.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.17 Semerah P.147 Parit Sulong Johor 2023-01,23.0,10.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.18 Sri Medan P.147 Parit Sulong Johor 2023-01,18.4,7.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.19 Yong Peng P.148 Ayer Hitam Johor 2023-01,21.0,9.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.20 Semarang P.148 Ayer Hitam Johor 2023-01,15.1,6.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.21 Parit Yaani P.149 Sri Gading Johor 2023-01,44.0,17.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.22 Parit Raja P.149 Sri Gading Johor 2023-01,53.1,24.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.23 Penggaram P.150 Batu Pahat Johor 2023-01,47.3,18.5,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.24 Senggarang P.150 Batu Pahat Johor 2023-01,24.0,10.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.25 Rengit P.150 Batu Pahat Johor 2023-01,12.5,4.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.26 Machap P.151 Simpang Renggam Johor 2023-01,25.2,9.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.27 Layang-Layang P.151 Simpang Renggam Johor 2023-01,14.6,6.5,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.28 Mengkibol P.152 Kluang Johor 2023-01,52.2,22.6,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.29 Mahkota P.152 Kluang Johor 2023-01,41.2,16.6,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.30 Paloh P.153 Sembrong Johor 2023-01,18.5,6.4,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.31 Kahang P.153 Sembrong Johor 2023-01,14.3,7.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.32 Endau P.154 Mersing Johor 2023-01,13.6,9.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.33 Tenggaroh P.154 Mersing Johor 2023-01,19.3,13.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.34 Panti P.155 Tenggara Johor 2023-01,26.0,12.2,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.35 Pasir Raja P.155 Tenggara Johor 2023-01,20.4,9.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.36 Sedili P.156 Kota Tinggi Johor 2023-01,12.4,6.3,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.37 Johor Lama P.156 Kota Tinggi Johor 2023-01,14.6,6.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.38 Penawar P.157 Pengerang Johor 2023-01,18.9,9.3,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.39 Tanjung Surat P.157 Pengerang Johor 2023-01,16.2,5.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.40 Tiram P.158 Tebrau Johor 2023-01,110.1,41.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.41 Puteri Wangsa P.158 Tebrau Johor 2023-01,151.4,52.4,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.42 Johor Jaya P.159 Pasir Gudang Johor 2023-01,84.5,32.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.43 Permas P.159 Pasir Gudang Johor 2023-01,109.5,46.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.44 Larkin P.160 Johor Bahru Johor 2023-01,55.0,19.6,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.45 Stulang P.160 Johor Bahru Johor 2023-01,43.9,15.0,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.46 Perling P.161 Pulai Johor 2023-01,98.5,38.6,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.47 Kempas P.161 Pulai Johor 2023-01,56.4,20.1,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.48 Skudai P.162 Iskandar Puteri Johor 2023-01,69.6,28.5,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.49 Kota Iskandar P.162 Iskandar Puteri Johor 2023-01,168.3,58.6,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.50 Bukit Permai P.163 Kulai Johor 2023-01,36.1,22.2,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.51 Bukit Batu P.163 Kulai Johor 2023-01,39.0,20.7,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.52 Senai P.163 Kulai Johor 2023-01,72.2,35.8,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.53 Benut P.164 Pontian Johor 2023-01,13.5,6.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.54 Pulai Sebatang P.164 Pontian Johor 2023-01,23.6,12.9,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.55 Pekan Nanas P.165 Tanjung Piai Johor 2023-01,25.6,12.6,tol 0.15
+lfs_dun,lf == lf_employed + lf_unemployed,N.56 Kukup P.165 Tanjung Piai Johor 2023-01,17.8,10.5,tol 0.15
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.03 Kota Siputeh P.005 Jerlun Kedah 2021-01,5.7,3.927,tol 0.186
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.03 Kota Siputeh P.005 Jerlun Kedah 2022-01,3.8,1.225,tol 0.174
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.04 Ayer Hitam P.005 Jerlun Kedah 2021-01,5.7,10.274,tol 0.428
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.04 Ayer Hitam P.005 Jerlun Kedah 2022-01,3.8,2.212,tol 0.276
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.05 Bukit Kayu Hitam P.006 Kubang Pasu Kedah 2021-01,5.7,8.021,tol 0.339
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.05 Bukit Kayu Hitam P.006 Kubang Pasu Kedah 2022-01,3.8,1.946,tol 0.248
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.06 Jitra P.006 Kubang Pasu Kedah 2021-01,5.7,7.075,tol 0.303
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.06 Jitra P.006 Kubang Pasu Kedah 2022-01,3.8,2.703,tol 0.328
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.07 Kuala Nerang P.007 Padang Terap Kedah 2022-01,3.8,2.66,tol 0.323
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.08 Pedu P.007 Padang Terap Kedah 2021-01,5.7,11.538,tol 0.479
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.08 Pedu P.007 Padang Terap Kedah 2022-01,3.8,3.333,tol 0.394
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.09 Bukit Lada P.008 Pokok Sena Kedah 2021-01,5.7,12.097,tol 0.502
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.09 Bukit Lada P.008 Pokok Sena Kedah 2022-01,3.8,3.268,tol 0.387
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.10 Bukit Pinang P.008 Pokok Sena Kedah 2021-01,5.7,5.282,tol 0.235
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.10 Bukit Pinang P.008 Pokok Sena Kedah 2022-01,3.8,1.786,tol 0.232
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.11 Derga P.008 Pokok Sena Kedah 2021-01,5.7,2.778,tol 0.145
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.11 Derga P.008 Pokok Sena Kedah 2022-01,3.8,2.604,tol 0.317
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.12 Suka Menanti P.009 Alor Setar Kedah 2022-01,3.8,1.027,tol 0.154
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.13 Kota Darul Aman P.009 Alor Setar Kedah 2021-01,5.7,3.947,tol 0.187
+lfs_dun,u_rate == 100*lf_unemployed/lf,N.13 Kota Darul Aman P.009 Alor Setar Kedah 2022-01,3.8,2.451,tol 0.301
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.03 Kota Siputeh P.005 Jerlun Kedah 2021-01,72.2,79.418,tol 0.319
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.03 Kota Siputeh P.005 Jerlun Kedah 2022-01,64.5,83.951,tol 0.326
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.04 Ayer Hitam P.005 Jerlun Kedah 2021-01,72.2,59.592,tol 0.497
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.04 Ayer Hitam P.005 Jerlun Kedah 2022-01,64.5,74.342,tol 0.459
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.05 Bukit Kayu Hitam P.006 Kubang Pasu Kedah 2021-01,72.2,65.385,tol 0.453
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.05 Bukit Kayu Hitam P.006 Kubang Pasu Kedah 2022-01,64.5,76.716,tol 0.428
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.06 Jitra P.006 Kubang Pasu Kedah 2021-01,72.2,68.167,tol 0.430
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.06 Jitra P.006 Kubang Pasu Kedah 2022-01,64.5,70.342,tol 0.508
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.07 Kuala Nerang P.007 Padang Terap Kedah 2021-01,72.2,72.951,tol 0.386
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.07 Kuala Nerang P.007 Padang Terap Kedah 2022-01,64.5,70.677,tol 0.504
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.08 Pedu P.007 Padang Terap Kedah 2021-01,72.2,56.769,tol 0.516
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.08 Pedu P.007 Padang Terap Kedah 2022-01,64.5,65.789,tol 0.558
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.09 Bukit Lada P.008 Pokok Sena Kedah 2021-01,72.2,55.605,tol 0.524
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.09 Bukit Lada P.008 Pokok Sena Kedah 2022-01,64.5,66.234,tol 0.553
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.10 Bukit Pinang P.008 Pokok Sena Kedah 2021-01,72.2,74.151,tol 0.374
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.10 Bukit Pinang P.008 Pokok Sena Kedah 2022-01,64.5,78.212,tol 0.408
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.11 Derga P.008 Pokok Sena Kedah 2021-01,72.2,84.507,tol 0.260
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.11 Derga P.008 Pokok Sena Kedah 2022-01,64.5,71.111,tol 0.499
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.12 Suka Menanti P.009 Alor Setar Kedah 2022-01,64.5,86.195,tol 0.291
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.13 Kota Darul Aman P.009 Alor Setar Kedah 2021-01,72.2,79.332,tol 0.320
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.13 Kota Darul Aman P.009 Alor Setar Kedah 2022-01,64.5,72.34,tol 0.484
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.01 Chennah P.126 Jelebu Negeri Sembilan 2023-01,65.3,50.0,tol 7.193
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.02 Pertang P.126 Jelebu Negeri Sembilan 2023-01,66.5,50.0,tol 1.213
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.03 Sungai Lui P.126 Jelebu Negeri Sembilan 2023-01,72.0,50.0,tol 1.117
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.04 Klawang P.126 Jelebu Negeri Sembilan 2023-01,65.9,50.0,tol 0.708
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.05 Serting P.127 Jempol Negeri Sembilan 2023-01,63.3,50.0,tol 0.444
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.06 Palong P.127 Jempol Negeri Sembilan 2023-01,67.8,50.0,tol 0.560
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.07 Jeram Padang P.127 Jempol Negeri Sembilan 2023-01,66.0,50.0,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.08 Bahau P.127 Jempol Negeri Sembilan 2023-01,61.5,50.0,tol 0.426
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.09 Lenggeng P.128 Seremban Negeri Sembilan 2023-01,66.0,50.0,tol 3.278
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.10 Nilai P.128 Seremban Negeri Sembilan 2023-01,66.6,50.0,tol 0.136
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.11 Lobak P.128 Seremban Negeri Sembilan 2023-01,67.5,50.0,tol 0.453
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.12 Temiang P.128 Seremban Negeri Sembilan 2023-01,62.8,50.0,tol 0.699
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.13 Sikamat P.128 Seremban Negeri Sembilan 2023-01,63.0,50.0,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.14 Ampangan P.128 Seremban Negeri Sembilan 2023-01,70.8,50.0,tol 0.438
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.15 Juasseh P.129 Kuala Pilah Negeri Sembilan 2023-01,66.2,50.0,tol 0.593
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.16 Seri Menanti P.129 Kuala Pilah Negeri Sembilan 2023-01,64.0,50.0,tol 1.782
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.17 Senaling P.129 Kuala Pilah Negeri Sembilan 2023-01,63.1,50.0,tol 1.479
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.18 Pilah P.129 Kuala Pilah Negeri Sembilan 2023-01,64.4,50.0,tol 0.555
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.19 Johol P.129 Kuala Pilah Negeri Sembilan 2023-01,65.9,50.0,tol 0.912
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.20 Labu P.130 Rasah Negeri Sembilan 2023-01,68.2,50.0,tol 0.224
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.21 Bukit Kepayang P.130 Rasah Negeri Sembilan 2023-01,63.3,50.0,tol 0.180
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.22 Rahang P.130 Rasah Negeri Sembilan 2023-01,61.7,50.0,tol 0.897
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.23 Mambau P.130 Rasah Negeri Sembilan 2023-01,69.1,50.0,tol 0.268
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.24 Seremban Jaya P.130 Rasah Negeri Sembilan 2023-01,66.5,50.0,tol 0.252
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.25 Paroi P.131 Rembau Negeri Sembilan 2023-01,66.4,50.0,tol 0.145
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.26 Chembong P.131 Rembau Negeri Sembilan 2023-01,63.0,50.0,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.27 Rantau P.131 Rembau Negeri Sembilan 2023-01,63.1,50.0,tol 0.265
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.28 Kota P.131 Rembau Negeri Sembilan 2023-01,68.5,50.0,tol 0.831
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.29 Chuah P.132 Port Dickson Negeri Sembilan 2023-01,66.0,50.0,tol 1.235
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.30 Lukut P.132 Port Dickson Negeri Sembilan 2023-01,62.3,50.0,tol 0.357
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.31 Bagan Pinang P.132 Port Dickson Negeri Sembilan 2023-01,72.9,50.0,tol 0.315
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.32 Linggi P.132 Port Dickson Negeri Sembilan 2023-01,71.4,50.0,tol 0.531
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.33 Sri Tanjung P.132 Port Dickson Negeri Sembilan 2023-01,65.3,50.0,tol 0.631
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.34 Gemas P.133 Tampin Negeri Sembilan 2023-01,70.9,50.0,tol 0.412
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.35 Gemencheh P.133 Tampin Negeri Sembilan 2023-01,66.8,50.0,tol 0.481
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.36 Repah P.133 Tampin Negeri Sembilan 2023-01,69.0,50.0,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.01 Kuala Linggi P.134 Masjid Tanah Melaka 2023-01,72.1,50.0,tol 0.535
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.02 Tanjung Bidara P.134 Masjid Tanah Melaka 2023-01,74.9,50.0,tol 0.426
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.03 Ayer Limau P.134 Masjid Tanah Melaka 2023-01,74.1,50.0,tol 0.631
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.04 Lendu P.134 Masjid Tanah Melaka 2023-01,74.5,50.0,tol 0.522
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.05 Taboh Naning P.134 Masjid Tanah Melaka 2023-01,71.0,50.0,tol 1.043
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.06 Rembia P.135 Alor Gajah Melaka 2023-01,73.3,50.0,tol 0.231
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.07 Gadek P.135 Alor Gajah Melaka 2023-01,69.4,50.0,tol 0.379
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.08 Machap Jaya P.135 Alor Gajah Melaka 2023-01,68.9,50.0,tol 0.418
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.09 Durian Tunggal P.135 Alor Gajah Melaka 2023-01,70.4,50.0,tol 0.219
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.10 Asahan P.135 Alor Gajah Melaka 2023-01,75.3,50.0,tol 0.582
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.11 Sungai Udang P.136 Tangga Batu Melaka 2023-01,65.1,50.0,tol 0.295
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.12 Pantai Kundor P.136 Tangga Batu Melaka 2023-01,67.2,50.0,tol 0.444
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.13 Paya Rumput P.136 Tangga Batu Melaka 2023-01,70.6,50.0,tol 1.137
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.14 Kelebang P.136 Tangga Batu Melaka 2023-01,65.6,50.0,tol 0.325
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.15 Pengkalan Batu P.137 Hang Tuah Jaya Melaka 2023-01,73.1,50.0,tol 0.339
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.16 Ayer Keroh P.137 Hang Tuah Jaya Melaka 2023-01,69.3,50.0,tol 0.197
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.17 Bukit Katil P.137 Hang Tuah Jaya Melaka 2023-01,68.1,50.0,tol 0.331
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.18 Ayer Molek P.137 Hang Tuah Jaya Melaka 2023-01,71.8,50.0,tol 3.896
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.19 Kesidang P.138 Kota Melaka Melaka 2023-01,74.2,50.0,tol 0.157
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.20 Kota Laksamana P.138 Kota Melaka Melaka 2023-01,68.9,50.0,tol 0.319
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.21 Duyong P.138 Kota Melaka Melaka 2023-01,71.7,50.0,tol 0.320
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.22 Bandar Hilir P.138 Kota Melaka Melaka 2023-01,70.0,50.0,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.23 Telok Mas P.138 Kota Melaka Melaka 2023-01,70.5,50.0,tol 0.292
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.24 Bemban P.139 Jasin Melaka 2023-01,66.5,50.0,tol 0.326
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.25 Rim P.139 Jasin Melaka 2023-01,69.1,50.0,tol 0.496
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.26 Serkam P.139 Jasin Melaka 2023-01,64.7,50.0,tol 0.450
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.27 Merlimau P.139 Jasin Melaka 2023-01,66.4,50.0,tol 0.418
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.28 Sungai Rambai P.139 Jasin Melaka 2023-01,64.1,50.0,tol 0.489
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.01 Buloh Kasap P.140 Segamat Johor 2023-01,67.7,65.854,tol 0.521
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.03 Pemanis P.141 Sekijang Johor 2023-01,72.5,71.689,tol 0.606
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.04 Kemelah P.141 Sekijang Johor 2023-01,71.0,68.732,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.05 Tenang P.142 Labis Johor 2023-01,71.9,70.548,tol 0.876
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.06 Bekok P.142 Labis Johor 2023-01,70.6,68.387,tol 0.814
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.07 Bukit Kepong P.143 Pagoh Johor 2023-01,68.7,67.886,tol 0.529
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.08 Bukit Pasir P.143 Pagoh Johor 2023-01,65.4,65.042,tol 0.294
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.10 Tangkak P.144 Ledang Johor 2023-01,65.6,64.303,tol 0.329
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.11 Serom P.144 Ledang Johor 2023-01,63.2,60.825,tol 0.336
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.12 Bentayan P.145 Bakri Johor 2023-01,70.1,69.141,tol 0.515
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.13 Simpang Jeram P.145 Bakri Johor 2023-01,68.4,67.932,tol 0.299
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.14 Bukit Naning P.145 Bakri Johor 2023-01,65.2,64.231,tol 0.489
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.15 Maharani P.146 Muar Johor 2023-01,68.3,67.381,tol 0.329
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.16 Sungai Balang P.146 Muar Johor 2023-01,67.6,67.003,tol 0.444
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.19 Yong Peng P.148 Ayer Hitam Johor 2023-01,69.2,68.182,tol 0.434
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.20 Semarang P.148 Ayer Hitam Johor 2023-01,72.2,71.564,tol 0.626
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.22 Parit Raja P.149 Sri Gading Johor 2023-01,68.7,68.164,tol 0.202
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.23 Penggaram P.150 Batu Pahat Johor 2023-01,72.5,71.884,tol 0.235
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.24 Senggarang P.150 Batu Pahat Johor 2023-01,69.6,69.164,tol 0.393
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.26 Machap P.151 Simpang Renggam Johor 2023-01,74.0,71.795,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.27 Layang-Layang P.151 Simpang Renggam Johor 2023-01,70.4,69.194,tol 0.615
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.28 Mengkibol P.152 Kluang Johor 2023-01,71.8,69.786,tol 0.210
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.29 Mahkota P.152 Kluang Johor 2023-01,73.1,71.28,tol 0.260
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.30 Paloh P.153 Sembrong Johor 2023-01,76.1,74.0,tol 0.546
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.31 Kahang P.153 Sembrong Johor 2023-01,66.5,65.0,tol 0.573
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.32 Endau P.154 Mersing Johor 2023-01,59.6,58.369,tol 0.515
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.33 Tenggaroh P.154 Mersing Johor 2023-01,60.3,59.568,tol 0.388
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.35 Pasir Raja P.155 Tenggara Johor 2023-01,70.7,69.388,tol 0.456
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.36 Sedili P.156 Kota Tinggi Johor 2023-01,67.1,66.31,tol 0.672
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.37 Johor Lama P.156 Kota Tinggi Johor 2023-01,72.0,70.874,tol 1.087
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.38 Penawar P.157 Pengerang Johor 2023-01,68.8,67.26,tol 0.467
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.39 Tanjung Surat P.157 Pengerang Johor 2023-01,74.7,73.303,tol 0.608
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.40 Tiram P.158 Tebrau Johor 2023-01,73.6,72.482,tol 0.131
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.41 Puteri Wangsa P.158 Tebrau Johor 2023-01,75.8,74.289,tol 0.111
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.42 Johor Jaya P.159 Pasir Gudang Johor 2023-01,74.4,72.099,tol 0.154
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.43 Permas P.159 Pasir Gudang Johor 2023-01,72.1,70.418,tol 0.127
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.44 Larkin P.160 Johor Bahru Johor 2023-01,75.6,73.727,tol 0.216
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.45 Stulang P.160 Johor Bahru Johor 2023-01,75.2,74.533,tol 0.261
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.46 Perling P.161 Pulai Johor 2023-01,72.9,71.845,tol 0.139
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.47 Kempas P.161 Pulai Johor 2023-01,75.8,73.725,tol 0.212
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.48 Skudai P.162 Iskandar Puteri Johor 2023-01,73.0,70.876,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.49 Kota Iskandar P.162 Iskandar Puteri Johor 2023-01,75.4,74.174,tol 0.105
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.50 Bukit Permai P.163 Kulai Johor 2023-01,63.3,61.921,tol 0.242
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.51 Bukit Batu P.163 Kulai Johor 2023-01,66.5,65.327,tol 0.243
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.52 Senai P.163 Kulai Johor 2023-01,68.0,66.852,tol 1.000
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.53 Benut P.164 Pontian Johor 2023-01,67.7,66.176,tol 0.619
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.54 Pulai Sebatang P.164 Pontian Johor 2023-01,65.8,64.481,tol 0.363
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.55 Pekan Nanas P.165 Tanjung Piai Johor 2023-01,68.6,67.016,tol 0.356
+lfs_dun,p_rate == 100*lf/lf+lf_outside,N.56 Kukup P.165 Tanjung Piai Johor 2023-01,63.8,62.898,tol 0.449
+hies_malaysia_percentile,mean(100 percentile means) == hh_income.income_mean,2022-01-01,8479.0,8359.7,-1.41%
+hies_state_percentile,mean(100 percentile means) == hh_income_state.income_mean,Perlis/2024-01-01,5996.0,6009.8,+0.23%
+hies_state_percentile,mean(100 percentile means) == hh_income_state.income_mean,W.P. Kuala Lumpur/2024-01-01,13985.0,14016.9,+0.23%
+hies_state_percentile,mean(100 percentile means) == hh_income_state.income_mean,W.P. Labuan/2019-01-01,8319.0,8348.6,+0.36%
+hies_state_percentile,mean(100 percentile means) == hh_income_state.income_mean,W.P. Labuan/2024-01-01,8555.0,8631.1,+0.89%
+hies_state_percentile,mean(100 percentile means) == hh_income_state.income_mean,W.P. Putrajaya/2019-01-01,12840.0,12903.0,+0.49%
+hies_state_percentile,mean(100 percentile means) == hh_income_state.income_mean,W.P. Putrajaya/2022-01-01,13473.0,13516.5,+0.32%
+hies_state_percentile,mean(100 percentile means) == hh_income_state.income_mean,W.P. Putrajaya/2024-01-01,13846.0,13890.8,+0.32%

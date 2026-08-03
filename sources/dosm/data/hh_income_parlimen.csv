@@ -1,0 +1,667 @@
+date,state,parlimen,income_median,income_mean,retrieved_from,retrieved_date
+2019-01-01,Perlis,P.001 Padang Besar,4075,4747,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perlis,P.001 Padang Besar,4389,4984,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perlis,P.001 Padang Besar,4818,5792,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perlis,P.002 Kangar,4889,5899,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perlis,P.002 Kangar,4998,6167,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perlis,P.002 Kangar,5093,6216,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perlis,P.003 Arau,4594,5411,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perlis,P.003 Arau,4802,5723,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perlis,P.003 Arau,4910,5900,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.004 Langkawi,5905,6737,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.004 Langkawi,5250,6087,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.004 Langkawi,5083,6278,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.005 Jerlun,4106,4919,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.005 Jerlun,4463,5072,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.005 Jerlun,4721,5534,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.006 Kubang Pasu,5060,6673,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.006 Kubang Pasu,5408,6644,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.006 Kubang Pasu,5429,6656,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.007 Padang Terap,3722,4781,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.007 Padang Terap,3902,4858,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.007 Padang Terap,3954,5062,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.008 Pokok Sena,4443,5522,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.008 Pokok Sena,4752,6073,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.008 Pokok Sena,5271,6258,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.009 Alor Setar,4543,5540,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.009 Alor Setar,4702,5763,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.009 Alor Setar,4681,5588,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.010 Kuala Kedah,4405,5912,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.010 Kuala Kedah,4730,5878,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.010 Kuala Kedah,5311,6074,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.011 Pendang,3765,4680,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.011 Pendang,3801,4986,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.011 Pendang,4592,5464,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.012 Jerai,3313,4404,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.012 Jerai,3605,4365,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.012 Jerai,4802,5474,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.013 Sik,4096,4960,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.013 Sik,3703,5053,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.013 Sik,4438,5107,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.014 Merbok,4350,5967,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.014 Merbok,4483,6576,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.014 Merbok,4843,5996,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.015 Sungai Petani,4373,5745,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.015 Sungai Petani,4268,5260,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.015 Sungai Petani,4995,5544,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.016 Baling,3583,4313,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.016 Baling,3400,4263,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.016 Baling,3367,4345,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.017 Padang Serai,4419,5293,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.017 Padang Serai,4789,5894,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.017 Padang Serai,5414,6638,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kedah,P.018 Kulim-Bandar Baharu,4558,5671,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kedah,P.018 Kulim-Bandar Baharu,3983,4867,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kedah,P.018 Kulim-Bandar Baharu,4465,5372,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.019 Tumpat,3500,4838,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.019 Tumpat,3749,4741,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.019 Tumpat,3904,4991,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.020 Pengkalan Chepa,4182,5353,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.020 Pengkalan Chepa,4416,5672,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.020 Pengkalan Chepa,4868,6260,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.021 Kota Bharu,4122,5201,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.021 Kota Bharu,4287,5323,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.021 Kota Bharu,4858,6363,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.022 Pasir Mas,3951,5617,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.022 Pasir Mas,3525,4644,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.022 Pasir Mas,4016,5445,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.023 Rantau Panjang,3001,3864,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.023 Rantau Panjang,4567,4567,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.023 Rantau Panjang,3476,4537,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.024 Kubang Kerian,4415,6219,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.024 Kubang Kerian,4813,6620,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.024 Kubang Kerian,4750,6231,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.025 Bachok,3621,4728,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.025 Bachok,3625,4811,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.025 Bachok,4187,5149,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.026 Ketereh,4028,5618,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.026 Ketereh,3913,5239,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.026 Ketereh,4516,5776,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.027 Tanah Merah,3311,4487,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.027 Tanah Merah,3036,4246,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.027 Tanah Merah,3665,4959,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.028 Pasir Puteh,3458,4688,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.028 Pasir Puteh,3453,4712,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.028 Pasir Puteh,4853,5070,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.029 Machang,3708,4841,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.029 Machang,3429,4987,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.029 Machang,4156,5237,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.030 Jeli,2786,3750,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.030 Jeli,2896,3815,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.030 Jeli,3157,4092,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.031 Kuala Krai,2896,3979,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.031 Kuala Krai,2763,3798,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.031 Kuala Krai,2994,3872,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Kelantan,P.032 Gua Musang,2946,3918,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Kelantan,P.032 Gua Musang,3306,4344,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Kelantan,P.032 Gua Musang,3774,4570,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.033 Besut,4609,6033,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.033 Besut,4761,6351,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.033 Besut,5422,6744,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.034 Setiu,4313,5591,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.034 Setiu,5834,6819,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.034 Setiu,6137,7002,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.035 Kuala Nerus,6725,7716,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.035 Kuala Nerus,6194,7477,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.035 Kuala Nerus,6933,7593,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.036 Kuala Terengganu,5681,6689,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.036 Kuala Terengganu,5925,7352,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.036 Kuala Terengganu,6764,7683,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.037 Marang,5227,6299,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.037 Marang,5458,6478,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.037 Marang,6338,6951,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.038 Hulu Terengganu,4515,5577,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.038 Hulu Terengganu,5315,6110,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.038 Hulu Terengganu,6133,6401,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.039 Dungun,6037,7553,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.039 Dungun,6394,7922,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.039 Dungun,7156,8055,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Terengganu,P.040 Kemaman,6592,7854,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Terengganu,P.040 Kemaman,6425,8381,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Terengganu,P.040 Kemaman,7709,8973,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.041 Kepala Batas,5644,6739,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.041 Kepala Batas,5572,6588,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.041 Kepala Batas,6537,7648,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.042 Tasek Gelugor,5566,6429,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.042 Tasek Gelugor,6451,7748,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.042 Tasek Gelugor,6153,7634,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.043 Bagan,5647,7579,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.043 Bagan,6374,7735,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.043 Bagan,7231,9100,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.044 Permatang Pauh,5183,6435,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.044 Permatang Pauh,5776,7353,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.044 Permatang Pauh,6415,7614,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.045 Bukit Mertajam,6171,7901,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.045 Bukit Mertajam,6431,8083,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.045 Bukit Mertajam,7337,8818,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.046 Batu Kawan,6069,7644,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.046 Batu Kawan,6728,8806,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.046 Batu Kawan,7038,9123,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.047 Nibong Tebal,5526,6591,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.047 Nibong Tebal,5834,7046,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.047 Nibong Tebal,6470,7565,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.048 Bukit Bendera,7322,9862,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.048 Bukit Bendera,8000,11238,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.048 Bukit Bendera,8661,13033,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.049 Tanjong,6135,7807,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.049 Tanjong,4906,5581,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.049 Tanjong,5650,7694,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.050 Jelutong,7174,7555,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.050 Jelutong,6315,7358,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.050 Jelutong,7308,8344,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.051 Bukit Gelugor,6220,8013,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.051 Bukit Gelugor,6517,8323,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.051 Bukit Gelugor,7498,9378,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.052 Bayan Baru,6981,9040,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.052 Bayan Baru,7814,9996,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.052 Bayan Baru,8727,10080,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pulau Pinang,P.053 Balik Pulau,6485,7975,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pulau Pinang,P.053 Balik Pulau,6817,8507,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pulau Pinang,P.053 Balik Pulau,8892,10126,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.054 Gerik,4110,5138,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.054 Gerik,4005,6028,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.054 Gerik,4004,5044,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.055 Lenggong,3004,3885,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.055 Lenggong,3087,3828,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.055 Lenggong,3436,4899,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.056 Larut,4115,5173,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.056 Larut,3810,4696,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.056 Larut,3762,4621,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.057 Parit Buntar,4501,5610,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.057 Parit Buntar,4022,5228,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.057 Parit Buntar,4712,5940,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.058 Bagan Serai,4543,5507,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.058 Bagan Serai,3939,5305,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.058 Bagan Serai,4502,5338,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.059 Bukit Gantang,3798,4607,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.059 Bukit Gantang,3819,5061,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.059 Bukit Gantang,4459,5663,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.060 Taiping,4751,5916,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.060 Taiping,4378,5759,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.060 Taiping,5225,6695,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.061 Padang Rengas,4314,6975,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.061 Padang Rengas,4151,5444,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.061 Padang Rengas,3456,6181,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.062 Sungai Siput,3376,4399,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.062 Sungai Siput,3510,4899,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.062 Sungai Siput,3981,5169,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.063 Tambun,4964,6170,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.063 Tambun,5635,7011,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.063 Tambun,5546,7715,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.064 Ipoh Timor,4418,6177,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.064 Ipoh Timor,5047,6689,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.064 Ipoh Timor,4609,6802,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.065 Ipoh Barat,4597,7860,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.065 Ipoh Barat,4413,5760,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.065 Ipoh Barat,4715,5587,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.066 Batu Gajah,3870,4671,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.066 Batu Gajah,4369,5017,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.066 Batu Gajah,4504,6106,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.067 Kuala Kangsar,3901,4819,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.067 Kuala Kangsar,4072,5309,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.067 Kuala Kangsar,4180,5436,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.068 Beruas,3973,5592,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.068 Beruas,4552,5631,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.068 Beruas,5006,5925,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.069 Parit,4629,6129,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.069 Parit,5327,6517,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.069 Parit,4828,6245,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.070 Kampar,3653,4777,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.070 Kampar,3954,4780,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.070 Kampar,4110,5151,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.071 Gopeng,4542,5851,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.071 Gopeng,5300,6519,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.071 Gopeng,5506,6942,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.072 Tapah,3885,5468,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.072 Tapah,4057,5189,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.072 Tapah,4328,5316,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.073 Pasir Salak,3186,3780,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.073 Pasir Salak,4124,4767,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.073 Pasir Salak,4203,5126,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.074 Lumut,5643,6728,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.074 Lumut,5856,7071,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.074 Lumut,5786,7397,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.075 Bagan Datuk,4448,5660,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.075 Bagan Datuk,4105,5185,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.075 Bagan Datuk,4134,5347,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.076 Teluk Intan,3641,5059,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.076 Teluk Intan,4158,5331,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.076 Teluk Intan,4541,6069,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Perak,P.077 Tanjong Malim,4056,5686,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Perak,P.077 Tanjong Malim,4476,5759,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Perak,P.077 Tanjong Malim,4664,6037,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.078 Cameron Highlands,5280,6329,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.078 Cameron Highlands,4421,5331,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.078 Cameron Highlands,4940,6161,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.079 Lipis,3628,4467,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.079 Lipis,4204,5334,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.079 Lipis,4703,5418,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.080 Raub,3811,4992,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.080 Raub,4375,5445,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.080 Raub,4427,5940,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.081 Jerantut,3708,4436,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.081 Jerantut,3928,4592,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.081 Jerantut,4231,5200,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.082 Indera Mahkota,6051,7693,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.082 Indera Mahkota,6173,7456,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.082 Indera Mahkota,5824,7835,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.083 Kuantan,5771,6882,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.083 Kuantan,5923,6751,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.083 Kuantan,5082,6216,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.084 Paya Besar,4896,6077,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.084 Paya Besar,5452,6356,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.084 Paya Besar,5578,6815,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.085 Pekan,4389,5377,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.085 Pekan,4441,5226,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.085 Pekan,4824,5395,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.086 Maran,3582,4390,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.086 Maran,4108,4760,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.086 Maran,4109,4790,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.087 Kuala Krau,3832,4899,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.087 Kuala Krau,4610,5301,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.087 Kuala Krau,4640,5180,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.088 Temerloh,4263,5318,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.088 Temerloh,4232,5189,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.088 Temerloh,4659,5679,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.089 Bentong,4224,5288,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.089 Bentong,4691,5563,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.089 Bentong,5015,6278,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.090 Bera,3669,4588,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.090 Bera,3866,4567,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.090 Bera,4269,4997,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Pahang,P.091 Rompin,3579,4641,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Pahang,P.091 Rompin,4148,5103,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Pahang,P.091 Rompin,4760,5429,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.092 Sabak Bernam,3372,4452,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.092 Sabak Bernam,5319,6820,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.092 Sabak Bernam,6767,7161,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.093 Sungai Besar,5127,7069,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.093 Sungai Besar,5550,7012,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.093 Sungai Besar,7625,8768,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.094 Hulu Selangor,6249,7598,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.094 Hulu Selangor,7717,8833,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.094 Hulu Selangor,8506,9550,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.095 Tanjong Karang,4475,5812,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.095 Tanjong Karang,5962,7212,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.095 Tanjong Karang,6142,7346,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.096 Kuala Selangor,5808,7239,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.096 Kuala Selangor,7667,9508,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.096 Kuala Selangor,7765,10396,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.097 Selayang,7786,9557,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.097 Selayang,8626,11147,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.097 Selayang,9930,10998,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.098 Gombak,8416,11565,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.098 Gombak,10756,13406,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.098 Gombak,10570,13642,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.099 Ampang,9243,13591,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.099 Ampang,10443,14538,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.099 Ampang,11221,16404,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.100 Pandan,8282,9495,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.100 Pandan,11028,12601,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.100 Pandan,10846,11917,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.101 Hulu Langat,9044,10317,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.101 Hulu Langat,11709,12589,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.101 Hulu Langat,11411,13951,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.102 Bangi,8335,10265,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.102 Bangi,11474,14670,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.102 Bangi,12653,14778,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.103 Puchong,7545,10187,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.103 Puchong,9344,11590,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.103 Puchong,8879,11491,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.104 Subang,9944,12747,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.104 Subang,9543,12180,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.104 Subang,12180,15156,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.105 Petaling Jaya,8942,12464,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.105 Petaling Jaya,8868,11371,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.105 Petaling Jaya,10993,17381,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.106 Damansara,9485,12414,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.106 Damansara,10218,12925,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.106 Damansara,10608,13448,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.107 Sungai Buloh,7208,11489,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.107 Sungai Buloh,9079,11868,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.107 Sungai Buloh,10998,15958,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.108 Shah Alam,10453,13567,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.108 Shah Alam,10520,15632,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.108 Shah Alam,10831,14343,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.109 Kapar,6536,7953,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.109 Kapar,7710,10140,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.109 Kapar,8819,10427,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.110 Klang,8251,10369,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.110 Klang,8407,10264,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.110 Klang,8655,10945,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.111 Kota Raja,8584,11015,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.111 Kota Raja,8647,11202,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.111 Kota Raja,8948,11490,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.112 Kuala Langat,7096,8717,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.112 Kuala Langat,10181,11211,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.112 Kuala Langat,10635,11884,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Selangor,P.113 Sepang,8398,11724,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Selangor,P.113 Sepang,12445,13187,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Selangor,P.113 Sepang,11112,15082,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.114 Kepong,11274,13087,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.114 Kepong,10412,12085,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.114 Kepong,10570,14723,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.115 Batu,9426,11019,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.115 Batu,8618,10136,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.115 Batu,9929,11445,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.116 Wangsa Maju,9716,11153,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.116 Wangsa Maju,9593,11304,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.116 Wangsa Maju,9974,12276,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.117 Segambut,15342,20521,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.117 Segambut,13891,22319,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.117 Segambut,15867,22001,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.118 Setiawangsa,9651,12281,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.118 Setiawangsa,9202,11507,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.118 Setiawangsa,11180,18478,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.119 Titiwangsa,9827,11921,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.119 Titiwangsa,10418,13506,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.119 Titiwangsa,10669,12572,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.120 Bukit Bintang,11060,13677,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.120 Bukit Bintang,11481,14634,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.120 Bukit Bintang,10966,15318,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.121 Lembah Pantai,9801,13081,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.121 Lembah Pantai,9680,12982,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.121 Lembah Pantai,10331,12817,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.122 Seputeh,11113,13489,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.122 Seputeh,11355,13460,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.122 Seputeh,10932,12001,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.123 Cheras,10264,12031,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.123 Cheras,9563,11220,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.123 Cheras,10228,12119,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Kuala Lumpur,P.124 Bandar Tun Razak,9432,11266,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Kuala Lumpur,P.124 Bandar Tun Razak,8769,11142,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Kuala Lumpur,P.124 Bandar Tun Razak,9360,10565,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Putrajaya,P.125 Putrajaya,9983,12840,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Putrajaya,P.125 Putrajaya,10056,13473,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Putrajaya,P.125 Putrajaya,10769,13846,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.126 Jelebu,4031,5341,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.126 Jelebu,3692,4633,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.126 Jelebu,3736,4676,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.127 Jempol,3551,4907,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.127 Jempol,3832,4817,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.127 Jempol,4484,5961,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.128 Seremban,5533,7601,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.128 Seremban,6112,7641,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.128 Seremban,5934,7497,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.129 Kuala Pilah,3587,5040,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.129 Kuala Pilah,3471,4509,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.129 Kuala Pilah,3996,4888,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.130 Rasah,5759,8173,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.130 Rasah,6450,8436,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.130 Rasah,7335,9535,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.131 Rembau,5085,6297,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.131 Rembau,6220,7189,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.131 Rembau,5960,7399,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.132 Port Dickson,4959,6393,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.132 Port Dickson,4805,6054,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.132 Port Dickson,5342,6280,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Negeri Sembilan,P.133 Tampin,4325,5762,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Negeri Sembilan,P.133 Tampin,4012,5097,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Negeri Sembilan,P.133 Tampin,4367,5715,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Melaka,P.134 Masjid Tanah,5060,6770,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Melaka,P.134 Masjid Tanah,5375,7175,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Melaka,P.134 Masjid Tanah,6391,7466,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Melaka,P.135 Alor Gajah,5989,7188,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Melaka,P.135 Alor Gajah,5850,7098,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Melaka,P.135 Alor Gajah,6281,8042,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Melaka,P.136 Tangga Batu,6101,7855,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Melaka,P.136 Tangga Batu,6385,7898,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Melaka,P.136 Tangga Batu,7316,9141,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Melaka,P.137 Hang Tuah Jaya,6520,8837,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Melaka,P.137 Hang Tuah Jaya,6990,8781,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Melaka,P.137 Hang Tuah Jaya,8240,9919,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Melaka,P.138 Kota Melaka,6100,7703,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Melaka,P.138 Kota Melaka,6217,8945,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Melaka,P.138 Kota Melaka,6736,8738,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Melaka,P.139 Jasin,5682,7428,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Melaka,P.139 Jasin,6059,7364,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Melaka,P.139 Jasin,6401,7814,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.140 Segamat,5645,6587,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.140 Segamat,4943,6779,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.140 Segamat,6631,7874,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.141 Sekijang,5440,6390,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.141 Sekijang,5542,6726,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.141 Sekijang,6172,6836,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.142 Labis,5636,6259,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.142 Labis,4908,5912,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.142 Labis,6068,7124,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.143 Pagoh,4785,5774,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.143 Pagoh,4913,6045,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.143 Pagoh,6384,6820,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.144 Ledang,5710,6757,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.144 Ledang,5650,7130,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.144 Ledang,6355,7546,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.145 Bakri,6164,8007,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.145 Bakri,6754,9305,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.145 Bakri,7094,8451,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.146 Muar,6361,7638,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.146 Muar,5616,6687,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.146 Muar,8895,9576,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.147 Parit Sulong,5738,6961,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.147 Parit Sulong,5735,6844,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.147 Parit Sulong,7920,9004,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.148 Ayer Hitam,6094,6453,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.148 Ayer Hitam,6485,7232,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.148 Ayer Hitam,6902,7869,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.149 Sri Gading,7088,8227,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.149 Sri Gading,6100,6877,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.149 Sri Gading,8083,9582,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.150 Batu Pahat,6450,7265,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.150 Batu Pahat,6867,8094,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.150 Batu Pahat,7217,8917,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.151 Simpang Renggam,4213,5237,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.151 Simpang Renggam,4760,5517,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.151 Simpang Renggam,6141,6951,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.152 Kluang,5257,6286,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.152 Kluang,5662,6977,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.152 Kluang,6384,6783,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.153 Sembrong,4541,5279,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.153 Sembrong,5049,5936,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.153 Sembrong,5388,5682,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.154 Mersing,3896,4937,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.154 Mersing,4445,5426,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.154 Mersing,5335,6014,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.155 Tenggara,5553,7411,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.155 Tenggara,6766,8460,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.155 Tenggara,6426,7656,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.156 Kota Tinggi,4480,5895,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.156 Kota Tinggi,6030,6664,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.156 Kota Tinggi,5222,6175,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.157 Pengerang,5609,7126,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.157 Pengerang,6006,7025,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.157 Pengerang,6903,10480,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.158 Tebrau,7142,8706,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.158 Tebrau,8206,10140,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.158 Tebrau,9118,10450,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.159 Pasir Gudang,6783,8652,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.159 Pasir Gudang,7763,9609,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.159 Pasir Gudang,8263,10995,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.160 Johor Bahru,6625,9993,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.160 Johor Bahru,7216,8843,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.160 Johor Bahru,8544,10158,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.161 Pulai,8286,9559,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.161 Pulai,8912,10773,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.161 Pulai,10140,12330,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.162 Iskandar Puteri,7815,10110,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.162 Iskandar Puteri,8455,9620,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.162 Iskandar Puteri,9239,11007,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.163 Kulai,6834,8185,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.163 Kulai,7399,9218,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.163 Kulai,8145,10090,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.164 Pontian,5692,6636,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.164 Pontian,5220,6360,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.164 Pontian,5358,6342,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Johor,P.165 Tanjung Piai,5118,6904,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Johor,P.165 Tanjung Piai,6197,7574,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Johor,P.165 Tanjung Piai,6609,7656,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,W.P. Labuan,P.166 Labuan,6726,8319,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,W.P. Labuan,P.166 Labuan,6904,8250,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,W.P. Labuan,P.166 Labuan,7383,8555,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.167 Kudat,2346,3797,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.167 Kudat,2764,4066,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.167 Kudat,3100,4387,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.168 Kota Marudu,2424,3739,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.168 Kota Marudu,2623,3779,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.168 Kota Marudu,2851,4663,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.169 Kota Belud,3025,4377,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.169 Kota Belud,3429,4949,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.169 Kota Belud,3512,5007,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.170 Tuaran,3747,5089,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.170 Tuaran,3865,5131,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.170 Tuaran,4149,5355,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.171 Sepanggar,5447,7076,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.171 Sepanggar,5377,6872,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.171 Sepanggar,5569,7384,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.172 Kota Kinabalu,7220,8846,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.172 Kota Kinabalu,8304,11800,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.172 Kota Kinabalu,9009,12472,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.173 Putatan,5008,6819,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.173 Putatan,5417,8465,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.173 Putatan,5916,7415,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.174 Penampang,5535,6643,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.174 Penampang,6275,7615,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.174 Penampang,6093,7714,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.175 Papar,4665,5843,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.175 Papar,5129,6246,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.175 Papar,5028,5916,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.176 Kimanis,4050,5359,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.176 Kimanis,3545,4433,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.176 Kimanis,3268,5117,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.177 Beaufort,3260,4444,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.177 Beaufort,3718,4519,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.177 Beaufort,4070,5338,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.178 Sipitang,3944,5148,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.178 Sipitang,4278,5474,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.178 Sipitang,4202,4980,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.179 Ranau,3519,4669,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.179 Ranau,4058,5270,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.179 Ranau,3470,5330,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.180 Keningau,4150,5550,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.180 Keningau,4445,5947,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.180 Keningau,4888,5982,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.181 Tenom,3525,4734,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.181 Tenom,4136,5278,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.181 Tenom,4161,5410,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.182 Pensiangan,3636,4359,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.182 Pensiangan,4164,5263,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.182 Pensiangan,4377,5508,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.183 Beluran,2848,4169,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.183 Beluran,3372,4603,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.183 Beluran,4489,4959,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.184 Libaran,4704,5616,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.184 Libaran,4654,5584,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.184 Libaran,5534,6715,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.185 Batu Sapi,5017,6426,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.185 Batu Sapi,4850,6322,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.185 Batu Sapi,5652,7102,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.186 Sandakan,5191,6963,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.186 Sandakan,5237,6742,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.186 Sandakan,5080,6577,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.187 Kinabatangan,2973,4310,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.187 Kinabatangan,3566,4924,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.187 Kinabatangan,4151,4855,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.188 Lahad Datu,4075,5644,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.188 Lahad Datu,4478,5969,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.188 Lahad Datu,5312,6565,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.189 Semporna,3542,5933,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.189 Semporna,4093,5098,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.189 Semporna,4059,5604,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.190 Tawau,4494,6202,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.190 Tawau,4892,6552,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.190 Tawau,5002,6894,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sabah,P.191 Kalabakan,4265,6222,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sabah,P.191 Kalabakan,4475,5873,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sabah,P.191 Kalabakan,4650,6306,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.192 Mas Gading,3843,4857,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.192 Mas Gading,4230,4998,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.192 Mas Gading,4000,5003,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.193 Santubong,4801,5784,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.193 Santubong,5439,6290,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.193 Santubong,5957,7051,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.194 Petra Jaya,6336,7665,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.194 Petra Jaya,6177,8108,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.194 Petra Jaya,7196,8759,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.195 Bandar Kuching,5473,7712,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.195 Bandar Kuching,5710,7935,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.195 Bandar Kuching,6212,8058,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.196 Stampin,6089,7765,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.196 Stampin,6289,7781,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.196 Stampin,6945,8231,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.197 Kota Samarahan,5281,6406,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.197 Kota Samarahan,5587,6715,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.197 Kota Samarahan,6614,7894,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.198 Puncak Borneo,3780,4920,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.198 Puncak Borneo,4243,5330,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.198 Puncak Borneo,4797,5889,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.199 Serian,3274,4558,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.199 Serian,3367,4402,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.199 Serian,3532,4562,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.200 Batang Sadong,2935,4089,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.200 Batang Sadong,3599,4204,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.200 Batang Sadong,3789,5020,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.201 Batang Lupar,2579,3316,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.201 Batang Lupar,3146,3618,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.201 Batang Lupar,3151,3860,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.202 Sri Aman,3383,4496,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.202 Sri Aman,3703,4839,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.202 Sri Aman,3350,4629,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.203 Lubok Antu,2820,3809,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.203 Lubok Antu,3310,3908,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.203 Lubok Antu,4169,4820,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.204 Betong,2764,3996,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.204 Betong,3720,4550,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.204 Betong,4070,4574,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.205 Saratok,3004,3829,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.205 Saratok,3643,4358,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.205 Saratok,3435,4571,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.206 Tanjong Manis,2991,3803,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.206 Tanjong Manis,3139,4192,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.206 Tanjong Manis,4030,4719,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.207 Igan,2980,3968,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.207 Igan,3372,4481,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.207 Igan,3873,4617,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.208 Sarikei,3499,4725,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.208 Sarikei,3617,5440,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.208 Sarikei,4240,5621,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.209 Julau,2625,3286,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.209 Julau,3018,3648,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.209 Julau,3513,4333,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.210 Kanowit,2670,3480,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.210 Kanowit,2648,3711,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.210 Kanowit,3511,4549,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.211 Lanang,4468,5658,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.211 Lanang,4902,6285,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.211 Lanang,5004,5851,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.212 Sibu,5099,6592,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.212 Sibu,5444,6870,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.212 Sibu,6376,7558,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.213 Mukah,3830,5210,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.213 Mukah,4552,5753,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.213 Mukah,5169,6063,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.214 Selangau,3445,4303,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.214 Selangau,4002,4864,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.214 Selangau,4283,5321,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.215 Kapit,2976,4028,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.215 Kapit,3056,4063,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.215 Kapit,3219,4246,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.216 Hulu Rajang,3574,4320,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.216 Hulu Rajang,3309,3924,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.216 Hulu Rajang,4078,4803,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.217 Bintulu,6368,7654,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.217 Bintulu,7456,8882,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.217 Bintulu,7468,9661,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.218 Sibuti,4704,5834,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.218 Sibuti,5247,6601,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.218 Sibuti,5590,6743,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.219 Miri,6176,7602,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.219 Miri,6431,7968,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.219 Miri,6947,8428,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.220 Baram,3267,4394,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.220 Baram,4234,5100,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.220 Baram,4384,5070,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.221 Limbang,4628,5989,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.221 Limbang,4023,5148,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.221 Limbang,4060,5202,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2019-01-01,Sarawak,P.222 Lawas,4006,5222,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2022-01-01,Sarawak,P.222 Lawas,3183,4476,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
+2024-01-01,Sarawak,P.222 Lawas,3929,5050,https://storage.dosm.gov.my/hies/hh_income_parlimen.csv,2026-08-03
