@@ -95,12 +95,89 @@ scope, cash-basis accounting, and the economy beyond the fiscal accounts.
   API pipeline; consolidated general-government series and state-ratio
   denominators. Machine-readable: do before further PDF sources.
 
+## Tier 0 — plan targets as data (the Agenda Ekonomi Negara layer)
+
+**The highest-value gap in the warehouse, and nothing public does it.** This warehouse's
+proven competence is *plan vs outcome* — tabled budget vs audited actual. Applied to the
+economy, that becomes **national targets vs realised outcomes**: the first systematic
+scorecard of whether Malaysian economic plans are actually met.
+
+Each source below is ingested as a **target register** (target, unit, baseline, target
+year, owning ministry, source page), then paired with the DOSM/BNM series that measures
+it, in `curated/`.
+
+- **Rancangan Malaysia Ke-12 / Ke-13** + Mid-Term Reviews — GDP growth, investment share,
+  income, employment, regional balance, poverty. The spine of the layer.
+- **Ekonomi MADANI** — the 7 targets / 6 goals framework, with dates.
+- **NIMP 2030** (New Industrial Master Plan) — mission-level and sector targets.
+- **NETR** (National Energy Transition Roadmap) — capacity, emissions, investment.
+- Sector blueprints — digital, semiconductor, logistics, agrofood, tourism.
+- **Belanjawan speech commitments** — announced measures, traceable to the vote that
+  funds them (joins straight to `sources/anggaran` detail grain).
+
+Pairing pattern: `target_value` ↔ the measured series ↔ the budget line funding it.
+A target with no funded vote, or a funded vote with no target, is itself the finding.
+
+## Tier 1b — the real economy (required for any economic-agenda analysis)
+
+Mostly machine-readable through the OpenDOSM API already wired in `sources/dosm`:
+
+- **National accounts detail** — GDP by sector and by expenditure, quarterly, real and
+  nominal; GNI; savings/investment balance.
+- **Household Income & Expenditure Survey (HIES/HES)** — income by decile, **Gini**,
+  poverty incidence, B40/M40/T20, by state and strata. Without this the agenda's core
+  outcomes are unobservable.
+- **Wages, productivity and labour** — salaries & wages survey, productivity by sector,
+  labour force detail, unemployment/underemployment, foreign-worker dependence.
+- **Industrial production, manufacturing sales, services indices** — the monthly pulse.
+- **Trade at full depth** — commodity × partner (HS/SITC beyond the 1-digit already held).
+- **Approved investments (MIDA)** — FDI/DDI by sector and state, approved vs realised
+  (a gap pairing in its own right).
+- **Business demography** — SSM registrations/closures, SME Corp census.
+
+## Tier 2b — state-directed capital outside the budget
+
+The economic analogue of the off-budget fiscal blind spot already closed:
+
+- **GLIC accounts** — Khazanah, EPF, KWAP, PNB, LTAT, Lembaga Tabung Haji. Collectively
+  they steward assets comparable to federal debt; none is in the fiscal accounts.
+- **PETRONAS** — annual report, dividends and royalties. Already 92–98% of all dividends
+  reaching the federal government (see `curated/GAP_VIEWS.md`): a single-point dependency.
+- **Capital markets** — Bursa/SC aggregates, Islamic finance, sukuk issuance.
+
+## Tier 3b — sector and delivery data
+
+Energy (Suruhanjaya Tenaga, TNB), commodities (MPOB, MRB, MTIB), property (NAPIC),
+transport & logistics, education/TVET outcomes, health outcomes, digital and broadband
+(MCMC), **district-level GDP** for intra-state regional gaps.
+
 ## Benchmarking / independent validation
 - **IMF** — Article IV, WEO, Government Finance Statistics for Malaysia (independent check on
   headline aggregates).
 - **World Bank** — Malaysia public finance reviews & open data.
 
-## Roadmap (agreed 2026-07-31)
+## Roadmap — Agenda Ekonomi Negara (agreed 2026-08-01)
+
+Goal: the most complete, fully-verifiable warehouse of the Malaysian economy, built to
+**find gaps** — between plan and outcome, budget and delivery, federal and state,
+reported and audited.
+
+Order of work:
+1. **DOSM real-economy set** (Tier 1b) — national accounts detail, HIES/income and Gini,
+   wages and productivity, IPI/services, trade depth. Machine-readable, extends the
+   existing `sources/dosm` pipeline. **In progress.**
+2. **Tier 0 plan-target registers** — RMK-12/13, Ekonomi MADANI, NIMP 2030, NETR — paired
+   against the Tier 1b series in `curated/`.
+3. **GLIC + PETRONAS accounts** (Tier 2b) — the largest unmeasured pool of state-directed
+   capital.
+4. PAC reports, MyProcurement, LHDN/JKDM (Tier 4), then sector data (Tier 3b).
+
+**Caution carried into every economy source:** the fiscal sources are audited and
+reconcilable to the ringgit; most real-economy data is survey-based, revised, and
+vintaged. Restatement and vintage handling is a first-class requirement, not an
+afterthought — the weekly DOSM vintage routine is the pattern to follow.
+
+## Earlier roadmap (2026-07-31)
 In flight: LKAN backfill 2009–2023 (federal + state volumes), AP + hasil book
 backfill 2010–2023, Laporan Ekonomi ~2009–2018 (the pre-2019 Fiscal Outlook
 equivalent) — each acquisition → manifest → era-specific extraction →
