@@ -5,6 +5,11 @@ A consolidated, fully-verifiable data warehouse of **Malaysia's public finances*
 behaviour**. Multiple official sources are ingested with complete provenance, then curated
 into a comparable layer so the same concept can be traced and cross-checked across sources.
 
+**Using the data?** Read **`docs/ANALYST_GUIDE.md`** first — the query traps
+(basis blending, leaf rows, canonical rows, sign conventions, the identity contract)
+will each silently give you a wrong number.
+
+
 Start with **`CLAUDE.md`** (mission + rules) and **`docs/SOURCES.md`** (what to add next and
 why).
 
