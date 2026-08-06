@@ -1,0 +1,95 @@
+check,kind,status,expected_rm,derived_rm,difference_rm,tolerance_rm
+pkkp 2009: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,84314650396.08,84314650396.08,0.0,0.01
+"pkkp 2009: memorandum JAMINAN line = guarantee register total (memorandum statement prints whole RM, register keeps sen)",TIE,PASS,84314650396.0,84314650396.08,0.0800018310546875,1.0
+pkkp 2010: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,96906893914.51,96906893914.51001,1.52587890625e-05,0.01
+pkkp 2011: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,116757672551.75,116757672551.75,0.0,0.01
+pkkp 2012: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,690417758831.99,690417758831.99,0.0,0.01
+pkkp 2013: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,768408040258.25,768408040258.25,0.0,0.01
+pkkp 2014: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,850035142802.34,850035142802.3401,0.0001220703125,0.01
+pkkp 2015: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,920336791310.19,920336791310.1901,0.0001220703125,0.01
+pkkp 2016: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,985103411469.47,985103411469.4698,-0.0001220703125,0.01
+pkkp 2017: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1101793431422.56,1101793431422.56,0.0,0.01
+pkkp 2018: memorandum liability lines sum to printed Jumlah Liabiliti,TIE,PASS,1021220093127.0,1021220093127.0,0.0,0.01
+pkkp 2018: Nota 10 komitmen components sum to memorandum Komitmen Kewangan,TIE,PASS,242968745211.0,242968745211.0,0.0,0.01
+pkkp 2018: komitmen jaminan register detail sums to its printed total,TIE,PASS,164908473345.82,164908473345.82,0.0,0.01
+pkkp 2018: komitmen jaminan register total = Nota 10 KOMITMEN JAMINAN (Nota 10 rounds to whole RM),TIE,PASS,164908473346.0,164908473345.82,-0.17999267578125,1.0
+pkkp 2018: Nota 9 ABT split sums to memorandum Akaun Belum Terima,TIE,PASS,86934779072.0,86934779072.0,0.0,0.01
+pkkp 2018: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1211063250638.15,1211063250638.1501,0.000244140625,0.01
+pkkp 2019: memorandum liability lines sum to printed Jumlah Liabiliti,TIE,PASS,1080128630174.0,1080128630174.0,0.0,0.01
+pkkp 2019: Nota 10 komitmen components sum to memorandum Komitmen Kewangan,TIE,PASS,247461392666.0,247461392666.0,0.0,0.01
+pkkp 2019: komitmen jaminan register detail sums to its printed total,TIE,PASS,193992526604.59,193992526604.58997,-3.0517578125e-05,0.01
+pkkp 2019: komitmen jaminan register total = Nota 10 KOMITMEN JAMINAN (Nota 10 rounds to whole RM),TIE,PASS,193992526604.0,193992526604.59,0.589996337890625,1.0
+pkkp 2019: Nota 9 ABT split sums to memorandum Akaun Belum Terima,TIE,PASS,94114786243.0,94114786243.0,0.0,0.01
+pkkp 2019: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1294741659675.83,1294741659675.83,0.0,0.01
+pkkp 2020: memorandum liability lines sum to printed Jumlah Liabiliti,TIE,PASS,1186812387405.0,1186812387405.0,0.0,0.01
+pkkp 2020: Nota 10 komitmen components sum to memorandum Komitmen Kewangan,TIE,PASS,269940211375.0,269940211375.0,0.0,0.01
+pkkp 2020: komitmen jaminan register detail sums to its printed total,TIE,PASS,216841563770.31,216841563770.31003,3.0517578125e-05,0.01
+pkkp 2020: komitmen jaminan register total = Nota 10 KOMITMEN JAMINAN (Nota 10 rounds to whole RM),TIE,PASS,216841563770.0,216841563770.31,0.30999755859375,1.0
+pkkp 2020: Nota 9 ABT split sums to memorandum Akaun Belum Terima,TIE,PASS,106422742308.0,106422742308.0,0.0,0.01
+pkkp 2020: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1395123370769.7,1395123370769.6997,-0.000244140625,0.01
+pkkp 2021: memorandum liability lines sum to printed Jumlah Liabiliti,TIE,PASS,1297815819484.0,1297815819484.0,0.0,0.01
+pkkp 2021: Nota 10 komitmen components sum to memorandum Komitmen Kewangan,TIE,PASS,282275809509.0,282275809509.0,0.0,0.01
+pkkp 2021: komitmen jaminan register detail sums to its printed total,TIE,PASS,229391741671.56,229391741671.56,0.0,0.01
+pkkp 2021: komitmen jaminan register total = Nota 10 KOMITMEN JAMINAN (Nota 10 rounds to whole RM),TIE,PASS,229391741672.0,229391741671.56,-0.44000244140625,1.0
+pkkp 2021: Nota 9 ABT split sums to memorandum Akaun Belum Terima,TIE,PASS,113045075728.0,113045075728.0,0.0,0.01
+pkkp 2021: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1426572216064.53,1426572216064.53,0.0,0.01
+pkkp 2022: memorandum liability lines sum to printed Jumlah Liabiliti,TIE,PASS,1399162474437.0,1399162474437.0,0.0,0.01
+pkkp 2022: Nota 10 komitmen components sum to memorandum Komitmen Kewangan,TIE,PASS,284924267021.0,284924267021.0,0.0,0.01
+pkkp 2022: komitmen jaminan register detail sums to its printed total,TIE,PASS,224115577506.57,224115577506.56998,-3.0517578125e-05,0.01
+pkkp 2022: komitmen jaminan register total = Nota 10 KOMITMEN JAMINAN (Nota 10 rounds to whole RM),TIE,PASS,224115577507.0,224115577506.57,-0.42999267578125,1.0
+pkkp 2022: Nota 9 ABT split sums to memorandum Akaun Belum Terima,TIE,PASS,105523695021.0,105523695021.0,0.0,0.01
+pkkp 2022: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1490397693245.57,1490397693245.5698,-0.000244140625,0.01
+pkkp 2023: memorandum liability lines sum to printed Jumlah Liabiliti,TIE,PASS,1491771406098.0,1491771406098.0,0.0,0.01
+pkkp 2023: Nota 10 komitmen components sum to memorandum Komitmen Kewangan,TIE,PASS,285633821923.0,285633821923.0,0.0,0.01
+pkkp 2023: komitmen jaminan register detail sums to its printed total,TIE,PASS,227404119215.76,227404119215.76,0.0,0.01
+pkkp 2023: komitmen jaminan register total = Nota 10 KOMITMEN JAMINAN (Nota 10 rounds to whole RM),TIE,PASS,227404119216.0,227404119215.76,-0.239990234375,1.0
+pkkp 2023: Nota 9 ABT split sums to memorandum Akaun Belum Terima,TIE,PASS,98367476300.0,98367476300.0,0.0,0.01
+pkkp 2023: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1614801616544.45,1614801616544.4502,0.000244140625,0.01
+pkkp 2024: memorandum liability lines sum to printed Jumlah Liabiliti,TIE,PASS,1577817927079.0,1577817927079.0,0.0,0.01
+pkkp 2024: Nota 10 komitmen components sum to memorandum Komitmen Kewangan,TIE,PASS,297164856524.0,297164856524.0,0.0,0.01
+pkkp 2024: komitmen jaminan register detail sums to its printed total,TIE,PASS,236229124708.88,236229124708.88,0.0,0.01
+pkkp 2024: komitmen jaminan register total = Nota 10 KOMITMEN JAMINAN (Nota 10 rounds to whole RM),TIE,PASS,236229124709.0,236229124708.88,-0.1199951171875,1.0
+pkkp 2024: Nota 9 ABT split sums to memorandum Akaun Belum Terima,TIE,PASS,103158407176.0,103158407176.0,0.0,0.01
+pkkp 2024: jaminan berkanun register detail sums to its printed JUMLAH JAMINAN,TIE,PASS,1748547697984.72,1748547697984.7202,0.000244140625,0.01
+ag 2024: J28 liability lines sum to printed JUMLAH,TIE,PASS,1577818000000.0,1577818000000.0,0.0,500000.0
+ag 2024: J29 komitmen components sum to printed JUMLAH KESELURUHAN,TIE,PASS,297165000000.0,297165000000.0,0.0,500000.0
+ag 2024: J29 komitmen components = J28 Komitmen Kewangan line,TIE,PASS,297165000000.0,297165000000.0,0.0,1000000.0
+ag 2024: J30 entity guarantees sum to printed JUMLAH KESELURUHAN,TIE,PASS,236229000000.0,236229000000.0,0.0,500000.0
+ag 2024: J30 total = J29 Komitmen Jaminan component,TIE,PASS,236229000000.0,236229000000.0,0.0,500000.0
+ag 2024: J22 ABT components sum to printed JUMLAH,TIE,PASS,103158000000.0,103158000000.0,0.0,500000.0
+ag 2024: II.b J1 Pelbagai ABT components sum to printed JUMLAH,TIE,PASS,51664130000.0,51664130000.0,0.0,500000.0
+ag 2024: II.b J1 JUMLAH = J22 Pelbagai ABT line,TIE,PASS,51664000000.0,51664130000.0,130000.0,500000.0
+ag 2024: J33 jaminan pinjaman detail sums to its subtotal,TIE,PASS,332819000000.0,332819000000.0,0.0,500000.0
+ag 2024: J33 pencarum + pinjaman = JUMLAH KESELURUHAN,TIE,PASS,1748548000000.0,1748548000000.0,0.0,500000.0
+ag 2023: J28 liability lines sum to printed JUMLAH,TIE,PASS,1491771000000.0,1491771000000.0,0.0,500000.0
+ag 2023: J29 komitmen components sum to printed JUMLAH KESELURUHAN,TIE,PASS,285634000000.0,285634000000.0,0.0,500000.0
+ag 2023: J29 komitmen components = J28 Komitmen Kewangan line,TIE,PASS,285634000000.0,285634000000.0,0.0,1000000.0
+ag 2023: J30 entity guarantees sum to printed JUMLAH KESELURUHAN,TIE,PASS,227404000000.0,227404000000.0,0.0,500000.0
+ag 2023: J30 total = J29 Komitmen Jaminan component,TIE,PASS,227404000000.0,227404000000.0,0.0,500000.0
+ag 2023: J22 ABT components sum to printed JUMLAH,TIE,PASS,98367000000.0,98367000000.0,0.0,500000.0
+ag 2023: II.b J1 Pelbagai ABT components sum to printed JUMLAH,TIE,PASS,45837140000.0,45837140000.0,0.0,500000.0
+ag 2023: II.b J1 JUMLAH = J22 Pelbagai ABT line,TIE,PASS,45837000000.0,45837140000.0,140000.0,500000.0
+ag 2023: J33 jaminan pinjaman detail sums to its subtotal,TIE,PASS,328014000000.0,328014000000.0,0.0,500000.0
+ag 2023: J33 pencarum + pinjaman = JUMLAH KESELURUHAN,TIE,PASS,1614802000000.0,1614802000000.0,0.0,500000.0
+mof FO2025 [2023]: J5.4 entities sum to printed Jumlah,TIE,PASS,227404000000.0,227404000000.0,0.0,500000.0
+mof FO2025 [2023]: J5.2 Akta96 + Akta61 = printed Jumlah,TIE,PASS,400000000000.0,400000000000.0,0.0,50000000.0
+mof FO2025 [2023]: J5.3 recipients + others = printed Jumlah,TIE,PASS,328013000000.0,328013000000.0,0.0,5500000.0
+mof FO2025 [2024]: J5.4 entities sum to printed Jumlah,TIE,PASS,231377000000.0,231377000000.0,0.0,500000.0
+mof FO2025 [2024]: J5.2 Akta96 + Akta61 = printed Jumlah,TIE,PASS,407800000000.0,407800000000.0,0.0,50000000.0
+mof FO2025 [2024]: J5.3 recipients + others = printed Jumlah,TIE,PASS,330795000000.0,330795000000.0,0.0,5500000.0
+mof FO2026 [2024]: J5.4 entities sum to printed Jumlah,TIE,PASS,236229000000.0,236229000000.0,0.0,500000.0
+mof FO2026 [2024]: J5.2 Akta96 + Akta61 = printed Jumlah,TIE,PASS,416809000000.0,416809000000.0,0.0,500000.0
+mof FO2026 [2024]: J5.3 recipients + others = printed Jumlah,TIE,PASS,332819000000.0,332819000000.0,0.0,5500000.0
+mof FO2026 [2025]: J5.4 entities sum to printed Jumlah,TIE,PASS,237084000000.0,237084000000.0,0.0,500000.0
+mof FO2026 [2025]: J5.2 Akta96 + Akta61 = printed Jumlah,TIE,PASS,424711000000.0,424711000000.0,0.0,500000.0
+mof FO2026 [2025]: J5.3 recipients + others = printed Jumlah,TIE,PASS,336078000000.0,336078000000.0,0.0,5500000.0
+"xsource 2024 hutang: PKKP exact vs AG (RM bilion, 3dp)",CROSS,PASS,1247613545373.0,1247614000000.0,454627.0,500000.0
+xsource 2024 hutang: PKKP exact vs FO2026 (RM juta),CROSS,PASS,1247613545373.0,1247614000000.0,454627.0,500000.0
+xsource 2024 komitmen kewangan: PKKP exact vs AG,CROSS,PASS,297164856524.0,297165000000.0,143476.0,500000.0
+"xsource 2024 PFI: PKKP exact vs AG (AG prints 32.905, truncation of 32.9056)",CROSS,PASS,32905600585.0,32905000000.0,-600585.0,1000000.0
+xsource 2024 komitmen jaminan: PKKP register vs FO2026 J5.4,CROSS,PASS,236229124708.88,236229000000.0,-124708.88000488281,500000.0
+xsource 2023 komitmen jaminan: PKKP register vs FO2025 J5.4,CROSS,PASS,227404119215.76,227404000000.0,-119215.76000976562,500000.0
+xsource 2024 jaminan berkanun (pinjaman): PKKP register vs AG J33,CROSS,PASS,332818713440.48,332819000000.0,286559.52001953125,500000.0
+xsource 2024 jaminan berkanun (pinjaman): PKKP register vs FO2026 J5.2 Akta 96,CROSS,PASS,332818713440.48,332819000000.0,286559.52001953125,500000.0
+xsource 2024 ABT: PKKP exact vs AG J22,CROSS,PASS,103158407176.0,103158000000.0,-407176.0,500000.0
+xsource 2024 pelbagai ABT: PKKP Nota 9 vs AG II.b J1 JUMLAH,CROSS,PASS,51664132865.0,51664130000.0,-2865.0,5000.0

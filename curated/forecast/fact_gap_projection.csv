@@ -1,0 +1,104 @@
+year,maksud_code,name_bm,short,budget_rm_bil,expected_lo_rm_bil,expected_mid_rm_bil,expected_hi_rm_bil,variance_mid_rm_bil,util_median_pct,basis,method
+2025,B.01,Parlimen Malaysia,Parlimen Malaysia,0.18,0.173,0.18,0.199,0.0,100.0,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.02,Pejabat Penyimpan Mohor Besar Raja-Raja,Pejabat Penyimpan Mohor Be…,0.005,0.004,0.005,0.005,-0.001,88.8,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.03,Jabatan Audit Negara,Jabatan Audit Negara,0.184,0.167,0.176,0.181,-0.007,96.0,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.04,Suruhanjaya Pilihan Raya,Suruhanjaya Pilihan Raya,0.165,0.16,0.2,0.348,0.034,120.7,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.05,Suruhanjaya Perkhidmatan Awam,Suruhanjaya Perkhidmatan A…,0.048,0.042,0.046,0.047,-0.002,96.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.06,Jabatan Perdana Menteri,Jabatan Perdana Menteri,5.266,5.065,5.214,5.529,-0.052,99.0,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.07,Jabatan Perkhidmatan Awam,Public Service Dept,0.524,0.524,0.588,0.736,0.064,112.2,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.08,Jabatan Peguam Negara,Jabatan Peguam Negara,0.268,0.249,0.257,0.265,-0.011,95.8,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.09,Suruhanjaya Pencegahan Rasuah Malaysia,Suruhanjaya Pencegahan Ras…,0.343,0.313,0.328,0.343,-0.016,95.4,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.10,Perbendaharaan,Perbendaharaan,4.515,4.455,4.515,5.022,0.0,100.0,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.11,Perkhidmatan Am Perbendaharaan,Treasury general services,49.867,46.212,53.583,65.471,3.715,107.5,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.12,Peruntukan Kepada Kumpulan Wang Terkanun,Transfers to statutory funds,1.9,2.706,3.768,5.462,1.869,198.4,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.13,Kementerian Luar Negeri,Kementerian Luar Negeri,1.559,1.513,1.611,1.689,0.052,103.3,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.14,Kementerian Perpaduan Negara,Kementerian Perpaduan Nega…,0.587,0.585,0.588,0.606,0.001,100.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.15,Kementerian Ekonomi,Kementerian Ekonomi,0.601,0.207,0.597,0.652,-0.004,99.3,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.20,Kementerian Perladangan dan Komoditi,Kementerian Perladangan da…,0.446,0.256,0.375,0.431,-0.071,84.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.21,Kementerian Pertanian dan Keterjaminan Makanan,Kementerian Pertanian dan …,4.649,4.523,4.653,5.125,0.004,100.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.22,Kementerian Kemajuan Desa dan Wilayah,Kementerian Kemajuan Desa …,4.465,4.248,4.439,4.47,-0.026,99.4,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.23,Kementerian Sumber Asli dan Kelestarian Alam,Kementerian Sumber Asli da…,1.407,1.372,1.396,1.477,-0.011,99.2,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.24,"Kementerian Pelaburan, Perdagangan dan Industri","Kementerian Pelaburan, Per…",0.948,0.891,0.932,0.944,-0.016,98.3,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.25,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,Kementerian Perdagangan Da…,2.004,1.843,2.21,3.194,0.206,110.3,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.26,Kementerian Pembangunan Usahawan dan Koperasi,Kementerian Pembangunan Us…,0.263,0.139,0.26,0.262,-0.004,98.7,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.27,Kementerian Kerja Raya,Kementerian Kerja Raya,1.022,0.881,1.02,1.043,-0.003,99.7,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.28,Kementerian Pengangkutan,Kementerian Pengangkutan,1.702,1.666,1.691,1.796,-0.012,99.3,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.30,"Kementerian Sains, Teknologi dan Inovasi","Kementerian Sains, Teknolo…",0.739,0.69,0.717,0.739,-0.022,97.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.31,"Kementerian Pelancongan, Seni dan Budaya","Kementerian Pelancongan, S…",1.188,1.087,1.17,1.197,-0.019,98.4,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.32,KEMENTERIAN WILAYAH PERSEKUTUAN,KEMENTERIAN WILAYAH PERSEK…,0.0,0.0,0.0,0.0,0.0,96.3,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.40,Suruhanjaya Perkhidmatan Pendidikan,Suruhanjaya Perkhidmatan P…,0.024,0.022,0.023,0.024,-0.001,95.2,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.42,Kementerian Kesihatan,Health,38.534,38.519,39.347,41.027,0.813,102.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.43,Kementerian Perumahan dan Kerajaan Tempatan,Kementerian Perumahan dan …,1.972,1.847,1.97,2.035,-0.002,99.9,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.45,Kementerian Belia dan Sukan,Kementerian Belia dan Suka…,0.628,0.598,0.61,0.646,-0.018,97.2,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.46,Kementerian Sumber Manusia,Kementerian Sumber Manusia,1.006,0.972,0.991,1.031,-0.015,98.5,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.47,Kementerian Komunikasi,Kementerian Komunikasi,1.077,0.976,1.052,1.08,-0.025,97.7,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.48,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",Kementerian Pembangunan Wa…,3.424,3.368,3.403,3.7,-0.021,99.4,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.60,Kementerian Pertahanan,Defence,13.637,13.274,13.798,14.128,0.161,101.2,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.62,Kementerian Dalam Negeri,Home Affairs,15.528,15.121,15.528,16.579,0.0,100.0,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.63,Kementerian Pendidikan,Education,57.867,55.477,58.509,59.071,0.642,101.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,B.64,Kementerian Pendidikan Tinggi,Education,13.846,13.004,13.813,14.32,-0.033,99.8,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.01,Peruntukan Diraja Bagi S.P.B. Yang di-Pertuan Agong,Peruntukan Diraja Bagi S.P…,0.014,0.013,0.014,0.014,0.0,100.0,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.02,Elaun-elaun Diraja,Elaun-elaun Diraja,0.001,0.001,0.001,0.001,-0.0,93.2,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.03,"Ketua Hakim Negara, Hakim Besar dan Hakim","Ketua Hakim Negara, Hakim …",0.12,0.095,0.105,0.112,-0.015,87.4,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.04,Ketua Audit Negara,Ketua Audit Negara,0.001,0.001,0.001,0.001,-0.0,81.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.05,Yang di-Pertua Dewan Rakyat,Yang di-Pertua Dewan Rakya…,0.001,0.0,0.001,0.001,-0.0,90.8,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.06,Yang di-Pertua Dewan Negara,Yang di-Pertua Dewan Negar…,0.001,0.0,0.0,0.001,-0.0,82.7,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.07,Suruhanjaya Pilihan Raya,Suruhanjaya Pilihan Raya,0.003,0.002,0.003,0.003,-0.0,97.7,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.08,Suruhanjaya Perkhidmatan Kehakiman dan Perundangan,Suruhanjaya Perkhidmatan K…,0.0,0.0,0.0,0.0,-0.0,75.6,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.09,Suruhanjaya Perkhidmatan Awam,Suruhanjaya Perkhidmatan A…,0.006,0.004,0.004,0.005,-0.002,69.8,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.10,Suruhanjaya Perkhidmatan Pendidikan,Suruhanjaya Perkhidmatan P…,0.006,0.005,0.005,0.006,-0.0,92.0,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.11,Suruhanjaya Pasukan Polis,Suruhanjaya Pasukan Polis,0.003,0.002,0.003,0.003,-0.0,96.1,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.12,Perbendaharaan,Perbendaharaan,8.108,7.714,7.989,8.203,-0.118,98.5,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.13,Perbelanjaan Kerana Hutang Negara,Debt service,54.7,52.375,53.89,54.591,-0.81,98.5,model_projection,tabled Budget 2025 x own utilisation signature
+2025,T.14,"Pencen, Elaun Bersara dan Ganjaran",Pensions & gratuities,39.084,39.479,41.457,44.775,2.372,106.1,model_projection,tabled Budget 2025 x own utilisation signature
+2026,B.01,RINGKASAN MAKSUD TANGGUNGAN PARLIMEN MALAYSIA,RINGKASAN MAKSUD TANGGUNGA…,0.184,0.176,0.184,0.203,0.0,100.0,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.02,PEJABAT PENYIMPAN MOHOR BESAR RAJA-RAJA,PEJABAT PENYIMPAN MOHOR BE…,0.005,0.004,0.005,0.005,-0.001,88.8,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.03,JABATAN AUDIT NEGARA,JABATAN AUDIT NEGARA,0.216,0.197,0.208,0.213,-0.009,96.0,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.04,SURUHANJAYA PILIHAN RAYA,SURUHANJAYA PILIHAN RAYA,0.367,0.355,0.443,0.772,0.076,120.7,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.05,SURUHANJAYA PERKHIDMATAN AWAM,SURUHANJAYA PERKHIDMATAN A…,0.058,0.05,0.056,0.057,-0.002,96.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.06,JABATAN PERDANA MENTERI,JABATAN PERDANA MENTERI,5.369,5.164,5.316,5.637,-0.053,99.0,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.07,JABATAN PERKHIDMATAN AWAM,JABATAN PERKHIDMATAN AWAM,0.525,0.525,0.589,0.737,0.064,112.2,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.08,JABATAN PEGUAM NEGARA,JABATAN PEGUAM NEGARA,0.281,0.26,0.269,0.277,-0.012,95.8,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.09,SURUHANJAYA PENCEGAHAN RASUAH MALAYSIA,SURUHANJAYA PENCEGAHAN RAS…,0.398,0.362,0.38,0.398,-0.018,95.4,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.10,KEMENTERIAN KEWANGAN Perbendaharaan,KEMENTERIAN KEWANGAN Perbe…,4.605,4.544,4.605,5.122,0.0,100.0,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.11,Perkhidmatan Am Perbendaharaan,Treasury general services,38.245,35.441,41.094,50.212,2.849,107.5,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.12,Peruntukan Kepada Kumpulan Wang Terkanun,Transfers to statutory funds,1.941,2.765,3.851,5.581,1.91,198.4,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.13,KEMENTERIAN LUAR NEGERI,KEMENTERIAN LUAR NEGERI,0.983,0.954,1.016,1.065,0.033,103.3,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.14,KEMENTERIAN PERPADUAN NEGARA,KEMENTERIAN PERPADUAN NEGA…,0.65,0.648,0.651,0.672,0.001,100.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.15,KEMENTERIAN EKONOMI,KEMENTERIAN EKONOMI,0.632,0.218,0.628,0.686,-0.004,99.3,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.20,KEMENTERIAN PERLADANGAN DAN KOMODITI,KEMENTERIAN PERLADANGAN DA…,0.478,0.275,0.402,0.462,-0.076,84.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.21,KEMENTERIAN PERTANIAN DAN KETERJAMINAN MAKANAN,KEMENTERIAN PERTANIAN DAN …,4.827,4.695,4.83,5.321,0.004,100.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.22,KEMENTERIAN KEMAJUAN DESA DAN WILAYAH,KEMENTERIAN KEMAJUAN DESA …,4.613,4.389,4.586,4.618,-0.027,99.4,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.23,KEMENTERIAN SUMBER ASLI DAN KELESTARIAN ALAM,KEMENTERIAN SUMBER ASLI DA…,1.495,1.458,1.484,1.57,-0.012,99.2,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.24,"Perubahan Iklim. KEMENTERIAN PELABURAN, PERDAGANGAN DAN INDUSTRI",Perubahan Iklim. KEMENTERI…,0.659,0.619,0.647,0.656,-0.011,98.3,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.25,KEMENTERIAN PERDAGANGAN DALAM NEGERI DAN KOS SARA HIDUP,KEMENTERIAN PERDAGANGAN DA…,2.091,1.924,2.306,3.333,0.215,110.3,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.26,KEMENTERIAN PEMBANGUNAN USAHAWAN DAN KOPERASI,KEMENTERIAN PEMBANGUNAN US…,0.276,0.145,0.272,0.274,-0.004,98.7,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.27,KEMENTERIAN KERJA RAYA,KEMENTERIAN KERJA RAYA,1.085,0.935,1.082,1.107,-0.003,99.7,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.28,KEMENTERIAN PENGANGKUTAN,KEMENTERIAN PENGANGKUTAN,1.659,1.624,1.648,1.75,-0.011,99.3,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.30,"KEMENTERIAN SAINS, TEKNOLOGI DAN INOVASI","KEMENTERIAN SAINS, TEKNOLO…",0.76,0.71,0.737,0.76,-0.022,97.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.31,"KEMENTERIAN PELANCONGAN, SENI DAN BUDAYA","KEMENTERIAN PELANCONGAN, S…",1.299,1.188,1.278,1.308,-0.021,98.4,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.40,SURUHANJAYA PERKHIDMATAN PENDIDIKAN,SURUHANJAYA PERKHIDMATAN P…,0.025,0.023,0.024,0.025,-0.001,95.2,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.42,KEMENTERIAN KESIHATAN,KEMENTERIAN KESIHATAN,39.776,39.76,40.615,42.349,0.839,102.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.43,KEMENTERIAN PERUMAHAN DAN KERAJAAN TEMPATAN,KEMENTERIAN PERUMAHAN DAN …,2.072,1.941,2.07,2.138,-0.002,99.9,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.45,Perubahan Iklim pada tahun 2023. KEMENTERIAN BELIA DAN SUKAN,Perubahan Iklim pada tahun…,0.7,0.666,0.68,0.72,-0.02,97.2,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.46,KEMENTERIAN SUMBER MANUSIA,KEMENTERIAN SUMBER MANUSIA,1.046,1.011,1.03,1.072,-0.016,98.5,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.47,KEMENTERIAN KOMUNIKASI,KEMENTERIAN KOMUNIKASI,1.132,1.026,1.106,1.135,-0.026,97.7,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.48,"KEMENTERIAN PEMBANGUNAN WANITA, KELUARGA DAN MASYARAKAT",KEMENTERIAN PEMBANGUNAN WA…,3.962,3.898,3.938,4.283,-0.024,99.4,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.60,KEMENTERIAN PERTAHANAN,KEMENTERIAN PERTAHANAN,14.108,13.733,14.275,14.616,0.166,101.2,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.62,KEMENTERIAN DALAM NEGERI,KEMENTERIAN DALAM NEGERI,17.351,16.896,17.351,18.525,0.0,100.0,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.63,KEMENTERIAN PENDIDIKAN,KEMENTERIAN PENDIDIKAN,59.884,57.411,60.549,61.13,0.665,101.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,B.64,KEMENTERIAN PENDIDIKAN TINGGI,KEMENTERIAN PENDIDIKAN TIN…,14.683,13.791,14.648,15.186,-0.035,99.8,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.01,PERUNTUKAN DIRAJA BAGI S.P.B. YANG DI-PERTUAN AGONG,PERUNTUKAN DIRAJA BAGI S.P…,0.014,0.013,0.014,0.014,0.0,100.0,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.02,ELAUN-ELAUN DIRAJA,ELAUN-ELAUN DIRAJA,0.001,0.001,0.001,0.001,-0.0,93.2,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.03,"KETUA HAKIM NEGARA, HAKIM BESAR DAN HAKIM","KETUA HAKIM NEGARA, HAKIM …",0.119,0.094,0.104,0.111,-0.015,87.4,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.04,KETUA AUDIT NEGARA,KETUA AUDIT NEGARA,0.001,0.001,0.001,0.001,-0.0,81.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.05,YANG DI-PERTUA DEWAN RAKYAT,YANG DI-PERTUA DEWAN RAKYA…,0.001,0.0,0.001,0.001,-0.0,90.8,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.06,YANG DI-PERTUA DEWAN NEGARA,YANG DI-PERTUA DEWAN NEGAR…,0.001,0.0,0.0,0.001,-0.0,82.7,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.07,SURUHANJAYA PILIHAN RAYA,SURUHANJAYA PILIHAN RAYA,0.003,0.002,0.003,0.003,-0.0,97.7,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.08,SURUHANJAYA PERKHIDMATAN KEHAKIMAN DAN PERUNDANGAN,SURUHANJAYA PERKHIDMATAN K…,0.0,0.0,0.0,0.0,-0.0,75.6,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.09,SURUHANJAYA PERKHIDMATAN AWAM,SURUHANJAYA PERKHIDMATAN A…,0.006,0.003,0.004,0.005,-0.002,69.8,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.10,SURUHANJAYA PERKHIDMATAN PENDIDIKAN,SURUHANJAYA PERKHIDMATAN P…,0.006,0.005,0.005,0.006,-0.0,92.0,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.11,SURUHANJAYA PASUKAN POLIS,SURUHANJAYA PASUKAN POLIS,0.003,0.002,0.002,0.003,-0.0,96.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.12,PERBENDAHARAAN,PERBENDAHARAAN,8.357,7.952,8.235,8.456,-0.122,98.5,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.13,PERBELANJAAN KERANA HUTANG NEGARA,PERBELANJAAN KERANA HUTANG…,58.3,55.822,57.437,58.183,-0.863,98.5,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature
+2026,T.14,"PENCEN, ELAUN BERSARA DAN GANJARAN","PENCEN, ELAUN BERSARA DAN …",42.311,42.738,44.879,48.471,2.568,106.1,model_projection,tabled Budget 2026 (AP2026 book) x own utilisation signature

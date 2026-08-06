@@ -1,0 +1,52 @@
+year,side,budget_rm,actual_rm,variance_rm,utilisation_pct,basis,book_evidence
+2010,oe,138279148000,159652962318,21373814318,115.46,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2010,de,56076663806,52791630219,-3285033586,94.14,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2010,total,194355811806,212444592538,18088780732,109.31,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2011,oe,162805323000,185418919743,22613596743,113.89,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2011,de,51424046381,46416362426,-5007683954,90.26,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2011,total,214229369381,231835282169,17605912788,108.22,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2012,oe,181584000000,207912754669,26328754669,114.5,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2012,de,51107796358,46932453805,-4175342552,91.83,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2012,total,232691796358,254845208474,22153412116,109.52,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2013,oe,201917000000,213370213558,11453213558,105.67,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2013,de,46463747739,42209801383,-4253946355,90.84,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2013,total,248380747739,255580014941,7199267202,102.9,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2014,oe,217651000000,220625673356,2974673356,101.37,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2014,de,42163431931,39503487395,-2659944535,93.69,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2014,total,259814431931,260129160751,314728820,100.12,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2015,oe,223440000000,219088760826,-4351239174,98.05,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2015,de,43025221162,40767711666,-2257509495,94.75,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2015,total,266465221162,259856472492,-6608748669,97.52,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2016,oe,215224000000,212421098894,-2802901106,98.7,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2016,de,45002664316,41995037696,-3007626619,93.32,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2016,total,260226664316,254416136590,-5810527725,97.77,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2017,oe,214800000000,220406001884,5606001884,102.61,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2017,de,47320127998,44883838832,-2436289165,94.85,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2017,total,262120127998,265289840716,3169712718,101.21,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2018,oe,234250449000,232882562288,-1367886712,99.42,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2018,de,46499323510,56095455661,9596132151,120.64,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2018,total,280749772510,288978017949,8228245439,102.93,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2019,oe,259850000000,264414755876,4564755876,101.76,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2019,de,58619653537,58855702226,236048689,100.4,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2019,total,318469653537,323270458102,4800804565,101.51,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2020,oe,241020000000,225074947243,-15945052757,93.38,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2020,de,55384459405,54054841348,-1329618056,97.6,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2020,total,296404459405,279129788591,-17274670813,94.17,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2021,oe,236495000000,233752055029,-2742944971,98.84,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2021,de,60894264010,64256665754,3362401744,105.52,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2021,total,297389264010,298008720783,619456773,100.21,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2022,oe,233491432000,294356760615,60865328615,126.07,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2022,de,68503312870,71573961425,3070648555,104.48,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2022,total,301994744870,365930722040,63935977170,121.17,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",
+2023,oe,289140000000,314959481731,25819481731,108.93,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",asal column of AP2024 book
+2023,de,93358598110,96089737122,2731139012,102.93,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",asal column of AP2024 book
+2023,total,382498598110,411049218853,28550620743,107.46,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)",asal column of AP2024 book
+2024,oe,303800000000,324617649248,20817649248,106.85,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)","AP2024 tabled = PKKP asal (exact, all votes); AP2025 asal column"
+2024,de,85152335350,84011595463,-1140739886,98.66,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)","AP2024 tabled = PKKP asal (exact, all votes); AP2025 asal column"
+2024,total,388952335350,408629244711,19676909361,105.06,"audited (PKKP; anggaran_asal = budget as tabled, book-verified)","AP2024 tabled = PKKP asal (exact, all votes); AP2025 asal column"
+2025,oe,335000000000,,,,"budget (tabled, unaudited year)",AP2025 book (tabled)
+2025,de,88000000000,,,,"budget (tabled, unaudited year)",AP2025 book (tabled)
+2025,total,423000000000,,,,"budget (tabled, unaudited year)",AP2025 book (tabled)
+2026,oe,338202000000,,,,"budget (tabled, unaudited year)",AP2026 book (tabled)
+2026,de,83000000000,,,,"budget (tabled, unaudited year)",AP2026 book (tabled)
+2026,total,421202000000,,,,"budget (tabled, unaudited year)",AP2026 book (tabled)

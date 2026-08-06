@@ -5,6 +5,11 @@ A consolidated, fully-verifiable data warehouse of **Malaysia's public finances*
 behaviour**. Multiple official sources are ingested with complete provenance, then curated
 into a comparable layer so the same concept can be traced and cross-checked across sources.
 
+**Using the data?** Read **`docs/ANALYST_GUIDE.md`** first — the query traps
+(basis blending, leaf rows, canonical rows, sign conventions, the identity contract)
+will each silently give you a wrong number.
+
+
 Start with **`CLAUDE.md`** (mission + rules) and **`docs/SOURCES.md`** (what to add next and
 why).
 
@@ -21,11 +26,35 @@ docs/SOURCES.md     source catalogue: federal, state, statistics — priority + 
 ```
 
 ## Sources
-**pkkp** is the first and foundational source: the audited *Penyata Kewangan Kerajaan
-Persekutuan*, FY2009–2024, extracted to full detail (~580,000 data points; 76,320
-object-level opex rows), every figure traceable to its source PDF and page. Planned additions
-(budget estimates, MOF fiscal reports, DOSM, state statements, …) are catalogued in
-`docs/SOURCES.md`.
+
+Eight sources, each namespaced under `sources/<name>/` with its own extraction, provenance
+and validation. Sources are never merged — comparison happens only in `curated/`.
+
+| # | Source | What it is | Publisher | Coverage | Rows | Checks | Route |
+|---|---|---|---|---|---|---|---|
+| 1 | **pkkp** | *Penyata Kewangan Kerajaan Persekutuan* — audited federal accounts to object/project level. **Hub of the federal-fiscal domain** | Akauntan Negara, audited by AG | FY2009–FY2024 | 141,951 | 7,329 | PDF |
+| 2 | **anggaran** | *Anggaran Perbelanjaan Persekutuan* — the budget as tabled, at ministry **and** programme/activity/object grain, **plus headcount** | MOF | Budgets 2024–2026 | 29,202 | 12,037 | PDF |
+| 3 | **anggaran-hasil** | *Anggaran Hasil* — revenue estimates by kod hasil, incl. tax-measure impacts | MOF | Budgets 2025–2026 | 496 | 132 | PDF |
+| 4 | **mof-fiscal-outlook** | *Tinjauan Fiskal* — official projections, debt, **contingent liabilities and guarantee registers** | MOF | Editions 2025–2026 | 184 | 55 | PDF |
+| 5 | **audit-negara** | Auditor-General's reports: audit inventory, 426 findings with amounts and ministry responses, per-agency certifications, e-SelfAudit censuses, the AG's own fiscal tables | Jabatan Audit Negara | LKAN 2024–2026 (+402-volume manifest 2015–2026) | 3,285 | 160 | Parliament Command Papers |
+| 6 | **states** | **All 13 states'** audited financial statements — finance, revenue, agency registers, plus a conformed national panel | State treasuries, audited by AG | FY2014–FY2024 | 50,053 | 10,224 | Parliament Command Papers |
+| 7 | **bnm** | Monthly Highlights & Statistics — federal finance quarterly, debt by holder/maturity, monetary, banking, external | Bank Negara Malaysia | 1996–2026 | 8,106 | 280 | **OpenAPI** |
+| 8 | **dosm** | GDP/GNI, population, state GDP, CPI (national + state), labour force, trade, federal and state GFS | DOSM / data.gov.my | 1947–2026 | 86,245 | 34 | **OpenAPI** |
+
+Plus the **curated layer** (1,491 rows): `fact_planning_efficiency` (tabled budget vs audited
+actual 2010–2024), `fact_budget_vs_actual`, `fact_obligations` (debt, PFI, commitments,
+guarantees, arrears and contingent liabilities unified across three publishers),
+`forecast/` (2025–26 projections with bands — **model output, never actuals**), and the
+published `dashboard/`.
+
+**Totals: 319,522 rows · 30,251 validation checks · 47 catalogued source anomalies** (the
+publishers' own misprints, kept exactly as printed with arithmetic proof). Every source is
+reconciled to its own printed totals *and* re-derived by an independent verifier blind to
+the extraction code.
+
+What is not yet in — state budgets, PAC reports, procurement awards, tax-authority detail,
+GLC/GLIC accounts, local-authority finances, and the wider real-economy sources — is
+catalogued with priorities in `docs/SOURCES.md`.
 
 ## Quick start
 ```bash

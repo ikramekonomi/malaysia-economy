@@ -1,0 +1,37 @@
+code,desc_en,desc_bm,retrieved_from,retrieved_date
+p0,Overall,Keseluruhan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p1,Agriculture,Pertanian,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p2,Mining and quarrying,Perlombongan dan pengkuarian,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3,Manufacturing,Pembuatan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.1,Vegetable and animal oils & fats and food processing,Minyak dan lemak daripada sayuran & haiwan dan prosesan makanan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.2,Beverages and tobacco products,Minuman dan produk tembakau,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.3,"Textiles, wearing apparel and leather products","Produk tekstil, pakaian dan kulit",https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.4,"Wood products, furniture, paper products and printing","Produk kayu, perabot, keluaran kertas dan percetakan",https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.5,"Petroleum, chemical, rubber and plastic products","Produk petroleum, kimia, getah dan plastik",https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.6,"Non-metallic mineral products, basic metal and fabricated metal products","Produk mineral bukan logam, logam asas dan produk logam yang direka",https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.7,"Electrical, electronic and optical products","Produk elektrik, elektronik dan optikal",https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p3.8,"Transport equipment, other manufacturing and repair","Peralatan pengangkutan, pembuatan lain dan pembaikan",https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p4,Construction,Pembinaan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5,Services,Perkhidmatan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.1,Utilities,Utiliti,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.2,Wholesale and retail trade,Perdagangan borong dan runcit,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.3,Food & beverages and accommodation,Makanan & minuman dan penginapan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.4,Transportation and storage,Pengangkutan dan penyimpanan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.5,Information and communication,Maklumat dan komunikasi,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.6,Finance and insurance,Kewangan dan insurans,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.7,Real estate and business services,Hartanah dan perkhidmatan perniagaan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+p5.8,Other services,Perkhidmatan lain,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.01,Agro-food,Agro-makanan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.02,Chemicals and chemical products,Kimia dan produk kimia,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.03,Pharmaceutical,Farmaseutikal,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.04,Electrical and electronics,Elektrik dan elektronik,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.05,Machinery and equipment,Mesin dan peralatan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.06,Automotive,Automotif,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.07,Aerospace,Aeroangkasa,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.08,Construction & built environment,Pembinaan & alam bina,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.09,Retail and food & beverages,Peruncitan dan makanan & minuman,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.10,Logistics,Logistik,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.11,Tourism,Pelancongan,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.12,"Information, communication and technology (ICT)","Teknologi, maklumat dan komunikasi (ICT)",https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.13,Professional services,Perkhidmatan profesional,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03
+special.14,Private healthcare,Penjagaan kesihatan swasta,https://storage.dosm.gov.my/labour/productivity_lookup.csv,2026-08-03

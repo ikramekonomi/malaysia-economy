@@ -1,0 +1,281 @@
+check,scope,expected,got,status
+V1_quarter_identity,19964Q,2298.0,2298.0,PASS
+V1_quarter_identity,19963Q,3472.0,3472.0,PASS
+V1_quarter_identity,19962Q,4171.0,4171.0,PASS
+V1_quarter_identity,19961Q,4474.0,4474.0,PASS
+V1_quarter_identity,19974Q,2869.0,2869.0,PASS
+V1_quarter_identity,19973Q,5845.0,5845.0,PASS
+V1_quarter_identity,19972Q,7004.0,7004.0,PASS
+V1_quarter_identity,19971Q,5353.0,5353.0,PASS
+V1_quarter_identity,19984Q,-356.0,-356.0,PASS
+V1_quarter_identity,19983Q,5083.0,5083.0,PASS
+V1_quarter_identity,19982Q,2022.0,2022.0,PASS
+V1_quarter_identity,19981Q,5377.0,5377.0,PASS
+V1_quarter_identity,19991Q,2120.0,2120.0,PASS
+V1_quarter_identity,20004Q,-2778.0,-2778.0,PASS
+V1_quarter_identity,20003Q,759.0,759.0,PASS
+V1_quarter_identity,20002Q,3922.0,3922.0,PASS
+V1_quarter_identity,20001Q,3414.0,3413.0,PASS
+V1_quarter_identity,20014Q,958.0,959.0,PASS
+V1_quarter_identity,20013Q,4151.0,4151.0,PASS
+V1_quarter_identity,20012Q,7370.0,7369.0,PASS
+V1_quarter_identity,20011Q,3331.0,3331.0,PASS
+V1_quarter_identity,20024Q,4802.0,4802.0,PASS
+V1_quarter_identity,20023Q,3609.0,3609.0,PASS
+V1_quarter_identity,20022Q,3975.0,3975.0,PASS
+V1_quarter_identity,20021Q,2430.0,2430.0,PASS
+V1_quarter_identity,20034Q,11959.0,11959.0,PASS
+V1_quarter_identity,20033Q,5484.0,5484.0,PASS
+V1_quarter_identity,20032Q,-1026.0,-1027.0,PASS
+V1_quarter_identity,20031Q,968.0,968.0,PASS
+V1_quarter_identity,20044Q,-247.0,-247.0,PASS
+V1_quarter_identity,20043Q,4642.0,4642.0,PASS
+V1_quarter_identity,20042Q,2121.0,2121.0,PASS
+V1_quarter_identity,20041Q,1583.0,1583.0,PASS
+V1_quarter_identity,20054Q,-3268.0,-3268.0,PASS
+V1_quarter_identity,20053Q,3388.0,3388.0,PASS
+V1_quarter_identity,20052Q,3202.0,3202.0,PASS
+V1_quarter_identity,20051Q,5238.0,5238.0,PASS
+V1_quarter_identity,20064Q,-5572.0,-5573.0,PASS
+V1_quarter_identity,20063Q,3098.0,3098.0,PASS
+V1_quarter_identity,20062Q,11440.0,11441.0,PASS
+V1_quarter_identity,20061Q,6886.0,6886.0,PASS
+V1_quarter_identity,20074Q,5282.5,5282.5,PASS
+V1_quarter_identity,20073Q,-429.49,-429.49,PASS
+V1_quarter_identity,20072Q,9413.1,9413.1,PASS
+V1_quarter_identity,20071Q,2535.0,2535.0,PASS
+V1_quarter_identity,20084Q,-2554.4,-2554.4,PASS
+V1_quarter_identity,20083Q,4318.0,4318.0,PASS
+V1_quarter_identity,20082Q,7000.5,7000.5,PASS
+V1_quarter_identity,20081Q,-2469.6,-2469.6,PASS
+V1_quarter_identity,20094Q,-3632.97,-3632.97,PASS
+V1_quarter_identity,20093Q,3683.11,3683.11,PASS
+V1_quarter_identity,20092Q,17.4,17.4,PASS
+V1_quarter_identity,20091Q,1504.8,1504.8,PASS
+V1_quarter_identity,20104Q,1721.15,1721.15,PASS
+V1_quarter_identity,20103Q,4555.4,4555.4,PASS
+V1_quarter_identity,20102Q,4910.5,4910.5,PASS
+V1_quarter_identity,20101Q,-3166.7,-3166.7,PASS
+V1_quarter_identity,20114Q,-6855.5,-6855.5,PASS
+V1_quarter_identity,20113Q,-485.44,-485.44,PASS
+V1_quarter_identity,20112Q,9059.77,9059.77,PASS
+V1_quarter_identity,20111Q,1106.3,1106.3,PASS
+V1_quarter_identity,20124Q,-4465.23,-4465.23,PASS
+V1_quarter_identity,20123Q,2038.4,2038.4,PASS
+V1_quarter_identity,20122Q,2512.81,2512.8,PASS
+V1_quarter_identity,20121Q,2289.69,2289.7,PASS
+V1_quarter_identity,20134Q,2259.89,2259.89,PASS
+V1_quarter_identity,20133Q,3576.58,3576.58,PASS
+V1_quarter_identity,20132Q,2404.6,2404.6,PASS
+V1_quarter_identity,20131Q,-6141.2,-6141.2,PASS
+V1_quarter_identity,20144Q,-94.27,-94.27,PASS
+V1_quarter_identity,20143Q,6207.0,6207.0,PASS
+V1_quarter_identity,20142Q,946.6,946.6,PASS
+V1_quarter_identity,20141Q,-6022.8,-6022.8,PASS
+V1_quarter_identity,20154Q,-1424.57,-1424.57,PASS
+V1_quarter_identity,20153Q,3967.43,3967.43,PASS
+V1_quarter_identity,20152Q,3421.25,3421.25,PASS
+V1_quarter_identity,20151Q,-3872.8,-3872.8,PASS
+V1_quarter_identity,20164Q,9829.33,9829.33,PASS
+V1_quarter_identity,20163Q,5581.41,5581.41,PASS
+V1_quarter_identity,20162Q,-4578.78,-4578.78,PASS
+V1_quarter_identity,20161Q,-8583.52,-8583.52,PASS
+V1_quarter_identity,20174Q,6267.21,6267.21,PASS
+V1_quarter_identity,20173Q,10461.9,10461.9,PASS
+V1_quarter_identity,20172Q,-3104.7,-3104.7,PASS
+V1_quarter_identity,20171Q,-10913.6,-10913.6,PASS
+V1_quarter_identity,20184Q,9069.47,9069.47,PASS
+V1_quarter_identity,20183Q,3868.3,3868.3,PASS
+V1_quarter_identity,20182Q,-10433.1,-10433.1,PASS
+V1_quarter_identity,20181Q,-582.6,-582.6,PASS
+V1_quarter_identity,20194Q,93.63,93.63,PASS
+V1_quarter_identity,20193Q,-25.69,-25.69,PASS
+V1_quarter_identity,20192Q,-3230.11,-3230.11,PASS
+V1_quarter_identity,20191Q,4234.1,4234.1,PASS
+V1_quarter_identity,20204Q,23159.9,23160.0,PASS
+V1_quarter_identity,20203Q,-10447.8,-10447.8,PASS
+V1_quarter_identity,20202Q,4512.3,4512.3,PASS
+V1_quarter_identity,20201Q,-16749.1,-16749.1,PASS
+V1_quarter_identity,20214Q,12398.0,12398.0,PASS
+V1_quarter_identity,20213Q,787.2,787.2,PASS
+V1_quarter_identity,20212Q,1723.73,1723.78,PASS
+V1_quarter_identity,20211Q,-12673.49,-12673.28,PASS
+V1_quarter_identity,20224Q,-6952.6,-6952.6,PASS
+V1_quarter_identity,20223Q,14105.7,14105.7,PASS
+V1_quarter_identity,20222Q,-3663.2,-3663.2,PASS
+V1_quarter_identity,20221Q,-1826.3,-1826.3,PASS
+V1_quarter_identity,20234Q,-9027.04,-9027.04,PASS
+V1_quarter_identity,20233Q,8135.2,8135.2,PASS
+V1_quarter_identity,20232Q,-5000.7,-5000.7,PASS
+V1_quarter_identity,20231Q,9585.1,9585.1,PASS
+V1_quarter_identity,20244Q,10349.93,10350.04,PASS
+V1_quarter_identity,20243Q,10781.61,10781.0,PASS
+V1_quarter_identity,20242Q,-10338.0,-10337.95,PASS
+V1_quarter_identity,20241Q,-7684.95,-7684.0,PASS
+V1_quarter_identity,20254Q,2215.18,2215.18,PASS
+V1_quarter_identity,20253Q,10790.33,10790.3,PASS
+V1_quarter_identity,20252Q,-3381.28,-3381.3,PASS
+V1_quarter_identity,20251Q,-4330.63,-4330.7,PASS
+V1_quarter_identity,20261Q,-2580.9,-2580.9,PASS
+V1_annual_vs_quarters,1996 revenue,58280.0,58280.0,PASS
+V1_annual_vs_quarters,1997 revenue,65736.0,65736.0,PASS
+V1_annual_vs_quarters,1998 revenue,56710.0,56710.0,PASS
+V1_annual_vs_quarters,2000 revenue,61864.0,61864.0,PASS
+V1_annual_vs_quarters,2001 revenue,79567.0,79567.0,PASS
+V1_annual_vs_quarters,2002 revenue,83515.0,83515.0,PASS
+V1_annual_vs_quarters,2003 revenue,92608.0,92609.0,PASS
+V1_annual_vs_quarters,2004 revenue,99397.0,99397.0,PASS
+V1_annual_vs_quarters,2005 revenue,106304.0,106304.0,PASS
+V1_annual_vs_quarters,2006 revenue,123546.1,123546.0,PASS
+V1_annual_vs_quarters,2007 revenue,139885.3,139885.3,PASS
+V1_annual_vs_quarters,2008 revenue,159793.4,159793.4,PASS
+V1_annual_vs_quarters,2009 revenue,158639.3,158639.3,PASS
+V1_annual_vs_quarters,2010 revenue,159653.0,159653.0,PASS
+V1_annual_vs_quarters,2011 revenue,185418.9,185418.9,PASS
+V1_annual_vs_quarters,2012 revenue,207912.8,207912.8,PASS
+V1_annual_vs_quarters,2013 revenue,213370.2,213370.2,PASS
+V1_annual_vs_quarters,2014 revenue,220625.7,220625.7,PASS
+V1_annual_vs_quarters,2015 revenue,219088.8,219088.8,PASS
+V1_annual_vs_quarters,2016 revenue,212421.1,212421.1,PASS
+V1_annual_vs_quarters,2017 revenue,220406.0,220406.0,PASS
+V1_annual_vs_quarters,2018 revenue,232882.6,232882.6,PASS
+V1_annual_vs_quarters,2019 revenue,264414.8,264414.8,PASS
+V1_annual_vs_quarters,2020 revenue,225076.0,225075.5,PASS
+V1_annual_vs_quarters,2021 revenue,233751.9,233751.8,PASS
+V1_annual_vs_quarters,2022 revenue,294356.8,294356.8,PASS
+V1_annual_vs_quarters,2023 revenue,314959.5,314959.5,PASS
+V1_annual_vs_quarters,2024 revenue,324617.6,324617.6,PASS
+V1_annual_vs_quarters,2025 revenue,336069.2,336069.3,PASS
+V2_vs_pkkp,2010 revenue (RM mil),159653.0,159653.0,PASS
+V2_vs_pkkp,2010 opex (RM mil),151632.6,151632.6,PASS
+V2_vs_pkkp,2010 gross DE (RM mil),52791.6,52791.6,PASS
+V2_vs_pkkp,2011 revenue (RM mil),185418.9,185418.9,PASS
+V2_vs_pkkp,2011 opex (RM mil),182593.8,182593.8,PASS
+V2_vs_pkkp,2011 gross DE (RM mil),46416.4,46416.4,PASS
+V2_vs_pkkp,2012 revenue (RM mil),207912.8,207912.8,PASS
+V2_vs_pkkp,2012 opex (RM mil),205537.1,205537.1,PASS
+V2_vs_pkkp,2012 gross DE (RM mil),46932.5,46932.5,PASS
+V2_vs_pkkp,2013 revenue (RM mil),213370.2,213370.2,PASS
+V2_vs_pkkp,2013 opex (RM mil),211270.3,211270.3,PASS
+V2_vs_pkkp,2013 gross DE (RM mil),42209.8,42209.8,PASS
+V2_vs_pkkp,2014 revenue (RM mil),220625.7,220625.7,PASS
+V2_vs_pkkp,2014 opex (RM mil),219589.1,219589.1,PASS
+V2_vs_pkkp,2014 gross DE (RM mil),39503.5,39503.5,PASS
+V2_vs_pkkp,2015 revenue (RM mil),219088.8,219088.8,PASS
+V2_vs_pkkp,2015 opex (RM mil),216997.5,216997.5,PASS
+V2_vs_pkkp,2015 gross DE (RM mil),40767.7,40767.7,PASS
+V2_vs_pkkp,2016 revenue (RM mil),212421.1,212421.1,PASS
+V2_vs_pkkp,2016 opex (RM mil),210172.7,210172.7,PASS
+V2_vs_pkkp,2016 gross DE (RM mil),41995.0,41995.0,PASS
+V2_vs_pkkp,2017 revenue (RM mil),220406.0,220406.0,PASS
+V2_vs_pkkp,2017 opex (RM mil),217695.2,217695.2,PASS
+V2_vs_pkkp,2017 gross DE (RM mil),44883.8,44883.8,PASS
+V2_vs_pkkp,2018 revenue (RM mil),232882.6,232882.6,PASS
+V2_vs_pkkp,2018 opex (RM mil),230960.5,230960.5,PASS
+V2_vs_pkkp,2018 gross DE (RM mil),56095.5,56095.5,PASS
+V2_vs_pkkp,2019 revenue (RM mil),264414.8,264414.8,PASS
+V2_vs_pkkp,2019 opex (RM mil),263342.9,263342.9,PASS
+V2_vs_pkkp,2019 gross DE (RM mil),54173.2,54173.2,PASS
+V2_vs_pkkp,2020 revenue (RM mil),225074.9,225075.5,PASS
+V2_vs_pkkp,2020 opex (RM mil),224600.2,224600.2,PASS
+V2_vs_pkkp,2020 gross DE (RM mil),51359.9,51359.9,PASS
+V2_vs_pkkp,2021 revenue (RM mil),233752.1,233751.8,PASS
+V2_vs_pkkp,2021 opex (RM mil),231516.4,231516.4,PASS
+V2_vs_pkkp,2021 gross DE (RM mil),64256.7,64256.7,PASS
+V2_vs_pkkp,2022 revenue (RM mil),294356.8,294356.8,PASS
+V2_vs_pkkp,2022 opex (RM mil),292693.2,292693.2,PASS
+V2_vs_pkkp,2022 gross DE (RM mil),71574.0,71574.2,PASS
+V2_vs_pkkp,2023 revenue (RM mil),314959.5,314959.5,PASS
+V2_vs_pkkp,2023 opex (RM mil),311266.9,311266.9,PASS
+V2_vs_pkkp,2023 gross DE (RM mil),96089.7,96091.0,PASS
+V2_vs_pkkp,2024 revenue (RM mil),324617.6,324617.6,PASS
+V2_vs_pkkp,2024 opex (RM mil),321508.9,321509.0,PASS
+V2_vs_pkkp,2024 gross DE (RM mil),84011.6,84011.6,PASS
+V3_fy2025_measured,revenue RM bil: BNM measured vs MOF revised,334.115,336.069,INFO
+V3_fy2025_measured,opex RM bil: BNM measured vs MOF revised,332.15,330.776,INFO
+V3_fy2025_measured,gross DE RM bil: BNM measured vs MOF revised,80.0,81.921,INFO
+V3_fy2025_measured,overall deficit RM bil: BNM measured vs MOF revised,-76.714,-75.288,INFO
+V3_fy2025_measured,opex RM bil: BNM measured vs signature-nowcast mid,343.596,330.776,INFO
+V4_3.1.1_direct_tax_subtotal,all rows (151 checked),151,151,PASS
+V4_3.1.1_indirect_tax_subtotal,all rows (151 checked),151,151,PASS
+V4_3.1.1_nontax_subtotal,all rows (151 checked),151,151,PASS
+V4_3.1.1_revenue_total,2023 2Q,72221.139,72209.542,SOURCE_DIVERGENCE
+V4_3.1.1_revenue_total,2023 1Q,76184.845,76196.443,SOURCE_DIVERGENCE
+V4_3.1.1_revenue_total,all rows (151 checked),151,149,SOURCE_DIVERGENCE
+V4_3.1.2_debt_service_total,all rows (136 checked),136,136,PASS
+V4_3.1.2_opex_total,all rows (136 checked),136,136,PASS
+V4_3.1.3_economic_subtotal,all rows (150 checked),150,150,PASS
+V4_3.1.3_social_subtotal,all rows (150 checked),150,150,PASS
+V4_3.1.3_devex_total,2018 1Q,10917.692,10912.789,SOURCE_DIVERGENCE
+V4_3.1.3_devex_total,2018 annual,62430.584,56360.341,SOURCE_DIVERGENCE
+V4_3.1.3_devex_total,all rows (150 checked),150,148,SOURCE_DIVERGENCE
+V4_3.1.4_mgs_maturity_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_mgii_maturity_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_domestic_debt_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_external_debt_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.4_debt_total,all rows (91 checked),91,91,PASS
+V4_3.1.5_mgs_holder_subtotal,2017 3Q,365852.726,365892.726,SOURCE_DIVERGENCE
+V4_3.1.5_mgs_holder_subtotal,2017 4Q,364671.726,364711.726,SOURCE_DIVERGENCE
+V4_3.1.5_mgs_holder_subtotal,2023 annual,589857.729,589827.729,SOURCE_DIVERGENCE
+V4_3.1.5_mgs_holder_subtotal,all rows (91 checked),91,88,SOURCE_DIVERGENCE
+V4_3.1.5_mgii_holder_subtotal,2018 1Q,282000.0,282150.0,SOURCE_DIVERGENCE
+V4_3.1.5_mgii_holder_subtotal,all rows (91 checked),91,90,SOURCE_DIVERGENCE
+V4_3.1.5_trebil_holder_subtotal,all rows (91 checked),91,91,PASS
+V4_3.1.5_holders_total,all rows (91 checked),91,91,PASS
+V4_3.1.6_currency_total,all rows (106 checked),106,106,PASS
+V4_1.1_reserve_money_components,all rows (392 checked),392,392,PASS
+V4_1.1_reserve_money_factors,all rows (392 checked),392,392,PASS
+V4_1.3_m1,all rows (161 checked),161,161,PASS
+V4_1.3_m2,all rows (161 checked),161,161,PASS
+V4_1.3_m3,all rows (161 checked),161,161,PASS
+V4_3.8_net_international_reserves,all rows (377 checked),377,377,PASS
+V5_3.1_annual_vs_quarters,1997 sou_fin_dom_bor_les_dom_rep,3000.0,4480.0,SOURCE_DIVERGENCE
+V5_3.1_annual_vs_quarters,1997 sou_fin_dom_bor_net_dom_bor,5048.0,6528.0,SOURCE_DIVERGENCE
+V5_3.1_annual_vs_quarters,all cols (383 checked),383,381,SOURCE_DIVERGENCE
+V5_3.1.1_annual_vs_quarters,2001 tax_rev_dir_tax_oth,383.0,380.0,SOURCE_DIVERGENCE
+V5_3.1.1_annual_vs_quarters,all cols (610 checked),610,609,SOURCE_DIVERGENCE
+V5_3.1.2_annual_vs_quarters,all cols (286 checked),286,286,PASS
+V5_3.1.3_annual_vs_quarters,2018 gen_adm,2455.493,2190.607,SOURCE_DIVERGENCE
+V5_3.1.3_annual_vs_quarters,2018 total,62430.584,56100.359,SOURCE_DIVERGENCE
+V5_3.1.3_annual_vs_quarters,all cols (336 checked),336,334,SOURCE_DIVERGENCE
+V5_3.1.4_annual_vs_quarters,all cols (360 checked),360,360,PASS
+V5_3.1.5_annual_vs_quarters,2010 tre_bil_ban_ins,1978.679,1846.679,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2010 tre_bil_oth,1392.548,1524.548,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2013 mgii_fin_sec_ban_ins,59505.817,59445.817,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2013 mgii_fin_sec_dev_fin_ins,19102.74,19162.74,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgii_fin_sec_ban_ins,100759.574,100790.0,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgii_for_hol,18495.737,18465.737,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgs_fin_sec_ban_ins,55995.291,56045.291,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2017 mgs_for_hol,164399.032,164389.032,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgii_fin_sec_ban_ins,125431.69,125461.69,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgii_for_hol,15892.525,15862.525,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgs_fin_sec_ban_ins,75073.619,78681.727,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2018 mgs_for_hol,146151.974,142543.864,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,2023 mgs_ins_com,37872.541,37902.541,SOURCE_DIVERGENCE
+V5_3.1.5_annual_vs_quarters,all cols (449 checked),449,436,SOURCE_DIVERGENCE
+V6_1.1_annual_vs_months,all cols (280 checked),280,280,PASS
+V6_1.2_annual_vs_months,all cols (477 checked),477,477,PASS
+V6_1.4_annual_vs_months,2019 gol_for_exc,422211.132,414843.753,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,2019 tot_ass,458967.476,451600.097,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,2020 gol_for_exc,421775.202,421645.94,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,2020 tot_ass,488043.568,487914.013,SOURCE_DIVERGENCE
+V6_1.4_annual_vs_months,all cols (269 checked),269,265,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2019 reserves,150533.338,143166.0,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2019 tot_lia,458967.476,451600.097,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2020 reserves,170575.679,170446.905,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,2020 tot_lia,488043.568,487914.013,SOURCE_DIVERGENCE
+V6_1.5_annual_vs_months,all cols (120 checked),120,116,SOURCE_DIVERGENCE
+V6_2.9_annual_vs_months,all cols (236 checked),236,236,PASS
+V6_2.10_annual_vs_months,2012 cor_bon_isl_bon,11668.165,11628.165,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,2012 cor_bon_new_iss_cor_bon,121162.685,121122.685,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,2012 net_fun_rai_pri_sec,90788.035,90748.035,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,2012 new_iss_cor_bon_suk,63383.522,63343.522,SOURCE_DIVERGENCE
+V6_2.10_annual_vs_months,all cols (342 checked),342,338,SOURCE_DIVERGENCE
+V6_3.8_annual_vs_months,all cols (224 checked),224,224,PASS
+V6_2.6_annual_vs_months,all cols (317 checked),317,317,PASS
+V7_1.7_bank_type_total,all cols (6219 checked),6219,6219,PASS
+V7_1.9_bank_type_total,all cols (5515 checked),5515,5515,PASS
+V7_1.10_bank_type_total,all cols (944 checked),944,944,PASS
+V7_1.12_bank_type_total,all cols (944 checked),944,944,PASS
+V7_1.14_bank_type_total,all cols (944 checked),944,944,PASS
+V7_1.18_bank_type_total,all cols (1239 checked),1239,1239,PASS

@@ -1,0 +1,481 @@
+state,district,date,poverty_absolute,poverty_relative,retrieved_from,retrieved_date
+Johor,Batu Pahat,2019-01-01,2.9,9.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Batu Pahat,2022-01-01,5.1,19.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Batu Pahat,2024-01-01,2.4,11.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Johor Bahru,2019-01-01,3.3,12.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Johor Bahru,2022-01-01,3.7,10.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Johor Bahru,2024-01-01,1.9,9.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kluang,2019-01-01,5.0,24.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kluang,2022-01-01,7.2,27.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kluang,2024-01-01,5.7,24.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kota Tinggi,2019-01-01,6.0,20.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kota Tinggi,2022-01-01,5.0,17.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kota Tinggi,2024-01-01,4.2,22.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kulai,2019-01-01,3.2,10.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kulai,2022-01-01,0.4,7.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Kulai,2024-01-01,0.1,6.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Mersing,2019-01-01,12.1,41.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Mersing,2022-01-01,12.7,33.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Mersing,2024-01-01,6.7,25.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Muar,2019-01-01,4.1,14.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Muar,2022-01-01,6.1,23.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Muar,2024-01-01,2.1,16.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Pontian,2019-01-01,5.8,23.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Pontian,2022-01-01,5.1,21.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Pontian,2024-01-01,2.0,25.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Segamat,2019-01-01,2.9,20.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Segamat,2022-01-01,7.4,23.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Segamat,2024-01-01,3.1,16.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Tangkak,2019-01-01,3.7,16.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Tangkak,2022-01-01,6.9,28.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Johor,Tangkak,2024-01-01,4.0,19.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Baling,2019-01-01,17.9,23.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Baling,2022-01-01,14.4,19.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Baling,2024-01-01,14.7,24.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Bandar Baharu,2019-01-01,7.2,12.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Bandar Baharu,2022-01-01,3.9,14.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Bandar Baharu,2024-01-01,5.8,20.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kota Setar,2019-01-01,6.4,8.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kota Setar,2022-01-01,5.1,9.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kota Setar,2024-01-01,5.5,10.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kuala Muda,2019-01-01,10.9,13.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kuala Muda,2022-01-01,13.8,15.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kuala Muda,2024-01-01,11.8,16.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kubang Pasu,2019-01-01,4.8,5.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kubang Pasu,2022-01-01,3.3,6.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kubang Pasu,2024-01-01,4.0,6.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kulim,2019-01-01,9.9,10.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kulim,2022-01-01,11.4,11.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Kulim,2024-01-01,8.5,13.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Langkawi,2019-01-01,0.9,1.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Langkawi,2022-01-01,5.7,5.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Langkawi,2024-01-01,6.0,8.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Padang Terap,2019-01-01,9.1,5.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Padang Terap,2022-01-01,8.9,11.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Padang Terap,2024-01-01,8.0,8.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Pendang,2019-01-01,8.1,9.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Pendang,2022-01-01,7.3,12.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Pendang,2024-01-01,7.3,16.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Pokok Sena,2019-01-01,7.3,8.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Pokok Sena,2022-01-01,7.2,9.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Pokok Sena,2024-01-01,7.2,6.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Sik,2019-01-01,7.6,8.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Sik,2022-01-01,4.0,9.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Sik,2024-01-01,8.7,14.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Yan,2019-01-01,12.7,24.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Yan,2022-01-01,6.0,12.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kedah,Yan,2024-01-01,7.4,13.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Bachok,2019-01-01,13.1,10.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Bachok,2022-01-01,12.1,10.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Bachok,2024-01-01,11.3,12.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Gua Musang,2019-01-01,17.2,16.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Gua Musang,2022-01-01,18.5,12.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Gua Musang,2024-01-01,16.3,7.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Jeli,2019-01-01,18.5,9.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Jeli,2022-01-01,11.3,17.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Jeli,2024-01-01,10.1,19.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kecil Lojing,2019-01-01,33.3,11.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kecil Lojing,2022-01-01,43.8,43.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kecil Lojing,2024-01-01,20.0,6.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kota Bharu,2019-01-01,9.1,7.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kota Bharu,2022-01-01,10.5,7.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kota Bharu,2024-01-01,9.9,6.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kuala Krai,2019-01-01,22.4,17.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kuala Krai,2022-01-01,22.4,30.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Kuala Krai,2024-01-01,20.2,22.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Machang,2019-01-01,7.1,8.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Machang,2022-01-01,12.0,14.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Machang,2024-01-01,7.3,10.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Pasir Mas,2019-01-01,13.1,9.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Pasir Mas,2022-01-01,9.0,10.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Pasir Mas,2024-01-01,8.6,11.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Pasir Puteh,2019-01-01,12.7,12.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Pasir Puteh,2022-01-01,15.9,12.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Pasir Puteh,2024-01-01,11.1,17.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Tanah Merah,2019-01-01,12.0,8.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Tanah Merah,2022-01-01,17.9,14.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Tanah Merah,2024-01-01,14.9,11.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Tumpat,2019-01-01,12.5,8.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Tumpat,2022-01-01,13.5,11.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Kelantan,Tumpat,2024-01-01,12.7,8.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Alor Gajah,2019-01-01,3.8,18.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Alor Gajah,2022-01-01,4.8,14.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Alor Gajah,2024-01-01,4.5,11.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Jasin,2019-01-01,3.0,17.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Jasin,2022-01-01,5.5,16.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Jasin,2024-01-01,1.1,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Melaka Tengah,2019-01-01,4.2,16.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Melaka Tengah,2022-01-01,3.7,12.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Melaka,Melaka Tengah,2024-01-01,2.8,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Jelebu,2019-01-01,5.2,18.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Jelebu,2022-01-01,7.3,29.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Jelebu,2024-01-01,6.4,27.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Jempol,2019-01-01,6.2,14.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Jempol,2022-01-01,8.0,21.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Jempol,2024-01-01,7.1,21.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Kuala Pilah,2019-01-01,8.3,23.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Kuala Pilah,2022-01-01,6.8,31.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Kuala Pilah,2024-01-01,6.2,27.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Port Dickson,2019-01-01,4.3,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Port Dickson,2022-01-01,4.9,13.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Port Dickson,2024-01-01,4.4,16.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Rembau,2019-01-01,5.7,20.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Rembau,2022-01-01,3.0,19.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Rembau,2024-01-01,2.6,19.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Seremban,2019-01-01,3.2,7.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Seremban,2022-01-01,3.0,7.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Seremban,2024-01-01,2.8,6.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Tampin,2019-01-01,4.8,18.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Tampin,2022-01-01,7.3,21.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Negeri Sembilan,Tampin,2024-01-01,7.0,15.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Bentong,2019-01-01,3.3,3.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Bentong,2022-01-01,2.8,0.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Bentong,2024-01-01,2.0,0.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Bera,2019-01-01,2.9,8.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Bera,2022-01-01,8.5,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Bera,2024-01-01,9.0,18.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Cameron Highlands,2019-01-01,0.4,1.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Cameron Highlands,2022-01-01,1.9,0.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Cameron Highlands,2024-01-01,5.0,1.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Jerantut,2019-01-01,9.9,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Jerantut,2022-01-01,8.6,15.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Jerantut,2024-01-01,8.8,14.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Kuantan,2019-01-01,1.8,3.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Kuantan,2022-01-01,4.1,5.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Kuantan,2024-01-01,3.7,5.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Lipis,2019-01-01,5.8,8.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Lipis,2022-01-01,9.2,8.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Lipis,2024-01-01,9.2,0.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Maran,2019-01-01,6.4,8.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Maran,2022-01-01,8.8,12.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Maran,2024-01-01,7.9,7.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Pekan,2019-01-01,6.6,8.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Pekan,2022-01-01,11.6,15.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Pekan,2024-01-01,10.9,8.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Raub,2019-01-01,4.7,3.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Raub,2022-01-01,2.3,1.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Raub,2024-01-01,3.4,0.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Rompin,2019-01-01,6.7,6.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Rompin,2022-01-01,12.0,14.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Rompin,2024-01-01,8.2,3.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Temerloh,2019-01-01,6.1,10.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Temerloh,2022-01-01,6.6,8.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pahang,Temerloh,2024-01-01,6.2,13.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Bagan Datuk,2019-01-01,6.4,11.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Bagan Datuk,2022-01-01,12.4,19.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Bagan Datuk,2024-01-01,11.5,18.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Batang Padang,2019-01-01,7.1,12.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Batang Padang,2022-01-01,13.3,18.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Batang Padang,2024-01-01,11.5,18.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Hilir Perak,2019-01-01,12.0,16.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Hilir Perak,2022-01-01,14.8,22.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Hilir Perak,2024-01-01,12.3,15.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Hulu Perak,2019-01-01,12.9,19.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Hulu Perak,2022-01-01,16.3,18.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Hulu Perak,2024-01-01,13.3,11.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kampar,2019-01-01,7.0,16.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kampar,2022-01-01,4.7,10.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kampar,2024-01-01,4.5,22.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kerian,2019-01-01,6.0,8.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kerian,2022-01-01,8.7,18.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kerian,2024-01-01,7.3,9.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kinta,2019-01-01,4.9,9.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kinta,2022-01-01,3.8,9.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kinta,2024-01-01,3.8,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kuala Kangsar,2019-01-01,10.6,14.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kuala Kangsar,2022-01-01,13.0,17.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Kuala Kangsar,2024-01-01,11.3,12.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Larut dan Matang,2019-01-01,7.9,8.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Larut dan Matang,2022-01-01,9.2,14.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Manjung,2019-01-01,6.9,8.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Manjung,2022-01-01,3.8,11.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Manjung,2024-01-01,3.9,7.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Muallim,2019-01-01,11.6,14.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Muallim,2022-01-01,9.2,14.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Muallim,2024-01-01,7.7,10.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Perak Tengah,2019-01-01,10.0,14.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Perak Tengah,2022-01-01,11.1,17.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Perak Tengah,2024-01-01,10.2,15.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Selama,2022-01-01,5.3,18.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Selama,2024-01-01,10.4,11.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perak,Larut & Matang,2024-01-01,9.0,7.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perlis,Perlis,2019-01-01,3.9,12.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Perlis,Perlis,2022-01-01,4.0,12.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Barat Daya,2019-01-01,1.0,10.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Barat Daya,2022-01-01,1.4,9.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Barat Daya,2024-01-01,0.4,7.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Selatan,2019-01-01,2.1,15.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Selatan,2022-01-01,3.1,18.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Tengah,2019-01-01,2.3,16.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Tengah,2022-01-01,2.4,16.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Utara,2019-01-01,4.6,18.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Utara,2022-01-01,3.7,18.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Timur Laut,2019-01-01,0.5,8.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Timur Laut,2022-01-01,0.7,14.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,Timur Laut,2024-01-01,0.4,14.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,S.P.Tengah,2024-01-01,2.8,17.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,S.P.Utara,2024-01-01,3.9,18.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Pulau Pinang,S.P. Selatan,2024-01-01,3.0,18.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Beaufort,2019-01-01,21.0,19.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Beaufort,2022-01-01,19.8,13.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Beaufort,2024-01-01,20.4,25.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Beluran,2019-01-01,45.0,33.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Beluran,2022-01-01,37.7,29.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Beluran,2024-01-01,33.0,17.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kalabakan,2022-01-01,33.3,21.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kalabakan,2024-01-01,26.8,35.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Keningau,2019-01-01,17.1,10.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Keningau,2022-01-01,18.8,10.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Keningau,2024-01-01,12.8,11.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kinabatangan,2019-01-01,32.1,19.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kinabatangan,2022-01-01,28.9,18.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kinabatangan,2024-01-01,26.7,10.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Belud,2019-01-01,34.0,31.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Belud,2022-01-01,27.8,29.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Belud,2024-01-01,26.1,17.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Kinabalu,2019-01-01,7.5,5.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Kinabalu,2022-01-01,10.3,8.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Kinabalu,2024-01-01,12.0,7.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Marudu,2019-01-01,46.1,42.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Marudu,2022-01-01,49.9,38.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kota Marudu,2024-01-01,40.0,38.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kuala Penyu,2019-01-01,29.7,20.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kuala Penyu,2022-01-01,17.6,20.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kuala Penyu,2024-01-01,14.3,30.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kudat,2019-01-01,41.5,36.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kudat,2022-01-01,34.7,32.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kudat,2024-01-01,35.3,32.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kunak,2019-01-01,26.0,13.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kunak,2022-01-01,25.4,13.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Kunak,2024-01-01,29.2,26.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Lahad Datu,2019-01-01,19.3,9.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Lahad Datu,2022-01-01,23.5,14.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Lahad Datu,2024-01-01,13.6,3.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Nabawan,2019-01-01,35.6,12.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Nabawan,2022-01-01,27.1,10.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Nabawan,2024-01-01,25.4,15.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Papar,2019-01-01,12.7,10.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Papar,2022-01-01,16.2,10.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Papar,2024-01-01,12.0,9.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Penampang,2019-01-01,4.4,4.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Penampang,2022-01-01,6.7,5.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Penampang,2024-01-01,5.7,5.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Pitas,2019-01-01,53.6,56.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Pitas,2022-01-01,52.7,46.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Pitas,2024-01-01,50.0,44.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Putatan,2019-01-01,10.9,8.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Putatan,2022-01-01,12.9,7.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Putatan,2024-01-01,6.9,3.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Ranau,2019-01-01,26.8,21.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Ranau,2022-01-01,25.4,21.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Ranau,2024-01-01,23.5,27.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Sandakan,2019-01-01,18.2,11.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Sandakan,2022-01-01,17.7,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Sandakan,2024-01-01,15.2,12.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Semporna,2019-01-01,31.5,18.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Semporna,2022-01-01,28.0,16.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Semporna,2024-01-01,30.4,24.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Sipitang,2019-01-01,10.5,6.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Sipitang,2022-01-01,22.1,15.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Sipitang,2024-01-01,15.3,9.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tambunan,2019-01-01,16.7,19.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tambunan,2022-01-01,9.0,13.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tambunan,2024-01-01,8.3,13.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tawau,2019-01-01,14.2,9.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tawau,2022-01-01,14.4,12.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tawau,2024-01-01,13.2,13.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Telupid,2019-01-01,40.7,35.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Telupid,2022-01-01,20.8,16.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Telupid,2024-01-01,22.0,12.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tenom,2019-01-01,17.2,11.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tenom,2022-01-01,15.8,12.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tenom,2024-01-01,12.1,17.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tongod,2019-01-01,56.6,49.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tongod,2022-01-01,50.8,23.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tongod,2024-01-01,41.5,28.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tuaran,2019-01-01,16.7,16.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tuaran,2022-01-01,25.8,19.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Tuaran,2024-01-01,23.7,13.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sabah,Membakut,2024-01-01,27.4,21.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Asajaya,2019-01-01,20.0,28.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Asajaya,2022-01-01,17.9,19.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Asajaya,2024-01-01,14.0,26.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bau,2019-01-01,9.6,13.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bau,2022-01-01,8.3,18.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bau,2024-01-01,6.2,17.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Belaga,2019-01-01,6.9,21.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Belaga,2022-01-01,19.5,28.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Belaga,2024-01-01,13.6,27.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Beluru,2019-01-01,12.0,22.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Beluru,2022-01-01,13.7,18.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Beluru,2024-01-01,10.1,11.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Betong,2019-01-01,22.4,31.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Betong,2022-01-01,9.8,21.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Betong,2024-01-01,7.6,23.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bintulu,2019-01-01,2.1,2.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bintulu,2022-01-01,3.5,1.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bintulu,2024-01-01,3.7,3.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bukit Mabong,2019-01-01,28.7,21.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bukit Mabong,2022-01-01,8.2,39.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Bukit Mabong,2024-01-01,6.3,54.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Dalat,2019-01-01,11.9,20.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Dalat,2022-01-01,11.1,19.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Dalat,2024-01-01,10.1,31.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Daro,2019-01-01,18.5,25.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Daro,2022-01-01,32.5,34.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Daro,2024-01-01,26.8,27.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Julau,2019-01-01,13.0,43.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Julau,2022-01-01,31.2,46.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Julau,2024-01-01,26.6,38.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kabong,2019-01-01,16.1,32.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kabong,2022-01-01,8.6,26.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kabong,2024-01-01,4.5,34.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kanowit,2019-01-01,21.9,41.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kanowit,2022-01-01,24.9,45.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kanowit,2024-01-01,21.8,33.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kapit,2019-01-01,3.8,18.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kapit,2022-01-01,20.6,37.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kapit,2024-01-01,15.5,36.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kuching,2019-01-01,5.6,7.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kuching,2022-01-01,9.1,10.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Kuching,2024-01-01,7.7,7.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lawas,2019-01-01,14.4,16.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lawas,2022-01-01,18.1,33.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lawas,2024-01-01,14.6,28.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Limbang,2019-01-01,11.0,16.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Limbang,2022-01-01,14.6,20.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Limbang,2024-01-01,14.4,31.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lubok Antu,2019-01-01,7.9,32.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lubok Antu,2022-01-01,14.8,32.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lundu,2019-01-01,10.2,25.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lundu,2022-01-01,13.1,23.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lundu,2024-01-01,12.9,26.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Maradong,2019-01-01,12.7,32.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Maradong,2022-01-01,19.5,36.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Maradong,2024-01-01,16.9,37.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Marudi,2019-01-01,16.9,26.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Marudi,2022-01-01,12.9,20.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Marudi,2024-01-01,4.4,17.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Matu,2019-01-01,24.1,35.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Matu,2022-01-01,20.8,30.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Matu,2024-01-01,9.1,27.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Miri,2019-01-01,4.7,6.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Miri,2022-01-01,6.3,6.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Miri,2024-01-01,3.8,3.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Mukah,2019-01-01,10.4,16.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Mukah,2022-01-01,14.0,21.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Mukah,2024-01-01,11.9,18.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Pakan,2019-01-01,21.7,38.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Pakan,2022-01-01,17.6,29.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Pakan,2024-01-01,14.5,30.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Pusa,2019-01-01,23.0,44.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Pusa,2022-01-01,17.2,28.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Pusa,2024-01-01,14.6,42.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Samarahan,2019-01-01,4.7,6.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Samarahan,2022-01-01,7.9,6.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Samarahan,2024-01-01,6.3,7.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Saratok,2019-01-01,13.8,28.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Saratok,2022-01-01,7.4,12.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Saratok,2024-01-01,5.0,32.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sarikei,2019-01-01,9.1,25.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sarikei,2022-01-01,20.9,30.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sarikei,2024-01-01,17.8,20.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sebauh,2019-01-01,7.4,14.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sebauh,2022-01-01,4.8,16.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sebauh,2024-01-01,2.9,17.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Selangau,2019-01-01,14.3,38.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Selangau,2022-01-01,19.6,38.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Selangau,2024-01-01,17.2,20.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Serian,2019-01-01,16.8,20.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Serian,2022-01-01,14.6,22.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Serian,2024-01-01,11.8,25.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sibu,2019-01-01,7.3,11.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sibu,2022-01-01,10.2,14.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sibu,2024-01-01,6.3,10.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Simunjan,2019-01-01,21.1,35.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Simunjan,2022-01-01,17.9,33.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Simunjan,2024-01-01,14.9,35.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Song,2019-01-01,6.0,40.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Song,2022-01-01,15.8,41.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Song,2024-01-01,11.3,40.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sri Aman,2019-01-01,7.4,20.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sri Aman,2022-01-01,8.9,28.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sri Aman,2024-01-01,6.2,25.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Subis,2019-01-01,7.5,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Subis,2022-01-01,4.7,14.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Subis,2024-01-01,2.4,4.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tanjung Manis,2019-01-01,3.4,25.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tanjung Manis,2022-01-01,20.7,33.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tanjung Manis,2024-01-01,15.4,35.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tatau,2019-01-01,5.0,8.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tatau,2022-01-01,5.9,14.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tatau,2024-01-01,2.6,6.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tebedu,2019-01-01,38.6,40.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tebedu,2022-01-01,26.9,44.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Tebedu,2024-01-01,25.8,46.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Telang Usan,2019-01-01,13.6,23.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Telang Usan,2022-01-01,6.0,20.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Telang Usan,2024-01-01,1.3,10.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lubok antu,2024-01-01,13.0,23.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Gedong,2024-01-01,16.7,35.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Sebuyau,2024-01-01,21.4,53.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Siburan,2024-01-01,4.2,16.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Pantu,2024-01-01,10.9,60.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Sarawak,Lingga,2024-01-01,6.3,45.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Gombak,2019-01-01,0.4,14.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Gombak,2022-01-01,2.4,13.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Gombak,2024-01-01,2.1,9.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Klang,2019-01-01,1.7,16.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Klang,2022-01-01,2.2,20.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Klang,2024-01-01,1.0,12.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Kuala Langat,2019-01-01,2.4,19.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Kuala Langat,2022-01-01,0.3,9.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Kuala Langat,2024-01-01,0.3,2.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Kuala Selangor,2019-01-01,3.5,30.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Kuala Selangor,2022-01-01,2.8,25.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Kuala Selangor,2024-01-01,1.8,21.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Petaling,2019-01-01,1.1,14.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Petaling,2022-01-01,1.6,14.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Petaling,2024-01-01,1.0,10.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Sabak Bernam,2019-01-01,4.7,46.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Sabak Bernam,2022-01-01,5.3,42.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Sabak Bernam,2024-01-01,2.7,25.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Sepang,2019-01-01,0.7,7.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Sepang,2022-01-01,0.0,3.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Sepang,2024-01-01,0.1,1.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Ulu Langat,2019-01-01,0.6,10.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Ulu Langat,2022-01-01,0.5,7.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Ulu Langat,2024-01-01,0.1,0.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Ulu Selangor,2019-01-01,1.5,26.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Ulu Selangor,2022-01-01,1.7,23.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Selangor,Ulu Selangor,2024-01-01,0.4,16.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Besut,2019-01-01,10.1,9.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Besut,2022-01-01,12.7,11.3,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Besut,2024-01-01,13.1,14.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Dungun,2019-01-01,5.1,6.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Dungun,2022-01-01,2.2,2.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Dungun,2024-01-01,4.4,12.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Hulu Terengganu,2019-01-01,7.9,19.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Hulu Terengganu,2022-01-01,10.8,16.2,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kemaman,2019-01-01,4.6,5.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kemaman,2022-01-01,4.1,5.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kemaman,2024-01-01,3.5,6.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kuala Nerus,2019-01-01,5.4,7.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kuala Nerus,2022-01-01,1.9,3.5,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kuala Nerus,2024-01-01,1.6,2.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kuala Terengganu,2019-01-01,4.4,4.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kuala Terengganu,2022-01-01,5.9,5.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Kuala Terengganu,2024-01-01,4.2,9.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Marang,2019-01-01,8.2,12.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Marang,2022-01-01,9.0,11.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Marang,2024-01-01,7.3,13.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Setiu,2019-01-01,6.5,11.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Setiu,2022-01-01,7.5,6.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Setiu,2024-01-01,4.7,7.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+Terengganu,Hulu,2024-01-01,6.6,14.8,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,2019-01-01,0.2,10.6,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,2022-01-01,1.4,12.7,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+W.P. Labuan,W.P. Labuan,2019-01-01,3.1,12.9,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+W.P. Labuan,W.P. Labuan,2022-01-01,2.5,7.0,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+W.P. Putrajaya,W.P. Putrajaya,2019-01-01,0.4,12.1,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03
+W.P. Putrajaya,W.P. Putrajaya,2022-01-01,0.1,11.4,https://storage.dosm.gov.my/hies/hh_poverty_district.csv,2026-08-03

@@ -1,0 +1,30 @@
+check,year,expected,got,status,note
+V1_wage_roundtrip,2010,260682.000,260682.000,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2011,292394.000,292394.000,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2012,322809.000,322809.000,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2013,345568.000,345568.000,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2014,379127.000,379127.000,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2015,412240.002,412240.002,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2016,444489.008,444489.008,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2017,487764.331,487764.331,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2018,517927.151,517927.151,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2019,542657.944,542657.944,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2020,529996.389,529996.389,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2021,543374.552,543374.552,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2022,584066.163,584066.163,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2023,612060.237,612060.237,PASS,compensation -> wage -> compensation
+V2_labour_share_band,2010,20-60%,31.7%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2011,20-60%,32.1%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2012,20-60%,33.2%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2013,20-60%,33.9%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2014,20-60%,34.3%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2015,20-60%,35.0%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2016,20-60%,35.6%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2017,20-60%,35.5%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2018,20-60%,35.8%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2019,20-60%,35.9%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2020,20-60%,37.4%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2021,20-60%,35.1%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2022,20-60%,32.5%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2023,20-60%,33.5%,PASS,sanity band; outside it means a units or series mix-up
+V3_single_vintage,all,1 retrieved_date,['2026-08-03'],PASS,inputs must share one DOSM snapshot

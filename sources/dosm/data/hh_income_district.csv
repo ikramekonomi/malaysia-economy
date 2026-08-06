@@ -1,0 +1,481 @@
+state,district,date,income_mean,income_median,retrieved_from,retrieved_date
+Johor,Batu Pahat,2019-01-01,7392,6504,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Batu Pahat,2022-01-01,7419,6347,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Batu Pahat,2024-01-01,9006,7555,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Johor Bahru,2019-01-01,9315,7342,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Johor Bahru,2022-01-01,9869,8232,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Johor Bahru,2024-01-01,10975,8977,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kluang,2019-01-01,5953,4933,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kluang,2022-01-01,6461,5204,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kluang,2024-01-01,6616,6158,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kota Tinggi,2019-01-01,6982,5475,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kota Tinggi,2022-01-01,7529,6227,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kota Tinggi,2024-01-01,8106,6284,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kulai,2019-01-01,8602,7536,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kulai,2022-01-01,9177,7460,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Kulai,2024-01-01,10296,8406,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Mersing,2019-01-01,4937,3896,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Mersing,2022-01-01,5426,4445,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Mersing,2024-01-01,6014,5335,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Muar,2019-01-01,7540,5963,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Muar,2022-01-01,7572,5724,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Muar,2024-01-01,8401,7334,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Pontian,2019-01-01,6776,5585,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Pontian,2022-01-01,6913,5616,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Pontian,2024-01-01,7011,5685,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Segamat,2019-01-01,6431,5595,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Segamat,2022-01-01,6578,5318,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Segamat,2024-01-01,7348,6451,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Tangkak,2019-01-01,6659,5561,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Tangkak,2022-01-01,7093,5622,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Johor,Tangkak,2024-01-01,7524,6374,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Baling,2019-01-01,4313,3583,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Baling,2022-01-01,4263,3400,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Baling,2024-01-01,4345,3367,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Bandar Baharu,2019-01-01,4959,4022,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Bandar Baharu,2022-01-01,4565,3922,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Bandar Baharu,2024-01-01,4835,4310,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kota Setar,2019-01-01,5773,4532,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kota Setar,2022-01-01,5959,4751,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kota Setar,2024-01-01,6034,5208,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kuala Muda,2019-01-01,5656,4247,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kuala Muda,2022-01-01,5624,4200,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kuala Muda,2024-01-01,5729,4953,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kubang Pasu,2019-01-01,6291,4814,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kubang Pasu,2022-01-01,6221,5201,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kubang Pasu,2024-01-01,6313,5312,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kulim,2019-01-01,5476,4489,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kulim,2022-01-01,5636,4498,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Kulim,2024-01-01,6395,5236,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Langkawi,2019-01-01,6737,5905,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Langkawi,2022-01-01,6087,5250,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Langkawi,2024-01-01,6278,5083,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Padang Terap,2019-01-01,4781,3722,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Padang Terap,2022-01-01,4858,3902,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Padang Terap,2024-01-01,5062,3954,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Pendang,2019-01-01,4680,3765,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Pendang,2022-01-01,4986,3801,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Pendang,2024-01-01,5464,4592,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Pokok Sena,2019-01-01,5046,4246,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Pokok Sena,2022-01-01,5494,4668,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Pokok Sena,2024-01-01,5736,5163,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Sik,2019-01-01,4960,4094,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Sik,2022-01-01,5053,3703,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Sik,2024-01-01,5107,4438,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Yan,2019-01-01,4397,3502,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Yan,2022-01-01,4637,4080,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kedah,Yan,2024-01-01,5272,4695,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Bachok,2019-01-01,4728,3621,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Bachok,2022-01-01,4811,3625,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Bachok,2024-01-01,5149,4187,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Gua Musang,2019-01-01,4009,2942,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Gua Musang,2022-01-01,4473,3342,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Gua Musang,2024-01-01,4684,3871,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Jeli,2019-01-01,3872,2943,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Jeli,2022-01-01,3735,2906,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Jeli,2024-01-01,3829,3008,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kecil Lojing,2019-01-01,3002,3138,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kecil Lojing,2022-01-01,3153,2630,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kecil Lojing,2024-01-01,3511,3385,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kota Bharu,2019-01-01,5577,4171,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kota Bharu,2022-01-01,5693,4330,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kota Bharu,2024-01-01,6180,4729,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kuala Krai,2019-01-01,3979,2896,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kuala Krai,2022-01-01,3798,2763,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Kuala Krai,2024-01-01,3872,2994,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Machang,2019-01-01,4841,3708,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Machang,2022-01-01,4987,3429,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Machang,2024-01-01,5237,4156,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Pasir Mas,2019-01-01,4745,3341,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Pasir Mas,2022-01-01,4602,3508,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Pasir Mas,2024-01-01,4975,3591,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Pasir Puteh,2019-01-01,4688,3458,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Pasir Puteh,2022-01-01,4712,3453,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Pasir Puteh,2024-01-01,5070,4853,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Tanah Merah,2019-01-01,4338,3166,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Tanah Merah,2022-01-01,4177,2991,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Tanah Merah,2024-01-01,4922,3638,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Tumpat,2019-01-01,4838,3500,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Tumpat,2022-01-01,4741,3749,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Kelantan,Tumpat,2024-01-01,4991,3904,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Alor Gajah,2019-01-01,7050,5907,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Alor Gajah,2022-01-01,7235,5611,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Alor Gajah,2024-01-01,7855,6308,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Jasin,2019-01-01,7340,5640,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Jasin,2022-01-01,7145,5895,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Jasin,2024-01-01,7755,6401,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Melaka Tengah,2019-01-01,8100,6250,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Melaka Tengah,2022-01-01,8593,6557,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Melaka,Melaka Tengah,2024-01-01,9232,7415,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Jelebu,2019-01-01,5414,3976,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Jelebu,2022-01-01,4445,3636,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Jelebu,2024-01-01,4664,3713,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Jempol,2019-01-01,4926,3676,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Jempol,2022-01-01,4848,3830,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Jempol,2024-01-01,5777,4291,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Kuala Pilah,2019-01-01,5040,3587,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Kuala Pilah,2022-01-01,4509,3471,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Kuala Pilah,2024-01-01,4888,3996,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Port Dickson,2019-01-01,6393,4959,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Port Dickson,2022-01-01,6054,4805,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Port Dickson,2024-01-01,6280,5342,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Rembau,2019-01-01,5163,4135,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Rembau,2022-01-01,5544,4655,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Rembau,2024-01-01,5723,4894,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Seremban,2019-01-01,7611,5599,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Seremban,2022-01-01,7900,6384,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Seremban,2024-01-01,8395,6472,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Tampin,2019-01-01,5786,4332,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Tampin,2022-01-01,5097,4012,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Negeri Sembilan,Tampin,2024-01-01,5715,4367,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Bentong,2019-01-01,5300,4220,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Bentong,2022-01-01,5563,4691,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Bentong,2024-01-01,6278,5015,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Bera,2019-01-01,4566,3636,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Bera,2022-01-01,4567,3866,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Bera,2024-01-01,4997,4269,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Cameron Highlands,2019-01-01,6576,5729,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Cameron Highlands,2022-01-01,6265,5221,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Cameron Highlands,2024-01-01,6895,5655,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Jerantut,2019-01-01,4452,3781,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Jerantut,2022-01-01,4537,3781,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Jerantut,2024-01-01,5220,4231,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Kuantan,2019-01-01,7071,5654,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Kuantan,2022-01-01,6938,5926,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Kuantan,2024-01-01,7008,5520,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Lipis,2019-01-01,4504,3646,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Lipis,2022-01-01,4959,4115,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Lipis,2024-01-01,5276,4611,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Maran,2019-01-01,4678,3671,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Maran,2022-01-01,5036,4319,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Maran,2024-01-01,5088,4470,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Pekan,2019-01-01,5026,4092,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Pekan,2022-01-01,4780,4053,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Pekan,2024-01-01,5098,4344,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Raub,2019-01-01,5005,3805,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Raub,2022-01-01,5445,4375,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Raub,2024-01-01,5940,4427,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Rompin,2019-01-01,4641,3579,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Rompin,2022-01-01,5103,4148,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Rompin,2024-01-01,5429,4760,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Temerloh,2019-01-01,5205,4173,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Temerloh,2022-01-01,5180,4283,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pahang,Temerloh,2024-01-01,5521,4595,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Bagan Datuk,2019-01-01,5705,4503,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Bagan Datuk,2022-01-01,5160,4076,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Bagan Datuk,2024-01-01,5326,4134,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Batang Padang,2019-01-01,5637,4067,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Batang Padang,2022-01-01,5178,3953,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Batang Padang,2024-01-01,5433,4339,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Hilir Perak,2019-01-01,4783,3484,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Hilir Perak,2022-01-01,5203,4199,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Hilir Perak,2024-01-01,5599,4347,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Hulu Perak,2019-01-01,4554,3532,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Hulu Perak,2022-01-01,4891,3467,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Hulu Perak,2024-01-01,4980,3701,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kampar,2019-01-01,4845,3821,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kampar,2022-01-01,5087,4347,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kampar,2024-01-01,5608,4538,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kerian,2019-01-01,5532,4512,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kerian,2022-01-01,5276,3996,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kerian,2024-01-01,5590,4554,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kinta,2019-01-01,6120,4556,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kinta,2022-01-01,6308,5037,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kinta,2024-01-01,6758,5136,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kuala Kangsar,2019-01-01,5156,3875,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kuala Kangsar,2022-01-01,5176,3813,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Kuala Kangsar,2024-01-01,5489,3977,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Larut dan Matang,2019-01-01,5364,4345,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Larut dan Matang,2022-01-01,5400,4029,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Manjung,2019-01-01,6137,4636,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Manjung,2022-01-01,6318,5135,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Manjung,2024-01-01,6612,5380,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Muallim,2019-01-01,5488,3915,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Muallim,2022-01-01,6122,5015,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Muallim,2024-01-01,6229,4856,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Perak Tengah,2019-01-01,5390,4097,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Perak Tengah,2022-01-01,5956,4564,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Perak Tengah,2024-01-01,6027,4685,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Selama,2022-01-01,4439,3673,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Selama,2024-01-01,5019,3827,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perak,Larut & Matang,2024-01-01,6024,4843,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perlis,Perlis,2019-01-01,5476,4594,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Perlis,Perlis,2022-01-01,5664,4713,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Barat Daya,2019-01-01,8393,6576,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Barat Daya,2022-01-01,9254,7247,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Barat Daya,2024-01-01,10231,8919,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Selatan,2019-01-01,6843,5797,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Selatan,2022-01-01,7472,6231,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Tengah,2019-01-01,7457,5849,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Tengah,2022-01-01,8056,6220,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Utara,2019-01-01,6914,5566,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Seberang Perai Utara,2022-01-01,7330,6103,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Timur Laut,2019-01-01,8493,6902,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Timur Laut,2022-01-01,8727,6714,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,Timur Laut,2024-01-01,9993,7745,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,S.P.Tengah,2024-01-01,8413,6892,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,S.P.Utara,2024-01-01,8101,6810,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Pulau Pinang,S.P. Selatan,2024-01-01,8234,6822,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Beaufort,2019-01-01,4861,3765,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Beaufort,2022-01-01,4902,4018,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Beaufort,2024-01-01,5048,4070,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Beluran,2019-01-01,3907,2849,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Beluran,2022-01-01,4501,3131,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Beluran,2024-01-01,4993,4436,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kalabakan,2022-01-01,4938,3931,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kalabakan,2024-01-01,5174,3304,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Keningau,2019-01-01,5445,4097,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Keningau,2022-01-01,5979,4502,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Keningau,2024-01-01,6033,4801,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kinabatangan,2019-01-01,5128,4102,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kinabatangan,2022-01-01,5543,4162,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kinabatangan,2024-01-01,5632,4897,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Belud,2019-01-01,4382,3025,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Belud,2022-01-01,4949,3429,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Belud,2024-01-01,5007,3512,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Kinabalu,2019-01-01,7665,6004,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Kinabalu,2022-01-01,8388,5957,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Kinabalu,2024-01-01,8715,5896,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Marudu,2019-01-01,3771,2425,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Marudu,2022-01-01,4031,2677,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kota Marudu,2024-01-01,4685,2877,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kuala Penyu,2019-01-01,4275,2949,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kuala Penyu,2022-01-01,4311,3487,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kuala Penyu,2024-01-01,4750,3733,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kudat,2019-01-01,3966,2592,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kudat,2022-01-01,4049,2994,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kudat,2024-01-01,4571,3249,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kunak,2019-01-01,5194,3723,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kunak,2022-01-01,5838,4480,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Kunak,2024-01-01,6608,4539,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Lahad Datu,2019-01-01,5681,4186,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Lahad Datu,2022-01-01,5995,4457,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Lahad Datu,2024-01-01,6557,5526,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Nabawan,2019-01-01,4443,3613,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Nabawan,2022-01-01,5016,4110,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Nabawan,2024-01-01,5146,4361,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Papar,2019-01-01,5733,4571,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Papar,2022-01-01,5980,4871,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Papar,2024-01-01,6038,5177,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Penampang,2019-01-01,6570,5493,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Penampang,2022-01-01,7491,6265,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Penampang,2024-01-01,7550,6090,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Pitas,2019-01-01,3378,1999,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Pitas,2022-01-01,3406,2329,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Pitas,2024-01-01,4121,2785,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Putatan,2019-01-01,6471,5119,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Putatan,2022-01-01,7110,5699,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Putatan,2024-01-01,7377,6563,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Ranau,2019-01-01,4756,3571,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Ranau,2022-01-01,5270,4058,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Ranau,2024-01-01,5330,3470,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Sandakan,2019-01-01,6020,4680,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Sandakan,2022-01-01,6030,4828,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Sandakan,2024-01-01,6648,5314,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Semporna,2019-01-01,5933,3542,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Semporna,2022-01-01,5098,4093,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Semporna,2024-01-01,5604,4059,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Sipitang,2019-01-01,5271,3944,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Sipitang,2022-01-01,5479,4182,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Sipitang,2024-01-01,5548,4606,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tambunan,2019-01-01,4826,3581,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tambunan,2022-01-01,5113,4055,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tambunan,2024-01-01,5361,4854,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tawau,2019-01-01,6212,4427,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tawau,2022-01-01,6315,4783,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tawau,2024-01-01,6751,4852,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Telupid,2019-01-01,4762,2757,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Telupid,2022-01-01,4819,3953,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Telupid,2024-01-01,4877,4489,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tenom,2019-01-01,4734,3525,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tenom,2022-01-01,5217,4045,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tenom,2024-01-01,5410,4161,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tongod,2019-01-01,3364,2197,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tongod,2022-01-01,4019,2856,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tongod,2024-01-01,4090,3470,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tuaran,2019-01-01,5050,3736,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tuaran,2022-01-01,5166,3921,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Tuaran,2024-01-01,5388,4277,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sabah,Membakut,2024-01-01,4997,4037,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Asajaya,2019-01-01,4316,3101,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Asajaya,2022-01-01,4557,3929,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Asajaya,2024-01-01,5165,4447,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bau,2019-01-01,5183,4004,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bau,2022-01-01,5621,4735,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bau,2024-01-01,5843,4885,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Belaga,2019-01-01,4229,3442,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Belaga,2022-01-01,4239,3587,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Belaga,2024-01-01,4903,3977,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Beluru,2019-01-01,4119,3104,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Beluru,2022-01-01,4873,4164,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Beluru,2024-01-01,4927,4346,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Betong,2019-01-01,3962,2782,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Betong,2022-01-01,4422,3685,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Betong,2024-01-01,4572,4074,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bintulu,2019-01-01,8324,7380,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bintulu,2022-01-01,9645,8567,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bintulu,2024-01-01,10480,8317,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bukit Mabong,2019-01-01,4665,3829,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bukit Mabong,2022-01-01,3509,2948,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Bukit Mabong,2024-01-01,3783,2589,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Dalat,2019-01-01,4790,3486,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Dalat,2022-01-01,4841,4057,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Dalat,2024-01-01,5416,4614,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Daro,2019-01-01,3712,3054,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Daro,2022-01-01,4368,3373,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Daro,2024-01-01,4913,3806,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Julau,2019-01-01,3506,2488,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Julau,2022-01-01,3548,2652,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Julau,2024-01-01,4363,3264,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kabong,2019-01-01,3294,2945,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kabong,2022-01-01,4002,3500,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kabong,2024-01-01,4136,3407,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kanowit,2019-01-01,3480,2670,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kanowit,2022-01-01,3711,2648,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kanowit,2024-01-01,4549,3511,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kapit,2019-01-01,4344,3261,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kapit,2022-01-01,4053,2902,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kapit,2024-01-01,4326,3259,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kuching,2019-01-01,7376,5740,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kuching,2022-01-01,7588,5968,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Kuching,2024-01-01,8237,6741,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lawas,2019-01-01,5288,4044,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lawas,2022-01-01,4476,3183,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lawas,2024-01-01,5050,3929,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Limbang,2019-01-01,5989,4628,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Limbang,2022-01-01,5148,4023,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Limbang,2024-01-01,5202,4060,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lubok Antu,2019-01-01,3905,2853,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lubok Antu,2022-01-01,4129,3548,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lundu,2019-01-01,4428,3409,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lundu,2022-01-01,4935,3692,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lundu,2024-01-01,5170,3918,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Maradong,2019-01-01,4091,3021,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Maradong,2022-01-01,4117,3259,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Maradong,2024-01-01,4208,3472,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Marudi,2019-01-01,4605,3382,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Marudi,2022-01-01,5373,4234,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Marudi,2024-01-01,5430,4519,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Matu,2019-01-01,3901,2776,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Matu,2022-01-01,4362,3354,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Matu,2024-01-01,4417,3891,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Miri,2019-01-01,7235,5763,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Miri,2022-01-01,7932,6449,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Miri,2024-01-01,8166,6600,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Mukah,2019-01-01,5447,4238,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Mukah,2022-01-01,5962,4623,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Mukah,2024-01-01,6373,5169,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Pakan,2019-01-01,3175,2637,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Pakan,2022-01-01,3936,3546,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Pakan,2024-01-01,4473,3742,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Pusa,2019-01-01,2758,2449,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Pusa,2022-01-01,3395,3124,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Pusa,2024-01-01,4155,3276,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Samarahan,2019-01-01,6789,5858,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Samarahan,2022-01-01,7123,5953,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Samarahan,2024-01-01,7965,6785,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Saratok,2019-01-01,4202,3142,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Saratok,2022-01-01,4621,3763,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Saratok,2024-01-01,4796,3418,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sarikei,2019-01-01,4609,3486,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sarikei,2022-01-01,5440,3528,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sarikei,2024-01-01,5792,4675,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sebauh,2019-01-01,4202,3716,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sebauh,2022-01-01,5120,4428,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sebauh,2024-01-01,5726,4636,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Selangau,2019-01-01,3588,2671,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Selangau,2022-01-01,4128,3005,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Selangau,2024-01-01,4688,4170,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Serian,2019-01-01,4878,3674,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Serian,2022-01-01,4988,4074,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Serian,2024-01-01,5113,4082,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sibu,2019-01-01,6140,4809,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sibu,2022-01-01,6645,5248,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sibu,2024-01-01,6842,5737,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Simunjan,2019-01-01,3833,2823,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Simunjan,2022-01-01,3917,3196,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Simunjan,2024-01-01,4246,3365,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Song,2019-01-01,3443,2662,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Song,2022-01-01,3477,2926,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Song,2024-01-01,4077,3052,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sri Aman,2019-01-01,4621,3557,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sri Aman,2022-01-01,4881,3704,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sri Aman,2024-01-01,5349,3967,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Subis,2019-01-01,5528,4336,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Subis,2022-01-01,6390,5194,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Subis,2024-01-01,6475,5531,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tanjung Manis,2019-01-01,3849,2944,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tanjung Manis,2022-01-01,4017,3300,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tanjung Manis,2024-01-01,4457,3837,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tatau,2019-01-01,5345,4638,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tatau,2022-01-01,5617,4787,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tatau,2024-01-01,5807,4409,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tebedu,2019-01-01,3439,2614,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tebedu,2022-01-01,3218,2579,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Tebedu,2024-01-01,3375,3024,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Telang Usan,2019-01-01,4415,3375,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Telang Usan,2022-01-01,4692,3870,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Telang Usan,2024-01-01,4795,4281,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lubok antu,2024-01-01,4820,4169,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Gedong,2024-01-01,5013,3329,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Sebuyau,2024-01-01,3603,2717,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Siburan,2024-01-01,6368,5217,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Pantu,2024-01-01,2988,2525,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Sarawak,Lingga,2024-01-01,3663,2999,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Gombak,2019-01-01,11536,8501,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Gombak,2022-01-01,13523,10180,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Gombak,2024-01-01,14168,10777,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Klang,2019-01-01,9980,7888,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Klang,2022-01-01,10278,8203,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Klang,2024-01-01,10912,8837,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Kuala Langat,2019-01-01,8375,6950,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Kuala Langat,2022-01-01,11048,10093,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Kuala Langat,2024-01-01,11714,10583,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Kuala Selangor,2019-01-01,7866,5855,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Kuala Selangor,2022-01-01,9410,7644,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Kuala Selangor,2024-01-01,10584,8046,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Petaling,2019-01-01,12145,8993,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Petaling,2022-01-01,12760,9618,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Petaling,2024-01-01,14422,10688,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Sabak Bernam,2019-01-01,6042,4454,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Sabak Bernam,2022-01-01,6930,5533,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Sabak Bernam,2024-01-01,8033,6941,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Sepang,2019-01-01,12254,8937,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Sepang,2022-01-01,13673,12608,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Sepang,2024-01-01,15906,11131,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Ulu Langat,2019-01-01,10252,8361,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Ulu Langat,2022-01-01,13386,11210,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Ulu Langat,2024-01-01,13822,11404,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Ulu Selangor,2019-01-01,7598,6249,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Ulu Selangor,2022-01-01,8779,7678,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Selangor,Ulu Selangor,2024-01-01,9499,8485,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Besut,2019-01-01,5819,4527,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Besut,2022-01-01,6285,4743,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Besut,2024-01-01,6747,5820,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Dungun,2019-01-01,7564,6044,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Dungun,2022-01-01,7902,6356,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Dungun,2024-01-01,8055,7156,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Hulu Terengganu,2019-01-01,5363,4368,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Hulu Terengganu,2022-01-01,5821,5090,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kemaman,2019-01-01,7854,6592,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kemaman,2022-01-01,8381,6425,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kemaman,2024-01-01,8973,7709,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kuala Nerus,2019-01-01,7647,6730,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kuala Nerus,2022-01-01,7983,6800,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kuala Nerus,2024-01-01,8385,7304,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kuala Terengganu,2019-01-01,6691,5614,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kuala Terengganu,2022-01-01,7109,5872,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Kuala Terengganu,2024-01-01,7279,6615,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Marang,2019-01-01,5928,5060,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Marang,2022-01-01,6357,5291,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Marang,2024-01-01,6807,6246,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Setiu,2019-01-01,5600,4231,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Setiu,2022-01-01,6030,5211,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Setiu,2024-01-01,6359,6125,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+Terengganu,Hulu,2024-01-01,6360,6134,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,2019-01-01,13257,10549,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+W.P. Kuala Lumpur,W.P. Kuala Lumpur,2022-01-01,13325,10234,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+W.P. Labuan,W.P. Labuan,2019-01-01,8319,6726,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+W.P. Labuan,W.P. Labuan,2022-01-01,8250,6904,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+W.P. Putrajaya,W.P. Putrajaya,2019-01-01,12840,9983,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03
+W.P. Putrajaya,W.P. Putrajaya,2022-01-01,13473,10056,https://storage.dosm.gov.my/hies/hh_income_district.csv,2026-08-03

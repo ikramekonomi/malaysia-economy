@@ -1,0 +1,2 @@
+source_file,pdf_page,anomaly,proof
+CMD.4.2025.pdf,22,"Prose says the 142 FY2023 sijil comprise 129 Badan Berkanun + 10 Kumpulan Wang + 3 Agensi Lain, but the Lampiran 2 register prints 130 numbered Badan Berkanun rows (bil 1-130) and 9 Kumpulan Wang rows (bil 131-139)",register rows extracted verbatim (fact_agensi_sijil_2023.csv) sum to 130+9+3=142; prose split 129+10+3=142 disagrees at section level only

@@ -1,0 +1,58 @@
+file,category,variable,variable_en,variable_bm,retrieved_from,retrieved_date
+main,budget,balance,Overall balance,Imbangan keseluruhan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,budget,revenue,Revenue,Hasil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,budget,spending_oe,Operating expenditure,Perbelanjaan mengurus,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,budget,spending_de_gross,Development expenditure (gross),Perbelanjaan pembangunan (kasar),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,budget,spending_de_net,Development expenditure (net),Perbelanjaan pembangunan (bersih),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,budget,spending_covid19,COVID-19 Fund,Kumpulan Wang COVID-19,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,financing,domestic_gross,Domestic borrowing (gross),Pinjaman dalam negeri (kasar),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,financing,domestic_net,Domestic borrowing (net),Pinjaman dalam negeri (bersih),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,financing,foreign_gross,Foreign borrowing (gross),Pinjaman luar negeri (kasar),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,financing,foreign_net,Foreign borrowing (net),Pinjaman luar negeri (bersih),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+main,financing,asset_use,Use of assets,Penggunaan harta,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,total,total,Total,Keseluruhan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_direct,total,Sub-total,Jumlah kecil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_direct,cita,Companies income tax,Cukai pendapatan syarikat,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_direct,pita,Petroleum income tax,Cukai pendapatan petroleum,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_direct,iita,Individuals income tax,Cukai pendapatan individu,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_direct,stamp,Stamp duties,Duti setem,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_direct,other,Others,Lain-lain,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,total,Sub-total,Jumlah kecil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,duties_export,Export duties,Duti eksport,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,duties_import,Import duties,Duti import,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,duties_excise,Excise duties,Duti eksais,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,gst,Goods and services tax,Cukai barangan dan perkhidmatan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,sst_sales,Sales tax,Cukai jualan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,sst_service,Service tax,Cukai perkhidmatan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,tax_indirect,other,Others,Lain-lain,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,non_tax,total,Sub-total,Jumlah kecil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,non_tax,license_permit,Licences and permits,Lesen dan permit,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,non_tax,petroleum,Petroleum royalty,Royalti petroleum,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,non_tax,interest,Interest and returns on investment,Faedah dan pulangan pelaburan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,non_tax,other,Others,Lain-lain,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+revenue,non_revenue,total,Non-revenue receipts,Terimaan bukan hasil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,total,Total,Jumlah,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,emoluments,Emoluments,Emolumen,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,retirement_charges,Retirement charges,Bayaraan persaraan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,debt_service,Debt service,Khidmat hutang,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,debt_service_dom,Debt service (domestic),Khidmat hutang (dalam negeri),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,debt_service_ext,Debt service (foreign),Khidmat hutang (luar negeri),https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,supplies_services,Supplies and services,Perkhidmatan dan bekalan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,subsidies_sa,Subsidies and social assistance,Subsidi dan bantuan sosial,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,asset_acquisition,Asset acquisition,Pembelian aset,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,grants_transfers,Grants and transfers,Pemberian dan serahan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+oe,,other,Other expenditure,Lain-lain perbelanjaan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,total,total,Total,Keseluruhan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,defence,total,Sub-total,Jumlah kecil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,economy,total,Sub-total,Jumlah kecil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,economy,agriculture,Agriculture and rural development,Pertanian dan pembangunan luar bandar,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,economy,trade,Trade and industry,Perdagangan dan perindustrian,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,economy,transport,Transport,Pengangkutan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,economy,utilities,Public utilities,Kemudahan awam,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,economy,other,Others,Lain-lain,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,social,total,Sub-total,Jumlah  kecil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,social,education,Education,Pendidikan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,social,health,Health,Kesihatan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,social,housing,Housing,Perumahan,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,social,community,Social and community services,Perkhidmatan sosial dan masyarakat,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31
+de,admin,total,Sub-total,Jumlah kecil,https://storage.data.gov.my/publicadmin/federal_finance_lookup.csv,2026-07-31

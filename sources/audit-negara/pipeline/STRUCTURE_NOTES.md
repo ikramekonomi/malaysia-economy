@@ -1,0 +1,146 @@
+# LKAN Aktiviti volumes — structural map for finding-register extraction
+
+Derived 2026-07-31 by a dedicated scoping pass over the five Aktiviti-bearing
+volumes (text layers verified page-aligned: 0-based `\f`-split chunk i ==
+pdf_page i+1). Used by `extract_lkan_findings.py`; kept as provenance for how
+the parser's markers were chosen.
+
+## Global text-layer hazards (all volumes)
+
+1. Duplicated slightly-offset text layers — footers/headers print twice,
+   sometimes character-interleaved (`22--11` for printed page "2-1";
+   `M a s s R aMass Rapid…` interleavings).
+2. InDesign slug lines (printer's marks): `^<jobname>.indd <N> <date> <time>$`
+   — reliable per-chapter anchors in CMD.8.2024 / CMD.9.2024 / CMD.5.2025;
+   strip from content, use for chapter attribution.
+3. Stray editorial marks in the text layer (`VERSI KABINET`, `Terkini
+   10.5.2024`, `SEMAKAN KAN_21.4.2025`, `\x03`) — filter.
+4. Anonymised parties are source-intended (`Syarikat 1`, `Syarikat 465005-P`,
+   `Premis A (premis Kerajaan)`) — keep verbatim.
+5. No image-only body pages in any volume.
+
+## Chapter architecture by volume
+
+- **CMD.8.2024** (LKAN 2/2024 Aktiviti, 436 pp): 9 chapters, printed pages
+  `N-M`, slug `Teks <N> Persekutuan.indd`. Skeleton per chapter:
+  `1. LATAR BELAKANG → 2. OBJEKTIF → 3. SKOP → 4. METODOLOGI →
+  5. PENEMUAN TERPERINCI AUDIT → 6. SYOR AUDIT` (no RUMUSAN section).
+  Findings `5.x.` / `5.x.y.` / `a.` / `i.`; response marker
+  `Maklum Balas <ENTITI> yang diterima pada <tarikh>` (capital B, 166×);
+  closing two-line `Pendapat` / `Audit` boxes. Ringkasan part pdf 350–436.
+- **CMD.9.2024** (LKAN 2/2024 Syarikat, 362 pp): margin-label layout with
+  continuous paragraph numbering per audit (1..~91). Per-audit `FAKTA AUDIT`
+  cover page (Skop / Kenapa Perlu Diaudit / Rumusan / Penemuan / Syor Audit)
+  = best uniform per-audit record. Margin labels: LATAR BELAKANG, PENEMUAN
+  AUDIT, PRESTASI AKTIVITI, TADBIR URUS KORPORAT, KEDUDUKAN KEWANGAN,
+  RUMUSAN KESELURUHAN, SYOR AUDIT, `Pendapat Audit` (92×), `Maklum balas` +
+  entity on next line (lowercase b, no date in margin form). Slugs absent pdf
+  119–230 (chapters 3–5). Ringkasan pdf 295–362.
+- **CMD.5.2025** (LKAN 2/2025 Aktiviti, 244 pp): 5 chapters + status; slug
+  `WJD25-0234 teks <n>.indd`. Skeleton adds `6. RUMUSAN KESELURUHAN AUDIT`,
+  `7. SYOR AUDIT`. Response marker lowercase: `Maklum balas <ENTITI> yang
+  diterima pada <tarikh>` (55×). NO Pendapat boxes. Ringkasan pdf 199–242.
+- **CMD.2.2026** (LKAN 1/2026 vol 2, 192 pp): continuous printed pagination,
+  pdf = printed + 8. Chapters I.1 (R&D&C&I), I.2 (MyDigital ID / MIMOS),
+  II.3 (e-SelfAudit census of 852 entities — register-style, not
+  per-finding), III.4 (PHB), IV status. Both response variants present —
+  master regex needed. Two-line Pendapat boxes in I.1/I.2. Infografik digest
+  pdf 15–24.
+- **CMD.14.2025** (LKAN 3/2025, 264 pp): pdf = printed + 5. Aktiviti chapters
+  IV.1–VI (KAA chapters use short skeleton `1. LATAR BELAKANG → 2. PENEMUAN
+  AUDIT → 3. RUMUSAN → 4. SYOR AUDIT`; findings `2.x.` / `2.x.y.`); response
+  `Maklum balas <ENTITI> diterima pada <tarikh>` (no "yang"; capitalisation
+  wobble `Diterima` exists). Bahagian II (pdf 30–81, JADUAL 1–33) is the
+  federal-finance analysis — separate extraction target pairing with PKKP
+  FY2024. Lampiran 2 (pdf 238–264) reprints the condensed Penyata Kewangan.
+
+## Master response-marker regex
+
+`Maklum\s+[Bb]alas\s+(?P<entity>[A-Za-z0-9 .,&()/-]+?)\s+(?:[Yy]ang\s+)?[Dd]iterima\s+pada\s+(?P<dates>.+)`
+(entity may be compound "KPKT dan JBPM"; dates "X dan Y" / "X, Y dan Z";
+whitespace runs inside the phrase are common.)
+
+## RM amounts
+
+Not a fielded value: harvest `RM[\d.,]+\s*(juta|bilion)?` from finding
+paragraphs. Systematic in the KAA/2026 chapters, frequent elsewhere. The
+Ringkasan/Infografik parts carry quantified per-chapter digests usable to
+cross-check register totals.
+
+## Corrections from the extraction pass (2026-07-31)
+
+Verified against the text while building `extract_lkan_findings.py`:
+
+- **CMD.5.2025 DOES have two-line `Pendapat`/`Audit` boxes** (35 occurrences,
+  e.g. pdf 24 after 5.1.1) — the "NO Pendapat boxes" note above is wrong.
+- **CMD.8.2024 response markers are mostly lowercase-b** (`Maklum balas <ENTITI>
+  yang diterima pada <tarikh>`); chapter 3 uses the inverted `Maklum balas yang
+  diterima daripada <ENTITI> pada <tarikh>` (pdf 123) and chapter 6 the range
+  form `... diterima antara <tarikh> hingga <tarikh>` (pdf 243). Capital-B
+  `Maklum Balas <ENTITI> [Bb]ertarikh/Pada <tarikh>` occurrences are wrapped
+  `Sumber:` table citations (pdf 120/123/125), not response headings.
+- **CMD.14.2025 IV.3, IV.4 and V.2 are margin-label chapters** (continuous
+  per-audit paragraph numbering, no `2.x.` tiers); only IV.1/IV.2 carry the
+  short KAA skeleton with `2.x.`/`2.x.y.`, V.1 numbers findings `4.x.`/`4.x.y.`
+  under `4. PENEMUAN AUDIT`, VI `5.x.`/`5.x.y.` under `5. PENEMUAN AUDIT`.
+  IV.3/IV.4 have no PENEMUAN divider at all — topical labels open directly
+  under LATAR BELAKANG.
+- **CMD.9.2024 `Pendapat Audit` margin labels: 96** inside the eight audits
+  (16/10/12/11/20/12/9/6), not 92.
+- CMD.2.2026 I.1 also uses the no-`diterima` variant `Maklum Balas MyIPO pada
+  9 Disember 2025` (pdf 34) — the master regex needs the bare-`pada` branch.
+- **CMD.14.2025 has a second e-SelfAudit register chapter**: Bahagian VII
+  (divider pdf 202, text pdf 204–211, 1,856 badan lain termasuk syarikat for
+  2025) — analogous to CMD.2.2026 II.3; Bahagian VI's content ends pdf 201.
+- **CMD.2.2026 divider pages**: I.2 pdf 63, II.3 pdf 83, III.4 pdf 129 — each
+  audit's range starts at its own divider (I.1 has none, starts pdf 25).
+- **CMD.9.2024 layout hazards for the margin parser** (found by the
+  adversarial verifier): pdf 143 has an umbrella ALL-CAPS topic label
+  (`AKTIVITI PENGURUSAN HARTANAH`, para 60) outside the section vocabulary
+  with `Sumber dan Perbelanjaan Dana` (paras 61–65) beneath it; wrapped
+  margin labels can skip past full-width italic lines (pdf 197); pdf 217 is a
+  geometry-shifted continuation page whose whole text column collapses onto
+  the margin (its stray `5 Januari 2022.` line is not a label).
+
+## e-SelfAudit census registers (CMD.2.2026 II.3, CMD.14.2025 VII) — layout notes
+
+Parsed by `extract_eselfaudit.py` (31 JADUAL, pdfplumber — found while
+building it, relevant to any coordinate-level pass over these volumes):
+
+- Every register JADUAL is a ruled table whose cell borders survive as thin
+  vertical rects: x positions = column boundaries, y extents = the printed
+  row bands (wrapped labels and in-cell bullet lists band correctly, which
+  the pdftotext -layout cache cannot do). Padding doubles some borders
+  (spurious empty columns — drop columns no data band uses).
+- The duplicated text layer also renders a ghost copy of the NEIGHBOUR
+  page's full text at negative x (CMD.2.2026): it contains lookalike
+  `JADUAL n` / `Sumber:` lines, so clip words to the page box before any
+  heading/stop detection.
+- pdfplumber default y_tolerance interleaves two printed lines into
+  letter-fragment words where ghost lines sit between baselines
+  (II.3 Prestasi J7 row 4) — use y_tolerance=1.
+- II.3's jadual numbering restarts per sub-report (intro / Mandat /
+  Tatakelola / Prestasi Kewangan, divider pages 91-92, 99-100, 109-110).
+
+## CMD.14.2025 Bahagian II fiscal tables (pdf 30–81) — layout notes
+
+Parsed by `extract_lkan_fiscal.py` (JADUAL 1–33 + II.a 1–4 + II.b 1–11):
+
+- Tables run `JADUAL n` → CAPS title → header block → data → `Sumber:`; the
+  running footers name the section (`NN Analisis Kewangan…`, `Pengurusan
+  Hutang/Pelbagai…`), not the LKAN, and some `Sumber:` citations themselves
+  cite the LKAN — footer stripping must spare them.
+- Value columns are right-aligned; %/nisbah cells of the same column are
+  centred (overlap merge, e.g. J1); tightly-packed year columns overlap but
+  co-occur on every line (must NOT merge, II.a J3).
+- Multi-page tables (J27, J30, J32) shift x AND respacing between pages and
+  reprint their header block — cluster per page, map columns by aligned
+  right edge.
+- II.a/II.b run inside the margin-label narrative (labels x≈22–40); cut all
+  segments ending left of x=45 before parsing. II.b J9's `JADUAL 9` head
+  shares its line with a margin label.
+- II.a J3 is gridless (every row centred independently) and its `Jumlah`
+  rows are levels, not sums — ordinal fallback + validator NON_ADDITIVE.
+- Misprints found (kept as printed, `_source_anomalies_lkan.csv`): J21
+  pdf 53 omits the parentheses on the Pelbagai Liabiliti decrease; J1 pdf 31
+  truncates devex FY2023 (96.089 for audited 96.0897).

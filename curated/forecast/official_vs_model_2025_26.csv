@@ -1,0 +1,14 @@
+target_year,series,edition_year,official_basis,official_rm_bil,model_lo,model_mid,model_hi,band_position,official_minus_mid,note
+2025,devex,2025,official_projection,86.0,79.6,89.8,105.0,INSIDE,-3.8,official = gross DE excl. P.70 contingency reserve; model band fitted on PKKP gross devex actuals
+2025,opex,2025,official_projection,335.0,311.4,333.0,341.9,INSIDE,2.0,
+2025,deficit,2025,official_projection,-79.973,-43.7,-85.7,-132.2,INSIDE,5.727,
+2025,rev,2025,official_projection,339.706,314.7,337.1,347.3,INSIDE,2.606,
+2025,devex,2026,official_revised,80.0,79.6,89.8,105.0,INSIDE,-9.8,official = gross DE excl. P.70 contingency reserve; model band fitted on PKKP gross devex actuals
+2025,debt,2026,official_revised,1304.176,1321.4,1346.1,1374.7,OUTSIDE,-41.924,official value is as at end-June (MOF publishes no year-end debt projection); mid-year level vs year-end model band - not directly comparable
+2025,opex,2026,official_revised,332.15,311.4,333.0,341.9,INSIDE,-0.85,
+2025,deficit,2026,official_revised,-76.714,-43.7,-85.7,-132.2,INSIDE,8.986,
+2025,rev,2026,official_revised,334.115,314.7,337.1,347.3,INSIDE,-2.985,
+2026,devex,2026,official_projection,81.0,75.5,96.0,131.2,INSIDE,-15.0,official = gross DE excl. P.70 contingency reserve; model band fitted on PKKP gross devex actuals
+2026,opex,2026,official_projection,338.202,301.6,344.9,363.6,INSIDE,-6.698,
+2026,deficit,2026,official_projection,-74.578,-5.5,-90.8,-189.6,INSIDE,16.222,
+2026,rev,2026,official_projection,343.124,305.2,350.1,371.6,INSIDE,-6.976,

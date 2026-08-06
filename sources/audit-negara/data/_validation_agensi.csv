@@ -1,0 +1,18 @@
+year,check,expected_printed,got,status,evidence
+2023,bil_continuous_1..n,yes,yes,PASS,register numbering
+2023,no_duplicate_agency_names,yes,yes,PASS,register uniqueness
+2023,total_sijil,142,142,PASS,CMD.4.2025 pdf p.23 'kesemua 142 Penyata Kewangan'
+2023,opinion:Tanpa Teguran,133,133,PASS,CMD.4.2025 pdf p.23 Jadual 1.8
+2023,opinion:Berteguran,8,8,PASS,CMD.4.2025 pdf p.24 Jadual 1.8
+2023,opinion:Bertentangan,1,1,PASS,CMD.4.2025 pdf p.24 Jadual 1.8 (Diubahsuai 9 = 8+1)
+2023,tt_qualifier:,65,65,PASS,CMD.4.2025 pdf p.23 'Tanpa Teguran 65'
+2023,tt_qualifier_eom_combined,8,8,PASS,CMD.4.2025 pdf p.23 'Penegasan Perkara (EOM) 8'
+2023,tt_qualifier:Hal-hal Lain,60,60,PASS,CMD.4.2025 pdf p.24 'Hal-hal Lain (OM) 60'
+2024,bil_continuous_1..n,yes,yes,PASS,register numbering
+2024,no_duplicate_agency_names,yes,yes,PASS,register uniqueness
+2024,total_sijil,143,143,PASS,CMD.1.2026 pdf p.22 '143 Penyata Kewangan ... Sijil'
+2024,register:badan_berkanun,131,131,PASS,CMD.1.2026 pdf p.21 '131 Badan Berkanun'
+2024,opinion:Tanpa Teguran,128,128,PASS,CMD.1.2026 pdf p.22 'Tanpa Teguran ... 128 sijil'
+2024,opinion:Berteguran,15,15,PASS,CMD.1.2026 pdf p.22 '15 penyata ... Diubahsuai'
+2024,tt_qualifier:,47,47,PASS,CMD.1.2026 pdf p.22 Jadual 1.8 'Tanpa Teguran 47'
+2024,tt_qualifier:Hal-hal Lain,63,63,PASS,CMD.1.2026 pdf p.22 Jadual 1.8 'OM 63'

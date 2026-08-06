@@ -1,0 +1,8 @@
+check,description,values,status
+debt_monotone,d24<mid25<mid26,1247.6<1323.2<1396.6,PASS
+debt_endjun_sanity,"end-Jun-25 official within [d24, hi25]",1247.6<=1304.2<=1324.7,PASS
+revcomp_additivity_2025,tax+nontax+nonrev == official revenue,334.115 vs 334.115,PASS
+revcomp_additivity_2026,tax+nontax+nonrev == official revenue,343.124 vs 343.124,PASS
+objects_additivity_2025,emol+grants+supplies+assets == official OE,332.150 vs 332.150,PASS
+objects_additivity_2026,emol+grants+supplies+assets == official OE,338.202 vs 338.202,PASS
+functions_vs_official_2025,"signature total vs official OE (INFO, by design)",343.6 vs 332.1,INFO
