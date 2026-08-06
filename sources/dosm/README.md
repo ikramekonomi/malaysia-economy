@@ -527,3 +527,11 @@ use `financing`/`domestic_gross`… — a stale API-side lookup, documented in
   do not mix the two.
 - Households series is census-benchmarked at 1970/1980/1991/2000/2010/2020; intervening
   years are DOSM intercensal estimates (their methodology note, not ours).
+
+## The wages gap — what fills it meanwhile
+
+No salaries-and-wages dataset exists in this catalogue (see the absence list
+above). `curated/fact_labour_indicators.csv` derives an implied average wage and
+labour share from `gdp_annual_nominal_income.csv` (component i1/i0) and
+`lfs_year.csv` (lf_employed), marked `basis='derived'` with its limits documented.
+It is a stopgap, not a substitute for the Salaries & Wages Survey.
