@@ -21,7 +21,8 @@ sources/            one folder per source (each independently verifiable)
     pipeline/<year>/    extraction scripts
     DATA_DICTIONARY.md · VALIDATION_REPORT.md · README_QUICKSTART.md
 curated/            consolidated layer (conformed dims + gap views) — built as sources land
-pipeline/build_duckdb.py   rebuilds sources/pkkp/pkkp.duckdb from the CSVs
+  pipeline/build_warehouse_duckdb.py  rebuilds curated/warehouse.duckdb (all 8 sources + curated/)
+pipeline/build_duckdb.py   rebuilds sources/pkkp/pkkp.duckdb from the CSVs (PKKP only)
 docs/SOURCES.md     source catalogue: federal, state, statistics — priority + gap pairings
 ```
 
@@ -59,12 +60,24 @@ catalogued with priorities in `docs/SOURCES.md`.
 ## Quick start
 ```bash
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py          # builds sources/pkkp/pkkp.duckdb from the CSVs
+python3 pipeline/build_duckdb.py          # builds sources/pkkp/pkkp.duckdb from the CSVs (PKKP only)
 duckdb sources/pkkp/pkkp.duckdb
 ```
 Then read `sources/pkkp/README_QUICKSTART.md`. Core rules: CSVs are canonical (the .duckdb is
 a rebuildable cache); **join on codes, not names**; **sum only leaf rows**; take each year
 from its own volume; **never silently correct a published figure**.
+
+**Querying across all eight sources?**
+```bash
+python3 curated/pipeline/build_warehouse_duckdb.py    # builds curated/warehouse.duckdb (all sources + curated/)
+duckdb curated/warehouse.duckdb
+```
+Each source gets its own DuckDB **schema** (`pkkp`, `anggaran`, `anggaran_hasil`,
+`mof_fiscal_outlook`, `audit_negara`, `states`, `bnm`, `dosm`, plus `curated`) — sources are
+namespaced, never merged, per the golden rule above; query fully-qualified, e.g.
+`SELECT * FROM anggaran.fact_anggaran_maksud_2024`. Read `docs/ANALYST_GUIDE.md` before your
+first cross-source query — it covers the seven traps (basis blending, leaf rows, canonical
+rows) this consolidated file makes it easy to hit by accident.
 
 ## Known caveat
 FY2015 is the one image-only scan — its object-leaf/project-leaf amounts are OCR-provisional
