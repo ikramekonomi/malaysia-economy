@@ -1,0 +1,17 @@
+year,opex_gross_rm,opex_net_rm,transfer_to_dev_fund_rm,devex_gross_rm,devex_net_rm,devex_net_basis,note
+2009,158639304227.7,157067304227.7,1572000000.0,49515355570.54,,,no aktiviti tier that year; opex_gross from fact_opex_maksud; devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2010,159652962318.09,151632962318.09,8020000000.0,52791630219.93,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2011,185418919743.0,182593919743.0,2825000000.0,46416362426.91,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2012,207912754669.0,205536754669.0,2376000000.0,46932453805.93,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2013,213370213558.0,211270213558.0,2100000000.0,42209801383.65,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2014,220625673356.0,219588673356.0,1037000000.0,39503487395.98,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2015,219088760826.0,216997760826.0,2091000000.0,40767711666.67,,,opex/devex gross use ministry-level totals (FY2015 leaf tier is OCR-provisional); devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2016,212421098894.0,210173098894.0,2248000000.0,41995037696.86,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2017,220406001884.0,217695001884.0,2711000000.0,44883838832.01,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2018,232882562288.0,230959562288.0,1923000000.0,56095455661.74,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2019,264414755876.0,263342755876.0,1072000000.0,54173235316.97,,,devex_net unavailable: no loan-recovery figure in this warehouse for this year (pre-2020 Tinjauan Fiskal editions not yet ingested)
+2020,225074947243.0,224599947243.0,475000000.0,51359855763.46,50101000000.0,official_actual (MOF Tinjauan Fiskal),
+2021,233752055029.0,231516055029.0,2236000000.0,64256665754.57,63267000000.0,official_actual (MOF Tinjauan Fiskal),
+2022,294356760615.0,292693760615.0,1663000000.0,71573961425.79,70167000000.0,official_actual (MOF Tinjauan Fiskal),
+2023,314959481731.0,311266481731.0,3693000000.0,96089737122.54,95084000000.0,official_actual (MOF Tinjauan Fiskal),
+2024,324617649248.0,321508649248.0,3109000000.0,84011595463.78,82275000000.0,official_actual (MOF Tinjauan Fiskal),
