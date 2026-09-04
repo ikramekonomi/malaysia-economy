@@ -10,8 +10,17 @@ sum only leaf rows, join ministries on the canonical crosswalk).
 ```
 site/
   api/    FastAPI backend — constrained query templates + Tanya Fiskal chatbot
-  web/    Next.js frontend — Papan Pemuka (dashboard), Tanya Fiskal, Eksport Data, Metodologi
+  web/    Next.js frontend — Papan Pemuka (dashboard, 3 sub-pages), Tanya Fiskal,
+          Eksport Data, Metodologi
 ```
+
+Papan Pemuka is 3 sub-pages, not one (`/papan-pemuka` redirects to the first):
+- **`ringkasan`** — two-year comparative summary: fiscal-flow overview, revenue
+  breakdown, OPEX-by-component (Jadual 3.1), DEVEX-by-sector (Jadual 3.3), financing.
+- **`perkembangan`** — one named component's value over time (revenue/opex/devex/
+  financing line items), full available range per component.
+- **`kementerian`** — ministry+year drill-down: top programmes/activities and the
+  5-bucket object-class split.
 
 ## Run locally
 
@@ -40,11 +49,19 @@ server's own advertised origin and the safer default while developing.
 
 ## What's real vs. stubbed
 
-Implemented and verified end-to-end against real data: all 4 pages, the 6 query
-templates (`site/api/app/templates.py`), CSV export, and the Tanya Fiskal tool-dispatch
-loop (verified with a mocked Claude response — no usable `ANTHROPIC_API_KEY` was
-available in the environment this was built in, so the live LLM call itself is untested
-here).
+Implemented and verified end-to-end against real data: all pages (including the 3
+Papan Pemuka sub-pages), all 13 query templates (`site/api/app/templates.py`), CSV
+export, and the Tanya Fiskal tool-dispatch loop (verified with a mocked Claude response —
+no usable `ANTHROPIC_API_KEY` was available in the environment this was built in, so the
+live LLM call itself is untested here).
+
+The OPEX-by-component (Jadual 3.1) and DEVEX-by-sector (Jadual 3.3) sections on
+`ringkasan`/`perkembangan` are only as complete as the ingested Tinjauan Fiskal editions
+— currently just the 2021 edition's own appendix, covering 2017-2021
+(`sources/mof-fiscal-outlook/README.md`). Any other year shows an explicit "belum
+tersedia" state rather than a DOSM-proxied or otherwise degraded figure; ingesting more
+editions (2022-2024 and pre-2017) widens this automatically once landed, no code change
+needed beyond the ingestion itself.
 
 Explicitly deferred (see the brainstorm plan's "Open items"): production deployment
 config (Vercel/Fly.io/Railway), a shared-store rate limiter (`ratelimit.py` is an
