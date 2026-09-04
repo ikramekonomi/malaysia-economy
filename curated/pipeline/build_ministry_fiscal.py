@@ -82,6 +82,7 @@ NATIONAL HEADLINE: net per MOF Tinjauan Fiskal convention
               oversight: see the note column and docs/SOURCES.md.
 """
 import csv
+import csv as csv_module
 import os
 
 import duckdb
@@ -90,6 +91,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 CURATED = os.path.dirname(HERE)
 ROOT = os.path.dirname(CURATED)
 DB = os.path.join(ROOT, "sources", "pkkp", "pkkp.duckdb")
+MOF_STATS_2021 = os.path.join(ROOT, "sources", "mof-fiscal-outlook", "data",
+                               "2021_public_finance_stats", "fact_headline.csv")
 
 OUT_CROSSWALK = os.path.join(CURATED, "dim_maksud_canonical.csv")
 OUT_MINISTRY = os.path.join(CURATED, "fact_ministry_fiscal.csv")
@@ -228,6 +231,25 @@ DEVEX_NET_MOF = {
     2020: 50101.0e6, 2021: 63267.0e6, 2022: 70167.0e6, 2023: 95084.0e6, 2024: 82275.0e6,
 }
 
+# Tinjauan Fiskal 2021 edition's own Jadual 1.1 (sources/mof-fiscal-outlook/data/
+# 2021_public_finance_stats/), ingested and independently verified this session, closes
+# the 2017-2019 gap above with the source's own official_actual net-devex figure (only
+# years labelled official_actual in that table are used -- its 2020/2021 rows are
+# revised-estimate/budget-estimate, weaker basis than the actual-basis figures already in
+# DEVEX_NET_MOF, so they are deliberately NOT applied here).
+def _load_devex_net_ingested():
+    out = {}
+    if not os.path.exists(MOF_STATS_2021):
+        return out
+    with open(MOF_STATS_2021, newline="") as f:
+        for row in csv_module.DictReader(f):
+            if row["line"] == "development_expenditure_net" and row["basis"] == "official_actual":
+                out[int(row["target_year"])] = float(row["amount_rm_juta"]) * 1e6
+    return out
+
+
+DEVEX_NET_INGESTED = _load_devex_net_ingested()
+
 
 def build_headline(con):
     opex_gross = dict(con.execute(
@@ -265,6 +287,10 @@ def build_headline(con):
         tr = transfer.get(year)
         on = (og - tr) if (og is not None and tr is not None) else None
         dn = DEVEX_NET_MOF.get(year)
+        dn_source = "supplied reference" if dn is not None else None
+        if dn is None and year in DEVEX_NET_INGESTED:
+            dn = DEVEX_NET_INGESTED[year]
+            dn_source = "Tinjauan Fiskal 2021 edition, Jadual 1.1"
         note_parts = []
         if year == 2015:
             note_parts.append("opex/devex gross use ministry-level totals (FY2015 leaf tier is OCR-provisional)")
@@ -273,6 +299,9 @@ def build_headline(con):
         if dn is None:
             note_parts.append("devex_net unavailable: no loan-recovery figure in this warehouse for this year "
                                "(pre-2020 Tinjauan Fiskal editions not yet ingested)")
+        elif dn_source == "Tinjauan Fiskal 2021 edition, Jadual 1.1":
+            note_parts.append("devex_net from the Tinjauan Fiskal 2021 edition's own Jadual 1.1 "
+                               "(official_actual), not the analyst-supplied reference set")
         out.append({
             "year": year,
             "opex_gross_rm": round(og, 2) if og is not None else None,
@@ -305,6 +334,11 @@ def build_validation(con, headline):
         if y in DEVEX_NET_MOF:
             checks.append(("PASS", f"devex_net {y} == supplied reference (by construction)",
                             row["devex_net_rm"], DEVEX_NET_MOF[y], 0.0))
+        elif y in DEVEX_NET_INGESTED and row["devex_net_rm"] is not None:
+            diff = row["devex_net_rm"] - DEVEX_NET_INGESTED[y]
+            checks.append(("PASS" if abs(diff) < 1.0 else "FAIL",
+                            f"devex_net {y} == Tinjauan Fiskal 2021 edition Jadual 1.1 (by construction)",
+                            row["devex_net_rm"], DEVEX_NET_INGESTED[y], diff))
 
     with open(OUT_VALIDATION, "w", newline="") as f:
         w = csv.writer(f)
