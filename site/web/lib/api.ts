@@ -71,6 +71,68 @@ export async function askChat(question: string) {
   return res.json() as Promise<{ answer: string; citations: Citation[] }>;
 }
 
+export type RevenueByCategoryRow = { year: number; category_bm: string; amount_rm: number };
+
+export type BreakdownRow = {
+  line: string;
+  line_bm: string;
+  line_en: string;
+  level: number;
+  parent_line: string | null;
+  amount_rm: number;
+  pct_share: number | null;
+  basis: string;
+  note: string | null;
+};
+
+export type FinancingRow = { component_bm: string; amount_rm: number };
+
+export type MinistryBreakdownRow = { label: string | null; amount_rm: number };
+
+export function fetchRevenueByCategory(yearFrom: number, yearTo: number) {
+  return getJSON<{ rows: RevenueByCategoryRow[]; citations: Citation[] }>(
+    `/api/fiscal/revenue-by-category?year_from=${yearFrom}&year_to=${yearTo}`
+  );
+}
+
+export function fetchOpexByType(year: number) {
+  return getJSON<{ rows: BreakdownRow[]; not_available: boolean; note?: string; citations: Citation[] }>(
+    `/api/fiscal/opex-by-type?year=${year}`
+  );
+}
+
+export function fetchDevexBySector(year: number) {
+  return getJSON<{ rows: BreakdownRow[]; not_available: boolean; note?: string; citations: Citation[] }>(
+    `/api/fiscal/devex-by-sector?year=${year}`
+  );
+}
+
+export function fetchFinancing(year: number) {
+  return getJSON<{ rows: FinancingRow[]; not_available: boolean; note?: string; citations: Citation[] }>(
+    `/api/fiscal/financing?year=${year}`
+  );
+}
+
+export function fetchComponents() {
+  return getJSON<{ rows: { component_key: string }[]; citations: Citation[] }>("/api/fiscal/components");
+}
+
+export function fetchComponentSeries(componentKey: string, yearFrom: number, yearTo: number) {
+  return getJSON<{ rows: { year: number; amount_rm: number }[]; citations: Citation[] }>(
+    `/api/fiscal/component-series?component_key=${encodeURIComponent(componentKey)}&year_from=${yearFrom}&year_to=${yearTo}`
+  );
+}
+
+export function fetchMinistryBreakdown(code: string, year: number, jenis: "Bekalan" | "Pembangunan") {
+  return getJSON<{
+    ministry_name_bm: string;
+    raw_code: string;
+    rows: MinistryBreakdownRow[];
+    object_class_rows: MinistryBreakdownRow[];
+    citations: Citation[];
+  }>(`/api/fiscal/ministry-breakdown?code=${encodeURIComponent(code)}&year=${year}&jenis=${jenis}`);
+}
+
 export function formatRM(value: number | null | undefined, unit: "bil" | "juta" = "bil") {
   if (value === null || value === undefined) return "—";
   const divisor = unit === "bil" ? 1e9 : 1e6;
