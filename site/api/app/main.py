@@ -70,6 +70,55 @@ def fiscal_revenue(year_from: int | None = Query(None), year_to: int | None = Qu
     return tpl.revenue_headline(year_from, year_to)
 
 
+@app.get("/api/fiscal/revenue-by-category")
+def fiscal_revenue_by_category(year_from: int | None = Query(None), year_to: int | None = Query(None)):
+    return tpl.revenue_by_category(year_from, year_to)
+
+
+@app.get("/api/fiscal/opex-by-type")
+def fiscal_opex_by_type(year: int = Query(...)):
+    return tpl.opex_by_type(year)
+
+
+@app.get("/api/fiscal/devex-by-sector")
+def fiscal_devex_by_sector(year: int = Query(...)):
+    return tpl.devex_by_sector(year)
+
+
+@app.get("/api/fiscal/financing")
+def fiscal_financing(year: int = Query(...)):
+    return tpl.financing_breakdown(year)
+
+
+@app.get("/api/fiscal/components")
+def fiscal_components():
+    return tpl.list_components()
+
+
+@app.get("/api/fiscal/component-series")
+def fiscal_component_series(
+    component_key: str = Query(...),
+    year_from: int | None = Query(None),
+    year_to: int | None = Query(None),
+):
+    result = tpl.component_series(component_key, year_from, year_to)
+    if result.get("error"):
+        raise HTTPException(status_code=404, detail=result["error"])
+    return result
+
+
+@app.get("/api/fiscal/ministry-breakdown")
+def fiscal_ministry_breakdown(
+    code: str = Query(...),
+    year: int = Query(...),
+    jenis: str = Query("Bekalan"),
+):
+    result = tpl.ministry_spending_breakdown(code, year, jenis)
+    if result.get("error"):
+        raise HTTPException(status_code=404, detail=result["error"])
+    return result
+
+
 def _csv_response(rows: list[dict], filename: str):
     if not rows:
         raise HTTPException(status_code=404, detail="no rows for the given filters")
