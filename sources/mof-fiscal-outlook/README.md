@@ -31,6 +31,36 @@ figure-for-figure on everything extracted.
   Table 1.1 bold rows are missing from the PDF text layer (font defect), so the headline
   CSV cites the Key Data spread for those figures.
 
+## Also extracted — `data/2021_public_finance_stats/` (Jadual 1.1, 3.1, 3.2, 3.3)
+
+The "Statistik Kewangan Awam / Public Finance Statistics" appendix of the **Tinjauan
+Fiskal 2021** edition (`tinjauan_fiskal_2021.pdf`, user-uploaded, 20 pages — not the full
+~277-page narrative report, just its statistical-tables appendix) — the same appendix
+format that carries MOF's finer OPEX/DEVEX breakdowns than anything else in this
+warehouse:
+
+| table | contents | years covered | file |
+|---|---|---|---|
+| 1.1 | Federal Government Finance (revenue, opex, devex gross/net, overall & primary balance, financing) | 2017-2021 | `fact_headline.csv` |
+| 3.1 | Operating Expenditure by Component (emoluments, retirement, debt service [dom/ext], grants to state govts [constitutional/other], supplies & services, subsidies & SA, asset acquisition, refunds & write-offs, grants to statutory bodies, others) | 2017-2021 | `fact_opex_by_component.csv` |
+| 3.2 | Operating Expenditure by Sector (economic/social/security/general admin + sub-functions) | 2017-2021 | `fact_opex_by_sector.csv` |
+| 3.3 | Development Expenditure by Sector (same sector structure as 3.2, no "others"-catchall since devex has no debt/retirement/transfer lines) | 2017-2021 | `fact_devex_by_sector.csv` |
+
+**2017-2019 = `official_actual` (unlabelled in source), 2020 = `official_revised`
+("Anggaran disemak"), 2021 = `official_projection` ("Anggaran belanjawan tidak termasuk
+langkah Belanjawan 2021" — excludes 2021 Budget measures).** Note this PDF's own
+coverage is **2017-2021, not 2020-2024** — later years (2022-2024) need a later edition's
+equivalent appendix, not yet ingested; each edition's appendix here should land as its own
+`data/<edition>_public_finance_stats/` folder (same basename tables UNION BY NAME across
+editions in the warehouse build automatically) rather than merged into this one.
+
+Extracted by `pipeline/extract_2021_public_finance_stats.py` (every value embedded with
+its own `pdf_page`/`printed_page`, read directly off the PDF — nothing recomputed).
+Reconciled to the tables' own printed sub-item/parent/Jumlah sums and cross-table
+identities (`data/2021_public_finance_stats/_validation.csv`: **80/80 PASS**), plus an
+independent adversarial verifier pass (separate agent, blind to the extraction script,
+re-transcribed all 4 tables from the PDF and compared cell-by-cell): **full agreement**.
+
 ## Also extracted — `data/fact_contingent_liabilities.csv`
 
 The Seksyen 5 (Risiko Fiskal dan Liabiliti) guarantee / contingent-liability tables of both
