@@ -1,0 +1,14 @@
+status,check,computed,reference,diff
+PASS,devex_net 2017 == Tinjauan Fiskal 2021 edition Jadual 1.1 (by construction),43032000000.0,43032000000.0,0.0
+PASS,devex_net 2018 == Tinjauan Fiskal 2021 edition Jadual 1.1 (by construction),55307000000.0,55307000000.0,0.0
+PASS,devex_net 2019 == Tinjauan Fiskal 2021 edition Jadual 1.1 (by construction),52570000000.0,52570000000.0,0.0
+PASS,opex_net 2020 == supplied reference,224599947243.0,224600000000.0,-52757.0
+PASS,devex_net 2020 == supplied reference (by construction),50101000000.0,50101000000.0,0.0
+PASS,opex_net 2021 == supplied reference,231516055029.0,231516000000.0,55029.0
+PASS,devex_net 2021 == supplied reference (by construction),63267000000.0,63267000000.0,0.0
+PASS,opex_net 2022 == supplied reference,292693760615.0,292693000000.0,760615.0
+PASS,devex_net 2022 == supplied reference (by construction),70167000000.0,70167000000.0,0.0
+PASS,opex_net 2023 == supplied reference,311266481731.0,311267000000.0,-518269.0
+PASS,devex_net 2023 == supplied reference (by construction),95084000000.0,95084000000.0,0.0
+PASS,opex_net 2024 == supplied reference,321508649248.0,321509000000.0,-350752.0
+PASS,devex_net 2024 == supplied reference (by construction),82275000000.0,82275000000.0,0.0
