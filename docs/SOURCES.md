@@ -177,6 +177,28 @@ reconcilable to the ringgit; most real-economy data is survey-based, revised, an
 vintaged. Restatement and vintage handling is a first-class requirement, not an
 afterthought — the weekly DOSM vintage routine is the pattern to follow.
 
+## Named ingestion gap: Tinjauan Fiskal editions 2010–2020 and 2022–2025
+
+`curated/fact_fiscal_headline.csv` carries MOF's own `official_actual` net development
+expenditure for FY2017–2019 (from the 2021 edition's Jadual 1.1) and FY2024 (from the
+2026 edition's), and NULL for every other year — not because MOF has not published those
+figures, but because the editions carrying them are not ingested here. BNM MSB 3.1's
+complete FY2009–2024 net-DE series sits in a **separate column** as an independently
+published stand-in; the two agree to RM0.3 juta or better wherever they overlap, but they
+are different publications on different bases and are never spliced into one series.
+
+Closing this gap means acquiring the *Tinjauan Fiskal dan Anggaran Hasil Kerajaan
+Persekutuan* editions for budget years 2010–2020 and 2022–2025 (host:
+`belanjawan.mof.gov.my`, currently outside the egress allowlist) and ingesting each into
+its own `sources/mof-fiscal-outlook/data/<edition>/` folder following the
+`2021_public_finance_stats/` pattern. That would also backfill the Jadual 3.1/3.2/3.3
+expenditure breakdowns, which today cover FY2017–2021 from one edition only, and give
+`build_opex_devex_breakdown.py` the year-precedence rule it is already written to expect.
+
+Priority: high and cheap. It is the last place in the federal-fiscal domain where a
+published official figure is missing from the warehouse for want of a document rather
+than for want of a method.
+
 ## Earlier roadmap (2026-07-31)
 In flight: LKAN backfill 2009–2023 (federal + state volumes), AP + hasil book
 backfill 2010–2023, Laporan Ekonomi ~2009–2018 (the pre-2019 Fiscal Outlook
