@@ -1,85 +1,535 @@
 check_type,status,check,computed_rm,reference_rm,diff_rm,band_rm,reference_source
-identity,PASS,opex ministry sum 2009 == headline opex_gross_rm,158639304227.70,158639304227.70,-0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2010 == headline opex_gross_rm,159652962318.09,159652962318.09,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2011 == headline opex_gross_rm,185418919743.00,185418919743.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2012 == headline opex_gross_rm,207912754669.00,207912754669.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2013 == headline opex_gross_rm,213370213558.00,213370213558.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2014 == headline opex_gross_rm,220625673356.00,220625673356.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2015 == headline opex_gross_rm,219088760826.00,219088760826.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2016 == headline opex_gross_rm,212421098894.00,212421098894.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2017 == headline opex_gross_rm,220406001884.00,220406001884.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2018 == headline opex_gross_rm,232882562288.00,232882562288.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2019 == headline opex_gross_rm,264414755876.00,264414755876.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2020 == headline opex_gross_rm,225074947243.00,225074947243.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2021 == headline opex_gross_rm,233752055029.00,233752055029.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2022 == headline opex_gross_rm,294356760615.00,294356760615.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2023 == headline opex_gross_rm,314959481731.00,314959481731.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,opex ministry sum 2024 == headline opex_gross_rm,324617649248.00,324617649248.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
-known_gap,KNOWN_GAP,devex ministry sum 2009 vs headline printed grand total,49104778320.66,49515355570.54,-410577249.88,,PKKP FY2009 volume: leaf tier short of its own printed grand total (see build_headline note)
-identity,PASS,devex ministry sum 2010 == headline devex_gross_rm,52791630219.93,52791630219.93,-0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2011 == headline devex_gross_rm,46416362426.91,46416362426.91,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2012 == headline devex_gross_rm,46932453805.93,46932453805.93,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2013 == headline devex_gross_rm,42209801383.65,42209801383.65,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2014 == headline devex_gross_rm,39503487395.98,39503487395.98,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2015 == headline devex_gross_rm,40767711666.67,40767711666.67,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2016 == headline devex_gross_rm,41995037696.86,41995037696.86,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2017 == headline devex_gross_rm,44883838832.01,44883838832.01,-0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2018 == headline devex_gross_rm,56095455661.74,56095455661.74,-0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2019 == headline devex_gross_rm,54173235316.97,54173235316.97,-0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2020 == headline devex_gross_rm,51359855763.46,51359855763.46,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2021 == headline devex_gross_rm,64256665754.57,64256665754.57,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2022 == headline devex_gross_rm,71573961425.79,71573961425.79,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2023 == headline devex_gross_rm,96089737122.54,96089737122.54,0.00,0.01,fact_ministry_fiscal.csv (this build)
-identity,PASS,devex ministry sum 2024 == headline devex_gross_rm,84011595463.78,84011595463.78,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex 2009: printed net + printed transfer == printed gross,158639304228.00,158639304228.00,0.00,0.01,"PKKP 2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.48 (printed p.38), Nota 5 Akaun Hasil Disatukan"
+identity,PASS,opex 2010: printed net + printed transfer == printed gross,159652962318.00,159652962318.00,0.00,0.01,"PKKP 2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.56 (printed p.38), Nota 5 Akaun Hasil Disatukan"
+identity,PASS,opex 2011: printed net + printed transfer == printed gross,185418919743.00,185418919743.00,0.00,0.01,"PKKP 2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.54 (printed p.32), Nota 5 Akaun Hasil Disatukan"
+identity,PASS,opex 2012: printed net + printed transfer == printed gross,207912754669.00,207912754669.00,0.00,0.01,"PKKP 2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.64 (printed p.40), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2013: printed net + printed transfer == printed gross,213370213558.00,213370213558.00,0.00,0.01,"PKKP 2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.65 (printed p.40), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2014: printed net + printed transfer == printed gross,220625673356.00,220625673356.00,0.00,0.01,"PKKP 2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.66 (printed p.52), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2015: printed net + printed transfer == printed gross,219088760826.00,219088760826.00,0.00,0.01,"PKKP 2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.63 (printed p.52), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2016: printed net + printed transfer == printed gross,212421098894.00,212421098894.00,0.00,0.01,"PKKP 2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.61 (printed p.50), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2017: printed net + printed transfer == printed gross,220406001884.00,220406001884.00,0.00,0.01,"PKKP 2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.64 (printed p.52), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2018: printed net + printed transfer == printed gross,232882562288.00,232882562288.00,0.00,0.01,"PKKP 2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.60 (printed p.48), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2019: printed net + printed transfer == printed gross,264414755876.00,264414755876.00,0.00,0.01,"PKKP 2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.77 (printed p.61), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2020: printed net + printed transfer == printed gross,225074947242.00,225074947242.00,0.00,0.01,"PKKP 2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.73 (printed p.61), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2021: printed net + printed transfer == printed gross,233752055029.00,233752055029.00,0.00,0.01,"PKKP 2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf pdf p.81 (printed p.69), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2022: printed net + printed transfer == printed gross,294356760615.00,294356760615.00,0.00,0.01,"PKKP 2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf pdf p.79 (printed p.67), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2023: printed net + printed transfer == printed gross,314959481731.00,314959481731.00,0.00,0.01,"PKKP 2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf pdf p.83 (printed p.69), Nota 5 Penyata Akaun Hasil Disatukan"
+identity,PASS,opex 2024: printed net + printed transfer == printed gross,324617649248.00,324617649248.00,0.00,0.01,"PKKP 2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf pdf p.83 (printed p.69), Nota 5 Penyata Akaun Hasil Disatukan"
+cross_tier,PASS,opex ministry sum 2009 vs printed opex_gross_rm,158639304227.70,158639304228.00,-0.30,1.0,"PKKP 2009 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2010 vs printed opex_gross_rm,159652962318.09,159652962318.00,0.09,1.0,"PKKP 2010 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2011 vs printed opex_gross_rm,185418919743.00,185418919743.00,0.00,1.0,"PKKP 2011 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2012 vs printed opex_gross_rm,207912754669.00,207912754669.00,0.00,1.0,"PKKP 2012 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2013 vs printed opex_gross_rm,213370213558.00,213370213558.00,0.00,1.0,"PKKP 2013 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2014 vs printed opex_gross_rm,220625673356.00,220625673356.00,0.00,1.0,"PKKP 2014 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2015 vs printed opex_gross_rm,219088760826.00,219088760826.00,0.00,1.0,"PKKP 2015 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2016 vs printed opex_gross_rm,212421098894.00,212421098894.00,0.00,1.0,"PKKP 2016 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2017 vs printed opex_gross_rm,220406001884.00,220406001884.00,0.00,1.0,"PKKP 2017 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2018 vs printed opex_gross_rm,232882562288.00,232882562288.00,0.00,1.0,"PKKP 2018 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2019 vs printed opex_gross_rm,264414755876.00,264414755876.00,0.00,1.0,"PKKP 2019 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2020 vs printed opex_gross_rm,225074947243.00,225074947242.00,1.00,1.0,"PKKP 2020 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2021 vs printed opex_gross_rm,233752055029.00,233752055029.00,0.00,1.0,"PKKP 2021 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2022 vs printed opex_gross_rm,294356760615.00,294356760615.00,0.00,1.0,"PKKP 2022 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2023 vs printed opex_gross_rm,314959481731.00,314959481731.00,0.00,1.0,"PKKP 2023 volume, printed statement total"
+cross_tier,PASS,opex ministry sum 2024 vs printed opex_gross_rm,324617649248.00,324617649248.00,0.00,1.0,"PKKP 2024 volume, printed statement total"
+known_gap,KNOWN_GAP,devex ministry sum 2009 vs headline printed grand total,49104778320.66,49515355570.54,-410577249.88,,"PKKP FY2009 volume: mixed cause, see _known_extraction_defects_curated.csv"
+cross_tier,PASS,devex ministry sum 2010 vs printed devex_gross_rm,52791630219.93,52791630219.93,-0.00,0.01,"PKKP 2010 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2011 vs printed devex_gross_rm,46416362426.91,46416362426.91,0.00,0.01,"PKKP 2011 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2012 vs printed devex_gross_rm,46932453805.93,46932453805.93,0.00,0.01,"PKKP 2012 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2013 vs printed devex_gross_rm,42209801383.65,42209801383.65,0.00,0.01,"PKKP 2013 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2014 vs printed devex_gross_rm,39503487395.98,39503487395.98,0.00,0.01,"PKKP 2014 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2015 vs printed devex_gross_rm,40767711666.67,40767711666.67,0.00,0.01,"PKKP 2015 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2016 vs printed devex_gross_rm,41995037696.86,41995037696.86,0.00,0.01,"PKKP 2016 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2017 vs printed devex_gross_rm,44883838832.01,44883838832.01,-0.00,0.01,"PKKP 2017 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2018 vs printed devex_gross_rm,56095455661.74,56095455661.74,-0.00,0.01,"PKKP 2018 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2019 vs printed devex_gross_rm,54173235316.97,54173235316.97,-0.00,0.01,"PKKP 2019 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2020 vs printed devex_gross_rm,51359855763.46,51359855763.46,0.00,0.01,"PKKP 2020 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2021 vs printed devex_gross_rm,64256665754.57,64256665754.57,0.00,0.01,"PKKP 2021 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2022 vs printed devex_gross_rm,71573961425.79,71573961425.79,0.00,0.01,"PKKP 2022 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2023 vs printed devex_gross_rm,96089737122.54,96089737122.54,0.00,0.01,"PKKP 2023 volume, printed statement total"
+cross_tier,PASS,devex ministry sum 2024 vs printed devex_gross_rm,84011595463.78,84011595463.78,0.00,0.01,"PKKP 2024 volume, printed statement total"
+cross_tier,PASS,devex leaf sum P.06 2009 vs printed ministry JUMLAH,6342016434.50,6342016434.50,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2010 vs printed ministry JUMLAH,7380943393.43,7380943393.43,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2011 vs printed ministry JUMLAH,9952334729.32,9952334729.32,-0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2012 vs printed ministry JUMLAH,7501517301.07,7501517301.07,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2013 vs printed ministry JUMLAH,7752548845.91,7752548845.91,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2014 vs printed ministry JUMLAH,8308754327.07,8308754327.07,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2016 vs printed ministry JUMLAH,11792806104.75,11792806104.75,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2017 vs printed ministry JUMLAH,11009178434.75,11009178434.75,-0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2018 vs printed ministry JUMLAH,7550175728.23,7550175728.23,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2019 vs printed ministry JUMLAH,3395298451.97,3395298451.97,-0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2020 vs printed ministry JUMLAH,5058599721.09,5058599721.09,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2021 vs printed ministry JUMLAH,5890200633.87,5890200633.87,-0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2022 vs printed ministry JUMLAH,6189564488.33,6189564488.33,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2023 vs printed ministry JUMLAH,6913623616.37,6913623616.37,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.06 2024 vs printed ministry JUMLAH,5543950156.64,5543950156.64,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2009 vs printed ministry JUMLAH,37432861.83,37432861.83,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2010 vs printed ministry JUMLAH,48260276.28,48260276.28,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2011 vs printed ministry JUMLAH,27865585.02,27865585.02,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2012 vs printed ministry JUMLAH,51251464.24,51251464.24,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2013 vs printed ministry JUMLAH,39966995.80,39966995.80,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2014 vs printed ministry JUMLAH,23180247.25,23180247.25,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2016 vs printed ministry JUMLAH,84461184.49,84461184.49,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2017 vs printed ministry JUMLAH,26501448.72,26501448.72,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2018 vs printed ministry JUMLAH,27338120.21,27338120.21,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2019 vs printed ministry JUMLAH,33296665.31,33296665.31,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2020 vs printed ministry JUMLAH,17730010.56,17730010.56,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2021 vs printed ministry JUMLAH,853720487.97,853720487.97,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2022 vs printed ministry JUMLAH,852267684.00,852267684.00,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2023 vs printed ministry JUMLAH,917530606.28,917530606.28,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.07 2024 vs printed ministry JUMLAH,899726867.31,899726867.31,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+known_defect,KNOWN_UNPROVEN,devex leaf sum P.10 2009 vs printed ministry JUMLAH,1702087691.62,1732087691.62,-30000000.00,,"sources/pkkp/data/2009/fact_devex_project.csv, P.10 (pdf p.102)"
+cross_tier,PASS,devex leaf sum P.10 2010 vs printed ministry JUMLAH,1569528482.04,1569528482.04,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2011 vs printed ministry JUMLAH,775346409.58,775346409.58,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2012 vs printed ministry JUMLAH,1497243507.50,1497243507.50,-0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2013 vs printed ministry JUMLAH,1570655629.05,1570655629.05,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2014 vs printed ministry JUMLAH,1141556112.37,1141556112.37,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2016 vs printed ministry JUMLAH,573610252.41,573610252.41,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2017 vs printed ministry JUMLAH,482614997.58,482614997.58,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2018 vs printed ministry JUMLAH,11952071806.88,11952071806.88,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2019 vs printed ministry JUMLAH,9203145494.79,9203145494.79,-0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2020 vs printed ministry JUMLAH,9319612665.16,9319612665.16,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2021 vs printed ministry JUMLAH,12912106548.42,12912106548.42,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2022 vs printed ministry JUMLAH,19902241165.30,19902241165.30,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2023 vs printed ministry JUMLAH,29851630333.04,29851630333.04,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.10 2024 vs printed ministry JUMLAH,14454283483.32,14454283483.32,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2009 vs printed ministry JUMLAH,77265888.06,77265888.06,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2010 vs printed ministry JUMLAH,123620092.56,123620092.56,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2011 vs printed ministry JUMLAH,78319324.33,78319324.33,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2012 vs printed ministry JUMLAH,82765192.69,82765192.69,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2013 vs printed ministry JUMLAH,77056777.20,77056777.20,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2014 vs printed ministry JUMLAH,120223380.11,120223380.11,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2016 vs printed ministry JUMLAH,74804722.54,74804722.54,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2017 vs printed ministry JUMLAH,101681629.41,101681629.41,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2018 vs printed ministry JUMLAH,83670412.38,83670412.38,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2019 vs printed ministry JUMLAH,78539537.05,78539537.05,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2020 vs printed ministry JUMLAH,52906307.33,52906307.33,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2021 vs printed ministry JUMLAH,44358008.46,44358008.46,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2022 vs printed ministry JUMLAH,64352713.71,64352713.71,-0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2023 vs printed ministry JUMLAH,111452421.74,111452421.74,-0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.13 2024 vs printed ministry JUMLAH,116113678.25,116113678.25,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.14 2020 vs printed ministry JUMLAH,45382045.97,45382045.97,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.14 2021 vs printed ministry JUMLAH,68844634.49,68844634.49,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.14 2022 vs printed ministry JUMLAH,140506817.56,140506817.56,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.14 2023 vs printed ministry JUMLAH,25111399.63,25111399.63,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.14 2024 vs printed ministry JUMLAH,80107101.41,80107101.41,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.15 2018 vs printed ministry JUMLAH,1933291482.69,1933291482.69,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.15 2019 vs printed ministry JUMLAH,2887893467.95,2887893467.95,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.15 2020 vs printed ministry JUMLAH,607722403.47,607722403.47,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.15 2021 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.15 2023 vs printed ministry JUMLAH,3339196915.51,3339196915.51,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.15 2024 vs printed ministry JUMLAH,2117475134.68,2117475134.68,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2009 vs printed ministry JUMLAH,244514795.22,244514795.22,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2010 vs printed ministry JUMLAH,358247043.60,358247043.60,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2011 vs printed ministry JUMLAH,100845000.00,100845000.00,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2012 vs printed ministry JUMLAH,628947000.00,628947000.00,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2013 vs printed ministry JUMLAH,1077757100.00,1077757100.00,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2014 vs printed ministry JUMLAH,697518526.90,697518526.90,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2016 vs printed ministry JUMLAH,320461834.89,320461834.89,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2017 vs printed ministry JUMLAH,373015081.54,373015081.54,-0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2018 vs printed ministry JUMLAH,331401503.95,331401503.95,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2019 vs printed ministry JUMLAH,320697161.10,320697161.10,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2020 vs printed ministry JUMLAH,313853021.80,313853021.80,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2021 vs printed ministry JUMLAH,203375027.07,203375027.07,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2022 vs printed ministry JUMLAH,138478278.77,138478278.77,-0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2023 vs printed ministry JUMLAH,252357236.09,252357236.09,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.20 2024 vs printed ministry JUMLAH,289325242.51,289325242.51,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2009 vs printed ministry JUMLAH,2556725205.09,2556725205.09,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2010 vs printed ministry JUMLAH,2181664561.40,2181664561.40,-0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2011 vs printed ministry JUMLAH,816016438.22,816016438.22,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2012 vs printed ministry JUMLAH,1165913653.12,1165913653.12,-0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2013 vs printed ministry JUMLAH,1282865530.79,1282865530.79,-0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2014 vs printed ministry JUMLAH,1465541689.00,1465541689.00,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2016 vs printed ministry JUMLAH,1501459146.88,1501459146.88,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2017 vs printed ministry JUMLAH,1251157290.84,1251157290.84,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2018 vs printed ministry JUMLAH,1189793835.71,1189793835.71,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2019 vs printed ministry JUMLAH,1141388893.74,1141388893.74,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2020 vs printed ministry JUMLAH,952468239.05,952468239.05,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2021 vs printed ministry JUMLAH,1322157180.15,1322157180.15,-0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2022 vs printed ministry JUMLAH,1324016282.82,1324016282.82,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2023 vs printed ministry JUMLAH,1418839339.83,1418839339.83,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.21 2024 vs printed ministry JUMLAH,1595198555.57,1595198555.57,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2009 vs printed ministry JUMLAH,3566051309.77,3566051309.77,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2010 vs printed ministry JUMLAH,5122770809.69,5122770809.69,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2011 vs printed ministry JUMLAH,8197586532.92,8197586532.92,-0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2012 vs printed ministry JUMLAH,7044024272.67,7044024272.67,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2013 vs printed ministry JUMLAH,4463930663.76,4463930663.76,-0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2014 vs printed ministry JUMLAH,3897396562.26,3897396562.26,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2016 vs printed ministry JUMLAH,4422424556.99,4422424556.99,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2017 vs printed ministry JUMLAH,5615469845.39,5615469845.39,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2018 vs printed ministry JUMLAH,4548015560.56,4548015560.56,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2019 vs printed ministry JUMLAH,4808098795.66,4808098795.66,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2020 vs printed ministry JUMLAH,5158150224.82,5158150224.82,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2021 vs printed ministry JUMLAH,5305459327.05,5305459327.05,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2022 vs printed ministry JUMLAH,6920397902.71,6920397902.71,-0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2023 vs printed ministry JUMLAH,7375520645.72,7375520645.72,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.22 2024 vs printed ministry JUMLAH,7287298904.34,7287298904.34,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2009 vs printed ministry JUMLAH,2572132264.20,2572132264.20,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2010 vs printed ministry JUMLAH,2541044180.84,2541044180.84,-0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2011 vs printed ministry JUMLAH,1569644162.15,1569644162.15,-0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2012 vs printed ministry JUMLAH,1399605722.09,1399605722.09,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2013 vs printed ministry JUMLAH,1490462335.04,1490462335.04,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2014 vs printed ministry JUMLAH,1257647955.24,1257647955.24,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2016 vs printed ministry JUMLAH,1500669458.83,1500669458.83,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2017 vs printed ministry JUMLAH,1466419594.71,1466419594.71,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2018 vs printed ministry JUMLAH,1811694364.47,1811694364.47,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2019 vs printed ministry JUMLAH,2692504256.87,2692504256.87,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2020 vs printed ministry JUMLAH,952445415.47,952445415.47,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2021 vs printed ministry JUMLAH,530108241.77,530108241.77,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2022 vs printed ministry JUMLAH,516415992.94,516415992.94,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2023 vs printed ministry JUMLAH,3856627386.24,3856627386.24,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.23 2024 vs printed ministry JUMLAH,652797587.51,652797587.51,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2009 vs printed ministry JUMLAH,2448827846.10,2448827846.10,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2010 vs printed ministry JUMLAH,2371184614.47,2371184614.47,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2011 vs printed ministry JUMLAH,604675810.00,604675810.00,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2012 vs printed ministry JUMLAH,807974693.93,807974693.93,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2013 vs printed ministry JUMLAH,817239998.99,817239998.99,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2014 vs printed ministry JUMLAH,632219262.37,632219262.37,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2016 vs printed ministry JUMLAH,928056342.05,928056342.05,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2017 vs printed ministry JUMLAH,815676786.19,815676786.19,-0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2018 vs printed ministry JUMLAH,839940953.29,839940953.29,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2019 vs printed ministry JUMLAH,933293305.46,933293305.46,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2020 vs printed ministry JUMLAH,627655974.83,627655974.83,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2021 vs printed ministry JUMLAH,536669752.79,536669752.79,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2022 vs printed ministry JUMLAH,626723755.98,626723755.98,-0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2023 vs printed ministry JUMLAH,951804930.81,951804930.81,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.24 2024 vs printed ministry JUMLAH,1015548501.93,1015548501.93,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2009 vs printed ministry JUMLAH,79403523.58,79403523.58,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2010 vs printed ministry JUMLAH,42358660.66,42358660.66,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2011 vs printed ministry JUMLAH,36594694.70,36594694.70,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2012 vs printed ministry JUMLAH,59898134.20,59898134.20,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2013 vs printed ministry JUMLAH,31518411.20,31518411.20,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2014 vs printed ministry JUMLAH,28406770.50,28406770.50,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2016 vs printed ministry JUMLAH,62294520.57,62294520.57,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2017 vs printed ministry JUMLAH,56346109.25,56346109.25,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2018 vs printed ministry JUMLAH,79270705.52,79270705.52,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2019 vs printed ministry JUMLAH,73975067.92,73975067.92,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2020 vs printed ministry JUMLAH,43515803.48,43515803.48,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2021 vs printed ministry JUMLAH,44220408.59,44220408.59,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2022 vs printed ministry JUMLAH,58457328.07,58457328.07,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2023 vs printed ministry JUMLAH,59477576.41,59477576.41,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.25 2024 vs printed ministry JUMLAH,64868551.83,64868551.83,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+known_defect,KNOWN_SOURCE_DOCUMENTED,devex leaf sum P.26 2009 vs printed ministry JUMLAH,262323513.41,0.00,262323513.41,,sources/pkkp/data/2009/_validation_checks_2009.csv row 49 (status DOC)
+cross_tier,PASS,devex leaf sum P.26 2018 vs printed ministry JUMLAH,122159845.54,122159845.54,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.26 2019 vs printed ministry JUMLAH,263909434.70,263909434.70,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.26 2020 vs printed ministry JUMLAH,319624136.74,319624136.74,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.26 2021 vs printed ministry JUMLAH,333544078.90,333544078.90,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.26 2022 vs printed ministry JUMLAH,355629419.26,355629419.26,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.26 2023 vs printed ministry JUMLAH,519053951.32,519053951.32,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.26 2024 vs printed ministry JUMLAH,508631017.90,508631017.90,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2009 vs printed ministry JUMLAH,3507925881.57,3507925881.57,-0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2010 vs printed ministry JUMLAH,2702608459.42,2702608459.42,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2011 vs printed ministry JUMLAH,2776810771.71,2776810771.71,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2012 vs printed ministry JUMLAH,3736045227.43,3736045227.43,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2013 vs printed ministry JUMLAH,3411590635.14,3411590635.14,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2014 vs printed ministry JUMLAH,3726518728.86,3726518728.86,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2016 vs printed ministry JUMLAH,3782958424.99,3782958424.99,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2017 vs printed ministry JUMLAH,5087431308.95,5087431308.95,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2018 vs printed ministry JUMLAH,5733831173.58,5733831173.58,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2019 vs printed ministry JUMLAH,5428813909.89,5428813909.89,-0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2020 vs printed ministry JUMLAH,5579226894.30,5579226894.30,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2021 vs printed ministry JUMLAH,4787529248.44,4787529248.44,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2022 vs printed ministry JUMLAH,5329457925.21,5329457925.21,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2023 vs printed ministry JUMLAH,6605681397.72,6605681397.72,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.27 2024 vs printed ministry JUMLAH,8217403753.29,8217403753.29,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2009 vs printed ministry JUMLAH,3157676956.46,3157676956.46,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2010 vs printed ministry JUMLAH,2735660759.52,2735660759.52,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2011 vs printed ministry JUMLAH,3962315418.00,3962315418.00,-0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2012 vs printed ministry JUMLAH,4149904185.02,4149904185.02,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2013 vs printed ministry JUMLAH,3335596019.85,3335596019.85,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2014 vs printed ministry JUMLAH,2459939265.31,2459939265.31,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2016 vs printed ministry JUMLAH,2211286071.81,2211286071.81,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2017 vs printed ministry JUMLAH,3131999061.93,3131999061.93,-0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2018 vs printed ministry JUMLAH,4264973665.16,4264973665.16,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2019 vs printed ministry JUMLAH,5286965343.14,5286965343.14,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2020 vs printed ministry JUMLAH,3283192125.99,3283192125.99,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2021 vs printed ministry JUMLAH,3294207439.94,3294207439.94,-0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2022 vs printed ministry JUMLAH,2203545682.92,2203545682.92,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2023 vs printed ministry JUMLAH,4666533906.19,4666533906.19,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.28 2024 vs printed ministry JUMLAH,4090326186.05,4090326186.05,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+known_defect,KNOWN_UNPROVEN,devex leaf sum P.29 2009 vs printed ministry JUMLAH,2177375240.78,2173855067.97,3520172.81,,"sources/pkkp/data/2009/fact_devex_project.csv, P.29 (pdf p.128)"
+cross_tier,PASS,devex leaf sum P.29 2010 vs printed ministry JUMLAH,2267036986.44,2267036986.44,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2011 vs printed ministry JUMLAH,1372767478.32,1372767478.32,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2012 vs printed ministry JUMLAH,1851450037.06,1851450037.06,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2013 vs printed ministry JUMLAH,1617176989.69,1617176989.69,-0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2014 vs printed ministry JUMLAH,1800772053.12,1800772053.12,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2016 vs printed ministry JUMLAH,1851616778.08,1851616778.08,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2017 vs printed ministry JUMLAH,1522181484.12,1522181484.12,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2018 vs printed ministry JUMLAH,828114395.81,828114395.81,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2019 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2020 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.29 2021 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2009 vs printed ministry JUMLAH,1491616994.58,1491616994.58,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2010 vs printed ministry JUMLAH,1095161216.34,1095161216.34,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2011 vs printed ministry JUMLAH,481817979.28,481817979.28,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2012 vs printed ministry JUMLAH,497256538.76,497256538.76,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2013 vs printed ministry JUMLAH,652005068.58,652005068.58,-0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2014 vs printed ministry JUMLAH,338074839.74,338074839.74,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2016 vs printed ministry JUMLAH,516746646.08,516746646.08,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2017 vs printed ministry JUMLAH,491835458.14,491835458.14,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2018 vs printed ministry JUMLAH,541358932.99,541358932.99,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2019 vs printed ministry JUMLAH,679326159.45,679326159.45,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2020 vs printed ministry JUMLAH,374834345.03,374834345.03,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2021 vs printed ministry JUMLAH,377353656.47,377353656.47,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2022 vs printed ministry JUMLAH,311079169.03,311079169.03,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2023 vs printed ministry JUMLAH,439057439.85,439057439.85,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.30 2024 vs printed ministry JUMLAH,505348333.85,505348333.85,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2009 vs printed ministry JUMLAH,363280497.11,363280497.11,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2010 vs printed ministry JUMLAH,347940717.50,347940717.50,-0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2011 vs printed ministry JUMLAH,137576265.05,137576265.05,-0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2012 vs printed ministry JUMLAH,230034053.30,230034053.30,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2013 vs printed ministry JUMLAH,378213675.43,378213675.43,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2014 vs printed ministry JUMLAH,246573945.63,246573945.63,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2016 vs printed ministry JUMLAH,184108872.69,184108872.69,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2017 vs printed ministry JUMLAH,156354755.14,156354755.14,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2018 vs printed ministry JUMLAH,121700595.98,121700595.98,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2019 vs printed ministry JUMLAH,146889364.06,146889364.06,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2020 vs printed ministry JUMLAH,72452452.46,72452452.46,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2021 vs printed ministry JUMLAH,102229769.74,102229769.74,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2022 vs printed ministry JUMLAH,91821270.18,91821270.18,-0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2023 vs printed ministry JUMLAH,118277041.32,118277041.32,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.31 2024 vs printed ministry JUMLAH,138463595.54,138463595.54,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2009 vs printed ministry JUMLAH,321718675.04,321718675.04,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2010 vs printed ministry JUMLAH,765956320.10,765956320.10,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2011 vs printed ministry JUMLAH,184481944.48,184481944.48,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2012 vs printed ministry JUMLAH,1641832484.20,1641832484.20,-0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2013 vs printed ministry JUMLAH,934358494.04,934358494.04,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2014 vs printed ministry JUMLAH,878508919.84,878508919.84,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2016 vs printed ministry JUMLAH,957791612.57,957791612.57,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2017 vs printed ministry JUMLAH,925685583.51,925685583.51,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2018 vs printed ministry JUMLAH,903147674.54,903147674.54,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2019 vs printed ministry JUMLAH,1134508162.81,1134508162.81,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2020 vs printed ministry JUMLAH,543491611.65,543491611.65,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2021 vs printed ministry JUMLAH,404277601.78,404277601.78,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2022 vs printed ministry JUMLAH,319165081.29,319165081.29,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2023 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.32 2024 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.33 2020 vs printed ministry JUMLAH,2065455683.01,2065455683.01,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.33 2021 vs printed ministry JUMLAH,2240728039.44,2240728039.44,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.33 2022 vs printed ministry JUMLAH,2863320476.40,2863320476.40,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.33 2023 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.33 2024 vs printed ministry JUMLAH,3734883223.29,3734883223.29,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.41 2009 vs printed ministry JUMLAH,5136579262.97,5136579262.97,-0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.41 2010 vs printed ministry JUMLAH,4971703029.61,4971703029.61,-0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.41 2011 vs printed ministry JUMLAH,3928995674.62,3928995674.62,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.41 2012 vs printed ministry JUMLAH,3552458177.03,3552458177.03,-0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.41 2013 vs printed ministry JUMLAH,4063522998.47,4063522998.47,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.41 2014 vs printed ministry JUMLAH,4020143013.51,4020143013.51,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2009 vs printed ministry JUMLAH,2539746540.05,2539746540.05,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2010 vs printed ministry JUMLAH,3569269205.12,3569269205.12,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2011 vs printed ministry JUMLAH,1957762464.67,1957762464.67,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2012 vs printed ministry JUMLAH,1785009672.36,1785009672.36,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2013 vs printed ministry JUMLAH,1717742149.14,1717742149.14,-0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2014 vs printed ministry JUMLAH,1389079700.52,1389079700.52,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2016 vs printed ministry JUMLAH,1317735177.15,1317735177.15,-0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2017 vs printed ministry JUMLAH,1296423249.07,1296423249.07,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2018 vs printed ministry JUMLAH,1572442527.86,1572442527.86,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2019 vs printed ministry JUMLAH,1747343664.28,1747343664.28,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2020 vs printed ministry JUMLAH,3834006363.40,3834006363.40,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2021 vs printed ministry JUMLAH,8597548826.81,8597548826.81,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2022 vs printed ministry JUMLAH,4336611301.10,4336611301.10,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2023 vs printed ministry JUMLAH,4661248739.22,4661248739.22,-0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.42 2024 vs printed ministry JUMLAH,5794032419.66,5794032419.66,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2009 vs printed ministry JUMLAH,1061755248.51,1061755248.51,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2010 vs printed ministry JUMLAH,1887002372.24,1887002372.24,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2011 vs printed ministry JUMLAH,1137081445.58,1137081445.58,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2012 vs printed ministry JUMLAH,1557058510.28,1557058510.28,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2013 vs printed ministry JUMLAH,1199261990.84,1199261990.84,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2014 vs printed ministry JUMLAH,2150171934.99,2150171934.99,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2016 vs printed ministry JUMLAH,1314296078.56,1314296078.56,-0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2017 vs printed ministry JUMLAH,1623658068.47,1623658068.47,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2018 vs printed ministry JUMLAH,1809772089.34,1809772089.34,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2019 vs printed ministry JUMLAH,2771563784.45,2771563784.45,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2020 vs printed ministry JUMLAH,1463919263.94,1463919263.94,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2021 vs printed ministry JUMLAH,2951295210.97,2951295210.97,-0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2022 vs printed ministry JUMLAH,3235586934.83,3235586934.83,-0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2023 vs printed ministry JUMLAH,3506752002.59,3506752002.59,-0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.43 2024 vs printed ministry JUMLAH,3676044367.48,3676044367.48,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+known_defect,KNOWN_SOURCE_DOCUMENTED,devex leaf sum P.44 2009 vs printed ministry JUMLAH,5077629.38,0.00,5077629.38,,sources/pkkp/data/2009/_validation_checks_2009.csv row 49 (status DOC)
+known_defect,KNOWN_OURS_PROVEN,devex leaf sum P.45 2009 vs printed ministry JUMLAH,598728736.06,601292384.75,-2563648.69,,"sources/pkkp/data/2009/fact_devex_project.csv, P.45 projek 00616"
+cross_tier,PASS,devex leaf sum P.45 2010 vs printed ministry JUMLAH,555010006.82,555010006.82,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2011 vs printed ministry JUMLAH,296641979.93,296641979.93,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2012 vs printed ministry JUMLAH,278265457.47,278265457.47,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2013 vs printed ministry JUMLAH,205890700.43,205890700.43,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2014 vs printed ministry JUMLAH,121383230.20,121383230.20,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2016 vs printed ministry JUMLAH,406001534.12,406001534.12,-0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2017 vs printed ministry JUMLAH,339995674.41,339995674.41,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2018 vs printed ministry JUMLAH,184946927.59,184946927.59,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2019 vs printed ministry JUMLAH,336616361.37,336616361.37,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2020 vs printed ministry JUMLAH,259820162.12,259820162.12,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2021 vs printed ministry JUMLAH,230303498.77,230303498.77,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2022 vs printed ministry JUMLAH,264515934.08,264515934.08,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2023 vs printed ministry JUMLAH,379022421.41,379022421.41,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.45 2024 vs printed ministry JUMLAH,391341624.74,391341624.74,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2009 vs printed ministry JUMLAH,329579543.07,329579543.07,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2010 vs printed ministry JUMLAH,648466457.21,648466457.21,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2011 vs printed ministry JUMLAH,374398464.15,374398464.15,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2012 vs printed ministry JUMLAH,651260993.35,651260993.35,-0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2013 vs printed ministry JUMLAH,764317317.70,764317317.70,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2014 vs printed ministry JUMLAH,502503765.11,502503765.11,-0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2016 vs printed ministry JUMLAH,502328784.01,502328784.01,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2017 vs printed ministry JUMLAH,463855555.71,463855555.71,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2018 vs printed ministry JUMLAH,398320670.00,398320670.00,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2019 vs printed ministry JUMLAH,322744402.75,322744402.75,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2020 vs printed ministry JUMLAH,236709819.04,236709819.04,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2021 vs printed ministry JUMLAH,279206386.05,279206386.05,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2022 vs printed ministry JUMLAH,321051437.83,321051437.83,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2023 vs printed ministry JUMLAH,458208774.76,458208774.76,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.46 2024 vs printed ministry JUMLAH,472048820.17,472048820.17,-0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+known_defect,KNOWN_OURS_SUSPECTED,devex leaf sum P.47 2009 vs printed ministry JUMLAH,519737591.06,944340000.00,-424602408.94,,"sources/pkkp/data/2009/fact_devex_maksud.csv, P.47 (pdf p.144)"
+cross_tier,PASS,devex leaf sum P.47 2010 vs printed ministry JUMLAH,1198018834.52,1198018834.52,-0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2011 vs printed ministry JUMLAH,937434567.41,937434567.41,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2012 vs printed ministry JUMLAH,846516662.96,846516662.96,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2013 vs printed ministry JUMLAH,421157270.00,421157270.00,-0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2014 vs printed ministry JUMLAH,490214006.68,490214006.68,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2016 vs printed ministry JUMLAH,268991392.36,268991392.36,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2017 vs printed ministry JUMLAH,477291940.99,477291940.99,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2018 vs printed ministry JUMLAH,715404124.18,715404124.18,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2019 vs printed ministry JUMLAH,368663991.49,368663991.49,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2020 vs printed ministry JUMLAH,482504356.73,482504356.73,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2021 vs printed ministry JUMLAH,629847488.06,629847488.06,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2022 vs printed ministry JUMLAH,955111153.43,955111153.43,-0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2023 vs printed ministry JUMLAH,1277451296.84,1277451296.84,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.47 2024 vs printed ministry JUMLAH,1118801701.58,1118801701.58,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2009 vs printed ministry JUMLAH,217600739.24,217600739.24,-0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2010 vs printed ministry JUMLAH,499507135.88,499507135.88,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2011 vs printed ministry JUMLAH,181485965.15,181485965.15,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2012 vs printed ministry JUMLAH,149020460.51,149020460.51,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2013 vs printed ministry JUMLAH,32931525.05,32931525.05,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2014 vs printed ministry JUMLAH,70289885.61,70289885.61,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2016 vs printed ministry JUMLAH,82629146.61,82629146.61,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2017 vs printed ministry JUMLAH,144392344.05,144392344.05,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2018 vs printed ministry JUMLAH,138469303.07,138469303.07,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2019 vs printed ministry JUMLAH,126223185.02,126223185.02,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2020 vs printed ministry JUMLAH,161736329.89,161736329.89,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2021 vs printed ministry JUMLAH,97574725.32,97574725.32,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2022 vs printed ministry JUMLAH,125902922.87,125902922.87,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2023 vs printed ministry JUMLAH,176431019.32,176431019.32,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.48 2024 vs printed ministry JUMLAH,227245917.43,227245917.43,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.49 2009 vs printed ministry JUMLAH,4119065389.58,4119065389.58,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.49 2010 vs printed ministry JUMLAH,4426847346.23,4426847346.23,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.49 2011 vs printed ministry JUMLAH,2391522098.00,2391522098.00,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.49 2012 vs printed ministry JUMLAH,2249275914.42,2249275914.42,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.49 2013 vs printed ministry JUMLAH,995699029.00,995699029.00,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.50 2024 vs printed ministry JUMLAH,1027451178.12,1027451178.12,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2009 vs printed ministry JUMLAH,2300210622.11,2300210622.11,-0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2010 vs printed ministry JUMLAH,2046280856.84,2046280856.84,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2011 vs printed ministry JUMLAH,3280361284.86,3280361284.86,-0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2012 vs printed ministry JUMLAH,2766427282.47,2766427282.47,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2013 vs printed ministry JUMLAH,3280770975.15,3280770975.15,-0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2014 vs printed ministry JUMLAH,3152726081.99,3152726081.99,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2016 vs printed ministry JUMLAH,3576942327.68,3576942327.68,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2017 vs printed ministry JUMLAH,3348785521.11,3348785521.11,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2018 vs printed ministry JUMLAH,3077913315.38,3077913315.38,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2019 vs printed ministry JUMLAH,2881142858.50,2881142858.50,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2020 vs printed ministry JUMLAH,3147546764.99,3147546764.99,-0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2021 vs printed ministry JUMLAH,4166681856.42,4166681856.42,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2022 vs printed ministry JUMLAH,4749277924.77,4749277924.77,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2023 vs printed ministry JUMLAH,6041181688.66,6041181688.66,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.60 2024 vs printed ministry JUMLAH,7349255793.59,7349255793.59,-0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2009 vs printed ministry JUMLAH,1368321439.71,1368321439.71,-0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2010 vs printed ministry JUMLAH,1335538401.17,1335538401.17,-0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2011 vs printed ministry JUMLAH,855679939.46,855679939.46,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2012 vs printed ministry JUMLAH,751497207.80,751497207.80,-0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2013 vs printed ministry JUMLAH,595564257.40,595564257.40,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2014 vs printed ministry JUMLAH,584143191.80,584143191.80,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2016 vs printed ministry JUMLAH,777944014.99,777944014.99,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2017 vs printed ministry JUMLAH,952070149.84,952070149.84,-0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2018 vs printed ministry JUMLAH,1345359115.62,1345359115.62,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2019 vs printed ministry JUMLAH,2427926687.23,2427926687.23,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2020 vs printed ministry JUMLAH,2292628096.57,2292628096.57,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2021 vs printed ministry JUMLAH,2995888513.37,2995888513.37,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2022 vs printed ministry JUMLAH,3041616932.80,3041616932.80,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2023 vs printed ministry JUMLAH,3944369160.14,3944369160.14,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.62 2024 vs printed ministry JUMLAH,3867983826.84,3867983826.84,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2016 vs printed ministry JUMLAH,1393399013.54,1393399013.54,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2017 vs printed ministry JUMLAH,1095734748.05,1095734748.05,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2018 vs printed ministry JUMLAH,1530196950.68,1530196950.68,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2019 vs printed ministry JUMLAH,4682466910.01,4682466910.01,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2020 vs printed ministry JUMLAH,2694985584.61,2694985584.61,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2021 vs printed ministry JUMLAH,2641332772.69,2641332772.69,-0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2022 vs printed ministry JUMLAH,3551037201.62,3551037201.62,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2023 vs printed ministry JUMLAH,4832027066.40,4832027066.40,-0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.63 2024 vs printed ministry JUMLAH,5316736749.29,5316736749.29,-0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2016 vs printed ministry JUMLAH,1589213697.22,1589213697.22,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2017 vs printed ministry JUMLAH,2628082710.14,2628082710.14,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2018 vs printed ministry JUMLAH,2460679880.53,2460679880.53,-0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2020 vs printed ministry JUMLAH,1397679939.96,1397679939.96,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2021 vs printed ministry JUMLAH,2415896390.77,2415896390.77,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2022 vs printed ministry JUMLAH,2785808247.98,2785808247.98,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2023 vs printed ministry JUMLAH,3391268809.13,3391268809.13,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.64 2024 vs printed ministry JUMLAH,3458903189.66,3458903189.66,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2009 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2009 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2010 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2010 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2011 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2011 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2012 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2012 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2013 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2013 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2014 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2014 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2016 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2016 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2017 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2017 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2018 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2018 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2019 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2019 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2020 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2020 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2021 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2021 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2022 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2022 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2023 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2023 fact_devex_maksud (printed JUMLAH row)
+cross_tier,PASS,devex leaf sum P.70 2024 vs printed ministry JUMLAH,0.00,0.00,0.00,0.01,PKKP 2024 fact_devex_maksud (printed JUMLAH row)
+extraction_gap,UNCAPTURED,devex P.26 2009: 11 leaf row(s) with no captured amount,262323513.41,,,,"our extraction gap, not a printed nil -- see _known_extraction_defects_curated.csv"
+extraction_gap,UNCAPTURED,devex P.44 2009: 9 leaf row(s) with no captured amount,5077629.38,,,,"our extraction gap, not a printed nil -- see _known_extraction_defects_curated.csv"
+extraction_gap,UNCAPTURED,devex P.45 2009: 1 leaf row(s) with no captured amount,598728736.06,,,,"our extraction gap, not a printed nil -- see _known_extraction_defects_curated.csv"
+identity,PASS,FY2015 substituted ministry totals == printed 15-year panel total,40767711666.67,40767711666.67,0.00,0.01,PKKP FY2015 volume printed grand total
+identity,PASS,merge B.41->B.63: the two codes never coexist in a year,0,0,0,0,sources/pkkp dim_maksud (all 16 volumes)
+identity,PASS,merge P.41->P.63: the two codes never coexist in a year,0,0,0,0,sources/pkkp dim_maksud (all 16 volumes)
+identity,PASS,merge B.49->B.64: the two codes never coexist in a year,0,0,0,0,sources/pkkp dim_maksud (all 16 volumes)
+identity,PASS,merge P.49->P.64: the two codes never coexist in a year,0,0,0,0,sources/pkkp dim_maksud (all 16 volumes)
 identity,PASS,BNM MSB 3.1 2009: net DE == gross - loan recovery,48996556000.00,48996556000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2009 (PKKP audited) vs BNM operating expenditure,157067304227.70,157066955000.00,349227.70,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2009 (PKKP audited) vs BNM gross DE,49515355570.54,49515356000.00,-429.46,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2009 (PKKP audited) vs BNM operating expenditure,157066959319.00,157066955000.00,4319.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2009 (PKKP audited) vs BNM gross DE,49515355570.54,49515356000.00,-429.46,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2010: net DE == gross - loan recovery,51295630000.00,51295630000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2010 (PKKP audited) vs BNM operating expenditure,151632962318.09,151632609000.00,353318.09,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2010 (PKKP audited) vs BNM gross DE,52791630219.93,52791630000.00,219.93,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2010 (PKKP audited) vs BNM operating expenditure,151632609265.00,151632609000.00,265.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2010 (PKKP audited) vs BNM gross DE,52791630219.93,52791630000.00,219.93,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2011: net DE == gross - loan recovery,45334362000.00,45334362000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2011 (PKKP audited) vs BNM operating expenditure,182593919743.00,182593790000.00,129743.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2011 (PKKP audited) vs BNM gross DE,46416362426.91,46416362000.00,426.91,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2011 (PKKP audited) vs BNM operating expenditure,182593788338.00,182593790000.00,-1662.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2011 (PKKP audited) vs BNM gross DE,46416362426.91,46416362000.00,426.91,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2012: net DE == gross - loan recovery,44326453000.00,44326453000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2012 (PKKP audited) vs BNM operating expenditure,205536754669.00,205537082000.00,-327331.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2012 (PKKP audited) vs BNM gross DE,46932453805.93,46932453000.00,805.93,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2012 (PKKP audited) vs BNM operating expenditure,205537081525.00,205537082000.00,-475.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2012 (PKKP audited) vs BNM gross DE,46932453805.93,46932453000.00,805.93,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2013: net DE == gross - loan recovery,40683473000.00,40683473000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2013 (PKKP audited) vs BNM operating expenditure,211270213558.00,211270336792.96,-123234.96,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2013 (PKKP audited) vs BNM gross DE,42209801383.65,42209804000.00,-2616.35,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2013 (PKKP audited) vs BNM operating expenditure,211270336793.00,211270336792.96,0.04,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2013 (PKKP audited) vs BNM gross DE,42209801383.65,42209804000.00,-2616.35,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2014: net DE == gross - loan recovery,38451487000.00,38451487000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2014 (PKKP audited) vs BNM operating expenditure,219588673356.00,219589142000.00,-468644.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2014 (PKKP audited) vs BNM gross DE,39503487395.98,39503487000.00,395.98,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2014 (PKKP audited) vs BNM operating expenditure,219589142572.00,219589142000.00,572.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2014 (PKKP audited) vs BNM gross DE,39503487395.98,39503487000.00,395.98,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2015: net DE == gross - loan recovery,39285143000.00,39285143000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2015 (PKKP audited) vs BNM operating expenditure,216997760826.00,216997500000.00,260826.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2015 (PKKP audited) vs BNM gross DE,40767711666.67,40767712000.00,-333.33,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2015 (PKKP audited) vs BNM operating expenditure,216997528507.00,216997500000.00,28507.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2015 (PKKP audited) vs BNM gross DE,40767711666.67,40767712000.00,-333.33,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2016: net DE == gross - loan recovery,40648469000.00,40648469000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2016 (PKKP audited) vs BNM operating expenditure,210173098894.00,210172661000.00,437894.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2016 (PKKP audited) vs BNM gross DE,41995037696.86,41995037000.00,696.86,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2016 (PKKP audited) vs BNM operating expenditure,210172661334.00,210172661000.00,334.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2016 (PKKP audited) vs BNM gross DE,41995037696.86,41995037000.00,696.86,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2017: net DE == gross - loan recovery,43031679000.00,43031679000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2017 (PKKP audited) vs BNM operating expenditure,217695001884.00,217695192668.16,-190784.16,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2017 (PKKP audited) vs BNM gross DE,44883838832.01,44883839000.00,-167.99,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_net 2017 (MOF official_actual) vs BNM net DE,43032000000.00,43031679000.00,321000.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2017 (PKKP audited) vs BNM operating expenditure,217695192668.00,217695192668.16,-0.16,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2017 (PKKP audited) vs BNM gross DE,44883838832.01,44883839000.00,-167.99,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,"devex_net 2017 (MOF official_actual, printed in RM juta) vs BNM net DE",43032000000.00,43031679000.00,321000.00,500000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2018: net DE == gross - loan recovery,55307273161.74,55307273161.74,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2018 (PKKP audited) vs BNM operating expenditure,230959562288.00,230960493000.00,-930712.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2018 (PKKP audited) vs BNM gross DE,56095455661.74,56095455661.74,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_net 2018 (MOF official_actual) vs BNM net DE,55307000000.00,55307273161.74,-273161.74,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2018 (PKKP audited) vs BNM operating expenditure,230960492668.00,230960493000.00,-332.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2018 (PKKP audited) vs BNM gross DE,56095455661.74,56095455661.74,0.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,"devex_net 2018 (MOF official_actual, printed in RM juta) vs BNM net DE",55307000000.00,55307273161.74,-273161.74,500000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2019: net DE == gross - loan recovery,52570321316.97,52570321316.97,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2019 (PKKP audited) vs BNM operating expenditure,263342755876.00,263342865000.00,-109124.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2019 (PKKP audited) vs BNM gross DE,54173235316.97,54173235316.97,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_net 2019 (MOF official_actual) vs BNM net DE,52570000000.00,52570321316.97,-321316.97,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2019 (PKKP audited) vs BNM operating expenditure,263342924643.00,263342865000.00,59643.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2019 (PKKP audited) vs BNM gross DE,54173235316.97,54173235316.97,0.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,"devex_net 2019 (MOF official_actual, printed in RM juta) vs BNM net DE",52570000000.00,52570321316.97,-321316.97,500000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2020: net DE == gross - loan recovery,50100855763.46,50100855763.46,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2020 (PKKP audited) vs BNM operating expenditure,224599947243.00,224600200000.00,-252757.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2020 (PKKP audited) vs BNM gross DE,51359855763.46,51359855763.46,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2020 (PKKP audited) vs BNM operating expenditure,224600242049.00,224600200000.00,42049.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2020 (PKKP audited) vs BNM gross DE,51359855763.46,51359855763.46,0.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2021: net DE == gross - loan recovery,63264841751.57,63264841751.57,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2021 (PKKP audited) vs BNM operating expenditure,231516055029.00,231516400000.00,-344971.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2021 (PKKP audited) vs BNM gross DE,64256665754.57,64256665754.57,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2021 (PKKP audited) vs BNM operating expenditure,231516358812.00,231516400000.00,-41188.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2021 (PKKP audited) vs BNM gross DE,64256665754.57,64256665754.57,0.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2022: net DE == gross - loan recovery,70166961425.79,70166961425.79,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2022 (PKKP audited) vs BNM operating expenditure,292693760615.00,292693200000.00,560615.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2022 (PKKP audited) vs BNM gross DE,71573961425.79,71573961425.79,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2022 (PKKP audited) vs BNM operating expenditure,292693212510.00,292693200000.00,12510.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2022 (PKKP audited) vs BNM gross DE,71573961425.79,71573961425.79,0.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2023: net DE == gross - loan recovery,95083684165.51,95083684165.51,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2023 (PKKP audited) vs BNM operating expenditure,311266481731.00,311266917827.47,-436096.47,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,DIVERGE,devex_gross 2023 (PKKP audited) vs BNM gross DE,96089737122.54,96090984165.51,-1247042.97,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2023 (PKKP audited) vs BNM operating expenditure,311266917827.00,311266917827.47,-0.47,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,DIVERGE,devex_gross 2023 (PKKP audited) vs BNM gross DE,96089737122.54,96090984165.51,-1247042.97,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
 identity,PASS,BNM MSB 3.1 2024: net DE == gross - loan recovery,82274695463.78,82274695463.78,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,opex_net 2024 (PKKP audited) vs BNM operating expenditure,321508649248.00,321508851861.68,-202613.68,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_gross 2024 (PKKP audited) vs BNM gross DE,84011595463.78,84011595463.78,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
-cross_source,AGREE,devex_net 2024 (MOF official_actual) vs BNM net DE,82275000000.00,82274695463.78,304536.22,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2024 (PKKP audited) vs BNM operating expenditure,321508948391.00,321508851861.68,96529.32,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2024 (PKKP audited) vs BNM gross DE,84011595463.78,84011595463.78,0.00,100000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,"devex_net 2024 (MOF official_actual, printed in RM juta) vs BNM net DE",82275000000.00,82274695463.78,304536.22,500000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"

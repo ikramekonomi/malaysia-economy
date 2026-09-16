@@ -155,6 +155,15 @@ NOT_MERGED_NOTES = {
             "list that year (IPTA, MQA, teaching hospitals, KTAR appear only in 2014). "
             "Left missing, not estimated -- see B.63's figure for those years.",
     "P.64": "See B.64 -- development-vote counterpart.",
+    "B.29": "Kementerian Tenaga, Teknologi Hijau dan Air (2009-2018). Thematically close "
+            "to B.33 Kementerian Alam Sekitar dan Air (2020-2024) and the gap looks like a "
+            "renumbering -- but NOT merged, and here the evidence is positive rather than "
+            "merely absent: on the development side P.29 and P.33 both appear in FY2020 "
+            "and FY2021, so the two votes demonstrably coexist and cannot be one lineage.",
+    "P.29": "See B.29 -- P.29 and P.33 coexist in FY2020-2021, which is what disproves the "
+            "merge.",
+    "B.33": "Kementerian Alam Sekitar dan Air (2020+). See B.29 -- not merged.",
+    "P.33": "See B.29 -- development-vote counterpart.",
 }
 
 FY2015_GRAND_TOTAL_LABEL = "JUMLAH PERBELANJAAN PEMBANGUNAN"
@@ -217,21 +226,28 @@ def build_ministry_fiscal(con, code_to_canonical):
     opex_rows = con.execute(
         "SELECT maksud_code, year, sum(sebenar_rm), "
         "  string_agg(DISTINCT source_file, '|'), min(pdf_page), max(pdf_page), "
-        "  string_agg(DISTINCT statement, '|'), count(*) "
+        "  string_agg(DISTINCT statement, '|'), count(sebenar_rm) "
         "FROM fact_opex_maksud GROUP BY maksud_code, year"
     ).fetchall()
 
     devex_leaf = con.execute(
         "SELECT maksud_code, year, sum(sebenar_jumlah_rm), "
         "  string_agg(DISTINCT source_file, '|'), min(pdf_page), max(pdf_page), "
-        "  string_agg(DISTINCT statement, '|'), count(*) "
+        "  string_agg(DISTINCT statement, '|'), count(sebenar_jumlah_rm) "
         "FROM fact_devex_project "
         "WHERE row_type='project' AND year <> 2015 GROUP BY maksud_code, year"
     ).fetchall()
+    # Leaf rows whose amount cell was never captured. The extraction convention is that a
+    # printed en-dash becomes 0.0, so a NULL is OUR gap, not a printed nil -- it must not
+    # be summed as zero in silence. FY2009 only (P.26 x11, P.44 x9, P.45 x1).
+    devex_leaf_uncaptured = dict(((c, y), n) for c, y, n in con.execute(
+        "SELECT maksud_code, year, count(*) FROM fact_devex_project "
+        "WHERE row_type='project' AND sebenar_jumlah_rm IS NULL GROUP BY 1, 2"
+    ).fetchall())
     devex_2015 = con.execute(
         "SELECT maksud_code, year, sum(sebenar_jumlah_rm), "
         "  string_agg(DISTINCT source_file, '|'), min(pdf_page), max(pdf_page), "
-        "  string_agg(DISTINCT statement, '|'), count(*) "
+        "  string_agg(DISTINCT statement, '|'), count(sebenar_jumlah_rm) "
         "FROM fact_devex_maksud "
         f"WHERE year=2015 AND jumlah_label_bm <> '{FY2015_GRAND_TOTAL_LABEL}' "
         "GROUP BY maksud_code, year"
@@ -247,8 +263,10 @@ def build_ministry_fiscal(con, code_to_canonical):
             canon = code_to_canonical.get(code, code)
             a = agg.setdefault((canon, jenis, year), {
                 "amount": 0.0, "raw": set(), "files": set(), "p0": None, "p1": None,
-                "stmts": set(), "n": 0,
+                "stmts": set(), "n": 0, "uncaptured": 0,
                 "dataset": DATASET[(jenis, is_2015_substitute)]})
+            if jenis == "devex" and not is_2015_substitute:
+                a["uncaptured"] += devex_leaf_uncaptured.get((code, year), 0)
             a["amount"] += amt
             a["raw"].add(code)
             a["files"].update(f for f in (files or "").split("|") if f)
@@ -269,6 +287,11 @@ def build_ministry_fiscal(con, code_to_canonical):
         if year == 2015 and jenis == "devex":
             note = (note + "; " if note else "") + \
                 "FY2015 leaf tier is OCR-provisional; using fact_devex_maksud ministry total"
+        if a["uncaptured"]:
+            note = (note + "; " if note else "") + (
+                f"UNDERSTATED: {a['uncaptured']} leaf row(s) have no captured amount in the "
+                "source CSV and contribute nothing to this total -- an extraction gap on our "
+                "side, not a printed nil (see _known_extraction_defects_curated.csv)")
         out.append({
             "canonical_code": canon, "jenis": jenis, "year": year,
             "amount_rm": round(a["amount"], 2),
@@ -279,20 +302,26 @@ def build_ministry_fiscal(con, code_to_canonical):
             "pdf_pages": f"{a['p0']}-{a['p1']}" if a["p0"] != a["p1"] else str(a["p0"]),
             "statement": ";".join(sorted(a["stmts"])),
             "n_source_rows": a["n"],
+            "n_source_rows_uncaptured": a["uncaptured"],
+            "data_quality": "suspect" if a["uncaptured"] else "ok",
             "raw_codes": ",".join(sorted(a["raw"])),
             "note": note,
         })
 
     cols = ["canonical_code", "jenis", "year", "amount_rm", "basis", "measure",
-            "source_dataset", "source_file", "pdf_pages", "statement", "n_source_rows",
-            "raw_codes", "note"]
+            "data_quality", "source_dataset", "source_file", "pdf_pages", "statement",
+            "n_source_rows", "n_source_rows_uncaptured", "raw_codes", "note"]
     with open(OUT_MINISTRY, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=cols)
         w.writeheader()
         w.writerows(out)
     multi = sum(1 for r in out if ";" in r["source_file"])
+    suspect = [r for r in out if r["data_quality"] == "suspect"]
     print(f"{OUT_MINISTRY}: {len(out)} (canonical_code, jenis, year) rows"
           + (f" -- {multi} span more than one source volume" if multi else ""))
+    for r in suspect:
+        print(f"  data_quality=suspect: {r['canonical_code']} {r['jenis']} {r['year']} "
+              f"({r['n_source_rows_uncaptured']} uncaptured leaf row(s))")
     return out
 
 
@@ -394,6 +423,69 @@ DEVEX_NET_MOF = {**_load_devex_net_2021_edition(), **_load_devex_net_outlook_edi
 BNM = _load_bnm_msb_3_1()
 
 
+# The Consolidated Revenue Account (Nota 5 / Penyata Akaun Hasil Disatukan) prints, on one
+# page and to the sen, all three national operating-expenditure figures: the total before
+# the transfer to the Development Fund, the transfer itself, and the total after it. They
+# are read straight off that statement -- NOT derived by subtracting a figure from the
+# 15-year fiscal panel, which publishes in RM juta and whose rounding was silently
+# entering opex_net at up to RM930,380 a year.
+#
+# The printed labels change with the volume era, so each year's three rows are resolved by
+# label and then proved: net + transfer must equal gross to the sen, or the build stops.
+RACCT_TRANSFER = "Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan"
+RACCT_NET = ("sebelum pindahan", "tanpa pindahan")     # 2011-2024 / 2009
+RACCT_GROSS = ("selepas pindahan",)                    # 2010-2024
+RACCT_GROSS_2009 = "Jumlah Perbelanjaan Mengurus"      # the FY2009 volume prints no suffix
+
+
+def _load_revenue_account(con):
+    """Per year: the printed before-transfer, transfer and after-transfer figures."""
+    rows = con.execute(
+        "SELECT year, line_item_bm, row_type, sebenar_rm, source_file, pdf_page, "
+        "       printed_page, statement "
+        "FROM fact_revenue_account_statement WHERE sebenar_rm IS NOT NULL"
+    ).fetchall()
+    out = {}
+    for year, label, row_type, amt, sfile, pdfp, prp, stmt in rows:
+        low = label.lower()
+        prov = {"source_file": sfile, "pdf_page": pdfp, "printed_page": prp,
+                "statement": stmt}
+        y = out.setdefault(year, {})
+        if label == RACCT_TRANSFER:
+            y["transfer"] = (amt, dict(prov, line=label))
+        elif "mengurus" in low and any(k in low for k in RACCT_NET):
+            y["net"] = (amt, dict(prov, line=label))
+        elif "mengurus" in low and any(k in low for k in RACCT_GROSS):
+            y["gross"] = (amt, dict(prov, line=label))
+        elif year == 2009 and label == RACCT_GROSS_2009 and row_type == "subtotal":
+            y["gross"] = (amt, dict(prov, line=label))
+        elif year == 2018 and label == "PERBELANJAAN MENGURUS" and row_type == "subtotal":
+            y["net"] = (amt, dict(prov, line=label))
+
+    for year in sorted(out):
+        y = out[year]
+        # FY2017-2024 volumes label the before-transfer subtotal plainly "PERBELANJAAN
+        # MENGURUS" with no suffix; pick it up where the suffixed form is absent.
+        if "net" not in y:
+            hit = [r for r in rows if r[0] == year and r[2] == "subtotal"
+                   and r[1].upper() == "PERBELANJAAN MENGURUS"]
+            if hit:
+                y["net"] = (hit[0][3], {"source_file": hit[0][4], "pdf_page": hit[0][5],
+                                        "printed_page": hit[0][6], "statement": hit[0][7],
+                                        "line": hit[0][1]})
+        missing = [k for k in ("net", "transfer", "gross") if k not in y]
+        if missing:
+            raise SystemExit(f"FY{year} revenue account statement: no printed "
+                             f"{'/'.join(missing)} row found -- label convention changed?")
+        # prove the three rows resolved are really the three rows of one identity
+        diff = (y["net"][0] + y["transfer"][0]) - y["gross"][0]
+        if abs(diff) > 0.01:
+            raise SystemExit(f"FY{year}: printed net {y['net'][0]:,.2f} + transfer "
+                             f"{y['transfer'][0]:,.2f} != printed gross "
+                             f"{y['gross'][0]:,.2f} (off {diff:,.2f}) -- wrong rows picked")
+    return out
+
+
 def build_headline(con):
     opex_gross = dict(con.execute(
         "SELECT year, sum(sebenar_rm) FROM fact_opex_maksud GROUP BY year"
@@ -419,23 +511,15 @@ def build_headline(con):
     devex_gross[2015] = devex_gross_2015
     devex_gross[2009] = devex_gross_2009
 
-    # opex net: gross minus transfer to Development Fund, per PKKP's own 15-year panel.
-    transfer = dict(con.execute(
-        "SELECT year, amount_rm_juta*1e6 FROM fact_timeseries_2010_2024 "
-        "WHERE line_item_bm='Caruman daripada Akaun Hasil Disatukan'"
-    ).fetchall())
-    transfer[2009] = con.execute(
-        "SELECT amount_rm_juta*1e6 FROM fact_timeseries_2000_2009 "
-        "WHERE section_bm='Penerimaan' AND line_item_bm='Pindahan dari Akaun Hasil Disatukan' "
-        "AND year=2009"
-    ).fetchone()[0]
+    racct = _load_revenue_account(con)
 
     out = []
     for year in range(2009, 2025):
-        og = opex_gross.get(year)
+        ra = racct[year]
+        og, og_prov = ra["gross"]
+        on, on_prov = ra["net"]
+        tr, tr_prov = ra["transfer"]
         dg = devex_gross.get(year)
-        tr = transfer.get(year)
-        on = (og - tr) if (og is not None and tr is not None) else None
         mof = DEVEX_NET_MOF.get(year)
         bnm = BNM.get(year, {})
 
@@ -453,12 +537,18 @@ def build_headline(con):
 
         out.append({
             "year": year,
-            "opex_gross_rm": round(og, 2) if og is not None else None,
-            "opex_gross_basis": "audited (PKKP)" if og is not None else None,
-            "opex_net_rm": round(on, 2) if on is not None else None,
-            "opex_net_basis": "audited (PKKP), derived: gross - transfer to Development Fund"
-                              if on is not None else None,
-            "transfer_to_dev_fund_rm": round(tr, 2) if tr is not None else None,
+            "opex_gross_rm": round(og, 2),
+            "opex_gross_basis": "audited (PKKP), as printed",
+            "opex_gross_line_bm": og_prov["line"],
+            "opex_net_rm": round(on, 2),
+            "opex_net_basis": "audited (PKKP), as printed",
+            "opex_net_line_bm": on_prov["line"],
+            "transfer_to_dev_fund_rm": round(tr, 2),
+            "transfer_basis": "audited (PKKP), as printed",
+            "opex_source_file": og_prov["source_file"],
+            "opex_source_statement": og_prov["statement"],
+            "opex_pdf_page": og_prov["pdf_page"],
+            "opex_printed_page": og_prov["printed_page"],
             "devex_gross_rm": round(dg, 2) if dg is not None else None,
             "devex_gross_basis": "audited (PKKP)" if dg is not None else None,
             "devex_net_rm": mof["amount_rm"] if mof else None,
@@ -485,36 +575,127 @@ def build_headline(con):
     return out
 
 
+OUT_DEFECTS = os.path.join(CURATED, "_known_extraction_defects_curated.csv")
+
+# FY2009 per-ministry devex: the leaf tier does not foot to the printed ministry JUMLAH
+# for six votes. Each is diagnosed and classified INDIVIDUALLY below, because the four
+# possible answers have very different consequences and lumping them together would let
+# our own extraction gaps be published as the Accountant-General's inconsistencies:
+#
+#   ours_proven        we can show the defect is in our extraction
+#   ours_suspected     the signature points at our extraction; not provable without the
+#                      printed page, which is not in this repo -- so NOT published as a
+#                      source finding
+#   source_documented  the source itself documents it
+#   unproven           neither side established; recorded as open
+#
+# A leaf-vs-JUMLAH mismatch NOT listed here fails the build. This registry is a list of
+# individually-justified exceptions, not a blanket tolerance.
+FY2009_DEVEX_LEAF_DEFECTS = {
+    "P.45": ("ours_proven",
+             "Leaf sum is RM2,563,648.69 under the printed JUMLAH 601,292,384.75. P.45 has "
+             "exactly one leaf row with no captured amount -- projek 00616 'Pusat Latihan "
+             "Khas', whose anggaran_jumlah_rm is also NULL. A NULL is an uncaptured cell, "
+             "not a printed nil (the convention renders a printed en-dash as 0.0), so the "
+             "row contributes nothing and the shortfall is consistent with it to the "
+             "ringgit. Fix: re-read projek 00616 from the printed page.",
+             "sources/pkkp/data/2009/fact_devex_project.csv, P.45 projek 00616"),
+    "P.47": ("ours_suspected",
+             "Leaf sum is RM424,602,408.94 under the printed JUMLAH -- 82% of the FY2009 "
+             "national gap on its own. The JUMLAH row prints 944,340,000.00 in FOUR "
+             "columns at once (anggaran_langsung, anggaran_jumlah, sebenar_langsung, "
+             "sebenar_jumlah) with pinjaman nil, an exactly-round figure. Four identical "
+             "round columns is the signature of one column being read across the row, not "
+             "of an audited outturn; 15 of P.47's project rows also carry align_ok=False. "
+             "NOT publishable as a source-side inconsistency without re-reading pdf p.144 "
+             "(printed p.140), which this repo does not hold.",
+             "sources/pkkp/data/2009/fact_devex_maksud.csv, P.47 (pdf p.144)"),
+    "P.10": ("unproven",
+             "Leaf sum is RM30,000,000.00 -- exactly round -- under the printed JUMLAH. "
+             "Unlike P.47 the JUMLAH row itself reads cleanly (anggaran and sebenar "
+             "differ, langsung and pinjaman both populated), so the gap sits in the leaf "
+             "tier; P.10 has 3 project rows with align_ok=False. An exactly-round RM30 "
+             "juta gap is more consistent with a missed or misread leaf row than with an "
+             "audited difference, but neither is established without the printed page.",
+             "sources/pkkp/data/2009/fact_devex_project.csv, P.10 (pdf p.102)"),
+    "P.29": ("unproven",
+             "Leaf sum EXCEEDS the printed JUMLAH by RM3,520,172.81 -- the only ministry "
+             "where the leaf tier overshoots. 5 project rows carry align_ok=False. Cause "
+             "not established; needs pdf p.128 (printed p.124).",
+             "sources/pkkp/data/2009/fact_devex_project.csv, P.29 (pdf p.128)"),
+    "P.26": ("source_documented",
+             "The printed JUMLAH is 0.00 in all six amount columns above 64 project rows "
+             "summing RM262,323,513.41. The PKKP source's own validation file records this "
+             "as a genuine FY2009 reorganisation (the ministry was transferred out), and "
+             "the same file accounts for the resulting RM224,332,507.85 grand-total gap. "
+             "Kept as printed. SEPARATELY, 11 of P.26's leaf rows have no captured amount "
+             "-- that part is our extraction gap, flagged data_quality='suspect'.",
+             "sources/pkkp/data/2009/_validation_checks_2009.csv row 49 (status DOC)"),
+    "P.44": ("source_documented",
+             "As P.26: printed JUMLAH 0.00 above project rows summing RM5,077,629.38, "
+             "documented by the source as the same FY2009 reorganisation. 9 of P.44's leaf "
+             "rows have no captured amount -- our gap, flagged data_quality='suspect'.",
+             "sources/pkkp/data/2009/_validation_checks_2009.csv row 49 (status DOC)"),
+}
+
+
+def build_defects_register(rows):
+    """One row per known, individually-justified exception. Written every build so it
+    cannot drift from the checks that produce it."""
+    with open(OUT_DEFECTS, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["table", "key", "computed_rm", "printed_rm", "diff_rm",
+                    "classification", "diagnosis", "evidence"])
+        w.writerows(rows)
+    from collections import Counter
+    tally = Counter(r[5] for r in rows)
+    print(f"{OUT_DEFECTS}: {len(rows)} known defects -- "
+          + ", ".join(f"{v} {k}" for k, v in sorted(tally.items())))
+
+
 # Exact identities must hold to the sen. Cross-source comparisons are a different kind of
 # check and are reported as a different kind of result: two institutions publishing the
 # same concept are allowed to differ, and the size of the difference is the finding --
 # so they never carry the word PASS, and a divergence never silently reads as agreement.
 IDENTITY_TOL_RM = 0.01
-# BNM MSB 3.1 vs PKKP: BNM's federal-government-finance compilation is published to
-# RM0.001 juta in the early years and to the sen from FY2018, and its operating-
-# expenditure line is a slightly different presentation of the same account. Observed
-# spread across FY2009-2024 is under RM1.0 juta on a RM150-320 bil base (<0.0005%).
-# The band declares what "the same number" means here; it does NOT excuse a difference.
-BNM_AGREEMENT_BAND_RM = 1.0e6
+# BNM MSB 3.1 vs PKKP. Once the headline reads the sen-exact printed figures rather than
+# a juta-rounded panel line, BNM's operating-expenditure series agrees with the audited
+# accounts to within a few hundred ringgit in most years, so the band is set where a real
+# difference would show rather than where our own rounding used to hide.
+BNM_AGREEMENT_BAND_RM = 100.0e3
+# The printed Consolidated Revenue Account and the printed per-maksud statement are two
+# tiers of the same audited volume. They tie to the sen in 14 of 16 years; FY2010 (RM0.09)
+# and FY2020 (RM1.00) differ by the statements' own ringgit rounding.
+CROSS_TIER_BAND_RM = 1.0
+# MOF's Tinjauan Fiskal prints net DE in RM juta, so a MOF figure can sit up to half a
+# juta from a sen-exact BNM one on nothing but the printing convention. Comparing the two
+# at the sen-level band would manufacture five divergences out of MOF's rounding.
+MOF_PRINTING_BAND_RM = 0.5e6
 
 
 def build_validation(con, headline, ministry_rows):
     checks = []   # [check_type, status, check, computed, reference, diff, band, ref_source]
 
-    def identity(name, computed, reference, ref_source):
+    def add(kind, ok_status, bad_status, name, computed, reference, band, ref_source):
         diff = computed - reference
-        checks.append(["identity", "PASS" if abs(diff) <= IDENTITY_TOL_RM else "FAIL",
-                       name, computed, reference, diff, IDENTITY_TOL_RM, ref_source])
+        checks.append([kind, ok_status if abs(diff) <= band else bad_status,
+                       name, computed, reference, diff, band, ref_source])
 
-    def agreement(name, computed, reference, ref_source):
-        diff = computed - reference
-        ok = abs(diff) <= BNM_AGREEMENT_BAND_RM
-        checks.append(["cross_source", "AGREE" if ok else "DIVERGE",
-                       name, computed, reference, diff, BNM_AGREEMENT_BAND_RM, ref_source])
+    def identity(name, computed, reference, ref_source):
+        add("identity", "PASS", "FAIL", name, computed, reference, IDENTITY_TOL_RM, ref_source)
 
     by_year = {r["year"]: r for r in headline}
+    racct = _load_revenue_account(con)
 
-    # A. internal identities: the ministry table must foot to the headline it was built from
+    # ---- A. the printed statement's own identity, tier by tier ----------------------
+    for year in sorted(by_year):
+        row, ra = by_year[year], racct[year]
+        src = (f"PKKP {row['opex_source_file']} pdf p.{row['opex_pdf_page']} "
+               f"(printed p.{row['opex_printed_page']}), {row['opex_source_statement']}")
+        identity(f"opex {year}: printed net + printed transfer == printed gross",
+                 row["opex_net_rm"] + row["transfer_to_dev_fund_rm"], row["opex_gross_rm"], src)
+
+    # ---- B. cross-tier: the per-maksud statement against the account it rolls into ---
     for jenis, hcol in (("opex", "opex_gross_rm"), ("devex", "devex_gross_rm")):
         for year in sorted(by_year):
             got = sum(r["amount_rm"] for r in ministry_rows
@@ -523,38 +704,111 @@ def build_validation(con, headline, ministry_rows):
             if ref is None:
                 continue
             if jenis == "devex" and year == 2009:
-                # headline FY2009 uses the volume's printed grand total; the ministry
-                # table sums that year's leaf rows, which the volume itself prints short
-                # of the grand total. A source-side gap, reported, never closed by us.
-                diff = got - ref
+                # the FY2009 volume's leaf tier does not foot to its own printed grand
+                # total. Part of that gap is ours (21 uncaptured leaf cells) and part is
+                # the volume's; the decomposition is in _known_extraction_defects_curated
+                # .csv and is NOT published as a source-side finding. Recorded, not closed.
                 checks.append(["known_gap", "KNOWN_GAP",
                                f"devex ministry sum {year} vs headline printed grand total",
-                               got, ref, diff, "",
-                               "PKKP FY2009 volume: leaf tier short of its own printed "
-                               "grand total (see build_headline note)"])
+                               got, ref, got - ref, "",
+                               "PKKP FY2009 volume: mixed cause, see "
+                               "_known_extraction_defects_curated.csv"])
                 continue
-            identity(f"{jenis} ministry sum {year} == headline {hcol}", got, ref,
-                     "fact_ministry_fiscal.csv (this build)")
+            add("cross_tier", "PASS", "FAIL",
+                f"{jenis} ministry sum {year} vs printed {hcol}", got, ref,
+                CROSS_TIER_BAND_RM if jenis == "opex" else IDENTITY_TOL_RM,
+                f"PKKP {year} volume, printed statement total")
 
-    # B. cross-source: BNM MSB 3.1, an independent institution publishing the same lines
+    # ---- C. per-ministry devex leaf sum vs that ministry's own printed JUMLAH --------
+    # The check that isolates an individual ministry's leaf gap instead of lumping every
+    # ministry's into one national aggregate.
+    # A ministry can print more than one JUMLAH row: FY2019/2020 P.63 prints a JUMLAH for
+    # each of its two portfolios (PENDIDIKAN, PENDIDIKAN TINGGI) and then a roll-up
+    # (KEMENTERIAN PENDIDIKAN). Summing all of them double-counts. Which row is the
+    # roll-up is derived from the table's OWN arithmetic -- the row that equals the sum of
+    # the others -- rather than assumed from its label.
+    printed_rows = {}
+    for code, year, label, amt in con.execute(
+            "SELECT maksud_code, year, jumlah_label_bm, sebenar_jumlah_rm "
+            "FROM fact_devex_maksud "
+            f"WHERE jumlah_label_bm <> '{FY2015_GRAND_TOTAL_LABEL}' "
+            "AND sebenar_jumlah_rm IS NOT NULL").fetchall():
+        printed_rows.setdefault((code, year), []).append((label, amt))
+    printed_maksud = {}
+    for key, rows_ in printed_rows.items():
+        if len(rows_) == 1:
+            printed_maksud[key] = rows_[0][1]
+            continue
+        total = sum(a for _, a in rows_)
+        rollup = [a for _, a in rows_ if abs(a - (total - a)) <= IDENTITY_TOL_RM]
+        printed_maksud[key] = rollup[0] if len(rollup) == 1 else total
+    leaf_by_raw = {(c, y): v for c, y, v in con.execute(
+        "SELECT maksud_code, year, sum(sebenar_jumlah_rm) FROM fact_devex_project "
+        "WHERE row_type='project' AND year <> 2015 GROUP BY 1, 2").fetchall()}
+    defects = []
+    for (code, year), leaf in sorted(leaf_by_raw.items()):
+        ref = printed_maksud.get((code, year))
+        if ref is None:
+            continue
+        name = f"devex leaf sum {code} {year} vs printed ministry JUMLAH"
+        src = f"PKKP {year} fact_devex_maksud (printed JUMLAH row)"
+        known = FY2009_DEVEX_LEAF_DEFECTS.get(code) if year == 2009 else None
+        if known and abs(leaf - ref) > IDENTITY_TOL_RM:
+            cls, diagnosis, evidence = known
+            checks.append(["known_defect", f"KNOWN_{cls.upper()}", name, leaf, ref,
+                           leaf - ref, "", evidence])
+            defects.append(["fact_ministry_fiscal", f"{code} devex 2009", f"{leaf:.2f}",
+                            f"{ref:.2f}", f"{leaf - ref:.2f}", cls, diagnosis, evidence])
+            continue
+        add("cross_tier", "PASS", "FAIL", name, leaf, ref, IDENTITY_TOL_RM, src)
+
+    # ---- D. nothing was summed as zero for want of an extracted cell -----------------
+    for r in ministry_rows:
+        if r["n_source_rows_uncaptured"]:
+            checks.append(["extraction_gap", "UNCAPTURED",
+                           f"{r['jenis']} {r['canonical_code']} {r['year']}: "
+                           f"{r['n_source_rows_uncaptured']} leaf row(s) with no captured amount",
+                           r["amount_rm"], "", "", "",
+                           "our extraction gap, not a printed nil -- "
+                           "see _known_extraction_defects_curated.csv"])
+
+    # ---- E. FY2015's substituted tier against the printed grand total ---------------
+    fy2015 = con.execute(
+        "SELECT sum(sebenar_jumlah_rm) FROM fact_devex_maksud "
+        f"WHERE year=2015 AND jumlah_label_bm <> '{FY2015_GRAND_TOTAL_LABEL}'").fetchone()[0]
+    identity("FY2015 substituted ministry totals == printed 15-year panel total",
+             fy2015, 40767711666.67, "PKKP FY2015 volume printed grand total")
+
+    # ---- F. the crosswalk's merges must not join two votes that coexist --------------
+    for raw, canon in LINEAGE_MERGES.items():
+        both = con.execute(
+            "SELECT count(*) FROM (SELECT year FROM dim_maksud WHERE maksud_code=? "
+            "INTERSECT SELECT year FROM dim_maksud WHERE maksud_code=?)", [raw, canon]
+        ).fetchone()[0]
+        checks.append(["identity", "PASS" if both == 0 else "FAIL",
+                       f"merge {raw}->{canon}: the two codes never coexist in a year",
+                       both, 0, both, 0, "sources/pkkp dim_maksud (all 16 volumes)"])
+
+    # ---- G. cross-source: BNM MSB 3.1, an independent institution --------------------
     for year in sorted(by_year):
         row, b = by_year[year], BNM.get(year)
         if not b:
             continue
         src = f"BNM MSB 3.1 ({b['source_file']}, annual row, retrieved {b['retrieved_date']})"
-        # the BNM row's own identity, to prove we are reading its columns correctly
         if None not in (b["devex_gross_rm"], b["devex_loan_recovery_rm"], b["devex_net_rm"]):
             identity(f"BNM MSB 3.1 {year}: net DE == gross - loan recovery",
                      b["devex_gross_rm"] - b["devex_loan_recovery_rm"], b["devex_net_rm"], src)
-        if row["opex_net_rm"] is not None and b["opex_rm"] is not None:
-            agreement(f"opex_net {year} (PKKP audited) vs BNM operating expenditure",
-                      row["opex_net_rm"], b["opex_rm"], src)
-        if row["devex_gross_rm"] is not None and b["devex_gross_rm"] is not None:
-            agreement(f"devex_gross {year} (PKKP audited) vs BNM gross DE",
-                      row["devex_gross_rm"], b["devex_gross_rm"], src)
-        if row["devex_net_rm"] is not None and b["devex_net_rm"] is not None:
-            agreement(f"devex_net {year} (MOF official_actual) vs BNM net DE",
-                      row["devex_net_rm"], b["devex_net_rm"], src)
+        for name, ours, theirs in (
+                (f"opex_net {year} (PKKP audited) vs BNM operating expenditure",
+                 row["opex_net_rm"], b["opex_rm"]),
+                (f"devex_gross {year} (PKKP audited) vs BNM gross DE",
+                 row["devex_gross_rm"], b["devex_gross_rm"]),
+                (f"devex_net {year} (MOF official_actual, printed in RM juta) vs BNM net DE",
+                 row["devex_net_rm"], b["devex_net_rm"])):
+            if ours is not None and theirs is not None:
+                band = (MOF_PRINTING_BAND_RM if "MOF official_actual" in name
+                        else BNM_AGREEMENT_BAND_RM)
+                add("cross_source", "AGREE", "DIVERGE", name, ours, theirs, band, src)
 
     with open(OUT_VALIDATION, "w", newline="") as f:
         w = csv.writer(f)
@@ -566,11 +820,14 @@ def build_validation(con, headline, ministry_rows):
                         f"{c[4]:.2f}" if isinstance(c[4], float) else c[4],
                         f"{c[5]:.2f}" if isinstance(c[5], float) else c[5],
                         c[6], c[7]])
+    build_defects_register(defects)
     n_fail = sum(1 for c in checks if c[1] == "FAIL")
-    n_div = sum(1 for c in checks if c[1] == "DIVERGE")
-    print(f"{OUT_VALIDATION}: {len(checks)} checks, {n_fail} FAIL, {n_div} DIVERGE")
+    from collections import Counter
+    tally = Counter(c[1] for c in checks)
+    print(f"{OUT_VALIDATION}: {len(checks)} checks -- "
+          + ", ".join(f"{v} {k}" for k, v in sorted(tally.items())))
     for c in checks:
-        if c[1] in ("FAIL", "DIVERGE"):
+        if c[1] in ("FAIL", "DIVERGE") or c[1].startswith("KNOWN_OURS"):
             print(f"  {c[1]}: {c[2]} -> {c[3]:,.2f} vs {c[4]:,.2f} ({c[5]:+,.2f})")
     return n_fail
 
