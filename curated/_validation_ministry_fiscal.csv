@@ -1,14 +1,85 @@
-status,check,computed,reference,diff
-PASS,devex_net 2017 == Tinjauan Fiskal 2021 edition Jadual 1.1 (by construction),43032000000.0,43032000000.0,0.0
-PASS,devex_net 2018 == Tinjauan Fiskal 2021 edition Jadual 1.1 (by construction),55307000000.0,55307000000.0,0.0
-PASS,devex_net 2019 == Tinjauan Fiskal 2021 edition Jadual 1.1 (by construction),52570000000.0,52570000000.0,0.0
-PASS,opex_net 2020 == supplied reference,224599947243.0,224600000000.0,-52757.0
-PASS,devex_net 2020 == supplied reference (by construction),50101000000.0,50101000000.0,0.0
-PASS,opex_net 2021 == supplied reference,231516055029.0,231516000000.0,55029.0
-PASS,devex_net 2021 == supplied reference (by construction),63267000000.0,63267000000.0,0.0
-PASS,opex_net 2022 == supplied reference,292693760615.0,292693000000.0,760615.0
-PASS,devex_net 2022 == supplied reference (by construction),70167000000.0,70167000000.0,0.0
-PASS,opex_net 2023 == supplied reference,311266481731.0,311267000000.0,-518269.0
-PASS,devex_net 2023 == supplied reference (by construction),95084000000.0,95084000000.0,0.0
-PASS,opex_net 2024 == supplied reference,321508649248.0,321509000000.0,-350752.0
-PASS,devex_net 2024 == supplied reference (by construction),82275000000.0,82275000000.0,0.0
+check_type,status,check,computed_rm,reference_rm,diff_rm,band_rm,reference_source
+identity,PASS,opex ministry sum 2009 == headline opex_gross_rm,158639304227.70,158639304227.70,-0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2010 == headline opex_gross_rm,159652962318.09,159652962318.09,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2011 == headline opex_gross_rm,185418919743.00,185418919743.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2012 == headline opex_gross_rm,207912754669.00,207912754669.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2013 == headline opex_gross_rm,213370213558.00,213370213558.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2014 == headline opex_gross_rm,220625673356.00,220625673356.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2015 == headline opex_gross_rm,219088760826.00,219088760826.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2016 == headline opex_gross_rm,212421098894.00,212421098894.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2017 == headline opex_gross_rm,220406001884.00,220406001884.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2018 == headline opex_gross_rm,232882562288.00,232882562288.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2019 == headline opex_gross_rm,264414755876.00,264414755876.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2020 == headline opex_gross_rm,225074947243.00,225074947243.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2021 == headline opex_gross_rm,233752055029.00,233752055029.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2022 == headline opex_gross_rm,294356760615.00,294356760615.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2023 == headline opex_gross_rm,314959481731.00,314959481731.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,opex ministry sum 2024 == headline opex_gross_rm,324617649248.00,324617649248.00,0.00,0.01,fact_ministry_fiscal.csv (this build)
+known_gap,KNOWN_GAP,devex ministry sum 2009 vs headline printed grand total,49104778320.66,49515355570.54,-410577249.88,,PKKP FY2009 volume: leaf tier short of its own printed grand total (see build_headline note)
+identity,PASS,devex ministry sum 2010 == headline devex_gross_rm,52791630219.93,52791630219.93,-0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2011 == headline devex_gross_rm,46416362426.91,46416362426.91,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2012 == headline devex_gross_rm,46932453805.93,46932453805.93,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2013 == headline devex_gross_rm,42209801383.65,42209801383.65,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2014 == headline devex_gross_rm,39503487395.98,39503487395.98,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2015 == headline devex_gross_rm,40767711666.67,40767711666.67,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2016 == headline devex_gross_rm,41995037696.86,41995037696.86,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2017 == headline devex_gross_rm,44883838832.01,44883838832.01,-0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2018 == headline devex_gross_rm,56095455661.74,56095455661.74,-0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2019 == headline devex_gross_rm,54173235316.97,54173235316.97,-0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2020 == headline devex_gross_rm,51359855763.46,51359855763.46,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2021 == headline devex_gross_rm,64256665754.57,64256665754.57,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2022 == headline devex_gross_rm,71573961425.79,71573961425.79,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2023 == headline devex_gross_rm,96089737122.54,96089737122.54,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,devex ministry sum 2024 == headline devex_gross_rm,84011595463.78,84011595463.78,0.00,0.01,fact_ministry_fiscal.csv (this build)
+identity,PASS,BNM MSB 3.1 2009: net DE == gross - loan recovery,48996556000.00,48996556000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2009 (PKKP audited) vs BNM operating expenditure,157067304227.70,157066955000.00,349227.70,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2009 (PKKP audited) vs BNM gross DE,49515355570.54,49515356000.00,-429.46,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2010: net DE == gross - loan recovery,51295630000.00,51295630000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2010 (PKKP audited) vs BNM operating expenditure,151632962318.09,151632609000.00,353318.09,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2010 (PKKP audited) vs BNM gross DE,52791630219.93,52791630000.00,219.93,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2011: net DE == gross - loan recovery,45334362000.00,45334362000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2011 (PKKP audited) vs BNM operating expenditure,182593919743.00,182593790000.00,129743.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2011 (PKKP audited) vs BNM gross DE,46416362426.91,46416362000.00,426.91,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2012: net DE == gross - loan recovery,44326453000.00,44326453000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2012 (PKKP audited) vs BNM operating expenditure,205536754669.00,205537082000.00,-327331.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2012 (PKKP audited) vs BNM gross DE,46932453805.93,46932453000.00,805.93,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2013: net DE == gross - loan recovery,40683473000.00,40683473000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2013 (PKKP audited) vs BNM operating expenditure,211270213558.00,211270336792.96,-123234.96,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2013 (PKKP audited) vs BNM gross DE,42209801383.65,42209804000.00,-2616.35,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2014: net DE == gross - loan recovery,38451487000.00,38451487000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2014 (PKKP audited) vs BNM operating expenditure,219588673356.00,219589142000.00,-468644.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2014 (PKKP audited) vs BNM gross DE,39503487395.98,39503487000.00,395.98,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2015: net DE == gross - loan recovery,39285143000.00,39285143000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2015 (PKKP audited) vs BNM operating expenditure,216997760826.00,216997500000.00,260826.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2015 (PKKP audited) vs BNM gross DE,40767711666.67,40767712000.00,-333.33,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2016: net DE == gross - loan recovery,40648469000.00,40648469000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2016 (PKKP audited) vs BNM operating expenditure,210173098894.00,210172661000.00,437894.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2016 (PKKP audited) vs BNM gross DE,41995037696.86,41995037000.00,696.86,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2017: net DE == gross - loan recovery,43031679000.00,43031679000.00,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2017 (PKKP audited) vs BNM operating expenditure,217695001884.00,217695192668.16,-190784.16,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2017 (PKKP audited) vs BNM gross DE,44883838832.01,44883839000.00,-167.99,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_net 2017 (MOF official_actual) vs BNM net DE,43032000000.00,43031679000.00,321000.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2018: net DE == gross - loan recovery,55307273161.74,55307273161.74,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2018 (PKKP audited) vs BNM operating expenditure,230959562288.00,230960493000.00,-930712.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2018 (PKKP audited) vs BNM gross DE,56095455661.74,56095455661.74,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_net 2018 (MOF official_actual) vs BNM net DE,55307000000.00,55307273161.74,-273161.74,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2019: net DE == gross - loan recovery,52570321316.97,52570321316.97,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2019 (PKKP audited) vs BNM operating expenditure,263342755876.00,263342865000.00,-109124.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2019 (PKKP audited) vs BNM gross DE,54173235316.97,54173235316.97,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_net 2019 (MOF official_actual) vs BNM net DE,52570000000.00,52570321316.97,-321316.97,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2020: net DE == gross - loan recovery,50100855763.46,50100855763.46,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2020 (PKKP audited) vs BNM operating expenditure,224599947243.00,224600200000.00,-252757.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2020 (PKKP audited) vs BNM gross DE,51359855763.46,51359855763.46,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2021: net DE == gross - loan recovery,63264841751.57,63264841751.57,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2021 (PKKP audited) vs BNM operating expenditure,231516055029.00,231516400000.00,-344971.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2021 (PKKP audited) vs BNM gross DE,64256665754.57,64256665754.57,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2022: net DE == gross - loan recovery,70166961425.79,70166961425.79,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2022 (PKKP audited) vs BNM operating expenditure,292693760615.00,292693200000.00,560615.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2022 (PKKP audited) vs BNM gross DE,71573961425.79,71573961425.79,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2023: net DE == gross - loan recovery,95083684165.51,95083684165.51,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2023 (PKKP audited) vs BNM operating expenditure,311266481731.00,311266917827.47,-436096.47,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,DIVERGE,devex_gross 2023 (PKKP audited) vs BNM gross DE,96089737122.54,96090984165.51,-1247042.97,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+identity,PASS,BNM MSB 3.1 2024: net DE == gross - loan recovery,82274695463.78,82274695463.78,0.00,0.01,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,opex_net 2024 (PKKP audited) vs BNM operating expenditure,321508649248.00,321508851861.68,-202613.68,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_gross 2024 (PKKP audited) vs BNM gross DE,84011595463.78,84011595463.78,0.00,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
+cross_source,AGREE,devex_net 2024 (MOF official_actual) vs BNM net DE,82275000000.00,82274695463.78,304536.22,1000000.0,"BNM MSB 3.1 (sources/bnm/data/msb_3_1.csv, annual row, retrieved 2026-07-31)"
