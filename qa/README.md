@@ -24,15 +24,17 @@ proved on the page) or a fixed extraction defect:
 |---|---|---|---|
 | Anggaran 2025 and 2026 books | 19 | 0 | every total and part re-read on the page of the re-downloaded PDF; publisher rounding (RM1-2) and one RM8 mil roll-up misprint |
 | Anggaran Hasil 2025 | 2 | 0 | same; a group impact printed RM500,000 off its own items |
-| state financial statements | 53 | 53 | needs the state volumes from the L0 archive |
-| PKKP per-year checks | 26 | 26 | needs the PKKP volumes (being located, `meta/l0_candidates.csv`) |
+| state financial statements | 53 | 53 | volumes archived; page evidence triaged for Pahang and Johor (our extraction defects, `state_config.KNOWN_EXTRACTION_DEFECTS`); re-extraction pending |
+| PKKP per-year checks | 26 | 11 | 15 proved on the archived pages (`qa/evidence/`) and registered in `sources/pkkp/data/<year>/_source_anomalies_<year>.csv`: mislabelled or short subtotals (2012, 2021, 2023), a foreign-repayment total left out and later corrected by the publisher (2017, 2018), stale comparatives (2021), a RM0.99 rounding clash between two statements (2017). Left: 2015 (image-only scan, not identified), 2020 (ANM 404), 2021 lease 1-sen rounding (pages not yet requested) |
 | LKAN fiscal tables | 1 | 1 | needs the LKAN volume from the L0 archive |
 
 **How a FAIL becomes a SOURCE_ANOMALY** (`qa/source_anomaly.py`): the source's
 `_source_anomalies*.csv` row gains an `explains` column naming the exact validation rows it
 accounts for (all cells but the status, expected and got values included). The validator then
 labels those rows `SOURCE_ANOMALY`. If the values ever change, the match breaks and the row is a
-`FAIL` again. No figure is changed; only the label, with the proof in the register.
+`FAIL` again. No figure is changed; only the label, with the proof in the register. For check files no
+CI script can rebuild (the PKKP 2013–2024 core checks, written by the extraction run), the suite
+applies the registers in the same folder itself, with the same whole-row rule.
 
 Refresh the baseline only to remove rows, with `python3 qa/run_offline_suite.py --baseline`, and
 review the diff before committing it.

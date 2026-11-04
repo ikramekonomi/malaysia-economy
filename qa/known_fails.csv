@@ -1,31 +1,16 @@
 file,row
 sources/audit-negara/data/_validation_lkan_fiscal.csv,"v3_vs_bnm_reported|devex FY2023|AG 96089.0 RM juta|BNM 96090.984 RM juta|FAIL|BNM diverges from the audited figure by RM1.984 juta (AG agrees with PKKP); reported vs audited gap, kept as published"
-sources/pkkp/data/2012/_validation_checks_2012.csv,"FAIL|LAMP1 aktiviti B.24/100000/100100 object-sum vs printed jumlah_aktiviti (SOURCE PRINT DISCREPANCY, KEPT AS PRINTED)|2772588.77|2580839.82|191748.9500000002"
-sources/pkkp/data/2012/_validation_checks_2012.csv,"FAIL|LAMP1 aktiviti B.25/080000/080100 object-sum vs printed jumlah_aktiviti (SOURCE PRINT DISCREPANCY, KEPT AS PRINTED)|6739650.0|0.0|6739650.0"
-sources/pkkp/data/2012/_validation_checks_2012.csv,FAIL|LAMP1 aktiviti additivity sum(object)==jumlah_aktiviti (1216 pass / 2 fail; fails are SOURCE PRINT DISCREPANCIES kept as printed)|1216|1218|-2.0
 sources/pkkp/data/2015/_validation_checks_memoranda_2015.csv,"FAIL|lampiran5b: BPI+BPA subtotals vs printed JUMLAH MULTILATERAL [bsrm] (book under-foots by 100,000 — PRINT ANOMALY, kept as printed)|647212909.0|647112909.0"
 sources/pkkp/data/2015/_validation_checks_memoranda_2015.csv,"FAIL|lampiran5b: JICA 15 detail RM values sum vs printed Jumlah (book over-foots by 20,000 — PRINT ANOMALY, details kept as read/printed)|5611293120.57|5611313120.57"
 sources/pkkp/data/2015/_validation_checks_memoranda_2015.csv,FAIL|lampiran5b: Japan International Coop details sum = Jumlah [amaun_belum_selesai_rm]|5611293120.57|5611313120.57
-sources/pkkp/data/2017/_validation_checks_2017.csv,"FAIL|core: devex: grand total = perf Belanja Pembangunan (rounded; RM0.99 print rounding inconsistency, see DIAGNOSIS)|44883838832.01|44883838833|-0.9899978637695312"
-sources/pkkp/data/2017/_validation_checks_2017.csv,FAIL|core: timeseries xfoot [Bayaran Balik Luar Negeri -> Jumlah Bayaran Balik Luar Negeri] all 10 years (bad years)|1|0|1
-sources/pkkp/data/2018/_validation_checks_2018.csv,FAIL|core: timeseries xfoot [Jumlah Bayaran Balik = DN+LN] all 10 years (bad years)|1|0|1
 sources/pkkp/data/2020/_validation_checks_2020.csv,"FAIL|core: opex: sum(B.*) sebenar = printed Bekalan (diagnosis: +2 = whole-RM rounding; sen-level total is 157,834,255,614.57 per Lampiran 1)|157834255617.0|157834255615|2.0"
 sources/pkkp/data/2020/_validation_checks_2020.csv,"FAIL|core: opex: sum(T.*) sebenar = printed Tanggungan (diagnosis: -2 = whole-RM rounding of 53 maksud rows; sen-level total is 67,240,691,627.74 per Lampiran 1)|67240691626.0|67240691628|-2.0"
 sources/pkkp/data/2020/_validation_checks_2020.csv,"FAIL|memoranda: leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN details = sector Jumlah (2020) [DIAGNOSIS: print-side 1-sen rounding -- the 26 printed KP detail rows sum to 26,847,483,272.24 but the volume prints Jumlah 26,847,483,272.23; all rows transcribed verbatim from the text layer]|26847483272.24|26847483272.23|0.01000213623046875"
 sources/pkkp/data/2020/_validation_checks_2020.csv,FAIL|memoranda: leases: sector subtotals = JUMLAH KOMITMEN PAJAKAN KEWANGAN (2020) [DIAGNOSIS: follows from the KP 1-sen print rounding above; printed sector subtotals sum to ...546.58 vs printed grand ...546.59]|37570623546.58|37570623546.59|-0.0099945068359375
 sources/pkkp/data/2020/_validation_checks_memoranda_2020.csv,"FAIL|leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN details = sector Jumlah (2020) [DIAGNOSIS: print-side 1-sen rounding -- the 26 printed KP detail rows sum to 26,847,483,272.24 but the volume prints Jumlah 26,847,483,272.23; all rows transcribed verbatim from the text layer]|26847483272.24|26847483272.23"
 sources/pkkp/data/2020/_validation_checks_memoranda_2020.csv,FAIL|leases: sector subtotals = JUMLAH KOMITMEN PAJAKAN KEWANGAN (2020) [DIAGNOSIS: follows from the KP 1-sen print rounding above; printed sector subtotals sum to ...546.58 vs printed grand ...546.59]|37570623546.58|37570623546.59
-sources/pkkp/data/2021/_validation_checks_2021.csv,FAIL|core: opex_detail[sebenar_rm]: program leaf sums = printed Jumlah program (bad groups)|1|0|1
-sources/pkkp/data/2021/_validation_checks_2021.csv,FAIL|core: opex_detail[varian_rm]: program leaf sums = printed Jumlah program (bad groups)|1|0|1
-sources/pkkp/data/2021/_validation_checks_2021.csv,FAIL|core: timeseries xfoot [Bayaran Balik Luar Negeri -> Jumlah Bayaran Balik Luar Negeri] all 10 years (bad years)|1|0|1
-sources/pkkp/data/2021/_validation_checks_2021.csv,FAIL|core: timeseries xfoot [Perubahan Dalam Modal Kerja -> Tambahan/(Kurangan) Modal Kerja] all 10 years (bad years)|2|0|2
 sources/pkkp/data/2021/_validation_checks_2021.csv,FAIL|memoranda: leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN/Bangunan details = category Jumlah (2020)|26000942834.42|26000942834.41|0.009998321533203125
 sources/pkkp/data/2021/_validation_checks_memoranda_2021.csv,FAIL|leases: PAJAKAN KEWANGAN KERAJAAN PERSEKUTUAN/Bangunan details = category Jumlah (2020)|26000942834.42|26000942834.41
-sources/pkkp/data/2023/_validation_checks_2023.csv,FAIL|core: opex_detail[anggaran_asal_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups)|3|0|3
-sources/pkkp/data/2023/_validation_checks_2023.csv,FAIL|core: opex_detail[anggaran_jumlah_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups)|3|0|3
-sources/pkkp/data/2023/_validation_checks_2023.csv,FAIL|core: opex_detail[sebenar_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups)|3|0|3
-sources/pkkp/data/2023/_validation_checks_2023.csv,FAIL|core: opex_detail[varian_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups)|3|0|3
-sources/pkkp/data/2023/_validation_checks_2023.csv,FAIL|core: opex_detail[viremen_rm]: aktiviti leaf sums = printed Jumlah aktiviti (bad groups)|3|0|3
 sources/states/data/_national/_validation_national.csv,N2_identity_expenditure|FAIL|2016|Pahang: opex + devex = expenditure_total (conformed panel)|810.88|720.93|-89.95|CMD.37.2017.pdf|51|33|4.31|
 sources/states/data/_national/_validation_national.csv,N2_identity_expenditure|FAIL|2017|Pahang: opex + devex = expenditure_total (conformed panel)|768.20|712.54|-55.66|CMD.38.2018.pdf|51|33|4.31|
 sources/states/data/_national/_validation_national.csv,N2_identity_expenditure|FAIL|2021|Pahang: opex + devex = expenditure_total (conformed panel)|931.11|905.22|-25.89|CMD.46.2022.pdf|32|24|1|
