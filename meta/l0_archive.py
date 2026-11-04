@@ -136,9 +136,16 @@ def _aia_intermediates(host, port=443, depth=3):
         if not certs:
             print(f"  AIA {urls[0]} returned {len(data)} bytes that are not a certificate", flush=True)
             break
-        print(f"  AIA {urls[0]}: {[c.subject.rfc4514_string()[:60] for c in certs]}", flush=True)
-        chain += [c.public_bytes(Encoding.PEM).decode() for c in certs]
-        cert = certs[0]
+        # only intermediates are added: a self-signed certificate fetched over HTTP is never made a trust
+        # anchor, so the completed chain must still end at a root the runner already trusts
+        inter = [c for c in certs if c.subject != c.issuer]
+        print(f"  AIA {urls[0]}: {len(certs)} cert(s), using {len(inter)} intermediate(s): "
+              f"{[(c.subject.rfc4514_string()[:45], 'issued by ' + c.issuer.rfc4514_string()[:45]) for c in inter]}",
+              flush=True)
+        chain += [c.public_bytes(Encoding.PEM).decode() for c in inter]
+        if not inter:
+            break
+        cert = inter[0]
         if cert.issuer == cert.subject:
             break
     return chain
@@ -363,10 +370,23 @@ def main():
             asset = os.path.join(work, f"{key}.pdf")
             os.replace(path, asset)
             if f"{key}.pdf" not in have:
-                gh("release", "upload", TAG, asset)
-                have.add(f"{key}.pdf")
+                for attempt in range(4):
+                    p_up = gh("release", "upload", TAG, asset, check=False)
+                    if p_up.returncode == 0:
+                        have.add(f"{key}.pdf")
+                        break
+                    # the upload may have landed even though the response failed
+                    if f"{key}.pdf" in release_assets():
+                        have.add(f"{key}.pdf")
+                        break
+                    print(f"  upload attempt {attempt + 1} failed: {p_up.stderr.strip()[:160]}", flush=True)
+                    time.sleep(5 * 2 ** attempt)
+                else:
+                    status, note, path = "UPLOAD_FAILED", f"downloaded and verified, upload failed: {note}", None
             done_bytes += os.path.getsize(asset)
             os.remove(asset)
+            if status == "UPLOAD_FAILED":
+                key = t["sha256"] or f"unarchived:{t['file_name']}"
         idx[key] = {"sha256": key, "file_name": t["file_name"],
                     "series_id": t["series_id"], "source_url": url, "size_bytes": t["size"] or "",
                     "release_tag": TAG if path else "", "asset_name": f"{key}.pdf" if path else "",
