@@ -2,7 +2,7 @@
 
 What the warehouse needs, theme by theme: what we hold, what we must get, and how we get it
 (an API to connect, or a document to collect). The **row-level detail is in
-`docs/registry/series_seed.csv`** (104 series, revision 2). This page is the plan; the registry is the
+`docs/registry/series_seed.csv`** (103 series, revision 2). This page is the plan; the registry is the
 checklist. How the registry works: `docs/DOCUMENT_REGISTRY.md`. How the data fits together:
 `docs/DATA_MODEL.md`.
 
@@ -20,13 +20,13 @@ Financial Procedure Act 1957 uses the same term ("public moneys").
 | 4 | Output & industry | 3 of 15 | (P2: investment, Economic Census, district GDP) | API (OpenDOSM) |
 | 5 | Public money & money trail | 6 of 29 | development estimates; federal development money by state; state budget estimates; cash-transfer recipients by state | PDF |
 | 6 | Health, education & services | 1 of 9 | NHMS; health facts; education statistics | PDF + data.gov.my |
-| 7 | Accountability | 3 of 18 | procurement awards | PDF + web |
+| 7 | Accountability | 3 of 17 | procurement awards | PDF + web |
 | 8 | Money, credit & financial wellbeing | 1 of 7 | (P2: household debt, EPF/SOCSO) | API (BNM) + PDF |
 | 9 | Environment, climate & disasters | 0 of 6 | (P2: NADMA disaster data) | PDF + web |
 | — | Plan targets and cross-cutting | 0 of 7 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | PDF |
 
 "Held" counts series that are held, extracted or verified. A series can serve two themes,
-so the column does not add to 104.
+so the column does not add to 103.
 
 **The pattern:** the economy themes (1–4, 8) mostly come through **APIs we already use**, so
 each new series costs little. Public money and accountability (5, 7) come from **PDFs**. These
@@ -192,13 +192,13 @@ are states on federal transfers? Do states publish their own budgets?
 |---|---|
 | PKKP audited federal accounts FY2009–2024 (down to project) | **P1** development estimates (project-level budget): the missing half of budget vs actual |
 | Anggaran (operating) Budget 2024–2026; Anggaran Hasil 2025–2026 | **P1** federal development allocation by state (existence to confirm) |
-| Tinjauan Fiskal 2019–2027 editions | **P1** state budget estimates (*Buku Belanjawan*): 7 of 13 states publish |
-| BNM federal finance 1996–2026 | P2 state enacted budgets (Terengganu only), budget speeches (10 of 13) |
+| Tinjauan Fiskal 2019–2027 editions | **P1** state budget estimates (*Buku Belanjawan*), all 13 states |
+| BNM federal finance 1996–2026 | P2 state enacted budgets, budget speeches |
 | audited state statements, 13 states FY2014–2024 | P2 Laporan Ekonomi 2010–2018 (MOF figures FY2009–2014); budget speech commitments |
 | | **P1** cash-transfer and welfare recipients and amounts by state (STR, JKM) |
 | | P2 supplementary estimates; LHDN reports; constituency development funds by parlimen/DUN; GLIC accounts; PFI/PPP register |
 | | P3 tax expenditure; local authority (PBT) finances |
-| | not published: state Supply Bills (0 of 13) |
+| | P3 state Supply Bills |
 
 **Gap views it enables:** budget vs actual, revenue estimate vs collected, reported vs
 audited, federal vs state, need vs money.
@@ -228,9 +228,8 @@ and is it getting better?
 |---|---|
 | LKAN federal 2024–2026 extracted (426 findings); 402 volumes 2015–2026 held | **P1** procurement awards (project → contractor) |
 | AG agency opinions FY2023–2024 | P2 federal and state PAC reports; AG action-status dashboard; Dewan Rakyat Hansard and written answers |
-| | P2 MyOBI scores 2022/2024/2026 (2026 PDF supplied, not yet ingested) |
-| | P2 Pantau Projek and Pantau Laksana (IDEAS); state PAC reports (Selangor only publishes) |
-| | P3 DUN hansards (11 states current, 8 archived), DUN questions (7 states), IBP Open Budget Survey, global governance indices |
+| | P2 Pantau Projek and Pantau Laksana (IDEAS); state PAC reports |
+| | P3 DUN hansards, DUN questions, IBP Open Budget Survey |
 | | restricted: SSM company register (paid per lookup) |
 
 ## Theme 8: Money, credit & financial wellbeing
@@ -276,42 +275,12 @@ line, and which budget lines have no target?
 | When | What | Source of the rule |
 |---|---|---|
 | October | Federal Budget: Anggaran, Anggaran Hasil, Tinjauan Fiskal, budget speech | MOF practice (Budget 2027 edition held) |
-| 1 Nov – 31 Dec | State budget proposals (speech, estimates) should be public | MyOBI 2026 timeliness standard (Table 2) |
-| before 1 Jan | State enacted budgets should be public | MyOBI 2026 Table 2 |
-| Jan – Jun | State year-end reports (previous year) should be public | MyOBI 2026 Table 2 |
-| Jan – Sep | State audit reports (year before last) should be public | MyOBI 2026 Table 2 |
+| November – December | State budgets tabled in each DUN (dates to record per state) | each state assembly's calendar |
 | through the year | LKAN volumes, tabled in series | `lkan_reports_backfill.csv` tabling dates |
 | per dataset | DOSM releases | `next_update` in `sources/dosm/data/_vintage.json`, checked by `refresh.py` |
 
-The MyOBI dates are what *should* happen. The registry records what *did*, so a late or
-missing document becomes a dated finding.
-
----
-
-## What MyOBI 2026 tells us
-
-IDEAS' Malaysia Open Budget Index (August 2026; two of its 13 state assessments were done by
-IKRAM volunteers) scores whether **state budget documents are published**, how strong the
-oversight is, and how much the public can take part. It also records numbers: the week each
-budget was tabled and passed, DUN sitting days and budget-debate days, and unscored items such
-as the share of state revenue from federal transfers and from land, and allocations to the Chief
-Executive's office. IDEAS' Pantau Wang Kita site also hosts **Pantau Projek** (state
-infrastructure project transparency) and **Pantau Laksana** (stimulus packages, announced vs
-implemented), both in the registry.
-
-| | MyOBI / Pantau Wang Kita | This warehouse |
-|---|---|---|
-| Asks | Is it public, on time, and scrutinised? Selected numbers | What do all the numbers say, and do they add up? |
-| Covers | 13 states; transparency, oversight, participation | federal + 13 states; the whole economy |
-| Output | a score per state, peer reviewed, every two years | every figure, with its source page, checked |
-
-**Conflict of interest, disclosed:** IKRAM volunteers assessed 2 of MyOBI's 13 states, so every
-answer that uses MyOBI carries that caveat (docs/DATA_MODEL.md §12).
-
-We use MyOBI as the **evidence for state document statuses** in the registry (for example, that
-no state published its 2026 Supply Bill). We ingest its scores as an accountability series.
-The one document MyOBI finds every state has, the Auditor-General's report, is the one we
-already hold and have turned into data for all 13 states.
+The registry records when each document actually appeared, so a late or missing document
+becomes a dated finding.
 
 ---
 

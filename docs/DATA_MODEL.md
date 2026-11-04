@@ -508,7 +508,7 @@ These are written into `meta.decision` and enforced where the model can enforce 
 | Defamation | A named body is linked to a finding or contract in public only by a `code_exact` or `human_signed` link. | §5.3 |
 | Neutrality | Methods are declared before results are seen. Every view runs for **all 13 states and 3 Federal Territories**, never a chosen few. `core.*` holds no party attribute. Election results are used only as geographic context (who represents an area), not to score parties or politicians. | `meta.decision`; view definitions |
 | Lawful sources only | Only documents published by their owner, released under the law, or obtained through an official data request. No leaked or OSA-classified documents. | registry rule |
-| Conflicts of interest | Where IKRAM or its people helped produce a source (e.g. IKRAM volunteers assessed 2 of MyOBI 2026's 13 states), a `meta.caveat` discloses it on every answer that uses it. | `meta.caveat` |
+| Conflicts of interest | Where IKRAM or its people helped produce a source, a `meta.caveat` discloses it on every answer that uses it. | `meta.caveat` |
 | Sensitive breakdowns | Ethnicity is published only as the official source publishes it, with the source's own categories, and never inferred by us. | §4.4 code lists |
 
 ---
@@ -629,7 +629,7 @@ spot-check of a sample → PR.
 | 7 | `gap_need_vs_money` ignores operating spending; double counting | important | §10, §5.2, D13 |
 | 8 | Missing sources: supplementary estimates, Dewan Rakyat Hansard, local government, social protection, tax expenditure, LHDN, environment and disasters | important | registry, §3, D19 |
 | 9 | Value comes last; no CI; site migration unplanned | important | §15, §14, D18 |
-| 10 | AI verifying AI; MyOBI conflict of interest | important | §7.4, §12, D16 |
+| 10 | AI verifying AI; conflicts of interest | important | §7.4, §12, D16 |
 | 11 | Question log: personal data, injection, steering | minor | §10, §11 |
 | 12 | One-theme rule vs the registry; `additive` too coarse; non-calendar years | minor | §3, §4.3, §4.2 |
 | — | Simplify: defer global series; budgets are not flows; concordance only on demand | — | D21, D12, D7 |

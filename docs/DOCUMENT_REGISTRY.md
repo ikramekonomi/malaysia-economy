@@ -75,14 +75,13 @@ Rules:
 | `contains_personal_data` | `no` · `public_figures` · `possible` · `yes` | `possible`/`yes` series pass through the personal-data rule before any output |
 
 Only licences stated somewhere we can cite are filled in: DOSM (CC BY 4.0, per its catalogue
-pages), KRI (CC BY 3.0, printed in the report), IDEAS (reproduction with acknowledgement, MyOBI
-2026 p.iv) and World Bank WDI (CC BY 4.0). Everything else is `to_confirm` until checked.
+pages), KRI (CC BY 3.0, printed in the report) and World Bank WDI (CC BY 4.0). Everything else is `to_confirm` until checked.
 
 ---
 
 ## 3. Seed: what the first rows say
 
-104 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
+103 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
 theme, is `docs/SOURCES.md`. Each row also says how it is reached (`access`: `api`, `bulk_file`,
 `pdf`, `web_table`, `paid`, `none`). Revision 2 added 29 series from the two reviews (KRI SOH2026
 check and plan review) and deferred 12 low-value global series (`priority = deferred`).
@@ -91,12 +90,9 @@ check and plan review) and deferred 12 low-value global series (`priority = defe
 |---|---|
 | verified / extracted | 16: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities |
 | held, not extracted | 1: LKAN state volumes (findings) |
-| located | 9: state budget estimates, speeches, enacted budgets, year-end reports and PAC reports; DUN hansards and questions; MyOBI; KRI State of Households |
-| expected | 73 (32 of all 104 series are reachable by API) |
+| located | 1: KRI State of Households (PDF supplied, not yet in the warehouse) |
+| expected | 81 (32 of all 103 series are reachable by API), including every state budget document: whether each state publishes it is to be checked state by state |
 | restricted | 4: SSM company register, PADU/eKasih, DOSM and KPM data requests |
-| not_published | 1: state Supply Bills (no state published one for 2026, per MyOBI 2026) |
-
-State document statuses cite IDEAS' MyOBI 2026 as their evidence.
 
 **The P1 gaps** (priority 1 and not yet held):
 
@@ -104,7 +100,7 @@ State document statuses cite IDEAS' MyOBI 2026 as their evidence.
 |---|---|---|
 | Development estimates (project-level budget) | 5 | the missing half of budget-vs-actual per project (Track 0) |
 | Population by state / district | 1 | every per-capita comparison depends on it |
-| State budget estimates (*Buku Belanjawan*) | 5 | state budget vs state actual; 7 of 13 states publish (MyOBI 2026) |
+| State budget estimates (*Buku Belanjawan*) | 5 | state budget vs state actual |
 | Federal development allocation by state | 5 | the most direct source for placing money (Track A); existence to confirm |
 | Procurement awards | 7 | project → contractor (Track B) |
 | Salaries and wages survey | 2 | median wage by state |
