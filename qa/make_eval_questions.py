@@ -307,6 +307,43 @@ q("6", "What share of Perlis households had piped water in 2016 (Perlis is one d
   series("amenities.piped_water.share", "MY-09/dis:perlis@dosm_2020", "2016"), "value",
   s(Decimal(l1a("hh_access_amenities", state="Perlis", district="Perlis", date="2016")["piped_water"])))
 
+# M. Phase 2: income distributions (HIES percentile groups), from L1
+def pct(state, year):
+    f, keep = ("hies_malaysia_percentile", lambda r: True) if state is None else \
+        ("hies_state_percentile", lambda r: r["state"] == state)
+    out = {}
+    with open(os.path.join(DOSM, f"{f}.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if keep(r) and r["date"].startswith(year) and r["income"]:
+                out[(int(r["percentile"]), r["variable"])] = Decimal(r["income"])
+    return out
+
+
+def bracket(state, year, x):
+    g = pct(state, year)
+    k = sum(1 for p in range(1, 101) if (p, "maximum") in g and g[(p, "maximum")] < x)
+    nxt = g.get((k + 1, "minimum"))
+    return f"{k};{k if nxt is not None and nxt >= x else k + 1}"
+
+
+q("1", "Below what monthly income are the poorest 10% of households in Kelantan (2022)?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-03", "period": "2022"}, "decile:10", s(pct("Kelantan", "2022")[(10, "maximum")]))
+q("1", "What share of Malaysian households earned less than RM 3,000 a month in 2024?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY", "period": "2024", "below": 3000}, "share_bracket",
+  bracket(None, "2024", Decimal(3000)))
+q("1", "What share of Sabah households earned less than RM 2,000 a month in 2019?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-12", "period": "2019", "below": "2000"}, "share_bracket",
+  bracket("Sabah", "2019", Decimal(2000)))
+q("1", "Does the income distribution warn that single percentiles are noisy?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-10", "period": "2024"}, "caveat", "CV13")
+q("1", "What is the distribution of household spending in Kedah in 2022?", "get_distribution",
+  {"indicator": "hh_expenditure", "geo": "MY-02", "period": "2022"}, "not_held", kind="trap_missing")
+q("1", "What is Kelantan's income distribution in 2016 (not published by percentile)?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-03", "period": "2016"}, "not_held", kind="trap_missing")
+q("1", "Rank the states by the income cut-off of their poorest 40% in 2022.", "compare_geos",
+  {"indicator": "hh_income.gross.pctile_group.max", "period": "2022", "breakdown": "percentile=040"},
+  "refused_ranking", kind="trap_small_area")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

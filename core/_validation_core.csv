@@ -1,5 +1,5 @@
 check,scope,status,note
-C1 primary key unique,fact_observation,PASS,105552 rows
+C1 primary key unique,fact_observation,PASS,125850 rows
 C2 indicator_code resolves,fact_observation,PASS,all resolve
 C2 geo_code resolves,fact_observation,PASS,all resolve
 C2 period_code resolves,fact_observation,PASS,all resolve
@@ -8,6 +8,8 @@ C3 basis in meta/code_list.csv,fact_observation,PASS,ok
 C3 status in meta/code_list.csv,fact_observation,PASS,ok
 C4 every row has provenance (file sha256 + L1 row),fact_observation,PASS,0 rows without
 C5 a survey estimate without published uncertainty says so (reliability = unknown),fact_observation,PASS,0 rows claim reliability without uncertainty
+C9 percentile cut-offs rise with the percentile,hh_income.gross.pctile_group.max,PASS,51 place-years
+"C10 50th percentile cut-off vs the headline median (DOSM files, kept as published)",hh_income.gross.pctile_group.max,INFO,51 place-years; within RM1 except MY 2019: 6; MY-04 2019: 9; MY-09 2019: 2; MY-15 2019: 2; MY-16 2019: 3; MY-16 2022: -14
 C6 state coverage,amenities.electricity.share,PASS,"12 of 16 states and territories (expected 12: DOSM publishes no All Districts row for Perlis, Kuala Lumpur, Labuan or Putrajaya (each is a single district); their figures are held under the district code, e.g. MY-09/dis:perlis@dosm_2020)"
 C6 state coverage,amenities.piped_water.share,PASS,"12 of 16 states and territories (expected 12: DOSM publishes no All Districts row for Perlis, Kuala Lumpur, Labuan or Putrajaya (each is a single district); their figures are held under the district code, e.g. MY-09/dis:perlis@dosm_2020)"
 C6 state coverage,amenities.sanitation.share,PASS,"12 of 16 states and territories (expected 12: DOSM publishes no All Districts row for Perlis, Kuala Lumpur, Labuan or Putrajaya (each is a single district); their figures are held under the district code, e.g. MY-09/dis:perlis@dosm_2020)"
@@ -25,6 +27,10 @@ C6 state coverage,hh_expenditure.mean,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gini,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gross.mean,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gross.median,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.gross.pctile_group.max,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.gross.pctile_group.mean,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.gross.pctile_group.median,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.gross.pctile_group.min,PASS,16 of 16 states and territories
 C6 state coverage,households.total,PASS,16 of 16 states and territories
 C6 state coverage,lfs.employed,PASS,16 of 16 states and territories
 C6 state coverage,lfs.labour_force,PASS,16 of 16 states and territories
@@ -47,4 +53,4 @@ C6 state coverage,state_gov.revenue.total,PASS,13 of 13 state governments
 C6 state coverage,state_gov.surplus_deficit,PASS,13 of 13 state governments
 C6 state coverage,water.access.share,PASS,14 of 16 states and territories (expected 14: KL and Putrajaya are subsumed under Selangor (catalogue note))
 C7 states sum to Malaysia (pop.total),pop.total,PASS,largest gap 200 persons over 57 years (rounding allowance 16 x 50)
-"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,105552 rows checked
+"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,125850 rows checked

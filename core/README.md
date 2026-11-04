@@ -8,7 +8,7 @@ hand (golden rule 1). CI rebuilds them on every PR and fails if the committed fi
 ```
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 90 questions against the agent tools
+python3 qa/run_eval.py                            # 97 questions against the agent tools
 ```
 
 ## What is in it
@@ -18,9 +18,9 @@ python3 qa/run_eval.py                            # 90 questions against the age
 | `dim_geo.csv` | 1,006 | Malaysia, `_unallocated`, 16 states and FTs (ISO 3166-2:MY), 166 districts (boundary set `dosm_2020`), 222 parliamentary seats and 600 state seats (boundary set `ge15`) |
 | `geo_hierarchy.csv` | 1,020 | child → parent, one row per hierarchy (`administrative`: district → state; `electoral`: DUN → parlimen → state) |
 | `dim_period.csv` | 258 | years, months |
-| `dim_indicator.csv` | 41 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
-| `dim_breakdown.csv` | 78 | `_total`, `sex=…`, `coicop=…`, `staff_type=…`, `stage=…`, `crime_category=…` |
-| `fact_observation.csv` | 105,552 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 68,874; DUN 18,000; district 11,013; parlimen 6,660; national 994) |
+| `dim_indicator.csv` | 45 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
+| `dim_breakdown.csv` | 178 | `_total`, `sex=…`, `coicop=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
+| `fact_observation.csv` | 125,850 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,978; DUN 18,000; district 11,013; parlimen 6,660; national 2,188) |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -58,6 +58,23 @@ district (HIES 2016–2024).
 * Ministries' own districts (education PPD, health, police) are separate boundary sets: their
   district rows are not mapped to DOSM's districts yet. Only state and national rows are loaded.
 
+## Income distributions (Phase 2)
+
+DOSM's HIES percentile files for Malaysia and the 16 states and territories (2019, 2022, 2024), as
+published: for each percentile group p (1 to 100) the mean, median, lowest and highest household
+income in it (`hh_income.gross.pctile_group.{mean,median,min,max}`, breakdown `percentile=001…100`).
+The highest income in group p is the p-th percentile cut-off. DOSM warns these carry larger relative
+standard errors and publishes none, so every row is `reliability = low` (caveat CV13) and
+`compare_geos` refuses to rank places on them.
+
+`get_distribution(indicator, geo, period, below=None)` returns the 100 groups and the decile cut-offs,
+each with its `obs_id`. Given `below` (RM per month) it returns the share of households earning less
+as the **published bracket** (rule DIST1 in `meta/derivation.csv`): k% to k+1%, where k groups lie
+wholly below the threshold. Nothing is interpolated. Checks C9 (cut-offs rise with the percentile;
+`get_distribution` relies on it) and C10 (the 50th cut-off against the headline median) run on every
+build. C10 is INFO: six place-years differ by RM2 to RM14 (Putrajaya 2022: -RM14), and both
+figures are kept as published.
+
 ## gap_need_vs_money (state level)
 
 **Question:** does money follow need? The method was declared before results were seen and is in
@@ -82,15 +99,15 @@ sample against the archived pages** (`docs/DATA_MODEL.md` §7.4).
 
 ## The agent tools (`apps/tools/warehouse_tools.py`)
 
-`find_indicator`, `get_series`, `compare_geos`, `derive`, `explain`, `list_documents`,
-`get_gap_view`. No SQL. Every number comes with its citation, `release_id` (a hash of
+`find_indicator`, `get_series`, `get_distribution`, `compare_geos`, `derive`, `explain`,
+`list_documents`, `get_gap_view`. No SQL. Every number comes with its citation, `release_id` (a hash of
 `fact_observation.csv`), uncertainty and caveats (`meta/caveat.csv`). Arithmetic only through
 `derive` (rules in `meta/derivation.csv`), which refuses mismatched inputs: different years,
 units or price bases, a median divided by population, growth across two places. `compare_geos`
 returns **bands**, not ranks (rule BAND1: a new band starts after a step of more than 1 percentage
 point, or 5% for other units; declared before results were seen), with the national value.
 
-`qa/eval_questions.csv` (90 questions, made by `qa/make_eval_questions.py` from L1 directly)
+`qa/eval_questions.csv` (97 questions, made by `qa/make_eval_questions.py` from L1 directly)
 includes traps: incomparable pairs, small-area rankings, missing documents, and document text that
 must come back marked as data. `qa/run_eval.py` runs them in CI.
 
