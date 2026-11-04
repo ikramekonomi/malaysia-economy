@@ -164,7 +164,11 @@ and 1 known gap — see below), with every known defect justified one by one in
   and PKKP is internally consistent that year (leaf rows = ministry totals = printed grand
   total, to the sen). BNM matches PKKP *to the sen* in every other year from FY2018, which
   is what makes FY2023 worth flagging. Recorded as `DIVERGE`; neither side is adjusted.
-  This one is a genuine cross-source divergence.
+  This one is a genuine cross-source divergence — and MOF's own editions corroborate it:
+  the 2025 and 2026 Tinjauan Fiskal print FY2023 gross DE as **96,091** juta (BNM's
+  figure, rounded), while the 2027 edition **restates it to 96,090** (PKKP's), with net DE
+  moving from 95,084 to 95,083 alongside. MOF switched from one figure to the other
+  between editions; the warehouse keeps each as printed.
 
 - **NOT A FINDING — the FY2009 devex leaf gap (RM410,577,250).** The volume's leaf tier
   sums short of its own printed grand total. An earlier version of this file published
@@ -199,7 +203,7 @@ purpose so an approximate agreement can never be mistaken for an exact one:
 |---|---|---|
 | `identity` | `PASS` / `FAIL` | must hold to the sen (`band_rm` = 0.01) — including the printed `net + transfer == gross` for every year, and BNM's own `net = gross − loan recovery`. A `FAIL` fails the build. |
 | `cross_tier` | `PASS` / `FAIL` | two tiers of the **same** audited volume: per-maksud statement vs the account it rolls into, and each ministry's leaf rows vs its own printed JUMLAH. Band RM1.00 for opex (FY2010 and FY2020 differ by the statements' own ringgit rounding), sen-exact for devex. A `FAIL` fails the build. |
-| `cross_source` | `AGREE` / `DIVERGE` | two *institutions* publishing the same concept. Band RM100,000 against BNM (sen-published), RM500,000 where MOF prints in whole juta. A `DIVERGE` is a **finding**, reported loudly, and does not fail the build. |
+| `cross_source` | `AGREE` / `DIVERGE` | two *institutions* publishing the same concept. Band RM100,000 against BNM (sen-published). Against MOF, which prints whole juta and derives each headline figure from other rounded printed figures, the band is RM0.5 juta per printed term behind the figure: RM1.0 juta for net DE (gross − loan recovery), RM2.0 juta for the overall balance, RM2.5 juta where the COVID-19 fund prints. Each edition passes those identities exactly. A `DIVERGE` is a **finding**, reported loudly, and does not fail the build. |
 | `known_defect` | `KNOWN_OURS_PROVEN`, `KNOWN_OURS_SUSPECTED`, `KNOWN_UNPROVEN`, `KNOWN_SOURCE_DOCUMENTED` | an individually-justified exception from `_known_extraction_defects_curated.csv`. **Not a blanket tolerance:** any leaf-vs-JUMLAH mismatch *not* in that register fails the build. |
 | `extraction_gap` | `UNCAPTURED` | a row summing leaf cells that have no captured amount; the row is understated by an unknown amount and carries `data_quality='suspect'`. |
 | `known_gap` | `KNOWN_GAP` | a gap we record and do not close. |
@@ -240,10 +244,13 @@ Coverage FY2015–2027: **FY2015–2025 `official_actual`**, FY2026 `official_re
 FY2027 `official_projection` (both from the 2027 edition). Filter on `basis` before
 building a series of outturns.
 
-**Two breaks to know before plotting a sector series.**
-- *"Pertanian dan pembangunan luar bandar"* (agriculture **and rural development**,
-  FY2015–2019 rows) becomes *"Pertanian"* (agriculture, FY2020 onward). Separate line keys
-  (`economic_agri_rural`, `economic_agriculture`); neither is spliced into the other.
+**Two label/classification changes to know before plotting a sector series.**
+- *"Pertanian dan pembangunan luar bandar"* (FY2015–2019 rows) is printed as *"Pertanian"*
+  from FY2020. This is a **rename, not a redefinition**: the overlap years print identically
+  under both labels in three editions (FY2018 opex 4,618 / devex 2,133; FY2019 opex 3,457 /
+  devex 2,314). So both are one line, `economic_agriculture`, conformed by
+  `pipeline/mof_editions.py`'s `LINE_CROSSWALK`; `line_bm` keeps the label each row was
+  printed under, and the row's note says so. (The source folders keep a code per label.)
 - The 2024 edition reclassified about **RM1.1–1.2 bil a year** of operating expenditure
   from general administration to housing. FY2020–21 rows carry the old classification
   (their `restated_in` shows the new one), FY2022 onward the new: **housing steps from

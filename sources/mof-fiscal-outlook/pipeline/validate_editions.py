@@ -37,8 +37,9 @@ DATA = os.path.join(HERE, "..", "data")
 KNOWN_SOURCE_ANOMALIES = {
     (2024, "3.1 debt_service = domestic + external", 2022):
         "both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 "
-        "= 41,249 under a printed total of 41,269; the 2026 edition restates domestic to "
-        "40,553, which foots",
+        "= 41,249 under a printed total of 41,269. 40,553 is the intended figure: the 2023 "
+        "edition printed it, the row's own 13.9% share fits it (40,533 would be 13.8%), and "
+        "the 2026 edition restates to it",
     (2025, "3.1 debt_service = domestic + external", 2022):
         "as the 2024 edition: 40,533 printed, restated to 40,553 in the 2026 edition",
 }

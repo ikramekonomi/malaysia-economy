@@ -170,9 +170,11 @@ fact_headline,change_in_assets,2021,2023=-1578;2024=-1578;2025=-1578,0.0,stable
 fact_headline,change_in_assets,2022,2024=61;2025=61;2026=61,0.0,stable
 fact_headline,change_in_assets,2023,2025=-1166;2026=-1166;2027=-1167,-1.0,restated
 fact_headline,change_in_assets,2024,2026=2320;2027=2320,0.0,stable
+fact_headline,covid19_fund,2019,2022=0;2023=0,0.0,stable
 fact_headline,covid19_fund,2020,2022=38019;2023=38019;2024=38019,0.0,stable
 fact_headline,covid19_fund,2021,2023=37711;2024=37711;2025=37711,0.0,stable
 fact_headline,covid19_fund,2022,2024=30979;2025=30979;2026=30979,0.0,stable
+fact_headline,covid19_fund,2023,2025=0;2026=0,0.0,stable
 fact_headline,current_balance,2016,2019=2248;2020=2248,0.0,stable
 fact_headline,current_balance,2017,2019=2711;2020=2711;2021=2711,0.0,stable
 fact_headline,current_balance,2018,2020=1922;2021=1922;2022=1922,0.0,stable

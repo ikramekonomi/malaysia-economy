@@ -23,9 +23,10 @@ series of outturns.
 
 KNOWN BREAKS -- READ BEFORE PLOTTING A SECTOR SERIES
 ----------------------------------------------------
-* "Pertanian dan pembangunan luar bandar" (agriculture AND rural development, editions
-  2019-2021) became "Pertanian" (agriculture, 2022 onward). They are separate lines
-  (economic_agri_rural, economic_agriculture); neither is spliced into the other.
+* "Pertanian dan pembangunan luar bandar" (editions 2019-2021) became "Pertanian" (2022
+  onward). A RENAME, proven: the overlap years print identically under both labels in three
+  editions. Conformed to one line, economic_agriculture, by mof_editions.LINE_CROSSWALK;
+  line_bm keeps the label each row was printed under, and its note says so.
 * The 2024 edition reclassified about RM1.1-1.2 bil a year of FY2020-21 operating
   expenditure from general administration to housing. Under the own-edition rule FY2020
   and FY2021 carry the OLD classification and FY2022 onward the new one, so housing
@@ -52,11 +53,36 @@ FIELDS = ["year", "line", "line_bm", "line_en", "level", "parent_line", "amount_
           "pdf_page", "printed_page", "restated_in", "note"]
 
 
+def source_anomaly_lines(edition, year):
+    """Lines of one edition-year that its own validation proved do not foot AS PRINTED
+    (SOURCE_ANOMALY). The parent named in the check and its sub-items get a note, so the
+    curated row says its components do not add up -- not only the source folder."""
+    path = os.path.join(mof_editions.MOF_DATA, f"{edition}_public_finance_stats", "_validation.csv")
+    if not os.path.exists(path):
+        return {}
+    out = {}
+    for v in csv.DictReader(open(path)):
+        if v["result"] == "SOURCE_ANOMALY" and int(v["target_year"]) == year:
+            parent = v["check"].split()[1]            # "3.1 debt_service = domestic + external"
+            out[parent] = v["note"]
+    return out
+
+
 def build(table):
     chosen = mof_editions.choose(mof_editions.load_all(table))
     out = []
+    anomalies = {}
     for (line, year), r in sorted(chosen.items(), key=lambda kv: (kv[0][1], kv[0][0])):
         amt = r["amount_rm_juta"]
+        key = (r["edition"], year)
+        if key not in anomalies:
+            anomalies[key] = source_anomaly_lines(*key)
+        note = r["note"]
+        for parent, why in anomalies[key].items():
+            if line == parent or line.startswith(parent + "_"):
+                flag = (f"SOURCE ANOMALY in this edition: {parent} and its sub-items do not "
+                        f"foot as printed -- {why} (sources/mof-fiscal-outlook/data/_source_anomalies.csv)")
+                note = f"{note}; {flag}" if note else flag
         out.append({
             "year": year, "line": line, "line_bm": r["line_bm"], "line_en": r["line_en"],
             "level": int(r["level"]), "parent_line": r["parent_line"],
@@ -66,7 +92,7 @@ def build(table):
             "source_table": r["table_no"],
             "source_file": f"{r['edition']}/{r['source_file']}",
             "pdf_page": r["pdf_page"], "printed_page": r["printed_page"] or None,
-            "restated_in": r["restated_in"], "note": r["note"],
+            "restated_in": r["restated_in"], "note": note,
         })
     out.sort(key=lambda r: (r["year"], r["level"], r["line"]))
     return out

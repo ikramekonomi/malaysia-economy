@@ -76,6 +76,7 @@ LABELS = [
     ("perubahan aset", "change_in_assets"),
     ("perubahan dalam aset", "change_in_assets"),
 ]
+NOT_PRINTED_IF_DASH = {"net_offshore_borrowings", "net_domestic_borrowings", "change_in_assets"}
 SKIP_LABELS = ("% perubahan", "(% perubahan)", "sumber pembiayaan")
 PCT_LABEL = "% kdnk"          # % of GDP of the amount row above it
 
@@ -110,6 +111,23 @@ def unshift(s):
 
 
 def find_table_page(pdf):
+    for p in range(1, npages(pdf) + 1):
+        t = pdftext(pdf, p)
+        if re.search(r"KEWANGAN KERAJAAN PERSEKUTUAN|FEDERAL GOVERNMENT FINANCE", t) and \
+                re.search(r"Baki keseluruhan", t):
+            return p, t
+    raise SystemExit(f"{pdf}: Jadual 1.1 not found")
+
+
+def printed_table_no(text):
+    """The table number as printed: 1.1 in most editions, 5.1 in the 2023 edition."""
+    m = re.search(r"(?:^|\n)\s*(\d)\.1\.?\s+KEWANGAN KERAJAAN PERSEKUTUAN", text)
+    if not m:
+        raise SystemExit("cannot read the federal-finance table number")
+    return f"{m.group(1)}.1"
+
+
+def _unused_find_table_page(pdf):
     for p in range(1, npages(pdf) + 1):
         t = pdftext(pdf, p)
         if re.search(r"KEWANGAN KERAJAAN PERSEKUTUAN|FEDERAL GOVERNMENT FINANCE", t) and \
@@ -155,6 +173,7 @@ def footnote_text(lines, start):
 
 
 FOOTNOTE_TEXTS = {}
+TABLE_NO = {}
 
 
 def malay_footnotes(lines, start):
@@ -180,11 +199,23 @@ def classify(fn, fn_texts):
 
 
 def printed_page(lines):
-    for l in reversed([l for l in lines if l.strip()][-6:]):
-        m = re.search(r"(?:^|\s)(\d{2,3})\s+(?:TINJAUAN|tinjauan|\S*[ࠀ-ࣿ])", l) or \
-            re.search(r"(?:tinjauan fiskal|TINJAUAN FISKAL|fiscal outlook)\D+20\d\d\s+(\d{2,3})\s*$", l)
-        if m:
-            return int(m.group(1))
+    """The printed page number from the page footer, where the text layer carries one.
+
+    Footers print the number either before the running title ("184  tinjauan fiskal ...")
+    or after it ("Tinjauan Fiskal  Fiscal Outlook 2020      151"); in the 2022/2023
+    appendices the running title is in a font with no usable text layer, but the number
+    after it is still plain digits. A lone footnote marker (one digit) is never a page
+    number. Returns None where the page prints none in its text layer (2019 appendix).
+    """
+    tail = [l for l in lines if l.strip()][-6:]
+    for l in reversed(tail):
+        if re.search(r"(?i)fiscal|fiskal|[\u0800-\u08ff]", l):
+            m = re.search(r"\s{3,}(\d{2,3})\s*$", l)
+            if m:
+                return int(m.group(1))
+            m = re.search(r"(?i)(?:^|\s)(\d{2,3})\s+(?:tinjauan|\S*[\u0800-\u08ff])", l)
+            if m:
+                return int(m.group(1))
     return None
 
 
@@ -266,6 +297,11 @@ def extract(edition):
                 unknown.append(lab)
                 continue
             last_amount_key = key
+        if key not in NOT_PRINTED_IF_DASH:
+            # a printed dash is a NIL (repo convention, CLAUDE.md): e.g. the COVID-19 fund
+            # in years it spent nothing. Only the budget-year financing rows use a dash to
+            # mean "not printed", and stay empty.
+            vals = {y: (0.0 if v is None else v) for y, v in vals.items()}
         rows.append((key, is_pct, vals, cell_fn))
     fn_texts = footnote_text(lines, end)
 
@@ -280,6 +316,7 @@ def extract(edition):
                                  f"recognisable basis text: {fn_texts.get(fn)!r}")
             basis[year] = b
     FOOTNOTE_TEXTS[edition] = malay_footnotes(lines, end)
+    TABLE_NO[edition] = printed_table_no(text)
     return pdf, page, printed_page(lines), cols, basis, rows, unknown
 
 
@@ -307,7 +344,7 @@ def to_rows(edition, extracted, man):
                 n = cell_fn[year]
                 notes.append(f"printed with footnote {n}: {fn_texts.get(n, '(see page)').strip()}")
             out.append({
-                "edition": edition, "table_no": "1.1", "line": key, "target_year": year,
+                "edition": edition, "table_no": TABLE_NO[edition], "line": key, "target_year": year,
                 "amount_rm_juta": None if is_pct else (int(v) if v == int(v) else v),
                 "pct_of_gdp": v if is_pct else None,
                 "basis": basis[year], "source_file": os.path.basename(pdf),

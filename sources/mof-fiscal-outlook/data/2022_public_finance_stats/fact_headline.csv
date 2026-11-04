@@ -1,76 +1,78 @@
 edition,table_no,line,target_year,amount_rm_juta,pct_of_gdp,basis,source_file,pdf_page,printed_page,retrieved_from,retrieved_date,note
-2022,1.1,revenue,2018,232882,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,revenue,2019,264415,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,revenue,2020,225076,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,revenue,2021,221023,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,revenue,2022,234011,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,operating_expenditure,2018,230960,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,operating_expenditure,2019,263343,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,operating_expenditure,2020,224600,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,operating_expenditure,2021,219600,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,operating_expenditure,2022,233500,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,current_balance,2018,1922,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,current_balance,2019,1072,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,current_balance,2020,476,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,current_balance,2021,1423,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,current_balance,2022,511,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross,2018,56095,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross,2019,54173,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross,2020,51360,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross,2021,62000,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross,2022,75600,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_direct,2018,54405,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_direct,2019,52058,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_direct,2020,49331,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_direct,2021,60814,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_direct,2022,73617,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross_lending,2018,1690,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross_lending,2019,2115,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross_lending,2020,2029,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross_lending,2021,1186,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_gross_lending,2022,1983,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_loan_recovery,2018,788,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_loan_recovery,2019,1603,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_loan_recovery,2020,1259,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_loan_recovery,2021,800,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_loan_recovery,2022,600,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_net,2018,55307,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_net,2019,52570,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_net,2020,50101,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_net,2021,61200,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,development_expenditure_net,2022,75000,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,covid19_fund,2020,38019,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,covid19_fund,2021,39000,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,covid19_fund,2022,23000,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance,2018,-53385,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance,2019,-51498,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance,2020,-87644,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance,2021,-98777,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance,2022,-97489,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance_pct_gdp,2018,,-3.7,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance_pct_gdp,2019,,-3.4,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance_pct_gdp,2020,,-6.2,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance_pct_gdp,2021,,-6.5,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,overall_balance_pct_gdp,2022,,-6.0,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance,2018,-22838,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance,2019,-18565,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance,2020,-53149,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance,2021,-59777,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance,2022,-54389,,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance_pct_gdp,2018,,-1.6,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance_pct_gdp,2019,,-1.2,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance_pct_gdp,2020,,-3.8,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance_pct_gdp,2021,,-3.9,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,primary_balance_pct_gdp,2022,,-3.3,official_projection,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_offshore_borrowings,2018,-320,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_offshore_borrowings,2019,6977,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_offshore_borrowings,2020,-331,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_offshore_borrowings,2021,1601,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_domestic_borrowings,2018,54427,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_domestic_borrowings,2019,44755,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_domestic_borrowings,2020,86921,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,net_domestic_borrowings,2021,98800,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,change_in_assets,2018,-722,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,change_in_assets,2019,-234,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,change_in_assets,2020,1054,,official_actual,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
-2022,1.1,change_in_assets,2021,-1624,,official_revised,st_kewangan.pdf,5,,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,printed page number not in this page's text layer; pdf_page is exact
+2022,1.1,revenue,2018,232882,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,revenue,2019,264415,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,revenue,2020,225076,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,revenue,2021,221023,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,revenue,2022,234011,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,operating_expenditure,2018,230960,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,operating_expenditure,2019,263343,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,operating_expenditure,2020,224600,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,operating_expenditure,2021,219600,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,operating_expenditure,2022,233500,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,current_balance,2018,1922,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,current_balance,2019,1072,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,current_balance,2020,476,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,current_balance,2021,1423,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,current_balance,2022,511,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross,2018,56095,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross,2019,54173,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross,2020,51360,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross,2021,62000,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross,2022,75600,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_direct,2018,54405,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_direct,2019,52058,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_direct,2020,49331,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_direct,2021,60814,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_direct,2022,73617,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross_lending,2018,1690,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross_lending,2019,2115,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross_lending,2020,2029,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross_lending,2021,1186,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_gross_lending,2022,1983,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_loan_recovery,2018,788,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_loan_recovery,2019,1603,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_loan_recovery,2020,1259,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_loan_recovery,2021,800,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_loan_recovery,2022,600,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_net,2018,55307,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_net,2019,52570,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_net,2020,50101,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_net,2021,61200,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,development_expenditure_net,2022,75000,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,covid19_fund,2018,0,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,covid19_fund,2019,0,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,covid19_fund,2020,38019,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,covid19_fund,2021,39000,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,covid19_fund,2022,23000,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance,2018,-53385,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance,2019,-51498,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance,2020,-87644,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance,2021,-98777,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance,2022,-97489,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance_pct_gdp,2018,,-3.7,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance_pct_gdp,2019,,-3.4,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance_pct_gdp,2020,,-6.2,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance_pct_gdp,2021,,-6.5,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,overall_balance_pct_gdp,2022,,-6.0,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance,2018,-22838,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance,2019,-18565,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance,2020,-53149,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance,2021,-59777,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance,2022,-54389,,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance_pct_gdp,2018,,-1.6,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance_pct_gdp,2019,,-1.2,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance_pct_gdp,2020,,-3.8,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance_pct_gdp,2021,,-3.9,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,primary_balance_pct_gdp,2022,,-3.3,official_projection,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_offshore_borrowings,2018,-320,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_offshore_borrowings,2019,6977,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_offshore_borrowings,2020,-331,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_offshore_borrowings,2021,1601,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_domestic_borrowings,2018,54427,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_domestic_borrowings,2019,44755,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_domestic_borrowings,2020,86921,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,net_domestic_borrowings,2021,98800,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,change_in_assets,2018,-722,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,change_in_assets,2019,-234,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,change_in_assets,2020,1054,,official_actual,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,
+2022,1.1,change_in_assets,2021,-1624,,official_revised,st_kewangan.pdf,5,211,https://belanjawan.mof.gov.my/pdf/2022/hasil/st_kewangan.pdf,2026-11-04,

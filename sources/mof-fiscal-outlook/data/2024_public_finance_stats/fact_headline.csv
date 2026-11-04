@@ -42,6 +42,8 @@ edition,table_no,line,target_year,amount_rm_juta,pct_of_gdp,basis,source_file,pd
 2024,1.1,covid19_fund,2020,38019,,official_actual,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,
 2024,1.1,covid19_fund,2021,37711,,official_actual,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,
 2024,1.1,covid19_fund,2022,30979,,official_actual,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,
+2024,1.1,covid19_fund,2023,0,,official_revised,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,
+2024,1.1,covid19_fund,2024,0,,official_projection,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,
 2024,1.1,overall_balance,2020,-87645,,official_actual,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,
 2024,1.1,overall_balance,2021,-98740,,official_actual,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,
 2024,1.1,overall_balance,2022,-99482,,official_actual,st_kewangan.pdf,4,184,https://belanjawan.mof.gov.my/pdf/belanjawan2024/hasil/st_kewangan.pdf,2026-11-04,

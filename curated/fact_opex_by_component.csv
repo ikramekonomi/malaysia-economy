@@ -44,51 +44,51 @@ year,line,line_bm,line_en,level,parent_line,amount_rm,pct_share,basis,source_edi
 2017,debt_service_external,Luar negeri,External,2,debt_service,704000000.0,0.3,official_actual,tinjauan_fiskal_2019,3.1,2019/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
 2017,grants_constitutional,Pemberian di bawah perlembagaan,Constitutional grants,2,grants_state_govts,5101000000.0,2.3,official_actual,tinjauan_fiskal_2019,3.1,2019/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
 2017,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,2008000000.0,1.0,official_actual,tinjauan_fiskal_2019,3.1,2019/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,asset_acquisition,Pembelian aset,Asset acquisition,1,,447000000.0,0.2,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,debt_service,Bayaran khidmat hutang,Debt service charges,1,,30547000000.0,13.2,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,emoluments,Emolumen,Emoluments,1,,79989000000.0,34.6,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,grants_state_govts,Pemberian dan serahan kepada kerajaan negeri,Grants and transfers to state governments,1,,7605000000.0,3.3,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,grants_statutory_bodies,Pemberian kepada badan berkanun,Grants to statutory bodies,1,,13763000000.0,6.0,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,other,Lain-lain,Others,1,,9750000000.0,4.2,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,refunds_writeoffs,Bayaran balik dan hapus kira,Refunds and write-offs,1,,883000000.0,0.4,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,retirement_charges,Bayaran persaraan,Retirement charges,1,,25177000000.0,10.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,subsidies_social_assistance,Subsidi dan bantuan sosial,Subsidies and social assistance,1,,27516000000.0,11.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,supplies_services,Perkhidmatan dan bekalan,Supplies and services,1,,35283000000.0,15.3,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,total,Jumlah,Total,1,,230960000000.0,100.0,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,29891000000.0,12.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,debt_service_external,Luar negeri,External,2,debt_service,656000000.0,0.3,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,grants_constitutional,Pemberian di bawah perlembagaan,Constitutional grants,2,grants_state_govts,5495000000.0,2.4,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2018,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,2110000000.0,0.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2019,asset_acquisition,Pembelian aset,Asset acquisition,1,,770000000.0,0.3,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,debt_service,Bayaran khidmat hutang,Debt service charges,1,,32933000000.0,12.5,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,emoluments,Emolumen,Emoluments,1,,80534000000.0,30.6,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,grants_state_govts,Pemberian dan serahan kepada kerajaan negeri,Grants and transfers to state governments,1,,7574000000.0,2.9,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,grants_statutory_bodies,Pemberian kepada badan berkanun,Grants to statutory bodies,1,,13780000000.0,5.2,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,other,Lain-lain,Others,1,,45557000000.0,17.3,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,"footnote: includes grants to Statutory Funds, public corporations, international organisations, insurance claims and gratuities and others; the 2019 spike (45,557) is as printed in the source, not a transcription error"
-2019,refunds_writeoffs,Bayaran balik dan hapus kira,Refunds and write-offs,1,,893000000.0,0.3,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,retirement_charges,Bayaran persaraan,Retirement charges,1,,25894000000.0,9.8,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,subsidies_social_assistance,Subsidi dan bantuan sosial,Subsidies and social assistance,1,,23901000000.0,9.1,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,supplies_services,Perkhidmatan dan bekalan,Supplies and services,1,,31507000000.0,12.0,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,total,Jumlah,Total,1,,263343000000.0,100.0,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,32239000000.0,12.2,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,debt_service_external,Luar negeri,External,2,debt_service,694000000.0,0.3,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,grants_constitutional,Pemberian di bawah Perlembagaan,Constitutional grants,2,grants_state_govts,5619000000.0,2.1,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2019,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,1955000000.0,0.7,official_actual,tinjauan_fiskal_2021,3.1,2021/tinjauan_fiskal_2021.pdf,7,175,,
-2020,asset_acquisition,Pembelian aset,Asset acquisition,1,,631000000.0,0.3,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,debt_service,Bayaran khidmat hutang,Debt service charges,1,,34495000000.0,15.4,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,emoluments,Emolumen,Emoluments,1,,82996000000.0,36.9,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,grants_state_govts,Pemberian dan serahan kepada kerajaan negeri,Grants and transfers to state governments,1,,7669000000.0,3.4,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,grants_statutory_bodies,Pemberian kepada badan berkanun,Grants to statutory bodies,1,,10291000000.0,4.6,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,edition 2023 prints 10525; edition 2024 prints 10525,printed page number not in this page's text layer; pdf_page is exact
-2020,other,Lain-lain,Others,1,,11239000000.0,5.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,edition 2023 prints 11005; edition 2024 prints 11005,printed page number not in this page's text layer; pdf_page is exact
-2020,refunds_writeoffs,Bayaran balik dan hapus kira,Refunds and write-offs,1,,654000000.0,0.3,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,retirement_charges,Bayaran persaraan,Retirement charges,1,,27533000000.0,12.3,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,subsidies_social_assistance,Subsidi dan bantuan sosial,Subsidies and social assistance,1,,19769000000.0,8.8,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,supplies_services,Perkhidmatan dan bekalan,Supplies and services,1,,29323000000.0,13.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,total,Jumlah,Total,1,,224600000000.0,100.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,33770000000.0,15.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,debt_service_external,Luar negeri,External,2,debt_service,725000000.0,0.4,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,grants_constitutional,Pemberian di bawah perlembagaan,Constitutional grants,2,grants_state_govts,5739000000.0,2.5,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
-2020,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,1930000000.0,0.9,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,,,printed page number not in this page's text layer; pdf_page is exact
+2018,asset_acquisition,Pembelian aset,Asset acquisition,1,,447000000.0,0.2,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,debt_service,Bayaran khidmat hutang,Debt service charges,1,,30547000000.0,13.2,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,emoluments,Emolumen,Emoluments,1,,79989000000.0,34.6,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,grants_state_govts,Pemberian dan serahan kepada kerajaan negeri,Grants and transfers to state governments,1,,7605000000.0,3.3,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,grants_statutory_bodies,Pemberian kepada badan berkanun,Grants to statutory bodies,1,,13763000000.0,6.0,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,other,Lain-lain,Others,1,,9750000000.0,4.2,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,refunds_writeoffs,Bayaran balik dan hapus kira,Refunds and write-offs,1,,883000000.0,0.4,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,retirement_charges,Bayaran persaraan,Retirement charges,1,,25177000000.0,10.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,subsidies_social_assistance,Subsidi dan bantuan sosial,Subsidies and social assistance,1,,27516000000.0,11.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,supplies_services,Perkhidmatan dan bekalan,Supplies and services,1,,35283000000.0,15.3,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,total,Jumlah,Total,1,,230960000000.0,100.0,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,29891000000.0,12.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,debt_service_external,Luar negeri,External,2,debt_service,656000000.0,0.3,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,grants_constitutional,Pemberian di bawah perlembagaan,Constitutional grants,2,grants_state_govts,5495000000.0,2.4,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2018,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,2110000000.0,0.9,official_actual,tinjauan_fiskal_2020,3.1,2020/st_kewangan.pdf,7,153,,
+2019,asset_acquisition,Pembelian aset,Asset acquisition,1,,770000000.0,0.3,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,debt_service,Bayaran khidmat hutang,Debt service charges,1,,32933000000.0,12.5,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,emoluments,Emolumen,Emoluments,1,,80534000000.0,30.6,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,grants_state_govts,Pemberian dan serahan kepada kerajaan negeri,Grants and transfers to state governments,1,,7574000000.0,2.9,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,grants_statutory_bodies,Pemberian kepada badan berkanun,Grants to statutory bodies,1,,13780000000.0,5.2,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,other,Lain-lain,Others,1,,45557000000.0,17.3,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,"footnote: includes grants to Statutory Funds, public corporations, international organisations, insurance claims and gratuities and others; the 2019 spike (45,557) is as printed in the source, not a transcription error"
+2019,refunds_writeoffs,Bayaran balik dan hapus kira,Refunds and write-offs,1,,893000000.0,0.3,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,retirement_charges,Bayaran persaraan,Retirement charges,1,,25894000000.0,9.8,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,subsidies_social_assistance,Subsidi dan bantuan sosial,Subsidies and social assistance,1,,23901000000.0,9.1,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,supplies_services,Perkhidmatan dan bekalan,Supplies and services,1,,31507000000.0,12.0,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,total,Jumlah,Total,1,,263343000000.0,100.0,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,32239000000.0,12.2,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,debt_service_external,Luar negeri,External,2,debt_service,694000000.0,0.3,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,grants_constitutional,Pemberian di bawah Perlembagaan,Constitutional grants,2,grants_state_govts,5619000000.0,2.1,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2019,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,1955000000.0,0.7,official_actual,tinjauan_fiskal_2021,3.1,2021/st_kewangan.pdf,7,175,,
+2020,asset_acquisition,Pembelian aset,Asset acquisition,1,,631000000.0,0.3,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,debt_service,Bayaran khidmat hutang,Debt service charges,1,,34495000000.0,15.4,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,emoluments,Emolumen,Emoluments,1,,82996000000.0,36.9,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,grants_state_govts,Pemberian dan serahan kepada kerajaan negeri,Grants and transfers to state governments,1,,7669000000.0,3.4,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,grants_statutory_bodies,Pemberian kepada badan berkanun,Grants to statutory bodies,1,,10291000000.0,4.6,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,edition 2023 prints 10525; edition 2024 prints 10525,
+2020,other,Lain-lain,Others,1,,11239000000.0,5.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,edition 2023 prints 11005; edition 2024 prints 11005,
+2020,refunds_writeoffs,Bayaran balik dan hapus kira,Refunds and write-offs,1,,654000000.0,0.3,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,retirement_charges,Bayaran persaraan,Retirement charges,1,,27533000000.0,12.3,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,subsidies_social_assistance,Subsidi dan bantuan sosial,Subsidies and social assistance,1,,19769000000.0,8.8,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,supplies_services,Perkhidmatan dan bekalan,Supplies and services,1,,29323000000.0,13.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,total,Jumlah,Total,1,,224600000000.0,100.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,33770000000.0,15.0,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,debt_service_external,Luar negeri,External,2,debt_service,725000000.0,0.4,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,grants_constitutional,Pemberian di bawah perlembagaan,Constitutional grants,2,grants_state_govts,5739000000.0,2.5,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
+2020,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,1930000000.0,0.9,official_actual,tinjauan_fiskal_2022,3.1,2022/st_kewangan.pdf,7,213,,
 2021,asset_acquisition,Pembelian aset,Asset acquisition,1,,596000000.0,0.3,official_actual,tinjauan_fiskal_2023,7.1,2023/jadual_perangkaan.pdf,56,204,,
 2021,debt_service,Bayaran khidmat hutang,Debt service charges,1,,38069000000.0,16.4,official_actual,tinjauan_fiskal_2023,7.1,2023/jadual_perangkaan.pdf,56,204,,
 2021,emoluments,Emolumen,Emoluments,1,,85854000000.0,37.1,official_actual,tinjauan_fiskal_2023,7.1,2023/jadual_perangkaan.pdf,56,204,,
@@ -105,7 +105,7 @@ year,line,line_bm,line_en,level,parent_line,amount_rm,pct_share,basis,source_edi
 2021,grants_constitutional,Pemberian di bawah perlembagaan,Constitutional grants,2,grants_state_govts,5696000000.0,2.5,official_actual,tinjauan_fiskal_2023,7.1,2023/jadual_perangkaan.pdf,56,204,,
 2021,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,1851000000.0,0.8,official_actual,tinjauan_fiskal_2023,7.1,2023/jadual_perangkaan.pdf,56,204,,
 2022,asset_acquisition,Pembelian aset,Asset acquisition,1,,767000000.0,0.3,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
-2022,debt_service,Bayaran khidmat hutang,Debt service charges,1,,41269000000.0,14.1,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
+2022,debt_service,Bayaran khidmat hutang,Debt service charges,1,,41269000000.0,14.1,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,"SOURCE ANOMALY in this edition: debt_service and its sub-items do not foot as printed -- both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 = 41,249 under a printed total of 41,269. 40,553 is the intended figure: the 2023 edition printed it, the row's own 13.9% share fits it (40,533 would be 13.8%), and the 2026 edition restates to it (sources/mof-fiscal-outlook/data/_source_anomalies.csv)"
 2022,emoluments,Emolumen,Emoluments,1,,87789000000.0,30.0,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
 2022,grants_state_govts,Pemberian dan serahan kepada kerajaan negeri,Grants and transfers to state governments,1,,8122000000.0,2.8,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
 2022,grants_statutory_bodies,Pemberian kepada badan berkanun,Grants to statutory bodies,1,,14014000000.0,4.8,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
@@ -115,8 +115,8 @@ year,line,line_bm,line_en,level,parent_line,amount_rm,pct_share,basis,source_edi
 2022,subsidies_social_assistance,Subsidi dan bantuan sosial,Subsidies and social assistance,1,,67358000000.0,23.0,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
 2022,supplies_services,Perkhidmatan dan bekalan,Supplies and services,1,,34692000000.0,11.9,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
 2022,total,Jumlah,Total,1,,292693000000.0,100.0,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
-2022,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,40533000000.0,13.9,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,edition 2026 prints 40553,
-2022,debt_service_external,Luar negeri,External,2,debt_service,716000000.0,0.2,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
+2022,debt_service_domestic,Dalam negeri,Domestic,2,debt_service,40533000000.0,13.9,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,edition 2026 prints 40553,"SOURCE ANOMALY in this edition: debt_service and its sub-items do not foot as printed -- both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 = 41,249 under a printed total of 41,269. 40,553 is the intended figure: the 2023 edition printed it, the row's own 13.9% share fits it (40,533 would be 13.8%), and the 2026 edition restates to it (sources/mof-fiscal-outlook/data/_source_anomalies.csv)"
+2022,debt_service_external,Luar negeri,External,2,debt_service,716000000.0,0.2,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,"SOURCE ANOMALY in this edition: debt_service and its sub-items do not foot as printed -- both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 = 41,249 under a printed total of 41,269. 40,553 is the intended figure: the 2023 edition printed it, the row's own 13.9% share fits it (40,533 would be 13.8%), and the 2026 edition restates to it (sources/mof-fiscal-outlook/data/_source_anomalies.csv)"
 2022,grants_constitutional,Pemberian di bawah perlembagaan,Constitutional grants,2,grants_state_govts,6204000000.0,2.1,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
 2022,grants_other,Pemberian/pindahan lain,Other grants/transfers,2,grants_state_govts,1918000000.0,0.7,official_actual,tinjauan_fiskal_2024,3.1,2024/st_kewangan.pdf,6,186,,
 2023,asset_acquisition,Pembelian aset,Asset acquisition,1,,1023000000.0,0.3,official_actual,tinjauan_fiskal_2025,3.1,2025/st_kewangan.pdf,5,216,,

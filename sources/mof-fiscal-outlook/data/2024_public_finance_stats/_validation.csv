@@ -46,7 +46,7 @@ check,target_year,printed,computed,diff,band_juta,result,note
 1.1 devex_net = gross - loan_recovery,2022,70167.0,70167.0,0.0,1.5,PASS,
 1.1 overall_balance = current_balance - devex_net - covid_fund,2022,-99482.0,-99482.0,0.0,2.0,PASS,
 1.1 financing sources sum to the deficit,2022,99482.0,99482.0,0.0,2.0,PASS,
-3.1 debt_service = domestic + external,2022,41269.0,41249.0,-20.0,1.5,SOURCE_ANOMALY,"both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 = 41,249 under a printed total of 41,269; the 2026 edition restates domestic to 40,553, which foots"
+3.1 debt_service = domestic + external,2022,41269.0,41249.0,-20.0,1.5,SOURCE_ANOMALY,"both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 = 41,249 under a printed total of 41,269. 40,553 is the intended figure: the 2023 edition printed it, the row's own 13.9% share fits it (40,533 would be 13.8%), and the 2026 edition restates to it"
 3.1 grants_state_govts = constitutional + other,2022,8122.0,8122.0,0.0,1.5,PASS,
 3.1 sum(level-1 lines) = total,2022,292693.0,292693.0,0.0,5.5,PASS,
 3.1 total = 1.1 operating_expenditure,2022,292693.0,292693.0,0.0,1.0,PASS,
@@ -65,7 +65,7 @@ check,target_year,printed,computed,diff,band_juta,result,note
 1.1 current_balance = revenue - opex,2023,3060.0,3060.0,0.0,1.5,PASS,
 1.1 devex_gross = direct + gross_lending,2023,97000.0,97000.0,0.0,1.5,PASS,
 1.1 devex_net = gross - loan_recovery,2023,96300.0,96300.0,0.0,1.5,PASS,
-1.1 overall_balance = current_balance - devex_net - covid_fund,2023,-93240.0,-93240.0,0.0,1.5,PASS,
+1.1 overall_balance = current_balance - devex_net - covid_fund,2023,-93240.0,-93240.0,0.0,2.0,PASS,
 1.1 financing sources sum to the deficit,2023,93240.0,93240.0,0.0,2.0,PASS,
 3.1 debt_service = domestic + external,2023,46100.0,46100.0,0.0,1.5,PASS,
 3.1 grants_state_govts = constitutional + other,2023,8077.0,8077.0,0.0,1.5,PASS,
@@ -86,7 +86,7 @@ check,target_year,printed,computed,diff,band_juta,result,note
 1.1 current_balance = revenue - opex,2024,3800.0,3800.0,0.0,1.5,PASS,
 1.1 devex_gross = direct + gross_lending,2024,90000.0,90000.0,0.0,1.5,PASS,
 1.1 devex_net = gross - loan_recovery,2024,89200.0,89200.0,0.0,1.5,PASS,
-1.1 overall_balance = current_balance - devex_net - covid_fund,2024,-85400.0,-85400.0,0.0,1.5,PASS,
+1.1 overall_balance = current_balance - devex_net - covid_fund,2024,-85400.0,-85400.0,0.0,2.0,PASS,
 3.1 debt_service = domestic + external,2024,49800.0,49800.0,0.0,1.5,PASS,
 3.1 grants_state_govts = constitutional + other,2024,8747.0,8747.0,0.0,1.5,PASS,
 3.1 sum(level-1 lines) = total,2024,303800.0,303800.0,0.0,5.5,PASS,

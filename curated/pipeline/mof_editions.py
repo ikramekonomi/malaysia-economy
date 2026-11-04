@@ -36,8 +36,26 @@ BASIS_RANK = {"official_actual": 0, "official_preliminary": 1, "official_revised
               "official_projection": 3}
 
 
+# Curated-layer crosswalk for lines MOF RENAMED without changing their content. The source
+# folders keep a separate code per printed label; here they are conformed, the way
+# dim_maksud_canonical conforms renumbered ministries. Each entry needs proof.
+LINE_CROSSWALK = {
+    # "Pertanian dan pembangunan luar bandar" (editions 2019-2021) -> "Pertanian" (2022+).
+    # Proof: the overlap years print identically under both labels, in three editions --
+    # FY2018 opex 4,618 / devex 2,133 and FY2019 opex 3,457 / devex 2,314, the same in the
+    # 2020-2021 editions (old label) and the 2022-2023 editions (new label).
+    "economic_agri_rural": "economic_agriculture",
+}
+CROSSWALK_NOTE = {
+    "economic_agri_rural": "printed as 'Pertanian dan pembangunan luar bandar' in this edition; "
+                           "conformed to economic_agriculture ('Pertanian', 2022 edition onward) -- "
+                           "FY2018-19 print identically under both labels",
+}
+
+
 def load_all(table):
-    """Every row of <table>.csv across all *_public_finance_stats edition folders."""
+    """Every row of <table>.csv across all *_public_finance_stats edition folders, with
+    renamed lines conformed (LINE_CROSSWALK) and the printed label kept in line_bm."""
     rows = []
     for folder in sorted(glob.glob(os.path.join(MOF_DATA, "*_public_finance_stats"))):
         path = os.path.join(folder, f"{table}.csv")
@@ -46,6 +64,10 @@ def load_all(table):
         for r in csv.DictReader(open(path, newline="")):
             r["edition"] = int(r.get("edition") or os.path.basename(folder)[:4])
             r["target_year"] = int(r["target_year"])
+            if r["line"] in LINE_CROSSWALK:
+                note = CROSSWALK_NOTE[r["line"]]
+                r["note"] = f"{r['note']}; {note}" if r.get("note") else note
+                r["line"] = LINE_CROSSWALK[r["line"]]
             rows.append(r)
     return rows
 

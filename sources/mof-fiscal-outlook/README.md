@@ -34,8 +34,8 @@ figure-for-figure on everything extracted.
 ## Also extracted — `data/2021_public_finance_stats/` (Jadual 1.1, 3.1, 3.2, 3.3)
 
 The "Statistik Kewangan Awam / Public Finance Statistics" appendix of the **Tinjauan
-Fiskal 2021** edition (`tinjauan_fiskal_2021.pdf`, user-uploaded, 20 pages — not the full
-~277-page narrative report, just its statistical-tables appendix) — the same appendix
+Fiskal 2021** edition (`raw/2021/st_kewangan.pdf`, the 20-page statistical-tables appendix —
+not the narrative report; first transcribed from a user-uploaded copy of the same appendix) — the same appendix
 format that carries MOF's finer OPEX/DEVEX breakdowns than anything else in this
 warehouse:
 
@@ -114,18 +114,22 @@ bound is written on every check.
   negatives: a share of spending cannot be negative and the total prints "(100.0)".
 - **Unlabelled growth-rate rows** (2019, Jadual 3.3, under *Ekonomi*) are skipped: a share
   never appears without its amount.
-- **Dashes.** In 3.1–3.3 a dash is a printed nil and is stored as 0.0 (repo convention); in
-  Jadual 1.1 a dash in a budget-year financing row means *not printed* and stays empty, as
-  the verified 2021 folder does.
-- **Printed page numbers** are not in the text layer of the 2019, 2020 and 2022 appendices
-  (no footer number / garbled footer font). `printed_page` is left empty there with a note;
-  `pdf_page` is always exact.
+- **Dashes in 3.1–3.3** are printed nils, stored as 0.0 (repo convention).
+- **Printed page numbers** sit before or after the running title in the footer; in the
+  2022/2023 appendices the title is in a font with no usable text layer but the number is
+  plain digits. Only the 2019 appendix prints none in its text layer (confirmed on a
+  render): `printed_page` is empty there with a note; `pdf_page` is always exact.
+- **Table numbers are read from the page**: the 2023 edition numbers its federal-finance
+  table **5.1** and its breakdowns **7.1–7.3**.
+- **Dashes in Jadual 1.1** are printed nils (0.0) — e.g. the COVID-19 fund in years it spent
+  nothing — except in the budget-year financing rows, where a dash means *not printed*.
 
 ### What the source itself gets wrong — kept as printed
 
 - **FY2022 domestic debt service, 2024 and 2025 editions:** 40,533 + external 716 = 41,249
-  under a printed total of 41,269. Confirmed on a 150-dpi page render; the 2026 edition
-  restates it to 40,553, which foots. In `data/_source_anomalies.csv`.
+  under a printed total of 41,269. Confirmed on a 150-dpi page render. 40,553 is the
+  intended figure: the 2023 edition printed it, the row's own 13.9% share fits it (40,533
+  would round to 13.8%), and the 2026 edition restates to it. In `data/_source_anomalies.csv`.
 - **2019 edition, FY2018 financing:** net domestic borrowing is footnoted *"tidak termasuk
   terbitan bersih bil Perbendaharaan sebanyak RM2 bilion"*, so the financing sources fall
   short of the deficit by exactly RM2,000 juta. `FOOTNOTED`, not an error.
@@ -137,8 +141,11 @@ Most actual years are printed by three editions. 30 of 588 line-years differ
 above, and reclassifications that net to zero — notably the **2024 edition moving about
 RM1.1–1.2 bil a year of FY2020–21 operating expenditure from general administration to
 housing**. Two labels change: **"Pertanian dan pembangunan luar bandar"** (2019–2021) becomes
-**"Pertanian"** (2022 onward) — kept as separate lines, never spliced — and **"Pelajaran dan
-latihan"** (2025–2026) is a synonym of "Pendidikan dan latihan" (same English label).
+**"Pertanian"** (2022 onward) — a rename, not a redefinition: FY2018–19 print identically
+under both labels in three editions. The edition folders keep a separate code per printed
+label (`economic_agri_rural`, `economic_agriculture`); the curated layer conforms them.
+**"Pelajaran dan latihan"** (2025–2026) is a synonym of "Pendidikan dan latihan" (same
+English label, same code).
 
 Which edition the curated layer takes for each year is decided in one place:
 `curated/pipeline/mof_editions.py` (each year from its own edition; see `curated/README.md`).

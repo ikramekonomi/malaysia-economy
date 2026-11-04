@@ -28,7 +28,7 @@ fact_opex_by_component,debt_service = sum(sub-items),2021,38069.0,38069.0,0.0,1.
 fact_opex_by_component,grants_state_govts = sum(sub-items),2021,7547.0,7547.0,0.0,1.5,PASS,
 fact_opex_by_component,total = Jadual 1.1 operating_expenditure,2021,231516.0,231516.0,0.0,1.0,PASS,
 fact_opex_by_component,sum(level-1 lines) = total,2022,292693.0,292693.0,0.0,5.5,PASS,
-fact_opex_by_component,debt_service = sum(sub-items),2022,41269.0,41249.0,-20.0,1.5,SOURCE_ANOMALY,"both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 = 41,249 under a printed total of 41,269; the 2026 edition restates domestic to 40,553, which foots"
+fact_opex_by_component,debt_service = sum(sub-items),2022,41269.0,41249.0,-20.0,1.5,SOURCE_ANOMALY,"both the 2024 and 2025 editions print domestic debt service 40,533 + external 716 = 41,249 under a printed total of 41,269. 40,553 is the intended figure: the 2023 edition printed it, the row's own 13.9% share fits it (40,533 would be 13.8%), and the 2026 edition restates to it"
 fact_opex_by_component,grants_state_govts = sum(sub-items),2022,8122.0,8122.0,0.0,1.5,PASS,
 fact_opex_by_component,total = Jadual 1.1 operating_expenditure,2022,292693.0,292693.0,0.0,1.0,PASS,
 fact_opex_by_component,sum(level-1 lines) = total,2023,311267.0,311267.0,0.0,5.5,PASS,
