@@ -27,14 +27,14 @@ tools. The public site (`site/`) is one application on top of it.
 | **audit-negara** | Auditor-General's reports: findings, agency certifications, e-SelfAudit, the AG's fiscal tables | LKAN 2015–2026 (402-volume manifest) | 3,285 | 160 |
 | **states** | All 13 states' audited financial statements, plus a conformed national panel | FY2014–2024 | 50,053 | 10,224 |
 | **bnm** | Monthly Highlights & Statistics (fiscal, debt, monetary, banking, external) | 1996–2026 | 8,106 | 279 |
-| **dosm** | 112 datasets: national accounts, population by state and district, HIES, LFS, CPI, trade, GFS. **Refreshed daily** | 1947–2026 | 957,708 | 1,473 |
+| **dosm** | 121 datasets (DOSM and data.gov.my): national accounts, population by state and district, HIES, LFS, CPI, trade, GFS; hospital beds, health staff, schools, teachers, deaths, life expectancy, water, crime. **Refreshed daily** | 1947–2026 | 957,708 | 1,473 |
 
 **Totals:** about 1.19 million source rows and 32,609 validation checks. **49 catalogued source
 anomalies:** places where a publisher's own figures do not add up, kept exactly as printed with
 proof.
 
 **What we hold and what we still need** is one checklist,
-[`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 104 series, 20 held. Each has
+[`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 107 series, 25 held. Each has
 its route, licence and priority. The plan, theme by theme, is [`docs/SOURCES.md`](docs/SOURCES.md).
 
 ### Nine themes

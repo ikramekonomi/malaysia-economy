@@ -44,6 +44,10 @@ FIELDS = ["series_id", "edition", "file_name", "source_url", "sha256", "size_byt
 
 # DOSM dataset id -> registry series (first matching prefix wins)
 DOSM_SERIES = [
+    ("hospital_beds", "health_facts"), ("healthcare_staff", "health_facts"), ("schools_district", "education_stats"),
+    ("enrolment_school_district", "education_stats"), ("teachers_district", "education_stats"),
+    ("death_state", "vital_statistics"), ("deaths_state", "vital_statistics"), ("life_expectancy_state", "vital_statistics"),
+    ("water_access", "water_access"), ("crime_district", "crime_stats"),
     ("hh_access_amenities", "amenities_access"), ("hh_profile", "dosm_population"),
     ("population_malaysia", "dosm_population"), ("population_state", "population_subnational"),
     ("population_district", "population_subnational"), ("hh_", "hies"), ("hies_", "hies"),

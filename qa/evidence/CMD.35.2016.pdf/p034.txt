@@ -1,0 +1,59 @@
+# CMD.35.2016.pdf  sha256 693e72f504595113d9e7a98edab47386e06909fc7ec13bcf4c34d2910f623510  pdf_page 34 of 120  (pdftotext -layout)
+
+        Pembayaran di bawah AP 58(a) bagi tahun 2015 berbanding 2014 adalah seperti di
+        Jadual 4.18.
+
+                                                Jadual 4.18
+                        Pembayaran Di Bawah AP 58(a) Tahun 2015 Berbanding 2014
+                                                            2014      2015         Perubahan
+      Bil.            Pusat Tanggungjawab (PTJ)
+                                                          (RM Juta) (RM Juta) (RM Juta)    (%)
+        1    Jabatan Kerja Raya – Ibu Pejabat                 0.13      1.82       1.69 1,300.0
+        2    Jabatan Agama – Ibu Pejabat                      0.69      1.21       0.52      75.4
+        3    Dewan Undangan Negeri Johor                      0.41      0.70       0.29      70.7
+        4    Pejabat Kebun Bunga Kerajaan                     0.08      0.22       0.14    175.0
+        5    Pejabat Tanah Dan Galian Johor                   0.31      0.44       0.13      41.9
+        6    Jabatan Perancang Bandar Dan Desa                0.02      0.14       0.12    600.0
+        7    Jabatan Pengairan Dan Saliran – Ibu Pejabat      0.07      0.16       0.09    128.6
+        8    Pejabat Menteri Besar                            0.07      0.13       0.06      85.7
+        9    Jabatan Hutan Mersing                            0.04      0.09       0.05    125.0
+       10    Pejabat Agama Daerah Batu Pahat                 0.002      0.05       0.05 2,500.0
+       11    Lain-lain PTJ (105 PTJ)                         20.92     17.32      -3.60     -17.2
+                             Jumlah                           22.74    22.28      -0.46       2.0
+     Sumber: Laporan SPEKs
+
+
+        4.4.5.2.     Walaupun perbelanjaan di bawah AP58(a) menurun tetapi kelewatan
+        mengemukakan tuntutan dan pengendalian majlis/program rasmi yang tiada dalam
+        perancangan tetapi perlu dilaksanakan pada akhir tahun serta memerlukan kelulusan
+        Pegawai Kewangan Negeri menyumbang kepada perbelanjaan ini.
+
+     4.5.    AKAUN PINJAMAN DISATUKAN
+
+     4.5.1. Akaun Pinjaman Disatukan ditubuhkan mengikut kehendak Seksyen 7(b), Akta
+     Tatacara Kewangan 1957. Akaun ini digunakan untuk mengakaunkan semua pinjaman yang
+     diterima daripada Kerajaan Persekutuan dan pindahan penerimaan pinjaman ke Akaun
+     Kumpulan Wang Pembangunan atau Kumpulan Wang Lain yang berkaitan. Pada akhir tahun
+     2015, Akaun Pinjaman Disatukan berbaki sifar berbanding RM10.18 juta pada akhir tahun
+     2014 seperti di Jadual 4.19. Baki Akaun Pinjaman Disatukan menjadi kosong sebagaimana
+     kehendak Piawaian Perakaunan Kerajaan 5 (PPK 5) iaitu pinjaman yang diambil untuk
+     tujuan pembangunan dan perumahan yang telah dikreditkan ke Akaun Pinjaman Disatukan
+     perlu dipindahkan ke Akaun Kumpulan Wang Pembangunan atau Kumpulan Wang lain yang
+     berkaitan.
+
+                                            Jadual 4.19
+                   Kedudukan Akaun Pinjaman Disatukan Tahun 2015 Berbanding 2014
+                                            2014        2015       Perubahan
+                           Butiran
+                                          (RM Juta) (RM Juta) (RM Juta)     (%)
+                   Baki Pada 1 Januari       48.16       10.18    -37.98   -78.9
+                   Terimaan                  64.00        0.00    -64.00  -100.0
+                   Bayaran/Pindahan         101.98       10.18     -91.8  -90.00
+                    Baki Pada 31 Disember         10.18       0.00    -10.18    -100.0
+                   Sumber: Penyata Kewangan Kerajaan Negeri
+
+
+
+
+18
+

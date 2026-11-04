@@ -1,0 +1,59 @@
+# CMD.38.2018.pdf  sha256 7e954ba960b02fae5fee2f10b3f1943c8c5244f988c9551a01daf548906165b6  pdf_page 50 of 123  (pdftotext -layout)
+
+             oleh Tenaga Nasional Berhad sejumlah RM6.09 juta bagi pengambilan tanah di
+             bawah Seksyen(1)(b) Akta Pengambilan Tanah 1990.
+
+         c. Selain itu, wujud perbezaan baki penyata/akaun deposit antara empat (4)
+             Jabatan/PTJ berjumlah RM104.95 juta dengan Penyata Lengkap Akaun Amanah
+             (L402) di Pejabat Kewangan dan Perbendaharaan Negeri yang berjumlah
+             RM104.90 juta. Perbezaan baki tersebut adalah berjumlah RM43,328 seperti
+             Jadual 4.30.
+
+                                    JADUAL 4.30
+          PERBEZAAN BAKI DEPOSIT DI JABATAN/PTJ DENGAN PENYATA LENGKAP
+       AKAUN AMANAH DI PEJABAT KEWANGAN DAN PERBENDAHARAAN NEGERI (L402)
+                                                                       BAKI DEPOSIT
+                                                                        DI PEJABAT
+                                                    BAKI DI PTJ
+                                                                     KEWANGAN DAN
+                                        KOD         TAHUN 2017                          PERBEZAAN
+  BIL.             PERIHAL                                          PERBENDAHARAAN
+                                        PTJ       (DEBIT)/KREDIT                         (RM Juta)
+                                                                    NEGERI TAHUN 2017
+                                                     (RM Juta)
+                                                                      (DEBIT)/KREDIT
+                                                                         (RM Juta)
+  KOD DEPOSIT 79552 - DEPOSIT TANAH
+          Pejabat Daerah dan Tanah
+   1.                                 14142000           18.89              18.22            0.67
+          Kuantan
+          Pejabat Daerah dan Tanah
+   2.                                 18182000             3.56              3.55            0.01
+          Temerloh
+          Pejabat Daerah dan Tanah
+   3.                                 19192000             1.04              1.03            0.01
+          Rompin
+  KOD DEPOSIT 79563 - AKAUN DEPOSIT ROYALTI KAYU KAYAN
+   1.     Jabatan Perhutanan Negeri   07142000           81.46              82.10           (0.64)
+                       JUMLAH                           104.95             104.90            0.05
+Sumber: Pelbagai Jabatan/PTJ, Pejabat Kewangan dan Perbendaharaan Negeri
+
+
+
+4.7.     PENYATA PRESTASI KEWANGAN
+
+   4.7.1. Pada tahun 2017, sumber dana Kerajaan Negeri berjumlah RM535.79 juta
+   terdiri daripada hasil cukai, hasil bukan cukai dan terimaan bukan hasil. Penggunaan
+   dana adalah bagi membiayai perbelanjaan mengurus, perbelanjaan pembangunan dan
+   perbelanjaan bekalan air berjumlah RM768.20 juta. Pada tahun 2017, Kerajaan Negeri
+   mengalami kurangan dana berjumlah RM232.41 juta berbanding RM195.81 juta pada
+   tahun 2016. Selain itu, Pinjaman Dalam Negeri, Pelbagai Terimaan serta Perubahan
+   Tunai, Pelaburan dan Amanah juga merupakan sumber kewangan yang digunakan oleh
+   Kerajaan Negeri bagi menampung jumlah perbelanjaan jika berlaku kurangan dana.
+   Butiran Penyata Prestasi Kewangan adalah seperti Jadual 4.31.
+
+
+
+
+LKAN PENYATA KEWANGAN NEGERI PAHANG 2017 | 32
+

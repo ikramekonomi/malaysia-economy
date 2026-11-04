@@ -68,6 +68,7 @@ SUITE = [
     "sources/states/pipeline/validate_states.py",
     "sources/dosm/pipeline/series_breaks.py",
     "sources/dosm/pipeline/verify_population.py",
+    "sources/dosm/pipeline/verify_services.py",
     "sources/dosm/pipeline/crosscheck_state_finance.py",
     "sources/bnm/pipeline/validate_bnm.py",
     "curated/pipeline/build_ministry_fiscal.py",

@@ -683,6 +683,39 @@ def state_section_end(pages: list[str], first_table_page: int) -> int:
 
 KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     dict(
+        state="Pahang",
+        source_file="", pdf_page="", printed_page="", jadual="4.31",
+        match=dict(target="none", checks=("N2_identity_expenditure",)),
+        affected_rows="0 rows carry a wrong figure; 1 printed line per year is MISSING (water-supply spending)",
+        defect="Pahang's Penyata Prestasi Kewangan prints THREE spending lines: Perbelanjaan Mengurus, "
+               "Perbelanjaan Pembangunan and Perbelanjaan Bekalan Air. The water-supply line is not extracted, "
+               "so opex + devex falls short of the printed JUMLAH PERBELANJAAN by exactly that line.",
+        diagnosis="Page-proved 2026-11-04 from the archived volumes (qa/evidence/): FY2016 CMD.37.2017.pdf p51 "
+                  "(J4.31): 629.27 + 91.66 + 89.95 = 810.88; FY2017 CMD.38.2018.pdf p51: 613.91 + 98.63 + 55.66 "
+                  "= 768.20; FY2021 CMD.46.2022.pdf p32: the text states the total covers mengurus, pembangunan "
+                  "and bekalan air (RM931.11 juta). FY2022 (CMD.43.2023.pdf) awaits its archived copy.",
+        why_unfixed="Needs a conformed code for state water-supply spending (e.g. expenditure_water_supply) "
+                    "emitted by the extractor and added to the N2 identity; re-extraction runs where the PDFs "
+                    "are (the L0 archive), not in this container.",
+        impact_on_data="No figure is wrong. expenditure_total (as printed) is correct and is what "
+                       "core/gap_need_vs_money uses; do not derive Pahang's total as opex + devex.",
+    ),
+    dict(
+        state="Johor",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_cra_closing",), fiscal_year=("2018", "2019")),
+        affected_rows="0 rows carry a wrong figure; 1 printed line per year is MISSING (prior-year adjustment)",
+        defect="Johor's Akaun Hasil Disatukan prints a `(-) Pelarasan Tahun Sebelum` line between the opening "
+               "balance and the surplus. It is not extracted, so opening + surplus misses the closing balance by "
+               "exactly that adjustment.",
+        diagnosis="Page-proved 2026-11-04: FY2018 CMD.30.2019.pdf p33: 1,122.84 - 1.65 + 5.25 = 1,126.44; "
+                  "FY2019 CMD.39.2021.pdf p35 (2018 column restated): 1,126.44 - 1.09 = 1,125.35 before the "
+                  "surplus.",
+        why_unfixed="Needs the adjustment emitted under a conformed code (cra_prior_year_adjustment) and the V1 "
+                    "identity extended to opening - adjustment + surplus = closing; re-extraction pending.",
+        impact_on_data="No figure is wrong; the opening and closing balances are as printed.",
+    ),
+    dict(
         state="Sarawak",
         source_file="CMD.49.2021.pdf", pdf_page="", printed_page="",
         jadual="8",

@@ -1,0 +1,69 @@
+# CMD.61.2015.pdf  sha256 d9b731df642ad25f10740a4a2604ce86316ceb6239fb8eba93e386ed71884601  pdf_page 38 of 160  (pdftotext -layout)
+
+                                                  Jadual 4.18
+                              Bayaran Di Bawah AP 58(a) Tahun 2014 Berbanding 2013
+                                                          2013                         2014
+                                              Bil.                           Bil.                          Perubahan
+      Bil.               Jabatan                             Jumlah                        Jumlah
+                                            Baucar                         Baucar
+                                            Bayaran              (RM)      Bayaran            (RM)       (RM)          (%)
+       1   Menteri Besar Dan                      18              73,420          25           178,675    105,255      143.4
+           Setiausaha Kerajaan
+           Negeri
+       2   Jabatan Agama Islam                       16           90,403         80           143,160      52,757       58.4
+       3   Jabatan Kerja Raya                        25           24,947          8            44,343      19,396       77.8
+       4   Jabatan Perkhidmatan                       0                0          2            18,346      18,346      100.0
+           Veterinar
+       5   Pejabat Daerah Dan                        5             3,305          6            13,735      10,430      315.6
+           Tanah Gombak
+       6   Jabatan Pengairan Dan                     0                0           5             5,820       5,820      100.0
+           Saliran
+       7   Pejabat Daerah Dan                        11           18,465         28            24,036       5,571       30.2
+           Tanah Klang
+       8   Pejabat Mufti                             0                0          14             5,067       5,067      100.0
+       9   Pejabat Daerah Dan                        0                0           1             4,953       4,953      100.0
+           Tanah Sepang
+       10 Mahkamah Tinggi Syariah                    0                0          13             2,923       2,923      100.0
+       11 Jabatan Perancangan                        0                0           3             2,718       2,718      100.0
+           Bandar Dan Desa
+       12 Jabatan Perhutanan                          0                0          1               150         150      100.0
+       13 Pejabat Daerah Dan                         78          141,678         43            26,864    -114,814      -81.0
+           Tanah Petaling
+       14 Perbendaharaan Negeri                       9          184,816          8            15,637    -169,179       -91.5
+       15 Lain-lain Jabatan                          54           96,468         57            27,507     -68,961       -71.5
+           (8 Jabatan)
+                  Jumlah                           216           633,502        294           513,934    -119,568       -18.9
+     Sumber: Baucar Bayaran AP 58(a)
+
+                                                     Jadual 4.19
+                                           Tujuan Bayaran Di Bawah AP 58(a)
+             Bil.                Jabatan                                               Tujuan Bayaran
+              1     Menteri Besar Dan Setiausaha             Bayaran bil utiliti, perubatan dan tuntutan pegawai, insentif
+                    Kerajaan Negeri                          khas, penyelenggaraan serta elaun latihan praktikal.
+              2     Jabatan Agama Islam                      Bayaran kontrak pembersihan, keselamatan dan sewaan
+                                                             mesin fotostat, elaun guru Kelas Asas Fardu Ain, bil
+                                                             perubatan dan telefon pegawai, tuntutan pembelian telefon
+                                                             bimbit serta yuran Audit dan yuran tahunan Pensijilan Semula
+                                                             International Standards Organization Tahun 2013.
+              3     Jabatan Kerja Raya                       Bayaran bil, elaun latihan praktikal serta perubatan dan inden
+                                                             kerja.
+              4     Jabatan Perkhidmatan Veterinar           Bayaran caruman Pertubuhan Keselamatan Sosial dan
+                                                             kemudahan perubatan.
+              5     Pejabat Daerah Dan Tanah Gombak          Bayaran bil utiliti, perubatan, pengiklanan Warta Kerajaan dan
+                                                             minyak petrol.
+           Sumber: Baucar Bayaran AP 58(a)
+
+
+           Pada pendapat Audit, sebahagian besar daripada bayaran di bawah AP 58(a) seperti
+           tuntutan pembekal dan pegawai serta bil utiliti sepatutnya boleh dibayar dalam
+           tahun kewangan atau selewat-lewatnya dalam tempoh Akaun Kena Bayar sekiranya
+           Jabatan mengambil langkah proaktif untuk memastikan bil tersebut diterima
+           sebelum tarikh penutupan akaun. Bayaran di bawah AP 58(a) boleh menjejaskan
+           peruntukan tahun semasa kerana peruntukan tersebut perlu digunakan untuk
+           membayar bil yang sepatutnya dibayar pada tahun sebelumnya.
+
+
+
+
+20
+

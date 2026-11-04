@@ -129,7 +129,9 @@ class Warehouse:
                "citation": {"edition_id": r["edition_id"], "vintage": r["vintage"], "file_sha256": r["file_id"],
                             "pdf_page": r["pdf_page"] or None, "printed_page": r["printed_page"] or None,
                             "table": r["table_ref"], "l1_row": r["l1_ref"]},
-               "caveats": [{"id": c, "text": self.caveats[c]["text_en"]} for c in cv],
+               "caveats": [{"id": c, "text": self.caveats[c]["text_en"]} for c in cv]
+               + ([{"id": "COVERAGE", "text": self.all_ind[r["indicator_code"]]["coverage_note"]}]
+                  if self.all_ind[r["indicator_code"]].get("coverage_note") else []),
                "release_id": self.release_id}
         if "CV6" in cv:
             out["under_check"] = self.flags[(r["geo_code"], r["period_code"])]

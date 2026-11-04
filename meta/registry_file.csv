@@ -47,6 +47,7 @@ bnm_msb,2026-08-01 05:06:27,msb_1_25.csv,,b496008739cdb9f9a858c92abb14f161068516
 cpi,2018,mcoicop.csv,,b917d0e3446628251e465e55989e5631011d1e422f0483bd8e82f93e3214ebb4,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 cpi,2026-09,cpi_headline.csv,,37c54ca1499e32a94f8253ac9b3d33893f9ada06f49266e1fcd6e8cad692705c,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 cpi,2026-09,cpi_state.csv,,fd15b662b1a4a60cf034b2a7eeb8954a5d08de28441e61a5f897d876bbdb98ea,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+crime_stats,2023-12-31 23:59,crime_district.csv,,800d488b426cd02f068179c626f7b4d2c5ba024f5b4b838fb0986fb7001c31be,,,,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2022,state_finance_expenditure.csv,,d47f672ebb5dd0dc556554e2a94d1ed37656811b41ab1539c9f2bec7f8430b3f,,,2026-07-31,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2022,state_finance_revenue.csv,,5d573ca68f5f6a9de48bf8f94280049399d29a0a60cbbe52cde10c2d39125e4c,,,2026-07-31,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2024-01,lookup_federal_finance.csv,,de5fd5dad592856f7ff2048e4caa19fc414b8d674b516a5e4578c05f4cdbba41,,,2026-07-31,sources/dosm/data/_vintage_log.csv
@@ -61,6 +62,11 @@ dosm_gfs,2026-Q2,federal_finance_qtr_revenue.csv,,03684a1bfb8c27dd2026d1c2a9a72e
 dosm_population,2024,hh_lq.csv,,82cf729e0b5a0d9ff7fe25a6d05089cd5686cc01942d352262a15e89039496ae,,,,sources/dosm/data/_vintage_log.csv
 dosm_population,2024,hh_profile_state.csv,,4a37c2a6dca404a1307727d434300af0838a9b62cb9e69d1b1c5bb1716649017,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 dosm_population,2026,population_malaysia.csv,,ed287ef3277e96e74d27fd65f2dc4ab88b37817780e265e11b0d478e6bc9fe04,,,,sources/dosm/data/_vintage_log.csv
+education_stats,2025,enrolment_school_district.csv,,341380e1f77d6da81a47638c09bf3414905958b91faacc7f2de03050bc9e72c6,,,,sources/dosm/data/_vintage_log.csv
+education_stats,2025,schools_district.csv,,22a8ac4b1fa4d5c52bb864f0228bd93aa37577640d7ebad32970b0f6131d7069,,,,sources/dosm/data/_vintage_log.csv
+education_stats,2025,teachers_district.csv,,0608c35c0e89fff4bc651647bd653ec5321eb8d3a1378cead0f320ff270948fc,,,,sources/dosm/data/_vintage_log.csv
+health_facts,2022-12-31 23:59,healthcare_staff.csv,,ea6194eee627c6d41819e4bc1a8153632e541c6360ce811e045b3cf02dd02d4f,,,,sources/dosm/data/_vintage_log.csv
+health_facts,2024,hospital_beds.csv,,97cb4cd999b525728c134324732cfc39bfd401b13fa991cde8b6b57d3b784862,,,,sources/dosm/data/_vintage_log.csv
 hies,2024,hh_expenditure_dun.csv,,f837723dd27fa417ee1db5e4e734ac65314abf3db5b6d0b44654ac3ed29fee85,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hh_expenditure_parlimen.csv,,80955a5fd15058c44b5d2f5406bffd1b3a462d8e4a6821d6be739da3d43b867d,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hh_income.csv,,f60105e01491b2a01feb7494c0fda3f1feccc0d12180ae56e85dd0eb0716f4d3,,,2026-08-03,sources/dosm/data/_vintage_log.csv
@@ -740,3 +746,6 @@ tinjauan_fiskal,2026,st_kewangan.pdf,https://belanjawan.mof.gov.my/pdf/belanjawa
 tinjauan_fiskal,2026,tinjauan_fiskal_2026.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2026/hasil/tinjauan_fiskal_2026.pdf,cfaede046d4a038fb731d44dcfa3dc99db86555bc129a4e8515461a576bdae65,14832208,270,2026-11-04,sources/mof-fiscal-outlook/data/_editions_manifest.csv
 tinjauan_fiskal,2027,st_kewangan.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2027/hasil/st_kewangan.pdf,2903ab4d1cfcab43a57b84bbabd43c667363c81594918726a7fd6d47f67640ca,498067,19,2026-11-04,sources/mof-fiscal-outlook/data/_editions_manifest.csv
 tinjauan_fiskal,2027,tinjauan_fiskal_2027.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2027/hasil/tinjauan_fiskal_2027.pdf,dbcae5db1063fbe6d0861b2aa560059c23380ed76ec491840eaf57bb74e3ca99,9600887,273,2026-11-04,sources/mof-fiscal-outlook/data/_editions_manifest.csv
+vital_statistics,2025,death_state.csv,,4e20a085db4a8cb1f5e7eb128c7e6425fb7b4c0760b315ebdc51d26a5b1a99a5,,,,sources/dosm/data/_vintage_log.csv
+vital_statistics,2026,life_expectancy_state.csv,,e93fa45eb5371d56c0745cc1a8d7703e09728b2771bb1cabbbb7ef24bb239b15,,,,sources/dosm/data/_vintage_log.csv
+water_access,2025,water_access.csv,,e1c7dac45576e6361173d4c42ba0e0b23884254138b0bbaf249d844d9fb16eaf,,,,sources/dosm/data/_vintage_log.csv
