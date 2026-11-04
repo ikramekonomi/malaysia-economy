@@ -64,6 +64,7 @@ class Tools:
         return {"held": True, "indicators": [h[1] for h in hits[:8]], "release_id": self.w.release_id}
 
     def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None):
+        start, end = (None if start is None else str(start)), (None if end is None else str(end))
         if indicator not in self.w.ind:
             return self._not_held(indicator)
         if geo not in self.w.geo:
@@ -78,6 +79,7 @@ class Tools:
                 "rows": [self.w.cite(r) for r in rs], "release_id": self.w.release_id}
 
     def compare_geos(self, indicator, period, geo_level="state", breakdown="_total"):
+        period = str(period)
         if indicator not in self.w.ind:
             return self._not_held(indicator)
         rs = [r for r in self.w.obs if r["indicator_code"] == indicator and r["period_code"] == period
@@ -90,6 +92,11 @@ class Tools:
                     "answer": "small-area survey estimates without published sampling error are not compared or "
                               "ranked (decision D10); use get_series for one area", "release_id": self.w.release_id}
         unit = self.w.ind[indicator]["unit"]
+        if unit == "index":
+            return {"held": True, "refused_ranking": True,
+                    "answer": f"{indicator} is an index of change within each place over time; its level does not "
+                              "compare places (caveat CV8). Compare each place's growth over the same period instead, "
+                              "through derive('growth').", "release_id": self.w.release_id}
         rs.sort(key=lambda r: (Decimal(r["value"]), r["geo_code"]))
         has_ci = all(r["ci_low"] and r["ci_high"] for r in rs)
         bands, band = [], 0
@@ -165,9 +172,20 @@ class Tools:
         if name != "gap_need_vs_money":
             return {"held": False, "answer": f"view {name} is not built yet (Phase 1 builds gap_need_vs_money)",
                     "release_id": self.w.release_id}
+        year = None if year is None else str(year)
+        if geo and geo not in self.w.geo:
+            names = {g["name_bm"].lower(): c for c, g in self.w.geo.items() if g["geo_level"] == "state"}
+            hint = names.get(str(geo).lower())
+            return {"held": False, "answer": f"unknown place code {geo}" + (f"; did you mean {hint}?" if hint else
+                                                                            "; use an ISO 3166-2:MY code, e.g. MY-01"),
+                    "release_id": self.w.release_id}
         path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "core", "gap_need_vs_money.csv")
         with open(path, newline="") as f:
             rs = [r for r in csv.DictReader(f) if (not geo or r["geo_code"] == geo) and (not year or r["year"] == year)]
+        if not rs:
+            return {"held": False, "answer": f"no row for {geo or 'any place'} in {year or 'any year'}; the view covers "
+                                             "the HIES years 2014, 2016, 2019, 2022 and 2024",
+                    "release_id": self.w.release_id}
         for r in rs:
             r["caveats"] = [{"id": c, "text": self.w.caveats[c]["text_en"]} for c in r["caveats"].split(";") if c]
         return {"held": True, "view": name, "rows": rs,

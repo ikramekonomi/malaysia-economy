@@ -192,6 +192,40 @@ q("2", "Does an unemployment comparison declare its banding rule?", "compare_geo
 q("1", "Which indicator measures poverty?", "find_indicator", {"text": "absolute poverty"}, "first_indicator",
   "poverty.absolute.rate")
 
+# I. regressions from the independent verifier pass (2026-11-04)
+with open(STATES, newline="") as fh:
+    ns = next(Decimal(r["amount_rm"]) for r in csv.DictReader(fh) if r["state"] == "Negeri Sembilan"
+              and r["fiscal_year"] == "2020" and r["line_code"] == "surplus_deficit" and r["measure"] == "actual")
+q("5", "What was Negeri Sembilan's 2020 surplus or deficit (sign as printed)?", "get_series",
+  series("state_gov.surplus_deficit", "MY-05", "2020"), "value", s(ns))
+q("1", "Growth in Johor's median income, with the years given the wrong way round?", "derive_chain",
+  {"operation": "growth", "a": series("hh_income.gross.median", "MY-01", "2014"),
+   "b": series("hh_income.gross.median", "MY-01", "2022")}, "refused", "earlier period", kind="trap_incomparable")
+q("1", "Growth of Sabah's poverty rate from 2016 to 2022?", "derive_chain",
+  {"operation": "growth", "a": series("poverty.absolute.rate", "MY-12", "2022"),
+   "b": series("poverty.absolute.rate", "MY-12", "2016")}, "refused", "series break", kind="trap_incomparable")
+q("1", "Growth of Sabah's population from 2019 to 2022?", "derive_chain",
+  {"operation": "growth", "a": series("pop.total", "MY-12", "2022"), "b": series("pop.total", "MY-12", "2019")},
+  "refused", "series break", kind="trap_incomparable")
+q("2", "Change in Selangor's unemployment rate from 2024 to 2025 as growth?", "derive_chain",
+  {"operation": "growth", "a": series("lfs.unemployment_rate", "MY-10", "2025"),
+   "b": series("lfs.unemployment_rate", "MY-10", "2024")}, "refused", "series break", kind="trap_incomparable")
+q("1", "Ratio of Sabah's poverty rate to its unemployment rate?", "derive_chain",
+  {"operation": "ratio", "a": series("poverty.absolute.rate", "MY-12", "2022"),
+   "b": series("lfs.unemployment_rate", "MY-12", "2022")}, "refused", "different universes", kind="trap_incomparable")
+q("1", "Growth of Johor's poverty rate from 2014 to 2016 (from a zero base)?", "derive_chain",
+  {"operation": "growth", "a": series("poverty.absolute.rate", "MY-01", "2016"),
+   "b": series("poverty.absolute.rate", "MY-01", "2014")}, "refused", "zero base", kind="trap_incomparable")
+q("3", "Which state has the highest CPI?", "compare_geos", {"indicator": "cpi.index", "period": "2026-09"},
+  "not_ranked", kind="trap_incomparable")
+q("1", "Johor's poverty rate in 2022, asked with a number for the year?", "get_series",
+  {"indicator": "poverty.absolute.rate", "geo": "MY-01", "start": 2022, "end": 2022}, "value",
+  s(l1("hh_poverty_state", "Johor", "2022", "poverty_absolute")))
+q("5", "The need-vs-money row for 'Johor' (a name, not a code)?", "get_gap_view",
+  {"name": "gap_need_vs_money", "geo": "Johor", "year": "2022"}, "not_held", kind="trap_missing")
+q("5", "Is the federal total in the view cited?", "get_gap_view",
+  {"name": "gap_need_vs_money", "geo": "MY-10", "year": "2022"}, "field_nonempty:federal_source_obs_ids")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

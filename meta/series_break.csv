@@ -1,0 +1,8 @@
+indicator_prefix,first_period_new_basis,what_changed,evidence
+poverty.absolute.rate,2019,Poverty line income redefined with the 2019 HIES; earlier and later rates are not one series and must not be differenced,"sources/dosm/data/_series_breaks_dosm.csv (hies_poverty, 2019)"
+poverty.hardcore.rate,2019,Food poverty line redefined with the 2019 HIES,"sources/dosm/data/_series_breaks_dosm.csv (hies_poverty, 2019)"
+lfs.,2025,LFS benchmarked to the 2020 Census from 2025 (2010 Census before); DOSM states a trend break follows,"sources/dosm/data/_series_breaks_dosm.csv (lfs, 2025)"
+pop.total,2020,"Population estimates rebased on the 2020 Census from 2020; DOSM's state series does not revise earlier years (e.g. Sabah 3,904.4 thousand in 2019, 3,418.8 thousand in 2020)","computed from sources/dosm/data/population_state.csv, 2026-11-04"
+households.total,2020,Household estimates rebased on the 2020 Census,follows pop.total
+hh_income.,1989,From 1989 the statistics cover Malaysian citizens only,"sources/dosm/data/_series_breaks_dosm.csv (hies_income, 1989)"
+poverty.,1989,From 1989 the statistics cover Malaysian citizens only,"sources/dosm/data/_series_breaks_dosm.csv (hies_income, 1989)"

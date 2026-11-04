@@ -15,7 +15,10 @@ Method (declared before results were seen, 2026-11-04):
   are about that state.
 * Money, scope `federal`: federal spending placed in the state. Phase 1 can place only what states
   record receiving (non-revenue receipts), so federal_placed_share = sum of the 13 states' receipts /
-  federal total spending (PKKP audited: opex before transfers + gross devex). Below 60% the federal
+  federal total spending (PKKP audited: opex before transfers + gross devex + the COVID-19 Fund in
+  2020-2022; cited in federal_source_obs_ids).
+* Series breaks (meta/series_break.csv: poverty line 2019, population rebase 2020, LFS 2025) are
+  carried as caveat CV10; the view never compares years, and derive refuses growth across a break. Below 60% the federal
   column is NOT published for any state (DATA_MODEL §10 guard), and the row says why.
 * A state-year with an open FAIL on a headline identity (qa/known_fails.csv) is published with
   under_check = the check names, never silently.
@@ -37,23 +40,26 @@ NEED = {"poverty_absolute_rate": "poverty.absolute.rate", "income_median_rm": "h
 FIELDS = ["geo_code", "state", "year", "population"] + list(NEED) + [
     "state_gov_expenditure_rm", "state_gov_expenditure_basis", "state_gov_expenditure_per_capita_rm",
     "state_gov_receipts_rm", "state_gov_receipts_per_capita_rm", "state_gov_placed_share",
-    "federal_total_expenditure_rm", "federal_placed_share", "federal_publishable", "federal_note",
+    "federal_total_expenditure_rm", "federal_source_obs_ids", "federal_placed_share", "federal_publishable",
+    "federal_note",
     "under_check", "coverage_note", "verification_tier", "caveats", "source_obs_ids", "release_id"]
 
 
-def federal_totals():
+def federal_totals(w):
+    """year -> (total, [obs ids]): opex before transfers + gross devex + the COVID-19 Fund (2020-2022), PKKP audited."""
     out = {}
-    with open(os.path.join(REPO, "curated", "fact_fiscal_headline.csv"), newline="") as f:
-        for r in csv.DictReader(f):
-            if r["opex_net_rm"] and r["devex_gross_rm"]:
-                out[r["year"]] = (Decimal(r["opex_net_rm"]) + Decimal(r["devex_gross_rm"]),
-                                  f"{r['opex_source_file']} p{r['opex_pdf_page']} + devex gross ({r['devex_gross_basis']})")
+    for y in YEARS:
+        parts = [w.get(i, "MY", y, basis="audited") for i in
+                 ("federal_gov.expenditure.opex", "federal_gov.expenditure.devex", "federal_gov.expenditure.covid_fund")]
+        if parts[0] and parts[1]:
+            have = [p for p in parts if p]
+            out[y] = (sum(Decimal(p["value"]) for p in have), [p["obs_id"] for p in have])
     return out
 
 
 def main():
     w = Warehouse()
-    fed = federal_totals()
+    fed = federal_totals(w)
     states = sorted(c for c, g in w.geo.items() if g["geo_level"] == "state")
     out, checks = [], []
     receipts_sum = {y: Decimal(0) for y in YEARS}
@@ -65,7 +71,7 @@ def main():
                 receipts_sum[y] += Decimal(r["value"])
                 receipts_n[y] += 1
     for y in YEARS:
-        fed_total = fed.get(y, (None, None))[0]
+        fed_total, fed_ids = fed.get(y, (None, []))
         placed = (receipts_sum[y] / fed_total) if fed_total else None
         for g in states:
             row = {k: "" for k in FIELDS}
@@ -84,6 +90,9 @@ def main():
                     cv |= set(w.caveats_for(r))
                 else:
                     notes.append(f"{ind} not published for {y}")
+            for ind in list(NEED.values()) + ["pop.total"]:
+                if w.break_between(ind, y, YEARS[-1]) or w.break_between(ind, YEARS[0], y):
+                    cv.add("CV10")
             is_ft = g in ("MY-14", "MY-15", "MY-16")
             if is_ft:
                 notes.append("no state government (Federal Territory)")
@@ -101,7 +110,11 @@ def main():
                         row["state_gov_expenditure_basis"] = "derived: opex + devex (no printed total)"
                         ids += [op["obs_id"], dv["obs_id"]]
                     else:
-                        notes.append("state spending not extracted for this year")
+                        have = [n for n, x in (("opex before transfers", op), ("devex", dv)) if x]
+                        miss = [n for n, x in (("opex before transfers", op), ("devex", dv)) if not x]
+                        notes.append("state spending total not available: no printed total, and "
+                                     + " and ".join(miss) + " not extracted for this year"
+                                     + (f" ({', '.join(have)} held)" if have else ""))
                 rec = w.get("state_gov.revenue.nonrevenue_receipts", g, y, basis="audited")
                 if rec:
                     row["state_gov_receipts_rm"] = rec["value"]
@@ -122,6 +135,8 @@ def main():
                     row["under_check"] = ";".join(flag)
                     cv.add("CV6")
             row["federal_total_expenditure_rm"] = fmt(fed_total) if fed_total else ""
+            row["federal_source_obs_ids"] = ";".join(fed_ids)
+            cv.add("CV11")
             row["federal_placed_share"] = fmt(placed, 4) if placed is not None else ""
             ok = placed is not None and placed >= PLACED_MIN
             row["federal_publishable"] = "true" if ok else "false"

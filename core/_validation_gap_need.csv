@@ -2,7 +2,7 @@ check,scope,status,note
 G1 federal placed share,2014,INFO,1.06% (10 states' receipts / federal total); publishable: no
 G1 federal placed share,2016,INFO,1.27% (11 states' receipts / federal total); publishable: no
 G1 federal placed share,2019,INFO,1.48% (10 states' receipts / federal total); publishable: no
-G1 federal placed share,2022,INFO,0.99% (11 states' receipts / federal total); publishable: no
+G1 federal placed share,2022,INFO,0.91% (11 states' receipts / federal total); publishable: no
 G1 federal placed share,2024,INFO,0.29% (6 states' receipts / federal total); publishable: no
 G2 every state and territory present,all,PASS,"{'2014': 16, '2016': 16, '2019': 16, '2022': 16, '2024': 16}"
 G3 no federal value below the placed-share guard,all,PASS,0 rows

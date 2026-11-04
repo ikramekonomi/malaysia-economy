@@ -68,6 +68,9 @@ def run(t, q):
     if check.startswith("field_contains:"):
         f = check.split(":", 1)[1]
         return exp in str(first.get(f, "")), str(first.get(f, ""))[:100]
+    if check.startswith("field_nonempty:"):
+        f = check.split(":", 1)[1]
+        return bool(first.get(f)), str(first.get(f, ""))[:60]
     if check == "row_count":
         return str(len(res.get("rows", []))) == exp, str(len(res.get("rows", [])))
     bands = res.get("bands", [])

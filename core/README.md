@@ -7,7 +7,7 @@ hand (golden rule 1). CI rebuilds them on every PR and fails if the committed fi
 ```
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 59 questions against the agent tools
+python3 qa/run_eval.py                            # 70 questions against the agent tools
 ```
 
 ## What is in it
@@ -18,7 +18,7 @@ python3 qa/run_eval.py                            # 59 questions against the age
 | `dim_period.csv` | 258 | years, months |
 | `dim_indicator.csv` | 25 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity) |
 | `dim_breakdown.csv` | 16 | `_total`, `sex=…`, `coicop=…` |
-| `fact_observation.csv` | 62,015 | indicator × geo × period × breakdown × entity × basis × edition × vintage |
+| `fact_observation.csv` | 62,052 | indicator × geo × period × breakdown × entity × basis × edition × vintage |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -64,6 +64,25 @@ units or price bases, a median divided by population, growth across two places. 
 returns **bands**, not ranks (rule BAND1: a new band starts after a step of more than 1 percentage
 point, or 5% for other units; declared before results were seen), with the national value.
 
-`qa/eval_questions.csv` (59 questions, made by `qa/make_eval_questions.py` from L1 directly)
+`qa/eval_questions.csv` (70 questions, made by `qa/make_eval_questions.py` from L1 directly)
 includes traps: incomparable pairs, small-area rankings, missing documents, and document text that
 must come back marked as data. `qa/run_eval.py` runs them in CI.
+
+## Independent verification (2026-11-04)
+
+A blind verifier agent (no access to the pipeline code) re-derived all 720 numeric cells of
+`gap_need_vs_money.csv` from L1 and sampled `fact_observation.csv`: **0 mismatches in the view.**
+It found, and this commit fixed, each now pinned by an eval question:
+
+* one wrong sign: Negeri Sembilan's 2020 deficit came through as a surplus (the state panel's
+  `level_abs` convention). Surpluses now keep the printed sign, and check C8 tests every row's value
+  against its printed value × unit scale (62,052 rows);
+* `derive('growth')` accepted reversed periods, a zero base and spans across series breaks
+  (`meta/series_break.csv`: poverty line 2019, population rebase 2020, LFS 2025); `ratio` accepted two
+  different rates over different universes; `compare_geos` banded CPI index levels. All now refused;
+* the federal total in the view had no citation and left out the COVID-19 Fund (2020-2022); it is
+  now three cited observations (`federal_source_obs_ids`);
+* integer years, a state name instead of a code, and dict inputs crashed or returned silent empties.
+
+`file_id` on a state-accounts row is the sha256 of the **PDF volume** (the document the figure is
+printed in), not of the L1 CSV; the PDF is recoverable from the `l0-archive` release once archived.

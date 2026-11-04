@@ -81,11 +81,17 @@ def geo_of(name):
 # ---------------------------------------------------------------- provenance of DOSM files
 def dosm_editions():
     """dataset -> (edition_id, vintage, sha256) of the current vintage, from the append-only log."""
+    import json
+    from email.utils import parsedate_to_datetime
+    vin = json.load(open(os.path.join(DOSM, "_vintage.json")))
     out = {}
     for r in rows(os.path.join(DOSM, "_vintage_log.csv")):
         if r["state"] == "current":
-            ed = f"dosm:{r['dataset']}@{(r['last_updated'] or r['data_as_of'] or '')[:10]}"
-            out[r["dataset"]] = (ed, (r["last_updated"] or "")[:10], r["sha256"])
+            d = (r["last_updated"] or r["data_as_of"] or "")[:10]
+            lm = (vin.get(r["dataset"]) or {}).get("storage_last_modified")
+            if lm:  # the API's last_updated can lag the file itself (population_state: 2023 vs 2026)
+                d = max(d, parsedate_to_datetime(lm).date().isoformat())
+            out[r["dataset"]] = (f"dosm:{r['dataset']}@{d}", d, r["sha256"])
     return out
 
 
@@ -227,7 +233,9 @@ def build_states(obs):
     for i, r in enumerate(rows(STATES), start=2):
         if r["measure"] != "actual" or r["line_code"] not in STATE_LINES:
             continue
-        v = dec(r["amount_rm_conformed"])
+        # spending lines are levels (the panel stores them positive even where the statement prints them in
+        # parentheses as a deduction); a surplus or deficit keeps the sign printed on the page
+        v = dec(r["amount_rm"] if r["line_code"] == "surplus_deficit" else r["amount_rm_conformed"])
         if v is None:
             continue
         g = STATE_ISO[r["state"]]
@@ -238,6 +246,33 @@ def build_states(obs):
                 estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
                 pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=f"Jadual {r['jadual']}",
                 l1_ref=f"sources/states/data/_national/fact_state_finance_all.csv#row{i}")
+
+
+FEDERAL = {"opex_net_rm": ("federal_gov.expenditure.opex", "opex_source_file", "opex_pdf_page", "opex_printed_page"),
+           "devex_gross_rm": ("federal_gov.expenditure.devex", None, None, None),
+           "covid_fund_rm": ("federal_gov.expenditure.covid_fund", "covid_fund_source_file", "covid_fund_pdf_page",
+                             "covid_fund_printed_page")}
+
+
+def build_federal(obs):
+    """Federal spending totals, audited (PKKP). Phase 1 reads them from curated/fact_fiscal_headline.csv, which
+    cites the PKKP volume and page; Phase 3 moves them to PKKP entity observations."""
+    import hashlib
+    path = os.path.join(REPO, "curated", "fact_fiscal_headline.csv")
+    sha = hashlib.sha256(open(path, "rb").read()).hexdigest()
+    for i, r in enumerate(rows(path), start=2):
+        for col, (ind, f_col, p_col, pp_col) in FEDERAL.items():
+            v = dec(r.get(col))
+            if v is None:
+                continue
+            src = r.get(f_col, "") if f_col else ""
+            obs.add(indicator_code=ind, geo_code="MY", period_code=r["year"], entity_id="federal_gov:MY",
+                    basis="audited", edition_id=f"pkkp:{src or 'FY' + r['year']}", vintage=r["year"], value=v,
+                    value_printed=r[col], unit_printed="RM", estimate_method="accounting", reliability="ok",
+                    file_id=sha, pdf_page=r.get(p_col, "") if p_col else "",
+                    printed_page=r.get(pp_col, "") if pp_col else "",
+                    table_ref=(src + (f" ({r.get(col.replace('_rm', '_basis'), '')})" if not f_col else "")),
+                    l1_ref=f"curated/fact_fiscal_headline.csv#row{i}")
 
 
 # ---------------------------------------------------------------- dimensions
@@ -329,6 +364,8 @@ def checks(obs, geo, per, ind, brk, editions):
     for i in sorted({r["indicator_code"] for r in obs.rows}):
         g = {r["geo_code"] for r in obs.rows if r["indicator_code"] == i and r["geo_code"].startswith("MY-")
              and "/" not in r["geo_code"]}
+        if i.startswith("federal_gov."):  # national totals of the federal government: no state split by design
+            continue
         if i.startswith("state_gov."):  # the Federal Territories have no state government: 13 is complete
             miss = sorted(set(STATE_ISO.values()) - set(GEO_ALIAS.values()) - g - {"MY-14", "MY-15", "MY-16"})
             add("C6 state coverage", i, "PASS" if not miss else "INFO",
@@ -347,6 +384,24 @@ def checks(obs, geo, per, ind, brk, editions):
     worst = max((abs(pop[p] - nat[p]) for p in nat if p in pop), default=Decimal(0))
     add("C7 states sum to Malaysia (pop.total)", "pop.total", "PASS" if worst <= 800 else "FAIL",
         f"largest gap {fmt(worst)} persons over {len(nat)} years (rounding allowance 16 x 50)")
+    bad, n = [], 0
+    for r in obs.rows:
+        p = (r["value_printed"] or "").replace(",", "").strip()
+        neg = p.startswith("(") and p.endswith(")")
+        pv = dec(p.strip("()"))
+        if pv is None:
+            continue
+        u = (r["unit_printed"] or "").lower()
+        scale = Decimal(1000000) if ("juta" in u or "million" in u) else Decimal(1000) if "'000" in u else Decimal(1)
+        want = (-pv if neg else pv) * scale
+        got = Decimal(r["value"])
+        level = r["indicator_code"].startswith(("state_gov.expenditure.",))
+        n += 1
+        if (abs(got) != abs(want)) or (not level and got != want):
+            bad.append(f"{r['indicator_code']} {r['geo_code']} {r['period_code']}: value {r['value']} vs printed "
+                       f"{r['value_printed']} {r['unit_printed']}")
+    add("C8 value = value_printed x unit scale (sign kept, except spending levels)", "fact_observation",
+        "PASS" if not bad else "FAIL", f"{n} rows checked" + (f"; {len(bad)} differ, e.g. {bad[:3]}" if bad else ""))
     return out
 
 
@@ -357,6 +412,7 @@ def main():
     obs.districts = {}
     build_dosm(obs, ed)
     build_states(obs)
+    build_federal(obs)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

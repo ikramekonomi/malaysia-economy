@@ -54,6 +54,7 @@ class Warehouse:
         self.caveats = {r["caveat_id"]: r for r in _rows(os.path.join(META, "caveat.csv"))}
         self.derivations = {r["derivation_id"]: r for r in _rows(os.path.join(META, "derivation.csv"))}
         self.registry = _rows(os.path.join(REPO, "docs", "registry", "series_seed.csv"))
+        self.breaks = _rows(os.path.join(META, "series_break.csv"))
         self.index = defaultdict(list)
         for r in self.obs:
             self.index[(r["indicator_code"], r["geo_code"], r["period_code"], r["breakdown_key"])].append(r)
@@ -135,13 +136,29 @@ class Warehouse:
         return out
 
     # ------------------------------------------------------------ derive (the only place arithmetic happens)
+    def break_between(self, indicator, p0, p1):
+        """A registered series break with p0 < first period of the new basis <= p1, if any."""
+        lo, hi = sorted((p0, p1))
+        for b in self.breaks:
+            if indicator.startswith(b["indicator_prefix"]) and lo[:4] < b["first_period_new_basis"] <= hi[:4]:
+                return b
+        return None
+
+    def break_before(self, indicator, period, since):
+        """A break after `since` and up to `period`: the row's years before it are not comparable."""
+        return self.break_between(indicator, since, period)
+
     def derive(self, operation, a_id, b_id):
+        if not isinstance(a_id, str) or not isinstance(b_id, str):
+            raise Refused("inputs must be observation ids (obs_id) returned by get_series, not values")
         a, b = self.by_id.get(a_id), self.by_id.get(b_id)
         if not a or not b:
             raise Refused(f"unknown observation id: {a_id if not a else b_id}")
         ia, ib = self.all_ind[a["indicator_code"]], self.all_ind[b["indicator_code"]]
         va, vb = Decimal(a["value"]), Decimal(b["value"])
         if operation == "per_capita":
+            if vb == 0:
+                raise Refused("population is zero")
             if b["indicator_code"] != "pop.total" or b["breakdown_key"] != "_total":
                 raise Refused("per_capita needs pop.total (no split) as the denominator")
             if ia["additive_geo"] != "true":
@@ -161,6 +178,13 @@ class Warehouse:
                 raise Refused(f"different price bases: {ia['price_basis'] or 'none'} vs {ib['price_basis'] or 'none'}")
             if a["geo_code"] != b["geo_code"] and b["geo_code"] != "MY":
                 raise Refused("a ratio across two different places needs the second to be the national value")
+            if ia["universe"] != ib["universe"]:
+                raise Refused(f"different universes: {ia['universe']} vs {ib['universe']}")
+            if ia["statistic"] in ("rate", "share") and a["indicator_code"] != b["indicator_code"]:
+                raise Refused("a ratio of two different rates mixes two populations; compare each rate with its "
+                              "own national value instead")
+            if vb == 0:
+                raise Refused("the denominator is zero")
             dv, value, unit = "DV2", va / vb, "ratio"
         elif operation == "growth":
             same = all(a[k] == b[k] for k in ("indicator_code", "geo_code", "breakdown_key"))
@@ -168,6 +192,14 @@ class Warehouse:
                 raise Refused("growth compares one series with itself: same indicator, place and breakdown")
             if len(a["period_code"]) != len(b["period_code"]):
                 raise Refused("different frequencies")
+            if a["period_code"] <= b["period_code"]:
+                raise Refused(f"growth is from the earlier period (second input) to the later (first input); got "
+                              f"{b['period_code']} -> {a['period_code']}")
+            brk = self.break_between(a["indicator_code"], b["period_code"], a["period_code"])
+            if brk:
+                raise Refused(f"series break in {brk['first_period_new_basis']}: {brk['what_changed']}")
+            if vb == 0:
+                raise Refused("growth from a zero base is undefined")
             dv, value, unit = "DV3", va / vb - 1, "ratio"
         elif operation in ("gap_pp", "difference"):
             if operation == "gap_pp" and not (ia["unit"] == ib["unit"] == "percent"):
