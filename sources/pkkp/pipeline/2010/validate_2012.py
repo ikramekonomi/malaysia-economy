@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
+import os
 import csv, collections
-OUT="/home/claude/pkkp/warehouse2012/fact_opex_detail.csv"
+OUT=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2012", "fact_opex_detail.csv")
 rows=list(csv.DictReader(open(OUT,encoding="utf-8")))
 def f(x): return float(x) if x not in ("",None) else 0.0
 COLS=["anggaran_asal_rm","anggaran_jumlah_rm","sebenar_rm"]  # Asal, Dipinda(=final), Amaun(=sebenar)

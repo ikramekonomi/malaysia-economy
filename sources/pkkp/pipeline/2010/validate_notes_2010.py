@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import csv, os
-W2010 = "/home/claude/pkkp/warehouse2010"
-W2012 = "/home/claude/pkkp/warehouse2012"
+W2010 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2010")
+W2012 = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2012")
 
 FILES = ["fact_cash_components", "fact_investment_summary", "fact_revenue",
          "fact_revenue_account_statement", "fact_loan_account_statement",

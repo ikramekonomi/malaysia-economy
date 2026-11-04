@@ -2,9 +2,10 @@
 """Self-validation for the memorandum-register CSVs: detail rows must sum to printed
 subtotals/totals, and totals must match known control figures. Reports PASS/FAIL; never
 adjusts data."""
+import os
 import pandas as pd
 
-WH = '/home/claude/pkkp/warehouse'
+WH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2024")
 results = []
 
 def check(name, got, exp, tol=0.005):

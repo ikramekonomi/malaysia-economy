@@ -3,9 +3,9 @@
 ## The offline check suite (runs on every PR)
 
 `python3 qa/run_offline_suite.py` is what `.github/workflows/validate.yml` runs on every pull request
-and on `main`. It needs no PDFs and no network, and takes about 10 seconds. A PR is blocked when:
+and on `main`. It needs no PDFs and no network, and takes about 20 seconds. A PR is blocked when:
 
-1. **a script fails**: any of the 23 scripts in its `SUITE` list exits non-zero;
+1. **a script fails**: any of the 49 scripts in its `SUITE` list exits non-zero;
 2. **outputs don't reproduce**: re-running the pipeline changes any committed file, so the committed
    CSVs are not exactly what the code produces from the committed inputs;
 3. **a new FAIL appears**: a row with status `FAIL` in any `_validation*.csv` that is not listed in
@@ -41,6 +41,6 @@ review the diff before committing it.
 
 | Scripts | Why not | Covered by / unblocked by |
 |---|---|---|
-| 46 per-year PKKP validators (`sources/pkkp/pipeline/<year>/validate*.py`) | written for the original extraction machine: hard-coded `/home/claude/pkkp/...` paths | to port to repo-relative paths; their outputs are committed and checked for FAIL rows |
+| 20 of the 46 per-year PKKP validators (`sources/pkkp/pipeline/<year>/validate*.py`; the other 26 are in the suite, now on repo-relative paths) | 3 read text caches that are not in the repository: `2011/validate_lampiran1_2011.py` and `2011/validate_timeseries_2011.py` (`work/2011/full.txt`, the PDF text) and `2009/validate_opex.py` (`/tmp/opex_recs.json`, an extraction intermediate). 17 run but do not reproduce their committed output, because each writes only part of a file that the extraction pipeline (`run_all.sh`) assembles: `validate.py` for 2009-2014 and 2016-2023 appends its block to `_validation_checks_<year>.csv`, `2024/validate.py` rewrites `_validation_checks.csv` without the notes rows `extract_notes_detail.py` adds, and the committed files of two others hold rows a verifier changed after the run: `2010/validate_master_2010.py` omits a verifier DIAGNOSIS row, `2013/validate_2013.py` writes PASS for 4 cash-statement rows the verifier relabelled INFO (not a printed total). Two also differ in content: 2017 (a verifier-corrected DIAGNOSIS text) and 2021 (devex program linkage for P.28 now comes out FAIL, committed PASS: P.28 has two programmes whose names differ only in case, `PROJEK PENGANGKUTAN JALAN` RM70.67 mil and `Projek Pengangkutan Jalan` RM698.93 mil, each matching its own projects exactly; the check keys programmes by name and merges them. A checker defect, not a data error: to key by position or code) | the L0 archive for the PDFs; making each validator own its output file; their committed outputs are checked for FAIL rows |
 | `sources/audit-negara/pipeline/validate_lkan_findings.py`, `validate_lkan_fiscal.py` and every `extract_*.py` | re-read the original PDFs, which are not in the repository | the L0 archive (Phase 0) |
 | `sources/dosm/pipeline/verify_*.py`, `refresh.py`; `sources/bnm/pipeline/fetch_*.py` | need the network | the daily DOSM refresh workflow (`dosm-refresh.yml`); a BNM refresh to follow |

@@ -3,7 +3,7 @@
 and _validation_checks_memoranda_2010.csv (status,check,extracted_value,printed_value,difference).
 All checks derived from THIS volume's own printed totals; discrepancies reported, never corrected."""
 import csv, os
-WH="/home/claude/pkkp/warehouse2010"
+WH=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2010")
 def load(n):
     with open(f"{WH}/{n}",encoding="utf-8") as f: return list(csv.DictReader(f))
 def num(x):

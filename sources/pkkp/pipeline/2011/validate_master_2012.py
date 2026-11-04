@@ -6,7 +6,7 @@ Checks derive from THIS volume's own printed totals. Discrepancies reported, nev
 """
 import csv, os
 from collections import defaultdict
-WH="/home/claude/pkkp/warehouse2012"
+WH=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2012")
 def load(name):
     with open(f"{WH}/{name}.csv",encoding="utf-8") as f: return list(csv.DictReader(f))
 def F(x):

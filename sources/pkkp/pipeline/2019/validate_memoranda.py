@@ -15,9 +15,10 @@ printed subtotals/totals, and totals must match control figures typed from the
  - NO grants statement is printed in 2019 (fact_guarantee_repayment_grants absent).
  - controls are printed register totals from the 2019 volume, sen precision.
 """
+import os
 import pandas as pd
 
-WH = '/home/claude/pkkp/warehouse2019'
+WH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2019")
 results = []
 
 def check(name, got, exp, tol=0.005):

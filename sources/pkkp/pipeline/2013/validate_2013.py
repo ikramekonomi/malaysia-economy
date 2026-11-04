@@ -3,10 +3,11 @@
 reproduce THIS volume's own printed totals. Never corrects; reports PASS/FAIL.
 Writes _validation_checks_2013.csv (core+detail) and
 _validation_checks_memoranda_2013.csv (registers)."""
+import os
 import csv
 from collections import defaultdict
 
-WH = "/home/claude/pkkp/warehouse2013"
+WH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2013")
 core, memo = [], []
 
 def chk(bucket, name, got, want, tol=0.5):

@@ -13,9 +13,10 @@ printed subtotals/totals, and totals must match control figures typed from the
  - fact_compensation_commitments: highway concessions only.
  - controls are printed register totals from the 2020 volume, sen precision.
 """
+import os
 import pandas as pd
 
-WH = '/home/claude/pkkp/warehouse2020'
+WH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2020")
 results = []
 
 def check(name, got, exp, tol=0.005):

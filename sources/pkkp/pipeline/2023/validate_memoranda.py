@@ -12,9 +12,10 @@ printed subtotals/totals, and totals must match control figures typed from the
  - fact_compensation_commitments has 'listing' rows (highway names printed without
    amounts) which are excluded from sums.
 """
+import os
 import pandas as pd
 
-WH = '/home/claude/pkkp/warehouse2023'
+WH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2023")
 results = []
 
 def check(name, got, exp, tol=0.005):
