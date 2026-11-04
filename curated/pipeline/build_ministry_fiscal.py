@@ -380,6 +380,28 @@ def _load_bnm_msb_3_1():
 
 
 DEVEX_NET_MOF = _load_devex_net_mof()
+
+# MOF's own actuals for the other headline lines, in PARALLEL columns beside the PKKP ones
+# -- never written into a PKKP-basis column. One edition per year (mof_editions.choose), so
+# every MOF figure of a year comes from the same printed column as devex_net_rm and shares
+# its devex_net_source_* provenance.
+MOF_LINES = {"revenue_mof_rm": "revenue",
+             "opex_mof_rm": "operating_expenditure",
+             "devex_gross_mof_rm": "development_expenditure_gross",
+             "devex_loan_recovery_mof_rm": "development_expenditure_loan_recovery",
+             "overall_balance_mof_rm": "overall_balance"}
+
+
+def _load_mof_actuals():
+    chosen = mof_editions.choose(mof_editions.load_all("fact_headline"))
+    out = {}
+    for (line, year), r in chosen.items():
+        if r["basis"] == "official_actual" and r["amount_rm_juta"] not in ("", None):
+            out.setdefault(year, {"edition": r["edition"]})[line] = float(r["amount_rm_juta"]) * 1e6
+    return out
+
+
+MOF_ACTUALS = _load_mof_actuals()
 BNM = _load_bnm_msb_3_1()
 
 
@@ -550,17 +572,28 @@ def build_headline(con):
     covid, _ = _load_covid_fund(con)
     revenue = _load_revenue(con)
 
+    # The headline runs to the last year ANY source prints as an actual -- PKKP's audited
+    # volumes or MOF's own edition -- read from the data, not hardcoded. A year MOF has
+    # reported but PKKP has not yet audited (FY2025) carries NULL in every PKKP-basis column
+    # and its MOF and BNM columns filled: the bases are never blended to fill a gap.
+    last_year = max(max(racct), max(MOF_ACTUALS))
     out = []
-    for year in range(2009, 2025):
-        ra = racct[year]
-        og, og_prov = ra["gross"]
-        on, on_prov = ra["net"]
-        tr, tr_prov = ra["transfer"]
+    for year in range(2009, last_year + 1):
+        ra = racct.get(year)
+        og, og_prov = ra["gross"] if ra else (None, None)
+        on, on_prov = ra["net"] if ra else (None, None)
+        tr, tr_prov = ra["transfer"] if ra else (None, None)
         dg = devex_gross.get(year)
         mof = DEVEX_NET_MOF.get(year)
+        mof_all = MOF_ACTUALS.get(year, {})
         bnm = BNM.get(year, {})
 
         note_parts = []
+        if ra is None:
+            note_parts.append(f"no audited PKKP volume for FY{year} in the warehouse yet: every "
+                              "PKKP-basis column (opex, devex gross, revenue, COVID-19 fund, "
+                              "overall_balance_rm) is NULL, not estimated. MOF's own actuals are "
+                              "in the *_mof_rm columns and BNM's in the *_bnm_rm columns")
         if year == 2015:
             note_parts.append("opex/devex gross use ministry-level totals (FY2015 leaf tier is OCR-provisional)")
         if year == 2009:
@@ -570,8 +603,10 @@ def build_headline(con):
         cv = covid.get(year)
         rv, rv_files = revenue.get(year, (None, None))
         cv_amt = cv["amount"] if cv else 0.0    # not_established: the fund did not exist
+        if ra is None:
+            rv, cv_amt = None, None
         dn_bnm = bnm.get("devex_net_rm")
-        ob = (rv - on - dn_bnm - cv_amt) if None not in (rv, dn_bnm) else None
+        ob = (rv - on - dn_bnm - cv_amt) if None not in (rv, on, dn_bnm, cv_amt) else None
         if mof is None:
             note_parts.append("devex_net_rm NULL: MOF's own figure for this year sits in the "
                               "Laporan Ekonomi (before Budget 2019 MOF's fiscal tables were "
@@ -584,18 +619,18 @@ def build_headline(con):
 
         out.append({
             "year": year,
-            "opex_gross_rm": round(og, 2),
-            "opex_gross_basis": "audited (PKKP), as printed",
-            "opex_gross_line_bm": og_prov["line"],
-            "opex_net_rm": round(on, 2),
-            "opex_net_basis": "audited (PKKP), as printed",
-            "opex_net_line_bm": on_prov["line"],
-            "transfer_to_dev_fund_rm": round(tr, 2),
-            "transfer_basis": "audited (PKKP), as printed",
-            "opex_source_file": og_prov["source_file"],
-            "opex_source_statement": og_prov["statement"],
-            "opex_pdf_page": og_prov["pdf_page"],
-            "opex_printed_page": og_prov["printed_page"],
+            "opex_gross_rm": round(og, 2) if ra else None,
+            "opex_gross_basis": "audited (PKKP), as printed" if ra else None,
+            "opex_gross_line_bm": og_prov["line"] if ra else None,
+            "opex_net_rm": round(on, 2) if ra else None,
+            "opex_net_basis": "audited (PKKP), as printed" if ra else None,
+            "opex_net_line_bm": on_prov["line"] if ra else None,
+            "transfer_to_dev_fund_rm": round(tr, 2) if ra else None,
+            "transfer_basis": "audited (PKKP), as printed" if ra else None,
+            "opex_source_file": og_prov["source_file"] if ra else None,
+            "opex_source_statement": og_prov["statement"] if ra else None,
+            "opex_pdf_page": og_prov["pdf_page"] if ra else None,
+            "opex_printed_page": og_prov["printed_page"] if ra else None,
             "devex_gross_rm": round(dg, 2) if dg is not None else None,
             "devex_gross_basis": "audited (PKKP)" if dg is not None else None,
             "devex_net_rm": mof["amount_rm"] if mof else None,
@@ -611,16 +646,24 @@ def build_headline(con):
             "revenue_rm": round(rv, 2) if rv is not None else None,
             "revenue_basis": "audited (PKKP), as printed" if rv is not None else None,
             "revenue_source_file": rv_files,
-            "covid_fund_rm": round(cv["amount"], 2) if cv else None,
-            "covid_fund_status": cv["status"] if cv else "not_established",
-            "covid_fund_basis": "audited (PKKP), as printed" if cv else
-                                "not applicable: no Kumpulan Wang COVID-19 before FY2020",
+            "covid_fund_rm": round(cv["amount"], 2) if (cv and ra) else None,
+            "covid_fund_status": ("not_available" if ra is None else
+                                  cv["status"] if cv else "not_established"),
+            "covid_fund_basis": ("no audited PKKP volume held for this year" if ra is None else
+                                 "audited (PKKP), as printed" if cv else
+                                 "not applicable: no Kumpulan Wang COVID-19 before FY2020"),
             "covid_fund_source_file": cv["source_file"] if cv else None,
             "covid_fund_statement": cv["statement"] if cv else None,
             "covid_fund_pdf_page": cv["pdf_page"] if cv else None,
             "covid_fund_printed_page": cv["printed_page"] if cv else None,
             "overall_balance_rm": round(ob, 2) if ob is not None else None,
             "overall_balance_basis": OVERALL_BALANCE_BASIS if ob is not None else None,
+            **{col: mof_all.get(line) for col, line in MOF_LINES.items()},
+            "mof_basis": "official_actual (MOF Tinjauan Fiskal)" if mof_all else None,
+            "mof_edition": mof_all.get("edition"),
+            "revenue_bnm_rm": bnm.get("revenue_rm"),
+            "opex_bnm_rm": bnm.get("opex_rm"),
+            "devex_gross_bnm_rm": bnm.get("devex_gross_rm"),
             "note": "; ".join(note_parts),
         })
 
@@ -760,7 +803,9 @@ def build_validation(con, headline, ministry_rows):
 
     # ---- A. the printed statement's own identity, tier by tier ----------------------
     for year in sorted(by_year):
-        row, ra = by_year[year], racct[year]
+        row, ra = by_year[year], racct.get(year)
+        if ra is None:
+            continue
         src = (f"PKKP {row['opex_source_file']} pdf p.{row['opex_pdf_page']} "
                f"(printed p.{row['opex_printed_page']}), {row['opex_source_statement']}")
         identity(f"opex {year}: printed net + printed transfer == printed gross",
@@ -913,6 +958,41 @@ def build_validation(con, headline, ministry_rows):
                 f"overall_balance {year} vs MOF's own published overall balance "
                 "(same definition; MOF derives it from rounded printed terms)",
                 ours, ref, mof_band(5 if covid_printed else 4), f"MOF Tinjauan Fiskal, {src}")
+
+    # ---- J. MOF's own headline actuals, against the audited accounts and against BNM --
+    # Each of these MOF figures sits in an identity every edition foots EXACTLY with one
+    # other rounded printed term -- revenue = opex + current balance, gross DE = direct +
+    # gross lending -- so any one of them may be the derived figure, carrying two roundings
+    # (1.0 juta). The data shows it: FY2018 audited revenue 232,882.56 rounds to 232,883,
+    # but MOF prints 232,882 = opex 230,960 + current balance 1,922. A DIVERGE here is MOF's
+    # as-reported figure differing from the audited one beyond that; where a later edition
+    # restated the figure, the check says so.
+    mof_chosen = mof_editions.choose(mof_editions.load_all("fact_headline"))
+    MOF_VS = (("revenue_mof_rm", "revenue", "revenue_rm", "revenue_bnm_rm", 2),
+              ("opex_mof_rm", "operating_expenditure", "opex_net_rm", "opex_bnm_rm", 2),
+              ("devex_gross_mof_rm", "development_expenditure_gross", "devex_gross_rm",
+               "devex_gross_bnm_rm", 2))
+    for year in sorted(by_year):
+        row = by_year[year]
+        if not row.get("mof_edition"):
+            continue
+        for mof_col, mof_line, pkkp_col, bnm_col, terms in MOF_VS:
+            mv = row.get(mof_col)
+            if mv is None:
+                continue
+            chosen = mof_chosen.get((mof_line, year), {})
+            later = chosen.get("restated_in") or ""
+            src = (f"MOF Tinjauan Fiskal {row['mof_edition']} edition, "
+                   f"{row['devex_net_source_file']} pdf p.{row['devex_net_pdf_page']}"
+                   + (f"; later editions: {later} (RM juta)" if later else ""))
+            if row.get(pkkp_col) is not None:
+                add("cross_source", "AGREE", "DIVERGE",
+                    f"{mof_col} {year} (MOF official_actual) vs PKKP audited {pkkp_col}",
+                    mv, row[pkkp_col], mof_band(terms), src)
+            if row.get(bnm_col) is not None:
+                add("cross_source", "AGREE", "DIVERGE",
+                    f"{mof_col} {year} (MOF official_actual) vs BNM {bnm_col}",
+                    mv, row[bnm_col], mof_band(terms), src)
 
     # PKKP prints an overall balance on a DIFFERENT definition (all Development Fund
     # receipts netted, not only loan recovery), so the gap is reported as definitional,
