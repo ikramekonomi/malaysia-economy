@@ -2,7 +2,7 @@
 
 What the warehouse needs, theme by theme: what we hold, what we must get, and how we get it
 (an API to connect, or a document to collect). The **row-level detail is in
-`docs/registry/series_seed.csv`** (60 series). This page is the plan; the registry is the
+`docs/registry/series_seed.csv`** (75 series). This page is the plan; the registry is the
 checklist. How the registry works: `docs/DOCUMENT_REGISTRY.md`. How the data fits together:
 `docs/DATA_MODEL.md`.
 
@@ -14,18 +14,18 @@ Financial Procedure Act 1957 uses the same term ("public moneys").
 
 | # | Theme | Held | Must get first (P1) | Main way in |
 |---|---|---|---|---|
-| 1 | People & poverty | 1 of 5 | population by state and district | API (OpenDOSM) |
-| 2 | Jobs & wages | 2 of 4 | salaries & wages survey | API (OpenDOSM) |
+| 1 | People & poverty | 1 of 7 | population by state and district | API (OpenDOSM) |
+| 2 | Jobs & wages | 2 of 5 | salaries & wages survey | API (OpenDOSM) |
 | 3 | Prices & cost of living | 1 of 4 | (P2: item prices, house prices) | API (data.gov.my) + PDF |
-| 4 | Output & industry | 3 of 10 | (P2: investment, district GDP) | API (OpenDOSM) |
-| 5 | Public money & money trail | 6 of 20 | development estimates; federal development money by state; state budget estimates | PDF |
-| 6 | Health, education & services | 1 of 3 | health facts; education statistics | PDF + data.gov.my |
-| 7 | Accountability | 3 of 13 | procurement awards | PDF + web |
-| 8 | Money, credit & financial wellbeing | 1 of 5 | (P2: household debt, EPF/SOCSO) | API (BNM) + PDF |
-| — | Plan targets (all themes) | 0 of 3 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | PDF |
+| 4 | Output & industry | 3 of 12 | (P2: investment, district GDP) | API (OpenDOSM) |
+| 5 | Public money & money trail | 6 of 24 | development estimates; federal development money by state; state budget estimates | PDF |
+| 6 | Health, education & services | 1 of 5 | health facts; education statistics | PDF + data.gov.my |
+| 7 | Accountability | 3 of 17 | procurement awards | PDF + web |
+| 8 | Money, credit & financial wellbeing | 1 of 7 | (P2: household debt, EPF/SOCSO) | API (BNM) + PDF |
+| — | Plan targets and cross-cutting | 0 of 5 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | PDF |
 
 "Held" counts series that are held, extracted or verified. A series can serve two themes,
-so the column does not add to 60.
+so the column does not add to 75.
 
 **The pattern:** the economy themes (1–4, 8) mostly come through **APIs we already use**, so
 each new series costs little. Public money and accountability (5, 7) come from **PDFs**. These
@@ -41,10 +41,27 @@ usable form.
 | `api.data.gov.my` (OpenDOSM + data catalogue) | DOSM / data.gov.my | **connected** | national accounts, HIES, LFS, CPI, trade, state GDP |
 | `storage.dosm.gov.my` (bulk files) | DOSM | **connected** | the canonical CSVs behind the API |
 | `api.bnm.gov.my` (OpenAPI) | BNM | **connected** | federal finance, rates, FX, money supply, credit |
-| data.gov.my datasets (ids to confirm) | DOSM, KPDN, MOF, KPM | to connect | population by state/district, PriceCatcher, fuel prices, education |
-| IMF DataMapper API | IMF | to connect | WEO peer benchmarks (general-government basis) |
-| World Bank Indicators API | World Bank | to connect | peer benchmarks |
-| IBP Open Budget Survey data | IBP | to download | the federal transparency score |
+| data.gov.my datasets (ids to confirm) | DOSM, KPDN, MOF, KPM, SPR | to connect | population by state/district, Kawasanku constituency profiles, election results, PriceCatcher, fuel prices, education |
+
+**Global**, for peer comparison and independent cross-checks. Every one needs its
+definitions matched before a comparison is shown (federal vs general government, for one).
+
+| API | Publisher | Theme | Gives us |
+|---|---|---|---|
+| IMF DataMapper + SDMX API | IMF | 4, 5, 8 | WEO, IFS, GFS, Fiscal Monitor |
+| World Bank Indicators API | World Bank | 4, 7 | WDI; Worldwide Governance Indicators |
+| BIS data portal API | BIS | 8 | household credit and debt service ratios vs peers |
+| OECD SDMX API | OECD | 5 | Revenue Statistics in Asia and the Pacific (tax mix, tax-to-GDP) |
+| UN Comtrade API (free key) | UN | 4 | trade by partner and HS code; mirror checks on DOSM trade |
+| ILOSTAT SDMX API | ILO | 2 | labour and wages vs peers |
+| WHO GHO OData API | WHO | 6 | health outcomes and spending vs peers |
+| UNESCO UIS API | UNESCO | 6 | education outcomes vs peers |
+| UN SDG API | UN | targets | the SDG indicators Malaysia reports against |
+| UNDP HDR API (key) | UNDP | 1 | Human Development Index |
+| IBP Open Budget Survey (download) | IBP | 7 | the federal transparency score |
+| TI Corruption Perceptions Index (download) | Transparency International | 7 | perceived corruption vs peers |
+
+Endpoint details are confirmed when each is connected; none is assumed.
 
 No API exists for most fiscal and accountability documents. Those come by **document
 collection**:
@@ -145,7 +162,8 @@ How open is each state's budget?
 | LKAN federal 2024–2026 extracted (426 findings); 402 volumes 2015–2026 held | **P1** procurement awards (project → contractor) |
 | AG agency opinions FY2023–2024 | P2 federal and state PAC reports; AG action-status dashboard |
 | | P2 MyOBI scores 2022/2024/2026 (2026 PDF supplied, not yet ingested) |
-| | P3 DUN hansards (10 states), DUN questions (about half), IBP Open Budget Survey |
+| | P2 Pantau Projek and Pantau Laksana (IDEAS); state PAC reports (Selangor only publishes) |
+| | P3 DUN hansards (11 states current, 8 archived), DUN questions (7 states), IBP Open Budget Survey, global governance indices |
 | | restricted: SSM company register (paid per lookup) |
 
 ## Theme 8: Money, credit & financial wellbeing
@@ -189,14 +207,18 @@ missing document becomes a dated finding.
 
 ## What MyOBI 2026 tells us
 
-IDEAS' Malaysia Open Budget Index (August 2026; two of its 13 state assessors were from
-IKRAM) scores whether **state budget documents are published**, how strong the oversight is,
-and how much the public can take part. It does not hold the numbers inside those documents.
-The two efforts fit together:
+IDEAS' Malaysia Open Budget Index (August 2026; two of its 13 state assessments were done by
+IKRAM volunteers) scores whether **state budget documents are published**, how strong the
+oversight is, and how much the public can take part. It also records numbers: the week each
+budget was tabled and passed, DUN sitting days and budget-debate days, and unscored items such
+as the share of state revenue from federal transfers and from land, and allocations to the Chief
+Executive's office. IDEAS' Pantau Wang Kita site also hosts **Pantau Projek** (state
+infrastructure project transparency) and **Pantau Laksana** (stimulus packages, announced vs
+implemented), both in the registry.
 
-| | MyOBI | This warehouse |
+| | MyOBI / Pantau Wang Kita | This warehouse |
 |---|---|---|
-| Asks | Is the document public and on time? | What do the numbers say, and do they add up? |
+| Asks | Is it public, on time, and scrutinised? Selected numbers | What do all the numbers say, and do they add up? |
 | Covers | 13 states; transparency, oversight, participation | federal + 13 states; the whole economy |
 | Output | a score per state, peer reviewed, every two years | every figure, with its source page, checked |
 
