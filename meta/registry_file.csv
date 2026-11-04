@@ -574,6 +574,8 @@ pkkp,,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/
 pkkp,,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
 pkkp,,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
 pkkp,,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
+population_subnational,2023,population_state.csv,,a3ac1a8831a4e66dbc0bc0d018b699b3810eaead3775fbee4c95e9eb2cc44945,,,,sources/dosm/data/_vintage_log.csv
+population_subnational,2026,population_district.csv,,2c7caf2fc4bda1f58f12db6cc2d6d5f39148fbeaaa0516017eb59fb8e23784e0,,,,sources/dosm/data/_vintage_log.csv
 productivity,2025,productivity_annual.csv,,5ef9bc4e090a402352d5ea7f9b057cc16a93e09aa02d6c37e4f583ef822cc092,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 productivity,2025,productivity_annual_priority.csv,,31030645f60fe605505cd15a75b9d92fcbb4b7c3d2c32d7c0a614e09265e82f4,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 productivity,2025-Q4,productivity_lookup.csv,,efb406d08cbe4ae927f35949daf926f76d34f302bef7a911462b8652e7be6b9d,,,2026-08-03,sources/dosm/data/_vintage_log.csv

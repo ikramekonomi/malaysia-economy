@@ -32,6 +32,8 @@ tables. GFS-vs-PKKP disagreement is a finding, not something to resolve by overw
 |---|---|---|---|---|
 | `gdp_gni_annual_nominal.csv` | Annual Nominal GDP & GNI: 1947 to Present (`gdp_gni_annual_nominal`) | RM million (`abs` rows); `growth_yoy` rows = % | 1947–2025 | "Data as of 2025" per catalogue page |
 | `population_malaysia.csv` | Population — Malaysia (`population_malaysia`) | '000 persons, by sex × age × ethnicity | 1970–2026 | "Data as of 2025" per catalogue page |
+| `population_state.csv` | Population — state (`population_state`) | '000 persons, by sex × age × ethnicity, 16 states and FTs | 1970–2026 | added 2026-11-04 (Phase 1 denominator); `pipeline/verify_population.py`: states sum to Malaysia, male + female = both |
+| `population_district.csv` | Population — district (`population_district`) | '000 persons, by sex × age × ethnicity, 166 districts | 2020–2026 | added 2026-11-04; districts sum to their state every year (within 0.05 thousand rounding per part) |
 | `hh_lq.csv` | Number of Households and Living Quarters (`hh_profile`) | count | 1970–2024 (annual from 2010) | "Data as of 2024" per catalogue page |
 
 ### Expansion datasets (values verbatim + appended `retrieved_from`,`retrieved_date` columns)

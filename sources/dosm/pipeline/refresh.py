@@ -34,6 +34,11 @@ DATASETS = {  # catalogue id -> (csv filename, storage url)
     "population_malaysia": ("population_malaysia.csv",
                             "https://storage.dosm.gov.my/population/population_malaysia.csv"),
     "hh_profile": ("hh_lq.csv", "https://storage.dosm.gov.my/demography/hh_lq.csv"),
+    # Phase 1 denominators: every per-capita comparison by state or district needs them
+    "population_state": ("population_state.csv",
+                         "https://storage.dosm.gov.my/population/population_state.csv"),
+    "population_district": ("population_district.csv",
+                            "https://storage.dosm.gov.my/population/population_district.csv"),
 }
 # Expansion datasets (GFS / state GDP / CPI / labour / trade): defined once in
 # ingest_expansion.py; their canonical CSVs carry appended provenance columns and are

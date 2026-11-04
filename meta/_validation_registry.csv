@@ -113,6 +113,10 @@ R4 held series has files,hies,PASS,21 file(s)
 R5 every file has a sha256,hies,PASS,21 files
 R7 every file is in the L0 archive,hies,PASS,21 of 21 archived (release l0-archive or git history)
 R6 licence recorded,hies,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,population_subnational,PASS,2 file(s)
+R5 every file has a sha256,population_subnational,PASS,2 files
+R7 every file is in the L0 archive,population_subnational,PASS,2 of 2 archived (release l0-archive or git history)
+R6 licence recorded,population_subnational,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,lfs,PASS,18 file(s)
 R5 every file has a sha256,lfs,PASS,18 files
 R7 every file is in the L0 archive,lfs,PASS,18 of 18 archived (release l0-archive or git history)

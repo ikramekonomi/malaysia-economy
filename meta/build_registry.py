@@ -45,7 +45,8 @@ FIELDS = ["series_id", "edition", "file_name", "source_url", "sha256", "size_byt
 # DOSM dataset id -> registry series (first matching prefix wins)
 DOSM_SERIES = [
     ("hh_access_amenities", "amenities_access"), ("hh_profile", "dosm_population"),
-    ("population_malaysia", "dosm_population"), ("hh_", "hies"), ("hies_", "hies"),
+    ("population_malaysia", "dosm_population"), ("population_state", "population_subnational"),
+    ("population_district", "population_subnational"), ("hh_", "hies"), ("hies_", "hies"),
     ("lfs_", "lfs"), ("employment_sector", "lfs"), ("cpi_", "cpi"), ("mcoicop", "cpi"),
     ("gdp_state_", "state_gdp"), ("federal_finance", "dosm_gfs"), ("lookup_federal_finance", "dosm_gfs"),
     ("state_finance", "dosm_gfs"), ("productivity", "productivity"), ("economic_indicators", "national_accounts"),

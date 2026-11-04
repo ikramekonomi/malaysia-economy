@@ -26,6 +26,24 @@
     "storage_etag": "ee145acd0155ae760c46994500f845b2",
     "storage_last_modified": "Sat, 21 Sep 2024 10:26:48 GMT"
   },
+  "population_state": {
+    "file": "population_state.csv",
+    "data_as_of": "2023",
+    "last_updated": "2023-07-31 12:00",
+    "next_update": "2024-07-31 12:00",
+    "api_total_rows": 1,
+    "storage_etag": "d225c47bd90095e892859ba04a30664f",
+    "storage_last_modified": "Fri, 31 Jul 2026 04:48:25 GMT"
+  },
+  "population_district": {
+    "file": "population_district.csv",
+    "data_as_of": "2026",
+    "last_updated": "2026-10-07 13:00",
+    "next_update": "2027-10-31 12:00",
+    "api_total_rows": 0,
+    "storage_etag": "34596c61cdef428f56a3412c4be5a884-3",
+    "storage_last_modified": "Wed, 07 Oct 2026 22:51:33 GMT"
+  },
   "federal_finance_year": {
     "file": "federal_finance_year.csv",
     "data_as_of": "2025",

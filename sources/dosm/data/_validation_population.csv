@@ -1,0 +1,1011 @@
+check,geo,year,printed_total,sum_of_parts,diff,status
+P1_states_sum_to_national,MY,1970,10881.8,10881.9,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1971,11159.7,11159.6,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1972,11441.3,11441.4,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1973,11719.8,11719.8,0.0,PASS
+P1_states_sum_to_national,MY,1974,12001.3,12001.1,-0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,1975,12300.3,12300.3,0.0,PASS
+P1_states_sum_to_national,MY,1976,12588.1,12588.1,0.0,PASS
+P1_states_sum_to_national,MY,1977,12901.1,12901.1,0.0,PASS
+P1_states_sum_to_national,MY,1978,13200.2,13200.3,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1979,13518.3,13518.4,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1980,13879.3,13879.2,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1981,14256.9,14256.9,0.0,PASS
+P1_states_sum_to_national,MY,1982,14651.1,14651.1,0.0,PASS
+P1_states_sum_to_national,MY,1983,15048.2,15048.2,0.0,PASS
+P1_states_sum_to_national,MY,1984,15450.4,15450.4,0.0,PASS
+P1_states_sum_to_national,MY,1985,15882.7,15882.9,0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,1986,16329.4,16329.4,0.0,PASS
+P1_states_sum_to_national,MY,1987,16773.5,16773.4,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1988,17219.1,17219.2,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1989,17662.1,17662.0,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1990,18102.4,18102.5,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1991,18547.2,18547.2,0.0,PASS
+P1_states_sum_to_national,MY,1992,19067.5,19067.5,0.0,PASS
+P1_states_sum_to_national,MY,1993,19601.5,19601.6,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1994,20141.7,20141.6,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1995,20681.8,20681.7,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1996,21222.6,21222.5,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1997,21769.3,21769.2,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,1998,22333.5,22333.5,0.0,PASS
+P1_states_sum_to_national,MY,1999,22909.5,22909.4,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2000,23494.9,23494.9,0.0,PASS
+P1_states_sum_to_national,MY,2001,24030.5,24030.6,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2002,24542.5,24542.7,0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,2003,25038.1,25038.0,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2004,25541.5,25541.3,-0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,2005,26045.5,26045.5,0.0,PASS
+P1_states_sum_to_national,MY,2006,26549.9,26549.9,0.0,PASS
+P1_states_sum_to_national,MY,2007,27058.4,27058.3,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2008,27567.6,27567.7,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2009,28081.5,28081.6,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2010,28588.6,28588.8,0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,2011,29062.0,29062.1,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2012,29510.0,29509.9,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2013,30213.7,30213.8,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2014,30708.5,30708.6,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2015,31186.1,31186.1,0.0,PASS
+P1_states_sum_to_national,MY,2016,31633.5,31633.4,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2017,32022.6,32022.5,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2018,32382.3,32382.3,0.0,PASS
+P1_states_sum_to_national,MY,2019,32523.0,32522.8,-0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,2020,32447.4,32447.3,-0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2021,32576.3,32576.4,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2022,32698.1,32698.3,0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,2023,33401.8,33401.8,0.0,PASS
+P1_states_sum_to_national,MY,2024,34052.1,34052.3,0.2,PASS_ROUNDING
+P1_states_sum_to_national,MY,2025,34220.5,34220.6,0.1,PASS_ROUNDING
+P1_states_sum_to_national,MY,2026,34389.4,34389.3,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Johor,2020,4009.7,4009.7,0.0,PASS
+P2_districts_sum_to_state,Johor,2021,4020.0,4019.9,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Johor,2022,4028.3,4028.3,0.0,PASS
+P2_districts_sum_to_state,Johor,2023,4107.2,4107.2,0.0,PASS
+P2_districts_sum_to_state,Johor,2024,4184.4,4184.3,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Johor,2025,4204.1,4204.0,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Johor,2026,4224.3,4224.3,0.0,PASS
+P3_male_plus_female,Johor,1970,1325.6,1325.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1971,1355.4,1355.4,0.0,PASS
+P3_male_plus_female,Johor,1972,1385.3,1385.3,0.0,PASS
+P3_male_plus_female,Johor,1973,1414.5,1414.5,0.0,PASS
+P3_male_plus_female,Johor,1974,1444.4,1444.4,0.0,PASS
+P3_male_plus_female,Johor,1975,1477.0,1477.0,0.0,PASS
+P3_male_plus_female,Johor,1976,1508.4,1508.4,0.0,PASS
+P3_male_plus_female,Johor,1977,1541.9,1541.9,0.0,PASS
+P3_male_plus_female,Johor,1978,1573.4,1573.4,0.0,PASS
+P3_male_plus_female,Johor,1979,1606.4,1606.4,0.0,PASS
+P3_male_plus_female,Johor,1980,1646.2,1646.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1981,1689.3,1689.3,0.0,PASS
+P3_male_plus_female,Johor,1982,1734.6,1734.6,0.0,PASS
+P3_male_plus_female,Johor,1983,1780.2,1780.2,0.0,PASS
+P3_male_plus_female,Johor,1984,1825.8,1825.8,0.0,PASS
+P3_male_plus_female,Johor,1985,1875.5,1875.5,0.0,PASS
+P3_male_plus_female,Johor,1986,1926.5,1926.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1987,1977.9,1977.9,0.0,PASS
+P3_male_plus_female,Johor,1988,2031.0,2031.0,0.0,PASS
+P3_male_plus_female,Johor,1989,2085.5,2085.5,0.0,PASS
+P3_male_plus_female,Johor,1990,2139.6,2139.6,0.0,PASS
+P3_male_plus_female,Johor,1991,2188.1,2188.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1992,2249.1,2249.1,0.0,PASS
+P3_male_plus_female,Johor,1993,2313.4,2313.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1994,2378.1,2378.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1995,2441.4,2441.3,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1996,2503.9,2504.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1997,2567.5,2567.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,1998,2631.7,2631.7,0.0,PASS
+P3_male_plus_female,Johor,1999,2699.4,2699.4,0.0,PASS
+P3_male_plus_female,Johor,2000,2762.5,2762.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2001,2829.9,2829.9,0.0,PASS
+P3_male_plus_female,Johor,2002,2893.6,2893.6,0.0,PASS
+P3_male_plus_female,Johor,2003,2954.0,2954.0,0.0,PASS
+P3_male_plus_female,Johor,2004,3014.6,3014.7,0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2005,3074.4,3074.4,0.0,PASS
+P3_male_plus_female,Johor,2006,3134.4,3134.4,0.0,PASS
+P3_male_plus_female,Johor,2007,3193.5,3193.5,0.0,PASS
+P3_male_plus_female,Johor,2008,3252.3,3252.3,0.0,PASS
+P3_male_plus_female,Johor,2009,3309.4,3309.4,0.0,PASS
+P3_male_plus_female,Johor,2010,3362.9,3363.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2011,3410.5,3410.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2012,3450.4,3450.4,0.0,PASS
+P3_male_plus_female,Johor,2013,3474.4,3474.4,0.0,PASS
+P3_male_plus_female,Johor,2014,3559.8,3559.8,0.0,PASS
+P3_male_plus_female,Johor,2015,3610.3,3610.3,0.0,PASS
+P3_male_plus_female,Johor,2016,3651.8,3651.8,0.0,PASS
+P3_male_plus_female,Johor,2017,3697.0,3697.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2018,3749.4,3749.4,0.0,PASS
+P3_male_plus_female,Johor,2019,3761.2,3761.2,0.0,PASS
+P3_male_plus_female,Johor,2020,4009.7,4009.7,0.0,PASS
+P3_male_plus_female,Johor,2021,4020.0,4019.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2022,4028.3,4028.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2023,4107.2,4107.2,0.0,PASS
+P3_male_plus_female,Johor,2024,4184.4,4184.3,-0.1,PASS_ROUNDING
+P3_male_plus_female,Johor,2025,4204.1,4204.1,0.0,PASS
+P3_male_plus_female,Johor,2026,4224.3,4224.3,0.0,PASS
+P2_districts_sum_to_state,Kedah,2020,2131.4,2131.4,0.0,PASS
+P2_districts_sum_to_state,Kedah,2021,2151.7,2151.6,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kedah,2022,2163.1,2163.0,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kedah,2023,2189.3,2189.2,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kedah,2024,2217.1,2217.0,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kedah,2025,2227.1,2226.9,-0.2,PASS_ROUNDING
+P2_districts_sum_to_state,Kedah,2026,2237.4,2237.4,0.0,PASS
+P3_male_plus_female,Kedah,1970,989.5,989.5,0.0,PASS
+P3_male_plus_female,Kedah,1971,1003.9,1003.9,0.0,PASS
+P3_male_plus_female,Kedah,1972,1017.3,1017.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1973,1029.0,1029.0,0.0,PASS
+P3_male_plus_female,Kedah,1974,1041.1,1041.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1975,1054.9,1054.9,0.0,PASS
+P3_male_plus_female,Kedah,1976,1065.4,1065.4,0.0,PASS
+P3_male_plus_female,Kedah,1977,1079.8,1079.8,0.0,PASS
+P3_male_plus_female,Kedah,1978,1090.9,1090.9,0.0,PASS
+P3_male_plus_female,Kedah,1979,1103.4,1103.4,0.0,PASS
+P3_male_plus_female,Kedah,1980,1119.9,1119.9,0.0,PASS
+P3_male_plus_female,Kedah,1981,1140.2,1140.2,0.0,PASS
+P3_male_plus_female,Kedah,1982,1161.8,1161.8,0.0,PASS
+P3_male_plus_female,Kedah,1983,1183.9,1183.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1984,1206.1,1206.1,0.0,PASS
+P3_male_plus_female,Kedah,1985,1230.8,1230.8,0.0,PASS
+P3_male_plus_female,Kedah,1986,1256.2,1256.2,0.0,PASS
+P3_male_plus_female,Kedah,1987,1281.1,1281.1,0.0,PASS
+P3_male_plus_female,Kedah,1988,1305.4,1305.4,0.0,PASS
+P3_male_plus_female,Kedah,1989,1328.8,1328.8,0.0,PASS
+P3_male_plus_female,Kedah,1990,1352.2,1352.3,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1991,1371.3,1371.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1992,1402.1,1402.1,0.0,PASS
+P3_male_plus_female,Kedah,1993,1434.1,1434.1,0.0,PASS
+P3_male_plus_female,Kedah,1994,1466.6,1466.7,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1995,1500.2,1500.3,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1996,1533.2,1533.2,0.0,PASS
+P3_male_plus_female,Kedah,1997,1566.9,1567.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,1998,1601.2,1601.2,0.0,PASS
+P3_male_plus_female,Kedah,1999,1636.5,1636.5,0.0,PASS
+P3_male_plus_female,Kedah,2000,1671.9,1671.9,0.0,PASS
+P3_male_plus_female,Kedah,2001,1703.9,1704.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2002,1734.8,1734.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2003,1763.7,1763.7,0.0,PASS
+P3_male_plus_female,Kedah,2004,1792.4,1792.4,0.0,PASS
+P3_male_plus_female,Kedah,2005,1820.3,1820.3,0.0,PASS
+P3_male_plus_female,Kedah,2006,1847.5,1847.5,0.0,PASS
+P3_male_plus_female,Kedah,2007,1874.2,1874.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2008,1900.2,1900.2,0.0,PASS
+P3_male_plus_female,Kedah,2009,1925.3,1925.3,0.0,PASS
+P3_male_plus_female,Kedah,2010,1949.3,1949.3,0.0,PASS
+P3_male_plus_female,Kedah,2011,1971.8,1971.9,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2012,2001.1,2001.1,0.0,PASS
+P3_male_plus_female,Kedah,2013,2039.8,2039.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2014,2062.7,2062.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2015,2096.5,2096.5,0.0,PASS
+P3_male_plus_female,Kedah,2016,2119.7,2119.7,0.0,PASS
+P3_male_plus_female,Kedah,2017,2143.9,2143.9,0.0,PASS
+P3_male_plus_female,Kedah,2018,2163.0,2162.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2019,2173.7,2173.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Kedah,2020,2131.4,2131.4,0.0,PASS
+P3_male_plus_female,Kedah,2021,2151.7,2151.7,0.0,PASS
+P3_male_plus_female,Kedah,2022,2163.1,2163.1,0.0,PASS
+P3_male_plus_female,Kedah,2023,2189.3,2189.3,0.0,PASS
+P3_male_plus_female,Kedah,2024,2217.1,2217.1,0.0,PASS
+P3_male_plus_female,Kedah,2025,2227.1,2227.1,0.0,PASS
+P3_male_plus_female,Kedah,2026,2237.4,2237.4,0.0,PASS
+P2_districts_sum_to_state,Kelantan,2020,1792.5,1792.6,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kelantan,2021,1812.3,1812.3,0.0,PASS
+P2_districts_sum_to_state,Kelantan,2022,1830.6,1830.6,0.0,PASS
+P2_districts_sum_to_state,Kelantan,2023,1859.8,1859.9,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kelantan,2024,1887.9,1887.8,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kelantan,2025,1906.9,1906.8,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Kelantan,2026,1925.3,1925.3,0.0,PASS
+P3_male_plus_female,Kelantan,1970,707.3,707.3,0.0,PASS
+P3_male_plus_female,Kelantan,1971,723.6,723.7,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1972,741.1,741.1,0.0,PASS
+P3_male_plus_female,Kelantan,1973,759.5,759.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1974,776.8,776.8,0.0,PASS
+P3_male_plus_female,Kelantan,1975,796.1,796.1,0.0,PASS
+P3_male_plus_female,Kelantan,1976,814.1,814.1,0.0,PASS
+P3_male_plus_female,Kelantan,1977,834.2,834.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1978,852.5,852.5,0.0,PASS
+P3_male_plus_female,Kelantan,1979,873.7,873.7,0.0,PASS
+P3_male_plus_female,Kelantan,1980,895.7,895.7,0.0,PASS
+P3_male_plus_female,Kelantan,1981,920.5,920.5,0.0,PASS
+P3_male_plus_female,Kelantan,1982,947.1,947.1,0.0,PASS
+P3_male_plus_female,Kelantan,1983,974.6,974.6,0.0,PASS
+P3_male_plus_female,Kelantan,1984,1002.6,1002.6,0.0,PASS
+P3_male_plus_female,Kelantan,1985,1032.9,1032.9,0.0,PASS
+P3_male_plus_female,Kelantan,1986,1062.8,1062.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1987,1093.2,1093.3,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1988,1124.0,1123.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1989,1154.5,1154.5,0.0,PASS
+P3_male_plus_female,Kelantan,1990,1187.2,1187.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1991,1227.0,1227.0,0.0,PASS
+P3_male_plus_female,Kelantan,1992,1243.5,1243.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1993,1259.1,1259.2,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1994,1273.7,1273.7,0.0,PASS
+P3_male_plus_female,Kelantan,1995,1287.7,1287.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,1996,1301.1,1301.1,0.0,PASS
+P3_male_plus_female,Kelantan,1997,1314.4,1314.4,0.0,PASS
+P3_male_plus_female,Kelantan,1998,1328.9,1328.9,0.0,PASS
+P3_male_plus_female,Kelantan,1999,1344.7,1344.7,0.0,PASS
+P3_male_plus_female,Kelantan,2000,1361.4,1361.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,2001,1390.0,1390.0,0.0,PASS
+P3_male_plus_female,Kelantan,2002,1416.7,1416.7,0.0,PASS
+P3_male_plus_female,Kelantan,2003,1440.5,1440.5,0.0,PASS
+P3_male_plus_female,Kelantan,2004,1463.8,1463.8,0.0,PASS
+P3_male_plus_female,Kelantan,2005,1486.3,1486.3,0.0,PASS
+P3_male_plus_female,Kelantan,2006,1507.6,1507.6,0.0,PASS
+P3_male_plus_female,Kelantan,2007,1529.1,1529.1,0.0,PASS
+P3_male_plus_female,Kelantan,2008,1549.8,1549.8,0.0,PASS
+P3_male_plus_female,Kelantan,2009,1570.0,1570.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,2010,1589.9,1589.9,0.0,PASS
+P3_male_plus_female,Kelantan,2011,1618.8,1618.8,0.0,PASS
+P3_male_plus_female,Kelantan,2012,1651.0,1651.0,0.0,PASS
+P3_male_plus_female,Kelantan,2013,1683.5,1683.5,0.0,PASS
+P3_male_plus_female,Kelantan,2014,1723.4,1723.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,2015,1760.6,1760.6,0.0,PASS
+P3_male_plus_female,Kelantan,2016,1796.7,1796.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,2017,1829.0,1829.0,0.0,PASS
+P3_male_plus_female,Kelantan,2018,1860.5,1860.5,0.0,PASS
+P3_male_plus_female,Kelantan,2019,1883.8,1883.8,0.0,PASS
+P3_male_plus_female,Kelantan,2020,1792.5,1792.5,0.0,PASS
+P3_male_plus_female,Kelantan,2021,1812.3,1812.3,0.0,PASS
+P3_male_plus_female,Kelantan,2022,1830.6,1830.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,2023,1859.8,1859.8,0.0,PASS
+P3_male_plus_female,Kelantan,2024,1887.9,1888.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,2025,1906.9,1906.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Kelantan,2026,1925.3,1925.3,0.0,PASS
+P2_districts_sum_to_state,Melaka,2020,998.4,998.4,0.0,PASS
+P2_districts_sum_to_state,Melaka,2021,1004.5,1004.6,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Melaka,2022,1008.6,1008.5,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Melaka,2023,1028.3,1028.3,0.0,PASS
+P2_districts_sum_to_state,Melaka,2024,1046.7,1046.8,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Melaka,2025,1052.0,1052.0,0.0,PASS
+P2_districts_sum_to_state,Melaka,2026,1057.4,1057.4,0.0,PASS
+P3_male_plus_female,Melaka,1970,419.4,419.4,0.0,PASS
+P3_male_plus_female,Melaka,1971,424.9,424.9,0.0,PASS
+P3_male_plus_female,Melaka,1972,429.9,429.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1973,434.2,434.2,0.0,PASS
+P3_male_plus_female,Melaka,1974,438.1,438.2,0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1975,443.1,443.1,0.0,PASS
+P3_male_plus_female,Melaka,1976,447.3,447.3,0.0,PASS
+P3_male_plus_female,Melaka,1977,452.1,452.1,0.0,PASS
+P3_male_plus_female,Melaka,1978,456.2,456.2,0.0,PASS
+P3_male_plus_female,Melaka,1979,460.8,460.8,0.0,PASS
+P3_male_plus_female,Melaka,1980,466.9,466.9,0.0,PASS
+P3_male_plus_female,Melaka,1981,472.6,472.6,0.0,PASS
+P3_male_plus_female,Melaka,1982,478.7,478.7,0.0,PASS
+P3_male_plus_female,Melaka,1983,484.8,484.8,0.0,PASS
+P3_male_plus_female,Melaka,1984,491.2,491.2,0.0,PASS
+P3_male_plus_female,Melaka,1985,498.6,498.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1986,505.6,505.6,0.0,PASS
+P3_male_plus_female,Melaka,1987,513.1,513.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1988,520.5,520.5,0.0,PASS
+P3_male_plus_female,Melaka,1989,527.4,527.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1990,534.2,534.2,0.0,PASS
+P3_male_plus_female,Melaka,1991,540.2,540.2,0.0,PASS
+P3_male_plus_female,Melaka,1992,551.8,551.8,0.0,PASS
+P3_male_plus_female,Melaka,1993,563.3,563.4,0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1994,574.9,574.9,0.0,PASS
+P3_male_plus_female,Melaka,1995,586.1,586.1,0.0,PASS
+P3_male_plus_female,Melaka,1996,597.3,597.4,0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1997,608.8,608.8,0.0,PASS
+P3_male_plus_female,Melaka,1998,620.5,620.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,1999,633.1,633.1,0.0,PASS
+P3_male_plus_female,Melaka,2000,646.6,646.6,0.0,PASS
+P3_male_plus_female,Melaka,2001,665.8,665.8,0.0,PASS
+P3_male_plus_female,Melaka,2002,684.1,684.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,2003,701.8,701.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,2004,719.8,719.8,0.0,PASS
+P3_male_plus_female,Melaka,2005,737.3,737.3,0.0,PASS
+P3_male_plus_female,Melaka,2006,755.0,755.0,0.0,PASS
+P3_male_plus_female,Melaka,2007,772.8,772.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,2008,790.5,790.5,0.0,PASS
+P3_male_plus_female,Melaka,2009,807.8,807.8,0.0,PASS
+P3_male_plus_female,Melaka,2010,823.6,823.6,0.0,PASS
+P3_male_plus_female,Melaka,2011,833.2,833.2,0.0,PASS
+P3_male_plus_female,Melaka,2012,843.2,843.2,0.0,PASS
+P3_male_plus_female,Melaka,2013,856.7,856.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,2014,871.7,871.7,0.0,PASS
+P3_male_plus_female,Melaka,2015,889.0,889.0,0.0,PASS
+P3_male_plus_female,Melaka,2016,901.1,901.1,0.0,PASS
+P3_male_plus_female,Melaka,2017,913.1,913.1,0.0,PASS
+P3_male_plus_female,Melaka,2018,922.4,922.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Melaka,2019,928.4,928.4,0.0,PASS
+P3_male_plus_female,Melaka,2020,998.4,998.4,0.0,PASS
+P3_male_plus_female,Melaka,2021,1004.5,1004.5,0.0,PASS
+P3_male_plus_female,Melaka,2022,1008.6,1008.6,0.0,PASS
+P3_male_plus_female,Melaka,2023,1028.3,1028.3,0.0,PASS
+P3_male_plus_female,Melaka,2024,1046.7,1046.7,0.0,PASS
+P3_male_plus_female,Melaka,2025,1052.0,1052.0,0.0,PASS
+P3_male_plus_female,Melaka,2026,1057.4,1057.4,0.0,PASS
+P2_districts_sum_to_state,Negeri Sembilan,2020,1200.0,1200.0,0.0,PASS
+P2_districts_sum_to_state,Negeri Sembilan,2021,1204.2,1204.1,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Negeri Sembilan,2022,1207.9,1207.9,0.0,PASS
+P2_districts_sum_to_state,Negeri Sembilan,2023,1224.9,1224.9,0.0,PASS
+P2_districts_sum_to_state,Negeri Sembilan,2024,1239.5,1239.5,0.0,PASS
+P2_districts_sum_to_state,Negeri Sembilan,2025,1243.9,1243.9,0.0,PASS
+P2_districts_sum_to_state,Negeri Sembilan,2026,1248.5,1248.5,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1970,500.4,500.4,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1971,508.2,508.2,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1972,515.9,515.9,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1973,522.8,522.9,0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,1974,530.0,530.0,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1975,537.6,537.6,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1976,544.3,544.3,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1977,551.8,551.8,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1978,558.7,558.7,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1979,566.4,566.4,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1980,576.7,576.7,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1981,587.2,587.2,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1982,598.9,598.9,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1983,611.3,611.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,1984,623.8,623.9,0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,1985,638.4,638.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,1986,653.7,653.7,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1987,668.9,668.9,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1988,683.5,683.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,1989,698.2,698.2,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1990,713.4,713.4,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1991,726.2,726.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,1992,741.7,741.7,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1993,757.0,757.0,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1994,772.4,772.4,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1995,787.5,787.5,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1996,802.6,802.6,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1997,818.0,818.0,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,1998,833.5,833.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,1999,849.5,849.5,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2000,866.1,866.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2001,883.7,883.7,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2002,900.3,900.3,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2003,916.8,916.8,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2004,933.7,933.7,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2005,950.3,950.3,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2006,967.0,967.0,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2007,983.5,983.5,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2008,999.6,999.7,0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2009,1014.9,1014.9,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2010,1029.5,1029.5,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2011,1047.4,1047.4,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2012,1057.7,1057.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2013,1072.2,1072.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2014,1079.6,1079.6,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2015,1088.8,1088.8,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2016,1099.3,1099.3,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2017,1114.0,1113.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2018,1122.9,1122.9,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2019,1126.2,1126.2,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2020,1200.0,1200.0,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2021,1204.2,1204.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2022,1207.9,1207.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2023,1224.9,1224.9,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2024,1239.5,1239.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Negeri Sembilan,2025,1243.9,1243.9,0.0,PASS
+P3_male_plus_female,Negeri Sembilan,2026,1248.5,1248.5,0.0,PASS
+P2_districts_sum_to_state,Pahang,2020,1591.3,1591.2,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pahang,2021,1601.5,1601.4,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pahang,2022,1614.3,1614.4,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pahang,2023,1643.2,1643.1,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pahang,2024,1667.7,1667.6,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pahang,2025,1676.8,1676.9,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pahang,2026,1686.2,1686.4,0.2,PASS_ROUNDING
+P3_male_plus_female,Pahang,1970,523.8,523.8,0.0,PASS
+P3_male_plus_female,Pahang,1971,548.4,548.4,0.0,PASS
+P3_male_plus_female,Pahang,1972,574.0,574.0,0.0,PASS
+P3_male_plus_female,Pahang,1973,599.3,599.3,0.0,PASS
+P3_male_plus_female,Pahang,1974,626.0,626.0,0.0,PASS
+P3_male_plus_female,Pahang,1975,653.4,653.4,0.0,PASS
+P3_male_plus_female,Pahang,1976,680.4,680.4,0.0,PASS
+P3_male_plus_female,Pahang,1977,709.5,709.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,1978,738.2,738.2,0.0,PASS
+P3_male_plus_female,Pahang,1979,768.4,768.4,0.0,PASS
+P3_male_plus_female,Pahang,1980,802.1,802.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,1981,820.6,820.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,1982,842.3,842.3,0.0,PASS
+P3_male_plus_female,Pahang,1983,864.8,864.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,1984,888.7,888.7,0.0,PASS
+P3_male_plus_female,Pahang,1985,915.2,915.2,0.0,PASS
+P3_male_plus_female,Pahang,1986,943.5,943.5,0.0,PASS
+P3_male_plus_female,Pahang,1987,971.0,971.0,0.0,PASS
+P3_male_plus_female,Pahang,1988,998.4,998.4,0.0,PASS
+P3_male_plus_female,Pahang,1989,1025.9,1025.9,0.0,PASS
+P3_male_plus_female,Pahang,1990,1054.3,1054.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,1991,1079.6,1079.6,0.0,PASS
+P3_male_plus_female,Pahang,1992,1104.2,1104.2,0.0,PASS
+P3_male_plus_female,Pahang,1993,1128.0,1127.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,1994,1152.3,1152.3,0.0,PASS
+P3_male_plus_female,Pahang,1995,1176.5,1176.5,0.0,PASS
+P3_male_plus_female,Pahang,1996,1200.6,1200.6,0.0,PASS
+P3_male_plus_female,Pahang,1997,1224.7,1224.7,0.0,PASS
+P3_male_plus_female,Pahang,1998,1248.8,1248.8,0.0,PASS
+P3_male_plus_female,Pahang,1999,1272.5,1272.5,0.0,PASS
+P3_male_plus_female,Pahang,2000,1295.8,1295.8,0.0,PASS
+P3_male_plus_female,Pahang,2001,1317.3,1317.3,0.0,PASS
+P3_male_plus_female,Pahang,2002,1338.7,1338.7,0.0,PASS
+P3_male_plus_female,Pahang,2003,1360.0,1360.0,0.0,PASS
+P3_male_plus_female,Pahang,2004,1380.2,1380.3,0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2005,1400.8,1400.8,0.0,PASS
+P3_male_plus_female,Pahang,2006,1421.2,1421.2,0.0,PASS
+P3_male_plus_female,Pahang,2007,1441.4,1441.4,0.0,PASS
+P3_male_plus_female,Pahang,2008,1461.6,1461.6,0.0,PASS
+P3_male_plus_female,Pahang,2009,1481.7,1481.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2010,1501.9,1501.9,0.0,PASS
+P3_male_plus_female,Pahang,2011,1526.8,1526.8,0.0,PASS
+P3_male_plus_female,Pahang,2012,1547.1,1547.1,0.0,PASS
+P3_male_plus_female,Pahang,2013,1568.7,1568.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2014,1591.7,1591.7,0.0,PASS
+P3_male_plus_female,Pahang,2015,1607.9,1607.9,0.0,PASS
+P3_male_plus_female,Pahang,2016,1626.7,1626.7,0.0,PASS
+P3_male_plus_female,Pahang,2017,1647.0,1647.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2018,1664.7,1664.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2019,1671.4,1671.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2020,1591.3,1591.3,0.0,PASS
+P3_male_plus_female,Pahang,2021,1601.5,1601.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2022,1614.3,1614.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2023,1643.2,1643.2,0.0,PASS
+P3_male_plus_female,Pahang,2024,1667.7,1667.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Pahang,2025,1676.8,1676.8,0.0,PASS
+P3_male_plus_female,Pahang,2026,1686.2,1686.2,0.0,PASS
+P2_districts_sum_to_state,Perak,2020,2496.0,2496.2,0.2,PASS_ROUNDING
+P2_districts_sum_to_state,Perak,2021,2515.8,2515.8,0.0,PASS
+P2_districts_sum_to_state,Perak,2022,2514.4,2514.7,0.3,PASS_ROUNDING
+P2_districts_sum_to_state,Perak,2023,2541.2,2541.3,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Perak,2024,2569.4,2569.4,0.0,PASS
+P2_districts_sum_to_state,Perak,2025,2573.8,2573.8,0.0,PASS
+P2_districts_sum_to_state,Perak,2026,2577.9,2578.1,0.2,PASS_ROUNDING
+P3_male_plus_female,Perak,1970,1631.5,1631.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,1971,1650.9,1650.9,0.0,PASS
+P3_male_plus_female,Perak,1972,1669.3,1669.4,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,1973,1686.0,1686.0,0.0,PASS
+P3_male_plus_female,Perak,1974,1702.7,1702.7,0.0,PASS
+P3_male_plus_female,Perak,1975,1720.9,1720.9,0.0,PASS
+P3_male_plus_female,Perak,1976,1736.7,1736.7,0.0,PASS
+P3_male_plus_female,Perak,1977,1755.6,1755.6,0.0,PASS
+P3_male_plus_female,Perak,1978,1771.5,1771.5,0.0,PASS
+P3_male_plus_female,Perak,1979,1789.1,1789.1,0.0,PASS
+P3_male_plus_female,Perak,1980,1807.4,1807.4,0.0,PASS
+P3_male_plus_female,Perak,1981,1838.2,1838.3,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,1982,1866.8,1866.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,1983,1891.1,1891.1,0.0,PASS
+P3_male_plus_female,Perak,1984,1912.3,1912.3,0.0,PASS
+P3_male_plus_female,Perak,1985,1931.5,1931.5,0.0,PASS
+P3_male_plus_female,Perak,1986,1950.8,1950.8,0.0,PASS
+P3_male_plus_female,Perak,1987,1967.5,1967.5,0.0,PASS
+P3_male_plus_female,Perak,1988,1979.5,1979.5,0.0,PASS
+P3_male_plus_female,Perak,1989,1987.7,1987.7,0.0,PASS
+P3_male_plus_female,Perak,1990,1992.9,1993.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,1991,1995.3,1995.3,0.0,PASS
+P3_male_plus_female,Perak,1992,2007.1,2007.1,0.0,PASS
+P3_male_plus_female,Perak,1993,2018.4,2018.4,0.0,PASS
+P3_male_plus_female,Perak,1994,2028.4,2028.4,0.0,PASS
+P3_male_plus_female,Perak,1995,2038.1,2038.1,0.0,PASS
+P3_male_plus_female,Perak,1996,2047.0,2047.0,0.0,PASS
+P3_male_plus_female,Perak,1997,2055.3,2055.3,0.0,PASS
+P3_male_plus_female,Perak,1998,2066.2,2066.2,0.0,PASS
+P3_male_plus_female,Perak,1999,2076.7,2076.7,0.0,PASS
+P3_male_plus_female,Perak,2000,2091.7,2091.7,0.0,PASS
+P3_male_plus_female,Perak,2001,2129.0,2129.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2002,2161.8,2161.8,0.0,PASS
+P3_male_plus_female,Perak,2003,2192.1,2192.1,0.0,PASS
+P3_male_plus_female,Perak,2004,2222.1,2222.1,0.0,PASS
+P3_male_plus_female,Perak,2005,2251.1,2251.1,0.0,PASS
+P3_male_plus_female,Perak,2006,2279.3,2279.4,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2007,2306.4,2306.4,0.0,PASS
+P3_male_plus_female,Perak,2008,2331.6,2331.6,0.0,PASS
+P3_male_plus_female,Perak,2009,2355.7,2355.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2010,2379.0,2379.0,0.0,PASS
+P3_male_plus_female,Perak,2011,2402.7,2402.7,0.0,PASS
+P3_male_plus_female,Perak,2012,2427.0,2426.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2013,2447.2,2447.2,0.0,PASS
+P3_male_plus_female,Perak,2014,2458.8,2458.8,0.0,PASS
+P3_male_plus_female,Perak,2015,2466.9,2466.9,0.0,PASS
+P3_male_plus_female,Perak,2016,2482.1,2482.2,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2017,2493.2,2493.2,0.0,PASS
+P3_male_plus_female,Perak,2018,2503.5,2503.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2019,2508.8,2508.8,0.0,PASS
+P3_male_plus_female,Perak,2020,2496.0,2496.0,0.0,PASS
+P3_male_plus_female,Perak,2021,2515.8,2515.8,0.0,PASS
+P3_male_plus_female,Perak,2022,2514.4,2514.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2023,2541.2,2541.3,0.1,PASS_ROUNDING
+P3_male_plus_female,Perak,2024,2569.4,2569.4,0.0,PASS
+P3_male_plus_female,Perak,2025,2573.8,2573.8,0.0,PASS
+P3_male_plus_female,Perak,2026,2577.9,2577.8,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Perlis,2020,284.9,284.9,0.0,PASS
+P2_districts_sum_to_state,Perlis,2021,287.6,287.6,0.0,PASS
+P2_districts_sum_to_state,Perlis,2022,289.8,289.8,0.0,PASS
+P2_districts_sum_to_state,Perlis,2023,293.1,293.1,0.0,PASS
+P2_districts_sum_to_state,Perlis,2024,296.8,296.8,0.0,PASS
+P2_districts_sum_to_state,Perlis,2025,297.0,297.0,0.0,PASS
+P2_districts_sum_to_state,Perlis,2026,297.3,297.3,0.0,PASS
+P3_male_plus_female,Perlis,1970,125.5,125.5,0.0,PASS
+P3_male_plus_female,Perlis,1971,127.4,127.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1972,129.7,129.7,0.0,PASS
+P3_male_plus_female,Perlis,1973,131.7,131.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1974,133.8,133.8,0.0,PASS
+P3_male_plus_female,Perlis,1975,136.2,136.2,0.0,PASS
+P3_male_plus_female,Perlis,1976,138.3,138.4,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1977,141.0,141.0,0.0,PASS
+P3_male_plus_female,Perlis,1978,143.2,143.2,0.0,PASS
+P3_male_plus_female,Perlis,1979,145.8,145.8,0.0,PASS
+P3_male_plus_female,Perlis,1980,148.7,148.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1981,151.6,151.6,0.0,PASS
+P3_male_plus_female,Perlis,1982,154.9,154.9,0.0,PASS
+P3_male_plus_female,Perlis,1983,158.2,158.2,0.0,PASS
+P3_male_plus_female,Perlis,1984,161.7,161.7,0.0,PASS
+P3_male_plus_female,Perlis,1985,165.9,165.9,0.0,PASS
+P3_male_plus_female,Perlis,1986,170.2,170.2,0.0,PASS
+P3_male_plus_female,Perlis,1987,174.5,174.5,0.0,PASS
+P3_male_plus_female,Perlis,1988,178.8,178.8,0.0,PASS
+P3_male_plus_female,Perlis,1989,182.9,182.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1990,187.0,187.0,0.0,PASS
+P3_male_plus_female,Perlis,1991,190.7,190.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1992,192.7,192.7,0.0,PASS
+P3_male_plus_female,Perlis,1993,194.7,194.7,0.0,PASS
+P3_male_plus_female,Perlis,1994,196.7,196.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1995,198.8,198.8,0.0,PASS
+P3_male_plus_female,Perlis,1996,200.4,200.4,0.0,PASS
+P3_male_plus_female,Perlis,1997,202.1,202.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1998,203.8,203.9,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,1999,205.7,205.7,0.0,PASS
+P3_male_plus_female,Perlis,2000,207.6,207.6,0.0,PASS
+P3_male_plus_female,Perlis,2001,210.4,210.4,0.0,PASS
+P3_male_plus_female,Perlis,2002,213.2,213.2,0.0,PASS
+P3_male_plus_female,Perlis,2003,216.0,216.0,0.0,PASS
+P3_male_plus_female,Perlis,2004,218.8,218.8,0.0,PASS
+P3_male_plus_female,Perlis,2005,221.6,221.6,0.0,PASS
+P3_male_plus_female,Perlis,2006,224.4,224.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,2007,227.2,227.2,0.0,PASS
+P3_male_plus_female,Perlis,2008,230.1,230.2,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,2009,233.0,232.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,2010,235.8,235.8,0.0,PASS
+P3_male_plus_female,Perlis,2011,237.3,237.4,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,2012,239.4,239.4,0.0,PASS
+P3_male_plus_female,Perlis,2013,242.1,242.1,0.0,PASS
+P3_male_plus_female,Perlis,2014,245.1,245.1,0.0,PASS
+P3_male_plus_female,Perlis,2015,248.5,248.5,0.0,PASS
+P3_male_plus_female,Perlis,2016,251.0,251.0,0.0,PASS
+P3_male_plus_female,Perlis,2017,252.0,252.0,0.0,PASS
+P3_male_plus_female,Perlis,2018,253.5,253.5,0.0,PASS
+P3_male_plus_female,Perlis,2019,254.0,254.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,2020,284.9,284.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,2021,287.6,287.6,0.0,PASS
+P3_male_plus_female,Perlis,2022,289.8,289.8,0.0,PASS
+P3_male_plus_female,Perlis,2023,293.1,293.1,0.0,PASS
+P3_male_plus_female,Perlis,2024,296.8,296.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Perlis,2025,297.0,297.0,0.0,PASS
+P3_male_plus_female,Perlis,2026,297.3,297.3,0.0,PASS
+P2_districts_sum_to_state,Pulau Pinang,2020,1740.4,1740.4,0.0,PASS
+P2_districts_sum_to_state,Pulau Pinang,2021,1740.0,1740.0,0.0,PASS
+P2_districts_sum_to_state,Pulau Pinang,2022,1740.9,1741.0,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pulau Pinang,2023,1772.6,1772.7,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pulau Pinang,2024,1800.5,1800.4,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Pulau Pinang,2025,1804.3,1804.3,0.0,PASS
+P2_districts_sum_to_state,Pulau Pinang,2026,1808.3,1808.3,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1970,808.6,808.6,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1971,823.7,823.7,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1972,838.9,838.9,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1973,852.9,852.9,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1974,866.7,866.7,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1975,881.7,881.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1976,896.4,896.4,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1977,912.2,912.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1978,925.7,925.7,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1979,940.4,940.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1980,960.7,960.7,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1981,975.4,975.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1982,990.9,991.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1983,1006.2,1006.2,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1984,1021.1,1021.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1985,1037.9,1037.9,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1986,1054.8,1054.9,0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1987,1070.5,1070.5,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1988,1086.6,1086.6,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1989,1103.4,1103.4,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1990,1118.5,1118.5,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1991,1133.6,1133.6,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1992,1154.0,1154.0,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1993,1174.7,1174.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,1994,1195.9,1195.9,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1995,1216.6,1216.6,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1996,1237.5,1237.5,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1997,1259.0,1259.0,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1998,1282.7,1282.7,0.0,PASS
+P3_male_plus_female,Pulau Pinang,1999,1307.5,1307.5,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2000,1332.7,1332.7,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2001,1361.0,1361.0,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2002,1387.3,1387.3,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2003,1412.2,1412.2,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2004,1436.6,1436.6,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2005,1460.4,1460.4,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2006,1484.1,1484.2,0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,2007,1507.8,1507.8,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2008,1531.3,1531.3,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2009,1554.3,1554.3,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2010,1575.9,1575.9,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2011,1601.0,1600.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,2012,1623.2,1623.2,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2013,1662.6,1662.6,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2014,1678.1,1678.1,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2015,1698.1,1698.1,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2016,1717.7,1717.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,2017,1744.1,1744.1,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2018,1762.8,1762.8,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2019,1768.8,1768.8,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2020,1740.4,1740.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Pulau Pinang,2021,1740.0,1740.0,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2022,1740.9,1740.9,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2023,1772.6,1772.6,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2024,1800.5,1800.5,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2025,1804.3,1804.3,0.0,PASS
+P3_male_plus_female,Pulau Pinang,2026,1808.3,1808.3,0.0,PASS
+P2_districts_sum_to_state,Sabah,2020,3418.8,3418.6,-0.2,PASS_ROUNDING
+P2_districts_sum_to_state,Sabah,2021,3412.6,3412.5,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Sabah,2022,3414.9,3414.7,-0.2,PASS_ROUNDING
+P2_districts_sum_to_state,Sabah,2023,3596.7,3596.7,0.0,PASS
+P2_districts_sum_to_state,Sabah,2024,3742.0,3742.1,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Sabah,2025,3754.5,3754.5,0.0,PASS
+P2_districts_sum_to_state,Sabah,2026,3767.0,3766.8,-0.2,PASS_ROUNDING
+P3_male_plus_female,Sabah,1970,698.1,698.1,0.0,PASS
+P3_male_plus_female,Sabah,1971,728.1,728.1,0.0,PASS
+P3_male_plus_female,Sabah,1972,759.5,759.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1973,792.4,792.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1974,826.9,826.9,0.0,PASS
+P3_male_plus_female,Sabah,1975,863.0,863.0,0.0,PASS
+P3_male_plus_female,Sabah,1976,898.1,898.1,0.0,PASS
+P3_male_plus_female,Sabah,1977,934.8,934.9,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1978,973.2,973.2,0.0,PASS
+P3_male_plus_female,Sabah,1979,1013.3,1013.3,0.0,PASS
+P3_male_plus_female,Sabah,1980,1055.1,1055.1,0.0,PASS
+P3_male_plus_female,Sabah,1981,1119.6,1119.6,0.0,PASS
+P3_male_plus_female,Sabah,1982,1186.5,1186.5,0.0,PASS
+P3_male_plus_female,Sabah,1983,1255.1,1255.1,0.0,PASS
+P3_male_plus_female,Sabah,1984,1325.7,1325.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1985,1398.7,1398.7,0.0,PASS
+P3_male_plus_female,Sabah,1986,1474.4,1474.4,0.0,PASS
+P3_male_plus_female,Sabah,1987,1550.8,1550.8,0.0,PASS
+P3_male_plus_female,Sabah,1988,1629.5,1629.5,0.0,PASS
+P3_male_plus_female,Sabah,1989,1708.9,1708.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1990,1787.6,1787.6,0.0,PASS
+P3_male_plus_female,Sabah,1991,1814.5,1814.5,0.0,PASS
+P3_male_plus_female,Sabah,1992,1896.6,1896.6,0.0,PASS
+P3_male_plus_female,Sabah,1993,1981.9,1981.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1994,2068.9,2069.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1995,2155.9,2155.9,0.0,PASS
+P3_male_plus_female,Sabah,1996,2245.0,2245.0,0.0,PASS
+P3_male_plus_female,Sabah,1997,2333.7,2333.7,0.0,PASS
+P3_male_plus_female,Sabah,1998,2423.5,2423.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,1999,2513.5,2513.5,0.0,PASS
+P3_male_plus_female,Sabah,2000,2603.5,2603.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2001,2663.3,2663.3,0.0,PASS
+P3_male_plus_female,Sabah,2002,2719.1,2719.1,0.0,PASS
+P3_male_plus_female,Sabah,2003,2774.0,2774.0,0.0,PASS
+P3_male_plus_female,Sabah,2004,2833.4,2833.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2005,2897.0,2897.0,0.0,PASS
+P3_male_plus_female,Sabah,2006,2962.9,2962.9,0.0,PASS
+P3_male_plus_female,Sabah,2007,3032.3,3032.3,0.0,PASS
+P3_male_plus_female,Sabah,2008,3105.1,3105.1,0.0,PASS
+P3_male_plus_female,Sabah,2009,3181.1,3181.2,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2010,3260.0,3259.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2011,3345.5,3345.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2012,3432.7,3432.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2013,3611.5,3611.5,0.0,PASS
+P3_male_plus_female,Sabah,2014,3669.9,3670.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2015,3720.5,3720.5,0.0,PASS
+P3_male_plus_female,Sabah,2016,3802.8,3802.8,0.0,PASS
+P3_male_plus_female,Sabah,2017,3855.9,3855.9,0.0,PASS
+P3_male_plus_female,Sabah,2018,3898.4,3898.4,0.0,PASS
+P3_male_plus_female,Sabah,2019,3904.4,3904.4,0.0,PASS
+P3_male_plus_female,Sabah,2020,3418.8,3418.8,0.0,PASS
+P3_male_plus_female,Sabah,2021,3412.6,3412.6,0.0,PASS
+P3_male_plus_female,Sabah,2022,3414.9,3415.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2023,3596.7,3596.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2024,3742.0,3741.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sabah,2025,3754.5,3754.5,0.0,PASS
+P3_male_plus_female,Sabah,2026,3767.0,3767.0,0.0,PASS
+P2_districts_sum_to_state,Sarawak,2020,2453.7,2453.5,-0.2,PASS_ROUNDING
+P2_districts_sum_to_state,Sarawak,2021,2465.6,2465.7,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Sarawak,2022,2473.5,2473.5,0.0,PASS
+P2_districts_sum_to_state,Sarawak,2023,2502.3,2502.3,0.0,PASS
+P2_districts_sum_to_state,Sarawak,2024,2517.5,2517.4,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Sarawak,2025,2528.9,2528.8,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Sarawak,2026,2539.8,2539.8,0.0,PASS
+P3_male_plus_female,Sarawak,1970,1037.0,1037.0,0.0,PASS
+P3_male_plus_female,Sarawak,1971,1065.2,1065.2,0.0,PASS
+P3_male_plus_female,Sarawak,1972,1094.3,1094.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1973,1124.1,1124.1,0.0,PASS
+P3_male_plus_female,Sarawak,1974,1154.7,1154.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1975,1186.2,1186.2,0.0,PASS
+P3_male_plus_female,Sarawak,1976,1217.5,1217.5,0.0,PASS
+P3_male_plus_female,Sarawak,1977,1249.6,1249.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1978,1282.5,1282.5,0.0,PASS
+P3_male_plus_female,Sarawak,1979,1316.4,1316.4,0.0,PASS
+P3_male_plus_female,Sarawak,1980,1351.1,1351.1,0.0,PASS
+P3_male_plus_female,Sarawak,1981,1380.2,1380.2,0.0,PASS
+P3_male_plus_female,Sarawak,1982,1410.4,1410.3,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1983,1440.6,1440.7,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1984,1471.4,1471.4,0.0,PASS
+P3_male_plus_female,Sarawak,1985,1503.9,1503.9,0.0,PASS
+P3_male_plus_female,Sarawak,1986,1539.5,1539.5,0.0,PASS
+P3_male_plus_female,Sarawak,1987,1576.0,1576.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1988,1614.6,1614.6,0.0,PASS
+P3_male_plus_female,Sarawak,1989,1652.5,1652.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1990,1687.8,1687.8,0.0,PASS
+P3_male_plus_female,Sarawak,1991,1723.8,1723.8,0.0,PASS
+P3_male_plus_female,Sarawak,1992,1758.4,1758.4,0.0,PASS
+P3_male_plus_female,Sarawak,1993,1795.2,1795.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1994,1831.9,1831.9,0.0,PASS
+P3_male_plus_female,Sarawak,1995,1868.1,1868.1,0.0,PASS
+P3_male_plus_female,Sarawak,1996,1904.5,1904.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1997,1942.4,1942.4,0.0,PASS
+P3_male_plus_female,Sarawak,1998,1982.1,1982.2,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,1999,2024.5,2024.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,2000,2071.5,2071.5,0.0,PASS
+P3_male_plus_female,Sarawak,2001,2115.6,2115.6,0.0,PASS
+P3_male_plus_female,Sarawak,2002,2158.3,2158.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,2003,2199.0,2199.0,0.0,PASS
+P3_male_plus_female,Sarawak,2004,2240.4,2240.4,0.0,PASS
+P3_male_plus_female,Sarawak,2005,2282.4,2282.4,0.0,PASS
+P3_male_plus_female,Sarawak,2006,2324.9,2324.9,0.0,PASS
+P3_male_plus_female,Sarawak,2007,2366.1,2366.1,0.0,PASS
+P3_male_plus_female,Sarawak,2008,2408.4,2408.4,0.0,PASS
+P3_male_plus_female,Sarawak,2009,2450.8,2450.8,0.0,PASS
+P3_male_plus_female,Sarawak,2010,2487.1,2487.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,2011,2527.9,2527.9,0.0,PASS
+P3_male_plus_female,Sarawak,2012,2569.7,2569.7,0.0,PASS
+P3_male_plus_female,Sarawak,2013,2642.5,2642.5,0.0,PASS
+P3_male_plus_female,Sarawak,2014,2664.0,2663.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,2015,2701.5,2701.5,0.0,PASS
+P3_male_plus_female,Sarawak,2016,2738.7,2738.7,0.0,PASS
+P3_male_plus_female,Sarawak,2017,2766.3,2766.3,0.0,PASS
+P3_male_plus_female,Sarawak,2018,2791.7,2791.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,2019,2806.0,2806.0,0.0,PASS
+P3_male_plus_female,Sarawak,2020,2453.7,2453.7,0.0,PASS
+P3_male_plus_female,Sarawak,2021,2465.6,2465.6,0.0,PASS
+P3_male_plus_female,Sarawak,2022,2473.5,2473.5,0.0,PASS
+P3_male_plus_female,Sarawak,2023,2502.3,2502.4,0.1,PASS_ROUNDING
+P3_male_plus_female,Sarawak,2024,2517.5,2517.5,0.0,PASS
+P3_male_plus_female,Sarawak,2025,2528.9,2528.9,0.0,PASS
+P3_male_plus_female,Sarawak,2026,2539.8,2539.8,0.0,PASS
+P2_districts_sum_to_state,Selangor,2020,6994.4,6994.3,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Selangor,2021,7014.7,7014.6,-0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Selangor,2022,7050.3,7050.3,0.0,PASS
+P2_districts_sum_to_state,Selangor,2023,7209.7,7209.7,0.0,PASS
+P2_districts_sum_to_state,Selangor,2024,7362.7,7362.7,0.0,PASS
+P2_districts_sum_to_state,Selangor,2025,7408.7,7408.8,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Selangor,2026,7454.2,7454.3,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1970,1696.4,1696.4,0.0,PASS
+P3_male_plus_female,Selangor,1971,1770.9,1770.9,0.0,PASS
+P3_male_plus_female,Selangor,1972,1846.7,1846.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1973,1922.4,1922.4,0.0,PASS
+P3_male_plus_female,Selangor,1974,1997.9,1998.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1975,2075.3,2075.3,0.0,PASS
+P3_male_plus_female,Selangor,1976,2154.3,2154.3,0.0,PASS
+P3_male_plus_female,Selangor,1977,2237.7,2237.7,0.0,PASS
+P3_male_plus_female,Selangor,1978,2320.9,2320.9,0.0,PASS
+P3_male_plus_female,Selangor,1979,2407.3,2407.3,0.0,PASS
+P3_male_plus_female,Selangor,1980,1524.1,1524.1,0.0,PASS
+P3_male_plus_female,Selangor,1981,1594.6,1594.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1982,1668.3,1668.3,0.0,PASS
+P3_male_plus_female,Selangor,1983,1743.8,1743.8,0.0,PASS
+P3_male_plus_female,Selangor,1984,1822.0,1821.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1985,1906.1,1906.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1986,1992.6,1992.6,0.0,PASS
+P3_male_plus_female,Selangor,1987,2079.7,2079.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1988,2166.9,2166.9,0.0,PASS
+P3_male_plus_female,Selangor,1989,2254.9,2254.9,0.0,PASS
+P3_male_plus_female,Selangor,1990,2345.4,2345.4,0.0,PASS
+P3_male_plus_female,Selangor,1991,2431.2,2431.2,0.0,PASS
+P3_male_plus_female,Selangor,1992,2605.6,2605.7,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1993,2788.7,2788.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,1994,2978.5,2978.5,0.0,PASS
+P3_male_plus_female,Selangor,1995,3173.2,3173.2,0.0,PASS
+P3_male_plus_female,Selangor,1996,3371.1,3371.1,0.0,PASS
+P3_male_plus_female,Selangor,1997,3571.9,3571.9,0.0,PASS
+P3_male_plus_female,Selangor,1998,3777.5,3777.5,0.0,PASS
+P3_male_plus_female,Selangor,1999,3981.9,3981.9,0.0,PASS
+P3_male_plus_female,Selangor,2000,4188.9,4188.9,0.0,PASS
+P3_male_plus_female,Selangor,2001,4317.5,4317.5,0.0,PASS
+P3_male_plus_female,Selangor,2002,4446.3,4446.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2003,4577.3,4577.3,0.0,PASS
+P3_male_plus_female,Selangor,2004,4712.8,4712.8,0.0,PASS
+P3_male_plus_female,Selangor,2005,4849.6,4849.6,0.0,PASS
+P3_male_plus_female,Selangor,2006,4986.2,4986.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2007,5127.1,5127.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2008,5268.5,5268.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2009,5417.8,5417.8,0.0,PASS
+P3_male_plus_female,Selangor,2010,5502.1,5502.1,0.0,PASS
+P3_male_plus_female,Selangor,2011,5600.3,5600.3,0.0,PASS
+P3_male_plus_female,Selangor,2012,5702.4,5702.4,0.0,PASS
+P3_male_plus_female,Selangor,2013,5904.7,5904.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2014,6051.3,6051.3,0.0,PASS
+P3_male_plus_female,Selangor,2015,6178.0,6178.0,0.0,PASS
+P3_male_plus_female,Selangor,2016,6291.5,6291.5,0.0,PASS
+P3_male_plus_female,Selangor,2017,6380.7,6380.7,0.0,PASS
+P3_male_plus_female,Selangor,2018,6475.0,6475.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2019,6506.1,6506.1,0.0,PASS
+P3_male_plus_female,Selangor,2020,6994.4,6994.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2021,7014.7,7014.7,0.0,PASS
+P3_male_plus_female,Selangor,2022,7050.3,7050.3,0.0,PASS
+P3_male_plus_female,Selangor,2023,7209.7,7209.7,0.0,PASS
+P3_male_plus_female,Selangor,2024,7362.7,7362.7,0.0,PASS
+P3_male_plus_female,Selangor,2025,7408.7,7408.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Selangor,2026,7454.2,7454.2,0.0,PASS
+P2_districts_sum_to_state,Terengganu,2020,1149.4,1149.5,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Terengganu,2021,1170.7,1170.7,0.0,PASS
+P2_districts_sum_to_state,Terengganu,2022,1186.6,1186.6,0.0,PASS
+P2_districts_sum_to_state,Terengganu,2023,1210.0,1210.0,0.0,PASS
+P2_districts_sum_to_state,Terengganu,2024,1231.5,1231.5,0.0,PASS
+P2_districts_sum_to_state,Terengganu,2025,1245.8,1245.9,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,Terengganu,2026,1260.9,1260.9,0.0,PASS
+P3_male_plus_female,Terengganu,1970,418.8,418.8,0.0,PASS
+P3_male_plus_female,Terengganu,1971,429.0,428.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1972,439.5,439.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1973,451.0,451.0,0.0,PASS
+P3_male_plus_female,Terengganu,1974,462.0,462.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1975,474.9,474.9,0.0,PASS
+P3_male_plus_female,Terengganu,1976,486.9,486.9,0.0,PASS
+P3_male_plus_female,Terengganu,1977,500.9,500.9,0.0,PASS
+P3_male_plus_female,Terengganu,1978,513.4,513.4,0.0,PASS
+P3_male_plus_female,Terengganu,1979,527.0,527.0,0.0,PASS
+P3_male_plus_female,Terengganu,1980,541.7,541.7,0.0,PASS
+P3_male_plus_female,Terengganu,1981,560.8,560.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1982,581.4,581.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1983,602.9,603.0,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1984,625.8,625.8,0.0,PASS
+P3_male_plus_female,Terengganu,1985,651.6,651.6,0.0,PASS
+P3_male_plus_female,Terengganu,1986,678.3,678.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1987,704.3,704.3,0.0,PASS
+P3_male_plus_female,Terengganu,1988,730.9,730.9,0.0,PASS
+P3_male_plus_female,Terengganu,1989,757.3,757.3,0.0,PASS
+P3_male_plus_female,Terengganu,1990,784.6,784.6,0.0,PASS
+P3_male_plus_female,Terengganu,1991,810.7,810.8,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1992,823.8,823.8,0.0,PASS
+P3_male_plus_female,Terengganu,1993,836.5,836.5,0.0,PASS
+P3_male_plus_female,Terengganu,1994,848.6,848.6,0.0,PASS
+P3_male_plus_female,Terengganu,1995,860.0,860.0,0.0,PASS
+P3_male_plus_female,Terengganu,1996,870.7,870.7,0.0,PASS
+P3_male_plus_female,Terengganu,1997,880.4,880.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1998,889.6,889.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,1999,896.6,896.6,0.0,PASS
+P3_male_plus_female,Terengganu,2000,902.6,902.6,0.0,PASS
+P3_male_plus_female,Terengganu,2001,920.0,919.9,-0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,2002,936.6,936.6,0.0,PASS
+P3_male_plus_female,Terengganu,2003,951.4,951.4,0.0,PASS
+P3_male_plus_female,Terengganu,2004,966.6,966.6,0.0,PASS
+P3_male_plus_female,Terengganu,2005,981.4,981.4,0.0,PASS
+P3_male_plus_female,Terengganu,2006,995.9,995.9,0.0,PASS
+P3_male_plus_female,Terengganu,2007,1010.4,1010.4,0.0,PASS
+P3_male_plus_female,Terengganu,2008,1025.2,1025.2,0.0,PASS
+P3_male_plus_female,Terengganu,2009,1040.7,1040.7,0.0,PASS
+P3_male_plus_female,Terengganu,2010,1055.4,1055.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,2011,1079.0,1079.0,0.0,PASS
+P3_male_plus_female,Terengganu,2012,1094.1,1094.1,0.0,PASS
+P3_male_plus_female,Terengganu,2013,1113.4,1113.4,0.0,PASS
+P3_male_plus_female,Terengganu,2014,1140.4,1140.4,0.0,PASS
+P3_male_plus_female,Terengganu,2015,1161.0,1161.0,0.0,PASS
+P3_male_plus_female,Terengganu,2016,1183.4,1183.4,0.0,PASS
+P3_male_plus_female,Terengganu,2017,1208.0,1208.0,0.0,PASS
+P3_male_plus_female,Terengganu,2018,1228.3,1228.3,0.0,PASS
+P3_male_plus_female,Terengganu,2019,1244.5,1244.5,0.0,PASS
+P3_male_plus_female,Terengganu,2020,1149.4,1149.5,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,2021,1170.7,1170.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,2022,1186.6,1186.6,0.0,PASS
+P3_male_plus_female,Terengganu,2023,1210.0,1210.1,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,2024,1231.5,1231.6,0.1,PASS_ROUNDING
+P3_male_plus_female,Terengganu,2025,1245.8,1245.8,0.0,PASS
+P3_male_plus_female,Terengganu,2026,1260.9,1261.0,0.1,PASS_ROUNDING
+P2_districts_sum_to_state,W.P. Kuala Lumpur,2020,1982.1,1982.1,0.0,PASS
+P2_districts_sum_to_state,W.P. Kuala Lumpur,2021,1964.0,1964.0,0.0,PASS
+P2_districts_sum_to_state,W.P. Kuala Lumpur,2022,1961.2,1961.2,0.0,PASS
+P2_districts_sum_to_state,W.P. Kuala Lumpur,2023,2005.7,2005.7,0.0,PASS
+P2_districts_sum_to_state,W.P. Kuala Lumpur,2024,2067.5,2067.5,0.0,PASS
+P2_districts_sum_to_state,W.P. Kuala Lumpur,2025,2075.2,2075.2,0.0,PASS
+P2_districts_sum_to_state,W.P. Kuala Lumpur,2026,2082.3,2082.3,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1980,982.9,982.9,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1981,1006.1,1006.0,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Kuala Lumpur,1982,1028.5,1028.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1983,1050.7,1050.7,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1984,1072.2,1072.2,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1985,1095.9,1095.9,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1986,1120.5,1120.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1987,1144.9,1144.9,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1988,1169.6,1169.6,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1989,1194.1,1194.1,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1990,1217.8,1217.8,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1991,1262.1,1262.1,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1992,1281.5,1281.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1993,1298.7,1298.7,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1994,1314.4,1314.4,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1995,1328.9,1329.0,0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Kuala Lumpur,1996,1342.5,1342.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1997,1356.4,1356.4,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1998,1373.0,1373.0,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,1999,1394.0,1394.0,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2000,1416.0,1416.0,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2001,1446.2,1446.2,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2002,1474.1,1474.1,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2003,1500.5,1500.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2004,1526.4,1526.4,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2005,1551.8,1551.8,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2006,1577.5,1577.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2007,1603.3,1603.3,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2008,1628.9,1628.9,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2009,1652.8,1652.8,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2010,1674.8,1674.7,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Kuala Lumpur,2011,1693.0,1693.0,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2012,1702.1,1702.1,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2013,1723.4,1723.4,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2014,1737.4,1737.4,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2015,1780.4,1780.4,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2016,1789.7,1789.7,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2017,1793.2,1793.2,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2018,1790.0,1790.1,0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Kuala Lumpur,2019,1782.5,1782.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2020,1982.1,1982.1,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2021,1964.0,1964.0,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2022,1961.2,1961.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Kuala Lumpur,2023,2005.7,2005.7,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2024,2067.5,2067.5,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2025,2075.2,2075.2,0.0,PASS
+P3_male_plus_female,W.P. Kuala Lumpur,2026,2082.3,2082.3,0.0,PASS
+P2_districts_sum_to_state,W.P. Labuan,2020,95.1,95.1,0.0,PASS
+P2_districts_sum_to_state,W.P. Labuan,2021,96.0,96.0,0.0,PASS
+P2_districts_sum_to_state,W.P. Labuan,2022,96.9,96.9,0.0,PASS
+P2_districts_sum_to_state,W.P. Labuan,2023,99.0,99.0,0.0,PASS
+P2_districts_sum_to_state,W.P. Labuan,2024,100.8,100.8,0.0,PASS
+P2_districts_sum_to_state,W.P. Labuan,2025,100.9,100.9,0.0,PASS
+P2_districts_sum_to_state,W.P. Labuan,2026,101.1,101.1,0.0,PASS
+P3_male_plus_female,W.P. Labuan,1991,52.9,52.9,0.0,PASS
+P3_male_plus_female,W.P. Labuan,1992,55.4,55.5,0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Labuan,1993,57.9,57.9,0.0,PASS
+P3_male_plus_female,W.P. Labuan,1994,60.3,60.3,0.0,PASS
+P3_male_plus_female,W.P. Labuan,1995,62.7,62.7,0.0,PASS
+P3_male_plus_female,W.P. Labuan,1996,65.1,65.1,0.0,PASS
+P3_male_plus_female,W.P. Labuan,1997,67.7,67.7,0.0,PASS
+P3_male_plus_female,W.P. Labuan,1998,70.5,70.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Labuan,1999,73.3,73.3,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2000,76.1,76.1,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2001,77.0,77.0,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2002,77.8,77.8,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2003,78.7,78.8,0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Labuan,2004,79.7,79.7,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2005,80.8,80.8,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2006,82.0,82.0,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2007,83.2,83.2,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2008,84.6,84.6,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2009,86.3,86.3,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2010,88.2,88.2,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2011,89.4,89.4,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2012,90.5,90.6,0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Labuan,2013,91.4,91.4,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2014,93.8,93.8,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2015,95.1,95.1,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2016,96.8,96.8,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2017,97.6,97.5,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Labuan,2018,99.0,99.0,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2019,99.3,99.3,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2020,95.1,95.1,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2021,96.0,96.0,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2022,96.9,96.8,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Labuan,2023,99.0,99.0,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2024,100.8,100.8,0.0,PASS
+P3_male_plus_female,W.P. Labuan,2025,100.9,101.0,0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Labuan,2026,101.1,101.1,0.0,PASS
+P2_districts_sum_to_state,W.P. Putrajaya,2020,109.2,109.2,0.0,PASS
+P2_districts_sum_to_state,W.P. Putrajaya,2021,115.2,115.2,0.0,PASS
+P2_districts_sum_to_state,W.P. Putrajaya,2022,117.0,117.0,0.0,PASS
+P2_districts_sum_to_state,W.P. Putrajaya,2023,118.8,118.8,0.0,PASS
+P2_districts_sum_to_state,W.P. Putrajaya,2024,120.3,120.3,0.0,PASS
+P2_districts_sum_to_state,W.P. Putrajaya,2025,120.7,120.7,0.0,PASS
+P2_districts_sum_to_state,W.P. Putrajaya,2026,121.4,121.4,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2010,73.4,73.4,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2011,77.5,77.4,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Putrajaya,2012,78.3,78.3,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2013,79.7,79.6,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Putrajaya,2014,80.9,80.9,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2015,83.0,83.0,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2016,84.4,84.5,0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Putrajaya,2017,87.5,87.5,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2018,97.2,97.1,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Putrajaya,2019,103.7,103.7,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2020,109.2,109.2,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2021,115.2,115.2,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2022,117.0,117.0,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2023,118.8,118.8,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2024,120.3,120.2,-0.1,PASS_ROUNDING
+P3_male_plus_female,W.P. Putrajaya,2025,120.7,120.7,0.0,PASS
+P3_male_plus_female,W.P. Putrajaya,2026,121.4,121.3,-0.1,PASS_ROUNDING
