@@ -116,6 +116,11 @@ for scope, pk, pr in (("OE (by-vote total)", int(pk_oe), PRINTED["mengurus"][1])
         "INFO" if abs(d) <= 60 else "FAIL")  # book prints whole RM, PKKP keeps sen:
         # agreement within ~RM1 per vote is rounding, not a discrepancy
 
+import sys
+sys.path.insert(0, os.path.join(HERE, "../../../..", "qa"))
+from source_anomaly import classify  # noqa: E402  FAIL -> SOURCE_ANOMALY only where the register proves it
+out = classify(out, os.path.join(DATA, "_source_anomalies_2026.csv"))
+
 dest = os.path.join(DATA, "_validation_2026.csv")
 with open(dest, "w", newline="") as f:
     w = csv.writer(f)

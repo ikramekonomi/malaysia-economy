@@ -180,7 +180,7 @@ A_maksud_total,P.14,sebenar_2023,25111400,25111400,PASS
 A_maksud_total,P.14,anggaran_asal_2024,88231000,88231000,PASS
 A_maksud_total,P.14,anggaran_2025,123995000,123995000,PASS
 A_maksud_total,P.15,sebenar_2022,0,0,PASS
-A_maksud_total,P.15,sebenar_2023,3339196916,3339196915,FAIL
+A_maksud_total,P.15,sebenar_2023,3339196916,3339196915,SOURCE_ANOMALY
 A_maksud_total,P.15,anggaran_asal_2024,2940748300,2940748300,PASS
 A_maksud_total,P.15,anggaran_2025,2437448500,2437448500,PASS
 A_maksud_total,P.20,sebenar_2022,138478279,138478279,PASS
@@ -342,9 +342,9 @@ C_mengurus,emolumen,sebenar_2022,87789106716,87789106716,PASS
 C_mengurus,lain,sebenar_2022,206567653899,206567653899,PASS
 C_mengurus,jumlah,sebenar_2022,294356760615,294356760615,PASS
 D_pembangunan,cara_langsung_excl_P70,sebenar_2022,69928178120,69928178120,PASS
-D_pembangunan,pinjaman,sebenar_2022,1645783306,1645783305,FAIL
-D_pembangunan,jumlah_incl_P70,sebenar_2022,71573961426,71573961425,FAIL
-E_jumlah_besar,mengurus+pembangunan,sebenar_2022,365930722041,365930722040,FAIL
+D_pembangunan,pinjaman,sebenar_2022,1645783306,1645783305,SOURCE_ANOMALY
+D_pembangunan,jumlah_incl_P70,sebenar_2022,71573961426,71573961425,SOURCE_ANOMALY
+E_jumlah_besar,mengurus+pembangunan,sebenar_2022,365930722041,365930722040,SOURCE_ANOMALY
 B_tanggungan,emolumen,sebenar_2023,105695935,105695935,PASS
 B_tanggungan,lain,sebenar_2023,86038914496,86038914496,PASS
 B_tanggungan,jumlah,sebenar_2023,86144610431,86144610431,PASS
@@ -353,8 +353,8 @@ C_mengurus,lain,sebenar_2023,223099967133,223099967133,PASS
 C_mengurus,jumlah,sebenar_2023,314959481731,314959481731,PASS
 D_pembangunan,cara_langsung_excl_P70,sebenar_2023,94868859829,94868859829,PASS
 D_pembangunan,pinjaman,sebenar_2023,1220877293,1220877293,PASS
-D_pembangunan,jumlah_incl_P70,sebenar_2023,96089737122,96089737123,FAIL
-E_jumlah_besar,mengurus+pembangunan,sebenar_2023,411049218853,411049218854,FAIL
+D_pembangunan,jumlah_incl_P70,sebenar_2023,96089737122,96089737123,SOURCE_ANOMALY
+E_jumlah_besar,mengurus+pembangunan,sebenar_2023,411049218853,411049218854,SOURCE_ANOMALY
 B_tanggungan,emolumen,anggaran_asal_2024,112791800,112791800,PASS
 B_tanggungan,lain,anggaran_asal_2024,89132943900,89132943900,PASS
 B_tanggungan,jumlah,anggaran_asal_2024,89245735700,89245735700,PASS
@@ -368,8 +368,8 @@ E_jumlah_besar,mengurus+pembangunan,anggaran_asal_2024,395800000000,395800000000
 B_tanggungan,emolumen,anggaran_2025,111193600,111193600,PASS
 B_tanggungan,lain,anggaran_2025,101934792100,101934792100,PASS
 B_tanggungan,jumlah,anggaran_2025,102045985700,102045985700,PASS
-C_mengurus,emolumen,anggaran_2025,105916537000,105908537000,FAIL
-C_mengurus,lain,anggaran_2025,229083463000,229091463000,FAIL
+C_mengurus,emolumen,anggaran_2025,105916537000,105908537000,SOURCE_ANOMALY
+C_mengurus,lain,anggaran_2025,229083463000,229091463000,SOURCE_ANOMALY
 C_mengurus,jumlah,anggaran_2025,335000000000,335000000000,PASS
 D_pembangunan,cara_langsung_excl_P70,anggaran_2025,84587068900,84587068900,PASS
 D_pembangunan,pinjaman,anggaran_2025,1412931100,1412931100,PASS

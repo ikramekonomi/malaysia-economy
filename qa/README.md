@@ -16,20 +16,24 @@ Tested on a clean checkout of `main` (PASS), with an injected FAIL row (blocked)
 
 ## The known-FAIL baseline (`known_fails.csv`)
 
-**101 FAIL rows** were already committed when the suite was introduced (2026-11-04):
+**101 FAIL rows** were already committed when the suite was introduced (2026-11-04). Triage turns
+each into either a `SOURCE_ANOMALY` (the publisher's printed total differs from its printed parts,
+proved on the page) or a fixed extraction defect:
 
-| Source | FAIL rows |
-|---|---|
-| state financial statements (Selangor 18, national panel 12, Pahang 9, Johor 5, Negeri Sembilan 3, Sarawak 2, Perlis 2, Kelantan 1, Kedah 1) | 53 |
-| PKKP per-year checks (2012, 2015, 2017, 2018, 2020, 2021, 2023) | 26 |
-| Anggaran 2025 and 2026 books | 19 |
-| Anggaran Hasil 2025 | 2 |
-| LKAN fiscal tables | 1 |
+| Source | FAIL rows at start | Now | How |
+|---|---|---|---|
+| Anggaran 2025 and 2026 books | 19 | 0 | every total and part re-read on the page of the re-downloaded PDF; publisher rounding (RM1-2) and one RM8 mil roll-up misprint |
+| Anggaran Hasil 2025 | 2 | 0 | same; a group impact printed RM500,000 off its own items |
+| state financial statements | 53 | 53 | needs the state volumes from the L0 archive |
+| PKKP per-year checks | 26 | 26 | needs the PKKP volumes (being located, `meta/l0_candidates.csv`) |
+| LKAN fiscal tables | 1 | 1 | needs the LKAN volume from the L0 archive |
 
-Many look like a publisher's printed total that differs from the sum of its printed parts, often
-by RM1. Golden rule 2 says those should be recorded as `SOURCE_ANOMALY` with a proof, not left as
-`FAIL`. **Triage is open work:** each row becomes either `SOURCE_ANOMALY` (with page evidence) or a
-fixed extraction defect, and the baseline shrinks. The suite reports when a known FAIL disappears.
+**How a FAIL becomes a SOURCE_ANOMALY** (`qa/source_anomaly.py`): the source's
+`_source_anomalies*.csv` row gains an `explains` column naming the exact validation rows it
+accounts for (all cells but the status, expected and got values included). The validator then
+labels those rows `SOURCE_ANOMALY`. If the values ever change, the match breaks and the row is a
+`FAIL` again. No figure is changed; only the label, with the proof in the register.
+
 Refresh the baseline only to remove rows, with `python3 qa/run_offline_suite.py --baseline`, and
 review the diff before committing it.
 

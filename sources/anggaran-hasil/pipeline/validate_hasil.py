@@ -115,6 +115,11 @@ for ed in (2025, 2026):
         rec(ed, "X3_vs_outlook", "anggaran_disemak_2025 TOTAL vs Fiscal Outlook revised (RM bil)",
             round(fo_rev_rev, 3), round(vals["anggaran_disemak_2025"]["TOTAL"] / 1e9, 3))
 
+import sys
+sys.path.insert(0, os.path.join(HERE, "../../..", "qa"))
+from source_anomaly import classify  # noqa: E402  FAIL -> SOURCE_ANOMALY only where the register proves it
+out = classify(out, os.path.join(DATA, "_source_anomalies_hasil.csv"))
+
 dest = os.path.join(DATA, "_validation_hasil.csv")
 with open(dest, "w", newline="") as f:
     w = csv.writer(f)

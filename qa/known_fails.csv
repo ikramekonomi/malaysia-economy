@@ -1,25 +1,4 @@
 file,row
-sources/anggaran-hasil/data/_validation_hasil.csv,2025|H2_after|TOTAL_AFTER == BEFORE + group impacts|344093198000|344093698000|FAIL
-sources/anggaran-hasil/data/_validation_hasil.csv,2025|H2_net|NET_CHANGE == group impacts|4387587000|4388087000|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,A_maksud_total|P.15|sebenar_2023|3339196916|3339196915|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,C_mengurus|emolumen|anggaran_2025|105916537000|105908537000|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,C_mengurus|lain|anggaran_2025|229083463000|229091463000|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,D_pembangunan|jumlah_incl_P70|sebenar_2022|71573961426|71573961425|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,D_pembangunan|jumlah_incl_P70|sebenar_2023|96089737122|96089737123|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,D_pembangunan|pinjaman|sebenar_2022|1645783306|1645783305|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,E_jumlah_besar|mengurus+pembangunan|sebenar_2022|365930722041|365930722040|FAIL
-sources/anggaran/data/2025/_validation_2025.csv,E_jumlah_besar|mengurus+pembangunan|sebenar_2023|411049218853|411049218854|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.08|sebenar_2024|226175553|226175552|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.13|sebenar_2024|855341185|855341186|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.14|sebenar_2024|549021695|549021696|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.26|sebenar_2024|229535710|229535709|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.28|sebenar_2024|1627762406|1627762407|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.45|sebenar_2024|567808977|567808976|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.48|sebenar_2024|3233117850|3233117849|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|B.63|sebenar_2024|54554493628|54554493627|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|P.15|sebenar_2024|2117475135|2117475134|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,A_vote_total|T.07|sebenar_2024|2284731|2284730|FAIL
-sources/anggaran/data/2026/_validation_2026.csv,E_jumlah_besar||sebenar_2024|408629244715|408629244717|FAIL
 sources/audit-negara/data/_validation_lkan_fiscal.csv,"v3_vs_bnm_reported|devex FY2023|AG 96089.0 RM juta|BNM 96090.984 RM juta|FAIL|BNM diverges from the audited figure by RM1.984 juta (AG agrees with PKKP); reported vs audited gap, kept as published"
 sources/pkkp/data/2012/_validation_checks_2012.csv,"FAIL|LAMP1 aktiviti B.24/100000/100100 object-sum vs printed jumlah_aktiviti (SOURCE PRINT DISCREPANCY, KEPT AS PRINTED)|2772588.77|2580839.82|191748.9500000002"
 sources/pkkp/data/2012/_validation_checks_2012.csv,"FAIL|LAMP1 aktiviti B.25/080000/080100 object-sum vs printed jumlah_aktiviti (SOURCE PRINT DISCREPANCY, KEPT AS PRINTED)|6739650.0|0.0|6739650.0"
