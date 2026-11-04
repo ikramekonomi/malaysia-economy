@@ -22,23 +22,38 @@ def _clamp_years(year_from, year_to):
     return yf, yt
 
 
+# Net development expenditure has two publishers in the warehouse, deliberately kept in
+# separate columns (curated/README.md): MOF Tinjauan Fiskal's official_actual figure,
+# which exists only for the editions ingested so far (FY2017-2019, FY2024), and BNM MSB
+# 3.1's complete FY2009-2024 series. They agree to RM0.33 juta or better where both
+# exist, but they are two publications on two bases -- so both are returned, each with
+# its own basis, and neither is ever substituted into the other's column here.
+DEVEX_NET_MOF_BASIS = "MOF Tinjauan Fiskal, official_actual (kasar tolak pemulihan pinjaman)"
+DEVEX_NET_BNM_BASIS = "BNM Monthly Statistical Bulletin 3.1, reported (kasar tolak pemulihan pinjaman)"
+
+
 def national_fiscal_headline(year_from=None, year_to=None):
     """Opex/devex, gross and net, per year. The default headline series."""
     yf, yt = _clamp_years(year_from, year_to)
     con = get_connection()
+    cols = ["year", "opex_gross_rm", "opex_net_rm", "devex_gross_rm",
+            "devex_net_rm", "devex_net_basis", "devex_net_bnm_rm", "devex_net_bnm_basis",
+            "note"]
     rows = con.execute(
-        "SELECT year, opex_gross_rm, opex_net_rm, devex_gross_rm, devex_net_rm, note "
-        "FROM curated.fact_fiscal_headline WHERE year BETWEEN ? AND ? ORDER BY year",
+        f"SELECT {', '.join(cols)} FROM curated.fact_fiscal_headline "
+        "WHERE year BETWEEN ? AND ? ORDER BY year",
         [yf, yt],
     ).fetchall()
-    cols = ["year", "opex_gross_rm", "opex_net_rm", "devex_gross_rm", "devex_net_rm", "note"]
     return {
         "rows": [dict(zip(cols, r)) for r in rows],
         "citations": [{
             "table": "curated.fact_fiscal_headline",
-            "basis": "opex_net follows MOF Tinjauan Fiskal (gross minus transfer to Development "
-                     "Fund); devex_net follows MOF Tinjauan Fiskal (gross minus loan recovery) "
-                     "where available (FY2020+); gross figures are PKKP's own audited actuals",
+            "basis": "opex gross/net and devex gross: PKKP audited actuals as printed in the "
+                     "Consolidated Revenue Account (net = before transfer to the Development "
+                     "Fund). devex_net_rm: " + DEVEX_NET_MOF_BASIS + ", FY2017-2019 and FY2024 "
+                     "only (other editions not yet ingested). devex_net_bnm_rm: "
+                     + DEVEX_NET_BNM_BASIS + ", FY2009-2024. Two publications -- never splice "
+                     "them into one series.",
         }],
     }
 
@@ -256,7 +271,8 @@ _COMPONENT_SERIES = {
     "revenue_total": ("pkkp.fact_revenue", "level = 0", "sebenar_rm", None),
     "opex_net": ("curated.fact_fiscal_headline", None, "opex_net_rm", None),
     "opex_gross": ("curated.fact_fiscal_headline", None, "opex_gross_rm", None),
-    "devex_net": ("curated.fact_fiscal_headline", None, "devex_net_rm", None),
+    "devex_net": ("curated.fact_fiscal_headline", None, "devex_net_rm", DEVEX_NET_MOF_BASIS),
+    "devex_net_bnm": ("curated.fact_fiscal_headline", None, "devex_net_bnm_rm", DEVEX_NET_BNM_BASIS),
     "devex_gross": ("curated.fact_fiscal_headline", None, "devex_gross_rm", None),
     "income_tax": ("pkkp.fact_revenue", "level = 3 AND item_bm = 'Cukai Pendapatan'", "sebenar_rm", None),
 }
@@ -276,7 +292,7 @@ def component_series(component_key, year_from=None, year_to=None):
     if component_key not in _COMPONENT_SERIES:
         return {"rows": [], "citations": [],
                 "error": f"unknown component_key {component_key!r}; see list_components()"}
-    table, extra_where, value_col, _ = _COMPONENT_SERIES[component_key]
+    table, extra_where, value_col, basis = _COMPONENT_SERIES[component_key]
     yf, yt = _clamp_years(year_from, year_to)
     con = get_connection()
     where = "year BETWEEN ? AND ?"
@@ -285,9 +301,14 @@ def component_series(component_key, year_from=None, year_to=None):
     rows = con.execute(
         f"SELECT year, {value_col} FROM {table} WHERE {where} ORDER BY year", [yf, yt]
     ).fetchall()
+    citation = {"table": table, "component_key": component_key}
+    if basis:
+        citation["basis"] = basis
     return {
+        # a NULL is a year the source does not cover -- return it as null, never drop
+        # it, so the caller can show the gap rather than draw across it
         "rows": [{"year": r[0], "amount_rm": r[1]} for r in rows],
-        "citations": [{"table": table, "component_key": component_key}],
+        "citations": [citation],
     }
 
 

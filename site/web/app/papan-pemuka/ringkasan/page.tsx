@@ -75,8 +75,9 @@ export default function RingkasanPage() {
   const [yearB, setYearB] = useState(2021);
 
   const [flowData, setFlowData] = useState<
-    { category: string; [k: string]: string | number }[]
+    { category: string; [k: string]: string | number | null }[]
   >([]);
+  const [flowMissing, setFlowMissing] = useState<string[] | null>(null);
   const [revenueRows, setRevenueRows] = useState<
     { data: { year: string; [k: string]: string | number }[]; lines: string[]; labelOf: (l: string) => string }
   >({ data: [], lines: [], labelOf: (l) => l });
@@ -109,30 +110,38 @@ export default function RingkasanPage() {
         const revTotal = (rows: typeof revA.rows) => rows.reduce((s, r) => s + r.amount_rm, 0);
         const finTotal = (rows: typeof finA.rows) => rows.reduce((s, r) => s + r.amount_rm, 0);
 
+        // Net DEVEX comes from ONE publisher for both years being compared. MOF's own
+        // figure exists only for 2017-2019 and 2024, so picking "MOF where available"
+        // would quietly compare a MOF year with a BNM year. BNM MSB 3.1 is complete for
+        // 2009-2024, so it is used for both bars. A missing figure is left missing --
+        // never drawn as zero, which would also overstate the computed balance.
+        const missing: string[] = [];
         setFlowData(
           ["Hasil", "Perbelanjaan Mengurus", "Perbelanjaan Pembangunan", "Defisit/Lebihan", "Dibiayai Bersih"].map(
             (category) => {
-              const row: { category: string; [k: string]: string | number } = { category };
+              const row: { category: string; [k: string]: string | number | null } = { category };
               for (const [label, y, rev, opexNet, devexNet, fin] of [
-                [String(yearA), yearA, revA, hByYear.get(yearA)?.opex_net_rm, hByYear.get(yearA)?.devex_net_rm, finA] as const,
-                [String(yearB), yearB, revB, hByYear.get(yearB)?.opex_net_rm, hByYear.get(yearB)?.devex_net_rm, finB] as const,
+                [String(yearA), yearA, revA, hByYear.get(yearA)?.opex_net_rm, hByYear.get(yearA)?.devex_net_bnm_rm, finA] as const,
+                [String(yearB), yearB, revB, hByYear.get(yearB)?.opex_net_rm, hByYear.get(yearB)?.devex_net_bnm_rm, finB] as const,
               ]) {
                 const r = revTotal(rev.rows) / 1e6;
-                const on = (opexNet ?? 0) / 1e6;
-                const dn = (devexNet ?? 0) / 1e6;
+                const on = opexNet == null ? null : opexNet / 1e6;
+                const dn = devexNet == null ? null : devexNet / 1e6;
                 const f = finTotal(fin.rows) / 1e6;
-                let val = 0;
+                let val: number | null = null;
                 if (category === "Hasil") val = r;
                 if (category === "Perbelanjaan Mengurus") val = on;
                 if (category === "Perbelanjaan Pembangunan") val = dn;
-                if (category === "Defisit/Lebihan") val = r - on - dn;
+                if (category === "Defisit/Lebihan") val = on === null || dn === null ? null : r - on - dn;
                 if (category === "Dibiayai Bersih") val = f;
-                row[label] = Math.round(val);
+                if (val === null) missing.push(`${category} ${y}`);
+                row[label] = val === null ? null : Math.round(val);
               }
               return row;
             }
           )
         );
+        setFlowMissing(missing.length ? missing : null);
 
         const revLines = Array.from(new Set([...revA.rows, ...revB.rows].map((r) => r.category_bm)));
         const revByYear: Record<number, Record<string, number>> = { [yearA]: {}, [yearB]: {} };
@@ -213,14 +222,39 @@ export default function RingkasanPage() {
 
       {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
 
-      <ChartCard title="Ringkasan Aliran Fiskal">
+      <ChartCard
+        title="Ringkasan Aliran Fiskal"
+        citations={[
+          { table: "pkkp.fact_revenue", basis: "Hasil — sebenar teraudit PKKP" },
+          {
+            table: "curated.fact_fiscal_headline",
+            basis:
+              "Perbelanjaan Mengurus bersih — PKKP teraudit, Akaun Hasil Disatukan (sebelum pindahan " +
+              "ke Kumpulan Wang Pembangunan). Perbelanjaan Pembangunan bersih — BNM Buletin " +
+              "Statistik Bulanan 3.1 (kasar tolak pemulihan pinjaman), digunakan untuk kedua-dua " +
+              "tahun supaya perbandingan memakai satu penerbit.",
+          },
+          { table: "pkkp.fact_timeseries_2010_2024", basis: "Dibiayai oleh:" },
+        ]}
+      >
+        <p className="text-xs opacity-70 mb-2">
+          Defisit/Lebihan di sini dikira daripada tiga angka di atas (dua penerbit: PKKP dan
+          BNM), bukan angka defisit yang dicetak oleh mana-mana satu sumber.
+        </p>
+        {flowMissing && (
+          <p className="text-xs text-red-700 mb-2">
+            Tiada data untuk: {flowMissing.join(", ")} — dibiarkan kosong, bukan sifar.
+          </p>
+        )}
         <div style={{ width: "100%", height: 300 }}>
           <ResponsiveContainer>
             <BarChart data={flowData}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--line)" />
               <XAxis dataKey="category" tick={{ fontSize: 11 }} interval={0} angle={-10} textAnchor="end" height={60} />
               <YAxis tickFormatter={(v) => v.toLocaleString()} width={70} />
-              <Tooltip formatter={(v) => `RM${Number(v).toLocaleString("ms-MY")} juta`} />
+              <Tooltip
+                formatter={(v) => (v === null || v === undefined ? "tiada data" : `RM${Number(v).toLocaleString("ms-MY")} juta`)}
+              />
               <Legend />
               <Bar dataKey={String(yearA)} fill={PALETTE[0]} />
               <Bar dataKey={String(yearB)} fill={PALETTE[1]} />
