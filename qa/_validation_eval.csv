@@ -96,3 +96,10 @@ Q94,fact,get_distribution,caveat,CV13,CV13,PASS
 Q95,trap_missing,get_distribution,not_held,,not held in the warehouse: a published distribution of hh_expenditure,PASS
 Q96,trap_missing,get_distribution,not_held,,"not held in the warehouse: income distribution for MY-03 in 2016 (published for 2019, 2022, 2024; Malaysia and the 16 states and territories only)",PASS
 Q97,trap_small_area,compare_geos,refused_ranking,,hh_income.gross.pctile_group.max is a survey estimate DOSM itself marks as low reliability; places are not compared or ranked on it (decision D10). Use get_series or get_distribution for one place,PASS
+Q98,fact,get_series,value,1933209415000,1933209415000,PASS
+Q99,fact,get_series,value,612060237000,612060237000,PASS
+Q100,fact,derive_chain,value,0.325404,0.325404,PASS
+Q101,fact,derive_chain,caveat,CV14,"CV1,CV14",PASS
+Q102,trap_incomparable,derive_chain,refused,lfs.employed,per_employed needs lfs.employed (no split) as the denominator,PASS
+Q103,trap_incomparable,derive_chain,refused,price bases,different price bases: constant_2015 vs current,PASS
+Q104,fact,find_indicator,first_indicator,na.compensation_of_employees,na.compensation_of_employees,PASS

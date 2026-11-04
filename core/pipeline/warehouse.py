@@ -175,6 +175,18 @@ class Warehouse:
                 raise Refused(f"different periods: {a['period_code']} vs {b['period_code']}; use the population "
                               "of the same year")
             dv, value, unit = "DV1", va / vb, ia["unit"] + " per person"
+        elif operation == "per_employed":
+            if b["indicator_code"] != "lfs.employed" or b["breakdown_key"] != "_total":
+                raise Refused("per_employed needs lfs.employed (no split) as the denominator")
+            if ia["unit"] != "RM":
+                raise Refused(f"per_employed divides an amount in RM; {a['indicator_code']} is in {ia['unit']}")
+            if a["geo_code"] != b["geo_code"]:
+                raise Refused(f"different places: {a['geo_code']} vs {b['geo_code']}")
+            if a["period_code"] != b["period_code"]:
+                raise Refused(f"different periods: {a['period_code']} vs {b['period_code']}")
+            if vb == 0:
+                raise Refused("employment is zero")
+            dv, value, unit = "DV6", va / vb, "RM per employed person"
         elif operation == "ratio":
             if ia["unit"] != ib["unit"]:
                 raise Refused(f"different units: {ia['unit']} vs {ib['unit']}")
@@ -221,6 +233,8 @@ class Warehouse:
         cv = sorted(set(self.caveats_for(a)) | set(self.caveats_for(b)))
         if operation == "per_capita" and a["indicator_code"].startswith("state_gov."):
             cv.append("CV9")
+        if operation == "per_employed":
+            cv.append("CV14")
         if operation == "growth" and ia["price_basis"] == "current":
             unit += " (nominal)"
         return {"operation": operation, "value": fmt(value, 6), "unit": unit, "basis": "derived",

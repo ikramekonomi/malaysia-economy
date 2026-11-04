@@ -344,6 +344,34 @@ q("1", "Rank the states by the income cut-off of their poorest 40% in 2022.", "c
   {"indicator": "hh_income.gross.pctile_group.max", "period": "2022", "breakdown": "percentile=040"},
   "refused_ranking", kind="trap_small_area")
 
+# N. Phase 2: national accounts (current prices), from L1
+def na(component, year):
+    with open(os.path.join(DOSM, "gdp_annual_nominal_income.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if r["series"] == "abs" and r["component"] == component and r["date"].startswith(year):
+                return Decimal(r["value"]) * 1000000
+    raise KeyError(component)
+
+
+q("4", "What was Malaysia's nominal GDP in 2024?", "get_series", series("gdp.nominal", "MY", "2024"), "value",
+  s(na("i0", "2024")))
+q("2", "What was total compensation of employees in Malaysia in 2023?", "get_series",
+  series("na.compensation_of_employees", "MY", "2023"), "value", s(na("i1", "2023")))
+q("2", "What share of GDP went to employees in 2022?", "derive_chain",
+  {"operation": "ratio", "a": series("na.compensation_of_employees", "MY", "2022"), "b": series("gdp.nominal", "MY", "2022")},
+  "value", s((na("i1", "2022") / na("i0", "2022")).quantize(Decimal("0.000001"))), "0.000001")
+q("2", "What is the average compensation per employed person in 2024?", "derive_chain",
+  {"operation": "per_employed", "a": series("na.compensation_of_employees", "MY", "2024"),
+   "b": series("lfs.employed", "MY", "2024")}, "caveat", "CV14")
+q("2", "Compensation of employees per person of the whole population, as if it were a wage?", "derive_chain",
+  {"operation": "per_employed", "a": series("na.compensation_of_employees", "MY", "2024"),
+   "b": series("pop.total", "MY", "2024")}, "refused", "lfs.employed", kind="trap_incomparable")
+q("4", "Real GDP of Selangor divided by Malaysia's nominal GDP?", "derive_chain",
+  {"operation": "ratio", "a": series("gdp.real", "MY-10", "2024"), "b": series("gdp.nominal", "MY", "2024")},
+  "refused", "price bases", kind="trap_incomparable")
+q("2", "Find the indicator for compensation of employees", "find_indicator", {"text": "compensation of employees"},
+  "first_indicator", "na.compensation_of_employees")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

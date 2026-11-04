@@ -315,6 +315,29 @@ def build_small_areas(obs, ed):
                                  "electricity": ("amenities.electricity.share", one, "percent", "0.01")}, dis)
 
 
+NA_INCOME = {"i0": "gdp.nominal", "i1": "na.compensation_of_employees", "i2": "na.gross_operating_surplus",
+             "i3": "na.taxes_less_subsidies_production", "i3.1": "na.taxes_on_production",
+             "i3.2": "na.subsidies_on_production"}
+
+
+def build_national_accounts(obs, ed):
+    """Phase 2: national accounts, annual, current prices (DOSM gdp_annual_nominal_income, 2010-).
+
+    GDP and its income components, coded by DOSM's own lookup (gdp_lookup.csv: i0..i3.2). GDP here comes
+    from the approach tables only: DOSM's long-run gdp_gni_annual_nominal file is a different revision
+    vintage for 2022-2025 (RM0.9-2.3 bn lower) and is not mixed in (sources/dosm/README.md)."""
+    m = Decimal(1000000)
+    e, vint, sha = ed["gdp_annual_nominal_income"]
+    for i, r in enumerate(rows(os.path.join(DOSM, "gdp_annual_nominal_income.csv")), start=2):
+        v = dec(r["value"])
+        if r["series"] != "abs" or v is None or r["component"] not in NA_INCOME:
+            continue
+        obs.add(indicator_code=NA_INCOME[r["component"]], geo_code="MY", period_code=r["date"][:4],
+                basis="statistic", edition_id=e, vintage=vint, value=v * m, value_printed=r["value"],
+                unit_printed="RM million", precision_printed="0.001", estimate_method="modelled", file_id=sha,
+                table_ref="gdp_annual_nominal_income", l1_ref=f"sources/dosm/data/gdp_annual_nominal_income.csv#row{i}")
+
+
 PCTILE_STATS = {"mean": "mean", "median": "median", "minimum": "min", "maximum": "max"}
 
 
@@ -584,6 +607,7 @@ def main():
     build_services(obs, ed)
     build_small_areas(obs, ed)
     build_distribution(obs, ed)
+    build_national_accounts(obs, ed)
     build_states(obs)
     build_federal(obs)
     ind = rows(os.path.join(META, "indicator.csv"))
