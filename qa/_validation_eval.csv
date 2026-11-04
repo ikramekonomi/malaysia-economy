@@ -38,8 +38,8 @@ Q36,trap_incomparable,derive_chain,refused,two percentages,gap_pp needs two perc
 Q37,trap_incomparable,derive_chain,refused,different units,different units: percent vs RM per month,PASS
 Q38,trap_incomparable,derive_chain,refused,"same indicator, place","growth compares one series with itself: same indicator, place and breakdown",PASS
 Q39,trap_incomparable,derive_chain,refused,price bases,different price bases: constant_2015 vs current,PASS
-Q40,trap_small_area,compare_geos,refused_ranking,,small-area survey estimates without published sampling error are not compared or ranked (decision D10); use get_series for one area,PASS
-Q41,trap_small_area,compare_geos,refused_ranking,,small-area survey estimates without published sampling error are not compared or ranked (decision D10); use get_series for one area,PASS
+Q40,trap_small_area,compare_geos,refused_ranking,,"places below state level (district) are not compared, banded or ranked (decision D10): most of their figures are survey estimates without published sampling error, and the rest are modelled from them; use get_series for one area",PASS
+Q41,trap_small_area,compare_geos,refused_ranking,,"places below state level (parlimen) are not compared, banded or ranked (decision D10): most of their figures are survey estimates without published sampling error, and the rest are modelled from them; use get_series for one area",PASS
 Q42,trap_missing,find_indicator,not_held_registry,social_transfers_by_state,social_transfers_by_state,PASS
 Q43,fact,find_indicator,first_indicator,health.staff,health.staff,PASS
 Q44,trap_missing,find_indicator,not_held,,not held in the warehouse: obesity prevalence,PASS
@@ -85,8 +85,8 @@ Q83,fact,get_series,value,4075,4075,PASS
 Q84,fact,get_series,value,7.6,7.6,PASS
 Q85,fact,get_series,field:reliability,unknown,unknown,PASS
 Q86,fact,get_series,field:reliability,low,low,PASS
-Q87,fact,get_series,caveat,CV12,CV12,PASS
-Q88,trap_small_area,compare_geos,refused_ranking,,lfs.unemployment_rate is a survey estimate DOSM itself marks as low reliability; places are not compared or ranked on it (decision D10). Use get_series or get_distribution for one place,PASS
+Q87,fact,get_series,caveat,CV12,"CV15,CV12",PASS
+Q88,trap_small_area,compare_geos,refused_ranking,,"places below state level (dun) are not compared, banded or ranked (decision D10): most of their figures are survey estimates without published sampling error, and the rest are modelled from them; use get_series for one area",PASS
 Q89,fact,get_series,value,70.2,70.2,PASS
 Q90,fact,get_series,value,99.6,99.6,PASS
 Q91,fact,get_distribution,decile:10,1692,1692,PASS
@@ -107,3 +107,15 @@ Q105,fact,get_series,value,82274695463.78,82274695463.78,PASS
 Q106,fact,get_series,value,-79166000000,-79166000000,PASS
 Q107,fact,get_series,row_count,3,3,PASS
 Q108,fact,derive_chain,value,-82172.53,-82172.53,PASS
+Q109,trap_source_defect,get_series,caveat,CV15,"CV15,CV12",PASS
+Q110,trap_source_defect,get_series,caveat,CV15,"CV15,CV1",PASS
+Q111,trap_source_defect,explain_chain,field_nonempty:anomalies,,"[{'flag': 'out_of_bounds', 'note': 'lfs.unemployment_rate = ",PASS
+Q112,fact,get_distribution,share_bracket,99;99,99;99,PASS
+Q113,fact,get_distribution,share_bracket,99;100,99;100,PASS
+Q114,trap_incomparable,get_distribution,share_refused,,threshold -5 is not a positive amount in RM per month,PASS
+Q115,trap_small_area,compare_geos,refused_ranking,,"places below state level (district) are not compared, banded or ranked (decision D10): most of their figures are survey estimates without published sampling error, and the rest are modelled from them; use get_series for one area",PASS
+Q116,trap_incomparable,derive_chain,refused,publisher,growth compares one publisher's series with itself; got bnm (actual) -> pkkp (audited). Take both years from the same publisher (get_series publisher=...),PASS
+Q117,trap_incomparable,derive_chain,refused,compensation_of_employees,"per_employed is declared for na.compensation_of_employees only (rule DV6): other amounts are not paid to employed persons, so dividing them by employment means nothing",PASS
+Q118,trap_missing,get_series,not_held,,"geo must be a code or a year, not list",PASS
+Q119,fact,get_series,row_count,3,3,PASS
+Q120,fact,get_series,caveat,CV16,"CV16,COVERAGE",PASS

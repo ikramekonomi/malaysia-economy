@@ -28,7 +28,8 @@ def run(t, q):
     a = json.loads(q["args"])
     tool, check, exp = q["tool"], q["check"], q["expected"]
     if tool == "get_series":
-        res = t.get_series(a["indicator"], a["geo"], a.get("start"), a.get("end"), a.get("breakdown", "_total"))
+        res = t.get_series(a["indicator"], a["geo"], a.get("start"), a.get("end"), a.get("breakdown", "_total"),
+                           a.get("basis"), a.get("publisher"))
     elif tool == "derive_chain":
         res = t.derive(a["operation"], one(t, a["a"])["obs_id"], one(t, a["b"])["obs_id"])
     elif tool == "explain_chain":
@@ -53,6 +54,9 @@ def run(t, q):
         return res.get("ok") is False and exp in res.get("refused", ""), res.get("refused", "computed: " + str(res.get("value")))
     if check == "not_ranked":
         return res.get("held") is False or res.get("refused_ranking") is True, res.get("answer", "ranked")
+    if check == "share_refused":
+        sb = res.get("share_below", {})
+        return "refused" in sb, sb.get("refused", str(sb)[:80])
     if check == "share_bracket":
         sb = res.get("share_below", {})
         got = f"{sb.get('low_percent')};{sb.get('high_percent')}"

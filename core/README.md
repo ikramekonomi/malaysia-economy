@@ -37,11 +37,17 @@ figures, so `reliability = unknown` and answers carry caveat CV1. Nothing is inv
 
 ## Small areas (Phase 2)
 
-DOSM's HIES and LFS small-area files, as published: median and mean household income, Gini, household
-spending and absolute poverty for every district (2019–2024), parliamentary seat and state seat
-(2019–2024); relative poverty for districts; LFS labour force, employment, unemployment and rates
-for districts and seats (2021–2023); and access to piped water, sanitation and electricity by
-district (HIES 2016–2024).
+DOSM's HIES and LFS small-area files, as published:
+
+| | districts | parliamentary and state seats |
+|---|---|---|
+| median and mean household income, Gini, absolute poverty | 2019, 2022, 2024 | 2019, 2022, 2024 |
+| relative poverty | 2019, 2022, 2024 | not published |
+| household spending | 2022, 2024 | 2019, 2022, 2024 |
+| LFS labour force, employment, unemployment, rates | 2018–2024 | 2021–2023 |
+| piped water, sanitation, electricity | 2016, 2019, 2022, 2024 | not published |
+
+DOSM does not publish every district every year (2016: 148; 2018: 141; 2019–2023: 160; 2024: 166).
 
 * **Codes, not names.** Seats are `MY-09/par:P.001@ge15` and `MY-09/dun:N.01@ge15`: the published
   seat code within its state, on the GE15 boundaries (a redelineation is a new boundary set, never
@@ -51,13 +57,22 @@ district (HIES 2016–2024).
 * **Uncertainty.** None of these files publishes a sampling error, so every row has
   `reliability = unknown` (caveat CV1). LFS seat figures are the survey's records added up below
   the domain it was designed for (the district), so they are `reliability = low` (caveat CV12).
-  **`compare_geos` never bands or ranks a district, parlimen or DUN** (golden rule 9); `get_series`
+  **`compare_geos` never bands or ranks any place below state level** (district, parlimen or DUN, whatever the
+  indicator; golden rule 9); `get_series`
   answers for one place at a time.
 * **Single-district places.** Perlis, Kuala Lumpur, Labuan and Putrajaya are each one district. Where
   DOSM prints no "All Districts" row for them (amenities), their figure is held under the district
   code, and the state row is declared missing in `meta/indicator.csv`, not filled.
 * Ministries' own districts (education PPD, health, police) are separate boundary sets: their
   district rows are not mapped to DOSM's districts yet. Only state and national rows are loaded.
+
+**Flags from source (2026-11-04).** Figures DOSM published in rows that fail their own arithmetic
+(`sources/dosm/data/_identity_breaches_realeconomy.csv`), that are out of bounds (Telang Usan 2018:
+unemployment 293%), or that repeat another area's figures exactly (35 of Kedah's 36 state seats in
+2021–2022) are kept as published. They are listed in `core/obs_flag.csv` (3,704 rows), and each such
+observation carries caveat CV15 and `source_flags`; `explain` lists them under `anomalies`. Check C11
+reports the two district Gini cells where DOSM's `hies_district` and `hh_inequality_district` disagree
+(Johor Bahru and Kulim 2022, by 0.001).
 
 ## Income distributions (Phase 2)
 
@@ -73,7 +88,7 @@ each with its `obs_id`. Given `below` (RM per month) it returns the share of hou
 as the **published bracket** (rule DIST1 in `meta/derivation.csv`): k% to k+1%, where k groups lie
 wholly below the threshold. Nothing is interpolated. Checks C9 (cut-offs rise with the percentile;
 `get_distribution` relies on it) and C10 (the 50th cut-off against the headline median) run on every
-build. C10 is INFO: six place-years differ by RM2 to RM14 (Putrajaya 2022: -RM14), and both
+build. C10 is INFO: of 51 place-years, 39 agree exactly, 6 differ by RM1 and 6 by RM2 to RM14 (Putrajaya 2022: -RM14); both
 figures are kept as published.
 
 ## National accounts and reproducing the curated tables (Phase 2)
@@ -100,9 +115,14 @@ spending, loan recoveries, the COVID-19 Fund and the overall balance are held as
 published them: PKKP (audited), BNM MSB 3.1 (actual, as reported), MOF Tinjauan Fiskal Jadual 1.1
 (actual; one edition per year by the own-volume rule in `curated/pipeline/mof_editions.py`). They are the
 same indicator, told apart by `basis` and edition. `get_series` returns all of them unless asked for one
-(`publisher='pkkp' | 'bnm' | 'mof'`), and `Warehouse.get` never chooses between publishers silently. FY2015–2024
-operating and development spending agree to within RM0.5 million, except 2023 development spending (BNM
-and MOF about RM1.2 million above the audited figure, in `qa/known_fails.csv`).
+(`publisher='pkkp' | 'bnm' | 'mof'`), and `Warehouse.get` never chooses between publishers silently;
+`derive('growth')` refuses to mix two publishers. FY2015–2024 operating and development spending agree to
+within RM0.5 million, except 2023 development spending (BNM RM1.25 million and MOF RM1.26 million above the
+audited figure, in `qa/known_fails.csv`). PKKP's figures still come through `curated/fact_fiscal_headline.csv`
+and carry caveat CV16: their citation is that table, development spending has no page yet, and operating
+spending FY2009–2023 is the comparative printed in the following year's volume (the same amount to the
+ringgit). Phase 3 cites each year's own volume and page. MOF's COVID-19 Fund for 2018–2019 is not loaded
+because the own-volume edition for those years prints no such line.
 
 ## gap_need_vs_money (state level)
 

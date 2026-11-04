@@ -59,6 +59,11 @@ class Warehouse:
         for r in self.obs:
             self.index[(r["indicator_code"], r["geo_code"], r["period_code"], r["breakdown_key"])].append(r)
         self.flags = self._state_flags()
+        self.obs_flags = {}
+        fp = os.path.join(os.path.dirname(META), "core", "obs_flag.csv")
+        if os.path.exists(fp):
+            for f in _rows(fp):
+                self.obs_flags.setdefault(f["l1_ref"], []).append(f)
 
     # ------------------------------------------------------------ QA flags ("under check")
     def _state_flags(self):
@@ -99,9 +104,17 @@ class Warehouse:
             return None  # two publishers for one concept: never choose between them silently
         return rs[0] if len(rs) == 1 else (sorted(rs, key=lambda r: r["vintage"])[-1] if rs else None)
 
+    def source_flags(self, r):
+        """Anomalies registered at L1 (or by a declared rule) for the L1 row this observation comes from."""
+        return [{"flag": f["flag"], "note": f["note"], "register": f["register"]}
+                for f in self.obs_flags.get(r["l1_ref"], [])
+                if not f["indicator_code"] or f["indicator_code"] == r["indicator_code"]]
+
     def caveats_for(self, r):
         out = []
         ind = r["indicator_code"]
+        if self.source_flags(r):
+            out.append("CV15")
         if r["estimate_method"] == "direct_survey" and r["reliability"] == "unknown":
             out.append("CV1")
         if r["estimate_method"] == "direct_survey" and r["reliability"] == "low" and ind.startswith("lfs."):
@@ -118,6 +131,8 @@ class Warehouse:
                 out.append("CV6")
         if ind == "gdp.real":
             out.append("CV7")
+        if r["basis"] == "audited" and ind.startswith("federal_gov."):
+            out.append("CV16")
         if ind == "cpi.index":
             out.append("CV8")
         return out
@@ -141,6 +156,9 @@ class Warehouse:
                "release_id": self.release_id}
         if "CV6" in cv:
             out["under_check"] = self.flags[(r["geo_code"], r["period_code"])]
+        sf = self.source_flags(r)
+        if sf:
+            out["source_flags"] = sf
         return out
 
     # ------------------------------------------------------------ derive (the only place arithmetic happens)
@@ -180,8 +198,9 @@ class Warehouse:
         elif operation == "per_employed":
             if b["indicator_code"] != "lfs.employed" or b["breakdown_key"] != "_total":
                 raise Refused("per_employed needs lfs.employed (no split) as the denominator")
-            if ia["unit"] != "RM":
-                raise Refused(f"per_employed divides an amount in RM; {a['indicator_code']} is in {ia['unit']}")
+            if a["indicator_code"] != "na.compensation_of_employees":
+                raise Refused("per_employed is declared for na.compensation_of_employees only (rule DV6): other "
+                              "amounts are not paid to employed persons, so dividing them by employment means nothing")
             if a["geo_code"] != b["geo_code"]:
                 raise Refused(f"different places: {a['geo_code']} vs {b['geo_code']}")
             if a["period_code"] != b["period_code"]:
@@ -212,6 +231,10 @@ class Warehouse:
                 raise Refused("growth compares one series with itself: same indicator, place and breakdown")
             if len(a["period_code"]) != len(b["period_code"]):
                 raise Refused("different frequencies")
+            pa, pb = a["edition_id"].split(":")[0], b["edition_id"].split(":")[0]
+            if pa != pb or a["basis"] != b["basis"]:
+                raise Refused(f"growth compares one publisher's series with itself; got {pb} ({b['basis']}) -> "
+                              f"{pa} ({a['basis']}). Take both years from the same publisher (get_series publisher=...)")
             if a["period_code"] <= b["period_code"]:
                 raise Refused(f"growth is from the earlier period (second input) to the later (first input); got "
                               f"{b['period_code']} -> {a['period_code']}")

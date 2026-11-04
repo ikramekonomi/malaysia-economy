@@ -26,6 +26,14 @@ class Tools:
         self.w = Warehouse()
 
     # ------------------------------------------------------------ helpers
+    @staticmethod
+    def _bad_input(**kw):
+        """Codes, periods and names are plain strings (or ints for years); anything else is refused."""
+        for k, v in kw.items():
+            if v is not None and not isinstance(v, (str, int)) or isinstance(v, bool):
+                return {"held": False, "answer": f"{k} must be a code or a year, not {type(v).__name__}"}
+        return None
+
     def _not_held(self, what, hint=""):
         words = set(re.findall(r"[a-z]+", (what + " " + hint).lower())) - {"rate", "total", "the", "of", "by"}
         reg = [r for r in self.w.registry
@@ -66,7 +74,14 @@ class Tools:
     def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None, publisher=None):
         """publisher: 'pkkp', 'bnm', 'mof' or 'dosm' (the edition's publisher). Without it, every publisher's
         figure for the same concept comes back, each cited: where they differ, the difference is the answer."""
+        bad = self._bad_input(indicator=indicator, geo=geo, start=start, end=end, breakdown=breakdown, basis=basis,
+                              publisher=publisher)
+        if bad:
+            return {**bad, "release_id": self.w.release_id}
         start, end = (None if start is None else str(start)), (None if end is None else str(end))
+        publisher = publisher.lower() if publisher else None
+        if breakdown.startswith("percentile=") and breakdown[11:].isdigit():
+            breakdown = f"percentile={int(breakdown[11:]):03d}"
         if indicator not in self.w.ind:
             return self._not_held(indicator)
         if geo not in self.w.geo:
@@ -82,7 +97,18 @@ class Tools:
                 "rows": [self.w.cite(r) for r in rs], "release_id": self.w.release_id}
 
     def compare_geos(self, indicator, period, geo_level="state", breakdown="_total"):
-        period = str(period)
+        bad = self._bad_input(indicator=indicator, period=period, geo_level=geo_level, breakdown=breakdown)
+        if bad:
+            return {**bad, "release_id": self.w.release_id}
+        period, geo_level = str(period), str(geo_level).lower()
+        if breakdown.startswith("percentile=") and breakdown[11:].isdigit():
+            breakdown = f"percentile={int(breakdown[11:]):03d}"
+        if geo_level in ("district", "parlimen", "dun"):
+            return {"held": True, "refused_ranking": True,
+                    "answer": f"places below state level ({geo_level}) are not compared, banded or ranked (decision "
+                              "D10): most of their figures are survey estimates without published sampling error, "
+                              "and the rest are modelled from them; use get_series for one area",
+                    "release_id": self.w.release_id}
         if indicator not in self.w.ind:
             return self._not_held(indicator)
         rs = [r for r in self.w.obs if r["indicator_code"] == indicator and r["period_code"] == period
@@ -135,8 +161,11 @@ class Tools:
     def get_distribution(self, indicator, geo, period, below=None):
         """Household income by percentile group, as published (HIES), with the decile cut-offs and, given
         `below` (RM per month), the published bracket for the share of households earning less (rule DIST1)."""
+        bad = self._bad_input(indicator=indicator, geo=geo, period=period)
+        if bad:
+            return {**bad, "release_id": self.w.release_id}
         period = str(period)
-        if indicator not in ("hh_income", "hh_income.gross", "hh_income.gross.mean", "hh_income.gross.median"):
+        if indicator not in ("hh_income", "hh_income.gross"):
             return self._not_held(f"a published distribution of {indicator}", "distribution percentile")
         if geo not in self.w.geo:
             return {"held": False, "answer": f"unknown place code {geo}", "release_id": self.w.release_id}
@@ -167,9 +196,11 @@ class Tools:
                "release_id": self.w.release_id}
         if below is not None:
             try:
-                x = Decimal(str(below))
+                x = Decimal(str(below)) if not isinstance(below, bool) else None
             except Exception:
-                return {**out, "share_below": {"refused": f"threshold {below!r} is not a number in RM per month"}}
+                x = None
+            if x is None or not x.is_finite() or x <= 0:
+                return {**out, "share_below": {"refused": f"threshold {below!r} is not a positive amount in RM per month"}}
             tops = [Decimal(g["max"]) for g in groups if g.get("max")]
             if tops != sorted(tops):
                 return {**out, "share_below": {"refused": "the published cut-offs do not rise with the percentile; "
@@ -177,11 +208,13 @@ class Tools:
             k = sum(1 for g in groups if g.get("max") and Decimal(g["max"]) < x)
             nxt = next((g for g in groups if g["percentile"] == k + 1), None)
             hi = k if (nxt is None or (nxt.get("min") and Decimal(nxt["min"]) >= x)) else k + 1
+            used = [g for g in groups[max(0, k - 1):k] if g.get("max_obs_id")]
             out["share_below"] = {"threshold": str(x), "low_percent": str(k), "high_percent": str(hi),
                                   "answer": (f"{k}% of households" if k == hi else f"between {k}% and {hi}% of households")
                                   + f" earned less than RM {x} a month",
                                   "method": self.w.derivations["DIST1"],
-                                  "from_obs_ids": [g["max_obs_id"] for g in groups[max(0, k - 1):k + 1]]
+                                  "from_obs_ids": [g["max_obs_id"] for g in used]
+                                  + [g["max_obs_id"] for g in groups[k:k + 1] if g.get("max_obs_id")]
                                   + ([nxt["min_obs_id"]] if nxt and nxt.get("min_obs_id") else [])}
         return out
 
@@ -193,6 +226,9 @@ class Tools:
                     "release_id": self.w.release_id}
 
     def explain(self, obs_id):
+        if not isinstance(obs_id, str):
+            return {"found": False, "answer": "obs_id must be the string returned by get_series",
+                    "release_id": self.w.release_id}
         r = self.w.by_id.get(obs_id)
         if not r:
             return {"found": False, "answer": f"unknown observation {obs_id}", "release_id": self.w.release_id}
@@ -218,6 +254,7 @@ class Tools:
                              "archive_asset": (arch or {}).get("asset_name"),
                              "publisher_url": (arch or {}).get("source_url")},
                 "checks": "machine_checked: the source's own identities (see the source's _validation*.csv)",
+                "anomalies": c.get("source_flags", []),
                 "verification_tier": "machine_checked",
                 "source_text": {"line_label_bm": label, "note": UNTRUSTED}}
 
