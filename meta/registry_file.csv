@@ -564,22 +564,22 @@ national_accounts,2026-Q2,gdp_qtr_real_sa_demand.csv,,99a29df6f3bad2e70c3251e7d0
 national_accounts,2026-Q2,gdp_qtr_real_sa_supply.csv,,5c6508beccb84d3548894f9b9484b6fb55608ab1ed1a1056869c6ec110a172b9,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 national_accounts,2026-Q2,gdp_qtr_real_supply.csv,,d304972b81fe1cd847691727e61a10b7fa925dbdbdca74f4de02319dbee3880b,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 national_accounts,2026-Q2,gdp_qtr_real_supply_granular.csv,,abf5e6a893d4c4e58460b667f4577622e08626a4b31a0ded6b2446306b7a0c8c,,,2026-11-04,sources/dosm/data/_vintage_log.csv
-pkkp,,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
 pkkp,,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
 pkkp,,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
-pkkp,,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
+pkkp,2009,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,860d81f768bae2954103937d33eb1e06a847b2d7011af3f77f1a253a29263540,8364734,274,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2010,2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2010_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,2c43d1a7575eb011ad4aba6afe357f2c87829bde3e1dfd0600ab2f115b67cff0,6023520,305,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2011,2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2011_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,5f6cdb990c071c01b0a740a8c086f1f0b75b9ed1f52e8d7d02e1832378306b95,5183624,330,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2012,2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,0d7c901537305a86380093adef3e9ff9cb167743d40885f8a39a535b7f417564,25859573,265,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2013,2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2013_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,001b067a5f4213688730093efc5cf14f7b394e43e6bff1a3a8a77220ef1d4f95,8591352,288,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2014,2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2014_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,b71bf412c27866f91bc2ef75138670fe315f893a497a79681a1d739f97e7efe4,30056391,307,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2016,2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2016_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,f2b9c42832890eb2a6521229341d7814c52aee7f8f523a4bca8a3cf502a6c26c,5283556,293,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2017,2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,d3a9e1d4de3af0c20a0e54984fd3a834f5f7410bee1f4a22e402c4d58ed3eae9,21691152,400,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2018,2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2018_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,6a3a5936dc682e31a058956cdfc9c23a87fd3d507e415b18701b0c02792c30e7,9693423,422,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2019,2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2019_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,b69e78c0f0a31f14b0e48f1f83716c578ab09330dbef65cbb408d5c4c8495c36,13638554,396,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2021,2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/JANM/Webmaster/BPOPA/Penyata-Kewangan/2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,8fe75e5b7d7e1c839bd3f426a97d941ca76e732501dc17d5baaceb773e96763f,92431822,456,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2022,2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/JANM/Webmaster/BPOPA/Penyata-Kewangan/2022_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,32a37d4d8ef374e92710bc987ccbf4ec63a847609accc56941c124d7c8b80871,23295494,443,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2023,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,https://www.anm.gov.my/images/JANM/Webmaster/BPOPA/Penyata-Kewangan/2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,5181b69847f4a76446453d543832a2434b9553d6e7bb543484330874e37abf77,73579476,444,2026-11-04,sources/pkkp/data/_documents_manifest.csv
+pkkp,2024,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,https://www.anm.gov.my/images/JANM/Webmaster/BPOPA/Penyata-Kewangan/2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,779d4d313583dbeef14fbd3adfab9475305d7128165af7ae6ad8702124700d87,62416627,447,2026-11-04,sources/pkkp/data/_documents_manifest.csv
 population_subnational,2023,population_state.csv,,a3ac1a8831a4e66dbc0bc0d018b699b3810eaead3775fbee4c95e9eb2cc44945,,,,sources/dosm/data/_vintage_log.csv
 population_subnational,2026,population_district.csv,,2c7caf2fc4bda1f58f12db6cc2d6d5f39148fbeaaa0516017eb59fb8e23784e0,,,,sources/dosm/data/_vintage_log.csv
 productivity,2025,productivity_annual.csv,,5ef9bc4e090a402352d5ea7f9b057cc16a93e09aa02d6c37e4f583ef822cc092,,,2026-11-04,sources/dosm/data/_vintage_log.csv

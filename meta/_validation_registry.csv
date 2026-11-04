@@ -153,16 +153,16 @@ R5 every file has a sha256,bnm_msb,PASS,32 files
 R7 every file is in the L0 archive,bnm_msb,PASS,32 of 32 archived (release l0-archive or git history)
 R6 licence recorded,bnm_msb,OPEN,licence to_confirm
 R4 held series has files,pkkp,PASS,16 file(s)
-R5 every file has a sha256,pkkp,OPEN,16 of 16 without sha256 (needs the L0 archive)
-R7 every file is in the L0 archive,pkkp,OPEN,0 of 16 archived (release l0-archive or git history)
+R5 every file has a sha256,pkkp,OPEN,2 of 16 without sha256 (needs the L0 archive)
+R7 every file is in the L0 archive,pkkp,OPEN,14 of 16 archived (release l0-archive or git history)
 R6 licence recorded,pkkp,OPEN,licence to_confirm
 R4 held series has files,state_financial_statements,PASS,143 file(s)
 R5 every file has a sha256,state_financial_statements,PASS,143 files
-R7 every file is in the L0 archive,state_financial_statements,OPEN,104 of 143 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,state_financial_statements,PASS,143 of 143 archived (release l0-archive or git history)
 R6 licence recorded,state_financial_statements,OPEN,licence to_confirm
 R4 held series has files,tinjauan_fiskal,PASS,16 file(s)
 R5 every file has a sha256,tinjauan_fiskal,PASS,16 files
-R7 every file is in the L0 archive,tinjauan_fiskal,OPEN,0 of 16 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,tinjauan_fiskal,PASS,16 of 16 archived (release l0-archive or git history)
 R6 licence recorded,tinjauan_fiskal,OPEN,licence to_confirm
 R4 held series has files,anggaran_hasil,PASS,5 file(s)
 R5 every file has a sha256,anggaran_hasil,PASS,5 files
@@ -194,7 +194,7 @@ R7 every file is in the L0 archive,ag_sijil_eselfaudit,PASS,4 of 4 archived (rel
 R6 licence recorded,ag_sijil_eselfaudit,OPEN,licence to_confirm
 R4 held series has files,lkan_state,PASS,353 file(s)
 R5 every file has a sha256,lkan_state,PASS,353 files
-R7 every file is in the L0 archive,lkan_state,OPEN,290 of 353 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,lkan_state,PASS,353 of 353 archived (release l0-archive or git history)
 R6 licence recorded,lkan_state,OPEN,licence to_confirm
 R4 held series has files,vital_statistics,PASS,2 file(s)
 R5 every file has a sha256,vital_statistics,PASS,2 files
