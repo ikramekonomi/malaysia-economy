@@ -30,7 +30,7 @@ OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "2021_public_fin
 
 
 def row_common(pdf_page, printed_page, note=""):
-    return dict(source_file=SOURCE_FILE, pdf_page=pdf_page, printed_page=printed_page,
+    return dict(edition=2021, source_file=SOURCE_FILE, pdf_page=pdf_page, printed_page=printed_page,
                 retrieved_from=RETRIEVED_FROM, retrieved_date=RETRIEVED_DATE, note=note)
 
 
@@ -348,18 +348,18 @@ def main():
     devex_sector = build_devex_sector()
 
     write_csv(os.path.join(OUT_DIR, "fact_headline.csv"), headline,
-              ["table_no", "line", "target_year", "amount_rm_juta", "pct_of_gdp", "basis",
+              ["edition", "table_no", "line", "target_year", "amount_rm_juta", "pct_of_gdp", "basis",
                "source_file", "pdf_page", "printed_page", "retrieved_from", "retrieved_date", "note"])
     write_csv(os.path.join(OUT_DIR, "fact_opex_by_component.csv"), opex_component,
-              ["table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
+              ["edition", "table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
                "amount_rm_juta", "pct_share", "basis", "source_file", "pdf_page", "printed_page",
                "retrieved_from", "retrieved_date", "note"])
     write_csv(os.path.join(OUT_DIR, "fact_opex_by_sector.csv"), opex_sector,
-              ["table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
+              ["edition", "table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
                "amount_rm_juta", "pct_share", "basis", "source_file", "pdf_page", "printed_page",
                "retrieved_from", "retrieved_date", "note"])
     write_csv(os.path.join(OUT_DIR, "fact_devex_by_sector.csv"), devex_sector,
-              ["table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
+              ["edition", "table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
                "amount_rm_juta", "pct_share", "basis", "source_file", "pdf_page", "printed_page",
                "retrieved_from", "retrieved_date", "note"])
 

@@ -13,7 +13,7 @@ export type HeadlineRow = {
   opex_gross_rm: number;
   opex_net_rm: number | null;
   devex_gross_rm: number;
-  /** MOF Tinjauan Fiskal official_actual -- FY2017-2019 and FY2024 only. */
+  /** MOF Tinjauan Fiskal official_actual -- FY2015-2024, each year from its own edition. */
   devex_net_rm: number | null;
   devex_net_basis: string | null;
   /** BNM MSB 3.1, complete FY2009-2024. A different publication: never splice with the MOF column. */

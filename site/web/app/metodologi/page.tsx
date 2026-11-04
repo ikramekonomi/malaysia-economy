@@ -26,7 +26,11 @@ const CAVEATS = [
   },
   {
     title: "OPEX/DEVEX kasar berbanding bersih",
-    body: "Angka \"kasar\" (gross) ialah perbelanjaan sebenar teraudit PKKP. Angka \"bersih\" (net) mengikut konvensyen Tinjauan Fiskal MOF (kasar tolak pindahan ke Kumpulan Wang Pembangunan bagi opex; kasar tolak pemulihan pinjaman bagi devex). Kedua-duanya sah — jangan campurkan tanpa menyatakan asas. DEVEX bersih mempunyai dua penerbit yang disimpan berasingan: angka rasmi MOF (Tinjauan Fiskal, kini hanya 2017-2019 dan 2024 kerana edisi lain belum dimasukkan) dan siri lengkap 2009-2024 Bank Negara Malaysia (Buletin Statistik Bulanan, Jadual 3.1). Ia berbeza tidak lebih RM0.33 juta bagi tahun yang ada pada kedua-duanya, tetapi tidak pernah dicantumkan dalam satu siri.",
+    body: "Angka \"kasar\" (gross) ialah perbelanjaan sebenar teraudit PKKP. Angka \"bersih\" (net) mengikut konvensyen Tinjauan Fiskal MOF (kasar tolak pindahan ke Kumpulan Wang Pembangunan bagi opex; kasar tolak pemulihan pinjaman bagi devex). Kedua-duanya sah — jangan campurkan tanpa menyatakan asas. DEVEX bersih mempunyai dua penerbit yang disimpan berasingan: angka rasmi MOF (Tinjauan Fiskal edisi 2019-2027, bagi 2015-2024 — setiap tahun daripada edisinya sendiri; sebelum 2015 jadual MOF diterbitkan dalam Laporan Ekonomi, yang belum dimasukkan) dan siri lengkap 2009-2024 Bank Negara Malaysia (Buletin Statistik Bulanan, Jadual 3.1). Ia berbeza dalam lingkungan pembundaran MOF (tidak lebih RM0.6 juta) bagi setiap tahun yang ada pada kedua-duanya, tetapi tidak pernah dicantumkan dalam satu siri.",
+  },
+  {
+    title: "Pecahan perbelanjaan MOF — satu tahun, satu edisi",
+    body: "Setiap edisi Tinjauan Fiskal mencetak lima tahun, jadual yang sama untuk satu tahun muncul dalam tiga edisi dan kadangkala berbeza. Setiap tahun diambil daripada edisi yang mencetaknya sebagai angka sebenar terkini (edisinya sendiri), dan angka edisi kemudian dicatat dalam lajur restated_in. Dua perubahan klasifikasi perlu diketahui: \"Pertanian dan pembangunan luar bandar\" menjadi \"Pertanian\" mulai edisi 2022 (disimpan sebagai baris berasingan), dan edisi 2024 memindahkan kira-kira RM1.1–1.2 bilion setahun daripada Pentadbiran Am ke Perumahan — maka Perumahan melonjak pada 2022 kerana klasifikasi, bukan perbelanjaan.",
   },
   {
     title: "FY2020–2022 — Kumpulan Wang COVID-19 dan baki keseluruhan",

@@ -48,11 +48,7 @@ warehouse:
 
 **2017-2019 = `official_actual` (unlabelled in source), 2020 = `official_revised`
 ("Anggaran disemak"), 2021 = `official_projection` ("Anggaran belanjawan tidak termasuk
-langkah Belanjawan 2021" — excludes 2021 Budget measures).** Note this PDF's own
-coverage is **2017-2021, not 2020-2024** — later years (2022-2024) need a later edition's
-equivalent appendix, not yet ingested; each edition's appendix here should land as its own
-`data/<edition>_public_finance_stats/` folder (same basename tables UNION BY NAME across
-editions in the warehouse build automatically) rather than merged into this one.
+langkah Belanjawan 2021" — excludes 2021 Budget measures).** This folder covers 2017-2021; the other eight editions now sit beside it (next section).
 
 Extracted by `pipeline/extract_2021_public_finance_stats.py` (every value embedded with
 its own `pdf_page`/`printed_page`, read directly off the PDF — nothing recomputed).
@@ -60,6 +56,99 @@ Reconciled to the tables' own printed sub-item/parent/Jumlah sums and cross-tabl
 identities (`data/2021_public_finance_stats/_validation.csv`: **80/80 PASS**), plus an
 independent adversarial verifier pass (separate agent, blind to the extraction script,
 re-transcribed all 4 tables from the PDF and compared cell-by-cell): **full agreement**.
+
+## Nine editions of the statistical appendix — 2019 to 2027
+
+Every edition MOF still publishes on **belanjawan.mof.gov.my** (the archive reaches back to
+Budget 2018) has its *Statistik Kewangan Awam / Public Finance Statistics* appendix
+ingested, one folder per edition: `data/<edition>_public_finance_stats/`, same four tables
+and same schema as the 2021 folder above (plus an `edition` column on every row).
+
+| step | script | output |
+|---|---|---|
+| fetch | `pipeline/fetch_editions.py` | `raw/<edition>/*.pdf` (gitignored); `data/_editions_manifest.csv` — URL, bytes, sha256, pages, retrieved date per file |
+| Jadual 1.1 | `pipeline/extract_public_finance_stats.py` | `fact_headline.csv` per edition |
+| Jadual 3.1–3.3 | `pipeline/extract_breakdowns.py` | `fact_opex_by_component.csv`, `fact_opex_by_sector.csv`, `fact_devex_by_sector.csv` |
+| reconcile | `pipeline/validate_editions.py` | `_validation.csv` per edition, `data/_validation_editions_summary.csv`, `data/_restatements_editions.csv` |
+
+**Nothing is typed in.** Every figure is read from `pdftotext -layout` output of the
+official PDF on the `pdf_page` recorded in its row. Year columns and their basis come from
+each page's own header and footnotes (*Anggaran disemak* → `official_revised`,
+*Anggaran belanjawan* → `official_projection`, *Awalan* → `official_preliminary`, no
+marker → `official_actual`). A label the parser does not recognise stops the build.
+
+| edition | file | actual years | revised | budget |
+|---|---|---|---|---|
+| 2019 | `st_kewangan.pdf` | 2015–2017 | 2018 | 2019 |
+| 2020 | `st_kewangan.pdf` | 2016–2018 | 2019 | 2020 |
+| 2021 | `st_kewangan.pdf` | 2017–2019 | 2020 | 2021 |
+| 2022 | `st_kewangan.pdf` | 2018–2020 | 2021 | 2022 |
+| 2023 | `jadual_perangkaan.pdf` (re-tabled Feb 2023 budget; tables numbered 1.1 / 7.1–7.3) | 2019–2021 | 2022 *preliminary* | 2023 |
+| 2024 | `st_kewangan.pdf` | 2020–2022 | 2023 | 2024 |
+| 2025 | `st_kewangan.pdf` | 2021–2023 | 2024 | 2025 |
+| 2026 | `st_kewangan.pdf` | 2022–2024 | 2025 | 2026 |
+| 2027 | `st_kewangan.pdf` | 2023–2025 | 2026 | 2027 |
+
+**The parser is tested against verified data, twice.** Run on the 2021 appendix it
+reproduces the hand-transcribed, independently verified 2021 folder exactly — 74/74
+headline cells and 75/75, 95/95, 90/90 breakdown cells, basis included
+(`data/_parser_check_2021*.csv`). And on the 2025/2026 editions it matches, 20/20, the
+headline figures extracted separately from the *full report* in `fiscal_outlook_headline.csv`.
+
+**Reconciliation: 832 checks across the eight new editions, 0 FAIL** — 821 exact, 4 within
+the stated rounding bound of their own printed figures, 1 `FOOTNOTED`, 2 `SOURCE_ANOMALY`
+(and the 2021 folder's own 80/80). Each printed figure is rounded to the nearest RM juta, so
+a sum of *n* printed figures may miss its printed total by up to 0.5 × (*n* + 1) juta; that
+bound is written on every check.
+
+### Text-layer hazards handled (each proven on the page, not assumed)
+
+- **2023 edition, shifted font.** The last two year headers' text layer is offset by 0x1D
+  (bytes `15 13 15 15` = "2022"); decoded by that offset, and confirmed by the next page,
+  which prints the column readably as "2022³".
+- **Glued footnote markers.** "51,9734" in the 2019 edition is 51,973 carrying footnote 4
+  (a thousands group holds three digits); the cell's note quotes the footnote.
+- **Stray superscripts** from the English label bleeding into a values line ("Primary
+  balance¹") are ignored when they sit left of every year column.
+- **2022 prints shares in parentheses** — "(4.2)", "(100.0)". Read as shares, not
+  negatives: a share of spending cannot be negative and the total prints "(100.0)".
+- **Unlabelled growth-rate rows** (2019, Jadual 3.3, under *Ekonomi*) are skipped: a share
+  never appears without its amount.
+- **Dashes.** In 3.1–3.3 a dash is a printed nil and is stored as 0.0 (repo convention); in
+  Jadual 1.1 a dash in a budget-year financing row means *not printed* and stays empty, as
+  the verified 2021 folder does.
+- **Printed page numbers** are not in the text layer of the 2019, 2020 and 2022 appendices
+  (no footer number / garbled footer font). `printed_page` is left empty there with a note;
+  `pdf_page` is always exact.
+
+### What the source itself gets wrong — kept as printed
+
+- **FY2022 domestic debt service, 2024 and 2025 editions:** 40,533 + external 716 = 41,249
+  under a printed total of 41,269. Confirmed on a 150-dpi page render; the 2026 edition
+  restates it to 40,553, which foots. In `data/_source_anomalies.csv`.
+- **2019 edition, FY2018 financing:** net domestic borrowing is footnoted *"tidak termasuk
+  terbitan bersih bil Perbendaharaan sebanyak RM2 bilion"*, so the financing sources fall
+  short of the deficit by exactly RM2,000 juta. `FOOTNOTED`, not an error.
+
+### Restatements and reclassifications
+
+Most actual years are printed by three editions. 30 of 588 line-years differ
+(`data/_restatements_editions.csv`): ±RM1 juta rounding revisions, the debt-service fix
+above, and reclassifications that net to zero — notably the **2024 edition moving about
+RM1.1–1.2 bil a year of FY2020–21 operating expenditure from general administration to
+housing**. Two labels change: **"Pertanian dan pembangunan luar bandar"** (2019–2021) becomes
+**"Pertanian"** (2022 onward) — kept as separate lines, never spliced — and **"Pelajaran dan
+latihan"** (2025–2026) is a synonym of "Pendidikan dan latihan" (same English label).
+
+Which edition the curated layer takes for each year is decided in one place:
+`curated/pipeline/mof_editions.py` (each year from its own edition; see `curated/README.md`).
+
+### Not available from here
+
+Editions before Budget 2019 did not carry these tables — MOF published its fiscal tables in
+the **Laporan Ekonomi** until then. The 2018 *Anggaran Hasil* book (`raw/2018/`) is fetched
+for the record but has no Federal Government Finance table. So MOF's own figures for
+FY2009–2014 still need the Laporan Ekonomi, which this site does not hold.
 
 ## Also extracted — `data/fact_contingent_liabilities.csv`
 

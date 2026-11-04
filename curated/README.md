@@ -121,17 +121,23 @@ and 1 known gap — see below), with every known defect justified one by one in
 
   | column | source | years | basis |
   |---|---|---|---|
-  | `devex_net_rm` | MOF Tinjauan Fiskal, with `devex_net_source_file` / `_pdf_page` / `_printed_page` per row | 2017–2019, 2024 | `official_actual (MOF Tinjauan Fiskal)` |
+  | `devex_net_rm` | MOF Tinjauan Fiskal, one year per edition (editions 2019–2027), with `devex_net_source_file` / `_source_table` / `_pdf_page` / `_printed_page` per row | 2015–2024 | `official_actual (MOF Tinjauan Fiskal)` |
   | `devex_net_bnm_rm` | BNM Monthly Statistical Bulletin 3.1 (`sources/bnm/data/msb_3_1.csv`) | 2009–2024, complete | `reported (BNM MSB 3.1)` |
 
-  Where both exist they agree to RM0.33 juta or better — MOF prints net DE in whole RM
-  juta while BNM publishes to the sen, which accounts for the whole of the difference. **They are still two different
+  Over the ten overlap years they agree to RM0.53 juta or better. MOF prints whole RM juta
+  and derives net DE from two rounded printed figures (gross − loan recovery), so up to
+  RM1.0 juta is MOF's own arithmetic; BNM publishes to the sen. **They are still two different
   publications on two different bases** — take one column or the other for a series;
   a chart that switches between them mid-way is a basis blend, which is what the
-  separate columns exist to prevent. `devex_net_rm` is NULL for FY2009–2016 and
-  FY2020–2023 not because MOF never published those figures but because the Tinjauan
-  Fiskal editions carrying them are not ingested here yet — an open ingestion gap
-  (`docs/SOURCES.md`), stated rather than papered over.
+  separate columns exist to prevent. `devex_net_rm` is NULL for FY2009–2014: before
+  Budget 2019 MOF printed its fiscal tables in the *Laporan Ekonomi*, not the Tinjauan
+  Fiskal, and the warehouse does not hold it (`docs/SOURCES.md`) — stated rather than
+  papered over.
+
+  **Which edition supplies each year** is decided in one place,
+  `pipeline/mof_editions.py`: strongest basis first, then the year's *own* edition (the one
+  in which it is the newest actual — FY2023 from the 2025 edition). What later editions
+  print differently is kept on the row (`note` here; `restated_in` in the breakdowns).
 
   **Revenue, the COVID-19 fund and the overall balance.** `revenue_rm` is total federal
   revenue as printed. `covid_fund_rm` is spending through the *Kumpulan Wang COVID-19*,
@@ -143,7 +149,8 @@ and 1 known gap — see below), with every known defect justified one by one in
 
   `overall_balance_rm` = revenue − `opex_net_rm` − `devex_net_bnm_rm` − COVID-19 fund. This
   is **MOF's definition**, and it agrees with MOF's own published overall balance in all
-  four years MOF prints one (FY2017–2019, FY2024; worst case RM0.49 juta). PKKP's 15-year
+  ten years MOF prints one (FY2015–2024; worst case RM1.39 juta in FY2020, inside the
+  RM2.5 juta that five rounded printed terms allow). PKKP's 15-year
   panel prints a *different* overall balance: it nets off all of the Development Fund's
   "Lain-lain" receipts, not only loan recovery, so it can sit RM0.1–1.9b away (FY2024:
   PKKP −77,315, MOF −79,166 juta; the gap is exactly the non-loan receipts). That
@@ -216,19 +223,35 @@ because the printed page is out of reach.
 
 ## MOF expenditure breakdowns
 
-Built by `pipeline/build_opex_devex_breakdown.py` as a thin pass-through of MOF Tinjauan
-Fiskal's own Jadual 3.1/3.2/3.3 — finer than anything derivable from PKKP or DOSM alone.
-Every row carries `basis`, `source_edition`, `source_table`, `source_file`, `pdf_page`
-and `printed_page`.
+Built by `pipeline/build_opex_devex_breakdown.py` from MOF Tinjauan Fiskal's own Jadual
+3.1/3.2/3.3 (7.1–7.3 in the 2023 edition) — finer than anything derivable from PKKP or DOSM
+alone. Read straight from the nine edition folders in `sources/mof-fiscal-outlook/data/`,
+**one edition per year** by `pipeline/mof_editions.py`. Every row carries `basis`,
+`source_edition`, `source_table`, `source_file`, `pdf_page`, `printed_page` and
+`restated_in` (what later editions print instead, if anything).
 
-- **`fact_opex_by_component.csv`** (75 rows) — operating expenditure by object:
+- **`fact_opex_by_component.csv`** (195 rows) — operating expenditure by object:
   emoluments, pensions, debt service, subsidies, supplies, grants, asset acquisition.
-- **`fact_opex_by_sector.csv`** (95 rows) — operating expenditure by sector, two levels.
-- **`fact_devex_by_sector.csv`** (90 rows) — development expenditure by sector
+- **`fact_opex_by_sector.csv`** (251 rows) — operating expenditure by sector, two levels.
+- **`fact_devex_by_sector.csv`** (238 rows) — development expenditure by sector
   (economic / social / security / general administration), two levels.
 
-All three currently come from the **2021 edition only** and cover FY2017–2021. Filter on
-`basis`: FY2017–2019 rows are `official_actual`, FY2020 is `official_revised` and FY2021
-is `official_projection`. Mixing them produces a series that is part outturn and part
-forecast. The source ingestion's own 80 identity checks
-(`sources/mof-fiscal-outlook/data/2021_public_finance_stats/_validation.csv`) all PASS.
+Coverage FY2015–2027: **FY2015–2025 `official_actual`**, FY2026 `official_revised`,
+FY2027 `official_projection` (both from the 2027 edition). Filter on `basis` before
+building a series of outturns.
+
+**Two breaks to know before plotting a sector series.**
+- *"Pertanian dan pembangunan luar bandar"* (agriculture **and rural development**,
+  FY2015–2019 rows) becomes *"Pertanian"* (agriculture, FY2020 onward). Separate line keys
+  (`economic_agri_rural`, `economic_agriculture`); neither is spliced into the other.
+- The 2024 edition reclassified about **RM1.1–1.2 bil a year** of operating expenditure
+  from general administration to housing. FY2020–21 rows carry the old classification
+  (their `restated_in` shows the new one), FY2022 onward the new: **housing steps from
+  ~RM0.01 bil to ~RM1.2 bil at FY2022 by reclassification, not by spending.**
+
+Each year is taken **whole from one edition** — never line by line, which would let the
+renamed agriculture line arrive twice from two editions. `_validation_breakdowns.csv`
+proves every curated year foots on its own (level-1 lines to the total, sub-items to their
+sector, total to Jadual 1.1). The source ingestion's own checks — 80/80 for the 2021
+folder, 832 across the other eight editions with 0 FAIL — are in each edition folder's
+`_validation.csv`.

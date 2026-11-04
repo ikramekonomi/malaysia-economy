@@ -177,27 +177,29 @@ reconcilable to the ringgit; most real-economy data is survey-based, revised, an
 vintaged. Restatement and vintage handling is a first-class requirement, not an
 afterthought — the weekly DOSM vintage routine is the pattern to follow.
 
-## Named ingestion gap: Tinjauan Fiskal editions 2010–2020 and 2022–2025
+## Tinjauan Fiskal editions 2019–2027 — ingested; FY2009–2014 still open
 
-`curated/fact_fiscal_headline.csv` carries MOF's own `official_actual` net development
-expenditure for FY2017–2019 (from the 2021 edition's Jadual 1.1) and FY2024 (from the
-2026 edition's), and NULL for every other year — not because MOF has not published those
-figures, but because the editions carrying them are not ingested here. BNM MSB 3.1's
-complete FY2009–2024 net-DE series sits in a **separate column** as an independently
-published stand-in; the two agree to RM0.3 juta or better wherever they overlap, but they
-are different publications on different bases and are never spliced into one series.
+**Closed (2026-11-04).** All nine editions MOF still publishes on `belanjawan.mof.gov.my`
+(Budget 2019 to Budget 2027) have their statistical appendix ingested into
+`sources/mof-fiscal-outlook/data/<edition>_public_finance_stats/` — Jadual 1.1 and the
+3.1–3.3 expenditure breakdowns, parsed from the PDFs (nothing typed in), reconciled to each
+edition's own printed identities (832 checks, 0 FAIL), and cross-checked against the
+independently verified 2021 transcription (exact) and the full-report headline figures
+(20/20). The curated layer takes each year from its own edition
+(`curated/pipeline/mof_editions.py`). As a result:
 
-Closing this gap means acquiring the *Tinjauan Fiskal dan Anggaran Hasil Kerajaan
-Persekutuan* editions for budget years 2010–2020 and 2022–2025 (host:
-`belanjawan.mof.gov.my`, currently outside the egress allowlist) and ingesting each into
-its own `sources/mof-fiscal-outlook/data/<edition>/` folder following the
-`2021_public_finance_stats/` pattern. That would also backfill the Jadual 3.1/3.2/3.3
-expenditure breakdowns, which today cover FY2017–2021 from one edition only, and give
-`build_opex_devex_breakdown.py` the year-precedence rule it is already written to expect.
+- `curated/fact_fiscal_headline.devex_net_rm` (MOF's own net development expenditure) now
+  covers **FY2015–2024**, against four years before; it agrees with BNM MSB 3.1 within MOF's
+  own rounding every year.
+- The MOF expenditure breakdowns cover **FY2015–2027** (actuals to FY2025), against
+  FY2017–2021 from one edition.
+- The 2027 edition adds **FY2025 actuals**, one year past the warehouse's audited (PKKP)
+  horizon.
 
-Priority: high and cheap. It is the last place in the federal-fiscal domain where a
-published official figure is missing from the warehouse for want of a document rather
-than for want of a method.
+**Still open: FY2009–2014.** Before Budget 2019 MOF printed these tables in the *Laporan
+Ekonomi* (Economic Report), not the Tinjauan Fiskal, and the 2018 *Anggaran Hasil* book
+carries none. The Laporan Ekonomi editions 2010–2018 are the remaining source for MOF's own
+figures in those years; until then BNM MSB 3.1 (`devex_net_bnm_rm`) is the complete series.
 
 ## Earlier roadmap (2026-07-31)
 In flight: LKAN backfill 2009–2023 (federal + state volumes), AP + hasil book

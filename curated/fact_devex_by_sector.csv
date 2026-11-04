@@ -1,91 +1,235 @@
-year,line,line_bm,line_en,level,parent_line,amount_rm,pct_share,basis,source_edition,source_table,source_file,pdf_page,printed_page,note
-2017,economic,Ekonomi,Economic,1,,24186000000.0,53.9,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,general_admin,Pentadbiran am,General administration,1,,2939000000.0,6.5,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,"footnote: includes general services, maintenance and renovations"
-2017,security,Keselamatan,Security,1,,5334000000.0,11.9,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,social,Sosial,Social,1,,12425000000.0,27.7,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,total,Jumlah,Total,1,,44884000000.0,100.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2219000000.0,4.9,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,economic_communications,Perhubungan,Communications,2,economic,126000000.0,0.3,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2475000000.0,5.5,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,footnote: mainly electricity and water supply
-2017,economic_environment,Alam sekitar,Environment,2,economic,2061000000.0,4.6,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,economic_other,Lain-lain,Others,2,economic,3076000000.0,6.9,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3800000000.0,8.5,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,economic_transport,Pengangkutan,Transport,2,economic,10429000000.0,23.2,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,security_defence,Pertahanan,Defence,2,security,4315000000.0,9.6,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,security_internal,Keselamatan dalam negeri,Internal security,2,security,1019000000.0,2.3,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,social_education,Pendidikan dan latihan,Education and training,2,social,6306000000.0,14.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,social_health,Kesihatan,Health,2,social,1470000000.0,3.3,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,social_housing,Perumahan,Housing,2,social,785000000.0,1.7,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2017,social_other,Lain-lain,Others,2,social,3864000000.0,8.7,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,economic,Ekonomi,Economic,1,,36103000000.0,64.4,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,general_admin,Pentadbiran am,General administration,1,,2190000000.0,3.9,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,"footnote: includes general services, maintenance and renovations"
-2018,security,Keselamatan,Security,1,,4929000000.0,8.8,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,social,Sosial,Social,1,,12873000000.0,22.9,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,total,Jumlah,Total,1,,56095000000.0,100.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2133000000.0,3.8,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,economic_communications,Perhubungan,Communications,2,economic,68000000.0,0.1,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2254000000.0,4.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,footnote: mainly electricity and water supply
-2018,economic_environment,Alam sekitar,Environment,2,economic,1665000000.0,3.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,economic_other,Lain-lain,Others,2,economic,10467000000.0,18.7,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,2512000000.0,4.5,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,economic_transport,Pengangkutan,Transport,2,economic,17004000000.0,30.3,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,security_defence,Pertahanan,Defence,2,security,3262000000.0,5.8,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,security_internal,Keselamatan dalam negeri,Internal security,2,security,1667000000.0,3.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,social_education,Pendidikan dan latihan,Education and training,2,social,6505000000.0,11.6,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,social_health,Kesihatan,Health,2,social,1773000000.0,3.2,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,social_housing,Perumahan,Housing,2,social,1285000000.0,2.3,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2018,social_other,Lain-lain,Others,2,social,3310000000.0,5.8,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,economic,Ekonomi,Economic,1,,31300000000.0,57.8,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,general_admin,Pentadbiran am,General administration,1,,2775000000.0,5.1,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,"footnote: includes general services, maintenance and renovations"
-2019,security,Keselamatan,Security,1,,5614000000.0,10.4,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,social,Sosial,Social,1,,14484000000.0,26.7,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,total,Jumlah,Total,1,,54173000000.0,100.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2314000000.0,4.3,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,economic_communications,Perhubungan,Communications,2,economic,71000000.0,0.1,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2760000000.0,5.1,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,footnote: mainly electricity and water supply
-2019,economic_environment,Alam sekitar,Environment,2,economic,1723000000.0,3.2,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,economic_other,Lain-lain,Others,2,economic,7628000000.0,14.1,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3054000000.0,5.6,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,economic_transport,Pengangkutan,Transport,2,economic,13750000000.0,25.4,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,security_defence,Pertahanan,Defence,2,security,2931000000.0,5.4,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,security_internal,Keselamatan dalam negeri,Internal security,2,security,2683000000.0,5.0,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,social_education,Pendidikan dan latihan,Education and training,2,social,7629000000.0,14.1,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,social_health,Kesihatan,Health,2,social,1827000000.0,3.4,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,social_housing,Perumahan,Housing,2,social,2126000000.0,3.9,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2019,social_other,Lain-lain,Others,2,social,2902000000.0,5.3,official_actual,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,economic,Ekonomi,Economic,1,,28525000000.0,57.1,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,general_admin,Pentadbiran am,General administration,1,,2860000000.0,5.7,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,"footnote: includes general services, maintenance and renovations"
-2020,security,Keselamatan,Security,1,,5557000000.0,11.1,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,social,Sosial,Social,1,,13058000000.0,26.1,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,total,Jumlah,Total,1,,50000000000.0,100.0,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,3016000000.0,6.0,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,economic_communications,Perhubungan,Communications,2,economic,347000000.0,0.7,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,3586000000.0,7.2,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,footnote: mainly electricity and water supply
-2020,economic_environment,Alam sekitar,Environment,2,economic,1734000000.0,3.5,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,economic_other,Lain-lain,Others,2,economic,7209000000.0,14.4,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,2438000000.0,4.9,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,economic_transport,Pengangkutan,Transport,2,economic,10195000000.0,20.4,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,security_defence,Pertahanan,Defence,2,security,2665000000.0,5.3,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,security_internal,Keselamatan dalam negeri,Internal security,2,security,2892000000.0,5.8,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,social_education,Pendidikan dan latihan,Education and training,2,social,5871000000.0,11.7,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,social_health,Kesihatan,Health,2,social,2883000000.0,5.8,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,social_housing,Perumahan,Housing,2,social,1491000000.0,3.0,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2020,social_other,Lain-lain,Others,2,social,2813000000.0,5.6,official_revised,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,economic,Ekonomi,Economic,1,,38887000000.0,56.4,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,general_admin,Pentadbiran am,General administration,1,,3964000000.0,5.7,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,"footnote: includes general services, maintenance and renovations"
-2021,security,Keselamatan,Security,1,,7780000000.0,11.2,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,social,Sosial,Social,1,,18369000000.0,26.7,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,total,Jumlah,Total,1,,69000000000.0,100.0,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2894000000.0,4.2,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,economic_communications,Perhubungan,Communications,2,economic,600000000.0,0.9,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,3330000000.0,4.8,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,footnote: mainly electricity and water supply
-2021,economic_environment,Alam sekitar,Environment,2,economic,1891000000.0,2.7,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,economic_other,Lain-lain,Others,2,economic,12015000000.0,17.5,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3121000000.0,4.5,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,economic_transport,Pengangkutan,Transport,2,economic,15036000000.0,21.8,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,security_defence,Pertahanan,Defence,2,security,4860000000.0,7.0,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,security_internal,Keselamatan dalam negeri,Internal security,2,security,2920000000.0,4.2,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,social_education,Pendidikan dan latihan,Education and training,2,social,8873000000.0,12.9,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,social_health,Kesihatan,Health,2,social,4726000000.0,6.8,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,social_housing,Perumahan,Housing,2,social,1834000000.0,2.7,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
-2021,social_other,Lain-lain,Others,2,social,2936000000.0,4.3,official_projection,tinjauan_fiskal_2021,3.3,tinjauan_fiskal_2021.pdf,9,177,
+year,line,line_bm,line_en,level,parent_line,amount_rm,pct_share,basis,source_edition,source_table,source_file,pdf_page,printed_page,restated_in,note
+2015,economic,Ekonomi,Economic,1,,23286000000.0,57.1,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,general_admin,Pentadbiran am,General administration,1,,1568000000.0,3.8,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,security,Keselamatan,Security,1,,4754000000.0,11.7,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,social,Sosial,Social,1,,11160000000.0,27.4,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,total,Jumlah,Total,1,,40768000000.0,100.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,3105000000.0,7.6,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,economic_communications,Perhubungan,Communications,2,economic,1000000.0,0.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,3637000000.0,8.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,economic_environment,Alam sekitar,Environment,2,economic,1331000000.0,3.3,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,economic_other,Lain-lain,Others,2,economic,2881000000.0,7.1,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,5638000000.0,13.8,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,economic_transport,Pengangkutan,Transport,2,economic,6693000000.0,16.4,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,security_defence,Pertahanan,Defence,2,security,4078000000.0,10.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,security_internal,Keselamatan dalam negeri,Internal security,2,security,676000000.0,1.7,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,social_education,Pendidikan dan latihan,Education and training,2,social,4758000000.0,11.7,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,social_health,Kesihatan,Health,2,social,1442000000.0,3.5,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,social_housing,Perumahan,Housing,2,social,2008000000.0,4.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2015,social_other,Lain-lain,Others,2,social,2952000000.0,7.3,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic,Ekonomi,Economic,1,,25113000000.0,59.8,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,general_admin,Pentadbiran am,General administration,1,,1621000000.0,3.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,security,Keselamatan,Security,1,,4832000000.0,11.5,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,social,Sosial,Social,1,,10429000000.0,24.8,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,total,Jumlah,Total,1,,41995000000.0,100.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2902000000.0,6.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic_communications,Perhubungan,Communications,2,economic,5000000.0,0.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2927000000.0,7.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic_environment,Alam sekitar,Environment,2,economic,2346000000.0,5.6,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic_other,Lain-lain,Others,2,economic,4265000000.0,10.2,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,4841000000.0,11.5,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,economic_transport,Pengangkutan,Transport,2,economic,7827000000.0,18.6,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,security_defence,Pertahanan,Defence,2,security,3945000000.0,9.4,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,security_internal,Keselamatan dalam negeri,Internal security,2,security,887000000.0,2.1,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,social_education,Pendidikan dan latihan,Education and training,2,social,3727000000.0,8.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,social_health,Kesihatan,Health,2,social,1495000000.0,3.6,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,social_housing,Perumahan,Housing,2,social,2238000000.0,5.3,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2016,social_other,Lain-lain,Others,2,social,2969000000.0,7.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic,Ekonomi,Economic,1,,24186000000.0,53.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,general_admin,Pentadbiran am,General administration,1,,2939000000.0,6.5,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,security,Keselamatan,Security,1,,5334000000.0,11.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,social,Sosial,Social,1,,12425000000.0,27.7,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,total,Jumlah,Total,1,,44884000000.0,100.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2219000000.0,4.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic_communications,Perhubungan,Communications,2,economic,126000000.0,0.3,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2475000000.0,5.5,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic_environment,Alam sekitar,Environment,2,economic,2061000000.0,4.6,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic_other,Lain-lain,Others,2,economic,3076000000.0,6.9,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3800000000.0,8.5,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,economic_transport,Pengangkutan,Transport,2,economic,10429000000.0,23.2,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,security_defence,Pertahanan,Defence,2,security,4315000000.0,9.6,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,security_internal,Keselamatan dalam negeri,Internal security,2,security,1019000000.0,2.3,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,social_education,Pendidikan dan latihan,Education and training,2,social,6306000000.0,14.0,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,social_health,Kesihatan,Health,2,social,1470000000.0,3.3,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,social_housing,Perumahan,Housing,2,social,785000000.0,1.7,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2017,social_other,Lain-lain,Others,2,social,3864000000.0,8.7,official_actual,tinjauan_fiskal_2019,3.3,2019/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic,Ekonomi,Economic,1,,36103000000.0,64.4,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,general_admin,Pentadbiran am,General administration,1,,2190000000.0,3.9,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,security,Keselamatan,Security,1,,4929000000.0,8.8,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,social,Sosial,Social,1,,12873000000.0,22.9,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,total,Jumlah,Total,1,,56095000000.0,100.0,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2133000000.0,3.8,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic_communications,Perhubungan,Communications,2,economic,68000000.0,0.1,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2254000000.0,4.0,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic_environment,Alam sekitar,Environment,2,economic,1665000000.0,3.0,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic_other,Lain-lain,Others,2,economic,10467000000.0,18.7,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,2512000000.0,4.5,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,economic_transport,Pengangkutan,Transport,2,economic,17004000000.0,30.3,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,security_defence,Pertahanan,Defence,2,security,3262000000.0,5.8,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,security_internal,Keselamatan dalam negeri,Internal security,2,security,1667000000.0,3.0,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,social_education,Pendidikan dan latihan,Education and training,2,social,6505000000.0,11.6,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,social_health,Kesihatan,Health,2,social,1773000000.0,3.2,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,social_housing,Perumahan,Housing,2,social,1285000000.0,2.3,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2018,social_other,Lain-lain,Others,2,social,3310000000.0,5.8,official_actual,tinjauan_fiskal_2020,3.3,2020/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2019,economic,Ekonomi,Economic,1,,31300000000.0,57.8,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,general_admin,Pentadbiran am,General administration,1,,2775000000.0,5.1,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,"footnote: includes general services, maintenance and renovations"
+2019,security,Keselamatan,Security,1,,5614000000.0,10.4,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,social,Sosial,Social,1,,14484000000.0,26.7,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,total,Jumlah,Total,1,,54173000000.0,100.0,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,economic_agri_rural,Pertanian dan pembangunan luar bandar,Agriculture and rural development,2,economic,2314000000.0,4.3,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,economic_communications,Perhubungan,Communications,2,economic,71000000.0,0.1,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2760000000.0,5.1,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,footnote: mainly electricity and water supply
+2019,economic_environment,Alam sekitar,Environment,2,economic,1723000000.0,3.2,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,economic_other,Lain-lain,Others,2,economic,7628000000.0,14.1,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3054000000.0,5.6,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,economic_transport,Pengangkutan,Transport,2,economic,13750000000.0,25.4,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,security_defence,Pertahanan,Defence,2,security,2931000000.0,5.4,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,security_internal,Keselamatan dalam negeri,Internal security,2,security,2683000000.0,5.0,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,social_education,Pendidikan dan latihan,Education and training,2,social,7629000000.0,14.1,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,social_health,Kesihatan,Health,2,social,1827000000.0,3.4,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,social_housing,Perumahan,Housing,2,social,2126000000.0,3.9,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2019,social_other,Lain-lain,Others,2,social,2902000000.0,5.3,official_actual,tinjauan_fiskal_2021,3.3,2021/tinjauan_fiskal_2021.pdf,9,177,,
+2020,economic,Ekonomi,Economic,1,,28712000000.0,55.9,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,general_admin,Pentadbiran am,General administration,1,,3036000000.0,5.9,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,security,Keselamatan,Security,1,,5785000000.0,11.2,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,social,Sosial,Social,1,,13827000000.0,27.0,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,total,Jumlah,Total,1,,51360000000.0,100.0,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,economic_agriculture,Pertanian,Agriculture,2,economic,2003000000.0,3.9,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,economic_communications,Perhubungan,Communications,2,economic,75000000.0,0.1,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2315000000.0,4.5,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,economic_environment,Alam sekitar,Environment,2,economic,1324000000.0,2.6,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,economic_other,Lain-lain,Others,2,economic,7640000000.0,14.9,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,2576000000.0,5.0,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,economic_transport,Pengangkutan,Transport,2,economic,12779000000.0,24.9,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,security_defence,Pertahanan,Defence,2,security,3197000000.0,6.2,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,security_internal,Keselamatan dalam negeri,Internal security,2,security,2588000000.0,5.0,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,social_education,Pendidikan dan latihan,Education and training,2,social,6737000000.0,13.1,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,social_health,Kesihatan,Health,2,social,3983000000.0,7.8,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,social_housing,Perumahan,Housing,2,social,1015000000.0,2.0,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2020,social_other,Lain-lain,Others,2,social,2092000000.0,4.1,official_actual,tinjauan_fiskal_2022,3.3,2022/st_kewangan.pdf,9,,,printed page number not in this page's text layer; pdf_page is exact
+2021,economic,Ekonomi,Economic,1,,31284000000.0,48.7,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,general_admin,Pentadbiran am,General administration,1,,2872000000.0,4.4,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,security,Keselamatan,Security,1,,7498000000.0,11.7,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,social,Sosial,Social,1,,22603000000.0,35.2,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,total,Jumlah,Total,1,,64257000000.0,100.0,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,economic_agriculture,Pertanian,Agriculture,2,economic,2463000000.0,3.8,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,economic_communications,Perhubungan,Communications,2,economic,94000000.0,0.1,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2115000000.0,3.3,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,economic_environment,Alam sekitar,Environment,2,economic,1310000000.0,2.0,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,economic_other,Lain-lain,Others,2,economic,10558000000.0,16.5,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,1756000000.0,2.7,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,economic_transport,Pengangkutan,Transport,2,economic,12988000000.0,20.2,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,security_defence,Pertahanan,Defence,2,security,4498000000.0,7.0,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,security_internal,Keselamatan dalam negeri,Internal security,2,security,3000000000.0,4.7,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,social_education,Pendidikan dan latihan,Education and training,2,social,8230000000.0,12.8,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,social_health,Kesihatan,Health,2,social,8719000000.0,13.6,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,social_housing,Perumahan,Housing,2,social,1360000000.0,2.1,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2021,social_other,Lain-lain,Others,2,social,4294000000.0,6.7,official_actual,tinjauan_fiskal_2023,7.3,2023/jadual_perangkaan.pdf,58,206,,
+2022,economic,Ekonomi,Economic,1,,39115000000.0,54.6,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,general_admin,Pentadbiran am,General administration,1,,3117000000.0,4.4,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,security,Keselamatan,Security,1,,8210000000.0,11.5,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,social,Sosial,Social,1,,21132000000.0,29.5,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,total,Jumlah,Total,1,,71574000000.0,100.0,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,economic_agriculture,Pertanian,Agriculture,2,economic,2548000000.0,3.6,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,economic_communications,Perhubungan,Communications,2,economic,248000000.0,0.3,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2359000000.0,3.3,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,economic_environment,Alam sekitar,Environment,2,economic,1736000000.0,2.4,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,economic_other,Lain-lain,Others,2,economic,13356000000.0,18.7,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,2308000000.0,3.2,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,economic_transport,Pengangkutan,Transport,2,economic,16560000000.0,23.1,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,security_defence,Pertahanan,Defence,2,security,5063000000.0,7.1,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,security_internal,Keselamatan dalam negeri,Internal security,2,security,3147000000.0,4.4,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,social_education,Pendidikan dan latihan,Education and training,2,social,10029000000.0,14.0,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,social_health,Kesihatan,Health,2,social,4412000000.0,6.2,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,social_housing,Perumahan,Housing,2,social,1653000000.0,2.3,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2022,social_other,Lain-lain,Others,2,social,5038000000.0,7.0,official_actual,tinjauan_fiskal_2024,3.3,2024/st_kewangan.pdf,8,188,,
+2023,economic,Ekonomi,Economic,1,,57238000000.0,59.6,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,general_admin,Pentadbiran am,General administration,1,,3225000000.0,3.4,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,edition 2027 prints 3224,
+2023,security,Keselamatan,Security,1,,11381000000.0,11.8,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,social,Sosial,Social,1,,24247000000.0,25.2,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,total,Jumlah,Total,1,,96091000000.0,100.0,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,edition 2027 prints 96090,
+2023,economic_agriculture,Pertanian,Agriculture,2,economic,3020000000.0,3.1,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,economic_communications,Perhubungan,Communications,2,economic,345000000.0,0.4,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2374000000.0,2.5,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,economic_environment,Alam sekitar,Environment,2,economic,1860000000.0,1.9,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,economic_other,Lain-lain,Others,2,economic,28867000000.0,30.1,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3011000000.0,3.1,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,economic_transport,Pengangkutan,Transport,2,economic,17761000000.0,18.5,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,security_defence,Pertahanan,Defence,2,security,7050000000.0,7.3,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,security_internal,Keselamatan dalam negeri,Internal security,2,security,4331000000.0,4.5,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,social_education,Pelajaran dan latihan,Education and training,2,social,12185000000.0,12.7,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,social_health,Kesihatan,Health,2,social,4796000000.0,5.0,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,social_housing,Perumahan,Housing,2,social,2105000000.0,2.2,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2023,social_other,Lain-lain,Others,2,social,5161000000.0,5.3,official_actual,tinjauan_fiskal_2025,3.3,2025/st_kewangan.pdf,7,218,,
+2024,economic,Ekonomi,Economic,1,,43401000000.0,51.7,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,general_admin,Pentadbiran am,General administration,1,,3433000000.0,4.0,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,security,Keselamatan,Security,1,,11576000000.0,13.8,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,social,Sosial,Social,1,,25602000000.0,30.5,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,total,Jumlah,Total,1,,84012000000.0,100.0,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,economic_agriculture,Pertanian,Agriculture,2,economic,2810000000.0,3.3,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,economic_communications,Perhubungan,Communications,2,economic,677000000.0,0.8,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2185000000.0,2.6,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,economic_environment,Alam sekitar,Environment,2,economic,2625000000.0,3.1,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,economic_other,Lain-lain,Others,2,economic,11653000000.0,13.9,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,2985000000.0,3.6,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,economic_transport,Pengangkutan,Transport,2,economic,20466000000.0,24.4,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,security_defence,Pertahanan,Defence,2,security,7603000000.0,9.1,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,security_internal,Keselamatan dalam negeri,Internal security,2,security,3973000000.0,4.7,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,social_education,Pelajaran dan latihan,Education and training,2,social,12590000000.0,15.0,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,social_health,Kesihatan,Health,2,social,5867000000.0,7.0,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,social_housing,Perumahan,Housing,2,social,1603000000.0,1.9,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2024,social_other,Lain-lain,Others,2,social,5542000000.0,6.6,official_actual,tinjauan_fiskal_2026,3.3,2026/st_kewangan.pdf,7,206,,
+2025,economic,Ekonomi,Economic,1,,38758000000.0,47.3,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,general_admin,Pentadbiran am,General administration,1,,3653000000.0,4.5,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,security,Keselamatan,Security,1,,11918000000.0,14.5,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,social,Sosial,Social,1,,27592000000.0,33.7,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,total,Jumlah,Total,1,,81921000000.0,100.0,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,economic_agriculture,Pertanian,Agriculture,2,economic,2804000000.0,3.4,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,economic_communications,Perhubungan,Communications,2,economic,836000000.0,1.0,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2574000000.0,3.1,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,economic_environment,Alam sekitar,Environment,2,economic,2825000000.0,3.4,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,economic_other,Lain-lain,Others,2,economic,8993000000.0,11.0,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3020000000.0,3.7,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,economic_transport,Pengangkutan,Transport,2,economic,17706000000.0,21.6,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,security_defence,Pertahanan,Defence,2,security,8448000000.0,10.3,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,security_internal,Keselamatan dalam negeri,Internal security,2,security,3470000000.0,4.2,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,social_education,Pendidikan dan latihan,Education and training,2,social,14115000000.0,17.2,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,social_health,Kesihatan,Health,2,social,6068000000.0,7.4,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,social_housing,Perumahan,Housing,2,social,1836000000.0,2.2,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2025,social_other,Lain-lain,Others,2,social,5573000000.0,6.8,official_actual,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic,Ekonomi,Economic,1,,37135000000.0,45.8,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,general_admin,Pentadbiran am,General administration,1,,4635000000.0,5.7,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,security,Keselamatan,Security,1,,11788000000.0,14.6,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,social,Sosial,Social,1,,27442000000.0,33.9,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,total,Jumlah,Total,1,,81000000000.0,100.0,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic_agriculture,Pertanian,Agriculture,2,economic,2793000000.0,3.4,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic_communications,Perhubungan,Communications,2,economic,675000000.0,0.8,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2490000000.0,3.1,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic_environment,Alam sekitar,Environment,2,economic,3418000000.0,4.2,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic_other,Lain-lain,Others,2,economic,7244000000.0,8.9,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3281000000.0,4.1,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,economic_transport,Pengangkutan,Transport,2,economic,17234000000.0,21.3,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,security_defence,Pertahanan,Defence,2,security,8070000000.0,10.0,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,security_internal,Keselamatan dalam negeri,Internal security,2,security,3718000000.0,4.6,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,social_education,Pendidikan dan latihan,Education and training,2,social,13951000000.0,17.2,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,social_health,Kesihatan,Health,2,social,6669000000.0,8.2,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,social_housing,Perumahan,Housing,2,social,1457000000.0,1.8,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2026,social_other,Lain-lain,Others,2,social,5365000000.0,6.6,official_revised,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic,Ekonomi,Economic,1,,37655000000.0,45.4,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,general_admin,Pentadbiran am,General administration,1,,5117000000.0,6.2,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,security,Keselamatan,Security,1,,12240000000.0,14.7,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,social,Sosial,Social,1,,27988000000.0,33.7,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,total,Jumlah,Total,1,,83000000000.0,100.0,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic_agriculture,Pertanian,Agriculture,2,economic,2921000000.0,3.5,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic_communications,Perhubungan,Communications,2,economic,741000000.0,0.9,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic_energy_utilities,Tenaga dan kemudahan awam,Energy and public utilities,2,economic,2751000000.0,3.3,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic_environment,Alam sekitar,Environment,2,economic,3605000000.0,4.3,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic_other,Lain-lain,Others,2,economic,6567000000.0,8.0,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic_trade_industry,Perdagangan dan perindustrian,Trade and industry,2,economic,3513000000.0,4.2,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,economic_transport,Pengangkutan,Transport,2,economic,17557000000.0,21.2,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,security_defence,Pertahanan,Defence,2,security,8221000000.0,9.9,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,security_internal,Keselamatan dalam negeri,Internal security,2,security,4019000000.0,4.8,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,social_education,Pendidikan dan latihan,Education and training,2,social,13550000000.0,16.3,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,social_health,Kesihatan,Health,2,social,6907000000.0,8.3,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,social_housing,Perumahan,Housing,2,social,1681000000.0,2.0,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
+2027,social_other,Lain-lain,Others,2,social,5850000000.0,7.1,official_projection,tinjauan_fiskal_2027,3.3,2027/st_kewangan.pdf,8,210,,
