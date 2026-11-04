@@ -1,228 +1,292 @@
-# Source Catalog — Malaysia Public Finance Data Warehouse
+# Source plan: documents and APIs by theme
 
-Sources to ingest or connect, prioritised by value and by how directly they enable
-**gap-finding**. Each source is namespaced under `sources/<name>/` with its own extraction,
-provenance, and validation; comparison happens in `curated/`. Prefer machine-readable feeds
-(APIs / open data) over PDF extraction wherever available.
+What the warehouse needs, theme by theme: what we hold, what we must get, and how we get it
+(an API to connect, or a document to collect). The **row-level detail is in
+`docs/registry/series_seed.csv`** (75 series). This page is the plan; the registry is the
+checklist. How the registry works: `docs/DOCUMENT_REGISTRY.md`. How the data fits together:
+`docs/DATA_MODEL.md`.
 
-**Architecture (see CLAUDE.md): hub-per-domain, truth-by-reconciliation.** PKKP anchors
-the federal-fiscal domain only; agencies/GLCs, states, the real economy (DOSM) and
-monetary/financial (BNM) each have their own hub, joined through conformed dimensions in
-`curated/`. The catalogue below is organised by how directly a source serves a domain's
-reconciliation web — and by the three blind spots of any single-hub view: off-budget
-scope, cash-basis accounting, and the economy beyond the fiscal accounts.
+**Wording:** we say **public money** (*wang awam*), not "government money". The money
+belongs to the public, and the term covers federal, state, statutory bodies and GLCs. The
+Financial Procedure Act 1957 uses the same term ("public moneys").
 
-## Status
-- ✅ **pkkp** — Federal audited actuals, FY2009–FY2024 (in repo). Provenance to PDF + page.
-- ✅ **anggaran** — Anggaran Perbelanjaan Persekutuan, Budget 2025 + 2026 books at maksud
-  grain (sebenar 2022–2024, anggaran asal, tabled), crosswalked to PKKP, adversarially
-  verified. Program/objek grain = follow-up.
-- ✅ **anggaran-hasil** — Anggaran Hasil (revenue estimates by kod hasil), Budget 2025 +
-  2026 editions incl. tax-measure impacts and revenue-after-measures headline.
-- ✅ **mof-fiscal-outlook** — Fiscal Outlook Budget 2025 + 2026 editions, headline grain
-  (official 2025–26 projections, debt, nominal GDP), adversarially verified; plus the
-  Seksyen 5 contingent-liability / guarantee tables (Jadual 5.1–5.4 of both editions)
-  feeding `curated/fact_obligations.csv`.
-- ✅ **dosm** — GDP/GNI, population, households (OpenDOSM canonical files + API
-  cross-check + vintage tracking with a weekly detection routine).
-- ✅ **bnm** — quarterly federal finance + debt-by-holder/maturity via the BNM
-  OpenAPI (`api.bnm.gov.my/public/msb/3.1*`), 1996–1Q2026, triangulated against
-  PKKP to RM1–2m per year; FY2025 measured intra-year.
-- ✅ **audit-negara** — all 8 federal LKAN volumes 2024–2026 acquired via
-  parlimen.gov.my Command Papers (manifest + sha256 in
-  `sources/audit-negara/data/lkan_reports.csv`); extracted & adversarially
-  verified: per-agency sijil registers FY2023+FY2024 (285 agencies × opinion)
-  the per-audit findings register (34 audits, 426 findings, 1,080 RM
-  tokens, 405 ministry responses), and the AG's own federal fiscal tables
-  (48 tables / 1,569 cells, FY2024 vs FY2023) — completing the first
-  three-source triangulation: AG = PKKP audited on all six headline lines;
-  BNM's reported FY2023 gross DE exceeds the audited figure by RM1.247 juta.
+## At a glance
 
-## Tier 1 — highest value; pairs directly with PKKP
-- **Anggaran Perbelanjaan Persekutuan** (Federal Expenditure Estimates) — MOF/Treasury. The
-  **budgeted** counterpart to PKKP actuals, same maksud/program structure → the core
-  **budget-vs-actual gap**. Annual (PDF; recent years partly on data.gov.my).
-- **Anggaran Hasil Kerajaan Persekutuan** (Federal Revenue Estimates) — budgeted revenue vs
-  PKKP collected.
-- **MOF Fiscal Outlook & Revenue Estimates ("Buku Fiskal" / Laporan Fiskal)** — annual
-  headline fiscal position, debt, tax expenditure, **commodity-level subsidies** (detail PKKP
-  lacks), contingent liabilities. Cross-check vs PKKP audited.
-- **data.gov.my / OpenDOSM** — Malaysia's official open-data portal; much of DOSM + some
-  fiscal series already machine-readable (Parquet/CSV API). **Connect first** for anything it
-  already hosts — far cheaper than PDF extraction.
+| # | Theme | Held | Must get first (P1) | Main way in |
+|---|---|---|---|---|
+| 1 | People & poverty | 1 of 7 | population by state and district | API (OpenDOSM) |
+| 2 | Jobs & wages | 2 of 5 | salaries & wages survey | API (OpenDOSM) |
+| 3 | Prices & cost of living | 1 of 4 | (P2: item prices, house prices) | API (data.gov.my) + PDF |
+| 4 | Output & industry | 3 of 12 | (P2: investment, district GDP) | API (OpenDOSM) |
+| 5 | Public money & money trail | 6 of 24 | development estimates; federal development money by state; state budget estimates | PDF |
+| 6 | Health, education & services | 1 of 5 | health facts; education statistics | PDF + data.gov.my |
+| 7 | Accountability | 3 of 17 | procurement awards | PDF + web |
+| 8 | Money, credit & financial wellbeing | 1 of 7 | (P2: household debt, EPF/SOCSO) | API (BNM) + PDF |
+| — | Plan targets and cross-cutting | 0 of 5 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | PDF |
 
-## Tier 2 — denominators, gaps/wastage, revenue detail
-- **DOSM (Department of Statistics)** — GDP & national accounts (federal **and state GDP**),
-  Government Finance Statistics (GFS), population, CPI/deflators. Essential denominators:
-  spend as % of GDP, per-capita, real terms.
-- **Auditor-General's Report (Laporan Ketua Audit Negara)** — audit findings, wastage,
-  non-compliance, project overruns; federal + state. Directly serves "find gaps in fiscal
-  behaviour."
-- **Bank Negara Malaysia (BNM)** — higher-frequency federal government finance, debt, public
-  sector statistics; monthly/annual cross-check.
-- **LHDN (Inland Revenue) & JKDM (Customs)** — direct tax and SST/excise collection detail
-  behind PKKP revenue lines.
+"Held" counts series that are held, extracted or verified. A series can serve two themes,
+so the column does not add to 75.
 
-## Tier 3 — state & local, specialised (needed for a true multi-level warehouse)
-- **State LKAN volumes** — 13 per tabling day on the SAME parlimen.gov.my Command-Paper
-  route as the federal volumes (audited analysis + sijil of every state's finances,
-  per year). Acquisition folded into the LKAN backfill crawl (state volumes kept and
-  manifested with `scope=state:<Negeri>`). The cheapest entry into state coverage.
-- **State Government Financial Statements (Penyata Kewangan Kerajaan Negeri)** — 13 states +
-  Federal Territories, audited by the Auditor-General. The **state equivalent of PKKP**
-  (audited state actuals). Start with the largest / most-scrutinised: Selangor, Johor,
-  Sarawak, Sabah, Penang, Terengganu, Kelantan.
-- **State Budgets (Belanjawan / Enakmen Perbekalan Negeri)** — state budgeted vs state
-  actuals; and **federal transfers to states** (pairs state books ↔ PKKP transfer lines).
-- **Petroleum / PETRONAS revenue & royalties** — federal dividends plus oil royalties to
-  Terengganu / Sabah / Sarawak / Kelantan; a major fiscal channel under-detailed in PKKP.
-- **Local authority (PBT) finances** — municipal / city-council budgets & accounts (deepest
-  tier; fragmented publication — deliberately last).
+**The pattern:** the economy themes (1–4, 8) mostly come through **APIs we already use**, so
+each new series costs little. Public money and accountability (5, 7) come from **PDFs**. These
+are slow, but they are where the advocacy findings are, and where nobody else has the data in
+usable form.
 
-## Tier 4 — accountability & flow detail (enabled by the audit-negara datasets)
-- **PAC reports (Jawatankuasa Kira-Kira Wang Negara)** — tabled on the same
-  parlimen.gov.my route (`DR.<n>.<year>` papers). Closes the loop in the data:
-  audit finding → PAC hearing → government undertaking; joins to
-  `fact_lkan_findings.csv`.
-- **MyProcurement / ePerolehan tender awards** — procurement award registers
-  (value, winner, ministry); pairs with the procurement findings in the LKAN
-  registers.
-- **LHDN & JKDM annual reports** — tax-type collection detail behind PKKP revenue
-  lines (CIT/PIT split, SST by sector).
-- **GLC / MKD company accounts** — financials of the companies the AG audits
-  (joins the Syarikat audit findings to actual company statements).
-- **DOSM Government Finance Statistics + state GDP** — via the existing OpenDOSM
-  API pipeline; consolidated general-government series and state-ratio
-  denominators. Machine-readable: do before further PDF sources.
+---
 
-## Tier 0 — plan targets as data (the Agenda Ekonomi Negara layer)
+## APIs: connected and to connect
 
-**The highest-value gap in the warehouse, and nothing public does it.** This warehouse's
-proven competence is *plan vs outcome* — tabled budget vs audited actual. Applied to the
-economy, that becomes **national targets vs realised outcomes**: the first systematic
-scorecard of whether Malaysian economic plans are actually met.
+| API | Publisher | Status | Gives us |
+|---|---|---|---|
+| `api.data.gov.my` (OpenDOSM + data catalogue) | DOSM / data.gov.my | **connected** | national accounts, HIES, LFS, CPI, trade, state GDP |
+| `storage.dosm.gov.my` (bulk files) | DOSM | **connected** | the canonical CSVs behind the API |
+| `api.bnm.gov.my` (OpenAPI) | BNM | **connected** | federal finance, rates, FX, money supply, credit |
+| data.gov.my datasets (ids to confirm) | DOSM, KPDN, MOF, KPM, SPR | to connect | population by state/district, Kawasanku constituency profiles, election results, PriceCatcher, fuel prices, education |
 
-Each source below is ingested as a **target register** (target, unit, baseline, target
-year, owning ministry, source page), then paired with the DOSM/BNM series that measures
-it, in `curated/`.
+**Global**, for peer comparison and independent cross-checks. Every one needs its
+definitions matched before a comparison is shown (federal vs general government, for one).
 
-- **Rancangan Malaysia Ke-12 / Ke-13** + Mid-Term Reviews — GDP growth, investment share,
-  income, employment, regional balance, poverty. The spine of the layer.
-- **Ekonomi MADANI** — the 7 targets / 6 goals framework, with dates.
-- **NIMP 2030** (New Industrial Master Plan) — mission-level and sector targets.
-- **NETR** (National Energy Transition Roadmap) — capacity, emissions, investment.
-- Sector blueprints — digital, semiconductor, logistics, agrofood, tourism.
-- **Belanjawan speech commitments** — announced measures, traceable to the vote that
-  funds them (joins straight to `sources/anggaran` detail grain).
+| API | Publisher | Theme | Gives us |
+|---|---|---|---|
+| IMF DataMapper + SDMX API | IMF | 4, 5, 8 | WEO, IFS, GFS, Fiscal Monitor |
+| World Bank Indicators API | World Bank | 4, 7 | WDI; Worldwide Governance Indicators |
+| BIS data portal API | BIS | 8 | household credit and debt service ratios vs peers |
+| OECD SDMX API | OECD | 5 | Revenue Statistics in Asia and the Pacific (tax mix, tax-to-GDP) |
+| UN Comtrade API (free key) | UN | 4 | trade by partner and HS code; mirror checks on DOSM trade |
+| ILOSTAT SDMX API | ILO | 2 | labour and wages vs peers |
+| WHO GHO OData API | WHO | 6 | health outcomes and spending vs peers |
+| UNESCO UIS API | UNESCO | 6 | education outcomes vs peers |
+| UN SDG API | UN | targets | the SDG indicators Malaysia reports against |
+| UNDP HDR API (key) | UNDP | 1 | Human Development Index |
+| IBP Open Budget Survey (download) | IBP | 7 | the federal transparency score |
+| TI Corruption Perceptions Index (download) | Transparency International | 7 | perceived corruption vs peers |
 
-Pairing pattern: `target_value` ↔ the measured series ↔ the budget line funding it.
-A target with no funded vote, or a funded vote with no target, is itself the finding.
+Endpoint details are confirmed when each is connected; none is assumed.
 
-## Tier 1b — the real economy (required for any economic-agenda analysis)
+No API exists for most fiscal and accountability documents. Those come by **document
+collection**:
 
-Mostly machine-readable through the OpenDOSM API already wired in `sources/dosm`:
+| Route | Status | Gives us |
+|---|---|---|
+| parlimen.gov.my Command Papers | **crawler built** | PKKP, LKAN federal and state (402 volumes held) |
+| belanjawan.mof.gov.my | **fetcher built** | Tinjauan Fiskal, Anggaran, Anggaran Hasil |
+| 13 state government and assembly websites | to build | state budgets, budget speeches, enacted budgets, year-end reports, hansards |
+| audit.gov.my | to check | AG action-status dashboard |
+| ministry and agency websites | to collect | health facts, plans, MIDA, NAPIC, GLIC reports |
 
-- **National accounts detail** — GDP by sector and by expenditure, quarterly, real and
-  nominal; GNI; savings/investment balance.
-- **Household Income & Expenditure Survey (HIES/HES)** — income by decile, **Gini**,
-  poverty incidence, B40/M40/T20, by state and strata. Without this the agenda's core
-  outcomes are unobservable.
-- **Wages, productivity and labour** — salaries & wages survey, productivity by sector,
-  labour force detail, unemployment/underemployment, foreign-worker dependence.
-- **Industrial production, manufacturing sales, services indices** — the monthly pulse.
-- **Trade at full depth** — commodity × partner (HS/SITC beyond the 1-digit already held).
-- **Approved investments (MIDA)** — FDI/DDI by sector and state, approved vs realised
-  (a gap pairing in its own right).
-- **Business demography** — SSM registrations/closures, SME Corp census.
+---
 
-## Tier 2b — state-directed capital outside the budget
+## Questions are examples, not a limit
 
-The economic analogue of the off-budget fiscal blind spot already closed:
+The questions under each theme below show what a theme is for. They are **not** the list of
+what the warehouse can answer. Nothing in the data model is built around a fixed question:
+every number is stored the same way (what, where, when, split by what, who, from which
+document), so any question that combines those can be asked, including ones nobody has
+thought of yet.
 
-- **GLIC accounts** — Khazanah, EPF, KWAP, PNB, LTAT, Lembaga Tabung Haji. Collectively
-  they steward assets comparable to federal debt; none is in the fiscal accounts.
-- **PETRONAS** — annual report, dividends and royalties. Already 92–98% of all dividends
-  reaching the federal government (see `curated/GAP_VIEWS.md`): a single-point dependency.
-- **Capital markets** — Bursa/SC aggregates, Islamic finance, sukuk issuance.
+**Patterns that work for every indicator, in every theme:**
 
-## Tier 3b — sector and delivery data
+| Pattern | Example |
+|---|---|
+| Level | What is the youth unemployment rate in Sabah? |
+| Trend | How has it moved since 2015? |
+| Rank and compare places | Which DUNs are worst, and how far from the national rate? |
+| Compare groups | Women vs men, urban vs rural, B40 vs T20, by age or ethnicity, where the source splits it |
+| Relative to people or the economy | Per person, per household, % of GDP, in real terms |
+| Gap between sources | Does BNM agree with the audited accounts? |
+| Gap between stages | Announced → budgeted → spent → audited: where does the money drop? |
+| Target vs outcome | Did the plan hit its own target? |
+| Who and where | Which agency, which contractor, which district? |
+| Against other countries | How does Malaysia compare with its peers? |
+| What is missing | Which states do not publish this, since when? |
 
-Energy (Suruhanjaya Tenaga, TNB), commodities (MPOB, MRB, MTIB), property (NAPIC),
-transport & logistics, education/TVET outcomes, health outcomes, digital and broadband
-(MCMC), **district-level GDP** for intra-state regional gaps.
+**Questions across themes** are the point of one warehouse, not eight separate ones:
 
-## Benchmarking / independent validation
-- **IMF** — Article IV, WEO, Government Finance Statistics for Malaysia (independent check on
-  headline aggregates).
-- **World Bank** — Malaysia public finance reviews & open data.
+* Do the districts with the highest poverty (theme 1) receive more development money per
+  person (theme 5)?
+* Is household debt (theme 8) rising faster where wages (theme 2) are flat and prices
+  (theme 3) are rising?
+* Do states with weak budget transparency (theme 7) also show bigger gaps between budget and
+  actual spending (theme 5)?
+* Do clinics and schools (theme 6) follow population growth (theme 1)?
+* Did fuel subsidy spending (theme 5) move with fuel prices (theme 3), and who benefited?
+* When an audit finding names a project (theme 7), what happened to that place's outcomes
+  (themes 1, 2, 6)?
 
-## Roadmap — Agenda Ekonomi Negara (agreed 2026-08-01)
+**When a question cannot be answered yet**, the answer says why: the document is
+`expected`, `restricted` or `not_published` in the registry. The question is logged
+(`meta.question_log`), and logged questions decide which documents are collected next. The
+plan grows from the questions people actually ask.
 
-Goal: the most complete, fully-verifiable warehouse of the Malaysian economy, built to
-**find gaps** — between plan and outcome, budget and delivery, federal and state,
-reported and audited.
+---
 
-Order of work:
-1. **DOSM real-economy set** (Tier 1b) — national accounts detail, HIES/income and Gini,
-   wages and productivity, IPI/services, trade depth. Machine-readable, extends the
-   existing `sources/dosm` pipeline. **In progress.**
-2. **Tier 0 plan-target registers** — RMK-12/13, Ekonomi MADANI, NIMP 2030, NETR — paired
-   against the Tier 1b series in `curated/`.
-3. **GLIC + PETRONAS accounts** (Tier 2b) — the largest unmeasured pool of state-directed
-   capital.
-4. PAC reports, MyProcurement, LHDN/JKDM (Tier 4), then sector data (Tier 3b).
+## Theme 1: People & poverty
 
-**Caution carried into every economy source:** the fiscal sources are audited and
-reconcilable to the ringgit; most real-economy data is survey-based, revised, and
-vintaged. Restatement and vintage handling is a first-class requirement, not an
-afterthought — the weekly DOSM vintage routine is the pattern to follow.
+**Example questions (not a limit):** Where are the poorest districts and DUNs? Is poverty falling everywhere, or
+only on average? Which groups are left behind (women-headed households, rural, elderly)? Is
+inequality within a state widening? Does money reach the areas that need it?
 
-## Tinjauan Fiskal editions 2019–2027 — ingested; FY2009–2014 still open
+| Have | Need |
+|---|---|
+| HIES 2019–2024: income, poverty, inequality, state to DUN | **P1** population by state and district: every per-capita figure depends on it |
+| | P2 Census 2020 (small-area detail) |
+| | P3 zakat collection and distribution by state |
+| | restricted: PADU / eKasih (aggregates via parliamentary answers only) |
 
-**Closed (2026-11-04).** All nine editions MOF still publishes on `belanjawan.mof.gov.my`
-(Budget 2019 to Budget 2027) have their statistical appendix ingested into
-`sources/mof-fiscal-outlook/data/<edition>_public_finance_stats/` — Jadual 1.1 and the
-3.1–3.3 expenditure breakdowns, parsed from the PDFs (nothing typed in), reconciled to each
-edition's own printed identities (832 checks, 0 FAIL), and cross-checked against the
-independently verified 2021 transcription (exact) and the full-report headline figures
-(20/20). The curated layer takes each year from its own edition
-(`curated/pipeline/mof_editions.py`). As a result:
+**Gap views it enables:** need vs money (`gap_need_vs_money`), poverty by DUN vs federal
+spending in that DUN.
 
-- `curated/fact_fiscal_headline.devex_net_rm` (MOF's own net development expenditure) now
-  covers **FY2015–2024**, against four years before; it agrees with BNM MSB 3.1 within MOF's
-  own rounding every year.
-- The MOF expenditure breakdowns cover **FY2015–2027** (actuals to FY2025), against
-  FY2017–2021 from one edition.
-- The 2027 edition adds **FY2025 actuals**, one year past the warehouse's audited (PKKP)
-  horizon.
+## Theme 2: Jobs & wages
 
-**Still open: FY2009–2014.** Before Budget 2019 MOF printed these tables in the *Laporan
-Ekonomi* (Economic Report), not the Tinjauan Fiskal, and the 2018 *Anggaran Hasil* book
-carries none. The Laporan Ekonomi editions 2010–2018 are the remaining source for MOF's own
-figures in those years; until then BNM MSB 3.1 (`devex_net_bnm_rm`) is the complete series.
+**Example questions (not a limit):** Where is unemployment highest, for youth especially? Are wages keeping up
+with prices? How many people are underemployed or in informal work? Which sectors create jobs,
+and where? Is retirement saving enough?
 
-## Earlier roadmap (2026-07-31)
-In flight: LKAN backfill 2009–2023 (federal + state volumes), AP + hasil book
-backfill 2010–2023, Laporan Ekonomi ~2009–2018 (the pre-2019 Fiscal Outlook
-equivalent) — each acquisition → manifest → era-specific extraction →
-adversarial verification. Then, in order: DOSM GFS + state GDP (machine-readable)
-→ pilot state financial statements (Selangor or Sarawak) → PAC reports →
-remaining Tier 4 by earned priority.
+| Have | Need |
+|---|---|
+| LFS: national monthly, state quarterly, district/parlimen/DUN annual | **P1** salaries & wages survey: median wage by state and sector |
+| productivity 2015–2025 | P2 EPF and SOCSO statistics: savings adequacy, job-loss claims |
 
-## Gap-analysis pairings (why we consolidate)
-| Question | Compare |
-| --- | --- |
-| Budgeted vs actual spend | Anggaran Perbelanjaan ↔ PKKP (per maksud/program) |
-| Revenue estimate vs collected | Anggaran Hasil ↔ PKKP revenue |
-| Audited vs headline-reported | PKKP ↔ MOF Fiscal Outlook |
-| Federal vs state | State financial statements ↔ federal transfers |
-| Spend vs capacity | PKKP / state ↔ DOSM GDP & population |
-| Planned vs delivered (projects) | Devex estimates ↔ PKKP Lampiran 2 ↔ Auditor-General |
-| Commodity subsidy detail | MOF Fiscal Outlook / Anggaran ↔ PKKP subsidy lines |
+## Theme 3: Prices & cost of living
 
-## Ingestion rules
-1. Prefer machine-readable (data.gov.my/OpenDOSM, DOSM/BNM APIs) over PDF.
-2. Each source = own `sources/<name>/` folder, own extraction + provenance + validation.
-3. Conform to shared dimensions (year, maksud/ministry, object class, state) in `curated/`.
-4. Never blend raw numbers across sources without a documented mapping and an audit trail —
-   same discipline as PKKP's cross-volume restatement audits.
+**Example questions (not a limit):** Is the cost of living rising faster in some states? Which essential items
+rise fastest? Can households afford a house? What happens to prices when a subsidy changes?
+
+| Have | Need |
+|---|---|
+| CPI national and state 2010–2026 | P2 PriceCatcher item-level prices by place |
+| | P2 house price index by state (NAPIC) |
+| | P3 retail fuel prices (pairs with subsidy spending) |
+
+## Theme 4: Output & industry
+
+**Example questions (not a limit):** Which states are growing, and from what? Is approved investment turning into
+real investment, and jobs? How dependent is the economy on oil and gas, or on a few exports?
+Is productivity rising?
+
+| Have | Need |
+|---|---|
+| GDP quarterly and annual; state GDP 2015–2025 | P2 approved investment by state (MIDA) |
+| IPI, PPI, trade, FDI | P2 district GDP (existence to confirm) |
+| | P2 PETRONAS accounts (dividends; royalties to producing states) |
+| | P3 energy statistics; IMF WEO and World Bank peer data |
+
+## Theme 5: Public money & money trail
+
+**Example questions (not a limit):** Was the budget spent as approved? How much reached each state and district,
+and through whom? How much is owed but not yet on the books (guarantees, PFI)? How dependent
+are states on federal transfers? Do states publish their own budgets?
+
+| Have | Need |
+|---|---|
+| PKKP audited federal accounts FY2009–2024 (down to project) | **P1** development estimates (project-level budget): the missing half of budget vs actual |
+| Anggaran (operating) Budget 2024–2026; Anggaran Hasil 2025–2026 | **P1** federal development allocation by state (existence to confirm) |
+| Tinjauan Fiskal 2019–2027 editions | **P1** state budget estimates (*Buku Belanjawan*): 7 of 13 states publish |
+| BNM federal finance 1996–2026 | P2 state enacted budgets (Terengganu only), budget speeches (10 of 13) |
+| audited state statements, 13 states FY2014–2024 | P2 Laporan Ekonomi 2010–2018 (MOF figures FY2009–2014); budget speech commitments |
+| | P2 constituency development funds by parlimen/DUN; GLIC accounts; PFI/PPP register |
+| | not published: state Supply Bills (0 of 13) |
+
+**Gap views it enables:** budget vs actual, revenue estimate vs collected, reported vs
+audited, federal vs state, need vs money.
+
+## Theme 6: Health, education & services
+
+**Example questions (not a limit):** Are doctors, beds and good schools where the people are? Are outcomes
+(life expectancy, exam results, dropouts) improving everywhere? Does spending per pupil or
+patient differ by state?
+
+| Have | Need |
+|---|---|
+| household access to amenities by district 2016–2024 | **P1** health facts by state (doctors, beds, facilities) |
+| | **P1** education statistics and school data by district |
+
+This theme is the thinnest today, and the one most directly about people's daily lives.
+
+## Theme 7: Accountability
+
+**Example questions (not a limit):** What did the Auditor-General find, and was it fixed? Do the same bodies get
+the same findings every year? Who won the contracts, and how? How open is each state's budget,
+and is it getting better?
+
+| Have | Need |
+|---|---|
+| LKAN federal 2024–2026 extracted (426 findings); 402 volumes 2015–2026 held | **P1** procurement awards (project → contractor) |
+| AG agency opinions FY2023–2024 | P2 federal and state PAC reports; AG action-status dashboard |
+| | P2 MyOBI scores 2022/2024/2026 (2026 PDF supplied, not yet ingested) |
+| | P2 Pantau Projek and Pantau Laksana (IDEAS); state PAC reports (Selangor only publishes) |
+| | P3 DUN hansards (11 states current, 8 archived), DUN questions (7 states), IBP Open Budget Survey, global governance indices |
+| | restricted: SSM company register (paid per lookup) |
+
+## Theme 8: Money, credit & financial wellbeing
+
+**Example questions (not a limit):** Are households over-borrowed? Who is going bankrupt, and where? How do
+interest-rate changes reach borrowers? Is credit going to productive uses?
+
+| Have | Need |
+|---|---|
+| BNM: OPR, rates, FX, money supply, lending by purpose | P2 household debt (BNM Financial Stability Review) |
+| | P2 EPF and SOCSO statistics |
+| | P3 bankruptcy statistics by state |
+
+## Plan targets (all themes)
+
+**Example questions (not a limit):** Did the government hit its own targets? Which targets have no funded budget
+line, and which budget lines have no target?
+
+| Have | Need |
+|---|---|
+| — | **P1** RMK-12 Mid-Term Review and RMK-13 targets |
+| | P2 NIMP 2030, NETR, Ekonomi MADANI targets |
+| | P2 constituency delimitation reports and boundary files (to link data across boundary changes) |
+
+---
+
+## Release calendar: when to expect new documents
+
+| When | What | Source of the rule |
+|---|---|---|
+| October | Federal Budget: Anggaran, Anggaran Hasil, Tinjauan Fiskal, budget speech | MOF practice (Budget 2027 edition held) |
+| 1 Nov – 31 Dec | State budget proposals (speech, estimates) should be public | MyOBI 2026 timeliness standard (Table 2) |
+| before 1 Jan | State enacted budgets should be public | MyOBI 2026 Table 2 |
+| Jan – Jun | State year-end reports (previous year) should be public | MyOBI 2026 Table 2 |
+| Jan – Sep | State audit reports (year before last) should be public | MyOBI 2026 Table 2 |
+| through the year | LKAN volumes, tabled in series | `lkan_reports_backfill.csv` tabling dates |
+| per dataset | DOSM releases | `next_update` in `sources/dosm/data/_vintage.json`, checked by `refresh.py` |
+
+The MyOBI dates are what *should* happen. The registry records what *did*, so a late or
+missing document becomes a dated finding.
+
+---
+
+## What MyOBI 2026 tells us
+
+IDEAS' Malaysia Open Budget Index (August 2026; two of its 13 state assessments were done by
+IKRAM volunteers) scores whether **state budget documents are published**, how strong the
+oversight is, and how much the public can take part. It also records numbers: the week each
+budget was tabled and passed, DUN sitting days and budget-debate days, and unscored items such
+as the share of state revenue from federal transfers and from land, and allocations to the Chief
+Executive's office. IDEAS' Pantau Wang Kita site also hosts **Pantau Projek** (state
+infrastructure project transparency) and **Pantau Laksana** (stimulus packages, announced vs
+implemented), both in the registry.
+
+| | MyOBI / Pantau Wang Kita | This warehouse |
+|---|---|---|
+| Asks | Is it public, on time, and scrutinised? Selected numbers | What do all the numbers say, and do they add up? |
+| Covers | 13 states; transparency, oversight, participation | federal + 13 states; the whole economy |
+| Output | a score per state, peer reviewed, every two years | every figure, with its source page, checked |
+
+We use MyOBI as the **evidence for state document statuses** in the registry (for example, that
+no state published its 2026 Supply Bill). We ingest its scores as an accountability series.
+The one document MyOBI finds every state has, the Auditor-General's report, is the one we
+already hold and have turned into data for all 13 states.
+
+---
+
+## Still open from earlier work
+
+* **FY2009–2014 MOF fiscal figures:** before Budget 2019 MOF printed these in the *Laporan
+  Ekonomi*. The registry row `laporan_ekonomi` tracks it. Until then BNM MSB 3.1 is the complete
+  series.
+* **LKAN backfill:** 402 volumes are held with sha256. Findings are extracted for 2024–2026
+  only.

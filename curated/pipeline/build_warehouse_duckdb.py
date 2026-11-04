@@ -117,8 +117,8 @@ def main():
     print("=== curated -> schema curated ===")
     con.execute("CREATE SCHEMA curated")
     curated_files = sorted(glob.glob(os.path.join(CURATED, "**", "*.csv"), recursive=True))
-    # pipeline/ has no CSVs (code only); dashboard/ and forecast/ CSVs are legitimate
-    # derived data and are included.
+    # pipeline/ has no CSVs (code only). Model output lives in apps/models/, outside
+    # the warehouse, and is deliberately not loaded.
     byname = group_by_basename(curated_files)
     for name, paths in sorted(byname.items()):
         total_rows += load_group(con, "curated", name, paths, failures)

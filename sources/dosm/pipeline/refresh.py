@@ -13,9 +13,8 @@ https://developer.data.gov.my/static-api/opendosm) and the storage ETag against 
 recorded baseline in data/_vintage.json.
 
 Apply mode re-downloads the canonical CSVs, prints a row-level diff summary, updates
-_vintage.json, rebuilds the derived denominators, and re-runs the API cross-check.
-After applying: update the vintage table in sources/dosm/README.md and rebuild the
-dashboard (python3 curated/dashboard/build_dashboard.py).
+_vintage.json, and re-runs the API cross-check.
+After applying: update the vintage table in sources/dosm/README.md.
 """
 import csv
 import json
@@ -139,16 +138,15 @@ def main():
         print(f"applied      {ds}: {fname} now {total} rows (+{added} new/changed, "
               f"-{removed} removed/changed vs previous vintage)")
     json.dump(live, open(VINTAGE, "w"), indent=2)
-    print("vintage baseline updated; rebuilding derived denominators + re-running API cross-checks")
-    subprocess.run([sys.executable, os.path.join(HERE, "build_denominators.py")], check=True)
+    print("vintage baseline updated; re-running API cross-checks")
     subprocess.run([sys.executable, os.path.join(HERE, "verify_against_api.py")], check=True)
     if any(ds in EXPANSION for ds in stale):
         subprocess.run([sys.executable, os.path.join(HERE, "verify_expansion.py")], check=True)
     if any(ds in REALECONOMY for ds in stale):
         subprocess.run([sys.executable, os.path.join(HERE, "verify_realeconomy.py")], check=True)
         subprocess.run([sys.executable, os.path.join(HERE, "series_breaks.py")], check=True)
-    print("REMEMBER: update the vintage table in sources/dosm/README.md, rebuild the "
-          "dashboard, and commit the new vintage as its own change (never silently).")
+    print("REMEMBER: update the vintage table in sources/dosm/README.md and commit the "
+          "new vintage as its own change (never silently).")
     if any(ds in REALECONOMY for ds in stale):
         print("REMEMBER (real economy): a survey revision can move a whole series. Check "
               "data/_series_breaks_dosm.csv still describes the new vintage, and diff the "

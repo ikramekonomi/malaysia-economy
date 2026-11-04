@@ -3,8 +3,8 @@
 Source #2 of the warehouse: the **budget as tabled in Parliament**, at the same
 maksud → program → aktiviti → objek grain PKKP records as actuals. Enables the true
 budget-vs-actual gap (vs the interim view in `curated/`, which uses PKKP's own recorded
-`anggaran_asal`) and — via `curated/forecast/fact_utilisation_signatures.csv` — expected-
-actual nowcasts for un-audited years.
+`anggaran_asal`) and — via `apps/models/fact_utilisation_signatures.csv`, a model outside
+the warehouse — expected-actual nowcasts for un-audited years.
 
 ## Status: Budget 2024, 2025 AND 2026 ingested at maksud grain (2026-07-31)
 
@@ -33,8 +33,8 @@ long format with per-row `pdf_page`/`printed_page`.
 - **Crosswalk:** `data/2025/_crosswalk_pkkp_2025.csv` — AP vote codes ("B. 62")
   normalised to PKKP `dim_maksud` codes ("B.62"/zero-padded); all 85 matched with
   name-level evidence, none guessed.
-- **Nowcast:** `curated/forecast/fact_nowcast_2025.csv` (built by
-  `curated/forecast/build_nowcast_2025.py`) applies per-vote utilisation signatures to
+- **Nowcast:** `apps/models/fact_nowcast_2025.csv` (built by
+  `apps/models/build_nowcast_2025.py`) applies per-vote utilisation signatures to
   the anggaran_2025 figures (`basis=model_projection`).
 
 ### Budget 2026 book (`data/2026/`)

@@ -185,5 +185,5 @@ labelled end-June in the source keep that caveat in the note — MOF publishes n
 debt projection. After entry: reconcile against the document's own printed totals, then run
 the independent adversarial verifier pass — the same discipline as PKKP.
 
-Pairs with `curated/forecast/` (the model projection becomes a cross-check) and with the
+Pairs with `apps/models/` (our model projection, now only a cross-check) and with the
 gap-analysis pairings in `docs/SOURCES.md` (audited vs headline-reported).

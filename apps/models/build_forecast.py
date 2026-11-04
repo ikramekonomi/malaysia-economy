@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Pilot forecast layer: utilisation signatures + trend projections for FY2025–FY2026.
 
-Run:  python3 curated/forecast/build_forecast.py
+Run:  python3 apps/models/build_forecast.py
 Reads : sources/pkkp/pkkp.duckdb   (rebuild first: python3 pipeline/build_duckdb.py)
-Writes: curated/forecast/fact_utilisation_signatures.csv
-        curated/forecast/fact_projection_headline.csv
+Writes: apps/models/fact_utilisation_signatures.csv
+        apps/models/fact_projection_headline.csv
         (method & assumptions: _METHOD.md in this folder)
 
 Basis discipline (see CLAUDE.md): everything here is a DERIVED MODEL, never an audited

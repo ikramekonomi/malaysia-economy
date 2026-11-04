@@ -6,8 +6,9 @@
   V2 cross-source (the triangulation): BNM annual sums vs audited PKKP
      (revenue, opex, gross DE), FY2010-FY2024 — tolerance RM1 million
      (BNM serves RM million floats; PKKP is sen-exact)
-  V3 FY2025 measured (sum of quarters) vs MOF official revised estimate and the
-     warehouse signature nowcast — reported as INFO findings, not pass/fail
+  V3 FY2025 measured (sum of quarters) vs MOF official revised estimate —
+     reported as INFO findings, not pass/fail. (The comparison with our own model
+     nowcast moved out of source validation with the model, to apps/models/.)
   V4 component-vs-total identities inside each table that prints subtotals
      (3.1.1-3.1.6 and, where present, the wider MSB tables from
      fetch_bnm_msb_wide.py: 1.1 reserve money, 1.3 monetary aggregates,
@@ -35,7 +36,6 @@ DATA = os.path.join(HERE, "..", "data")
 ROOT = os.path.join(HERE, "..", "..", "..")
 DB = os.path.join(ROOT, "sources", "pkkp", "pkkp.duckdb")
 OFF = os.path.join(ROOT, "sources", "mof-fiscal-outlook", "data", "fiscal_outlook_headline.csv")
-NOW = os.path.join(ROOT, "curated", "forecast", "fact_nowcast_2025.csv")
 
 rows = list(csv.DictReader(open(os.path.join(DATA, "msb_3_1.csv"))))
 out = []
@@ -90,7 +90,7 @@ for y in range(2010, 2025):
     rec("V2_vs_pkkp", f"{y} opex (RM mil)", round(pk[y][1], 1), round(bexp, 1), tol=1.0)
     rec("V2_vs_pkkp", f"{y} gross DE (RM mil)", round(pk_de[y], 1), round(bde, 1), tol=2.0)
 
-# V3 FY2025 measured vs official/nowcast
+# V3 FY2025 measured vs official
 off = {}
 for r in csv.DictReader(open(OFF)):
     k = (int(r["edition_year"]), int(r["target_year"]), r["line"])
@@ -98,10 +98,6 @@ for r in csv.DictReader(open(OFF)):
 m25 = {k: sum(float(q[2025][p][k]) for p in q[2025]) / 1e3 for k in
        ("cur_bud_rev", "cur_bud_exp", "dev_exp_gro_dev_exp", "dev_exp_les_loa_rec")}
 deficit25 = (m25["cur_bud_rev"] - m25["cur_bud_exp"]) - (m25["dev_exp_gro_dev_exp"] - m25["dev_exp_les_loa_rec"])
-now_mid = None
-for r in csv.DictReader(open(NOW)):
-    if r["maksud_code"] == "TOTAL_OE":
-        now_mid = float(r["expected_mid_rm"]) / 1e9
 rec("V3_fy2025_measured", "revenue RM bil: BNM measured vs MOF revised",
     off[(2026, 2025, "revenue")], round(m25["cur_bud_rev"], 3), status="INFO")
 rec("V3_fy2025_measured", "opex RM bil: BNM measured vs MOF revised",
@@ -110,8 +106,6 @@ rec("V3_fy2025_measured", "gross DE RM bil: BNM measured vs MOF revised",
     off[(2026, 2025, "development_expenditure")], round(m25["dev_exp_gro_dev_exp"], 3), status="INFO")
 rec("V3_fy2025_measured", "overall deficit RM bil: BNM measured vs MOF revised",
     off[(2026, 2025, "overall_deficit")], round(deficit25, 3), status="INFO")
-rec("V3_fy2025_measured", "opex RM bil: BNM measured vs signature-nowcast mid",
-    round(now_mid, 3), round(m25["cur_bud_exp"], 3), status="INFO")
 
 # ---------------------------------------------------------------------------
 # V4-V6: identities + grain consistency, tables from both fetchers (additive)

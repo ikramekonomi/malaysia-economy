@@ -1,8 +1,14 @@
-# Forecast layer — method & assumptions (pilot)
+# Models — method & assumptions (pilot)
+
+**This folder is an application on top of the warehouse, not warehouse data** (docs/DATA_MODEL.md
+§13.1). It moved here from `curated/forecast/` on 2026-11-04. Its own supersession rule has
+fired: MOF's official figures (Tinjauan Fiskal 2019–2027, FY2025 actuals included) are now in
+`sources/mof-fiscal-outlook/`, so these models are cross-checks only. Nothing in `curated/`
+or `site/` reads them.
 
 Everything in this folder is a **derived model**, never an audited figure. Rows carry
 `basis` (`derived_signature` / `model_projection`), `method`, and `data_through` so they can
-never be confused with PKKP actuals. Rebuild: `python3 curated/forecast/build_forecast.py`.
+never be confused with PKKP actuals. Rebuild: `python3 apps/models/build_forecast.py`.
 
 ## 1. `fact_utilisation_signatures.csv`
 For each operating vote (`maksud`): the empirical distribution of
