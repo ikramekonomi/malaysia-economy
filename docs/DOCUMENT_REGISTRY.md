@@ -90,7 +90,7 @@ government finance statistics (`dosm_gfs`).
 
 | Status | Series |
 |---|---|
-| verified / extracted | 18: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities, DOSM population (national), DOSM government finance |
+| verified / extracted | 19: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities, DOSM population (national, and by state and district), DOSM government finance |
 | held, not extracted | 1: LKAN state volumes (findings) |
 | expected | 81 (34 of all 104 series are reachable by API), including every state budget document: whether each state publishes it is to be checked state by state |
 | restricted | 4: SSM company register, PADU/eKasih, DOSM and KPM data requests |

@@ -14,7 +14,7 @@ Financial Procedure Act 1957 uses the same term ("public moneys").
 
 | # | Theme | Held | Must get first (P1) | Main way in |
 |---|---|---|---|---|
-| 1 | People & poverty | 2 of 14 | population by state and district; HIS report tables; HES report tables; cash-transfer recipients by state | API (OpenDOSM) + DOSM reports |
+| 1 | People & poverty | 3 of 14 | population by state and district; HIS report tables; HES report tables; cash-transfer recipients by state | API (OpenDOSM) + DOSM reports |
 | 2 | Jobs & wages | 2 of 8 | salaries & wages survey; LFS annual report | API (OpenDOSM) + DOSM reports |
 | 3 | Prices & cost of living | 1 of 6 | HES report tables (P2: CPI detail, item prices, house prices) | API (data.gov.my) + PDF |
 | 4 | Output & industry | 3 of 15 | (P2: investment, Economic Census, district GDP) | API (OpenDOSM) |

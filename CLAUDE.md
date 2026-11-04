@@ -45,7 +45,7 @@ What we hold and what we need is one checklist: **`docs/registry/series_seed.csv
 status, route, access, licence, priority). The plan behind it, theme by theme:
 **`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
 `sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9
-editions), bnm, dosm (110 datasets, refreshed daily), audit-negara, states (13 states).
+editions), bnm, dosm (112 datasets, refreshed daily), audit-negara, states (13 states).
 
 ## Golden rules — do not break these
 1. **Raw source data (the CSVs) is the source of truth.** Consolidated/curated tables and any

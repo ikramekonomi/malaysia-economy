@@ -1,84 +1,167 @@
-# Malaysia Public Finance Data Warehouse
+# Malaysia Economy Data Warehouse
 
-A consolidated, fully-verifiable data warehouse of **Malaysia's public finances** — federal
-**and** state — built to understand, track, analyse, and **find gaps in the country's fiscal
-behaviour**. Multiple official sources are ingested with complete provenance, then curated
-into a comparable layer so the same concept can be traced and cross-checked across sources.
+*Pangkalan Data Ekonomi Malaysia · an IKRAM initiative*
 
-**Using the data?** Read **`docs/ANALYST_GUIDE.md`** first — the query traps
-(basis blending, leaf rows, canonical rows, sign conventions, the identity contract)
-will each silently give you a wrong number.
+A consolidated, fully verifiable data warehouse of **the Malaysian economy**, national and state,
+built for evidence-based policy advocacy. It brings official documents and statistics (audited
+accounts, budgets, Auditor-General reports, DOSM and BNM data) into one place. Every number is
+traceable to its page, checked, and carries its uncertainty and caveats.
 
+It is built to find **gaps worth advocating on**: plan vs outcome, budget vs spending, need vs
+money, federal vs state, reported vs audited. People query it, and so do AI agents through typed
+tools. The public site (`site/`) is one application on top of it.
 
-Start with **`CLAUDE.md`** (mission + rules) and **`docs/SOURCES.md`** (what to add next and
-why).
+> **Every number must survive a hostile reader.** If a figure cannot be traced to its source page
+> and its checks, it does not leave the warehouse.
 
-## Layout
+---
+
+## What is inside
+
+| Source | What it is | Coverage | Rows | Checks |
+|---|---|---|---|---|
+| **pkkp** | Federal Government Financial Statements, audited, to object and project level. **The hub for federal money** | FY2009–2024 | 141,951 | 7,329 |
+| **anggaran** | Federal expenditure estimates as tabled (ministry, programme, activity, object, posts) | Budgets 2024–2026 | 29,202 | 12,037 |
+| **anggaran-hasil** | Federal revenue estimates, including the effect of tax measures | Budgets 2025–2026 | 496 | 132 |
+| **mof-fiscal-outlook** | *Tinjauan Fiskal*: projections, debt, guarantees, contingent liabilities | Editions 2018–2027 | 3,204 | 975 |
+| **audit-negara** | Auditor-General's reports: findings, agency certifications, e-SelfAudit, the AG's fiscal tables | LKAN 2015–2026 (402-volume manifest) | 3,285 | 160 |
+| **states** | All 13 states' audited financial statements, plus a conformed national panel | FY2014–2024 | 50,053 | 10,224 |
+| **bnm** | Monthly Highlights & Statistics (fiscal, debt, monetary, banking, external) | 1996–2026 | 8,106 | 279 |
+| **dosm** | 112 datasets: national accounts, population by state and district, HIES, LFS, CPI, trade, GFS. **Refreshed daily** | 1947–2026 | 957,708 | 1,473 |
+
+**Totals:** about 1.19 million source rows and 32,609 validation checks. **49 catalogued source
+anomalies:** places where a publisher's own figures do not add up, kept exactly as printed with
+proof.
+
+**What we hold and what we still need** is one checklist,
+[`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 104 series, 20 held. Each has
+its route, licence and priority. The plan, theme by theme, is [`docs/SOURCES.md`](docs/SOURCES.md).
+
+### Nine themes
+People & poverty · jobs & wages · prices & cost of living · output & industry · public money &
+money trail · health, education & services · accountability · money, credit & financial
+wellbeing · environment, climate & disasters.
+
+---
+
+## How it is built
+
 ```
-sources/            one folder per source (each independently verifiable)
-  pkkp/             Federal Government Financial Statements FY2009–2024 (audited actuals)
-    data/<year>/        the CSVs (source of truth), one folder per volume
-    pipeline/<year>/    extraction scripts
-    DATA_DICTIONARY.md · VALIDATION_REPORT.md · README_QUICKSTART.md
-curated/            consolidated layer (conformed dims + gap views) — built as sources land
-  pipeline/build_warehouse_duckdb.py  rebuilds curated/warehouse.duckdb (all 8 sources + curated/)
-pipeline/build_duckdb.py   rebuilds sources/pkkp/pkkp.duckdb from the CSVs (PKKP only)
-docs/SOURCES.md     source catalogue: federal, state, statistics — priority + gap pairings
+L0  raw documents        PDFs and API files, archived by sha256 (private l0-archive release)
+L1  sources/<name>/      every table exactly as printed, with source file, page and statement
+L2  core/                one conformed model: geo, period, indicator, breakdown, entity, source
+                         + fact_observation (exact decimals, printed value, uncertainty, citation)
+L3  core/gap_*.csv       named gap views, e.g. gap_need_vs_money (state level)
+L4  apps/                agent tools (apps/tools), models (apps/models), the site (site/)
 ```
 
-## Sources
+The full specification is [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md), and the rules for working
+in the repository are in [`CLAUDE.md`](CLAUDE.md). Before your first query, read
+[`docs/ANALYST_GUIDE.md`](docs/ANALYST_GUIDE.md): it covers basis blending, leaf rows, sign
+conventions and other traps that give a wrong number silently.
 
-Eight sources, each namespaced under `sources/<name>/` with its own extraction, provenance
-and validation. Sources are never merged — comparison happens only in `curated/`.
+### Truth by reconciliation
+No single source is "the truth". Each domain has a hub, and the other sources are reconciled
+against it. Where independent institutions agree to the ringgit, that is evidence. Where they
+diverge, the divergence is kept as published and measured.
 
-| # | Source | What it is | Publisher | Coverage | Rows | Checks | Route |
-|---|---|---|---|---|---|---|---|
-| 1 | **pkkp** | *Penyata Kewangan Kerajaan Persekutuan* — audited federal accounts to object/project level. **Hub of the federal-fiscal domain** | Akauntan Negara, audited by AG | FY2009–FY2024 | 141,951 | 7,329 | PDF |
-| 2 | **anggaran** | *Anggaran Perbelanjaan Persekutuan* — the budget as tabled, at ministry **and** programme/activity/object grain, **plus headcount** | MOF | Budgets 2024–2026 | 29,202 | 12,037 | PDF |
-| 3 | **anggaran-hasil** | *Anggaran Hasil* — revenue estimates by kod hasil, incl. tax-measure impacts | MOF | Budgets 2025–2026 | 496 | 132 | PDF |
-| 4 | **mof-fiscal-outlook** | *Tinjauan Fiskal* — official projections, debt, **contingent liabilities and guarantee registers** | MOF | Editions 2025–2026 | 184 | 55 | PDF |
-| 5 | **audit-negara** | Auditor-General's reports: audit inventory, 426 findings with amounts and ministry responses, per-agency certifications, e-SelfAudit censuses, the AG's own fiscal tables | Jabatan Audit Negara | LKAN 2024–2026 (+402-volume manifest 2015–2026) | 3,285 | 160 | Parliament Command Papers |
-| 6 | **states** | **All 13 states'** audited financial statements — finance, revenue, agency registers, plus a conformed national panel | State treasuries, audited by AG | FY2014–FY2024 | 50,053 | 10,224 | Parliament Command Papers |
-| 7 | **bnm** | Monthly Highlights & Statistics — federal finance quarterly, debt by holder/maturity, monetary, banking, external | Bank Negara Malaysia | 1996–2026 | 8,106 | 280 | **OpenAPI** |
-| 8 | **dosm** | GDP/GNI, population, state GDP, CPI (national + state), labour force, trade, federal and state GFS | DOSM / data.gov.my | 1947–2026 | 86,245 | 34 | **OpenAPI** |
+| Domain | Hub | Reconciled against it |
+|---|---|---|
+| Real economy, people, prices | DOSM | BNM, research sources, IMF |
+| Federal public money | PKKP (audited) | budgets, BNM fiscal series, AG tables, MOF outlook, DOSM GFS |
+| States | each state's audited statements | state budgets, state LKAN, DOSM state finance |
+| Agencies & GLCs | AG certifications, company accounts | e-SelfAudit censuses, findings |
+| Monetary and financial | BNM | debt issuance, holdings |
 
-Plus the **curated layer** (1,491 rows): `fact_planning_efficiency` (tabled budget vs audited
-actual 2010–2024), `fact_budget_vs_actual`, `fact_obligations` (debt, PFI, commitments,
-guarantees, arrears and contingent liabilities unified across three publishers) and the
-MOF breakdowns. Model projections live outside the warehouse in `apps/models/` (**model
-output, never actuals**); the public site is `site/`.
+---
 
-**Totals: 319,522 rows · 30,251 validation checks · 47 catalogued source anomalies** (the
-publishers' own misprints, kept exactly as printed with arithmetic proof). Every source is
-reconciled to its own printed totals *and* re-derived by an independent verifier blind to
-the extraction code.
+## How we keep it true
 
-What is not yet in — state budgets, PAC reports, procurement awards, tax-authority detail,
-GLC/GLIC accounts, local-authority finances, and the wider real-economy sources — is
-catalogued with priorities in `docs/SOURCES.md`.
+No single safeguard is enough. Each layer below catches what the one before it cannot.
+
+| Layer | What it checks | When | Can it block? |
+|---|---|---|---|
+| **1. The source's own arithmetic** | Every printed total against the sum of its printed parts. A publisher's misprint becomes a `SOURCE_ANOMALY` with proof, never a silent correction | at extraction | yes |
+| **2. CI** (`qa/run_offline_suite.py`) | 53 scripts on every pull request. A PR is blocked if:<br>• a check script fails;<br>• a rebuild changes a committed file;<br>• a new `FAIL` row appears that isn't in `qa/known_fails.csv`;<br>• a stored value differs from its printed value;<br>• an agent tool gives a wrong answer to one of 70 eval questions, or falls for a trap (incomparable figures, small-area rankings, missing documents, instructions hidden in a document) | every PR, automatically | **yes, always** |
+| **3. Independent verifier agent** | A separate agent, blind to the extraction code, re-derives figures from the original and tries to break the tools | every new or changed source (a scheduled monthly random audit is planned) | findings become fixes and new eval questions |
+| **4. Cross-source reconciliation** | The same concept from independent publishers (e.g. PKKP vs BNM vs MOF) | every build | divergences are published, not hidden |
+| **5. Human spot-check** | A person checks a random sample against the archived page (`qa/spot_check/`) | before anything IKRAM publishes | **yes: no publication without it** |
+| **6. Archive and vintages** | Every raw document is kept by sha256, every data release is logged, and nothing is overwritten | always | lets anyone re-check any figure later |
+
+**Why both CI and a verifier agent?** They catch different errors.
+- **CI** is deterministic and cheap. It never forgets a check, but it only checks what someone
+  thought to write.
+- **The verifier agent** finds what nobody wrote a check for. Its first pass on Phase 1
+  re-derived all 720 cells of the need-vs-money view and found a deficit printed as a surplus,
+  plus several ways the tools could be misused.
+- **Every verifier finding becomes a permanent CI check**, so it can never come back. That is how
+  the checks keep growing.
+
+AI checking AI is still not enough for publication. That is why layer 5 is a person.
+
+**Verification tier.** Every published view carries one: `machine_checked` → `verifier_agent` →
+`human_spot_checked` → `externally_reviewed`. IKRAM publishes only from `human_spot_checked` or
+above.
+
+---
 
 ## Quick start
+
 ```bash
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py          # builds sources/pkkp/pkkp.duckdb from the CSVs (PKKP only)
-duckdb sources/pkkp/pkkp.duckdb
-```
-Then read `sources/pkkp/README_QUICKSTART.md`. Core rules: CSVs are canonical (the .duckdb is
-a rebuildable cache); **join on codes, not names**; **sum only leaf rows**; take each year
-from its own volume; **never silently correct a published figure**.
-
-**Querying across all eight sources?**
-```bash
-python3 curated/pipeline/build_warehouse_duckdb.py    # builds curated/warehouse.duckdb (all sources + curated/)
+python3 pipeline/build_duckdb.py                     # sources/pkkp/pkkp.duckdb (PKKP only)
+python3 curated/pipeline/build_warehouse_duckdb.py   # curated/warehouse.duckdb: every source + core + meta
 duckdb curated/warehouse.duckdb
 ```
-Each source gets its own DuckDB **schema** (`pkkp`, `anggaran`, `anggaran_hasil`,
-`mof_fiscal_outlook`, `audit_negara`, `states`, `bnm`, `dosm`, plus `curated`) — sources are
-namespaced, never merged, per the golden rule above; query fully-qualified, e.g.
-`SELECT * FROM anggaran.fact_anggaran_maksud_2024`. Read `docs/ANALYST_GUIDE.md` before your
-first cross-source query — it covers the seven traps (basis blending, leaf rows, canonical
-rows) this consolidated file makes it easy to hit by accident.
 
-## Known caveat
-FY2015 is the one image-only scan — its object-leaf/project-leaf amounts are OCR-provisional
-(fully-verified everywhere else). See `sources/pkkp/VALIDATION_REPORT.md`.
+Each source has its own schema (`pkkp`, `anggaran`, `states`, `dosm`, ...), plus `core` and
+`meta`. Sources are namespaced, never merged; comparison happens in `core`.
+
+**For agents and apps**, use the typed tools instead of SQL. Every number they return carries its
+citation, uncertainty and caveats, and all arithmetic goes through `derive`, which refuses
+figures that cannot be compared:
+
+```python
+from apps.tools.warehouse_tools import Tools
+t = Tools()
+t.compare_geos("poverty.absolute.rate", "2022")     # states in bands, not ranks, with Malaysia's value
+t.get_gap_view("gap_need_vs_money", year="2022")    # need vs state-government money, all 16 states and FTs
+```
+
+**Run the checks before you push:** `python3 qa/run_offline_suite.py`.
+
+---
+
+## Rules (abridged; the full list is in [`CLAUDE.md`](CLAUDE.md))
+
+1. The source CSVs are the truth. Everything derived is rebuilt, never hand-edited.
+2. Never silently correct a figure. A misprint is kept as printed, with proof.
+3. Every row keeps its source file, page and statement.
+4. Join on codes, never names. Sum only leaf rows. Take each year from its own volume.
+5. Keep every vintage. Archive every raw document.
+6. A survey estimate carries its uncertainty, or says it is unknown. Small areas are never ranked
+   as if exact.
+7. Licence and personal data are checked before anything leaves. Individuals are never returned.
+8. Neutral by construction: methods are declared before results are seen, and every view covers
+   all 13 states and the 3 Federal Territories.
+9. Work on a branch and open a PR. CI must pass.
+
+---
+
+## Status
+
+| Phase | What | State |
+|---|---|---|
+| 0 Foundation | registry as data, CI, archive, vintage logs, governance | built; archive filling (PDFs by sha256) |
+| 1 First slice | state-level need vs money, end to end, with agent tools and evals | **built** (`core/README.md`); awaiting a human spot-check before publication |
+| 2 Broaden statistics | all DOSM/BNM/MOF series, survey report tables, health data | next |
+| 3 Money trail | entities, transfers, placing federal spending by state | planned |
+| 4 Records and links | audit findings, PAC, procurement | planned |
+
+**Known caveats:**
+- PKKP FY2015 is an image-only scan, so its leaf amounts are OCR-provisional.
+- DOSM small-area estimates carry no published sampling error.
+- Federal spending cannot yet be placed by state: only about 1% can be today, so that column is
+  withheld.
+
+Each source's README lists its own caveats and anomaly register.
