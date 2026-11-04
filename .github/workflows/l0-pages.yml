@@ -1,0 +1,44 @@
+# Page evidence (meta/l0_pages.py): text of chosen pages of archived documents, committed to
+# qa/evidence/ so checks and spot-checks can be read without the PDFs.
+name: L0 page evidence
+
+on:
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: 'Pages, e.g. "CMD.61.2015.pdf:39,40 CMD.50.2021.pdf:29-31", or --fails'
+        default: "--fails"
+  push:
+    branches: ["claude/**"]
+    paths: ["qa/evidence_request.txt"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: l0-pages
+  cancel-in-progress: false
+
+jobs:
+  pages:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils > /dev/null
+      - name: Extract
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          spec="${{ inputs.pages }}"
+          [ -z "$spec" ] && spec="$(cat qa/evidence_request.txt)"
+          python3 meta/l0_pages.py $spec
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add qa/evidence
+          git diff --cached --quiet && { echo "no new evidence"; exit 0; }
+          git commit -q -m "Page evidence from the L0 archive (run ${{ github.run_id }})"
+          git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}"
