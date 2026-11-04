@@ -22,10 +22,10 @@ import {
   formatRM,
 } from "@/lib/api";
 import DashboardSubnav from "@/components/DashboardSubnav";
+import { useCoverage, yearRange } from "@/lib/useCoverage";
 import SourceCitation from "@/components/SourceCitation";
 
-const MIN_YEAR = 2009;
-const MAX_YEAR = 2024;
+type FlowBasis = "audited" | "mof" | "none";
 const PALETTE = [
   "#1F6F5C", "#A9762E", "#4A6FA5", "#B25D5D", "#6B4E71",
   "#5C8A72", "#C08A3E", "#7C7C7C", "#3E7CB1", "#9B5A44",
@@ -79,6 +79,10 @@ export default function RingkasanPage() {
   >([]);
   const [flowMissing, setFlowMissing] = useState<string[] | null>(null);
   const [flowNoCovid, setFlowNoCovid] = useState<number[] | null>(null);
+  const [flowBasis, setFlowBasis] = useState<FlowBasis>("audited");
+  const [revenueNote, setRevenueNote] = useState<string | null>(null);
+  const [financingNote, setFinancingNote] = useState<string | null>(null);
+  const cov = useCoverage();
   const [revenueRows, setRevenueRows] = useState<
     { data: { year: string; [k: string]: string | number }[]; lines: string[]; labelOf: (l: string) => string }
   >({ data: [], lines: [], labelOf: (l) => l });
@@ -111,21 +115,30 @@ export default function RingkasanPage() {
         const revTotal = (rows: typeof revA.rows) => rows.reduce((s, r) => s + r.amount_rm, 0);
         const finTotal = (rows: typeof finA.rows) => rows.reduce((s, r) => s + r.amount_rm, 0);
 
-        // Net DEVEX comes from ONE publisher for both years being compared. MOF's own
-        // figure covers 2015-2024 only, so picking "MOF where available" would quietly
-        // compare a MOF year with a BNM year for any pair reaching back before 2015. BNM
-        // MSB 3.1 is complete for 2009-2024 -- and overall_balance_rm is built on it -- so
-        // it is used for both bars.
-        //
-        // FY2020-2022 spending through the Kumpulan Wang COVID-19 sat outside both opex
-        // and devex, so it gets its own bar, and the balance is read from the warehouse
-        // (curated overall_balance_rm, which includes it and is checked against MOF's
-        // own published figure) rather than computed here. A missing figure is left
-        // missing -- never drawn as zero.
-        const CATEGORIES = [
-          "Hasil", "Perbelanjaan Mengurus", "Perbelanjaan Pembangunan",
-          "Kumpulan Wang COVID-19", "Defisit/Lebihan", "Dibiayai Bersih",
-        ];
+        // ONE PUBLISHER PER COMPARISON. Both years are shown on the same basis or not at
+        // all -- never an audited year beside a MOF year as if they were one series:
+        //   audited  both years have audited PKKP accounts (<= audited_max_year). Revenue,
+        //            opex and the COVID-19 fund are PKKP as printed; net DEVEX is BNM MSB
+        //            3.1 for both bars (complete; overall_balance_rm is built on it).
+        //   mof      a year has no audited accounts yet (FY2025): both bars switch to MOF's
+        //            own official_actual Tinjauan Fiskal figures, one edition per year,
+        //            including MOF's printed overall balance.
+        //   none     no single publisher covers both years (2009-2014 has no MOF figures;
+        //            2025 has no audited ones) -- the chart says so instead of mixing.
+        // A missing figure is left missing -- never drawn as zero.
+        const audited = (y: number) => y <= cov.audited_max_year;
+        const hasMof = (y: number) => y >= cov.mof_min_year && hByYear.get(y)?.mof_edition != null;
+        const basis: FlowBasis =
+          audited(yearA) && audited(yearB) ? "audited"
+            : hasMof(yearA) && hasMof(yearB) ? "mof"
+              : "none";
+        setFlowBasis(basis);
+
+        const CATEGORIES = basis === "mof"
+          ? ["Hasil", "Perbelanjaan Mengurus", "Perbelanjaan Pembangunan", "Kumpulan Wang COVID-19",
+             "Baki Keseluruhan"]
+          : ["Hasil", "Perbelanjaan Mengurus", "Perbelanjaan Pembangunan", "Kumpulan Wang COVID-19",
+             "Defisit/Lebihan", "Dibiayai Bersih"];
         const missing: string[] = [];
         const noCovidFund: number[] = [];
         const years = [
@@ -133,23 +146,37 @@ export default function RingkasanPage() {
           [String(yearB), yearB, revB, finB] as const,
         ];
         for (const [, y] of years) {
-          if (hByYear.get(y)?.covid_fund_status === "not_established") noCovidFund.push(y);
+          const h = hByYear.get(y);
+          const covidAbsent = basis === "mof"
+            ? h?.covid_fund_mof_rm == null && (y < 2020 || y > 2022)
+            : h?.covid_fund_status === "not_established";
+          if (covidAbsent) noCovidFund.push(y);
         }
+        const juta = (v: number | null | undefined) => (v == null ? null : v / 1e6);
         setFlowData(
-          CATEGORIES.map((category) => {
+          basis === "none" ? [] : CATEGORIES.map((category) => {
             const row: { category: string; [k: string]: string | number | null } = { category };
             for (const [label, y, rev, fin] of years) {
               const h = hByYear.get(y);
-              const juta = (v: number | null | undefined) => (v == null ? null : v / 1e6);
               let val: number | null = null;
-              if (category === "Hasil") val = revTotal(rev.rows) / 1e6;
-              if (category === "Perbelanjaan Mengurus") val = juta(h?.opex_net_rm);
-              if (category === "Perbelanjaan Pembangunan") val = juta(h?.devex_net_bnm_rm);
-              if (category === "Kumpulan Wang COVID-19") val = juta(h?.covid_fund_rm);
-              if (category === "Defisit/Lebihan") val = juta(h?.overall_balance_rm);
-              if (category === "Dibiayai Bersih") val = finTotal(fin.rows) / 1e6;
-              // a fund that did not yet exist is not a missing figure
-              const notApplicable = category === "Kumpulan Wang COVID-19" && h?.covid_fund_status === "not_established";
+              if (basis === "audited") {
+                // revenue/financing come from per-year PKKP tables: no rows means no
+                // audited figure, NOT zero
+                if (category === "Hasil") val = rev.rows.length ? revTotal(rev.rows) / 1e6 : null;
+                if (category === "Perbelanjaan Mengurus") val = juta(h?.opex_net_rm);
+                if (category === "Perbelanjaan Pembangunan") val = juta(h?.devex_net_bnm_rm);
+                if (category === "Kumpulan Wang COVID-19") val = juta(h?.covid_fund_rm);
+                if (category === "Defisit/Lebihan") val = juta(h?.overall_balance_rm);
+                if (category === "Dibiayai Bersih") val = fin.not_available ? null : finTotal(fin.rows) / 1e6;
+              } else {
+                if (category === "Hasil") val = juta(h?.revenue_mof_rm);
+                if (category === "Perbelanjaan Mengurus") val = juta(h?.opex_mof_rm);
+                if (category === "Perbelanjaan Pembangunan") val = juta(h?.devex_net_rm);
+                if (category === "Kumpulan Wang COVID-19") val = juta(h?.covid_fund_mof_rm);
+                if (category === "Baki Keseluruhan") val = juta(h?.overall_balance_mof_rm);
+              }
+              // a fund that did not exist (or had closed) is not a missing figure
+              const notApplicable = category === "Kumpulan Wang COVID-19" && noCovidFund.includes(y);
               if (val === null && !notApplicable) missing.push(`${category} ${y}`);
               row[label] = val === null ? null : Math.round(val);
             }
@@ -168,6 +195,12 @@ export default function RingkasanPage() {
           lines: revLines,
           labelOf: (l) => l,
         });
+        const revNA = [[yearA, revA], [yearB, revB]].filter(([, r]) => !(r as typeof revA).rows.length)
+          .map(([y]) => y as number);
+        setRevenueNote(revNA.length
+          ? `Belum tersedia untuk ${revNA.join(" dan ")}: pecahan hasil ini daripada akaun teraudit ` +
+            `PKKP, dan akaun FY${revNA[0]} belum diterbitkan.`
+          : null);
 
         const naYear = (a: typeof opexA, b: typeof opexB) => (a.not_available ? yearA : yearB);
         if (opexA.not_available || opexB.not_available) {
@@ -186,6 +219,12 @@ export default function RingkasanPage() {
           setDevexPivot(pivotBreakdown(yearA, yearB, devexA.rows, devexB.rows));
         }
 
+        const finNA = [[yearA, finA], [yearB, finB]].filter(([, f]) => (f as typeof finA).not_available)
+          .map(([y]) => y as number);
+        setFinancingNote(finNA.length
+          ? `Belum tersedia untuk ${finNA.join(" dan ")}: panel pembiayaan ini daripada akaun teraudit ` +
+            `PKKP, yang belum meliputi tahun itu.`
+          : null);
         const finComponents = Array.from(new Set([...finA.rows, ...finB.rows].map((r) => r.component_bm)));
         setFinancingData(
           finComponents.map((component) => {
@@ -201,12 +240,9 @@ export default function RingkasanPage() {
     return () => {
       stale = true;
     };
-  }, [yearA, yearB]);
+  }, [yearA, yearB, cov]);
 
-  const yearOptions = useMemo(
-    () => Array.from({ length: MAX_YEAR - MIN_YEAR + 1 }, (_, i) => MIN_YEAR + i),
-    []
-  );
+  const yearOptions = useMemo(() => yearRange(cov.min_year, cov.max_year), [cov]);
 
   return (
     <div className="mx-auto max-w-6xl px-5 py-10">
@@ -230,7 +266,7 @@ export default function RingkasanPage() {
           </select>
         </label>
         <p className="text-xs opacity-60 max-w-sm">
-          Pecahan OPEX/DEVEX terperinci tersedia untuk 2015-2024 (Tinjauan Fiskal edisi
+          Pecahan OPEX/DEVEX terperinci tersedia untuk 2015-2025 (Tinjauan Fiskal edisi
           2019-2027) — tahun sebelum 2015 boleh dipilih, carta berkenaan akan menunjukkan
           &quot;belum tersedia&quot;.
         </p>
@@ -239,8 +275,25 @@ export default function RingkasanPage() {
       {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
 
       <ChartCard
-        title="Ringkasan Aliran Fiskal"
-        citations={[
+        title={flowBasis === "mof"
+          ? "Ringkasan Aliran Fiskal — angka MOF (belum teraudit)"
+          : "Ringkasan Aliran Fiskal"}
+        unavailableNote={flowBasis === "none"
+          ? `Tiada satu penerbit yang meliputi kedua-dua tahun: ${Math.max(yearA, yearB) > cov.audited_max_year
+              ? `FY${Math.max(yearA, yearB)} belum mempunyai akaun teraudit, dan angka MOF hanya bermula ${cov.mof_min_year}`
+              : "tahun ini tiada angka yang sama asas"}. Pilih dua tahun dari ${cov.mof_min_year} ke atas untuk ` +
+            `perbandingan atas asas MOF, atau dua tahun hingga ${cov.audited_max_year} untuk akaun teraudit.`
+          : null}
+        citations={flowBasis === "mof" ? [
+          {
+            table: "curated.fact_fiscal_headline",
+            basis:
+              "Semua bar — MOF Tinjauan Fiskal, angka sebenar rasmi (official_actual), satu edisi " +
+              "setiap tahun (tahun ini dicetak sebagai sebenar terkini dalam edisi tersebut). " +
+              "Perbelanjaan Pembangunan bersih — kasar tolak pemulihan pinjaman. Baki keseluruhan " +
+              "seperti dicetak MOF.",
+          },
+        ] : [
           { table: "pkkp.fact_revenue", basis: "Hasil — sebenar teraudit PKKP" },
           {
             table: "curated.fact_fiscal_headline",
@@ -255,17 +308,26 @@ export default function RingkasanPage() {
           { table: "pkkp.fact_timeseries_2010_2024", basis: "Dibiayai oleh:" },
         ]}
       >
-        <p className="text-xs opacity-70 mb-2">
-          Defisit/Lebihan = Hasil − Perbelanjaan Mengurus − Perbelanjaan Pembangunan −
-          Kumpulan Wang COVID-19, mengikut definisi MOF (sama dengan baki keseluruhan yang
-          diterbitkan MOF). PKKP mencetak baki keseluruhan dengan definisi berbeza (semua
-          terimaan Kumpulan Wang Pembangunan ditolak, bukan pemulihan pinjaman sahaja), jadi
-          angkanya boleh berbeza sehingga RM1.9 bilion.
-        </p>
+        {flowBasis === "mof" ? (
+          <p className="text-xs mb-2 p-2 rounded" style={{ background: "var(--line)" }}>
+            FY{cov.audited_max_year + 1} belum mempunyai akaun teraudit (PKKP), jadi kedua-dua
+            tahun ditunjukkan dengan angka sebenar rasmi MOF (Tinjauan Fiskal) — bukan angka
+            teraudit, dan tidak dicampur dengan angka teraudit tahun lain. Angka MOF boleh
+            dipinda dalam edisi kemudian. Pembiayaan tidak ditunjukkan atas asas ini.
+          </p>
+        ) : (
+          <p className="text-xs opacity-70 mb-2">
+            Defisit/Lebihan = Hasil − Perbelanjaan Mengurus − Perbelanjaan Pembangunan −
+            Kumpulan Wang COVID-19, mengikut definisi MOF (sama dengan baki keseluruhan yang
+            diterbitkan MOF). PKKP mencetak baki keseluruhan dengan definisi berbeza (semua
+            terimaan Kumpulan Wang Pembangunan ditolak, bukan pemulihan pinjaman sahaja), jadi
+            angkanya boleh berbeza sehingga RM1.9 bilion.
+          </p>
+        )}
         {flowNoCovid && (
           <p className="text-xs opacity-70 mb-2">
-            Kumpulan Wang COVID-19 belum wujud pada {flowNoCovid.join(" dan ")} — ditubuhkan pada
-            2020 dan berbelanja hanya pada 2020-2022.
+            Kumpulan Wang COVID-19 tiada perbelanjaan pada {flowNoCovid.join(" dan ")} — dana ini
+            ditubuhkan pada 2020 dan berbelanja hanya pada 2020-2022.
           </p>
         )}
         {flowMissing && (
@@ -290,7 +352,8 @@ export default function RingkasanPage() {
         </div>
       </ChartCard>
 
-      <ChartCard title="Dari Mana Hasil Datang" citations={[{ table: "pkkp.fact_revenue", basis: "audited actual" }]}>
+      <ChartCard title="Dari Mana Hasil Datang" citations={[{ table: "pkkp.fact_revenue", basis: "audited actual" }]}
+        unavailableNote={revenueNote}>
         <div style={{ width: "100%", height: 300 }}>
           <ResponsiveContainer>
             <BarChart data={revenueRows.data}>
@@ -353,7 +416,8 @@ export default function RingkasanPage() {
         )}
       </ChartCard>
 
-      <ChartCard title="Bagaimana Perbelanjaan Dibiayai" citations={[{ table: "pkkp.fact_timeseries_2010_2024", basis: "Dibiayai oleh:" }]}>
+      <ChartCard title="Bagaimana Perbelanjaan Dibiayai" citations={[{ table: "pkkp.fact_timeseries_2010_2024", basis: "Dibiayai oleh:" }]}
+        unavailableNote={financingNote}>
         <div style={{ width: "100%", height: 280 }}>
           <ResponsiveContainer>
             <BarChart data={financingData}>

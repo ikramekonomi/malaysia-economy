@@ -33,6 +33,10 @@ const CAVEATS = [
     body: "Setiap edisi Tinjauan Fiskal mencetak lima tahun, jadual yang sama untuk satu tahun muncul dalam tiga edisi dan kadangkala berbeza. Setiap tahun diambil daripada edisi yang mencetaknya sebagai angka sebenar terkini (edisinya sendiri), dan angka edisi kemudian dicatat dalam lajur restated_in. Dua perubahan klasifikasi perlu diketahui: \"Pertanian dan pembangunan luar bandar\" menjadi \"Pertanian\" mulai edisi 2022 (disimpan sebagai baris berasingan), dan edisi 2024 memindahkan kira-kira RM1.1–1.2 bilion setahun daripada Pentadbiran Am ke Perumahan — maka Perumahan melonjak pada 2022 kerana klasifikasi, bukan perbelanjaan.",
   },
   {
+    title: "FY2025 — angka MOF, belum teraudit",
+    body: "Akaun teraudit kerajaan persekutuan (PKKP) bagi FY2025 belum diterbitkan. Bagi tahun itu laman ini menunjukkan angka sebenar rasmi MOF daripada Tinjauan Fiskal 2027 (hasil, perbelanjaan mengurus, perbelanjaan pembangunan, baki keseluruhan) — dilabel sebagai angka MOF, bukan teraudit. Ia tidak dicampur dengan angka teraudit: apabila FY2025 dibandingkan dengan tahun lain, kedua-dua tahun ditunjukkan dengan angka MOF. Angka kementerian dan pembiayaan hanya ada dalam akaun teraudit, jadi ia belum tersedia bagi FY2025. Angka MOF boleh dipinda dalam edisi kemudian — dua tahun lalu (2020 hasil, 2023 perbelanjaan pembangunan) dipinda supaya sepadan dengan akaun teraudit.",
+  },
+  {
     title: "FY2020–2022 — Kumpulan Wang COVID-19 dan baki keseluruhan",
     body: "Perbelanjaan melalui Kumpulan Wang COVID-19 (RM38.0 bilion 2020, RM37.7 bilion 2021, RM31.0 bilion 2022) berada di luar perbelanjaan mengurus dan pembangunan, jadi ia ditunjukkan sebagai baris tersendiri — tanpanya defisit tahun-tahun itu kelihatan jauh lebih kecil. Angka dibaca hingga sen daripada Lampiran 3 setiap jilid PKKP. Dana ini belum wujud sebelum 2020 (bukan sifar — tiada). Baki keseluruhan mengikut definisi MOF dan sepadan dengan angka terbitan MOF; PKKP mencetak baki keseluruhan dengan definisi berbeza (semua terimaan Kumpulan Wang Pembangunan ditolak, bukan pemulihan pinjaman sahaja), jadi kedua-duanya boleh berbeza sehingga RM1.9 bilion.",
   },

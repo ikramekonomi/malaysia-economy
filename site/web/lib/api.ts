@@ -13,18 +13,26 @@ export type HeadlineRow = {
   opex_gross_rm: number;
   opex_net_rm: number | null;
   devex_gross_rm: number;
-  /** MOF Tinjauan Fiskal official_actual -- FY2015-2024, each year from its own edition. */
+  /** MOF Tinjauan Fiskal official_actual -- FY2015-2025, each year from its own edition. */
   devex_net_rm: number | null;
   devex_net_basis: string | null;
-  /** BNM MSB 3.1, complete FY2009-2024. A different publication: never splice with the MOF column. */
+  /** BNM MSB 3.1, complete FY2009-2025. A different publication: never splice with the MOF column. */
   devex_net_bnm_rm: number | null;
   devex_net_bnm_basis: string | null;
   /** Kumpulan Wang COVID-19 spending -- outside opex and devex. Null before the fund existed. */
   covid_fund_rm: number | null;
-  covid_fund_status: "printed" | "printed_nil" | "not_established";
+  covid_fund_status: "printed" | "printed_nil" | "not_established" | "not_available";
   /** revenue - opex_net - devex_net_bnm - COVID-19 fund (MOF's definition). */
   overall_balance_rm: number | null;
   overall_balance_basis: string | null;
+  /** MOF's own official_actual figures, one edition per year (FY2015 onward). The only
+   *  national figures for a year the audited accounts do not cover yet (FY2025). */
+  revenue_mof_rm: number | null;
+  opex_mof_rm: number | null;
+  devex_gross_mof_rm: number | null;
+  covid_fund_mof_rm: number | null;
+  overall_balance_mof_rm: number | null;
+  mof_edition: number | null;
   note: string | null;
 };
 
@@ -36,6 +44,24 @@ export type MinistryRow = {
 };
 
 export type Ministry = { code: string; name_bm: string; jenis: string };
+
+export type Coverage = {
+  min_year: number;
+  max_year: number;
+  /** last year the audited PKKP accounts cover */
+  audited_max_year: number;
+  /** first year MOF's own Tinjauan Fiskal figures cover */
+  mof_min_year: number;
+};
+
+/** Used until /api/meta/coverage answers -- the warehouse itself is the source of truth. */
+export const DEFAULT_COVERAGE: Coverage = {
+  min_year: 2009, max_year: 2025, audited_max_year: 2024, mof_min_year: 2015,
+};
+
+export function fetchCoverage() {
+  return getJSON<Coverage>("/api/meta/coverage");
+}
 
 async function getJSON<T>(path: string): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, { cache: "no-store" });
