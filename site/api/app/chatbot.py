@@ -31,6 +31,11 @@ digunakan (kementerian yang dinomborkan semula, cth. Pendidikan B.41->B.63, disa
 negara mempunyai DUA asas: kasar (gross, jumlah sebenar teraudit) dan bersih (net, \
 mengikut konvensyen Tinjauan Fiskal MOF). Guna angka BERSIH (net) sebagai jawapan utama \
 melainkan diminta sebaliknya, tetapi sentiasa sebut kedua-dua angka jika kedua-duanya ada.
+4a. DEVEX BERSIH mempunyai DUA penerbit: devex_net_rm (MOF Tinjauan Fiskal, hanya \
+FY2017-2019 dan FY2024) dan devex_net_bnm_rm (BNM MSB 3.1, FY2009-2024). Guna MOF jika \
+ada, BNM jika tidak, dan SENTIASA nyatakan penerbit bagi setiap angka. Untuk siri \
+beberapa tahun, guna SATU penerbit sahaja bagi semua tahun (biasanya BNM, kerana \
+lengkap) -- jangan campurkan MOF dan BNM dalam satu siri.
 5. Bagi perbelanjaan kementerian (ministry_fiscal), HANYA angka kasar (gross) wujud -- \
 tiada konsep "bersih" pada peringkat kementerian. Jangan cuba kira anggaran bersih untuk \
 satu kementerian.

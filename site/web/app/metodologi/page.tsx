@@ -26,7 +26,11 @@ const CAVEATS = [
   },
   {
     title: "OPEX/DEVEX kasar berbanding bersih",
-    body: "Angka \"kasar\" (gross) ialah perbelanjaan sebenar teraudit PKKP. Angka \"bersih\" (net) mengikut konvensyen Tinjauan Fiskal MOF (kasar tolak pindahan ke Kumpulan Wang Pembangunan bagi opex; kasar tolak pemulihan pinjaman bagi devex). Kedua-duanya sah — jangan campurkan tanpa menyatakan asas.",
+    body: "Angka \"kasar\" (gross) ialah perbelanjaan sebenar teraudit PKKP. Angka \"bersih\" (net) mengikut konvensyen Tinjauan Fiskal MOF (kasar tolak pindahan ke Kumpulan Wang Pembangunan bagi opex; kasar tolak pemulihan pinjaman bagi devex). Kedua-duanya sah — jangan campurkan tanpa menyatakan asas. DEVEX bersih mempunyai dua penerbit yang disimpan berasingan: angka rasmi MOF (Tinjauan Fiskal, kini hanya 2017-2019 dan 2024 kerana edisi lain belum dimasukkan) dan siri lengkap 2009-2024 Bank Negara Malaysia (Buletin Statistik Bulanan, Jadual 3.1). Ia berbeza tidak lebih RM0.33 juta bagi tahun yang ada pada kedua-duanya, tetapi tidak pernah dicantumkan dalam satu siri.",
+  },
+  {
+    title: "FY2020–2022 — Kumpulan Wang COVID-19 dan baki keseluruhan",
+    body: "Perbelanjaan melalui Kumpulan Wang COVID-19 (RM38.0 bilion 2020, RM37.7 bilion 2021, RM31.0 bilion 2022) berada di luar perbelanjaan mengurus dan pembangunan, jadi ia ditunjukkan sebagai baris tersendiri — tanpanya defisit tahun-tahun itu kelihatan jauh lebih kecil. Angka dibaca hingga sen daripada Lampiran 3 setiap jilid PKKP. Dana ini belum wujud sebelum 2020 (bukan sifar — tiada). Baki keseluruhan mengikut definisi MOF dan sepadan dengan angka terbitan MOF; PKKP mencetak baki keseluruhan dengan definisi berbeza (semua terimaan Kumpulan Wang Pembangunan ditolak, bukan pemulihan pinjaman sahaja), jadi kedua-duanya boleh berbeza sehingga RM1.9 bilion.",
   },
 ];
 

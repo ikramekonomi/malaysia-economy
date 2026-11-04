@@ -486,6 +486,81 @@ def _load_revenue_account(con):
     return out
 
 
+# ---------------------------------------------------------------------------
+# Kumpulan Wang COVID-19, revenue, and the overall balance
+# ---------------------------------------------------------------------------
+# FY2020-2022 spending through the Kumpulan Wang COVID-19 sat OUTSIDE both operating and
+# development expenditure, so an overall balance built from opex and devex alone misses
+# RM31-38 bil a year. Each volume prints the fund's spending to the sen in Lampiran 3
+# (Penyata Perbelanjaan Kumpulan Wang COVID-19) and again, to the ringgit, in the Penyata
+# Prestasi Kewangan -- two tiers of the same audited volume, checked against each other.
+# Each year is taken from its own volume (golden rule 6).
+#
+# status: printed      -- Lampiran 3 total, as printed
+#         printed_nil  -- the volume prints the line as nil (FY2023, FY2024)
+#         not_established -- no Kumpulan Wang COVID-19 line in that year's volume: the
+#                            fund first appears in FY2020. NULL, not zero; it contributes
+#                            nothing to the balance because it did not exist.
+COVID_STATEMENT = "Lampiran 3 Penyata Perbelanjaan Kumpulan Wang COVID-19"
+
+
+def _load_covid_fund(con):
+    out = {}
+    for year, amt, sfile, pdfp, prp, stmt in con.execute(
+            "SELECT year, sebenar_rm, source_file, pdf_page, printed_page, statement "
+            "FROM fact_covid_fund_detail WHERE row_type='total'").fetchall():
+        if not sfile.startswith(str(year)):
+            continue                                  # a comparative column, not own volume
+        out[year] = {"amount": amt, "status": "printed_nil" if amt == 0 else "printed",
+                     "source_file": sfile, "pdf_page": pdfp, "printed_page": prp,
+                     "statement": stmt}
+    perf = {}
+    for year, amt, sfile, pdfp, prp, stmt in con.execute(
+            "SELECT year, amount_rm, source_file, pdf_page, printed_page, statement "
+            "FROM fact_financial_performance "
+            "WHERE line_code='covid_fund_exp' AND basis='sebenar'").fetchall():
+        if not sfile.startswith(str(year)):
+            continue
+        perf[year] = {"amount": amt, "source_file": sfile, "pdf_page": pdfp,
+                      "printed_page": prp, "statement": stmt}
+        if year not in out and amt == 0:
+            # no Lampiran 3 that year (FY2024): the performance statement's printed nil
+            out[year] = dict(perf[year], status="printed_nil")
+    return out, perf
+
+
+def _load_revenue(con):
+    """Total federal revenue as printed (pkkp.fact_revenue, level 0), per year."""
+    return {y: (amt, files) for y, amt, files in con.execute(
+        "SELECT year, sum(sebenar_rm), string_agg(DISTINCT source_file, ';') "
+        "FROM fact_revenue WHERE level = 0 GROUP BY year").fetchall()}
+
+
+# The overall balance has two published definitions, and they differ:
+#   MOF Tinjauan Fiskal (and BNM): revenue - opex_net - devex_net - COVID-19 fund, where
+#       devex_net is gross minus LOAN RECOVERY only.
+#   PKKP's 15-year panel ("Kewangan / Lebihan/(Kurangan) Keseluruhan"): nets off ALL of
+#       the Development Fund's "Lain-lain" receipts, not only loan recovery. FY2024:
+#       3,109 - (84,012 - 3,588) = -77,315 vs MOF's -79,166; the RM1,851 juta gap is
+#       exactly the non-loan receipts.
+# overall_balance_rm follows the MOF definition, so that it is consistent with the
+# net-devex figure the site plots beside it; it is checked against MOF's own published
+# overall balance, and its difference from PKKP's is recorded as definitional.
+OVERALL_BALANCE_BASIS = ("derived, MOF Tinjauan Fiskal definition: revenue - opex_net - "
+                         "devex_net (BNM MSB 3.1) - Kumpulan Wang COVID-19; revenue, opex "
+                         "and the COVID-19 fund are PKKP audited as printed")
+
+
+def _own_volume_panels(con):
+    """year -> the 15-year fiscal panel printed in that year's own volume."""
+    out = {}
+    for (t,) in con.execute("SELECT table_name FROM information_schema.tables "
+                            "WHERE table_name LIKE 'fact_timeseries_%' "
+                            "AND table_type='BASE TABLE'").fetchall():
+        out[int(t[-4:])] = t
+    return out
+
+
 def build_headline(con):
     opex_gross = dict(con.execute(
         "SELECT year, sum(sebenar_rm) FROM fact_opex_maksud GROUP BY year"
@@ -512,6 +587,8 @@ def build_headline(con):
     devex_gross[2009] = devex_gross_2009
 
     racct = _load_revenue_account(con)
+    covid, _ = _load_covid_fund(con)
+    revenue = _load_revenue(con)
 
     out = []
     for year in range(2009, 2025):
@@ -530,6 +607,11 @@ def build_headline(con):
             note_parts.append("no aktiviti tier that year; opex_gross from fact_opex_maksud; "
                               "devex_gross from the volume's printed grand-total row "
                               "(the FY2009 leaf tier is RM410.6 juta short of it)")
+        cv = covid.get(year)
+        rv, rv_files = revenue.get(year, (None, None))
+        cv_amt = cv["amount"] if cv else 0.0    # not_established: the fund did not exist
+        dn_bnm = bnm.get("devex_net_rm")
+        ob = (rv - on - dn_bnm - cv_amt) if None not in (rv, dn_bnm) else None
         if mof is None:
             note_parts.append("devex_net_rm NULL: MOF has published this year's net DE, but the "
                               "Tinjauan Fiskal edition carrying it is not yet ingested here -- "
@@ -561,6 +643,19 @@ def build_headline(con):
             "devex_net_bnm_basis": "reported (BNM MSB 3.1)" if bnm else None,
             "devex_net_bnm_source_file": bnm.get("source_file"),
             "devex_loan_recovery_bnm_rm": bnm.get("devex_loan_recovery_rm"),
+            "revenue_rm": round(rv, 2) if rv is not None else None,
+            "revenue_basis": "audited (PKKP), as printed" if rv is not None else None,
+            "revenue_source_file": rv_files,
+            "covid_fund_rm": round(cv["amount"], 2) if cv else None,
+            "covid_fund_status": cv["status"] if cv else "not_established",
+            "covid_fund_basis": "audited (PKKP), as printed" if cv else
+                                "not applicable: no Kumpulan Wang COVID-19 before FY2020",
+            "covid_fund_source_file": cv["source_file"] if cv else None,
+            "covid_fund_statement": cv["statement"] if cv else None,
+            "covid_fund_pdf_page": cv["pdf_page"] if cv else None,
+            "covid_fund_printed_page": cv["printed_page"] if cv else None,
+            "overall_balance_rm": round(ob, 2) if ob is not None else None,
+            "overall_balance_basis": OVERALL_BALANCE_BASIS if ob is not None else None,
             "note": "; ".join(note_parts),
         })
 
@@ -810,6 +905,69 @@ def build_validation(con, headline, ministry_rows):
                         else BNM_AGREEMENT_BAND_RM)
                 add("cross_source", "AGREE", "DIVERGE", name, ours, theirs, band, src)
 
+    # ---- H. Kumpulan Wang COVID-19: two printed tiers, and the statement's own sum ----
+    covid, perf = _load_covid_fund(con)
+    for year, c in sorted(covid.items()):
+        if c["status"] == "printed" or c.get("statement") == COVID_STATEMENT:
+            leaf = con.execute(
+                "SELECT sum(sebenar_rm) FROM fact_covid_fund_detail "
+                "WHERE year=? AND row_type='project' AND source_file=?",
+                [year, c["source_file"]]).fetchone()[0]
+            if leaf is not None:
+                identity(f"COVID-19 fund {year}: Lampiran 3 project rows sum to its printed total",
+                         leaf, c["amount"], f"PKKP {c['source_file']} pdf p.{c['pdf_page']}")
+        p = perf.get(year)
+        if p and c.get("statement") == COVID_STATEMENT:
+            # the performance statement prints whole ringgit, Lampiran 3 prints sen
+            add("cross_tier", "PASS", "FAIL",
+                f"COVID-19 fund {year}: Lampiran 3 vs Penyata Prestasi Kewangan",
+                c["amount"], p["amount"], CROSS_TIER_BAND_RM,
+                f"PKKP {p['source_file']} pdf p.{p['pdf_page']}, {p['statement']}")
+
+    # ---- I. the overall balance, against both publishers that print one --------------
+    mof_ob = {}
+    with open(MOF_STATS_2021, newline="") as f:
+        for r in csv_module.DictReader(f):
+            if r["line"] == "overall_balance" and r["basis"] == "official_actual":
+                mof_ob[int(r["target_year"])] = (float(r["amount_rm_juta"]) * 1e6,
+                                                 f"{r['source_file']} pdf p.{r['pdf_page']}")
+    with open(MOF_OUTLOOK_HEADLINE, newline="") as f:
+        for r in csv_module.DictReader(f):
+            if r["line"] == "overall_deficit" and r["basis"] == "official_actual":
+                mof_ob[int(r["target_year"])] = (float(r["amount_rm_bil"]) * 1e9,
+                                                 f"{r['source_file']} pdf p.{r['pdf_page']}")
+    for year, (ref, src) in sorted(mof_ob.items()):
+        ours = by_year.get(year, {}).get("overall_balance_rm")
+        if ours is not None:
+            add("cross_source", "AGREE", "DIVERGE",
+                f"overall_balance {year} vs MOF's own published overall balance "
+                "(same definition; MOF prints in RM juta)",
+                ours, ref, MOF_PRINTING_BAND_RM, f"MOF Tinjauan Fiskal, {src}")
+
+    # PKKP prints an overall balance on a DIFFERENT definition (all Development Fund
+    # receipts netted, not only loan recovery), so the gap is reported as definitional,
+    # never as agreement or divergence. Compared in magnitude only: the printed sign of
+    # this row flips at FY2018 (see _known_extraction_defects_curated.csv), and the
+    # figure is not used anywhere in the build.
+    panels = _own_volume_panels(con)
+    for year in sorted(by_year):
+        ours = by_year[year]["overall_balance_rm"]
+        t = panels.get(year)
+        if ours is None or t is None:
+            continue
+        r = con.execute(
+            f"SELECT amount_rm_juta, source_file, pdf_page FROM {t} WHERE year=? "
+            "AND section_bm='Kewangan' AND line_item_bm='Lebihan/(Kurangan) Keseluruhan'",
+            [year]).fetchone()
+        if r is None:
+            continue
+        printed = abs(r[0]) * 1e6
+        checks.append(["definitional", "DEFINITIONAL",
+                       f"|overall_balance| {year} vs |PKKP panel Lebihan/(Kurangan) Keseluruhan|",
+                       abs(ours), printed, abs(ours) - printed, "",
+                       f"PKKP {r[1]} pdf p.{r[2]} (RM juta). PKKP nets all Development Fund "
+                       "receipts; MOF nets loan recovery only"])
+
     with open(OUT_VALIDATION, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["check_type", "status", "check", "computed_rm", "reference_rm",
@@ -820,6 +978,18 @@ def build_validation(con, headline, ministry_rows):
                         f"{c[4]:.2f}" if isinstance(c[4], float) else c[4],
                         f"{c[5]:.2f}" if isinstance(c[5], float) else c[5],
                         c[6], c[7]])
+    defects.append([
+        "pkkp.fact_timeseries_* (Kewangan)", "Lebihan/(Kurangan) Keseluruhan, FY2018-2024",
+        "", "", "", "unproven",
+        "The overall-balance row of PKKP's 15-year panel carries the deficit as NEGATIVE "
+        "for FY2009-2017 and POSITIVE for FY2018-2024 -- in every volume, including within "
+        "a single panel (the FY2024 volume shows FY2017 as -40,321 and FY2018 as +53,385), "
+        "and the 'Dibiayai oleh: Jumlah' row flips with it. Under a 'Lebihan/(Kurangan)' "
+        "label a deficit should print in parentheses. Whether the FY2018+ columns are "
+        "printed without them or our extraction drops them cannot be settled without the "
+        "printed page. Not used for any figure: overall_balance_rm is derived from "
+        "sign-unambiguous lines and this row is compared in magnitude only.",
+        "fact_timeseries_2010_2024 FY2017 vs FY2018 (2024 volume pdf p.281)"])
     build_defects_register(defects)
     n_fail = sum(1 for c in checks if c[1] == "FAIL")
     from collections import Counter

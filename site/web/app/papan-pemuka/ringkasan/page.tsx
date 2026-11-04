@@ -75,8 +75,10 @@ export default function RingkasanPage() {
   const [yearB, setYearB] = useState(2021);
 
   const [flowData, setFlowData] = useState<
-    { category: string; [k: string]: string | number }[]
+    { category: string; [k: string]: string | number | null }[]
   >([]);
+  const [flowMissing, setFlowMissing] = useState<string[] | null>(null);
+  const [flowNoCovid, setFlowNoCovid] = useState<number[] | null>(null);
   const [revenueRows, setRevenueRows] = useState<
     { data: { year: string; [k: string]: string | number }[]; lines: string[]; labelOf: (l: string) => string }
   >({ data: [], lines: [], labelOf: (l) => l });
@@ -109,30 +111,52 @@ export default function RingkasanPage() {
         const revTotal = (rows: typeof revA.rows) => rows.reduce((s, r) => s + r.amount_rm, 0);
         const finTotal = (rows: typeof finA.rows) => rows.reduce((s, r) => s + r.amount_rm, 0);
 
+        // Net DEVEX comes from ONE publisher for both years being compared. MOF's own
+        // figure exists only for 2017-2019 and 2024, so picking "MOF where available"
+        // would quietly compare a MOF year with a BNM year. BNM MSB 3.1 is complete for
+        // 2009-2024, so it is used for both bars.
+        //
+        // FY2020-2022 spending through the Kumpulan Wang COVID-19 sat outside both opex
+        // and devex, so it gets its own bar, and the balance is read from the warehouse
+        // (curated overall_balance_rm, which includes it and is checked against MOF's
+        // own published figure) rather than computed here. A missing figure is left
+        // missing -- never drawn as zero.
+        const CATEGORIES = [
+          "Hasil", "Perbelanjaan Mengurus", "Perbelanjaan Pembangunan",
+          "Kumpulan Wang COVID-19", "Defisit/Lebihan", "Dibiayai Bersih",
+        ];
+        const missing: string[] = [];
+        const noCovidFund: number[] = [];
+        const years = [
+          [String(yearA), yearA, revA, finA] as const,
+          [String(yearB), yearB, revB, finB] as const,
+        ];
+        for (const [, y] of years) {
+          if (hByYear.get(y)?.covid_fund_status === "not_established") noCovidFund.push(y);
+        }
         setFlowData(
-          ["Hasil", "Perbelanjaan Mengurus", "Perbelanjaan Pembangunan", "Defisit/Lebihan", "Dibiayai Bersih"].map(
-            (category) => {
-              const row: { category: string; [k: string]: string | number } = { category };
-              for (const [label, y, rev, opexNet, devexNet, fin] of [
-                [String(yearA), yearA, revA, hByYear.get(yearA)?.opex_net_rm, hByYear.get(yearA)?.devex_net_rm, finA] as const,
-                [String(yearB), yearB, revB, hByYear.get(yearB)?.opex_net_rm, hByYear.get(yearB)?.devex_net_rm, finB] as const,
-              ]) {
-                const r = revTotal(rev.rows) / 1e6;
-                const on = (opexNet ?? 0) / 1e6;
-                const dn = (devexNet ?? 0) / 1e6;
-                const f = finTotal(fin.rows) / 1e6;
-                let val = 0;
-                if (category === "Hasil") val = r;
-                if (category === "Perbelanjaan Mengurus") val = on;
-                if (category === "Perbelanjaan Pembangunan") val = dn;
-                if (category === "Defisit/Lebihan") val = r - on - dn;
-                if (category === "Dibiayai Bersih") val = f;
-                row[label] = Math.round(val);
-              }
-              return row;
+          CATEGORIES.map((category) => {
+            const row: { category: string; [k: string]: string | number | null } = { category };
+            for (const [label, y, rev, fin] of years) {
+              const h = hByYear.get(y);
+              const juta = (v: number | null | undefined) => (v == null ? null : v / 1e6);
+              let val: number | null = null;
+              if (category === "Hasil") val = revTotal(rev.rows) / 1e6;
+              if (category === "Perbelanjaan Mengurus") val = juta(h?.opex_net_rm);
+              if (category === "Perbelanjaan Pembangunan") val = juta(h?.devex_net_bnm_rm);
+              if (category === "Kumpulan Wang COVID-19") val = juta(h?.covid_fund_rm);
+              if (category === "Defisit/Lebihan") val = juta(h?.overall_balance_rm);
+              if (category === "Dibiayai Bersih") val = finTotal(fin.rows) / 1e6;
+              // a fund that did not yet exist is not a missing figure
+              const notApplicable = category === "Kumpulan Wang COVID-19" && h?.covid_fund_status === "not_established";
+              if (val === null && !notApplicable) missing.push(`${category} ${y}`);
+              row[label] = val === null ? null : Math.round(val);
             }
-          )
+            return row;
+          })
         );
+        setFlowMissing(missing.length ? missing : null);
+        setFlowNoCovid(noCovidFund.length ? noCovidFund : null);
 
         const revLines = Array.from(new Set([...revA.rows, ...revB.rows].map((r) => r.category_bm)));
         const revByYear: Record<number, Record<string, number>> = { [yearA]: {}, [yearB]: {} };
@@ -213,14 +237,50 @@ export default function RingkasanPage() {
 
       {error && <p className="text-sm text-red-600 mb-4">{error}</p>}
 
-      <ChartCard title="Ringkasan Aliran Fiskal">
+      <ChartCard
+        title="Ringkasan Aliran Fiskal"
+        citations={[
+          { table: "pkkp.fact_revenue", basis: "Hasil — sebenar teraudit PKKP" },
+          {
+            table: "curated.fact_fiscal_headline",
+            basis:
+              "Perbelanjaan Mengurus bersih — PKKP teraudit, Akaun Hasil Disatukan (sebelum pindahan " +
+              "ke Kumpulan Wang Pembangunan). Perbelanjaan Pembangunan bersih — BNM Buletin " +
+              "Statistik Bulanan 3.1 (kasar tolak pemulihan pinjaman), digunakan untuk kedua-dua " +
+              "tahun supaya perbandingan memakai satu penerbit. Kumpulan Wang COVID-19 — PKKP " +
+              "teraudit, Lampiran 3. Defisit/Lebihan — definisi MOF (hasil tolak tiga perbelanjaan " +
+              "di atas), disemak dengan baki keseluruhan yang diterbitkan MOF.",
+          },
+          { table: "pkkp.fact_timeseries_2010_2024", basis: "Dibiayai oleh:" },
+        ]}
+      >
+        <p className="text-xs opacity-70 mb-2">
+          Defisit/Lebihan = Hasil − Perbelanjaan Mengurus − Perbelanjaan Pembangunan −
+          Kumpulan Wang COVID-19, mengikut definisi MOF (sama dengan baki keseluruhan yang
+          diterbitkan MOF). PKKP mencetak baki keseluruhan dengan definisi berbeza (semua
+          terimaan Kumpulan Wang Pembangunan ditolak, bukan pemulihan pinjaman sahaja), jadi
+          angkanya boleh berbeza sehingga RM1.9 bilion.
+        </p>
+        {flowNoCovid && (
+          <p className="text-xs opacity-70 mb-2">
+            Kumpulan Wang COVID-19 belum wujud pada {flowNoCovid.join(" dan ")} — ditubuhkan pada
+            2020 dan berbelanja hanya pada 2020-2022.
+          </p>
+        )}
+        {flowMissing && (
+          <p className="text-xs text-red-700 mb-2">
+            Tiada data untuk: {flowMissing.join(", ")} — dibiarkan kosong, bukan sifar.
+          </p>
+        )}
         <div style={{ width: "100%", height: 300 }}>
           <ResponsiveContainer>
             <BarChart data={flowData}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--line)" />
               <XAxis dataKey="category" tick={{ fontSize: 11 }} interval={0} angle={-10} textAnchor="end" height={60} />
               <YAxis tickFormatter={(v) => v.toLocaleString()} width={70} />
-              <Tooltip formatter={(v) => `RM${Number(v).toLocaleString("ms-MY")} juta`} />
+              <Tooltip
+                formatter={(v) => (v === null || v === undefined ? "tiada data" : `RM${Number(v).toLocaleString("ms-MY")} juta`)}
+              />
               <Legend />
               <Bar dataKey={String(yearA)} fill={PALETTE[0]} />
               <Bar dataKey={String(yearB)} fill={PALETTE[1]} />

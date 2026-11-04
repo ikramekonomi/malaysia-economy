@@ -9,10 +9,22 @@ export type Citation = {
 
 export type HeadlineRow = {
   year: number;
+  revenue_rm: number | null;
   opex_gross_rm: number;
   opex_net_rm: number | null;
   devex_gross_rm: number;
+  /** MOF Tinjauan Fiskal official_actual -- FY2017-2019 and FY2024 only. */
   devex_net_rm: number | null;
+  devex_net_basis: string | null;
+  /** BNM MSB 3.1, complete FY2009-2024. A different publication: never splice with the MOF column. */
+  devex_net_bnm_rm: number | null;
+  devex_net_bnm_basis: string | null;
+  /** Kumpulan Wang COVID-19 spending -- outside opex and devex. Null before the fund existed. */
+  covid_fund_rm: number | null;
+  covid_fund_status: "printed" | "printed_nil" | "not_established";
+  /** revenue - opex_net - devex_net_bnm - COVID-19 fund (MOF's definition). */
+  overall_balance_rm: number | null;
+  overall_balance_basis: string | null;
   note: string | null;
 };
 
@@ -118,7 +130,8 @@ export function fetchComponents() {
 }
 
 export function fetchComponentSeries(componentKey: string, yearFrom: number, yearTo: number) {
-  return getJSON<{ rows: { year: number; amount_rm: number }[]; citations: Citation[] }>(
+  // amount_rm is null for a year the source does not cover
+  return getJSON<{ rows: { year: number; amount_rm: number | null }[]; citations: Citation[] }>(
     `/api/fiscal/component-series?component_key=${encodeURIComponent(componentKey)}&year_from=${yearFrom}&year_to=${yearTo}`
   );
 }

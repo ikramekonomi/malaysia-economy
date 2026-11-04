@@ -43,12 +43,20 @@ const COMPONENT_GROUPS: { group: string; options: { key: string; label: string }
   {
     group: "Perbelanjaan Pembangunan",
     options: [
-      { key: "devex_net", label: "Jumlah DEVEX (bersih)" },
+      { key: "devex_net_bnm", label: "Jumlah DEVEX (bersih) — BNM, 2009-2024" },
+      { key: "devex_net", label: "Jumlah DEVEX (bersih) — MOF, tahun terpilih" },
       { key: "devex_gross", label: "Jumlah DEVEX (kasar)" },
       { key: "devex_sector_economic", label: "Sektor Ekonomi" },
       { key: "devex_sector_social", label: "Sektor Sosial" },
       { key: "devex_sector_security", label: "Sektor Keselamatan" },
       { key: "devex_sector_general_admin", label: "Pentadbiran Am" },
+    ],
+  },
+  {
+    group: "Lain-lain & Baki",
+    options: [
+      { key: "covid_fund", label: "Kumpulan Wang COVID-19" },
+      { key: "overall_balance", label: "Baki Keseluruhan (definisi MOF)" },
     ],
   },
 ];
@@ -68,10 +76,35 @@ const LIMITED_COVERAGE = new Set(
 );
 const LIMITED_RANGE: [number, number] = [2017, 2021];
 
+// Net DEVEX has two publishers, kept as two separate series (curated/README.md). MOF's own
+// figure exists only for the Tinjauan Fiskal editions ingested so far, so its years are
+// scattered rather than a range; BNM's is complete. Each is plotted alone -- the gaps in
+// the MOF series are shown as gaps, never filled from BNM.
+const SPARSE_NOTES: Record<string, string> = {
+  devex_net:
+    "Angka MOF (Tinjauan Fiskal, sebenar rasmi) kini hanya tersedia untuk 2017, 2018, 2019 " +
+    "dan 2024 — edisi lain belum dimasukkan. Untuk siri lengkap 2009-2024, pilih " +
+    "\"Jumlah DEVEX (bersih) — BNM\". Kedua-dua penerbit berbeza tidak lebih RM0.33 juta " +
+    "bagi tahun yang ada pada kedua-duanya, tetapi ia dua penerbitan berasingan dan tidak " +
+    "dicantumkan dalam satu garis.",
+  covid_fund:
+    "Dana ini ditubuhkan pada 2020 dan berbelanja pada 2020-2022 sahaja; tiada titik " +
+    "sebelum 2020 kerana dana belum wujud (bukan sifar). Perbelanjaan ini di luar " +
+    "perbelanjaan mengurus dan pembangunan.",
+  overall_balance:
+    "Hasil tolak perbelanjaan mengurus bersih, perbelanjaan pembangunan bersih (BNM) dan " +
+    "Kumpulan Wang COVID-19 — definisi MOF, sepadan dengan baki keseluruhan terbitan MOF. " +
+    "Nilai negatif ialah defisit.",
+  devex_net_bnm:
+    "Siri lengkap daripada Bank Negara Malaysia (Buletin Statistik Bulanan, Jadual 3.1). " +
+    "Penerbit berbeza daripada angka kasar PKKP teraudit; untuk angka rasmi MOF, pilih " +
+    "\"Jumlah DEVEX (bersih) — MOF\".",
+};
+
 export default function PerkembanganPage() {
   const [componentKey, setComponentKey] = useState("opex_component_emoluments");
   const [availableKeys, setAvailableKeys] = useState<Set<string> | null>(null);
-  const [data, setData] = useState<{ year: number; amount_rm: number }[]>([]);
+  const [data, setData] = useState<{ year: number; amount_rm: number | null }[]>([]);
   const [citations, setCitations] = useState<{ table: string; basis?: string }[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -87,7 +120,12 @@ export default function PerkembanganPage() {
     fetchComponentSeries(componentKey, MIN_YEAR, MAX_YEAR)
       .then((r) => {
         if (stale) return;
-        setData(r.rows.map((row) => ({ year: row.year, amount_rm: row.amount_rm / 1e6 })));
+        setData(
+          r.rows.map((row) => ({
+            year: row.year,
+            amount_rm: row.amount_rm === null ? null : row.amount_rm / 1e6,
+          }))
+        );
         setCitations(r.citations as { table: string; basis?: string }[]);
       })
       .catch((e) => {
@@ -99,7 +137,9 @@ export default function PerkembanganPage() {
   }, [componentKey]);
 
   const isLimited = LIMITED_COVERAGE.has(componentKey);
-  const latest = data[data.length - 1];
+  const sparseNote = SPARSE_NOTES[componentKey];
+  // latest year that actually has a figure -- a trailing null is a gap, not a value
+  const latest = [...data].reverse().find((d) => d.amount_rm !== null);
 
   const chartData = useMemo(() => {
     return Array.from({ length: MAX_YEAR - MIN_YEAR + 1 }, (_, i) => MIN_YEAR + i).map((year) => {
@@ -140,6 +180,7 @@ export default function PerkembanganPage() {
 
       <div className="rounded border p-4" style={{ borderColor: "var(--line)", background: "var(--panel)" }}>
         <h2 className="font-medium mb-1">{LABEL_BY_KEY[componentKey] ?? componentKey}</h2>
+        {sparseNote && <p className="text-xs opacity-70 mb-2">{sparseNote}</p>}
         {isLimited && (
           <p className="text-xs opacity-70 mb-2">
             Pecahan ini kini hanya tersedia untuk {LIMITED_RANGE[0]}-{LIMITED_RANGE[1]}
@@ -161,13 +202,13 @@ export default function PerkembanganPage() {
                 dataKey="amount_rm"
                 stroke="#1F6F5C"
                 strokeWidth={2}
-                dot={false}
+                dot={chartData.some((d) => d.amount_rm === null) ? { r: 3 } : false}
                 connectNulls={false}
               />
             </LineChart>
           </ResponsiveContainer>
         </div>
-        {latest && (
+        {latest && latest.amount_rm !== null && (
           <p className="text-sm mt-2">
             {latest.year}: <span className="font-semibold tabular-nums">{formatRM(latest.amount_rm * 1e6, "juta")}</span>
           </p>
