@@ -303,7 +303,8 @@ combining both). The ones that change conclusions:
 
 ## Validation — real-economy set (2026-08-01 ingest)
 
-`data/_validation_realeconomy.csv`: **411 checks, 384 PASS, 27 INFO, 0 FAIL**, plus
+`data/_validation_realeconomy.csv` (as of the 2026-11-04 refresh: **429 checks, 399 PASS, 28 INFO,
+2 SOURCE_ANOMALY, 0 FAIL**; the figures below describe the first ingest): **411 checks, 384 PASS, 27 INFO, 0 FAIL**, plus
 `data/_identity_breaches_realeconomy.csv` listing all **1,860 individual breaching rows**.
 Run `python3 sources/dosm/pipeline/verify_realeconomy.py`.
 
@@ -372,6 +373,112 @@ publication. All of them are recorded row-by-row and none is corrected.
   downloaded files with **only** the two provenance columns appended (source values
   verbatim). **Never edit any of them**; re-download to refresh (that is a new vintage:
   update this README's retrieval date and vintages).
+
+## Vintage refresh 2026-11-04
+
+`refresh.py --apply` pulled **63 datasets** with a new DOSM release (47 were already current).
+Row counts and coverage in the tables above are as of each dataset's first ingest; this table
+is the change, and `data/_vintage.json` holds the current `data_as_of` for every dataset.
+"Revised" counts rows that existed before and whose published values changed (compared as
+numbers, so a `25431356829.0` → `25431356829` reformat is not a revision). Old values are in
+git history (`git show <commit>:sources/dosm/data/<file>.csv`), not in the files.
+
+| dataset | rows | latest period | new rows | revised rows (years) |
+|---|---|---|---|---|
+| `bop_balance` | 325 → 330 | 2026-01 → 2026-04 | 5 | 8 (2024–2026) |
+| `cpi_headline` | 7,812 → 7,854 | 2026-06 → 2026-09 | 42 | 0 |
+| `cpi_state` | 44,352 → 45,024 | 2026-06 → 2026-09 | 672 | 0 |
+| `economic_indicators` | 425 → 428 | 2026-05 → 2026-08 | 3 | 5 (2026) |
+| `employment_sector` | 198 → 225 | 2022-01 → 2025-01 | 27 | 64 (2010–2022) |
+| `federal_finance_qtr` | 1,243 → 1,342 | 2024-01 → 2026-04 | 99 | 8 (2021–2024) |
+| `federal_finance_qtr_de` | 1,582 → 1,708 | 2024-01 → 2026-04 | 126 | 1 (2023) |
+| `federal_finance_qtr_oe` | 1,111 → 1,210 | 2024-01 → 2026-04 | 99 | 4 (2023–2024) |
+| `federal_finance_qtr_revenue` | 2,373 → 2,562 | 2024-01 → 2026-04 | 189 | 24 (1999–2023) |
+| `federal_finance_year` | 594 → 616 | 2023-01 → 2025-01 | 22 | 5 (2021–2023) |
+| `federal_finance_year_de` | 756 → 784 | 2023-01 → 2025-01 | 28 | 8 (2018–2023) |
+| `federal_finance_year_oe` | 495 → 517 | 2023-01 → 2025-01 | 22 | 5 (2022–2023) |
+| `federal_finance_year_revenue` | 1,134 → 1,176 | 2023-01 → 2025-01 | 42 | 8 (2000–2023) |
+| `gdp_annual_nominal_income` | 156 → 156 | 2025-01 → 2025-01 | 0 | 0 |
+| `gdp_qtr_nominal` | 130 → 133 | 2026-01 → 2026-04 | 3 | 1 (2026) |
+| `gdp_qtr_nominal_demand` | 825 → 844 | 2026-01 → 2026-04 | 19 | 2 (2026) |
+| `gdp_qtr_nominal_demand_granular` | 3,425 → 3,504 | 2026-01 → 2026-04 | 79 | 2 (2026) |
+| `gdp_qtr_nominal_supply` | 910 → 931 | 2026-01 → 2026-04 | 21 | 7 (2026) |
+| `gdp_qtr_nominal_supply_granular` | 10,010 → 10,241 | 2026-01 → 2026-04 | 231 | 28 (2026) |
+| `gdp_qtr_real` | 130 → 133 | 2026-01 → 2026-04 | 3 | 1 (2026) |
+| `gdp_qtr_real_demand` | 825 → 844 | 2026-01 → 2026-04 | 19 | 2 (2026) |
+| `gdp_qtr_real_demand_granular` | 3,425 → 3,504 | 2026-01 → 2026-04 | 79 | 2 (2026) |
+| `gdp_qtr_real_sa` | 45 → 46 | 2026-01 → 2026-04 | 1 | 5 (2025–2026) |
+| `gdp_qtr_real_sa_demand` | 270 → 276 | 2026-01 → 2026-04 | 6 | 16 (2025–2026) |
+| `gdp_qtr_real_sa_supply` | 315 → 322 | 2026-01 → 2026-04 | 7 | 34 (2025–2026) |
+| `gdp_qtr_real_supply` | 910 → 931 | 2026-01 → 2026-04 | 21 | 3 (2026) |
+| `gdp_qtr_real_supply_granular` | 10,010 → 10,241 | 2026-01 → 2026-04 | 231 | 24 (2026) |
+| `hh_access_amenities` | 688 → 694 | 2024-01 → 2024-01 | 6 | 27 (2024) |
+| `iowrt` | 290 → 299 | 2026-05 → 2026-08 | 9 | 53 (2022–2024) |
+| `iowrt_2d` | 870 → 897 | 2026-05 → 2026-08 | 9 | 29 (2022–2024) |
+| `iowrt_3d` | 5,800 → 5,980 | 2026-05 → 2026-08 | 9 | 0 |
+| `ipi` | 398 → 407 | 2026-05 → 2026-08 | 9 | 129 (2020–2026) |
+| `ipi_1d` | 1,194 → 1,221 | 2026-05 → 2026-08 | 27 | 194 (2020–2026) |
+| `ipi_2d` | 10,348 → 10,582 | 2026-05 → 2026-08 | 9 | 103 (2022–2026) |
+| `ipi_domestic` | 5,970 → 6,105 | 2026-05 → 2026-08 | 135 | 0 |
+| `ipi_export` | 5,174 → 5,291 | 2026-05 → 2026-08 | 117 | 19 (2020–2026) |
+| `lfs_month` | 197 → 200 | 2026-05 → 2026-08 | 3 | 4 (2025) |
+| `lfs_month_duration` | 125 → 126 | 2026-05 → 2026-06 | 1 | 1 (2025) |
+| `lfs_month_sa` | 197 → 200 | 2026-05 → 2026-08 | 3 | 4 (2025) |
+| `lfs_month_status` | 250 → 256 | 2026-05 → 2026-08 | 6 | 246 (2016–2026) |
+| `lfs_month_youth` | 125 → 126 | 2026-05 → 2026-06 | 1 | 125 (2016–2026) |
+| `lfs_qtr` | 63 → 66 | 2025-07 → 2026-04 | 3 | 7 (2024–2025) |
+| `lfs_qtr_sru_age` | 350 → 380 | 2025-07 → 2026-04 | 30 | 59 (2024–2025) |
+| `lfs_qtr_sru_sex` | 210 → 228 | 2025-07 → 2026-04 | 18 | 31 (2024–2025) |
+| `lfs_qtr_state` | 560 → 608 | 2025-07 → 2026-04 | 48 | 112 (2024–2025) |
+| `lfs_qtr_tru_age` | 350 → 380 | 2025-07 → 2026-04 | 30 | 31 (2024–2025) |
+| `lfs_qtr_tru_sex` | 210 → 228 | 2025-07 → 2026-04 | 18 | 22 (2024–2025) |
+| `lfs_state_sex` | 1,732 → 1,908 | 2023-01 → 2025-01 | 176 | 1,567 (1982–2023) |
+| `lfs_year` | 40 → 42 | 2023-01 → 2025-01 | 2 | 0 |
+| `lfs_year_sex` | 120 → 126 | 2023-01 → 2025-01 | 6 | 109 (1982–2023) |
+| `ppi` | 581 → 590 | 2026-06 → 2026-09 | 9 | 0 |
+| `ppi_1d` | 2,905 → 2,950 | 2026-06 → 2026-09 | 45 | 0 |
+| `ppi_sitc` | 5,229 → 5,310 | 2026-06 → 2026-09 | 9 | 0 |
+| `productivity_annual` | 462 → 462 | 2025-01 → 2025-01 | 0 | 419 (2015–2025) |
+| `productivity_annual_priority` | 288 → 291 | 2025-01 → 2025-01 | 3 | 119 (2017–2025) |
+| `productivity_qtr` | 1,848 → 1,936 | 2025-10 → 2026-04 | 88 | 1,720 (2015–2025) |
+| `sppi` | 130 → 133 | 2026-01 → 2026-04 | 3 | 0 |
+| `sppi_1d` | 1,040 → 1,064 | 2026-01 → 2026-04 | 24 | 5 (2020–2021) |
+| `sppi_2d` | 1,790 → 1,841 | 2026-01 → 2026-04 | 3 | 0 |
+| `sppi_3d` | 3,062 → 3,149 | 2026-01 → 2026-04 | 3 | 0 |
+| `trade_enduse_bec` | 14,332 → 14,697 | 2026-04 → 2026-09 | 95 | 651 (2010–2026) |
+| `trade_headline` | 743 → 1,310 | 2026-04 → 2026-09 | 567 | 175 (2000–2026) |
+| `trade_sitc_1d` | 3,487 → 4,851 | 2026-05 → 2026-09 | 1,364 | 247 (2024–2026) |
+
+What moved, in short:
+
+- **New periods everywhere**: CPI to 2026-09, LFS monthly to 2026-08 and quarterly to 2026-Q2,
+  GDP to 2026-Q2, IPI/IOWRT to 2026-08, PPI and trade to 2026-09, annual LFS and
+  `employment_sector` to 2025, and DOSM's federal finance files (JANM) to **FY2025 annual and
+  2026-Q2 quarterly**, after two years without an update.
+- **History extended**: `trade_headline` and `trade_sitc_1d` now start in **1990** (were 2000);
+  `trade_headline` also gains domestic exports and re-exports.
+- **Real revisions to history**, not only the newest period: `lfs_state_sex` (1,567 rows back to
+  1982; levels move ≤0.4%, rates up to 9.5% relative, e.g. Selangor 1990), `lfs_year_sex`,
+  `productivity_*` (most of 2015–2025, the open three-year revision window plus level changes),
+  `lfs_month_status`, IPI 2020–2026 and trade 2024–2026. Anything computed from these before
+  2026-11-04 should be recomputed, not assumed unchanged.
+- `curated/fact_labour_indicators.csv` was rebuilt: 2024–2025 added, no historical value changed.
+
+### Source anomalies found during this refresh (kept as printed, golden rule 2)
+
+| dataset | vintage | what | evidence |
+|---|---|---|---|
+| `lfs_month_youth` | 2026-08-03 (previous) | **headers out of order**: the file was labelled `unemployed_15_24, u_rate_15_24, unemployed_15_30, u_rate_15_30` but its values were in the order unemployed 15–24, unemployed 15–30, rate 15–24, rate 15–30. Read by name, the youth unemployment rate was **402.8%** (2016-01). | DOSM's 2026-11-04 file carries the same numbers under corrected headers (`…,unemployed_15_30,u_rate_15_24,…`). Nothing in `curated/` or `site/` read the column. Anyone who used the August file by column name has wrong youth rates. |
+| `lfs_district` | held since 2026-08 | Telang Usan (Sarawak), 2018: `u_rate` = 293.0 with every other field blank | a rate cannot exceed 100; `_identity_breaches_realeconomy.csv` |
+| `lfs_dun` | held since 2026-08 | Kedah N.08 Pedu and N.09 Bukit Lada, 2021: `lf_employed` 24.3 > `lf` 13.0 / 12.4; `ep_ratio` 106.1 / 109.0. Both rows print identical employed / unemployed / outside figures, which suggests a copied row. | same |
+
+**New check** (`verify_realeconomy.py`): every rate, ratio, proportion and poverty column must lie
+in [0, 100]. A few cells out of range are recorded as `SOURCE_ANOMALY` (the publisher's
+misprint); more than 1% of a file's rows out of range is a `FAIL` that blocks the refresh. The
+youth file above would have failed (125 of 125 rows).
+
+The refresh also needs `pyarrow` (the parquet arbiter in `verify_realeconomy.py`); without it every
+GDP/BOP/FDI arbiter check FAILs with "No module named 'pyarrow'". It is now in `requirements.txt`.
 
 ## Keeping it fresh (updates are pulled, never silent)
 

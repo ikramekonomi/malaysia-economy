@@ -13,6 +13,8 @@ V1_wage_roundtrip,2020,529996.389,529996.389,PASS,compensation -> wage -> compen
 V1_wage_roundtrip,2021,543374.552,543374.552,PASS,compensation -> wage -> compensation
 V1_wage_roundtrip,2022,584066.163,584066.163,PASS,compensation -> wage -> compensation
 V1_wage_roundtrip,2023,612060.237,612060.237,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2024,649270.816,649270.816,PASS,compensation -> wage -> compensation
+V1_wage_roundtrip,2025,686851.190,686851.190,PASS,compensation -> wage -> compensation
 V2_labour_share_band,2010,20-60%,31.7%,PASS,sanity band; outside it means a units or series mix-up
 V2_labour_share_band,2011,20-60%,32.1%,PASS,sanity band; outside it means a units or series mix-up
 V2_labour_share_band,2012,20-60%,33.2%,PASS,sanity band; outside it means a units or series mix-up
@@ -27,4 +29,6 @@ V2_labour_share_band,2020,20-60%,37.4%,PASS,sanity band; outside it means a unit
 V2_labour_share_band,2021,20-60%,35.1%,PASS,sanity band; outside it means a units or series mix-up
 V2_labour_share_band,2022,20-60%,32.5%,PASS,sanity band; outside it means a units or series mix-up
 V2_labour_share_band,2023,20-60%,33.5%,PASS,sanity band; outside it means a units or series mix-up
-V3_single_vintage,all,1 retrieved_date,['2026-08-03'],PASS,inputs must share one DOSM snapshot
+V2_labour_share_band,2024,20-60%,33.6%,PASS,sanity band; outside it means a units or series mix-up
+V2_labour_share_band,2025,20-60%,33.9%,PASS,sanity band; outside it means a units or series mix-up
+V3_single_vintage,all,1 retrieved_date,['2026-11-04'],PASS,inputs must share one DOSM snapshot

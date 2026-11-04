@@ -530,6 +530,38 @@ add("bop_balance", f"diagnostic residual |ca+ka+neo-fa| ({len(res)} quarters)", 
     "the financial-account sign convention is not published in the dataset; residual "
     "recorded for the analyst, no identity asserted")
 
+# --- Bounds: a published rate, ratio, proportion or poverty incidence is a percentage, so
+#     it must lie in [0, 100]. Added 2026-11-04 after the 2026-08-03 vintage of
+#     lfs_month_youth was found with its headers out of order (u_rate_15_24 held the
+#     15-30 unemployed count, e.g. 402.8): every identity passed, but a 402.8% rate did
+#     not look wrong to any check. Growth series are excluded (they can exceed 100).
+import re  # noqa: E402
+RATE_COL = re.compile(r"(^|_)(u_rate|p_rate|ep_ratio|proportion|poverty)")
+GROWTH = {"growth_yoy", "growth_mom", "growth_qoq"}
+for ds in sorted(REALECONOMY):
+    rows = load(ds)
+    if not rows:
+        continue
+    cols = [c for c in rows[0] if RATE_COL.search(c)]
+    if not cols:
+        continue
+    lvl = [r for r in rows if r.get("series", "abs") not in GROWTH]
+    hits = [(r, c) for r in lvl for c in cols
+            if num(r[c]) is not None and not 0 <= num(r[c]) <= 100]
+    for r, c in hits:
+        log_breach(ds, f"bounds 0 <= {c} <= 100",
+                   " ".join(v for k, v in r.items() if k not in PROV and k not in cols
+                            and num(v) is None), r[c], "in [0, 100]",
+                   "published value outside the range a percentage can take; kept as printed")
+    # A few cells out of range = the publisher's own misprint (kept as printed, golden
+    # rule 2). More than 1% of rows out of range = structural (e.g. headers out of order,
+    # as in lfs_month_youth 2026-08-03): that blocks the refresh.
+    status = ("PASS" if not hits else
+              "FAIL" if len(hits) > 0.01 * len(lvl) else "SOURCE_ANOMALY")
+    add(ds, f"bounds 0 <= {'/'.join(cols)} <= 100 ({len(lvl)} rows)", 0, len(hits), status,
+        "; ".join(f"{c}={r[c]} ({' '.join(v for k, v in r.items() if k in ('state', 'district', 'dun', 'date'))})"
+                  for r, c in hits[:3]))
+
 # ---------------------------------------------------------------- write
 dest = os.path.join(DATA, "_validation_realeconomy.csv")
 with open(dest, "w", newline="") as f:
