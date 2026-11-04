@@ -154,7 +154,7 @@ t.get_gap_view("gap_need_vs_money", year="2022")    # need vs state-government m
 |---|---|---|
 | 0 Foundation | registry as data, CI, archive, vintage logs, governance | built; archive filling (PDFs by sha256) |
 | 1 First slice | state-level need vs money, end to end, with agent tools and evals | **built** (`core/README.md`); awaiting a human spot-check before publication |
-| 2 Broaden statistics | all DOSM/BNM/MOF series, survey report tables, health data | next |
+| 2 Broaden statistics | all DOSM/BNM/MOF series, survey report tables, health data | **in progress**: health, education and services by state; districts, parlimen and DUN (never ranked) |
 | 3 Money trail | entities, transfers, placing federal spending by state | planned |
 | 4 Records and links | audit findings, PAC, procurement | planned |
 

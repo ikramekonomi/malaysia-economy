@@ -87,7 +87,7 @@ class Tools:
         if not rs:
             return self._not_held(f"{indicator} at {geo_level} level for {period}")
         survey = any(r["estimate_method"] in ("direct_survey", "small_area_model") for r in rs)
-        if geo_level not in ("state", "country") and survey and all(r["reliability"] == "unknown" for r in rs):
+        if geo_level not in ("state", "country") and survey and any(r["reliability"] in ("unknown", "low") for r in rs):
             return {"held": True, "refused_ranking": True,
                     "answer": "small-area survey estimates without published sampling error are not compared or "
                               "ranked (decision D10); use get_series for one area", "release_id": self.w.release_id}

@@ -244,6 +244,77 @@ def build_services(obs, ed):
                 + ("" if r["type"] == "all" else f"|crime_type={r['type']}"))
 
 
+ELECTORAL_VINTAGE = "ge15"
+
+
+def build_small_areas(obs, ed):
+    """Phase 2: district, parlimen and DUN rows from DOSM's HIES and LFS small-area files.
+
+    Districts join the 166 DOSM administrative districts through meta/geo_alias.csv (spellings that
+    replace each other between years). Constituencies are coded MY-xx/par:P.001@ge15 and
+    MY-xx/dun:N.01@ge15. Every estimate is a survey estimate without published sampling error
+    (reliability unknown); LFS constituency rows are survey records aggregated below the survey's
+    design domain (district), so reliability = low. compare_geos never ranks any of them."""
+    alias = {(r["state"], r["published_name"]): r["canonical_name"]
+             for r in rows(os.path.join(META, "geo_alias.csv"))}
+    one, k = Decimal(1), Decimal(1000)
+
+    def dis(r):
+        if r["district"] in ("All Districts", "All"):
+            return STATE_ISO[r["state"]]
+        name = alias.get((r["state"], r["district"]), r["district"])
+        g = f"{STATE_ISO[r['state']]}/dis:{slug(name)}@{DISTRICT_VINTAGE}"
+        obs.districts.setdefault(g, (r["state"], name))
+        return g
+
+    def par(r):
+        code, _, name = r["parlimen"].partition(" ")
+        g = f"{STATE_ISO[r['state']]}/par:{code}@{ELECTORAL_VINTAGE}"
+        obs.parlimen.setdefault(g, (r["state"], code, name))
+        return g
+
+    def dun(r):
+        code, _, name = r["dun"].partition(" ")
+        g = f"{STATE_ISO[r['state']]}/dun:{code}@{ELECTORAL_VINTAGE}"
+        obs.dun.setdefault(g, (r["state"], code, name, par(r)))
+        return g
+
+    def load(dataset, cols, geo, reliability="unknown"):
+        e, vint, sha = ed[dataset]
+        for i, r in enumerate(rows(os.path.join(DOSM, f"{dataset}.csv")), start=2):
+            g = geo(r)
+            for col, (ind, scale, unit, prec) in cols.items():
+                v = dec(r.get(col))
+                if v is None:
+                    continue
+                obs.add(indicator_code=ind, geo_code=g, period_code=r["date"][:4], basis="statistic",
+                        edition_id=e, vintage=vint, value=v * scale, value_printed=r[col], unit_printed=unit,
+                        precision_printed=prec, estimate_method="direct_survey", reliability=reliability,
+                        file_id=sha, table_ref=dataset, l1_ref=f"sources/dosm/data/{dataset}.csv#row{i}")
+
+    inc = {"income_mean": ("hh_income.gross.mean", one, "RM per month", "1"),
+           "income_median": ("hh_income.gross.median", one, "RM per month", "1")}
+    lfs = {"lf": ("lfs.labour_force", k, "'000 persons", "100"), "lf_employed": ("lfs.employed", k, "'000 persons", "100"),
+           "lf_unemployed": ("lfs.unemployed", k, "'000 persons", "100"),
+           "p_rate": ("lfs.participation_rate", one, "percent", "0.1"),
+           "u_rate": ("lfs.unemployment_rate", one, "percent", "0.1")}
+    gini = {"gini": ("hh_income.gini", one, "ratio", "0.001")}
+    for level, geo in (("district", dis), ("parlimen", par), ("dun", dun)):
+        load(f"hh_income_{level}", inc, geo)
+        load(f"hh_inequality_{level}", gini, geo)
+        pov = {"poverty_absolute": ("poverty.absolute.rate", one, "percent", "0.1")}
+        if level == "district":
+            pov["poverty_relative"] = ("poverty.relative.rate", one, "percent", "0.1")
+        load(f"hh_poverty_{level}", pov, geo)
+        load(f"lfs_{level}", lfs, geo, reliability="unknown" if level == "district" else "low")
+    load("hies_district", {"expenditure_mean": ("hh_expenditure.mean", one, "RM per month", "1")}, dis)
+    for level, geo in (("parlimen", par), ("dun", dun)):
+        load(f"hh_expenditure_{level}", {"expenditure": ("hh_expenditure.mean", one, "RM per month", "1")}, geo)
+    load("hh_access_amenities", {"piped_water": ("amenities.piped_water.share", one, "percent", "0.01"),
+                                 "sanitation": ("amenities.sanitation.share", one, "percent", "0.01"),
+                                 "electricity": ("amenities.electricity.share", one, "percent", "0.01")}, dis)
+
+
 # state accounts: the headline lines only (Phase 1); the line codes are the states pipeline's conformed codes
 STATE_LINES = {
     "revenue_total": "state_gov.revenue.total",
@@ -326,6 +397,17 @@ def dim_geo(obs):
         out.append({"geo_code": code, "geo_level": "state", "local_code": code[3:], "name_bm": name,
                     "name_en": STATE_EN.get(name, name), "parent_geo_code": "MY", "hierarchy": "administrative",
                     "boundary_vintage": "", "boundary_vintage_proof": "stated (ISO 3166-2:MY)"})
+    proof = ("inferred: DOSM's HIES (2019-2024) and LFS (2021-2023) constituency files publish the same 222 parlimen "
+             "and 600 DUN labels every year, the seat counts of the delineations used at GE14 (2018) and GE15 (2022); "
+             "DOSM does not state the boundary set")
+    for g, (st, code, name) in sorted(obs.parlimen.items()):
+        out.append({"geo_code": g, "geo_level": "parlimen", "local_code": code, "name_bm": name, "name_en": name,
+                    "parent_geo_code": STATE_ISO[st], "hierarchy": "electoral",
+                    "boundary_vintage": ELECTORAL_VINTAGE, "boundary_vintage_proof": proof})
+    for g, (st, code, name, parent) in sorted(obs.dun.items()):
+        out.append({"geo_code": g, "geo_level": "dun", "local_code": code, "name_bm": name, "name_en": name,
+                    "parent_geo_code": parent, "hierarchy": "electoral",
+                    "boundary_vintage": ELECTORAL_VINTAGE, "boundary_vintage_proof": proof})
     for g, (st, d) in sorted(obs.districts.items()):
         out.append({"geo_code": g, "geo_level": "district", "local_code": slug(d), "name_bm": d, "name_en": d,
                     "parent_geo_code": STATE_ISO[st], "hierarchy": "administrative", "boundary_vintage": DISTRICT_VINTAGE,
@@ -397,7 +479,8 @@ def checks(obs, geo, per, ind, brk, editions):
     noprov = sum(1 for r in obs.rows if not r["file_id"] or not r["l1_ref"])
     add("C4 every row has provenance (file sha256 + L1 row)", "fact_observation", "PASS" if not noprov else "FAIL",
         f"{noprov} rows without")
-    nounc = sum(1 for r in obs.rows if r["basis"] == "statistic" and not r["se"] and r["reliability"] != "unknown")
+    nounc = sum(1 for r in obs.rows if r["basis"] == "statistic" and not r["se"]
+                and r["reliability"] not in ("unknown", "low"))
     add("C5 a survey estimate without published uncertainty says so (reliability = unknown)", "fact_observation",
         "PASS" if not nounc else "FAIL", f"{nounc} rows claim reliability without uncertainty")
     # coverage: every view must be able to run for all 16 states and territories (golden rule 11)
@@ -455,8 +538,11 @@ def main():
     ed = dosm_editions()
     obs = Obs()
     obs.districts = {}
+    obs.parlimen = {}
+    obs.dun = {}
     build_dosm(obs, ed)
     build_services(obs, ed)
+    build_small_areas(obs, ed)
     build_states(obs)
     build_federal(obs)
     ind = rows(os.path.join(META, "indicator.csv"))
@@ -475,6 +561,12 @@ def main():
             w.writerows(data)
 
     write("dim_geo.csv", geo, list(geo[0]))
+    hier = [{"hierarchy": g["hierarchy"], "child_geo_code": g["geo_code"], "parent_geo_code": g["parent_geo_code"]}
+            for g in geo if g["parent_geo_code"] and g["hierarchy"]]
+    hier += [{"hierarchy": "electoral", "child_geo_code": g["geo_code"], "parent_geo_code": "MY"}
+             for g in geo if g["geo_level"] == "state"]
+    write("geo_hierarchy.csv", sorted(hier, key=lambda h: (h["hierarchy"], h["child_geo_code"])),
+          ["hierarchy", "child_geo_code", "parent_geo_code"])
     write("dim_period.csv", per, list(per[0]))
     write("dim_breakdown.csv", brk, list(brk[0]))
     write("dim_indicator.csv", [r for r in ind if r["indicator_code"] in used], list(ind[0]))
