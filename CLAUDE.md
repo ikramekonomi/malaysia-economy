@@ -20,7 +20,7 @@ financial wellbeing · environment, climate & disasters. Raw files (L0) → sour
 (L1, `sources/`) → a conformed core of 6 dimensions (geo, period, indicator, breakdown, entity,
 source) and 3 facts (observation, money flow, record) (L2) → named gap views (L3) → apps (L4:
 agent tools, dashboard, models). **The full specification is `docs/DATA_MODEL.md`**: read it
-before changing anything structural. Decisions D1–D21 are its §16.
+before changing anything structural. Decisions D1–D23 are its §16 (and `meta/decision.csv`).
 
 ## Truth by reconciliation
 No single source is "the truth". Each domain has a hub that others reconcile against, and the
@@ -41,11 +41,11 @@ guarantees sit in memorandum accounts), and **place** (most federal spending has
 in the accounts; see `docs/DATA_MODEL.md` §10 and §13).
 
 ## Sources
-What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (102 series:
+What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (104 series:
 status, route, access, licence, priority). The plan behind it, theme by theme:
 **`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
 `sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9
-editions), bnm, dosm (110 datasets, refreshed daily), audit-negara, states (13 states).
+editions), bnm, dosm (112 datasets, refreshed daily), audit-negara, states (13 states).
 
 ## Golden rules — do not break these
 1. **Raw source data (the CSVs) is the source of truth.** Consolidated/curated tables and any
@@ -64,12 +64,14 @@ editions), bnm, dosm (110 datasets, refreshed daily), audit-negara, states (13 s
 7. **Work on a branch and open a PR** — never push data changes straight to `main`. (The daily
    DOSM refresh also goes through a PR; it merges itself only when every verifier is clean.)
 8. **Keep every vintage.** A refresh never destroys the previous release: log it (sha256, as-of
-   date) so it can be recovered exactly (`sources/dosm/pipeline/vintage_get.py`).
+   date) so it can be recovered exactly (`sources/dosm/pipeline/vintage_get.py`). Raw PDFs live in
+   the private `l0-archive` release, by sha256 (`meta/l0_archive.py`; index `meta/l0_archive.csv`).
 9. **A survey estimate carries its uncertainty**, or says it is unknown. Never rank small areas
    as if their estimates were exact.
 10. **Licence and personal data are checked before anything leaves the warehouse.** Every series
     has `licence`, `redistribution` and `contains_personal_data` in the registry; never guess a
-    licence. Individuals are never returned by tools or views. Only lawfully published or
+    licence. `to_confirm` does not block publishing official figures with their citation;
+    `no_redistribution` never leaves the warehouse; a publisher's takedown request is honoured. Individuals are never returned by tools or views. Only lawfully published or
     officially requested documents; no leaked or OSA-classified material.
 11. **Neutral by construction.** Methods are declared before results are seen; every view runs
     for all 13 states and the Federal Territories; no party attribute in the core; disclose any
@@ -80,12 +82,21 @@ editions), bnm, dosm (110 datasets, refreshed daily), audit-negara, states (13 s
 sources/            one folder per source, each independently verifiable (L1)
   <name>/data/      the CSVs (canonical, as printed)  + _validation*, _source_anomalies*, _vintage_log
   <name>/pipeline/  extraction, refresh and verification scripts
-curated/            today's consolidated layer (becomes core.* / gap.* per docs/DATA_MODEL.md)
+core/               the conformed layer (L2: dims + fact_observation) and gap views (L3); see core/README.md
+curated/            the older consolidated layer, moving into core/ view by view
+apps/tools/         typed agent tools over core/ (no SQL; every number cited; arithmetic only via derive)
 apps/models/        model projections: an application, never warehouse data
 site/               the public site + chatbot (reads curated views; its own CLAUDE.md)
 pipeline/           build_duckdb.py (PKKP DB)
 docs/               DATA_MODEL.md · SOURCES.md · DOCUMENT_REGISTRY.md · registry/ · ANALYST_GUIDE.md
+meta/               code lists, decisions, the file registry (build_registry.py) -> warehouse meta.*
+qa/                 the offline check suite CI runs on every PR, and its known-FAIL baseline
 ```
+
+**CI:** `python3 qa/run_offline_suite.py` runs on every PR (`.github/workflows/validate.yml`). It
+blocks a script that fails, a rebuild that changes a committed file, and any `FAIL` row not in
+`qa/known_fails.csv`. Run it before you push. If you add a validator that runs offline, add it to
+the suite's `SUITE` list.
 
 ## Adding a new source
 Register it first (a row in `docs/registry/series_seed.csv`, with licence and personal-data

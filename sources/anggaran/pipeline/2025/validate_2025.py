@@ -93,6 +93,11 @@ for i, m in enumerate(MEASURES):
     rec("E_jumlah_besar", "mengurus+pembangunan", m, PRINTED[("grand_p31", "jumlah_besar")][i],
         t_jum + b_meng + p_all)
 
+import sys
+sys.path.insert(0, os.path.join(HERE, "../../../..", "qa"))
+from source_anomaly import classify  # noqa: E402  FAIL -> SOURCE_ANOMALY only where the register proves it
+out = classify(out, os.path.join(DATA, "_source_anomalies_2025.csv"))
+
 dest = os.path.join(DATA, "_validation_2025.csv")
 with open(dest, "w", newline="") as f:
     w = csv.writer(f)

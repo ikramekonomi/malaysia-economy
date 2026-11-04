@@ -2,10 +2,11 @@
 """Programmatic validation for the 2017 warehouse: extracted line items must
 reproduce printed totals. Never corrects — only reports PASS/FAIL with amounts.
 All reference figures are typed from the 2017 volume's own printed statements."""
+import os
 import csv
 from collections import defaultdict
 
-WH = "/home/claude/pkkp/warehouse2017"
+WH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2017")
 results = []
 
 

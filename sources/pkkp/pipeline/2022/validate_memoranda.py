@@ -12,9 +12,10 @@ printed subtotals/totals, and totals must match control figures typed from the
    amounts as details); the filter is retained harmlessly.
  - controls are printed register totals from the 2022 volume, sen precision.
 """
+import os
 import pandas as pd
 
-WH = '/home/claude/pkkp/warehouse2022'
+WH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2022")
 results = []
 
 def check(name, got, exp, tol=0.005):

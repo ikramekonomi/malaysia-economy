@@ -36,12 +36,15 @@ Context series only — never blended with audited PKKP figures (see README).
 """
 import csv
 import json
+import sys
 import os
 import time
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, "..", "data")
+sys.path.insert(0, HERE)
+from vintage import replace_with_log  # noqa: E402
 API = "https://api.bnm.gov.my/public/msb"
 HDR = {"Accept": "application/vnd.BNM.API.v1+json"}
 RETRIEVED_DATE = "2026-07-31"
@@ -89,12 +92,15 @@ def main():
         cols = sorted({k for r in rows for k in r}, key=lambda c: (c.startswith("_"), c))
         slug = t.replace(".", "_")
         dest = os.path.join(DATA, f"msb_{slug}.csv")
-        with open(dest, "w", newline="") as f:
-            w = csv.writer(f)
-            w.writerow(cols + ["endpoint", "retrieved_date", "api_last_updated"])
-            for r in rows:
-                w.writerow([r.get(c, "") for c in cols] +
-                           [f"{API}/{t}/year/{r['_year_requested']}", RETRIEVED_DATE, last_updated])
+        def write(path, rows=rows, cols=cols, t=t, last_updated=last_updated):
+            with open(path, "w", newline="") as f:
+                w = csv.writer(f)
+                w.writerow(cols + ["endpoint", "retrieved_date", "api_last_updated"])
+                for r in rows:
+                    w.writerow([r.get(c, "") for c in cols] +
+                               [f"{API}/{t}/year/{r['_year_requested']}", RETRIEVED_DATE, last_updated])
+        # keep every vintage: the replaced file is logged in data/_vintage_log.csv (D3)
+        replace_with_log(dest, write)
         yrs = sorted({r["_year_requested"] for r in rows})
         print(f"table {t}: {len(rows)} rows, years {yrs[0]}-{yrs[-1]} -> {dest}", flush=True)
 

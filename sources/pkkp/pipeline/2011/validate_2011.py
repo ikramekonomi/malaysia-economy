@@ -5,9 +5,10 @@ OWN printed totals. Writes:
   warehouse2011/_validation_checks_memoranda_2011.csv  (registers L3/L4/L5 + memo assets)
 Columns: status,check,extracted_value,printed_value,difference
 """
+import os
 import csv
 import pandas as pd
-WH="/home/claude/pkkp/warehouse2011"
+WH=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2011")
 core=[]; memo=[]
 def C(bucket,label,got,want,tol=0.5):
     try:

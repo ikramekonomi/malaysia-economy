@@ -59,6 +59,12 @@ jobs:
           echo "apply_exit=$?" >> "$GITHUB_OUTPUT"
           python3 curated/pipeline/build_labour_indicators.py >> apply.txt 2>&1
           echo "labour_exit=$?" >> "$GITHUB_OUTPUT"
+          # the core (L2) and the need-vs-money view are built from DOSM: rebuild them in the same PR, and
+          # regenerate the eval answers from the new L1 so the eval tests the tools against the new vintage
+          ( python3 meta/build_registry.py && python3 core/pipeline/build_core.py \
+            && python3 core/pipeline/build_gap_need_vs_money.py && python3 qa/make_eval_questions.py \
+            && python3 qa/run_eval.py ) >> apply.txt 2>&1
+          echo "core_exit=$?" >> "$GITHUB_OUTPUT"
           python3 sources/dosm/pipeline/refresh_report.py --ref origin/main --out report.md
           echo "gate_exit=$?" >> "$GITHUB_OUTPUT"
           set -e
@@ -70,6 +76,7 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           APPLY: ${{ steps.apply.outputs.apply_exit }}
           LABOUR: ${{ steps.apply.outputs.labour_exit }}
+          CORE: ${{ steps.apply.outputs.core_exit }}
           GATE: ${{ steps.apply.outputs.gate_exit }}
         run: |
           day=$(date -u +%Y%m%d)
@@ -77,7 +84,7 @@ jobs:
           git config user.name "dosm-refresh[bot]"
           git config user.email "dosm-refresh@users.noreply.github.com"
           git checkout -b "$branch"
-          git add sources/dosm/data curated/fact_labour_indicators.csv curated/_validation_labour.csv
+          git add sources/dosm/data curated/fact_labour_indicators.csv curated/_validation_labour.csv core meta qa/eval_questions.csv qa/_validation_eval.csv
           git commit -m "DOSM vintage refresh $day" -m "Automated by .github/workflows/dosm-refresh.yml"
           git push -u origin "$branch"
           {
@@ -87,6 +94,7 @@ jobs:
             echo "|---|---|"
             echo "| refresh.py --apply (download + all verifiers) | $APPLY |"
             echo "| build_labour_indicators.py | $LABOUR |"
+            echo "| core + gap_need_vs_money + eval | $CORE |"
             echo "| refresh_report.py gate | $GATE |"
             echo
             cat report.md
@@ -95,7 +103,7 @@ jobs:
           } > body.md
           url=$(gh pr create --base main --head "$branch" --title "DOSM vintage refresh $day" --body-file body.md)
           echo "$url"
-          if [ "$APPLY" = "0" ] && [ "$LABOUR" = "0" ] && [ "$GATE" = "0" ]; then
+          if [ "$APPLY" = "0" ] && [ "$LABOUR" = "0" ] && [ "$CORE" = "0" ] && [ "$GATE" = "0" ]; then
             gh pr merge "$url" --merge --delete-branch
           else
             gh pr comment "$url" --body "Not merged automatically: a verifier or the gate did not pass (exits above). A person must review. Do not edit downloaded values to make a check pass (CLAUDE.md, golden rule 2)."

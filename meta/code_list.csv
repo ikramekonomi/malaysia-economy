@@ -1,0 +1,101 @@
+code_list,code,label_en,label_bm,note
+theme,1,People & poverty,Rakyat & kemiskinan,
+theme,2,Jobs & wages,Pekerjaan & gaji,
+theme,3,Prices & cost of living,Kos sara hidup,
+theme,4,Output & industry,Ekonomi & industri,
+theme,5,Public money & money trail,Wang awam,
+theme,6,"Health, education & services",Kesihatan & pendidikan,
+theme,7,Accountability,Audit & akauntabiliti,
+theme,8,"Money, credit & financial wellbeing",Hutang isi rumah,
+theme,9,"Environment, climate & disasters",Alam sekitar & bencana,
+theme,cross,"Cross-cutting (plan targets, boundaries)",Merentas tema,
+registry_status,expected,Believed to exist; not yet located,,evidence: why we believe it
+registry_status,located,"Location known, not downloaded",,URL + date checked
+registry_status,held,File held with sha256,,manifest row
+registry_status,extracted,Source tables produced,,extract rows + own-total reconciliation
+registry_status,verified,Independent verifier passed,,verifier report
+registry_status,not_published,Publisher does not release it,,dated check
+registry_status,restricted,Exists; access limited,,access terms
+registry_status,unobtainable,Every route tried and failed,,"each attempt, dated"
+registry_status,superseded,Replaced by a later edition; kept,,the replacing edition
+access,api,API,,
+access,bulk_file,Bulk file download,,
+access,pdf,PDF document,,
+access,web_table,Web page table,,
+access,paid,Paid service,,
+access,none,No public route,,
+redistribution,open,"Open, no conditions",,
+redistribution,attribution,Open with attribution,,
+redistribution,no_redistribution,Must not leave the warehouse,,
+redistribution,to_confirm,Unknown: blocks publication until confirmed,,
+contains_personal_data,no,No personal data,,
+contains_personal_data,public_figures,Names of public office-holders only,,
+contains_personal_data,possible,May name individuals,,
+contains_personal_data,yes,Names individuals,,
+priority,P1,Priority 1,,
+priority,P2,Priority 2,,
+priority,P3,Priority 3,,
+priority,deferred,Deferred until a question needs it,,
+track,0,Track 0: shared spine,,
+track,A,Track A: by place,,
+track,B,Track B: by recipient,,
+track,-,Not on the money trail,,
+basis,audited,Certified by the Auditor-General,,
+basis,actual,"Government outturn, not audited",,
+basis,announced,"Announced, not yet tabled",,
+basis,budget_estimate,Tabled estimate,,
+basis,revised_estimate,Estimate revised in-year,,
+basis,projection,Publisher forecast,,
+basis,target,Plan target,,
+basis,statistic,Official statistic,,
+basis,third_party,Printed by a non-official source from data it obtained,,
+basis,derived,Computed by us by a declared rule,,
+status,final,Final,,
+status,preliminary,Preliminary,,
+status,estimate,Estimate,,
+status,revised,Revised,,
+status,provisional_ocr,OCR-provisional,,
+status,nil,Printed as nil,,
+status,not_printed,Not printed,,
+status,suppressed,Withheld by publisher,,
+status,low_reliability,Publisher low-reliability flag,,
+verification_tier,machine_checked,Own identities and cross-checks pass,,
+verification_tier,verifier_agent,Independent agent re-derived it,,
+verification_tier,human_spot_checked,A person checked a random sample against the page,,minimum to publish
+verification_tier,externally_reviewed,Named outside reviewer,,
+qa_status,PASS,Passes,,
+qa_status,PASS_ROUNDING,Within the printed rounding,,
+qa_status,FAIL,Fails: a defect until proven otherwise,,
+qa_status,AGREE,Sources agree,,
+qa_status,DIVERGE,Sources diverge,,
+qa_status,SOURCE_ANOMALY,"Publisher misprint, kept as printed with proof",,
+qa_status,FOOTNOTED,Explained by a footnote,,
+qa_status,DEFINITIONAL,Different definitions,,
+qa_status,UNCAPTURED,Not captured by extraction,,
+qa_status,INFO,Information only,,
+qa_status,OPEN,Phase 0 done-criterion not yet met,,
+geo_level,country,Malaysia,,
+geo_level,state,State or Federal Territory,,
+geo_level,bahagian,"Division (Sabah, Sarawak)",,
+geo_level,district,Administrative district,,
+geo_level,mukim,Mukim,,
+geo_level,pbt,Local authority,,
+geo_level,parlimen,Parliamentary constituency,,
+geo_level,dun,State constituency,,
+geo_level,foreign_country,Other country (ISO 3166-1),,
+geo_state_iso3166_2,MY-01,Johor,Johor,ISO 3166-2:MY
+geo_state_iso3166_2,MY-02,Kedah,Kedah,ISO 3166-2:MY
+geo_state_iso3166_2,MY-03,Kelantan,Kelantan,ISO 3166-2:MY
+geo_state_iso3166_2,MY-04,Melaka,Melaka,ISO 3166-2:MY
+geo_state_iso3166_2,MY-05,Negeri Sembilan,Negeri Sembilan,ISO 3166-2:MY
+geo_state_iso3166_2,MY-06,Pahang,Pahang,ISO 3166-2:MY
+geo_state_iso3166_2,MY-07,Pulau Pinang,Pulau Pinang,ISO 3166-2:MY
+geo_state_iso3166_2,MY-08,Perak,Perak,ISO 3166-2:MY
+geo_state_iso3166_2,MY-09,Perlis,Perlis,ISO 3166-2:MY
+geo_state_iso3166_2,MY-10,Selangor,Selangor,ISO 3166-2:MY
+geo_state_iso3166_2,MY-11,Terengganu,Terengganu,ISO 3166-2:MY
+geo_state_iso3166_2,MY-12,Sabah,Sabah,ISO 3166-2:MY
+geo_state_iso3166_2,MY-13,Sarawak,Sarawak,ISO 3166-2:MY
+geo_state_iso3166_2,MY-14,W.P. Kuala Lumpur,W.P. Kuala Lumpur,ISO 3166-2:MY
+geo_state_iso3166_2,MY-15,W.P. Labuan,W.P. Labuan,ISO 3166-2:MY
+geo_state_iso3166_2,MY-16,W.P. Putrajaya,W.P. Putrajaya,ISO 3166-2:MY

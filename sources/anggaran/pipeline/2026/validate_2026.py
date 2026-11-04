@@ -107,14 +107,19 @@ rec("X_crossbook_summary", f"{n_same} identical", f"{n_diff} restated", "", "", 
 
 # X3: sebenar_2024 vs PKKP audited FY2024 (by-vote OE incl. Development Fund transfer; gross DE)
 con = duckdb.connect(DB, read_only=True)
-pk_oe = con.sql("SELECT sum(sebenar_rm) FROM fact_opex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024").fetchone()[0]
-pk_de = con.sql("SELECT sum(sebenar_jumlah_rm) FROM fact_devex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024 AND maksud_code LIKE 'P.%'").fetchone()[0]
+pk_oe = con.execute("SELECT sum(sebenar_rm) FROM fact_opex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024").fetchone()[0]
+pk_de = con.execute("SELECT sum(sebenar_jumlah_rm) FROM fact_devex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024 AND maksud_code LIKE 'P.%'").fetchone()[0]
 for scope, pk, pr in (("OE (by-vote total)", int(pk_oe), PRINTED["mengurus"][1]),
                       ("DE (gross)", int(pk_de), PRINTED["pembangunan"][1])):
     d = pr - pk
     rec("X3_vs_pkkp_2024", scope, "sebenar_2024", pk, pr,
         "INFO" if abs(d) <= 60 else "FAIL")  # book prints whole RM, PKKP keeps sen:
         # agreement within ~RM1 per vote is rounding, not a discrepancy
+
+import sys
+sys.path.insert(0, os.path.join(HERE, "../../../..", "qa"))
+from source_anomaly import classify  # noqa: E402  FAIL -> SOURCE_ANOMALY only where the register proves it
+out = classify(out, os.path.join(DATA, "_source_anomalies_2026.csv"))
 
 dest = os.path.join(DATA, "_validation_2026.csv")
 with open(dest, "w", newline="") as f:

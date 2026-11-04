@@ -1,8 +1,9 @@
+import os
 import csv
 from collections import defaultdict
 
-P = "/home/claude/pkkp/warehouse2010/fact_devex_project.csv"
-M = "/home/claude/pkkp/warehouse2010/fact_devex_maksud.csv"
+P = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2010", "fact_devex_project.csv")
+M = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "data", "2010", "fact_devex_maksud.csv")
 EXP_P = ["maksud_code","maksud_name_bm","row_type","program_bm","projek_code","name_bm","year","kos_keseluruhan_rm","anggaran_rmke9_2006_2010_rm","terkumpul_rmke9_prior_rm","anggaran_langsung_rm","anggaran_pinjaman_rm","anggaran_jumlah_rm","sebenar_langsung_rm","sebenar_pinjaman_rm","sebenar_jumlah_rm","terkumpul_rmke9_rm","has_footnote","source_file","pdf_page","printed_page","statement"]
 EXP_M = ["maksud_code","maksud_name_bm","jumlah_label_bm","year","kos_keseluruhan_rm","anggaran_rmke9_2006_2010_rm","terkumpul_rmke9_prior_rm","anggaran_langsung_rm","anggaran_pinjaman_rm","anggaran_jumlah_rm","sebenar_langsung_rm","sebenar_pinjaman_rm","sebenar_jumlah_rm","terkumpul_rmke9_rm","has_footnote","source_file","pdf_page","printed_page","statement"]
 

@@ -1,0 +1,78 @@
+# L0 archive (docs/DATA_MODEL.md §2, decisions D17 and D23).
+# Downloads every raw document the registry knows from its publisher, proves it (sha256 match, or for
+# PKKP the cited amounts printed on the cited pages), and keeps it as an asset of this private
+# repository's `l0-archive` release, named <sha256>.pdf. The index meta/l0_archive.csv (and any new
+# _documents_manifest.csv) comes back as a commit: on a branch run, to that branch; on main, as a PR.
+# Re-runnable: what is archived is skipped, and each run stops at its byte/time budget.
+name: L0 archive
+
+on:
+  workflow_dispatch:
+    inputs:
+      max_gb:
+        description: "Stop after uploading this many GB"
+        default: "9"
+      max_minutes:
+        description: "Stop after this many minutes"
+        default: "300"
+  push:
+    branches: ["claude/**"]
+    paths: ["meta/l0_archive.py", "meta/l0_candidates.csv", ".github/workflows/l0-archive.yml"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: l0-archive
+  cancel-in-progress: false
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr > /dev/null
+          pip install -q certifi cryptography
+
+      - name: Archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 meta/l0_archive.py --diagnose www.parlimen.gov.my || true
+          python3 meta/l0_archive.py --plan
+          python3 meta/l0_archive.py --run --max-gb "${{ inputs.max_gb || '9' }}" --max-minutes "${{ inputs.max_minutes || '300' }}"
+
+      - name: Commit the index
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # start from the branch as it is now (other pushes may have landed during the run), lay this
+          # run's index and manifests on top, and rebuild the registry from them: no merge conflicts
+          mkdir -p /tmp/l0 && cp meta/l0_archive.csv /tmp/l0/ && cp --parents sources/*/data/_documents_manifest.csv /tmp/l0/ 2>/dev/null || true
+          git fetch -q origin "${{ github.ref_name }}"
+          git reset -q --hard "origin/${{ github.ref_name }}"
+          cp /tmp/l0/l0_archive.csv meta/ && (cd /tmp/l0 && cp --parents sources/*/data/_documents_manifest.csv "$GITHUB_WORKSPACE"/ 2>/dev/null || true)
+          python3 meta/build_registry.py
+          git add meta/l0_archive.csv meta/registry_file.csv meta/_validation_registry.csv sources/*/data/_documents_manifest.csv 2>/dev/null || true
+          git diff --cached --quiet && { echo "index unchanged"; exit 0; }
+          git commit -q -m "L0 archive: update index (run ${{ github.run_id }})"
+          if [ "${{ github.ref_name }}" = "main" ]; then
+            b="l0-archive/run-${{ github.run_id }}"
+            git push -q origin "HEAD:refs/heads/$b"
+            gh pr create --base main --head "$b" --title "L0 archive: index update (run ${{ github.run_id }})" \
+              --body "Written by .github/workflows/l0-archive.yml. Index of raw documents archived as assets of the l0-archive release."
+          else
+            git push -q origin "HEAD:${{ github.ref_name }}"
+          fi
