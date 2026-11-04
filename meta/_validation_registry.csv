@@ -175,11 +175,11 @@ R7 every file is in the L0 archive,amenities_access,PASS,1 of 1 archived (releas
 R6 licence recorded,amenities_access,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,lkan_federal,PASS,57 file(s)
 R5 every file has a sha256,lkan_federal,PASS,57 files
-R7 every file is in the L0 archive,lkan_federal,OPEN,0 of 57 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,lkan_federal,OPEN,1 of 57 archived (release l0-archive or git history)
 R6 licence recorded,lkan_federal,OPEN,licence to_confirm
 R4 held series has files,ag_sijil_eselfaudit,PASS,4 file(s)
 R5 every file has a sha256,ag_sijil_eselfaudit,PASS,4 files
-R7 every file is in the L0 archive,ag_sijil_eselfaudit,OPEN,0 of 4 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,ag_sijil_eselfaudit,OPEN,1 of 4 archived (release l0-archive or git history)
 R6 licence recorded,ag_sijil_eselfaudit,OPEN,licence to_confirm
 R4 held series has files,lkan_state,PASS,353 file(s)
 R5 every file has a sha256,lkan_state,PASS,353 files
