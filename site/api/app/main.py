@@ -25,6 +25,11 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/api/meta/coverage")
+def meta_coverage():
+    return tpl.coverage()
+
+
 @app.get("/api/ministries")
 def ministries():
     return tpl.list_ministries()

@@ -1,14 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { DEFAULT_COVERAGE } from "@/lib/api";
+import { useCoverage } from "@/lib/useCoverage";
 import { Ministry, exportHeadlineUrl, exportMinistryUrl, fetchMinistries } from "@/lib/api";
 
-const MIN_YEAR = 2009;
-const MAX_YEAR = 2024;
 
 export default function ExportPage() {
-  const [yearFrom, setYearFrom] = useState(MIN_YEAR);
-  const [yearTo, setYearTo] = useState(MAX_YEAR);
+  const cov = useCoverage();
+  const MIN_YEAR = cov.min_year;
+  const MAX_YEAR = cov.max_year;
+  const [yearFrom, setYearFrom] = useState(DEFAULT_COVERAGE.min_year);
+  const [yearTo, setYearTo] = useState(DEFAULT_COVERAGE.max_year);
   const [ministries, setMinistries] = useState<Ministry[]>([]);
   const [ministryCode, setMinistryCode] = useState("");
 
@@ -64,6 +67,13 @@ export default function ExportPage() {
           >
             Muat turun CSV — Opex/Devex Kasar &amp; Bersih
           </a>
+          {yearTo > cov.audited_max_year && (
+            <p className="text-xs opacity-70 mt-2">
+              FY{cov.audited_max_year + 1} belum mempunyai akaun teraudit: dalam fail ini lajur
+              PKKP tahun itu kosong, dan angka MOF (Tinjauan Fiskal, belum teraudit) berada dalam
+              lajur *_mof_rm. Jangan cantumkan kedua-duanya dalam satu siri.
+            </p>
+          )}
         </div>
 
         <div className="pt-4 border-t" style={{ borderColor: "var(--line)" }}>

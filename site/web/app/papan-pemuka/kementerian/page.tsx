@@ -13,10 +13,9 @@ import {
 } from "recharts";
 import { Ministry, fetchMinistries, fetchMinistryBreakdown, formatRM } from "@/lib/api";
 import DashboardSubnav from "@/components/DashboardSubnav";
+import { useCoverage } from "@/lib/useCoverage";
 import SourceCitation from "@/components/SourceCitation";
 
-const MIN_YEAR = 2009;
-const MAX_YEAR = 2024;
 const PALETTE = [
   "#1F6F5C", "#A9762E", "#4A6FA5", "#B25D5D", "#6B4E71",
   "#5C8A72", "#C08A3E", "#7C7C7C", "#3E7CB1", "#9B5A44", "#999999",
@@ -66,6 +65,11 @@ export default function KementerianPage() {
     };
   }, [code, year, jenis, ministries]);
 
+  // Ministry figures exist only in the audited PKKP accounts, so this page runs to the
+  // last AUDITED year -- read from the warehouse, so it extends itself when PKKP publishes.
+  const cov = useCoverage();
+  const MIN_YEAR = cov.min_year;
+  const MAX_YEAR = cov.audited_max_year;
   const yearOptions = Array.from({ length: MAX_YEAR - MIN_YEAR + 1 }, (_, i) => MIN_YEAR + i);
   const opexMinistries = ministries.filter((m) => m.jenis === "Bekalan");
 
@@ -73,6 +77,13 @@ export default function KementerianPage() {
     <div className="mx-auto max-w-6xl px-5 py-10">
       <h1 className="text-2xl font-semibold mb-1">Papan Pemuka Fiskal</h1>
       <p className="text-sm opacity-70 mb-4">Ke mana perbelanjaan satu kementerian pergi.</p>
+      {cov.max_year > cov.audited_max_year && (
+        <p className="text-xs opacity-70 mb-4">
+          Angka kementerian hanya ada dalam akaun teraudit PKKP, yang meliputi hingga
+          {" "}{cov.audited_max_year}. FY{cov.audited_max_year + 1} akan muncul di sini apabila akaun
+          tahun itu diterbitkan.
+        </p>
+      )}
       <DashboardSubnav />
 
       <div className="flex flex-wrap items-end gap-4 mb-6 p-4 rounded border" style={{ borderColor: "var(--line)", background: "var(--panel)" }}>

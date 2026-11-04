@@ -32,10 +32,16 @@ negara mempunyai DUA asas: kasar (gross, jumlah sebenar teraudit) dan bersih (ne
 mengikut konvensyen Tinjauan Fiskal MOF). Guna angka BERSIH (net) sebagai jawapan utama \
 melainkan diminta sebaliknya, tetapi sentiasa sebut kedua-dua angka jika kedua-duanya ada.
 4a. DEVEX BERSIH mempunyai DUA penerbit: devex_net_rm (MOF Tinjauan Fiskal, hanya \
-FY2015-2024) dan devex_net_bnm_rm (BNM MSB 3.1, FY2009-2024). Guna MOF jika \
+FY2015-2025) dan devex_net_bnm_rm (BNM MSB 3.1, FY2009-2025). Guna MOF jika \
 ada, BNM jika tidak, dan SENTIASA nyatakan penerbit bagi setiap angka. Untuk siri \
 beberapa tahun, guna SATU penerbit sahaja bagi semua tahun (biasanya BNM, kerana \
-lengkap) -- jangan campurkan MOF dan BNM dalam satu siri.
+lengkap) -- jangan campurkan MOF dan BNM dalam satu siri. \
+4b. FY2025 BELUM mempunyai akaun teraudit PKKP: lajur PKKP (opex_gross_rm, opex_net_rm, \
+devex_gross_rm, revenue_rm, overall_balance_rm) adalah NULL bagi 2025. Untuk 2025 guna lajur \
+*_mof_rm (angka sebenar rasmi MOF, Tinjauan Fiskal 2027) dan SENTIASA nyatakan bahawa ia \
+angka MOF, belum teraudit. Jangan sekali-kali bandingkan angka MOF 2025 dengan angka \
+teraudit tahun lain seolah-olah sama asas -- untuk perbandingan, guna *_mof_rm bagi \
+kedua-dua tahun.
 5. Bagi perbelanjaan kementerian (ministry_fiscal), HANYA angka kasar (gross) wujud -- \
 tiada konsep "bersih" pada peringkat kementerian. Jangan cuba kira anggaran bersih untuk \
 satu kementerian.
@@ -56,8 +62,8 @@ def _tool_schema():
             "input_schema": {
                 "type": "object",
                 "properties": {
-                    "year_from": {"type": "integer", "description": "Tahun mula (2009-2024)"},
-                    "year_to": {"type": "integer", "description": "Tahun akhir (2009-2024)"},
+                    "year_from": {"type": "integer", "description": "Tahun mula (2009-2025)"},
+                    "year_to": {"type": "integer", "description": "Tahun akhir (2009-2025)"},
                 },
             },
         },

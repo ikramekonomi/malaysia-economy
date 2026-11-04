@@ -11,12 +11,33 @@ underlying table and basis so the frontend/chatbot can show "lihat sumber."
 """
 from .db import get_connection
 
-MIN_YEAR, MAX_YEAR = 2009, 2024
+MIN_YEAR = 2009
+
+
+def coverage():
+    """The year range the warehouse covers, read from the data -- never a second hardcoded
+    source of truth. max_year is the last year ANY publisher prints as an actual;
+    audited_max_year the last year the audited PKKP accounts cover; mof_min_year the first
+    year MOF's own Tinjauan Fiskal figures cover. A year in (audited_max_year, max_year]
+    has MOF and BNM figures but no audited ones yet."""
+    con = get_connection()
+    row = con.execute(
+        "SELECT min(year), max(year), max(year) FILTER (WHERE opex_gross_rm IS NOT NULL), "
+        "min(year) FILTER (WHERE mof_edition IS NOT NULL) FROM curated.fact_fiscal_headline"
+    ).fetchone()
+    return {"min_year": row[0], "max_year": row[1], "audited_max_year": row[2],
+            "mof_min_year": row[3],
+            "citations": [{"table": "curated.fact_fiscal_headline"}]}
+
+
+def _max_year():
+    return coverage()["max_year"]
 
 
 def _clamp_years(year_from, year_to):
+    max_year = _max_year()
     yf = max(MIN_YEAR, int(year_from) if year_from else MIN_YEAR)
-    yt = min(MAX_YEAR, int(year_to) if year_to else MAX_YEAR)
+    yt = min(max_year, int(year_to) if year_to else max_year)
     if yf > yt:
         yf, yt = yt, yf
     return yf, yt
@@ -24,8 +45,8 @@ def _clamp_years(year_from, year_to):
 
 # Net development expenditure has two publishers in the warehouse, deliberately kept in
 # separate columns (curated/README.md): MOF Tinjauan Fiskal's official_actual figure,
-# one year per edition from the nine editions ingested (FY2015-2024), and BNM MSB
-# 3.1's complete FY2009-2024 series. They agree to RM0.33 juta or better where both
+# one year per edition from the nine editions ingested (FY2015-2025), and BNM MSB
+# 3.1's complete FY2009-2025 series. They agree within MOF's own rounding where both
 # exist, but they are two publications on two bases -- so both are returned, each with
 # its own basis, and neither is ever substituted into the other's column here.
 DEVEX_NET_MOF_BASIS = "MOF Tinjauan Fiskal, official_actual (kasar tolak pemulihan pinjaman)"
@@ -39,7 +60,11 @@ def national_fiscal_headline(year_from=None, year_to=None):
     cols = ["year", "revenue_rm", "opex_gross_rm", "opex_net_rm", "devex_gross_rm",
             "devex_net_rm", "devex_net_basis", "devex_net_bnm_rm", "devex_net_bnm_basis",
             "covid_fund_rm", "covid_fund_status", "overall_balance_rm",
-            "overall_balance_basis", "note"]
+            "overall_balance_basis",
+            # MOF's own official_actual figures, one edition per year (FY2015 onward) --
+            # the only national figures for a year the audited accounts do not yet cover
+            "revenue_mof_rm", "opex_mof_rm", "devex_gross_mof_rm", "covid_fund_mof_rm",
+            "overall_balance_mof_rm", "mof_edition", "note"]
     rows = con.execute(
         f"SELECT {', '.join(cols)} FROM curated.fact_fiscal_headline "
         "WHERE year BETWEEN ? AND ? ORDER BY year",
@@ -51,11 +76,13 @@ def national_fiscal_headline(year_from=None, year_to=None):
             "table": "curated.fact_fiscal_headline",
             "basis": "opex gross/net and devex gross: PKKP audited actuals as printed in the "
                      "Consolidated Revenue Account (net = before transfer to the Development "
-                     "Fund). devex_net_rm: " + DEVEX_NET_MOF_BASIS + ", FY2015-2024 "
+                     "Fund). devex_net_rm: " + DEVEX_NET_MOF_BASIS + ", FY2015-2025 "
                      "(each year from its own edition; before FY2015 MOF printed these tables "
                      "in the Laporan Ekonomi, not held). devex_net_bnm_rm: "
-                     + DEVEX_NET_BNM_BASIS + ", FY2009-2024. Two publications -- never splice "
-                     "them into one series. covid_fund_rm: Kumpulan Wang COVID-19 spending, "
+                     + DEVEX_NET_BNM_BASIS + ", FY2009-2025. Two publications -- never splice "
+                     "them into one series. FY2025 has no audited PKKP volume yet: its "
+                     "PKKP columns are NULL and *_mof_rm carry MOF's official_actual figures "
+                     "(Tinjauan Fiskal 2027). covid_fund_rm: Kumpulan Wang COVID-19 spending, "
                      "PKKP Lampiran 3 as printed (FY2020-2022; outside opex and devex). "
                      "overall_balance_rm: revenue - opex_net - devex_net_bnm - COVID-19 "
                      "fund, MOF's definition, matching MOF's published overall balance; PKKP "
@@ -295,6 +322,13 @@ _COMPONENT_SERIES = {
     "devex_net": ("curated.fact_fiscal_headline", None, "devex_net_rm", DEVEX_NET_MOF_BASIS),
     "devex_net_bnm": ("curated.fact_fiscal_headline", None, "devex_net_bnm_rm", DEVEX_NET_BNM_BASIS),
     "devex_gross": ("curated.fact_fiscal_headline", None, "devex_gross_rm", None),
+    "revenue_mof": ("curated.fact_fiscal_headline", None, "revenue_mof_rm",
+                    "MOF Tinjauan Fiskal, official_actual, satu edisi setiap tahun (2015-2025)"),
+    "opex_mof": ("curated.fact_fiscal_headline", None, "opex_mof_rm",
+                 "MOF Tinjauan Fiskal, official_actual, satu edisi setiap tahun (2015-2025)"),
+    "overall_balance_mof": ("curated.fact_fiscal_headline", None, "overall_balance_mof_rm",
+                            "MOF Tinjauan Fiskal, official_actual, satu edisi setiap tahun "
+                            "(2015-2025) -- baki keseluruhan seperti dicetak MOF"),
     "covid_fund": ("curated.fact_fiscal_headline", None, "covid_fund_rm",
                    "PKKP Lampiran 3, Penyata Perbelanjaan Kumpulan Wang COVID-19 (FY2020-2024; "
                    "tiada dana sebelum 2020)"),

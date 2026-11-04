@@ -389,6 +389,7 @@ MOF_LINES = {"revenue_mof_rm": "revenue",
              "opex_mof_rm": "operating_expenditure",
              "devex_gross_mof_rm": "development_expenditure_gross",
              "devex_loan_recovery_mof_rm": "development_expenditure_loan_recovery",
+             "covid_fund_mof_rm": "covid19_fund",
              "overall_balance_mof_rm": "overall_balance"}
 
 
