@@ -44,9 +44,9 @@ and validation. Sources are never merged — comparison happens only in `curated
 
 Plus the **curated layer** (1,491 rows): `fact_planning_efficiency` (tabled budget vs audited
 actual 2010–2024), `fact_budget_vs_actual`, `fact_obligations` (debt, PFI, commitments,
-guarantees, arrears and contingent liabilities unified across three publishers),
-`forecast/` (2025–26 projections with bands — **model output, never actuals**), and the
-published `dashboard/`.
+guarantees, arrears and contingent liabilities unified across three publishers) and the
+MOF breakdowns. Model projections live outside the warehouse in `apps/models/` (**model
+output, never actuals**); the public site is `site/`.
 
 **Totals: 319,522 rows · 30,251 validation checks · 47 catalogued source anomalies** (the
 publishers' own misprints, kept exactly as printed with arithmetic proof). Every source is

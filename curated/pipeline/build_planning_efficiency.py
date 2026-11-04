@@ -14,7 +14,7 @@ way). So the audited PKKP series doubles as the tabled-vs-actual series.
 Columns: year, side (oe|de|total), budget_rm, actual_rm, variance_rm, utilisation_pct,
 basis, book_evidence (which tabled book confirms the original, where ingested).
 2025/2026 rows carry the tabled budgets with actual=NULL (unaudited) — the signature
-nowcast for expected outturn lives in curated/forecast/, not here.
+nowcast for expected outturn lives in apps/models/ (a model, not warehouse data).
 """
 import csv
 import os

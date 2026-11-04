@@ -154,7 +154,7 @@ do not treat its JUMLAH as the population total.
    CMD.14.2025 Bahagian I/III for FY2024) to extend the audited-restatement series.
 
 Then the standard discipline: reconcile to the report's own printed totals +
-independent adversarial verifier pass before any curated/dashboard exposure.
+independent adversarial verifier pass before any curated or site exposure.
 
 ## Historical backfill (`data/lkan_reports_backfill.csv`, 2026-07-31)
 

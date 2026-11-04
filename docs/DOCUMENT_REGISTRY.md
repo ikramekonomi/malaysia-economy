@@ -68,14 +68,20 @@ Rules:
 
 ## 3. Seed: what the first rows say
 
-45 series across all 8 themes (`docs/registry/series_seed.csv`).
+60 series across all 8 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
+theme, is `docs/SOURCES.md`. Each row also says how it is reached (`access`: `api`, `bulk_file`,
+`pdf`, `web_table`, `paid`, `none`).
 
 | Status | Series |
 |---|---|
 | verified / extracted | 16: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities |
 | held, not extracted | 1: LKAN state volumes (findings) |
-| expected | 26 |
+| located | 7: state budget estimates, speeches, enacted budgets and year-end reports; DUN hansards and questions; MyOBI |
+| expected | 33 |
 | restricted | 2: SSM company register, PADU/eKasih |
+| not_published | 1: state Supply Bills (no state published one for 2026, per MyOBI 2026) |
+
+State document statuses cite IDEAS' MyOBI 2026 as their evidence.
 
 **The P1 gaps** (priority 1 and not yet held):
 
@@ -83,7 +89,7 @@ Rules:
 |---|---|---|
 | Development estimates (project-level budget) | 5 | the missing half of budget-vs-actual per project (Track 0) |
 | Population by state / district | 1 | every per-capita comparison depends on it |
-| State budgets (13 states) | 5 | state budget vs state actual; federal vs state |
+| State budget estimates (*Buku Belanjawan*) | 5 | state budget vs state actual; 7 of 13 states publish (MyOBI 2026) |
 | Federal development allocation by state | 5 | the most direct source for placing money (Track A); existence to confirm |
 | Procurement awards | 7 | project → contractor (Track B) |
 | Salaries and wages survey | 2 | median wage by state |

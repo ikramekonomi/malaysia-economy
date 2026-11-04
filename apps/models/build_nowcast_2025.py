@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """FY2025 expected-actual nowcast: Budget 2025 as tabled x utilisation signatures.
 
-Run:  python3 curated/forecast/build_nowcast_2025.py
+Run:  python3 apps/models/build_nowcast_2025.py
 Reads : sources/anggaran/data/2025/fact_anggaran_maksud_2025.csv   (verified budget)
         sources/anggaran/data/2025/_crosswalk_pkkp_2025.csv         (code crosswalk)
-        curated/forecast/fact_utilisation_signatures.csv            (actual/budget history)
-Writes: curated/forecast/fact_nowcast_2025.csv
+        apps/models/fact_utilisation_signatures.csv            (actual/budget history)
+Writes: apps/models/fact_nowcast_2025.csv
 
 Method (basis=model_projection, never an audited figure): for every operating vote
 (T jumlah + B mengurus), expected FY2025 actual = anggaran_2025 x the vote's own

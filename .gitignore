@@ -6,9 +6,6 @@ __pycache__/
 # Scratch / large archives
 *.zip
 
-# Dashboard build intermediates (index.html is the committed deliverable)
-curated/dashboard/data.json
-curated/dashboard/_shot_*.png
 # Raw source documents (PDFs) — CSVs are canonical
 sources/*/raw/
 

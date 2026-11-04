@@ -35,7 +35,7 @@ through conformed dimensions (year, jurisdiction, entity, economic classificatio
 | Anything about a state, or all states compared | `sources/states/data/_national/fact_state_finance_all.csv` |
 | Denominators (%GDP, per capita, real terms) | `sources/dosm` |
 | Intra-year / monthly / debt-holder detail | `sources/bnm` |
-| 2025–26 figures | `curated/forecast/` — **model output, never actuals** |
+| 2025–27 figures | `sources/mof-fiscal-outlook/` (MOF official: FY2025 actuals, FY2026 revised, FY2027 budget). Our own models: `apps/models/` — **model output, never actuals** |
 
 ## 3. The seven traps
 

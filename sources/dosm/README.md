@@ -3,7 +3,7 @@
 Three layers in one namespace — **110 datasets, 230,104 rows** (CSV records, not file lines):
 
 1. **National denominators** (the original three): annual nominal GDP, population,
-   households. Used by `curated/dashboard/` to express audited PKKP figures per-GDP /
+   households: the denominators for expressing audited PKKP figures per-GDP /
    per-capita / per-household.
 2. **Expansion (2026-07-31)**: the machine-readable **Government Finance Statistics**
    published on data.gov.my (federal: compiled by JANM, the Accountant General's
@@ -383,9 +383,8 @@ The warehouse pins a retrieval vintage on purpose — an upstream revision chang
   `api.data.gov.my/opendosm?id=…&meta=true`) and the storage ETag against the recorded
   baseline in `data/_vintage.json`; exits non-zero if a new vintage exists.
 - `python3 sources/dosm/pipeline/refresh.py --apply` — pulls the new vintage with a
-  row-level diff report, updates `_vintage.json`, rebuilds the derived denominators and
-  re-runs the API cross-check. Then update the vintage table above, rebuild the
-  dashboard, and commit the refresh as its own change.
+  row-level diff report, updates `_vintage.json` and re-runs the API cross-check. Then
+  update the vintage table above and commit the refresh as its own change.
 - `python3 sources/dosm/pipeline/verify_against_api.py` — independent value-level
   cross-check of the original three CSVs against the API (same publication, second door).
 - `python3 sources/dosm/pipeline/verify_expansion.py` — same second-door discipline for
@@ -429,10 +428,9 @@ Per the API, the next scheduled DOSM releases are recorded in `data/_vintage.jso
 
 ## Derived output
 
-`pipeline/build_denominators.py` regenerates `curated/dashboard/external_denominators.csv`
-(unit conversions only: RM mil → RM bil, '000 → mil, count → mil; GDP total = `sector p0`
-equivalent headline `gdp` column, population = `both`/`overall`/`overall` rows). Households
-are absent after 2024 in the source and are left blank, never interpolated.
+None. `pipeline/build_denominators.py` and the `curated/dashboard/external_denominators.csv`
+it wrote were retired on 2026-11-04 with the old dashboard (docs/DATA_MODEL.md §13.2). GDP
+and population reach every consumer from these source CSVs directly.
 
 ## Gap finding: DOSM/data.gov.my state finance vs the AUDITED state accounts
 

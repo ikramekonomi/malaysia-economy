@@ -50,7 +50,7 @@ Rules between layers:
 | 2 | Jobs & wages | unemployment, labour participation, median wage, productivity | DUN (LFS) | ◑ LFS held; wages survey not held |
 | 3 | Prices & cost of living | CPI by state, item prices, fuel prices | state | ◑ CPI held; item prices not held |
 | 4 | Output & industry | GDP, state GDP, IPI, trade, investment | state | ● mostly held |
-| 5 | Public finance & money trail | revenue, spending, budget vs actual, project spending, state finances | project / state | ● deepest; project place not yet resolved |
+| 5 | Public money & money trail | revenue, spending, budget vs actual, project spending, state finances | project / state | ● deepest; project place not yet resolved |
 | 6 | Health, education & services | doctors per 1,000, school outcomes, access to amenities | district | ○ amenities only |
 | 7 | Accountability | audit findings, opinions, PAC actions, procurement | entity | ◑ LKAN 2024–26 extracted |
 | 8 | Money, credit & financial wellbeing | OPR, lending by purpose, household debt, insolvency | national | ◑ BNM held; household debt and insolvency not held |
@@ -430,8 +430,8 @@ as `_unallocated` with its total, so a map never looks more complete than the da
 | `curated/fact_obligations` | `fact_observation` (stocks) + `fact_record` (guarantees) | |
 | `curated/fact_fiscal_headline` (wide) | becomes `v_fiscal_headline`, a view, so the site keeps working | |
 | `curated/dim_maksud_canonical` | absorbed into `dim_entity` + `bridge_entity_code` (its proofs move with it) | |
-| `curated/forecast/` | moves to `apps/models/`, outside the warehouse (§13.1) | |
-| `curated/dashboard/` | retired after a feature-by-feature decision (§13.2) | |
+| `curated/forecast/` | **done 2026-11-04:** moved to `apps/models/`, outside the warehouse (§13.1) | |
+| `curated/dashboard/` | **done 2026-11-04:** retired; features to port are listed in §13.2 | |
 
 ### 13.1 `curated/forecast/` → `apps/models/`
 
@@ -471,7 +471,15 @@ Other dependencies:
 | `sources/dosm/pipeline/refresh.py` | drop the dashboard rebuild step |
 | `sources/dosm/README.md` | references updated |
 
-Git history keeps both folders in full.
+Git history keeps both folders in full. The last commit with the old dashboard is
+`67372332eb8b28c37f7313db09eb96ebcb9c2932` (`curated/dashboard/template.html`, the pension
+simulator's source). Porting starts from there.
+
+**Done 2026-11-04:** `curated/dashboard/` and `sources/dosm/pipeline/build_denominators.py`
+removed; `refresh.py` no longer rebuilds them. The BNM validator's one INFO comparison against
+our own nowcast was removed with the model (a source check must not depend on an app), which
+takes `sources/bnm/data/_validation_bnm.csv` from 280 to 279 checks (0 FAIL either way). The moved model scripts
+re-run from `apps/models/` and reproduce their CSVs byte for byte.
 
 ---
 

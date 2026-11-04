@@ -107,8 +107,9 @@ disagreement is a finding, not something to resolve by overwriting.
 
 ## Validation (`pipeline/validate_bnm.py` → `data/_validation_bnm.csv`)
 
-**280 checks: 0 FAIL.** The original fiscal suite is unchanged and unbroken —
-**197/197** (192 PASS + 5 INFO); the expansion adds 83 checks (V4–V7) covering the
+**279 checks: 0 FAIL.** The original fiscal suite is unbroken —
+**196/196** (192 PASS + 4 INFO; the fifth INFO, a comparison with our own model nowcast,
+moved out with the model to `apps/models/` on 2026-11-04); the expansion adds 83 checks (V4–V7) covering the
 wider tables, of which 34 are PASS and 49 record a **SOURCE_DIVERGENCE**.
 
 `SOURCE_DIVERGENCE` ≠ FAIL. The CSVs are the API verbatim, so an identity that does
@@ -117,7 +118,7 @@ corrected (golden rule 2). `FAIL` stays reserved for pipeline defects; there are
 Tolerance is RM2.5 million (BNM prints components rounded to RM1m, so a sum of many
 components legitimately drifts a couple of million).
 
-### V1–V3 — the original fiscal suite (unchanged, 197 checks)
+### V1–V3 — the original fiscal suite (196 checks)
 
 - Internal: quarterly balance = revenue − opex (BNM serves the balance rounded to RM1m).
 - **Triangulation:** BNM annual sums equal audited PKKP revenue / opex / DE to within
@@ -127,8 +128,8 @@ components legitimately drifts a couple of million).
 - **FY2025 measured** (sum of four quarters, all now published) vs the official
   revised estimates: revenue **336.07** vs 334.12; opex **330.78** vs 332.15; gross DE
   **81.92** vs 80.0; overall deficit **−75.29 vs −76.71** (RM bil) — the year landed
-  slightly better than MOF's own revision, and well below the signature-nowcast OE mid
-  (343.6), i.e. FY2025 broke the historical overshoot pattern. Audited PKKP 2025 will
+  slightly better than MOF's own revision, and well below our model's nowcast OE mid
+  (343.6, `apps/models/fact_nowcast_2025.csv`), i.e. FY2025 broke the historical overshoot pattern. Audited PKKP 2025 will
   adjudicate finally.
 
 ### V4 — component-vs-total identities inside each table (33 checks)

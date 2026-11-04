@@ -195,7 +195,6 @@ V3_fy2025_measured,revenue RM bil: BNM measured vs MOF revised,334.115,336.069,I
 V3_fy2025_measured,opex RM bil: BNM measured vs MOF revised,332.15,330.776,INFO
 V3_fy2025_measured,gross DE RM bil: BNM measured vs MOF revised,80.0,81.921,INFO
 V3_fy2025_measured,overall deficit RM bil: BNM measured vs MOF revised,-76.714,-75.288,INFO
-V3_fy2025_measured,opex RM bil: BNM measured vs signature-nowcast mid,343.596,330.776,INFO
 V4_3.1.1_direct_tax_subtotal,all rows (151 checked),151,151,PASS
 V4_3.1.1_indirect_tax_subtotal,all rows (151 checked),151,151,PASS
 V4_3.1.1_nontax_subtotal,all rows (151 checked),151,151,PASS

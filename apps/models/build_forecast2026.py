@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 """Detail projection layer: every dashboard series estimated to FY2025-FY2026.
 
-Run:  python3 curated/forecast/build_forecast2026.py
+Run:  python3 apps/models/build_forecast2026.py
 Reads : sources/pkkp/pkkp.duckdb                       (audited history)
         sources/mof-fiscal-outlook/data/fiscal_outlook_headline.csv   (official anchors)
         sources/anggaran/data/2025/fact_anggaran_maksud_2025.csv      (Budget 2025 as tabled)
-        curated/forecast/fact_utilisation_signatures.csv              (actual/budget quantiles)
-        curated/forecast/fact_nowcast_2025.csv                        (per-vote 2025 nowcast)
-        curated/forecast/fact_projection_headline.csv                 (v1 trend bands)
-Writes: curated/forecast/fact_projection_detail.csv    (year x group x series, lo/mid/hi)
-        curated/forecast/fact_gap_projection.csv       (per-vote budget vs expected actual)
-        curated/forecast/_validation_projection_2026.csv
+        apps/models/fact_utilisation_signatures.csv              (actual/budget quantiles)
+        apps/models/fact_nowcast_2025.csv                        (per-vote 2025 nowcast)
+        apps/models/fact_projection_headline.csv                 (v1 trend bands)
+Writes: apps/models/fact_projection_detail.csv    (year x group x series, lo/mid/hi)
+        apps/models/fact_gap_projection.csv       (per-vote budget vs expected actual)
+        apps/models/_validation_projection_2026.csv
 
 MODEL DESIGN (hybrid, hierarchical; alternatives considered are in _METHOD.md #4):
   Anchor-and-share with identity constraints. Aggregates are pinned to the best
