@@ -52,6 +52,13 @@ const COMPONENT_GROUPS: { group: string; options: { key: string; label: string }
       { key: "devex_sector_general_admin", label: "Pentadbiran Am" },
     ],
   },
+  {
+    group: "Lain-lain & Baki",
+    options: [
+      { key: "covid_fund", label: "Kumpulan Wang COVID-19" },
+      { key: "overall_balance", label: "Baki Keseluruhan (definisi MOF)" },
+    ],
+  },
 ];
 
 const LABEL_BY_KEY = Object.fromEntries(
@@ -80,6 +87,14 @@ const SPARSE_NOTES: Record<string, string> = {
     "\"Jumlah DEVEX (bersih) — BNM\". Kedua-dua penerbit berbeza tidak lebih RM0.33 juta " +
     "bagi tahun yang ada pada kedua-duanya, tetapi ia dua penerbitan berasingan dan tidak " +
     "dicantumkan dalam satu garis.",
+  covid_fund:
+    "Dana ini ditubuhkan pada 2020 dan berbelanja pada 2020-2022 sahaja; tiada titik " +
+    "sebelum 2020 kerana dana belum wujud (bukan sifar). Perbelanjaan ini di luar " +
+    "perbelanjaan mengurus dan pembangunan.",
+  overall_balance:
+    "Hasil tolak perbelanjaan mengurus bersih, perbelanjaan pembangunan bersih (BNM) dan " +
+    "Kumpulan Wang COVID-19 — definisi MOF, sepadan dengan baki keseluruhan terbitan MOF. " +
+    "Nilai negatif ialah defisit.",
   devex_net_bnm:
     "Siri lengkap daripada Bank Negara Malaysia (Buletin Statistik Bulanan, Jadual 3.1). " +
     "Penerbit berbeza daripada angka kasar PKKP teraudit; untuk angka rasmi MOF, pilih " +

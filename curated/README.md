@@ -133,6 +133,23 @@ and 1 known gap — see below), with every known defect justified one by one in
   Fiskal editions carrying them are not ingested here yet — an open ingestion gap
   (`docs/SOURCES.md`), stated rather than papered over.
 
+  **Revenue, the COVID-19 fund and the overall balance.** `revenue_rm` is total federal
+  revenue as printed. `covid_fund_rm` is spending through the *Kumpulan Wang COVID-19*,
+  which in FY2020–2022 (RM38.0b, RM37.7b, RM31.0b) sat **outside both opex and devex** —
+  read to the sen from each volume's Lampiran 3 and checked against the Penyata Prestasi
+  Kewangan. `covid_fund_status` says which: `printed`, `printed_nil` (FY2023–2024), or
+  `not_established` (FY2009–2019, NULL — the fund did not exist, which is not the same as
+  zero spending).
+
+  `overall_balance_rm` = revenue − `opex_net_rm` − `devex_net_bnm_rm` − COVID-19 fund. This
+  is **MOF's definition**, and it agrees with MOF's own published overall balance in all
+  four years MOF prints one (FY2017–2019, FY2024; worst case RM0.49 juta). PKKP's 15-year
+  panel prints a *different* overall balance: it nets off all of the Development Fund's
+  "Lain-lain" receipts, not only loan recovery, so it can sit RM0.1–1.9b away (FY2024:
+  PKKP −77,315, MOF −79,166 juta; the gap is exactly the non-loan receipts). That
+  difference is reported in the validation file as `DEFINITIONAL`, never as a divergence.
+  Don't compare the two as if they were the same concept.
+
 ### One finding, and one mess that is partly ours
 
 - **FINDING — FY2023 development expenditure, BNM vs PKKP: RM1,247,043 apart.** BNM MSB
@@ -179,6 +196,7 @@ purpose so an approximate agreement can never be mistaken for an exact one:
 | `known_defect` | `KNOWN_OURS_PROVEN`, `KNOWN_OURS_SUSPECTED`, `KNOWN_UNPROVEN`, `KNOWN_SOURCE_DOCUMENTED` | an individually-justified exception from `_known_extraction_defects_curated.csv`. **Not a blanket tolerance:** any leaf-vs-JUMLAH mismatch *not* in that register fails the build. |
 | `extraction_gap` | `UNCAPTURED` | a row summing leaf cells that have no captured amount; the row is understated by an unknown amount and carries `data_quality='suspect'`. |
 | `known_gap` | `KNOWN_GAP` | a gap we record and do not close. |
+| `definitional` | `DEFINITIONAL` | two publications printing *differently defined* versions of one concept (MOF vs PKKP overall balance). The diff is information, not error. |
 
 A note on the bands. Until this revision `opex_net_rm` was *derived* by subtracting a
 figure taken from PKKP's 15-year fiscal panel, which publishes in RM juta — so every year

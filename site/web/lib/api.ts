@@ -9,6 +9,7 @@ export type Citation = {
 
 export type HeadlineRow = {
   year: number;
+  revenue_rm: number | null;
   opex_gross_rm: number;
   opex_net_rm: number | null;
   devex_gross_rm: number;
@@ -18,6 +19,12 @@ export type HeadlineRow = {
   /** BNM MSB 3.1, complete FY2009-2024. A different publication: never splice with the MOF column. */
   devex_net_bnm_rm: number | null;
   devex_net_bnm_basis: string | null;
+  /** Kumpulan Wang COVID-19 spending -- outside opex and devex. Null before the fund existed. */
+  covid_fund_rm: number | null;
+  covid_fund_status: "printed" | "printed_nil" | "not_established";
+  /** revenue - opex_net - devex_net_bnm - COVID-19 fund (MOF's definition). */
+  overall_balance_rm: number | null;
+  overall_balance_basis: string | null;
   note: string | null;
 };
 

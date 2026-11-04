@@ -36,9 +36,10 @@ def national_fiscal_headline(year_from=None, year_to=None):
     """Opex/devex, gross and net, per year. The default headline series."""
     yf, yt = _clamp_years(year_from, year_to)
     con = get_connection()
-    cols = ["year", "opex_gross_rm", "opex_net_rm", "devex_gross_rm",
+    cols = ["year", "revenue_rm", "opex_gross_rm", "opex_net_rm", "devex_gross_rm",
             "devex_net_rm", "devex_net_basis", "devex_net_bnm_rm", "devex_net_bnm_basis",
-            "note"]
+            "covid_fund_rm", "covid_fund_status", "overall_balance_rm",
+            "overall_balance_basis", "note"]
     rows = con.execute(
         f"SELECT {', '.join(cols)} FROM curated.fact_fiscal_headline "
         "WHERE year BETWEEN ? AND ? ORDER BY year",
@@ -53,7 +54,11 @@ def national_fiscal_headline(year_from=None, year_to=None):
                      "Fund). devex_net_rm: " + DEVEX_NET_MOF_BASIS + ", FY2017-2019 and FY2024 "
                      "only (other editions not yet ingested). devex_net_bnm_rm: "
                      + DEVEX_NET_BNM_BASIS + ", FY2009-2024. Two publications -- never splice "
-                     "them into one series.",
+                     "them into one series. covid_fund_rm: Kumpulan Wang COVID-19 spending, "
+                     "PKKP Lampiran 3 as printed (FY2020-2022; outside opex and devex). "
+                     "overall_balance_rm: revenue - opex_net - devex_net_bnm - COVID-19 "
+                     "fund, MOF's definition, matching MOF's published overall balance; PKKP "
+                     "prints a differently defined one (nets all Development Fund receipts).",
         }],
     }
 
@@ -274,6 +279,12 @@ _COMPONENT_SERIES = {
     "devex_net": ("curated.fact_fiscal_headline", None, "devex_net_rm", DEVEX_NET_MOF_BASIS),
     "devex_net_bnm": ("curated.fact_fiscal_headline", None, "devex_net_bnm_rm", DEVEX_NET_BNM_BASIS),
     "devex_gross": ("curated.fact_fiscal_headline", None, "devex_gross_rm", None),
+    "covid_fund": ("curated.fact_fiscal_headline", None, "covid_fund_rm",
+                   "PKKP Lampiran 3, Penyata Perbelanjaan Kumpulan Wang COVID-19 (FY2020-2024; "
+                   "tiada dana sebelum 2020)"),
+    "overall_balance": ("curated.fact_fiscal_headline", None, "overall_balance_rm",
+                        "definisi MOF: hasil - perbelanjaan mengurus bersih - perbelanjaan "
+                        "pembangunan bersih (BNM) - Kumpulan Wang COVID-19"),
     "income_tax": ("pkkp.fact_revenue", "level = 3 AND item_bm = 'Cukai Pendapatan'", "sebenar_rm", None),
 }
 for _key in ["emoluments", "retirement_charges", "debt_service", "supplies_services",
