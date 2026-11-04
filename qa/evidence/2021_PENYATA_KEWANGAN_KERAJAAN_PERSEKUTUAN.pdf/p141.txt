@@ -1,0 +1,86 @@
+# 2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf  sha256 8fe75e5b7d7e1c839bd3f426a97d941ca76e732501dc17d5baaceb773e96763f  pdf_page 141 of 456  (pdftotext -layout)
+
+                                                                                        PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2021 | 129
+
+
+
+
+Penyata Perbelanjaan Mengurus
+bagi tahun berakhir 31 Disember 2021
+                                                                                                                                                         (sambungan)
+
+                                                                                 Anggaran                                      Sebenar                  Varian
+                     Maksud Perbelanjaan
+                                                                         Tambahan/       Viremen                                                    Kurang/(Lebih)
+                                                             Asal                                          Jumlah         Amaun          Prestasi
+                                                                         (Kurangan)   Tambah/(Kurang)                                                  Belanja
+
+                                                             RM             RM               RM             RM              RM              %            RM
+
+         PERBELANJAAN BEKALAN – (SAMB.)
+
+   B.24 KEMENTERIAN PERDAGANGAN
+        ANTARABANGSA DAN INDUSTRI – (SAMB.)
+
+ 020000 PEMBANGUNAN INDUSTRI DAN DAYA SAING – (SAMB.)
+
+         Emolumen                                           24,872,600           –            (878,821)    23,993,779    23,326,292.82     97.22         667,486.18
+         Perkhidmatan dan Bekalan                           13,539,900           –          (3,744,903)     9,794,997     7,445,626.47     76.01       2,349,370.53
+         Aset                                                     –              –             141,000        141,000        29,160.54     20.68         111,839.46
+         Pemberian dan Kenaan Bayaran Tetap                 42,565,000           –           5,551,876     48,116,876    48,110,888.16     99.99           5,987.84
+         Jumlah 020000                                      80,977,500           –          1,069,152      82,046,652    78,911,967.99     96.18       3,134,684.01
+ 030000 PENGUKUHAN PERDAGANGAN ANTARABANGSA
+ 030100 Hubungan Serantau dan Antarabangsa
+  10000 Emolumen                                             1,557,200           –            340,500       1,897,700     1,805,110.69     95.12          92,589.31
+  20000 Perkhidmatan dan Bekalan                               321,200           –            620,461         941,661       891,170.12     94.64          50,490.88
+  40000 Pemberian dan Kenaan Bayaran Tetap                     600,000           –            (58,200)        541,800       423,133.33     78.10         118,666.67
+  50000 Perbelanjaan-perbelanjaan Lain                            –              –                865             865           864.74     99.97               0.26
+         Jumlah 030100                                       2,478,400           –            903,626       3,382,026     3,120,278.88     92.26         261,747.12
+ 030200 Hubungan Perdagangan dan Ekonomi Dua Hala
+  10000 Emolumen                                             7,241,300           –            (922,347)     6,318,953     5,485,399.57     86.81         833,553.43
+  20000 Perkhidmatan dan Bekalan                             3,516,900           –          (1,029,279)     2,487,621     1,834,152.21     73.73         653,468.79
+  40000 Pemberian dan Kenaan Bayaran Tetap                     640,900           –             (80,628)       560,272       532,271.56     95.00          28,000.44
+  50000 Perbelanjaan-perbelanjaan Lain                            –              –              69,990         69,990        54,064.37     77.25          15,925.63
+         Jumlah 030200                                      11,399,100           –          (1,962,264)     9,436,836     7,905,887.71     83.78       1,530,948.29
+ 030300 Integrasi Kerjasama Ekonomi ASEAN
+  10000 Emolumen                                             4,912,700           –           (174,274)      4,738,426     4,485,922.67     94.67         252,503.33
+  20000 Perkhidmatan dan Bekalan                             3,256,000           –           (306,050)      2,949,950     2,745,581.85     93.07         204,368.15
+  40000 Pemberian dan Kenaan Bayaran Tetap                     876,500           –             11,000         887,500       540,102.89     60.86         347,397.11
+  50000 Perbelanjaan-perbelanjaan Lain                            –              –             18,173          18,173        15,566.53     85.66           2,606.47
+         Jumlah 030300                                       9,045,200           –           (451,151)      8,594,049     7,787,173.94     90.61         806,875.06
+ 030400 Dasar dan Rundingan Pelbagai Hala
+  10000 Emolumen                                             8,133,800           –             309,922      8,443,722     7,221,476.22     85.52       1,222,245.78
+  20000 Perkhidmatan dan Bekalan                             4,521,200           –             836,222      5,357,422     3,937,727.35     73.50       1,419,694.65
+  40000 Pemberian dan Kenaan Bayaran Tetap                  12,000,000           –          (1,541,312)    10,458,688    10,458,687.57     99.99               0.43
+  50000 Perbelanjaan-perbelanjaan Lain                            –              –              25,122         25,122        23,408.26     93.18           1,713.74
+         Jumlah 030400                                      24,655,000           –           (370,046)     24,284,954    21,641,299.40      89.11      2,643,654.60
+ 030500 Rundingan Strategik
+  10000 Emolumen                                             1,568,800           –             (10,600)     1,558,200     1,382,285.30     88.71         175,914.70
+  20000 Perkhidmatan dan Bekalan                               147,600           –             (91,000)        56,600        22,016.49     38.90          34,583.51
+         Jumlah 030500                                       1,716,400           –           (101,600)      1,614,800     1,404,301.79     86.96         210,498.21
+ 030600 Sekretariat Perdagangan Strategik (STS)
+  10000 Emolumen                                             1,784,900           –            (60,625)      1,724,275     1,713,277.85     99.36          10,997.15
+  20000 Perkhidmatan dan Bekalan                               249,200           –           (181,487)         67,713        63,954.20     94.45           3,758.80
+         Jumlah 030600                                       2,034,100           –           (242,112)      1,791,988     1,777,232.05     99.18          14,755.95
+ 030700 Perbadanan Pembangunan Perdagangan Luar Malaysia
+        (MATRADE)
+  40000 Pemberian dan Kenaan Bayaran Tetap                 120,000,000           –          7,580,000     127,580,000   127,580,000.00    100.00                 –
+         Jumlah 030700                                     120,000,000           –          7,580,000     127,580,000   127,580,000.00    100.00                 –
+         Emolumen                                           25,198,700           –           (517,424)     24,681,276    22,093,472.30     89.52       2,587,803.70
+         Perkhidmatan dan Bekalan                           12,012,100           –           (151,133)     11,860,967     9,494,602.22     80.05       2,366,364.78
+         Pemberian dan Kenaan Bayaran Tetap                134,117,400           –          5,910,860     140,028,260   139,534,195.35     99.65         494,064.65
+         Perbelanjaan-perbelanjaan Lain                           –              –            114,150         114,150        93,903.90     82.26          20,246.10
+         Jumlah 030000                                     171,328,200           –          5,356,453     176,684,653   171,216,173.77     96.90       5,468,479.23
+ 040000 PENGUKUHAN PELABURAN BERKUALITI
+ 040100 Dasar Pelaburan dan Fasilitasi Perdagangan
+  10000 Emolumen                                             1,981,000           –            374,700       2,355,700     2,343,129.74     99.47          12,570.26
+  20000 Perkhidmatan dan Bekalan                                77,800           –            590,614         668,414       643,447.74     96.26          24,966.26
+         Jumlah 040100                                       2,058,800           –            965,314       3,024,114     2,986,577.48     98.76          37,536.52
+
+                                                                                                                                                         (disambung...)
+
+
+
+
+                                                                                                     LAMPIRAN 1 - PERBELANJAAN MENGURUS
+
