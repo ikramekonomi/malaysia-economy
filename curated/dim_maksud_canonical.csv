@@ -23,11 +23,11 @@ B.25,Bekalan,B.25,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,2009,2
 B.26,Bekalan,B.26,Kementerian Pembangunan Usahawan dan Koperasi,2009,2024,8,False,
 B.27,Bekalan,B.27,Kementerian Kerja Raya,2009,2024,16,False,
 B.28,Bekalan,B.28,Kementerian Pengangkutan,2009,2024,16,False,
-B.29,Bekalan,B.29,"Kementerian Tenaga, Teknologi Hijau dan Air",2009,2018,10,False,
+B.29,Bekalan,B.29,"Kementerian Tenaga, Teknologi Hijau dan Air",2009,2018,10,False,"Kementerian Tenaga, Teknologi Hijau dan Air (2009-2018). Thematically close to B.33 Kementerian Alam Sekitar dan Air (2020-2024) and the gap looks like a renumbering -- but NOT merged, and here the evidence is positive rather than merely absent: on the development side P.29 and P.33 both appear in FY2020 and FY2021, so the two votes demonstrably coexist and cannot be one lineage."
 B.30,Bekalan,B.30,"Kementerian Sains, Teknologi dan Inovasi",2009,2024,16,False,
 B.31,Bekalan,B.31,"Kementerian Pelancongan, Seni dan Budaya",2009,2024,16,False,
 B.32,Bekalan,B.32,Kementerian Wilayah Persekutuan,2009,2022,14,False,
-B.33,Bekalan,B.33,Kementerian Peralihan Tenaga dan Transformasi Air,2020,2024,4,False,
+B.33,Bekalan,B.33,Kementerian Peralihan Tenaga dan Transformasi Air,2020,2024,4,False,Kementerian Alam Sekitar dan Air (2020+). See B.29 -- not merged.
 B.40,Bekalan,B.40,Suruhanjaya Perkhidmatan Pendidikan,2009,2024,16,False,
 B.41,Bekalan,B.63,Kementerian Pendidikan,2009,2014,6,True,"merged into B.63 lineage (same ministry, renumbered)"
 B.42,Bekalan,B.42,Kementerian Kesihatan,2009,2024,16,False,
@@ -58,11 +58,11 @@ P.25,Pembangunan,P.25,Kementerian Perdagangan Dalam Negeri Dan Kos Sara Hidup,20
 P.26,Pembangunan,P.26,Kementerian Pembangunan Usahawan Dan Koperasi,2009,2024,8,False,
 P.27,Pembangunan,P.27,Kementerian Kerja Raya,2009,2024,16,False,
 P.28,Pembangunan,P.28,Kementerian Pengangkutan,2009,2024,16,False,
-P.29,Pembangunan,P.29,"Kementerian Tenaga, Teknologi Hijau Dan Air",2009,2021,13,False,
+P.29,Pembangunan,P.29,"Kementerian Tenaga, Teknologi Hijau Dan Air",2009,2021,13,False,"See B.29 -- P.29 and P.33 coexist in FY2020-2021, which is what disproves the merge."
 P.30,Pembangunan,P.30,"Kementerian Sains, Teknologi Dan Inovasi",2009,2024,16,False,
 P.31,Pembangunan,P.31,"Kementerian Pelancongan, Seni Dan Budaya",2009,2024,16,False,
 P.32,Pembangunan,P.32,Kementerian Wilayah Persekutuan,2009,2024,16,False,
-P.33,Pembangunan,P.33,Kementerian Peralihan Tenaga Dan Tranformasi Air,2020,2024,5,False,
+P.33,Pembangunan,P.33,Kementerian Peralihan Tenaga Dan Tranformasi Air,2020,2024,5,False,See B.29 -- development-vote counterpart.
 P.41,Pembangunan,P.63,Kementerian Pendidikan,2009,2014,6,True,"merged into P.63 lineage (same ministry, renumbered)"
 P.42,Pembangunan,P.42,Kementerian Kesihatan,2009,2024,16,False,
 P.43,Pembangunan,P.43,Kementerian Perumahan Dan Kerajaan Tempatan,2009,2024,16,False,
