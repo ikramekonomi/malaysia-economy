@@ -1,0 +1,66 @@
+# CMD.39.2016.pdf  sha256 326af6454633a0c774c12f084f93af73b72107d16d5906d11b07c3f98bbcc5b6  pdf_page 47 of 114  (pdftotext -layout)
+
+Bil.   Kod Deposit                              Perihal
+15.                  Pejabat Kewangan Dan Perbendaharaan Negeri
+                     (Bekalan Air) JBA Kuantan
+16.                  Pejabat Kewangan Dan Perbendaharaan Negeri
+                     (Bekalan Air) JBA Pekan
+         79552       Deposit Tanah
+17.                  Pejabat Daerah Dan Tanah Cameron Highlands
+18.                  Pejabat Daerah Dan Tanah Temerloh
+19.                  Pejabat Daerah Dan Tanah Bera
+20.                  Pejabat Kewangan Dan Perbendaharaan Negeri
+                     (Bekalan Air)
+         79553       Akaun Deposit Pajak Gadai
+21.                  Jabatan Perhutanan Negeri
+         79554       Akaun Deposit Cukai Hiburan
+22.                  Pejabat Daerah Dan Tanah Raub
+23.                  Pejabat Daerah Dan TanahTemerloh
+         79555       Bon Jaminan Mahkamah Syariah
+24.                  Mahkamah Rendah Syariah Cameron Highlands
+25.                  Mahkamah Rendah Syariah Kuantan
+         79559       Akaun Deposit Lesen Jermal
+26.                  Pejabat Perikanan Daerah Jerantut
+27.                  Pejabat Perikanan Daerah Lipis
+28.                  Pejabat Perikanan Daerah Rompin
+29.                  Pejabat Perikanan Daerah Maran
+30.                  Pejabat Perikanan Daerah Bera
+         79563       Akaun Deposit Royalti Kayu Kayan
+31.                  Jabatan Perhutanan Negeri
+         79564       Akaun Deposit Sewa Rumah Kos Rendah
+32.                  Pejabat Menteri Besar (UTC)
+33.                  Pejabat Daerah Dan Tanah Kuantan
+34.                  Pejabat Daerah Dan Tanah Temerloh
+         79565       Akaun Cagaran Bekalan Air
+35.                  Pejabat Kewangan Dan Perbendaharaan Negeri
+         79566       Akaun Deposit Rancangan Tanah Terpinggir
+36.                  Jabatan Perhutanan Negeri
+         79568       Akaun Deposit Kontraktor (Kerja)
+37.                  Jabatan Kerja Raya Negeri Pahang
+         79569       Akaun Deposit Royalti Kayu Kayan (Lama)
+38.                  Jabatan Perhutanan Negeri
+         79570       Akaun Deposit Bekalan Air (Private Developer)
+39.                  Pejabat Kewangan Dan Perbendaharaan Negeri
+                     (JBA Jerantut)
+40.                  Pejabat Kewangan Dan Perbendaharaan Negeri
+         79574       Akaun Deposit Dan Upah Sukat Dan Batu Sempadan
+41.                  Pejabat Daerah Dan Tanah Cameron Highlands
+42.                  Pejabat Daerah Dan Tanah Temerloh
+43.                  Pejabat Daerah Dan Tanah Bera
+         79576       Akaun Deposit Wang Jaminan Bagi Kesalahan Undang-Undang
+44.                  Jabatan Perhutanan Negeri
+         79577       Akaun Deposit Perjanjian Sewa Rumah Kerajaan
+45.                  Pejabat Menteri Besar Dan Setiausaha Kerajaan
+46.                  Perumahan
+47.                  Jabatan Kerja Raya Daerah Rompin
+48.                  Jabatan Kerja Raya Daerah Bentong
+49.                  Pejabat Daerah Dan Tanah Cameron Highlands
+50.                  Pejabat Daerah Dan Tanah Pekan
+51.                  Pejabat Daerah Dan Tanah Raub
+52.                  Pejabat Daerah Dan Tanah Maran
+53.                  Pejabat Daerah Dan Tanah Temerloh
+
+
+
+                                                                               31
+

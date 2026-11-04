@@ -1,0 +1,66 @@
+# CMD.37.2017.pdf  sha256 b9b9cf6185d8028fd001076b6b4a5c54450a1410bbe0ad723c764b3f5752b9ed  pdf_page 50 of 120  (pdftotext -layout)
+
+                                                                BIL.              TAHUN        JUMLAH
+  BIL.                  JABATAN/PEJABAT                        AKAUN               TIDAK       DEPOSIT
+                                                              DEPOSIT            DITUNTUT        (RM)
+  17.      Jabatan Pengairan dan Saliran Negeri                   2              1999-2014      957,326.25
+  18.      Jabatan Kerja Raya Negeri                              2              1995-2014     4,966,631.31
+  19.      Jabatan Perkhidmatan Veterinar Negeri                  1              2010-2014      130,300.00
+  20.      Mahkamah Rendah Syariah Bentong                        1              2009-2010            2,500.00
+  21.      Mahkamah Rendah Syariah Kuantan                        1              1990-2014        58,400.00
+  22.      Mahkamah Rendah Syariah Temerloh                       1              2001-2003            4,550.00
+                          JUMLAH                                  41                          19,017,706.25
+Sumber: Rekod Pusat Tanggungjawab
+
+
+   4.6.5.4. Arahan Perbendaharaan 159, menghendaki Pegawai Pengawal
+   mengemukakan senarai baki deposit bagi tahun berakhir 31 Disember kepada
+   Jabatan Audit Negara sebelum 31 Mac tahun berikutnya. Sebanyak 23
+   Penyata/Akaun Deposit bagi tahun 2016 yang melibatkan 13 Pusat Tanggungjawab
+   tidak dikemukakan ke Jabatan Audit Negara seperti di Jadual 4.30.
+
+                                 JADUAL 4.30
+            PENYATA/AKAUN DEPOSIT BAGI TAHUN BERAKHIR 31 DISEMBER 2016
+                   TIDAK DIKEMUKAKAN KE JABATAN AUDIT NEGARA
+               KOD
+    BIL.                                                        PERIHAL
+             DEPOSIT
+               79505       Akaun Cagaran Sewa Bangunan
+     1.                    Pejabat Daerah dan Tanah Raub
+               79507       Akaun Deposit Jaminan Perlaksanaan
+
+     2.                    Pejabat Kewangan dan Perbendaharaan Negeri
+                           (Bekalan Air) Jabatan Bekalan Air Jerantut
+
+     3.                    Pejabat Kewangan dan Perbendaharaan Negeri (Bekalan Air)
+
+     4.                    Pejabat Kewangan dan Perbendaharaan Negeri
+                           (Bekalan Air) Jabatan Bekalan Air Kuantan
+
+     5.                    Pejabat Kewangan dan Perbendaharaan Negeri
+                           (Bekalan Air) Jabatan Bekalan Air Pekan
+
+               79552       Deposit Tanah
+
+     6.                    Pejabat Kewangan dan Perbendaharaan Negeri
+                           (Bekalan Air) Jabatan Bekalan Air Cameron Highlands
+
+               79554       Akaun Deposit Cukai Hiburan
+     7.                    Pejabat Daerah dan Tanah Raub
+     8.                    Pejabat Daerah dan Tanah Rompin
+               79555       Bon Jaminan Mahkamah Syariah
+     9.                    Mahkamah Rendah Syariah Cameron Highlands
+    10.                    Mahkamah Rendah Syariah Chenor
+               79559       Akaun Deposit Lesen Jermal
+    11.                    Pejabat Kewangan dan Perbendaharaan Negeri Pejabat Perikanan Daerah Jerantut
+    12.                    Pejabat Kewangan dan Perbendaharaan Negeri Pejabat Perikanan Daerah Lipis
+    13.                    Pejabat Kewangan dan Perbendaharaan Negeri Pejabat Perikanan Daerah Rompin
+    14.                    Pejabat Kewangan dan Perbendaharaan Negeri Pejabat Perikanan Daerah Maran
+               79564       Akaun Deposit Sewa Rumah Kos Rendah
+    15.                    Pejabat Menteri Besar dan Setiausaha Kerajaan (Bahagian Perumahan) (UTC)
+
+
+
+
+LKAN PENYATA KEWANGAN NEGERI PAHANG 2016 | 32
+

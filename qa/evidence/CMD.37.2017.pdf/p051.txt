@@ -1,0 +1,65 @@
+# CMD.37.2017.pdf  sha256 b9b9cf6185d8028fd001076b6b4a5c54450a1410bbe0ad723c764b3f5752b9ed  pdf_page 51 of 120  (pdftotext -layout)
+
+                   KOD
+       BIL.                                                         PERIHAL
+                 DEPOSIT
+       16.                    Pejabat Daerah dan Tanah Kuantan
+                  79565       Akaun Cagaran Bekalan Air
+       17.                    Pejabat Kewangan dan Perbendaharaan Negeri
+                  79570       Akaun Deposit Bekalan Air (Private Developer)
+       18.                    Pejabat Kewangan dan Perbendaharaan Negeri (Jabatan Bekalan Air Jerantut)
+       19.                    Pejabat Kewangan dan Perbendaharaan Negeri
+                  79574       Akaun Deposit Dan Upah Sukat Dan Batu Sempadan
+       20.                    Pejabat Daerah dan Tanah Bera
+                  79577       Akaun Deposit Perjanjian Sewa Rumah Kerajaan
+       21.                    Pejabat Menteri Besar dan Setiausaha Kerajaan (Bahagian Perumahan)
+       22.                    Jabatan Kerja Raya Daerah Cameron Highlands
+                  79599       Akaun Deposit Pelbagai
+    23.                 Pejabat Kewangan dan Perbendaharaan Negeri (Jabatan Bekalan Air Bentong)
+   Sumber: Rekod Pelbagai Jabatan/Pejabat
+
+
+
+4.7.          PENYATA PRESTASI KEWANGAN
+
+    4.7.1.      Pada tahun 2016, sumber dana Kerajaan Negeri berjumlah RM615.07
+    juta terdiri daripada hasil cukai, hasil bukan cukai dan terimaan bukan hasil.
+    Penggunaan dana bagi membiayai perbelanjaan mengurus, perbelanjaan
+    pembangunan dan perbelanjaan bekalan air berjumlah RM810.88 juta. Pada tahun
+    2016, Kerajaan Negeri mengalami kurangan dana berjumlah RM195.81 juta
+    berbanding RM285.70 juta pada tahun 2015. Selain itu, Pinjaman Dalam Negeri,
+    Pelbagai Terimaan serta Perubahan Tunai, Pelaburan dan Amanah juga merupakan
+    sumber kewangan yang digunakan oleh Kerajaan Negeri bagi menampung jumlah
+    perbelanjaan jika berlaku kurangan dana. Butiran Penyata Prestasi Kewangan
+    adalah seperti di Jadual 4.31.
+                                    JADUAL 4.31
+              PENYATA PRESTASI KEWANGAN BAGI TAHUN 2016 BERBANDING 2015
+                                                                2015          2016            PERUBAHAN
+  BIL.                        BUTIRAN
+                                                              (RM Juta)     (RM Juta)     (RM Juta)       (%)
+              Hasil:
+              Hasil Cukai                                        229.95       222.23           -7.72       -3.4
+  1.
+              Hasil Bukan Cukai                                  416.78       265.06         -151.72      -36.4
+              Terimaan Bukan Hasil                               126.60       127.78            1.18        0.9
+                       JUMLAH HASIL                              773.33       615.07         -158.26      -20.5
+              Perbelanjaan:
+              Perbelanjaan Mengurus                              878.21       629.27         -248.94      -28.3
+   2.
+              Perbelanjaan Pembangunan                            86.51        91.66            5.15        6.0
+              Perbelanjaan Bekalan Air                            94.31        89.95           -4.36       -4.6
+                 JUMLAH PERBELANJAAN                           1,059.03       810.88         -248.15      -23.4
+                   LEBIHAN/KURANGAN                             -285.70       -195.81          89.89      -31.5
+              Kurangan Dibiayai Oleh:
+              Pinjaman Dalam Negeri                              191.56        64.24         -127.32      -66.5
+   3.
+              Pelbagai Terimaan                                   27.89        27.02           -0.87       -3.1
+              Perubahan Tunai, Pelaburan dan Amanah               66.25       104.55           38.30       57.8
+                   JUMLAH PEMBIAYAAN                             285.70       195.81          -89.89      -31.5
+ Sumber: Penyata Kewangan Kerajaan Negeri Tahun 2015 hingga 2016
+
+
+
+
+                                     LKAN PENYATA KEWANGAN NEGERI PAHANG 2016 | 33
+

@@ -1,0 +1,64 @@
+# CMD.38.2018.pdf  sha256 7e954ba960b02fae5fee2f10b3f1943c8c5244f988c9551a01daf548906165b6  pdf_page 52 of 123  (pdftotext -layout)
+
+   4.8.1. Pinjaman Boleh Dituntut
+
+          4.8.1.1.  Pinjaman Boleh Dituntut adalah merupakan pinjaman yang diberikan oleh
+          Kerajaan Negeri kepada Agensi yang menggunakan sumber Kerajaan Negeri atau
+          Kerajaan Persekutuan. Pada tahun 2017, baki Pinjaman Boleh Dituntut adalah
+          berjumlah RM197.88 juta menurun sejumlah RM52.47 juta atau 21% berbanding
+          RM250.35 juta pada tahun 2016. Penurunan ini disebabkan bayaran balik pokok
+          pinjaman berjumlah RM6.96 juta pada tahun 2017 oleh Agensi Negeri dan
+          selebihnya RM45.51 juta dilaporkan ke dalam Akaun Pinjaman di bawah Pelbagai
+          Kumpulan Wang Amanah Kerajaan. Baki pinjaman boleh dituntut oleh Kerajaan
+          Negeri bagi tempoh lima (5) tahun bermula tahun 2013 hingga 2017 adalah seperti
+          Jadual 4.32.
+
+                                       JADUAL 4.32
+                             BAKI PINJAMAN BOLEH DITUNTUT
+                    OLEH KERAJAAN NEGERI BAGI TAHUN 2013 HINGGA 2017
+                                                     2013         2014          2015          2016          2017
+   BIL.                  AGENSI
+                                                   (RM Juta)    (RM Juta)     (RM Juta)     (RM Juta)     (RM Juta)
+    1.     Perbadanan Kemajuan Negeri Pahang          161.44       150.29        150.29          150.29      128.39
+    2.     Amanah Saham Pahang Berhad                  56.49        55.00         51.50           49.99       22.70
+    3.     Pihak Berkuasa Tempatan                     42.85        50.71         50.14           50.07       46.79
+                     JUMLAH                           260.78       256.00        251.93          250.35      197.88
+ Sumber: Penyata Kewangan Kerajaan Negeri Bagi Tahun 2013 Hingga 2017
+
+
+
+          4.8.1.2.    Pada tahun 2017, Agensi Negeri telah membayar balik pinjaman
+          berjumlah RM9.40 juta terdiri daripada bayaran balik pokok berjumlah RM6.96 juta
+          dan faedah berjumlah RM2.44 juta. Daripada jumlah tersebut, sejumlah RM3.16 juta
+          telah dijelaskan oleh Perbadanan Kemajuan Negeri Pahang, RM1.50 juta telah
+          dijelaskan oleh Amanah Saham Pahang Berhad (ASPA) dan RM4.74 juta oleh Pihak
+          Berkuasa Tempatan. Kedudukan bayaran balik pinjaman Agensi pada 31 Disember
+          2017 adalah seperti Jadual 4.33.
+
+                                     JADUAL 4.33
+                            BAYARAN BALIK PINJAMAN BOLEH
+                   DITUNTUT OLEH AGENSI NEGERI PADA 31 DISEMBER 2017
+                                                                                  BAYARAN
+                                                                   JUMLAH                           TUNGGAKAN
+                                     TUNGGAKAN                                      BALIK
+                                                     ANUITI         PATUT                           AKHIR TAHUN
+  BIL.            AGENSI              01.01.2017                                   DALAM
+                                                    (RM Juta)       BAYAR                            31.12.2017
+                                       (RM Juta)                                 TAHUN 2017
+                                                                  (RM Juta)                           (RM Juta)
+                                                                                  (RM Juta)
+          Perbadanan Kemajuan
+   1.                                    160.16          8.45        168.61               3.16            165.45
+          Negeri Pahang
+          Amanah Saham Pahang
+   2.                                      0.00          1.50          1.50               1.50              0.00
+          Berhad
+   3.     Pihak Berkuasa Tempatan          8.47          4.48         12.95               4.74              8.21
+              JUMLAH                     168.63         14.43        183.06               9.40            173.66
+ Sumber: Penyata Kewangan Kerajaan Negeri Tahun 2017
+
+
+
+
+LKAN PENYATA KEWANGAN NEGERI PAHANG 2017 | 34
+

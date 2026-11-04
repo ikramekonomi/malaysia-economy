@@ -1,0 +1,92 @@
+# CMD.34.2018.pdf  sha256 b73556b92b796532b1a3a1d2c1749a0dc579a6f9c82d69537964c9e877d28906  pdf_page 31 of 124  (pdftotext -layout)
+
+        c. Prestasi Akaun Hasil Disatukan bagi tahun 2013 hingga 2017 menunjukkan surplus
+           pada tahun 2013 tetapi mengalami defisit pada tahun 2014 hingga 2017 seperti
+           Jadual 4.9 dan Carta 4.2.
+
+                                          JADUAL 4.9
+                 BAKI AKAUN HASIL DISATUKAN BAGI TAHUN 2013 HINGGA TAHUN 2017
+                                                                   2013        2014                 2015                                 2016                                  2017
+                                                                                                                                          DINYATAKAN
+ BIL.                      BUTIRAN                                                                                                          SEMULA
+                                                           (RM Juta)       (RM Juta)             (RM Juta)            (RM Juta)                                          (RM Juta)
+                                                                                                                                           (RM Juta)
+
+ BAKI PADA 1 JANUARI                                             -334.46    -329.27                -400.57              -497.93                          -                 -557.21
+ HASIL                                                           518.43       506.48               411.05                601.63                          -                 633.07
+  1.      Hasil Cukai                                            318.54       258.38               212.23                352.92             222.75                         249.78
+  2.      Hasil Bukan Cukai                                       62.15          84.38              73.92                   73.20           213.62                         246.00
+  3.      Terimaan Bukan Hasil                                   137.74       163.72               124.90                175.51             165.26                         137.29
+ PERBELANJAAN                                                    513.24       577.78               508.41                660.91                          -                 669.12
+  1.      Emolumen                                               189.15       193.93               193.69                208.08                          -                 217.28
+  2.      Perkhidmatan dan Bekalan                               119.13       130.05               147.45                138.33                          -                 135.70
+  3.      Aset                                                     7.90          13.21              12.06                   10.81                        -                      5.36
+          Pemberian dan Kenaan Bayaran
+  4.                                                             187.37       232.91               144.21                291.08                          -                 292.72
+          Tetap
+  5.      Perbelanjaan Lain                                        9.69              7.68           11.00                   12.61                        -                     18.06
+ SURPLUS/DEFISIT                                                   5.19        -71.30                   -97.36            -59.28                         -                     -36.05
+ BAKI PADA 31 DISEMBER                                           -329.27    -400.57                -497.93              -557.21                          -                 -593.26
+Sumber: Penyata Kewangan Kerajaan Negeri
+
+
+
+
+                                             CARTA 4.2
+                      TREND AKAUN HASIL DISATUKAN TAHUN 2013 HINGGA TAHUN 2017
+ RM Juta
+        800
+
+        600
+                                                                                                                                                             669.12
+                                                                                                                       660.91
+
+
+
+
+                                                                                                                                                633.07
+                                                                                                             601.63
+                                                        577.78
+                  518.43
+
+                            513.24
+
+
+
+
+                                                                                      508.41
+                                              506.48
+
+
+
+
+        400
+                                                                            411.05
+
+
+
+
+        200
+                                     5.19
+          0
+                                                                 -71.30                                                                                               -36.05
+                                                                                               -97.36                           -59.28
+        -200           -329.27
+                                                   -400.57
+        -400                                                                     -497.93
+                                                                                                                  -557.21
+                                                                                                                                                     -593.26
+        -600
+
+        -800
+                           2013                        2014                          2015                             2016                               2017
+
+                      Hasil                 Perbelanjaan Mengurus                               Surplus/Defisit                          Baki Terkumpul
+
+Sumber: Penyata Kewangan Kerajaan Negeri
+
+
+
+
+                                                       LKAN PENYATA KEWANGAN NEGERI KEDAH 2017 | 15
+
