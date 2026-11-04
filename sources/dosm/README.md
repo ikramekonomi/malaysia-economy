@@ -380,8 +380,8 @@ publication. All of them are recorded row-by-row and none is corrected.
 Row counts and coverage in the tables above are as of each dataset's first ingest; this table
 is the change, and `data/_vintage.json` holds the current `data_as_of` for every dataset.
 "Revised" counts rows that existed before and whose published values changed (compared as
-numbers, so a `25431356829.0` → `25431356829` reformat is not a revision). Old values are in
-git history (`git show <commit>:sources/dosm/data/<file>.csv`), not in the files.
+numbers, so a `25431356829.0` → `25431356829` reformat is not a revision). The replaced
+vintages are logged in `data/_vintage_log.csv` and recoverable with `pipeline/vintage_get.py`.
 
 | dataset | rows | latest period | new rows | revised rows (years) |
 |---|---|---|---|---|
@@ -492,6 +492,20 @@ The warehouse pins a retrieval vintage on purpose — an upstream revision chang
 - `python3 sources/dosm/pipeline/refresh.py --apply` — pulls the new vintage with a
   row-level diff report, updates `_vintage.json` and re-runs the API cross-check. Then
   update the vintage table above and commit the refresh as its own change.
+- **Every vintage is kept** (docs/DATA_MODEL.md §6, D3). `refresh.py --apply` appends to
+  `data/_vintage_log.csv` (dataset, data_as_of, retrieved_date, rows, sha256): one `superseded`
+  row for the file it replaces and one `current` row for the new file. Rows are never edited.
+  The log was seeded on 2026-11-04 with all 110 current files and the 63 vintages replaced that
+  day. `python3 sources/dosm/pipeline/vintage_get.py <dataset>` lists a dataset's vintages, and
+  `vintage_get.py <dataset> <data_as_of> <out.csv>` writes any of them back out from git history,
+  verified against the logged sha256.
+- **Automatic daily refresh:** `.github/workflows/dosm-refresh.yml` runs at 14:17 Malaysia time
+  (and on demand). On a new release it runs `refresh.py --apply`, rebuilds the labour table, and
+  measures the change with `pipeline/refresh_report.py`, which writes the per-dataset table into the
+  PR. The PR merges itself only when every verifier exited 0 and the gate passes: no FAIL, no new
+  SOURCE_ANOMALY, no header change, no withdrawn rows. Anything else waits for a person. Replayed
+  on the 2026-11-04 refresh, the gate correctly held it for review (the `lfs_month_youth` header
+  change and two new anomalies).
 - `python3 sources/dosm/pipeline/verify_against_api.py` — independent value-level
   cross-check of the original three CSVs against the API (same publication, second door).
 - `python3 sources/dosm/pipeline/verify_expansion.py` — same second-door discipline for

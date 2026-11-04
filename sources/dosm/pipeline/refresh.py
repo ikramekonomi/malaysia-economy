@@ -92,6 +92,50 @@ def current_state():
     return out
 
 
+# Every vintage the warehouse has held, append-only (docs/DATA_MODEL.md §6, decision D3).
+# The canonical CSV holds the current vintage; an earlier one is recovered exactly with
+#   git log --format=%H -S <sha256> -- sources/dosm/data/_vintage_log.csv   (the commit)
+#   git show <commit>:sources/dosm/data/<file>                              (the file)
+# and verified against the sha256 recorded here.
+VINTAGE_LOG = os.path.join(DATA, "_vintage_log.csv")
+LOG_FIELDS = ["dataset", "file", "data_as_of", "last_updated", "storage_etag",
+              "retrieved_date", "rows", "sha256", "state", "logged_at"]
+
+
+def file_sha256(path):
+    import hashlib
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def retrieved_date_of(path):
+    with open(path, newline="") as f:
+        r = csv.DictReader(f)
+        first = next(r, None)
+    return (first or {}).get("retrieved_date", "")
+
+
+def log_vintage(ds, fname, meta, path, state):
+    """Append one row: `superseded` for the vintage being replaced, `current` for the new
+    one. Rows are never edited or removed."""
+    new_file = not os.path.exists(VINTAGE_LOG)
+    with open(path, newline="") as f:
+        rows = sum(1 for _ in f) - 1
+    with open(VINTAGE_LOG, "a", newline="") as f:
+        w = csv.DictWriter(f, fieldnames=LOG_FIELDS)
+        if new_file:
+            w.writeheader()
+        w.writerow({"dataset": ds, "file": fname, "data_as_of": meta.get("data_as_of"),
+                    "last_updated": meta.get("last_updated"),
+                    "storage_etag": meta.get("storage_etag"),
+                    "retrieved_date": retrieved_date_of(path), "rows": rows,
+                    "sha256": file_sha256(path), "state": state,
+                    "logged_at": date.today().isoformat()})
+
+
 def diff_csv(old_path, new_path):
     old = list(csv.reader(open(old_path))) if os.path.exists(old_path) else []
     new = list(csv.reader(open(new_path)))
@@ -134,7 +178,10 @@ def main():
         else:  # original denominator files stay byte-for-byte as downloaded
             urllib.request.urlretrieve(url, tmp)
         added, removed, total = diff_csv(dest, tmp)
+        if os.path.exists(dest):  # the outgoing vintage is logged before it is replaced
+            log_vintage(ds, fname, base.get(ds, {}), dest, "superseded")
         os.replace(tmp, dest)
+        log_vintage(ds, fname, live[ds], dest, "current")
         print(f"applied      {ds}: {fname} now {total} rows (+{added} new/changed, "
               f"-{removed} removed/changed vs previous vintage)")
     json.dump(live, open(VINTAGE, "w"), indent=2)

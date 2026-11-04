@@ -1,6 +1,6 @@
 # Document registry
 
-**Status: DRAFT for review. Nothing built yet.** Seed rows: `docs/registry/series_seed.csv`.
+**Status: agreed design, revision 2 (2026-11-04).** Seed rows: `docs/registry/series_seed.csv`.
 
 The registry is the index of **every document the warehouse needs**: the ones we hold, and
 also the ones we do not have yet, cannot get, or that are not published. It answers three
@@ -26,9 +26,9 @@ publisher ──< series ──< edition ──< file ──< extract
 | Level | Key fields |
 |---|---|
 | `publisher` | `publisher_id`, name_bm, name_en, type (`ministry`, `agency`, `statutory_body`, `state_gov`, `parliament`, `company`) |
-| `series` | `series_id`, publisher, title_bm/en, theme(s), frequency, geo_depth, priority, money-trail track, route, alternate_routes |
+| `series` | `series_id`, publisher, title_bm/en, theme(s), frequency, geo_depth, priority, money-trail track, route, access, alternate_routes, **licence, redistribution, contains_personal_data** |
 | `edition` | `edition_id`, series, period covered, geo covered, release date, **status**, status_reason, status_evidence, expected_release |
-| `file` | `file_id`, edition, url, sha256, pages, size, retrieved_date, text layer (`text` / `scan`) |
+| `file` | `file_id`, edition, url, sha256, pages, size, retrieved_date, text layer (`text` / `scan`), **archive_url** (the public archive copy, where the licence allows) |
 | `extract` | `extract_id`, file, table/page range, L1 output file, verifier result, used_by |
 
 `dim_source` in the data model (`docs/DATA_MODEL.md` §4.6) is this registry. Every fact row
@@ -63,22 +63,37 @@ Rules:
 * `restricted` and `not_published` are findings in themselves. They are reported in
   `list_documents` and can be cited in advocacy ("this is not public").
 * A series status is the weakest status among its required editions.
+* **Lawful sources only.** A document is registered only if its owner published it, it was released
+  under the law, or it came through an official data request. No leaked or OSA-classified documents.
+
+**Governance fields** (docs/DATA_MODEL.md §12):
+
+| Field | Values | Effect |
+|---|---|---|
+| `licence` | the licence as stated by the publisher, or `to_confirm` | recorded on every answer that uses the series |
+| `redistribution` | `open` · `attribution` · `no_redistribution` · `to_confirm` | `no_redistribution` never leaves the warehouse; `to_confirm` blocks publication until confirmed |
+| `contains_personal_data` | `no` · `public_figures` · `possible` · `yes` | `possible`/`yes` series pass through the personal-data rule before any output |
+
+Only licences stated somewhere we can cite are filled in: DOSM (CC BY 4.0, per its catalogue
+pages), KRI (CC BY 3.0, printed in the report), IDEAS (reproduction with acknowledgement, MyOBI
+2026 p.iv) and World Bank WDI (CC BY 4.0). Everything else is `to_confirm` until checked.
 
 ---
 
 ## 3. Seed: what the first rows say
 
-75 series across all 8 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
+104 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
 theme, is `docs/SOURCES.md`. Each row also says how it is reached (`access`: `api`, `bulk_file`,
-`pdf`, `web_table`, `paid`, `none`).
+`pdf`, `web_table`, `paid`, `none`). Revision 2 added 29 series from the two reviews (KRI SOH2026
+check and plan review) and deferred 12 low-value global series (`priority = deferred`).
 
 | Status | Series |
 |---|---|
 | verified / extracted | 16: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities |
 | held, not extracted | 1: LKAN state volumes (findings) |
-| located | 8: state budget estimates, speeches, enacted budgets, year-end reports and PAC reports; DUN hansards and questions; MyOBI |
-| expected | 47 (29 of all 75 series are reachable by API) |
-| restricted | 2: SSM company register, PADU/eKasih |
+| located | 9: state budget estimates, speeches, enacted budgets, year-end reports and PAC reports; DUN hansards and questions; MyOBI; KRI State of Households |
+| expected | 73 (32 of all 104 series are reachable by API) |
+| restricted | 4: SSM company register, PADU/eKasih, DOSM and KPM data requests |
 | not_published | 1: state Supply Bills (no state published one for 2026, per MyOBI 2026) |
 
 State document statuses cite IDEAS' MyOBI 2026 as their evidence.
@@ -96,6 +111,9 @@ State document statuses cite IDEAS' MyOBI 2026 as their evidence.
 | Health facts | 6 | doctors and beds per capita by state |
 | Education statistics | 6 | school outcomes by district |
 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | cross | the spine of target vs outcome |
+| DOSM survey report tables (HIS, HES, LFS annual) | 1, 3, 2 | unlock 67 of KRI SOH2026's exhibits (with Basic Amenities, P2: 83) |
+| National Health and Morbidity Survey | 6 | health outcomes, not only facilities |
+| Cash transfer and welfare recipients by state | 5 | places operating spending by area, so need vs money is not built on projects alone |
 
 ---
 
@@ -106,7 +124,7 @@ State document statuses cite IDEAS' MyOBI 2026 as their evidence.
 | `sources/audit-negara/data/lkan_reports_backfill.csv` | 402 volumes, sha256 | edition + file rows |
 | `sources/audit-negara/data/lkan_reports.csv` | federal 2024–26 | edition + file rows |
 | `sources/mof-fiscal-outlook/data/_editions_manifest.csv` | 17 files | edition + file rows |
-| `sources/dosm/data/_vintage.json` | per dataset | edition rows (one per vintage) |
+| `sources/dosm/data/_vintage.json` + `_vintage_log.csv` | 110 datasets; 173 vintages logged (2026-11-04) | edition + file rows (one per vintage, with sha256) |
 | `sources/states/data/<state>/state_reports_<state>.csv` | per state volume | edition + file rows |
 | PKKP, Anggaran, Anggaran Hasil, BNM | **no manifest** | to be written (Phase 0) |
 
@@ -117,5 +135,6 @@ State document statuses cite IDEAS' MyOBI 2026 as their evidence.
 1. Never invent a URL. If the route is unknown, write `to locate`.
 2. One series per publication, not per table. Tables go in `extract`.
 3. Use the publisher's own title in Malay first (`title_bm`), English second.
-4. Every series has a theme, a priority (P1–P3) and a money-trail track (`0`, `A`, `B` or `-`).
-5. When a status changes, keep the old evidence. The history is part of the record.
+4. Every series has a theme, a priority (P1–P3, or `deferred`) and a money-trail track (`0`, `A`, `B` or `-`).
+5. Every series has a `licence`, `redistribution` and `contains_personal_data` value, `to_confirm` if unknown. Never guess a licence.
+6. When a status changes, keep the old evidence. The history is part of the record.
