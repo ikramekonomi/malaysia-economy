@@ -149,7 +149,9 @@ q("1", "Rank the parliamentary constituencies by poverty.", "compare_geos",
 # E. missing documents are answers
 q("5", "How many cash-transfer recipients are there in each state?", "find_indicator",
   {"text": "cash transfer recipients"}, "not_held_registry", "social_transfers_by_state", kind="trap_missing")
-q("6", "How many doctors per person does each state have?", "find_indicator", {"text": "doctors per state"},
+q("6", "Which indicator counts doctors?", "find_indicator", {"text": "doctors per state"}, "first_indicator",
+  "health.staff")
+q("6", "What is the obesity rate in each state (NHMS, not held)?", "find_indicator", {"text": "obesity prevalence"},
   "not_held", kind="trap_missing")
 q("5", "Show the budget-vs-actual gap view.", "get_gap_view", {"name": "gap_budget_vs_actual"}, "not_held",
   kind="trap_missing")
@@ -225,6 +227,47 @@ q("5", "The need-vs-money row for 'Johor' (a name, not a code)?", "get_gap_view"
   {"name": "gap_need_vs_money", "geo": "Johor", "year": "2022"}, "not_held", kind="trap_missing")
 q("5", "Is the federal total in the view cited?", "get_gap_view",
   {"name": "gap_need_vs_money", "geo": "MY-10", "year": "2022"}, "field_nonempty:federal_source_obs_ids")
+
+# J. Phase 2: health, education and services (data.gov.my), from L1
+def l1x(dataset, pick, col):
+    with open(os.path.join(DOSM, f"{dataset}.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if pick(r):
+                return Decimal(r[col])
+    raise KeyError(dataset)
+
+
+q("6", "How many public hospital beds did Kelantan have in 2024?", "get_series",
+  series("health.beds", "MY-03", "2024"), "value",
+  s(l1x("hospital_beds", lambda r: r["state"] == "Kelantan" and r["date"][:4] == "2024" and r["type"] == "all"
+        and r["district"] in ("All", "All Districts"), "beds")))
+q("6", "How many public-sector doctors were there in Sabah in 2022?", "get_series",
+  {**series("health.staff", "MY-12", "2022"), "breakdown": "staff_type=doctor"}, "value",
+  s(l1x("healthcare_staff", lambda r: r["state"] == "Sabah" and r["date"][:4] == "2022" and r["type"] == "doctor",
+        "staff")))
+q("6", "How many primary pupils were enrolled in government schools in Selangor in 2025?", "get_series",
+  {**series("edu.enrolment", "MY-10", "2025"), "breakdown": "stage=primary"}, "value",
+  s(l1x("enrolment_school_district", lambda r: r["state"] == "Selangor" and r["date"][:4] == "2025"
+        and r["stage"] == "primary" and r["sex"] == "both" and r["district"] in ("All", "All Districts"), "students")))
+q("1", "What is women's life expectancy in Kelantan in 2026?", "get_series",
+  {**series("life_expectancy", "MY-03", "2026"), "breakdown": "sex=female"}, "value",
+  s(l1x("life_expectancy_state", lambda r: r["state"] == "Kelantan" and r["date"][:4] == "2026" and r["sex"] == "female",
+        "life_expectancy")))
+q("6", "What share of Kelantan households had treated water in 2024?", "get_series",
+  series("water.access.share", "MY-03", "2024"), "value",
+  s(l1x("water_access", lambda r: r["state"] == "Kelantan" and r["date"][:4] == "2024" and r["strata"] == "overall",
+        "proportion")))
+q("1", "What was Perlis's crude death rate in 2024?", "get_series", series("deaths.crude_rate", "MY-09", "2024"),
+  "value", s(l1x("death_state", lambda r: r["state"] == "Perlis" and r["date"][:4] == "2024", "rate")))
+d = l1x("healthcare_staff", lambda r: r["state"] == "Sabah" and r["date"][:4] == "2022" and r["type"] == "doctor", "staff")
+p22 = l1("population_state", "Sabah", "2022", "population", sex="both", age="overall", ethnicity="overall") * 1000
+q("6", "How many public-sector doctors per person did Sabah have in 2022?", "derive_chain",
+  {"operation": "per_capita", "a": {**series("health.staff", "MY-12", "2022"), "breakdown": "staff_type=doctor"},
+   "b": series("pop.total", "MY-12", "2022")}, "value", s((d / p22).quantize(Decimal("0.000001"))), "0.000001")
+q("6", "Does Kuala Lumpur's water access say why it is missing?", "get_series",
+  series("water.access.share", "MY-10", "2024"), "caveat", "COVERAGE", kind="trap_missing")
+q("6", "Compare life expectancy across all states in 2024 (banded, not ranked)?", "compare_geos",
+  {"indicator": "life_expectancy", "period": "2024"}, "place_count", "16")
 
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))

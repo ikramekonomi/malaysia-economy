@@ -81,7 +81,7 @@ pages) and World Bank WDI (CC BY 4.0). Everything else is `to_confirm` until che
 
 ## 3. Seed: what the first rows say
 
-104 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
+107 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
 theme, is `docs/SOURCES.md`. Each row also says how it is reached (`access`: `api`, `bulk_file`,
 `pdf`, `web_table`, `paid`, `none`). Revision 2 added 28 series from the two reviews (household-coverage
 check and plan review) and deferred 12 low-value global series (`priority = deferred`). Phase 0

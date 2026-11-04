@@ -1,0 +1,991 @@
+state,date,sex,life_expectancy
+Johor,2001-01-01,male,70.4
+Johor,2001-01-01,female,75.1
+Kedah,2001-01-01,male,69.2
+Kedah,2001-01-01,female,74.3
+Kelantan,2001-01-01,male,67.4
+Kelantan,2001-01-01,female,73.1
+Melaka,2001-01-01,male,69.4
+Melaka,2001-01-01,female,73.9
+Negeri Sembilan,2001-01-01,male,69.1
+Negeri Sembilan,2001-01-01,female,74.7
+Pahang,2001-01-01,male,69.5
+Pahang,2001-01-01,female,74.2
+Perak,2001-01-01,male,68.5
+Perak,2001-01-01,female,74.5
+Perlis,2001-01-01,male,69.2
+Perlis,2001-01-01,female,74.1
+Pulau Pinang,2001-01-01,male,70.2
+Pulau Pinang,2001-01-01,female,75.4
+Sarawak,2001-01-01,male,72.5
+Sarawak,2001-01-01,female,76.0
+Selangor,2001-01-01,male,72.4
+Selangor,2001-01-01,female,76.3
+Terengganu,2001-01-01,male,67.7
+Terengganu,2001-01-01,female,72.7
+W.P. Kuala Lumpur,2001-01-01,male,71.0
+W.P. Kuala Lumpur,2001-01-01,female,75.5
+Johor,2002-01-01,male,70.6
+Johor,2002-01-01,female,75.1
+Kedah,2002-01-01,male,69.0
+Kedah,2002-01-01,female,74.2
+Kelantan,2002-01-01,male,67.2
+Kelantan,2002-01-01,female,73.2
+Melaka,2002-01-01,male,69.3
+Melaka,2002-01-01,female,74.1
+Negeri Sembilan,2002-01-01,male,69.1
+Negeri Sembilan,2002-01-01,female,74.7
+Pahang,2002-01-01,male,69.4
+Pahang,2002-01-01,female,74.4
+Perak,2002-01-01,male,68.6
+Perak,2002-01-01,female,74.5
+Perlis,2002-01-01,male,69.1
+Perlis,2002-01-01,female,74.3
+Pulau Pinang,2002-01-01,male,70.4
+Pulau Pinang,2002-01-01,female,75.6
+Sarawak,2002-01-01,male,72.6
+Sarawak,2002-01-01,female,76.1
+Selangor,2002-01-01,male,72.4
+Selangor,2002-01-01,female,76.5
+Terengganu,2002-01-01,male,67.3
+Terengganu,2002-01-01,female,72.6
+W.P. Kuala Lumpur,2002-01-01,male,71.2
+W.P. Kuala Lumpur,2002-01-01,female,75.5
+Johor,2003-01-01,male,70.7
+Johor,2003-01-01,female,75.4
+Kedah,2003-01-01,male,69.2
+Kedah,2003-01-01,female,74.5
+Kelantan,2003-01-01,male,67.1
+Kelantan,2003-01-01,female,73.6
+Melaka,2003-01-01,male,69.5
+Melaka,2003-01-01,female,74.2
+Negeri Sembilan,2003-01-01,male,69.2
+Negeri Sembilan,2003-01-01,female,75.0
+Pahang,2003-01-01,male,69.5
+Pahang,2003-01-01,female,74.6
+Perak,2003-01-01,male,68.7
+Perak,2003-01-01,female,74.8
+Perlis,2003-01-01,male,69.4
+Perlis,2003-01-01,female,74.2
+Pulau Pinang,2003-01-01,male,70.4
+Pulau Pinang,2003-01-01,female,75.8
+Sarawak,2003-01-01,male,72.6
+Sarawak,2003-01-01,female,76.3
+Selangor,2003-01-01,male,72.6
+Selangor,2003-01-01,female,76.8
+Terengganu,2003-01-01,male,67.6
+Terengganu,2003-01-01,female,72.8
+W.P. Kuala Lumpur,2003-01-01,male,71.8
+W.P. Kuala Lumpur,2003-01-01,female,76.0
+Johor,2004-01-01,male,71.0
+Johor,2004-01-01,female,75.7
+Kedah,2004-01-01,male,69.5
+Kedah,2004-01-01,female,74.8
+Kelantan,2004-01-01,male,67.2
+Kelantan,2004-01-01,female,73.8
+Melaka,2004-01-01,male,69.7
+Melaka,2004-01-01,female,74.8
+Negeri Sembilan,2004-01-01,male,69.3
+Negeri Sembilan,2004-01-01,female,75.3
+Pahang,2004-01-01,male,69.8
+Pahang,2004-01-01,female,75.0
+Perak,2004-01-01,male,69.3
+Perak,2004-01-01,female,75.2
+Perlis,2004-01-01,male,69.4
+Perlis,2004-01-01,female,75.0
+Pulau Pinang,2004-01-01,male,70.8
+Pulau Pinang,2004-01-01,female,76.2
+Sarawak,2004-01-01,male,72.7
+Sarawak,2004-01-01,female,76.6
+Selangor,2004-01-01,male,72.8
+Selangor,2004-01-01,female,77.0
+Terengganu,2004-01-01,male,67.7
+Terengganu,2004-01-01,female,73.2
+W.P. Kuala Lumpur,2004-01-01,male,72.7
+W.P. Kuala Lumpur,2004-01-01,female,76.6
+Johor,2005-01-01,male,71.2
+Johor,2005-01-01,female,75.9
+Kedah,2005-01-01,male,69.8
+Kedah,2005-01-01,female,75.2
+Kelantan,2005-01-01,male,67.6
+Kelantan,2005-01-01,female,74.1
+Melaka,2005-01-01,male,70.1
+Melaka,2005-01-01,female,75.1
+Negeri Sembilan,2005-01-01,male,69.6
+Negeri Sembilan,2005-01-01,female,75.5
+Pahang,2005-01-01,male,70.0
+Pahang,2005-01-01,female,75.3
+Perak,2005-01-01,male,69.8
+Perak,2005-01-01,female,75.6
+Perlis,2005-01-01,male,69.7
+Perlis,2005-01-01,female,75.2
+Pulau Pinang,2005-01-01,male,71.2
+Pulau Pinang,2005-01-01,female,76.2
+Sarawak,2005-01-01,male,73.0
+Sarawak,2005-01-01,female,76.6
+Selangor,2005-01-01,male,73.0
+Selangor,2005-01-01,female,77.1
+Terengganu,2005-01-01,male,68.1
+Terengganu,2005-01-01,female,73.5
+W.P. Kuala Lumpur,2005-01-01,male,73.2
+W.P. Kuala Lumpur,2005-01-01,female,77.1
+Johor,2006-01-01,male,71.1
+Johor,2006-01-01,female,75.9
+Kedah,2006-01-01,male,69.8
+Kedah,2006-01-01,female,75.1
+Kelantan,2006-01-01,male,67.7
+Kelantan,2006-01-01,female,74.0
+Melaka,2006-01-01,male,70.5
+Melaka,2006-01-01,female,75.5
+Negeri Sembilan,2006-01-01,male,69.8
+Negeri Sembilan,2006-01-01,female,75.8
+Pahang,2006-01-01,male,70.2
+Pahang,2006-01-01,female,75.5
+Perak,2006-01-01,male,70.1
+Perak,2006-01-01,female,75.7
+Perlis,2006-01-01,male,69.6
+Perlis,2006-01-01,female,75.1
+Pulau Pinang,2006-01-01,male,71.5
+Pulau Pinang,2006-01-01,female,76.3
+Sarawak,2006-01-01,male,73.3
+Sarawak,2006-01-01,female,76.7
+Selangor,2006-01-01,male,73.1
+Selangor,2006-01-01,female,77.2
+Terengganu,2006-01-01,male,68.0
+Terengganu,2006-01-01,female,73.5
+W.P. Kuala Lumpur,2006-01-01,male,73.5
+W.P. Kuala Lumpur,2006-01-01,female,77.2
+Johor,2007-01-01,male,71.1
+Johor,2007-01-01,female,75.9
+Kedah,2007-01-01,male,69.8
+Kedah,2007-01-01,female,75.2
+Kelantan,2007-01-01,male,67.7
+Kelantan,2007-01-01,female,74.1
+Melaka,2007-01-01,male,70.7
+Melaka,2007-01-01,female,75.6
+Negeri Sembilan,2007-01-01,male,69.8
+Negeri Sembilan,2007-01-01,female,75.6
+Pahang,2007-01-01,male,70.2
+Pahang,2007-01-01,female,75.5
+Perak,2007-01-01,male,70.2
+Perak,2007-01-01,female,75.9
+Perlis,2007-01-01,male,69.4
+Perlis,2007-01-01,female,75.1
+Pulau Pinang,2007-01-01,male,71.7
+Pulau Pinang,2007-01-01,female,76.5
+Sarawak,2007-01-01,male,73.4
+Sarawak,2007-01-01,female,76.7
+Selangor,2007-01-01,male,73.1
+Selangor,2007-01-01,female,77.1
+Terengganu,2007-01-01,male,68.0
+Terengganu,2007-01-01,female,73.6
+W.P. Kuala Lumpur,2007-01-01,male,73.7
+W.P. Kuala Lumpur,2007-01-01,female,77.2
+Johor,2008-01-01,male,71.2
+Johor,2008-01-01,female,76.0
+Kedah,2008-01-01,male,69.8
+Kedah,2008-01-01,female,75.3
+Kelantan,2008-01-01,male,67.5
+Kelantan,2008-01-01,female,74.0
+Melaka,2008-01-01,male,70.8
+Melaka,2008-01-01,female,75.8
+Negeri Sembilan,2008-01-01,male,69.9
+Negeri Sembilan,2008-01-01,female,75.6
+Pahang,2008-01-01,male,70.1
+Pahang,2008-01-01,female,75.4
+Perak,2008-01-01,male,70.2
+Perak,2008-01-01,female,75.9
+Perlis,2008-01-01,male,69.3
+Perlis,2008-01-01,female,75.2
+Pulau Pinang,2008-01-01,male,71.6
+Pulau Pinang,2008-01-01,female,76.6
+Sabah,2008-01-01,male,76.2
+Sabah,2008-01-01,female,79.0
+Sarawak,2008-01-01,male,73.3
+Sarawak,2008-01-01,female,76.7
+Selangor,2008-01-01,male,73.0
+Selangor,2008-01-01,female,77.0
+Terengganu,2008-01-01,male,67.9
+Terengganu,2008-01-01,female,73.6
+W.P. Kuala Lumpur,2008-01-01,male,73.6
+W.P. Kuala Lumpur,2008-01-01,female,77.3
+Johor,2009-01-01,male,71.4
+Johor,2009-01-01,female,76.1
+Kedah,2009-01-01,male,70.0
+Kedah,2009-01-01,female,75.4
+Kelantan,2009-01-01,male,67.6
+Kelantan,2009-01-01,female,74.0
+Melaka,2009-01-01,male,70.8
+Melaka,2009-01-01,female,75.9
+Negeri Sembilan,2009-01-01,male,69.8
+Negeri Sembilan,2009-01-01,female,75.6
+Pahang,2009-01-01,male,69.9
+Pahang,2009-01-01,female,75.3
+Perak,2009-01-01,male,70.4
+Perak,2009-01-01,female,76.2
+Perlis,2009-01-01,male,69.1
+Perlis,2009-01-01,female,75.6
+Pulau Pinang,2009-01-01,male,71.8
+Pulau Pinang,2009-01-01,female,76.7
+Sabah,2009-01-01,male,76.4
+Sabah,2009-01-01,female,79.1
+Sarawak,2009-01-01,male,73.6
+Sarawak,2009-01-01,female,77.0
+Selangor,2009-01-01,male,73.0
+Selangor,2009-01-01,female,76.9
+Terengganu,2009-01-01,male,68.1
+Terengganu,2009-01-01,female,73.8
+W.P. Kuala Lumpur,2009-01-01,male,73.6
+W.P. Kuala Lumpur,2009-01-01,female,77.6
+Johor,2010-01-01,male,71.8
+Johor,2010-01-01,female,76.4
+Kedah,2010-01-01,male,70.1
+Kedah,2010-01-01,female,75.8
+Kelantan,2010-01-01,male,68.1
+Kelantan,2010-01-01,female,74.4
+Melaka,2010-01-01,male,71.1
+Melaka,2010-01-01,female,76.4
+Negeri Sembilan,2010-01-01,male,70.3
+Negeri Sembilan,2010-01-01,female,75.9
+Pahang,2010-01-01,male,70.2
+Pahang,2010-01-01,female,75.5
+Perak,2010-01-01,male,70.7
+Perak,2010-01-01,female,76.4
+Perlis,2010-01-01,male,69.6
+Perlis,2010-01-01,female,75.6
+Pulau Pinang,2010-01-01,male,71.9
+Pulau Pinang,2010-01-01,female,77.0
+Sabah,2010-01-01,male,73.8
+Sabah,2010-01-01,female,77.2
+Sarawak,2010-01-01,male,73.9
+Sarawak,2010-01-01,female,77.4
+Selangor,2010-01-01,male,73.2
+Selangor,2010-01-01,female,77.3
+Terengganu,2010-01-01,male,68.4
+Terengganu,2010-01-01,female,74.1
+W.P. Kuala Lumpur,2010-01-01,male,73.5
+W.P. Kuala Lumpur,2010-01-01,female,77.8
+Johor,2011-01-01,male,71.9
+Johor,2011-01-01,female,76.6
+Kedah,2011-01-01,male,70.1
+Kedah,2011-01-01,female,75.9
+Kelantan,2011-01-01,male,68.5
+Kelantan,2011-01-01,female,74.7
+Melaka,2011-01-01,male,71.4
+Melaka,2011-01-01,female,76.6
+Negeri Sembilan,2011-01-01,male,70.7
+Negeri Sembilan,2011-01-01,female,76.2
+Pahang,2011-01-01,male,70.2
+Pahang,2011-01-01,female,75.6
+Perak,2011-01-01,male,70.9
+Perak,2011-01-01,female,76.6
+Perlis,2011-01-01,male,69.9
+Perlis,2011-01-01,female,75.6
+Pulau Pinang,2011-01-01,male,72.1
+Pulau Pinang,2011-01-01,female,77.1
+Sabah,2011-01-01,male,72.4
+Sabah,2011-01-01,female,75.8
+Sarawak,2011-01-01,male,74.2
+Sarawak,2011-01-01,female,77.8
+Selangor,2011-01-01,male,73.2
+Selangor,2011-01-01,female,77.1
+Terengganu,2011-01-01,male,68.5
+Terengganu,2011-01-01,female,74.3
+W.P. Kuala Lumpur,2011-01-01,male,73.7
+W.P. Kuala Lumpur,2011-01-01,female,78.0
+Johor,2012-01-01,both,74.1
+Johor,2012-01-01,male,72.0
+Johor,2012-01-01,female,76.7
+Kedah,2012-01-01,both,73.0
+Kedah,2012-01-01,male,70.2
+Kedah,2012-01-01,female,76.1
+Kelantan,2012-01-01,both,71.9
+Kelantan,2012-01-01,male,68.9
+Kelantan,2012-01-01,female,75.0
+Melaka,2012-01-01,both,74.1
+Melaka,2012-01-01,male,71.6
+Melaka,2012-01-01,female,76.9
+Negeri Sembilan,2012-01-01,both,73.4
+Negeri Sembilan,2012-01-01,male,70.9
+Negeri Sembilan,2012-01-01,female,76.4
+Pahang,2012-01-01,both,72.8
+Pahang,2012-01-01,male,70.3
+Pahang,2012-01-01,female,75.9
+Perak,2012-01-01,both,73.7
+Perak,2012-01-01,male,71.0
+Perak,2012-01-01,female,76.8
+Perlis,2012-01-01,both,72.8
+Perlis,2012-01-01,male,70.2
+Perlis,2012-01-01,female,75.7
+Pulau Pinang,2012-01-01,both,74.7
+Pulau Pinang,2012-01-01,male,72.2
+Pulau Pinang,2012-01-01,female,77.4
+Sabah,2012-01-01,both,73.3
+Sabah,2012-01-01,male,71.7
+Sabah,2012-01-01,female,75.2
+Sarawak,2012-01-01,both,75.9
+Sarawak,2012-01-01,male,74.3
+Sarawak,2012-01-01,female,77.8
+Selangor,2012-01-01,both,75.0
+Selangor,2012-01-01,male,73.1
+Selangor,2012-01-01,female,77.2
+Terengganu,2012-01-01,both,71.2
+Terengganu,2012-01-01,male,68.5
+Terengganu,2012-01-01,female,74.3
+W.P. Kuala Lumpur,2012-01-01,both,75.9
+W.P. Kuala Lumpur,2012-01-01,male,74.1
+W.P. Kuala Lumpur,2012-01-01,female,78.1
+Johor,2013-01-01,both,74.2
+Johor,2013-01-01,male,72.0
+Johor,2013-01-01,female,76.8
+Kedah,2013-01-01,both,73.0
+Kedah,2013-01-01,male,70.3
+Kedah,2013-01-01,female,76.1
+Kelantan,2013-01-01,both,71.9
+Kelantan,2013-01-01,male,69.0
+Kelantan,2013-01-01,female,75.1
+Melaka,2013-01-01,both,74.4
+Melaka,2013-01-01,male,71.9
+Melaka,2013-01-01,female,77.2
+Negeri Sembilan,2013-01-01,both,73.5
+Negeri Sembilan,2013-01-01,male,70.9
+Negeri Sembilan,2013-01-01,female,76.4
+Pahang,2013-01-01,both,73.0
+Pahang,2013-01-01,male,70.4
+Pahang,2013-01-01,female,76.2
+Perak,2013-01-01,both,73.8
+Perak,2013-01-01,male,71.1
+Perak,2013-01-01,female,76.9
+Perlis,2013-01-01,both,72.9
+Perlis,2013-01-01,male,70.3
+Perlis,2013-01-01,female,75.8
+Pulau Pinang,2013-01-01,both,74.7
+Pulau Pinang,2013-01-01,male,72.3
+Pulau Pinang,2013-01-01,female,77.5
+Sabah,2013-01-01,both,73.5
+Sabah,2013-01-01,male,72.0
+Sabah,2013-01-01,female,75.4
+Sarawak,2013-01-01,both,76.1
+Sarawak,2013-01-01,male,74.4
+Sarawak,2013-01-01,female,78.2
+Selangor,2013-01-01,both,75.1
+Selangor,2013-01-01,male,73.2
+Selangor,2013-01-01,female,77.3
+Terengganu,2013-01-01,both,71.3
+Terengganu,2013-01-01,male,68.6
+Terengganu,2013-01-01,female,74.3
+W.P. Kuala Lumpur,2013-01-01,both,76.0
+W.P. Kuala Lumpur,2013-01-01,male,74.1
+W.P. Kuala Lumpur,2013-01-01,female,78.2
+Johor,2014-01-01,both,74.3
+Johor,2014-01-01,male,72.1
+Johor,2014-01-01,female,76.9
+Kedah,2014-01-01,both,73.1
+Kedah,2014-01-01,male,70.4
+Kedah,2014-01-01,female,76.1
+Kelantan,2014-01-01,both,71.9
+Kelantan,2014-01-01,male,69.0
+Kelantan,2014-01-01,female,75.1
+Melaka,2014-01-01,both,74.5
+Melaka,2014-01-01,male,72.0
+Melaka,2014-01-01,female,77.3
+Negeri Sembilan,2014-01-01,both,73.5
+Negeri Sembilan,2014-01-01,male,71.0
+Negeri Sembilan,2014-01-01,female,76.4
+Pahang,2014-01-01,both,73.1
+Pahang,2014-01-01,male,70.6
+Pahang,2014-01-01,female,76.2
+Perak,2014-01-01,both,74.0
+Perak,2014-01-01,male,71.2
+Perak,2014-01-01,female,77.0
+Perlis,2014-01-01,both,73.0
+Perlis,2014-01-01,male,70.3
+Perlis,2014-01-01,female,75.8
+Pulau Pinang,2014-01-01,both,74.8
+Pulau Pinang,2014-01-01,male,72.3
+Pulau Pinang,2014-01-01,female,77.5
+Sabah,2014-01-01,both,73.7
+Sabah,2014-01-01,male,72.2
+Sabah,2014-01-01,female,75.5
+Sarawak,2014-01-01,both,76.3
+Sarawak,2014-01-01,male,74.5
+Sarawak,2014-01-01,female,78.3
+Selangor,2014-01-01,both,75.1
+Selangor,2014-01-01,male,73.2
+Selangor,2014-01-01,female,77.3
+Terengganu,2014-01-01,both,71.3
+Terengganu,2014-01-01,male,68.6
+Terengganu,2014-01-01,female,74.4
+W.P. Kuala Lumpur,2014-01-01,both,76.1
+W.P. Kuala Lumpur,2014-01-01,male,74.2
+W.P. Kuala Lumpur,2014-01-01,female,78.2
+Johor,2015-01-01,both,74.3
+Johor,2015-01-01,male,72.1
+Johor,2015-01-01,female,77.0
+Kedah,2015-01-01,both,73.1
+Kedah,2015-01-01,male,70.4
+Kedah,2015-01-01,female,76.1
+Kelantan,2015-01-01,both,72.0
+Kelantan,2015-01-01,male,69.0
+Kelantan,2015-01-01,female,75.1
+Melaka,2015-01-01,both,74.6
+Melaka,2015-01-01,male,72.1
+Melaka,2015-01-01,female,77.4
+Negeri Sembilan,2015-01-01,both,73.6
+Negeri Sembilan,2015-01-01,male,71.0
+Negeri Sembilan,2015-01-01,female,76.6
+Pahang,2015-01-01,both,73.2
+Pahang,2015-01-01,male,70.7
+Pahang,2015-01-01,female,76.3
+Perak,2015-01-01,both,74.0
+Perak,2015-01-01,male,71.3
+Perak,2015-01-01,female,77.1
+Perlis,2015-01-01,both,73.0
+Perlis,2015-01-01,male,70.3
+Perlis,2015-01-01,female,75.9
+Pulau Pinang,2015-01-01,both,74.8
+Pulau Pinang,2015-01-01,male,72.4
+Pulau Pinang,2015-01-01,female,77.6
+Sabah,2015-01-01,both,73.9
+Sabah,2015-01-01,male,72.3
+Sabah,2015-01-01,female,75.8
+Sarawak,2015-01-01,both,76.3
+Sarawak,2015-01-01,male,74.6
+Sarawak,2015-01-01,female,78.3
+Selangor,2015-01-01,both,75.2
+Selangor,2015-01-01,male,73.3
+Selangor,2015-01-01,female,77.4
+Terengganu,2015-01-01,both,71.4
+Terengganu,2015-01-01,male,68.7
+Terengganu,2015-01-01,female,74.5
+W.P. Kuala Lumpur,2015-01-01,both,76.2
+W.P. Kuala Lumpur,2015-01-01,male,74.3
+W.P. Kuala Lumpur,2015-01-01,female,78.3
+Johor,2016-01-01,both,74.2
+Johor,2016-01-01,male,71.9
+Johor,2016-01-01,female,76.9
+Kedah,2016-01-01,both,72.9
+Kedah,2016-01-01,male,70.2
+Kedah,2016-01-01,female,75.9
+Kelantan,2016-01-01,both,72.0
+Kelantan,2016-01-01,male,69.0
+Kelantan,2016-01-01,female,75.1
+Melaka,2016-01-01,both,74.5
+Melaka,2016-01-01,male,71.9
+Melaka,2016-01-01,female,77.2
+Negeri Sembilan,2016-01-01,both,73.4
+Negeri Sembilan,2016-01-01,male,70.6
+Negeri Sembilan,2016-01-01,female,76.7
+Pahang,2016-01-01,both,73.3
+Pahang,2016-01-01,male,70.9
+Pahang,2016-01-01,female,76.2
+Perak,2016-01-01,both,74.0
+Perak,2016-01-01,male,71.1
+Perak,2016-01-01,female,77.3
+Perlis,2016-01-01,both,72.4
+Perlis,2016-01-01,male,70.0
+Perlis,2016-01-01,female,75.0
+Pulau Pinang,2016-01-01,both,74.8
+Pulau Pinang,2016-01-01,male,72.3
+Pulau Pinang,2016-01-01,female,77.7
+Sabah,2016-01-01,both,74.2
+Sabah,2016-01-01,male,72.6
+Sabah,2016-01-01,female,76.2
+Sarawak,2016-01-01,both,76.3
+Sarawak,2016-01-01,male,74.5
+Sarawak,2016-01-01,female,78.3
+Selangor,2016-01-01,both,75.1
+Selangor,2016-01-01,male,73.1
+Selangor,2016-01-01,female,77.4
+Terengganu,2016-01-01,both,71.6
+Terengganu,2016-01-01,male,68.9
+Terengganu,2016-01-01,female,74.6
+W.P. Kuala Lumpur,2016-01-01,both,76.6
+W.P. Kuala Lumpur,2016-01-01,male,74.6
+W.P. Kuala Lumpur,2016-01-01,female,79.0
+W.P. Labuan,2016-01-01,both,77.4
+W.P. Labuan,2016-01-01,male,76.2
+W.P. Labuan,2016-01-01,female,78.7
+W.P. Putrajaya,2016-01-01,both,72.3
+W.P. Putrajaya,2016-01-01,male,72.6
+W.P. Putrajaya,2016-01-01,female,72.0
+Johor,2017-01-01,both,74.1
+Johor,2017-01-01,male,71.8
+Johor,2017-01-01,female,76.9
+Kedah,2017-01-01,both,73.0
+Kedah,2017-01-01,male,70.3
+Kedah,2017-01-01,female,76.0
+Kelantan,2017-01-01,both,72.2
+Kelantan,2017-01-01,male,69.3
+Kelantan,2017-01-01,female,75.2
+Melaka,2017-01-01,both,74.5
+Melaka,2017-01-01,male,71.8
+Melaka,2017-01-01,female,77.5
+Negeri Sembilan,2017-01-01,both,73.4
+Negeri Sembilan,2017-01-01,male,70.5
+Negeri Sembilan,2017-01-01,female,76.8
+Pahang,2017-01-01,both,73.4
+Pahang,2017-01-01,male,71.0
+Pahang,2017-01-01,female,76.3
+Perak,2017-01-01,both,73.9
+Perak,2017-01-01,male,71.0
+Perak,2017-01-01,female,77.2
+Perlis,2017-01-01,both,72.0
+Perlis,2017-01-01,male,69.4
+Perlis,2017-01-01,female,74.8
+Pulau Pinang,2017-01-01,both,74.9
+Pulau Pinang,2017-01-01,male,72.3
+Pulau Pinang,2017-01-01,female,77.7
+Sabah,2017-01-01,both,74.2
+Sabah,2017-01-01,male,72.5
+Sabah,2017-01-01,female,76.3
+Sarawak,2017-01-01,both,76.2
+Sarawak,2017-01-01,male,74.4
+Sarawak,2017-01-01,female,78.2
+Selangor,2017-01-01,both,75.1
+Selangor,2017-01-01,male,73.1
+Selangor,2017-01-01,female,77.4
+Terengganu,2017-01-01,both,71.8
+Terengganu,2017-01-01,male,69.1
+Terengganu,2017-01-01,female,74.9
+W.P. Kuala Lumpur,2017-01-01,both,76.5
+W.P. Kuala Lumpur,2017-01-01,male,74.4
+W.P. Kuala Lumpur,2017-01-01,female,79.0
+W.P. Labuan,2017-01-01,both,77.3
+W.P. Labuan,2017-01-01,male,76.0
+W.P. Labuan,2017-01-01,female,78.7
+W.P. Putrajaya,2017-01-01,both,72.2
+W.P. Putrajaya,2017-01-01,male,71.7
+W.P. Putrajaya,2017-01-01,female,72.6
+Johor,2018-01-01,both,74.3
+Johor,2018-01-01,male,72.0
+Johor,2018-01-01,female,77.1
+Kedah,2018-01-01,both,73.1
+Kedah,2018-01-01,male,70.4
+Kedah,2018-01-01,female,76.2
+Kelantan,2018-01-01,both,72.4
+Kelantan,2018-01-01,male,69.6
+Kelantan,2018-01-01,female,75.5
+Melaka,2018-01-01,both,74.7
+Melaka,2018-01-01,male,72.0
+Melaka,2018-01-01,female,77.6
+Negeri Sembilan,2018-01-01,both,73.5
+Negeri Sembilan,2018-01-01,male,70.6
+Negeri Sembilan,2018-01-01,female,76.9
+Pahang,2018-01-01,both,73.6
+Pahang,2018-01-01,male,71.2
+Pahang,2018-01-01,female,76.4
+Perak,2018-01-01,both,74.0
+Perak,2018-01-01,male,71.1
+Perak,2018-01-01,female,77.3
+Perlis,2018-01-01,both,72.0
+Perlis,2018-01-01,male,69.2
+Perlis,2018-01-01,female,74.8
+Pulau Pinang,2018-01-01,both,75.2
+Pulau Pinang,2018-01-01,male,72.6
+Pulau Pinang,2018-01-01,female,78.0
+Sabah,2018-01-01,both,74.2
+Sabah,2018-01-01,male,72.6
+Sabah,2018-01-01,female,76.1
+Sarawak,2018-01-01,both,76.4
+Sarawak,2018-01-01,male,74.6
+Sarawak,2018-01-01,female,78.4
+Selangor,2018-01-01,both,75.4
+Selangor,2018-01-01,male,73.4
+Selangor,2018-01-01,female,77.7
+Terengganu,2018-01-01,both,72.1
+Terengganu,2018-01-01,male,69.4
+Terengganu,2018-01-01,female,75.2
+W.P. Kuala Lumpur,2018-01-01,both,76.7
+W.P. Kuala Lumpur,2018-01-01,male,74.5
+W.P. Kuala Lumpur,2018-01-01,female,79.3
+W.P. Labuan,2018-01-01,both,77.6
+W.P. Labuan,2018-01-01,male,76.2
+W.P. Labuan,2018-01-01,female,79.0
+W.P. Putrajaya,2018-01-01,both,73.3
+W.P. Putrajaya,2018-01-01,male,72.8
+W.P. Putrajaya,2018-01-01,female,73.5
+Johor,2019-01-01,both,74.4
+Johor,2019-01-01,male,72.1
+Johor,2019-01-01,female,77.3
+Kedah,2019-01-01,both,73.4
+Kedah,2019-01-01,male,70.7
+Kedah,2019-01-01,female,76.4
+Kelantan,2019-01-01,both,72.6
+Kelantan,2019-01-01,male,69.7
+Kelantan,2019-01-01,female,75.8
+Melaka,2019-01-01,both,74.9
+Melaka,2019-01-01,male,72.2
+Melaka,2019-01-01,female,77.8
+Negeri Sembilan,2019-01-01,both,73.8
+Negeri Sembilan,2019-01-01,male,70.9
+Negeri Sembilan,2019-01-01,female,77.0
+Pahang,2019-01-01,both,73.9
+Pahang,2019-01-01,male,71.5
+Pahang,2019-01-01,female,76.6
+Perak,2019-01-01,both,74.2
+Perak,2019-01-01,male,71.3
+Perak,2019-01-01,female,77.4
+Perlis,2019-01-01,both,72.0
+Perlis,2019-01-01,male,69.3
+Perlis,2019-01-01,female,74.9
+Pulau Pinang,2019-01-01,both,75.5
+Pulau Pinang,2019-01-01,male,72.9
+Pulau Pinang,2019-01-01,female,78.2
+Sabah,2019-01-01,both,74.2
+Sabah,2019-01-01,male,72.5
+Sabah,2019-01-01,female,76.3
+Sarawak,2019-01-01,both,76.3
+Sarawak,2019-01-01,male,74.5
+Sarawak,2019-01-01,female,78.4
+Selangor,2019-01-01,both,75.7
+Selangor,2019-01-01,male,73.6
+Selangor,2019-01-01,female,78.0
+Terengganu,2019-01-01,both,72.2
+Terengganu,2019-01-01,male,69.6
+Terengganu,2019-01-01,female,75.2
+W.P. Kuala Lumpur,2019-01-01,both,76.9
+W.P. Kuala Lumpur,2019-01-01,male,74.6
+W.P. Kuala Lumpur,2019-01-01,female,79.5
+W.P. Labuan,2019-01-01,both,77.6
+W.P. Labuan,2019-01-01,male,76.3
+W.P. Labuan,2019-01-01,female,79.0
+W.P. Putrajaya,2019-01-01,both,73.8
+W.P. Putrajaya,2019-01-01,male,72.5
+W.P. Putrajaya,2019-01-01,female,74.5
+Johor,2020-01-01,both,74.3
+Johor,2020-01-01,male,72.1
+Johor,2020-01-01,female,76.9
+Kedah,2020-01-01,both,73.1
+Kedah,2020-01-01,male,70.4
+Kedah,2020-01-01,female,76.1
+Kelantan,2020-01-01,both,72.2
+Kelantan,2020-01-01,male,69.6
+Kelantan,2020-01-01,female,75.1
+Melaka,2020-01-01,both,74.0
+Melaka,2020-01-01,male,71.8
+Melaka,2020-01-01,female,76.4
+Negeri Sembilan,2020-01-01,both,73.3
+Negeri Sembilan,2020-01-01,male,70.4
+Negeri Sembilan,2020-01-01,female,76.4
+Pahang,2020-01-01,both,72.9
+Pahang,2020-01-01,male,70.7
+Pahang,2020-01-01,female,75.7
+Perak,2020-01-01,both,73.7
+Perak,2020-01-01,male,71.1
+Perak,2020-01-01,female,76.7
+Perlis,2020-01-01,both,72.8
+Perlis,2020-01-01,male,70.2
+Perlis,2020-01-01,female,75.6
+Pulau Pinang,2020-01-01,both,74.2
+Pulau Pinang,2020-01-01,male,72.0
+Pulau Pinang,2020-01-01,female,76.7
+Sabah,2020-01-01,both,74.3
+Sabah,2020-01-01,male,72.6
+Sabah,2020-01-01,female,76.4
+Sarawak,2020-01-01,both,75.1
+Sarawak,2020-01-01,male,72.9
+Sarawak,2020-01-01,female,77.6
+Selangor,2020-01-01,both,77.4
+Selangor,2020-01-01,male,75.5
+Selangor,2020-01-01,female,79.6
+Terengganu,2020-01-01,both,71.7
+Terengganu,2020-01-01,male,69.1
+Terengganu,2020-01-01,female,74.6
+W.P. Kuala Lumpur,2020-01-01,both,76.4
+W.P. Kuala Lumpur,2020-01-01,male,74.1
+W.P. Kuala Lumpur,2020-01-01,female,79.1
+W.P. Labuan,2020-01-01,both,75.4
+W.P. Labuan,2020-01-01,male,73.6
+W.P. Labuan,2020-01-01,female,77.3
+W.P. Putrajaya,2020-01-01,both,74.5
+W.P. Putrajaya,2020-01-01,male,72.2
+W.P. Putrajaya,2020-01-01,female,76.7
+Johor,2021-01-01,both,73.6
+Johor,2021-01-01,male,71.5
+Johor,2021-01-01,female,76.2
+Kedah,2021-01-01,both,72.2
+Kedah,2021-01-01,male,69.6
+Kedah,2021-01-01,female,75.0
+Kelantan,2021-01-01,both,71.6
+Kelantan,2021-01-01,male,69.0
+Kelantan,2021-01-01,female,74.3
+Melaka,2021-01-01,both,73.1
+Melaka,2021-01-01,male,70.8
+Melaka,2021-01-01,female,75.6
+Negeri Sembilan,2021-01-01,both,73.1
+Negeri Sembilan,2021-01-01,male,70.7
+Negeri Sembilan,2021-01-01,female,75.9
+Pahang,2021-01-01,both,72.6
+Pahang,2021-01-01,male,70.4
+Pahang,2021-01-01,female,75.4
+Perak,2021-01-01,both,73.3
+Perak,2021-01-01,male,70.6
+Perak,2021-01-01,female,76.4
+Perlis,2021-01-01,both,72.4
+Perlis,2021-01-01,male,69.6
+Perlis,2021-01-01,female,75.4
+Pulau Pinang,2021-01-01,both,73.7
+Pulau Pinang,2021-01-01,male,71.3
+Pulau Pinang,2021-01-01,female,76.3
+Sabah,2021-01-01,both,73.4
+Sabah,2021-01-01,male,71.7
+Sabah,2021-01-01,female,75.5
+Sarawak,2021-01-01,both,74.5
+Sarawak,2021-01-01,male,72.1
+Sarawak,2021-01-01,female,77.2
+Selangor,2021-01-01,both,76.4
+Selangor,2021-01-01,male,74.4
+Selangor,2021-01-01,female,78.7
+Terengganu,2021-01-01,both,71.3
+Terengganu,2021-01-01,male,68.9
+Terengganu,2021-01-01,female,73.9
+W.P. Kuala Lumpur,2021-01-01,both,75.1
+W.P. Kuala Lumpur,2021-01-01,male,72.8
+W.P. Kuala Lumpur,2021-01-01,female,77.8
+W.P. Labuan,2021-01-01,both,74.5
+W.P. Labuan,2021-01-01,male,72.9
+W.P. Labuan,2021-01-01,female,76.2
+W.P. Putrajaya,2021-01-01,both,74.6
+W.P. Putrajaya,2021-01-01,male,71.6
+W.P. Putrajaya,2021-01-01,female,77.6
+Johor,2022-01-01,both,73.5
+Johor,2022-01-01,male,71.4
+Johor,2022-01-01,female,76.0
+Kedah,2022-01-01,both,71.7
+Kedah,2022-01-01,male,69.0
+Kedah,2022-01-01,female,74.7
+Kelantan,2022-01-01,both,71.4
+Kelantan,2022-01-01,male,68.9
+Kelantan,2022-01-01,female,74.1
+Melaka,2022-01-01,both,73.0
+Melaka,2022-01-01,male,70.5
+Melaka,2022-01-01,female,75.6
+Negeri Sembilan,2022-01-01,both,72.9
+Negeri Sembilan,2022-01-01,male,70.3
+Negeri Sembilan,2022-01-01,female,75.9
+Pahang,2022-01-01,both,72.4
+Pahang,2022-01-01,male,70.0
+Pahang,2022-01-01,female,75.2
+Perak,2022-01-01,both,73.0
+Perak,2022-01-01,male,70.2
+Perak,2022-01-01,female,76.3
+Perlis,2022-01-01,both,72.3
+Perlis,2022-01-01,male,69.3
+Perlis,2022-01-01,female,75.4
+Pulau Pinang,2022-01-01,both,73.5
+Pulau Pinang,2022-01-01,male,71.1
+Pulau Pinang,2022-01-01,female,76.2
+Sabah,2022-01-01,both,73.1
+Sabah,2022-01-01,male,71.3
+Sabah,2022-01-01,female,75.2
+Sarawak,2022-01-01,both,74.3
+Sarawak,2022-01-01,male,71.9
+Sarawak,2022-01-01,female,77.1
+Selangor,2022-01-01,both,76.2
+Selangor,2022-01-01,male,74.2
+Selangor,2022-01-01,female,78.6
+Terengganu,2022-01-01,both,71.0
+Terengganu,2022-01-01,male,68.7
+Terengganu,2022-01-01,female,73.7
+W.P. Kuala Lumpur,2022-01-01,both,75.1
+W.P. Kuala Lumpur,2022-01-01,male,72.9
+W.P. Kuala Lumpur,2022-01-01,female,77.8
+W.P. Labuan,2022-01-01,both,74.4
+W.P. Labuan,2022-01-01,male,72.7
+W.P. Labuan,2022-01-01,female,76.4
+W.P. Putrajaya,2022-01-01,both,74.2
+W.P. Putrajaya,2022-01-01,male,71.7
+W.P. Putrajaya,2022-01-01,female,76.7
+Johor,2023-01-01,both,73.7
+Johor,2023-01-01,male,71.6
+Johor,2023-01-01,female,76.2
+Kedah,2023-01-01,both,71.7
+Kedah,2023-01-01,male,69.1
+Kedah,2023-01-01,female,74.6
+Kelantan,2023-01-01,both,71.8
+Kelantan,2023-01-01,male,69.3
+Kelantan,2023-01-01,female,74.6
+Melaka,2023-01-01,both,73.1
+Melaka,2023-01-01,male,70.6
+Melaka,2023-01-01,female,75.9
+Negeri Sembilan,2023-01-01,both,72.9
+Negeri Sembilan,2023-01-01,male,70.3
+Negeri Sembilan,2023-01-01,female,75.9
+Pahang,2023-01-01,both,72.3
+Pahang,2023-01-01,male,69.9
+Pahang,2023-01-01,female,75.1
+Perak,2023-01-01,both,72.9
+Perak,2023-01-01,male,70.1
+Perak,2023-01-01,female,76.2
+Perlis,2023-01-01,both,72.4
+Perlis,2023-01-01,male,69.5
+Perlis,2023-01-01,female,75.5
+Pulau Pinang,2023-01-01,both,73.7
+Pulau Pinang,2023-01-01,male,71.3
+Pulau Pinang,2023-01-01,female,76.5
+Sabah,2023-01-01,both,73.7
+Sabah,2023-01-01,male,71.9
+Sabah,2023-01-01,female,75.9
+Sarawak,2023-01-01,both,74.5
+Sarawak,2023-01-01,male,72.1
+Sarawak,2023-01-01,female,77.2
+Selangor,2023-01-01,both,76.4
+Selangor,2023-01-01,male,74.4
+Selangor,2023-01-01,female,78.8
+Terengganu,2023-01-01,both,71.1
+Terengganu,2023-01-01,male,68.8
+Terengganu,2023-01-01,female,73.6
+W.P. Kuala Lumpur,2023-01-01,both,75.4
+W.P. Kuala Lumpur,2023-01-01,male,73.3
+W.P. Kuala Lumpur,2023-01-01,female,77.9
+W.P. Labuan,2023-01-01,both,75.7
+W.P. Labuan,2023-01-01,male,73.9
+W.P. Labuan,2023-01-01,female,77.8
+W.P. Putrajaya,2023-01-01,both,73.8
+W.P. Putrajaya,2023-01-01,male,71.4
+W.P. Putrajaya,2023-01-01,female,76.1
+Johor,2024-01-01,both,74.4
+Johor,2024-01-01,male,72.3
+Johor,2024-01-01,female,77.0
+Kedah,2024-01-01,both,72.7
+Kedah,2024-01-01,male,70.0
+Kedah,2024-01-01,female,75.7
+Kelantan,2024-01-01,both,72.9
+Kelantan,2024-01-01,male,70.3
+Kelantan,2024-01-01,female,75.7
+Melaka,2024-01-01,both,73.9
+Melaka,2024-01-01,male,71.4
+Melaka,2024-01-01,female,76.8
+Negeri Sembilan,2024-01-01,both,73.5
+Negeri Sembilan,2024-01-01,male,70.9
+Negeri Sembilan,2024-01-01,female,76.5
+Pahang,2024-01-01,both,72.8
+Pahang,2024-01-01,male,70.5
+Pahang,2024-01-01,female,75.6
+Perak,2024-01-01,both,73.5
+Perak,2024-01-01,male,70.7
+Perak,2024-01-01,female,76.7
+Perlis,2024-01-01,both,73.0
+Perlis,2024-01-01,male,70.2
+Perlis,2024-01-01,female,75.9
+Pulau Pinang,2024-01-01,both,74.6
+Pulau Pinang,2024-01-01,male,72.2
+Pulau Pinang,2024-01-01,female,77.3
+Sabah,2024-01-01,both,74.7
+Sabah,2024-01-01,male,72.7
+Sabah,2024-01-01,female,77.0
+Sarawak,2024-01-01,both,75.0
+Sarawak,2024-01-01,male,72.6
+Sarawak,2024-01-01,female,77.7
+Selangor,2024-01-01,both,77.6
+Selangor,2024-01-01,male,75.7
+Selangor,2024-01-01,female,80.0
+Terengganu,2024-01-01,both,72.0
+Terengganu,2024-01-01,male,69.7
+Terengganu,2024-01-01,female,74.7
+W.P. Kuala Lumpur,2024-01-01,both,76.8
+W.P. Kuala Lumpur,2024-01-01,male,74.8
+W.P. Kuala Lumpur,2024-01-01,female,79.2
+W.P. Labuan,2024-01-01,both,76.4
+W.P. Labuan,2024-01-01,male,74.4
+W.P. Labuan,2024-01-01,female,78.8
+W.P. Putrajaya,2024-01-01,both,73.5
+W.P. Putrajaya,2024-01-01,male,71.9
+W.P. Putrajaya,2024-01-01,female,75.0
+Johor,2025-01-01,both,74.6
+Johor,2025-01-01,male,72.5
+Johor,2025-01-01,female,77.2
+Kedah,2025-01-01,both,72.9
+Kedah,2025-01-01,male,70.2
+Kedah,2025-01-01,female,75.8
+Kelantan,2025-01-01,both,73.5
+Kelantan,2025-01-01,male,70.8
+Kelantan,2025-01-01,female,76.3
+Melaka,2025-01-01,both,74.5
+Melaka,2025-01-01,male,71.9
+Melaka,2025-01-01,female,77.4
+Negeri Sembilan,2025-01-01,both,73.9
+Negeri Sembilan,2025-01-01,male,71.3
+Negeri Sembilan,2025-01-01,female,76.9
+Pahang,2025-01-01,both,73.3
+Pahang,2025-01-01,male,71.0
+Pahang,2025-01-01,female,76.1
+Perak,2025-01-01,both,73.8
+Perak,2025-01-01,male,71.1
+Perak,2025-01-01,female,77.0
+Perlis,2025-01-01,both,73.3
+Perlis,2025-01-01,male,70.4
+Perlis,2025-01-01,female,76.4
+Pulau Pinang,2025-01-01,both,75.1
+Pulau Pinang,2025-01-01,male,72.8
+Pulau Pinang,2025-01-01,female,77.8
+Sabah,2025-01-01,both,75.0
+Sabah,2025-01-01,male,72.9
+Sabah,2025-01-01,female,77.5
+Sarawak,2025-01-01,both,75.3
+Sarawak,2025-01-01,male,72.9
+Sarawak,2025-01-01,female,78.0
+Selangor,2025-01-01,both,77.9
+Selangor,2025-01-01,male,76.0
+Selangor,2025-01-01,female,80.2
+Terengganu,2025-01-01,both,72.6
+Terengganu,2025-01-01,male,70.2
+Terengganu,2025-01-01,female,75.2
+W.P. Kuala Lumpur,2025-01-01,both,77.2
+W.P. Kuala Lumpur,2025-01-01,male,75.0
+W.P. Kuala Lumpur,2025-01-01,female,79.6
+W.P. Labuan,2025-01-01,both,76.6
+W.P. Labuan,2025-01-01,male,74.4
+W.P. Labuan,2025-01-01,female,79.2
+W.P. Putrajaya,2025-01-01,both,73.6
+W.P. Putrajaya,2025-01-01,male,71.8
+W.P. Putrajaya,2025-01-01,female,75.4
+Johor,2026-01-01,both,74.9
+Johor,2026-01-01,male,72.7
+Johor,2026-01-01,female,77.4
+Kedah,2026-01-01,both,73.0
+Kedah,2026-01-01,male,70.3
+Kedah,2026-01-01,female,76.0
+Kelantan,2026-01-01,both,73.6
+Kelantan,2026-01-01,male,70.9
+Kelantan,2026-01-01,female,76.5
+Melaka,2026-01-01,both,74.8
+Melaka,2026-01-01,male,72.0
+Melaka,2026-01-01,female,77.8
+Negeri Sembilan,2026-01-01,both,74.2
+Negeri Sembilan,2026-01-01,male,71.5
+Negeri Sembilan,2026-01-01,female,77.3
+Pahang,2026-01-01,both,73.6
+Pahang,2026-01-01,male,71.3
+Pahang,2026-01-01,female,76.3
+Perak,2026-01-01,both,74.0
+Perak,2026-01-01,male,71.2
+Perak,2026-01-01,female,77.2
+Perlis,2026-01-01,both,73.4
+Perlis,2026-01-01,male,70.0
+Perlis,2026-01-01,female,77.0
+Pulau Pinang,2026-01-01,both,75.5
+Pulau Pinang,2026-01-01,male,73.1
+Pulau Pinang,2026-01-01,female,78.0
+Sabah,2026-01-01,both,75.1
+Sabah,2026-01-01,male,73.0
+Sabah,2026-01-01,female,77.6
+Sarawak,2026-01-01,both,75.5
+Sarawak,2026-01-01,male,73.3
+Sarawak,2026-01-01,female,78.1
+Selangor,2026-01-01,both,78.2
+Selangor,2026-01-01,male,76.4
+Selangor,2026-01-01,female,80.4
+Terengganu,2026-01-01,both,72.8
+Terengganu,2026-01-01,male,70.3
+Terengganu,2026-01-01,female,75.7
+W.P. Kuala Lumpur,2026-01-01,both,77.3
+W.P. Kuala Lumpur,2026-01-01,male,75.1
+W.P. Kuala Lumpur,2026-01-01,female,79.9
+W.P. Labuan,2026-01-01,both,77.0
+W.P. Labuan,2026-01-01,male,75.1
+W.P. Labuan,2026-01-01,female,79.3
+W.P. Putrajaya,2026-01-01,both,74.6
+W.P. Putrajaya,2026-01-01,male,72.5
+W.P. Putrajaya,2026-01-01,female,76.6

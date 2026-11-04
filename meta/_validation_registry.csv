@@ -104,6 +104,9 @@ R2 vocabulary and required fields,dosm_sdg_indicators,PASS,
 R2 vocabulary and required fields,electoral_boundaries,PASS,
 R2 vocabulary and required fields,sector_plans,PASS,
 R2 vocabulary and required fields,un_sdg,PASS,
+R2 vocabulary and required fields,vital_statistics,PASS,
+R2 vocabulary and required fields,water_access,PASS,
+R2 vocabulary and required fields,crime_stats,PASS,
 R3 every file belongs to a registered series,all,PASS,
 R4 held series has files,dosm_population,PASS,3 file(s)
 R5 every file has a sha256,dosm_population,PASS,3 files
@@ -169,6 +172,14 @@ R4 held series has files,dosm_gfs,PASS,11 file(s)
 R5 every file has a sha256,dosm_gfs,PASS,11 files
 R7 every file is in the L0 archive,dosm_gfs,PASS,11 of 11 archived (release l0-archive or git history)
 R6 licence recorded,dosm_gfs,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,education_stats,PASS,3 file(s)
+R5 every file has a sha256,education_stats,PASS,3 files
+R7 every file is in the L0 archive,education_stats,PASS,3 of 3 archived (release l0-archive or git history)
+R6 licence recorded,education_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,health_facts,PASS,2 file(s)
+R5 every file has a sha256,health_facts,PASS,2 files
+R7 every file is in the L0 archive,health_facts,PASS,2 of 2 archived (release l0-archive or git history)
+R6 licence recorded,health_facts,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
 R4 held series has files,amenities_access,PASS,1 file(s)
 R5 every file has a sha256,amenities_access,PASS,1 files
 R7 every file is in the L0 archive,amenities_access,PASS,1 of 1 archived (release l0-archive or git history)
@@ -185,3 +196,15 @@ R4 held series has files,lkan_state,PASS,353 file(s)
 R5 every file has a sha256,lkan_state,PASS,353 files
 R7 every file is in the L0 archive,lkan_state,OPEN,290 of 353 archived (release l0-archive or git history)
 R6 licence recorded,lkan_state,OPEN,licence to_confirm
+R4 held series has files,vital_statistics,PASS,2 file(s)
+R5 every file has a sha256,vital_statistics,PASS,2 files
+R7 every file is in the L0 archive,vital_statistics,PASS,2 of 2 archived (release l0-archive or git history)
+R6 licence recorded,vital_statistics,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,water_access,PASS,1 file(s)
+R5 every file has a sha256,water_access,PASS,1 files
+R7 every file is in the L0 archive,water_access,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,water_access,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,crime_stats,PASS,1 file(s)
+R5 every file has a sha256,crime_stats,PASS,1 files
+R7 every file is in the L0 archive,crime_stats,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,crime_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"

@@ -41,6 +41,7 @@ STATE_ISO = {  # ISO 3166-2:MY (decision D2)
 STATE_EN = {"Pulau Pinang": "Penang", "Melaka": "Malacca", "W.P. Kuala Lumpur": "Federal Territory of Kuala Lumpur",
             "W.P. Labuan": "Federal Territory of Labuan", "W.P. Putrajaya": "Federal Territory of Putrajaya"}
 GEO_ALIAS = {"Malaysia": "MY", "Supra": "_unallocated"}
+FILE_OF = {"deaths_state": "death_state"}  # catalogue id -> file name, where they differ
 DISTRICT_VINTAGE = "dosm_2020"
 OBS_FIELDS = ["indicator_code", "geo_code", "period_code", "breakdown_key", "entity_id", "basis", "edition_id",
               "vintage", "value", "value_printed", "unit_printed", "precision_printed", "status", "se", "ci_low",
@@ -127,7 +128,8 @@ def period_of(date, freq):
 def dosm_simple(obs, ed, dataset, cols, freq, method, filt=None, geo_col="state", breakdown=None):
     """cols: {source_column: (indicator_code, scale, unit_printed, precision)}"""
     e, vint, sha = ed[dataset]
-    for i, r in enumerate(rows(os.path.join(DOSM, f"{dataset}.csv")), start=2):
+    fname = FILE_OF.get(dataset, dataset)
+    for i, r in enumerate(rows(os.path.join(DOSM, f"{fname}.csv")), start=2):
         if filt and not filt(r):
             continue
         g = "MY" if geo_col is None else geo_of(r[geo_col])
@@ -142,7 +144,7 @@ def dosm_simple(obs, ed, dataset, cols, freq, method, filt=None, geo_col="state"
             obs.add(indicator_code=ind, geo_code=g, period_code=period_of(r["date"], freq), breakdown_key=bk,
                     basis="statistic", edition_id=e, vintage=vint, value=v * scale, value_printed=r[col],
                     unit_printed=unit, precision_printed=prec, estimate_method=method, file_id=sha,
-                    table_ref=dataset, l1_ref=f"sources/dosm/data/{dataset}.csv#row{i}")
+                    table_ref=dataset, l1_ref=f"sources/dosm/data/{fname}.csv#row{i}")
 
 
 def build_dosm(obs, ed):
@@ -212,6 +214,34 @@ def build_dosm(obs, ed):
     dosm_simple(obs, ed, "gdp_state_real_supply", {"value": ("gdp.real", Decimal(1000000), "RM million, 2015 prices",
                                                              "1000")},
                 "A", "modelled", filt=lambda r: r["series"] == "abs" and r["sector"] == "p0")
+
+
+def build_services(obs, ed):
+    """Phase 2: health, education and services by state (state and national rows; district rows use each
+    ministry's own districts, not DOSM's, so they wait for their own boundary sets)."""
+    one, alld = Decimal(1), ("All", "All Districts")
+    agg = lambda r: r.get("district", "All") in alld  # noqa: E731
+    dosm_simple(obs, ed, "hospital_beds", {"beds": ("health.beds", one, "beds", "1")}, "A", "administrative",
+                filt=agg, breakdown=lambda r: "_total" if r["type"] == "all" else f"facility_type={r['type']}")
+    dosm_simple(obs, ed, "healthcare_staff", {"staff": ("health.staff", one, "persons", "1")}, "A", "administrative",
+                breakdown=lambda r: "_total" if r["type"] == "all" else f"staff_type={r['type']}")
+    dosm_simple(obs, ed, "schools_district", {"schools": ("edu.schools", one, "institutions", "1")}, "A",
+                "administrative", filt=agg,
+                breakdown=lambda r: f"stage={r['stage']}|institution_type={slug(r['type'])}")
+    for ds, col, ind in (("enrolment_school_district", "students", "edu.enrolment"),
+                         ("teachers_district", "teachers", "edu.teachers")):
+        dosm_simple(obs, ed, ds, {col: (ind, one, "persons", "1")}, "A", "administrative", filt=agg,
+                    breakdown=lambda r: f"stage={r['stage']}" + ("" if r["sex"] == "both" else f"|sex={r['sex']}"))
+    dosm_simple(obs, ed, "deaths_state", {"abs": ("deaths.total", one, "persons", "1"),
+                                          "rate": ("deaths.crude_rate", one, "per 1,000 population", "0.1")},
+                "A", "administrative")
+    dosm_simple(obs, ed, "life_expectancy_state", {"life_expectancy": ("life_expectancy", one, "years", "0.1")},
+                "A", "modelled", breakdown=lambda r: "_total" if r["sex"] == "both" else f"sex={r['sex']}")
+    dosm_simple(obs, ed, "water_access", {"proportion": ("water.access.share", one, "percent", "0.1")}, "A",
+                "administrative", breakdown=lambda r: "_total" if r["strata"] == "overall" else f"strata={r['strata']}")
+    dosm_simple(obs, ed, "crime_district", {"crimes": ("crime.count", one, "crimes", "1")}, "A", "administrative",
+                filt=agg, breakdown=lambda r: f"crime_category={r['category']}"
+                + ("" if r["type"] == "all" else f"|crime_type={r['type']}"))
 
 
 # state accounts: the headline lines only (Phase 1); the line codes are the states pipeline's conformed codes
@@ -372,7 +402,10 @@ def checks(obs, geo, per, ind, brk, editions):
                 f"{len(g)} of 13 state governments" + (f"; never printed or not extracted for {', '.join(miss)}"
                                                         if miss else ""))
         else:
-            add("C6 state coverage", i, "PASS" if len(g) == 16 else "FAIL", f"{len(g)} of 16 states and territories")
+            want = int(next(x for x in ind if x["indicator_code"] == i)["expected_state_count"] or 16)
+            note = next(x for x in ind if x["indicator_code"] == i)["coverage_note"]
+            add("C6 state coverage", i, "PASS" if len(g) == want else "FAIL",
+                f"{len(g)} of 16 states and territories" + (f" (expected {want}: {note})" if want != 16 else ""))
     # population: the parts add up (the L1 verifier does it per file; here on the conformed rows)
     pop = defaultdict(Decimal)
     for r in obs.rows:
@@ -411,6 +444,7 @@ def main():
     obs = Obs()
     obs.districts = {}
     build_dosm(obs, ed)
+    build_services(obs, ed)
     build_states(obs)
     build_federal(obs)
     ind = rows(os.path.join(META, "indicator.csv"))

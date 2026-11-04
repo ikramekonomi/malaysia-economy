@@ -44,6 +44,87 @@
     "storage_etag": "34596c61cdef428f56a3412c4be5a884-3",
     "storage_last_modified": "Wed, 07 Oct 2026 22:51:33 GMT"
   },
+  "hospital_beds": {
+    "file": "hospital_beds.csv",
+    "data_as_of": "2024",
+    "last_updated": "2026-10-11 12:00",
+    "next_update": "2026-12-31 16:00",
+    "api_total_rows": 1,
+    "storage_etag": "b91b10c5093983926d9616dcf5484850",
+    "storage_last_modified": "Sat, 10 Oct 2026 17:25:00 GMT"
+  },
+  "healthcare_staff": {
+    "file": "healthcare_staff.csv",
+    "data_as_of": "2022-12-31 23:59",
+    "last_updated": "2024-09-01 12:00",
+    "next_update": "tbc",
+    "api_total_rows": 1,
+    "storage_etag": "6f8b11e845fc5984cf29522badeba39a",
+    "storage_last_modified": "Fri, 27 Sep 2024 02:22:48 GMT"
+  },
+  "schools_district": {
+    "file": "schools_district.csv",
+    "data_as_of": "2025",
+    "last_updated": "2026-10-11 12:00",
+    "next_update": "2027-12-31 18:00",
+    "api_total_rows": 1,
+    "storage_etag": "531b458d94c96132f79954bfa6365657",
+    "storage_last_modified": "Sun, 11 Oct 2026 08:43:14 GMT"
+  },
+  "enrolment_school_district": {
+    "file": "enrolment_school_district.csv",
+    "data_as_of": "2025",
+    "last_updated": "2026-08-03 12:00",
+    "next_update": "\u2014",
+    "api_total_rows": 1,
+    "storage_etag": "3b5829d178d96b48bf9b3f8cc666a8a9",
+    "storage_last_modified": "Mon, 03 Aug 2026 06:52:42 GMT"
+  },
+  "teachers_district": {
+    "file": "teachers_district.csv",
+    "data_as_of": "2025",
+    "last_updated": "2026-08-03 12:00",
+    "next_update": "\u2014",
+    "api_total_rows": 1,
+    "storage_etag": "8703cf858bf33a09a5d7126d5a8e831a",
+    "storage_last_modified": "Mon, 03 Aug 2026 06:52:42 GMT"
+  },
+  "deaths_state": {
+    "file": "death_state.csv",
+    "data_as_of": "2025",
+    "last_updated": "2026-10-15 13:00",
+    "next_update": "2027-10-31 18:00",
+    "api_total_rows": 1,
+    "storage_etag": "85cf62ebe1546b37144d4fe3f3e87ff5",
+    "storage_last_modified": "Thu, 15 Oct 2026 05:00:13 GMT"
+  },
+  "life_expectancy_state": {
+    "file": "life_expectancy_state.csv",
+    "data_as_of": "2026",
+    "last_updated": "2026-09-30 18:00",
+    "next_update": "2027-10-31 12:00",
+    "api_total_rows": 1,
+    "storage_etag": "1095c0342a36e93fa412dc3b7da5967a",
+    "storage_last_modified": "Fri, 16 Oct 2026 00:56:36 GMT"
+  },
+  "water_access": {
+    "file": "water_access.csv",
+    "data_as_of": "2025",
+    "last_updated": "2026-10-11 12:00",
+    "next_update": "2027-12-31 16:00",
+    "api_total_rows": 1,
+    "storage_etag": "7ccb1a7dae485b905116e1786690b0d0",
+    "storage_last_modified": "Sat, 10 Oct 2026 17:45:17 GMT"
+  },
+  "crime_district": {
+    "file": "crime_district.csv",
+    "data_as_of": "2023-12-31 23:59",
+    "last_updated": "2024-10-16 12:00",
+    "next_update": "2027-12-31 18:00",
+    "api_total_rows": 1,
+    "storage_etag": "49714272734dc8a95b3bf8a637f972e5",
+    "storage_last_modified": "Wed, 16 Oct 2024 03:59:20 GMT"
+  },
   "federal_finance_year": {
     "file": "federal_finance_year.csv",
     "data_as_of": "2025",

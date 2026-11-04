@@ -39,6 +39,19 @@ DATASETS = {  # catalogue id -> (csv filename, storage url)
                          "https://storage.dosm.gov.my/population/population_state.csv"),
     "population_district": ("population_district.csv",
                             "https://storage.dosm.gov.my/population/population_district.csv"),
+    # Phase 2: health, education and services by state (data.gov.my; publishers MOH, MOE, JPN, SPAN, PDRM;
+    # licence CC BY 4.0 per developer.data.gov.my)
+    "hospital_beds": ("hospital_beds.csv", "https://storage.data.gov.my/healthcare/hospital_beds.csv"),
+    "healthcare_staff": ("healthcare_staff.csv", "https://storage.data.gov.my/healthcare/healthcare_staff.csv"),
+    "schools_district": ("schools_district.csv", "https://storage.data.gov.my/education/schools_district.csv"),
+    "enrolment_school_district": ("enrolment_school_district.csv",
+                                  "https://storage.data.gov.my/education/enrolment_school_district.csv"),
+    "teachers_district": ("teachers_district.csv", "https://storage.data.gov.my/education/teachers_district.csv"),
+    "deaths_state": ("death_state.csv", "https://storage.dosm.gov.my/demography/death_state.csv"),
+    "life_expectancy_state": ("life_expectancy_state.csv",
+                              "https://storage.dosm.gov.my/demography/life_expectancy_state.csv"),
+    "water_access": ("water_access.csv", "https://storage.data.gov.my/water/water_access.csv"),
+    "crime_district": ("crime_district.csv", "https://storage.data.gov.my/publicsafety/crime_district.csv"),
 }
 # Expansion datasets (GFS / state GDP / CPI / labour / trade): defined once in
 # ingest_expansion.py; their canonical CSVs carry appended provenance columns and are
@@ -54,12 +67,17 @@ from ingest_realeconomy import REALECONOMY  # noqa: E402
 for _ds, (_url, _route) in list(EXPANSION.items()) + list(REALECONOMY.items()):
     DATASETS[_ds] = (f"{_ds}.csv", _url)
 
+# datasets served by the data-catalogue route of the static API rather than opendosm
+DATACATALOGUE = {ds: "data-catalogue" for ds in ("hospital_beds", "healthcare_staff", "schools_district",
+                                                  "enrolment_school_district", "teachers_district",
+                                                  "water_access", "crime_district")}
+
 CATALOGUE_META = ("https://raw.githubusercontent.com/data-gov-my/datagovmy-meta/main/"
                   "data-catalogue/{}.json")
 
 
 def api_meta(ds):
-    route = (EXPANSION.get(ds) or REALECONOMY.get(ds) or (None, "opendosm"))[1]
+    route = (EXPANSION.get(ds) or REALECONOMY.get(ds) or (None, DATACATALOGUE.get(ds, "opendosm")))[1]
     if route == "meta":
         # exclude_openapi in the catalogue: the static API does not serve this dataset,
         # so its vintage fields come from the catalogue repo instead. The storage ETag

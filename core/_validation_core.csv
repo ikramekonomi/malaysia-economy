@@ -1,5 +1,5 @@
 check,scope,status,note
-C1 primary key unique,fact_observation,PASS,62052 rows
+C1 primary key unique,fact_observation,PASS,70867 rows
 C2 indicator_code resolves,fact_observation,PASS,all resolve
 C2 geo_code resolves,fact_observation,PASS,all resolve
 C2 period_code resolves,fact_observation,PASS,all resolve
@@ -9,7 +9,15 @@ C3 status in meta/code_list.csv,fact_observation,PASS,ok
 C4 every row has provenance (file sha256 + L1 row),fact_observation,PASS,0 rows without
 C5 a survey estimate without published uncertainty says so (reliability = unknown),fact_observation,PASS,0 rows claim reliability without uncertainty
 C6 state coverage,cpi.index,PASS,16 of 16 states and territories
+C6 state coverage,crime.count,PASS,14 of 16 states and territories (expected 14: Labuan and Putrajaya have no separate police contingent in the file)
+C6 state coverage,deaths.crude_rate,PASS,16 of 16 states and territories
+C6 state coverage,deaths.total,PASS,16 of 16 states and territories
+C6 state coverage,edu.enrolment,PASS,16 of 16 states and territories
+C6 state coverage,edu.schools,PASS,16 of 16 states and territories
+C6 state coverage,edu.teachers,PASS,16 of 16 states and territories
 C6 state coverage,gdp.real,PASS,16 of 16 states and territories
+C6 state coverage,health.beds,PASS,16 of 16 states and territories
+C6 state coverage,health.staff,PASS,16 of 16 states and territories
 C6 state coverage,hh_expenditure.mean,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gini,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gross.mean,PASS,16 of 16 states and territories
@@ -20,6 +28,7 @@ C6 state coverage,lfs.labour_force,PASS,16 of 16 states and territories
 C6 state coverage,lfs.participation_rate,PASS,16 of 16 states and territories
 C6 state coverage,lfs.unemployed,PASS,16 of 16 states and territories
 C6 state coverage,lfs.unemployment_rate,PASS,16 of 16 states and territories
+C6 state coverage,life_expectancy,PASS,16 of 16 states and territories
 C6 state coverage,pop.total,PASS,16 of 16 states and territories
 C6 state coverage,poverty.absolute.rate,PASS,16 of 16 states and territories
 C6 state coverage,poverty.hardcore.rate,PASS,16 of 16 states and territories
@@ -33,5 +42,6 @@ C6 state coverage,state_gov.revenue.nontax,PASS,13 of 13 state governments
 C6 state coverage,state_gov.revenue.tax,PASS,13 of 13 state governments
 C6 state coverage,state_gov.revenue.total,PASS,13 of 13 state governments
 C6 state coverage,state_gov.surplus_deficit,PASS,13 of 13 state governments
+C6 state coverage,water.access.share,PASS,14 of 16 states and territories (expected 14: KL and Putrajaya are subsumed under Selangor (catalogue note))
 C7 states sum to Malaysia (pop.total),pop.total,PASS,largest gap 200 persons over 57 years (rounding allowance 16 x 50)
-"C8 value = value_printed x unit scale (sign kept, except spending levels)",fact_observation,PASS,62052 rows checked
+"C8 value = value_printed x unit scale (sign kept, except spending levels)",fact_observation,PASS,70867 rows checked

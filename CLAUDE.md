@@ -41,11 +41,11 @@ guarantees sit in memorandum accounts), and **place** (most federal spending has
 in the accounts; see `docs/DATA_MODEL.md` §10 and §13).
 
 ## Sources
-What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (104 series:
+What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (107 series:
 status, route, access, licence, priority). The plan behind it, theme by theme:
 **`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
 `sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9
-editions), bnm, dosm (112 datasets, refreshed daily), audit-negara, states (13 states).
+editions), bnm, dosm (121 datasets incl. data.gov.my health, education and services, refreshed daily), audit-negara, states (13 states).
 
 ## Golden rules — do not break these
 1. **Raw source data (the CSVs) is the source of truth.** Consolidated/curated tables and any
