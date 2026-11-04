@@ -5,6 +5,7 @@
 # it changes. It commits only when the triggering commit message has a line that is exactly
 # `Commit-Extraction: yes` (a substring match once fired on a message that said "no [commit-extraction]").
 # First full run (all 13 states archived, run 41829766306): the reproduction proof, pipeline unchanged.
+# Debt-total fix reviewed in run 41931362314 and committed by the run after it (2026-11-05).
 name: States re-extraction
 
 on:
