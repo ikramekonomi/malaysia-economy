@@ -3,6 +3,7 @@
 # extractor can only run here. A run prints which committed files its output changes. With the
 # pipeline unchanged it must change nothing (the reproduction proof); a pipeline fix shows exactly what
 # it changes. It commits only when the triggering commit message contains [commit-extraction].
+# First full run (all 13 states archived, run 41829766306): the reproduction proof, pipeline unchanged.
 name: States re-extraction
 
 on:

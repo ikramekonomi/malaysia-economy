@@ -344,6 +344,64 @@ q("1", "Rank the states by the income cut-off of their poorest 40% in 2022.", "c
   {"indicator": "hh_income.gross.pctile_group.max", "period": "2022", "breakdown": "percentile=040"},
   "refused_ranking", kind="trap_small_area")
 
+# N. Phase 2: national accounts (current prices), from L1
+def na(component, year):
+    with open(os.path.join(DOSM, "gdp_annual_nominal_income.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if r["series"] == "abs" and r["component"] == component and r["date"].startswith(year):
+                return Decimal(r["value"]) * 1000000
+    raise KeyError(component)
+
+
+q("4", "What was Malaysia's nominal GDP in 2024?", "get_series", series("gdp.nominal", "MY", "2024"), "value",
+  s(na("i0", "2024")))
+q("2", "What was total compensation of employees in Malaysia in 2023?", "get_series",
+  series("na.compensation_of_employees", "MY", "2023"), "value", s(na("i1", "2023")))
+q("2", "What share of GDP went to employees in 2022?", "derive_chain",
+  {"operation": "ratio", "a": series("na.compensation_of_employees", "MY", "2022"), "b": series("gdp.nominal", "MY", "2022")},
+  "value", s((na("i1", "2022") / na("i0", "2022")).quantize(Decimal("0.000001"))), "0.000001")
+q("2", "What is the average compensation per employed person in 2024?", "derive_chain",
+  {"operation": "per_employed", "a": series("na.compensation_of_employees", "MY", "2024"),
+   "b": series("lfs.employed", "MY", "2024")}, "caveat", "CV14")
+q("2", "Compensation of employees per person of the whole population, as if it were a wage?", "derive_chain",
+  {"operation": "per_employed", "a": series("na.compensation_of_employees", "MY", "2024"),
+   "b": series("pop.total", "MY", "2024")}, "refused", "lfs.employed", kind="trap_incomparable")
+q("4", "Real GDP of Selangor divided by Malaysia's nominal GDP?", "derive_chain",
+  {"operation": "ratio", "a": series("gdp.real", "MY-10", "2024"), "b": series("gdp.nominal", "MY", "2024")},
+  "refused", "price bases", kind="trap_incomparable")
+q("2", "Find the indicator for compensation of employees", "find_indicator", {"text": "compensation of employees"},
+  "first_indicator", "na.compensation_of_employees")
+
+# O. Phase 2: federal totals by publisher (BNM MSB 3.1, MOF Tinjauan Fiskal), from L1
+def bnm(col, year):
+    with open(os.path.join(REPO, "sources", "bnm", "data", "msb_3_1.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if not r["period"].strip() and r["year_dt"] == year:
+                return Decimal(r[col]) * 1000000
+    raise KeyError(col)
+
+
+def mof(line, year, edition):  # the own-volume edition (Y+2), read from that edition's folder
+    p = os.path.join(REPO, "sources", "mof-fiscal-outlook", "data", f"{edition}_public_finance_stats", "fact_headline.csv")
+    with open(p, newline="") as fh:
+        for r in csv.DictReader(fh):
+            if r["line"] == line and r["target_year"] == year and r["basis"] == "official_actual":
+                return Decimal(r["amount_rm_juta"]) * 1000000
+    raise KeyError(line)
+
+
+fed = lambda ind, y, pub: {**series(ind, "MY", y), "publisher": pub}  # noqa: E731
+q("5", "What net development expenditure did BNM report for 2024?", "get_series",
+  fed("federal_gov.expenditure.devex_net", "2024", "bnm"), "value", s(bnm("dev_exp_net_dev_exp", "2024")))
+q("5", "What overall balance did MOF print for 2024 (its own volume)?", "get_series",
+  fed("federal_gov.overall_balance", "2024", "mof"), "value", s(mof("overall_balance", "2024", 2026)))
+q("5", "How many publishers report federal operating expenditure for 2022?", "get_series",
+  series("federal_gov.expenditure.opex", "MY", "2022"), "row_count", "3")
+q("5", "By how much does BNM's 2023 operating expenditure differ from MOF's?", "derive_chain",
+  {"operation": "difference", "a": fed("federal_gov.expenditure.opex", "2023", "bnm"),
+   "b": fed("federal_gov.expenditure.opex", "2023", "mof")}, "value",
+  s(bnm("cur_bud_exp", "2023") - mof("operating_expenditure", "2023", 2025)), "0.000001")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

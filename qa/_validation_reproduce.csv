@@ -1,0 +1,231 @@
+table,cell,curated,core,status,note
+fact_labour_indicators,2010 implied_average_wage_rm_per_worker_year,21906.97,21906.97,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2010 labour_share_of_gdp_pct,31.735,31.735,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2011 implied_average_wage_rm_per_worker_year,23672.75,23672.75,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2011 labour_share_of_gdp_pct,32.070,32.070,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2012 implied_average_wage_rm_per_worker_year,25179.13,25179.13,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2012 labour_share_of_gdp_pct,33.236,33.236,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2013 implied_average_wage_rm_per_worker_year,25511.83,25511.83,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2013 labour_share_of_gdp_pct,33.925,33.925,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2014 implied_average_wage_rm_per_worker_year,27368.65,27368.65,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2014 labour_share_of_gdp_pct,34.265,34.265,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2015 implied_average_wage_rm_per_worker_year,29304.01,29304.01,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2015 labour_share_of_gdp_pct,35.026,35.026,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2016 implied_average_wage_rm_per_worker_year,31382.27,31382.27,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2016 labour_share_of_gdp_pct,35.568,35.568,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2017 implied_average_wage_rm_per_worker_year,33692.83,33692.83,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2017 labour_share_of_gdp_pct,35.543,35.543,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2018 implied_average_wage_rm_per_worker_year,35051.92,35051.92,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2018 labour_share_of_gdp_pct,35.774,35.774,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2019 implied_average_wage_rm_per_worker_year,36001.03,36001.03,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2019 labour_share_of_gdp_pct,35.873,35.873,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2020 implied_average_wage_rm_per_worker_year,36006.66,36006.66,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2020 labour_share_of_gdp_pct,37.363,37.363,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2021 implied_average_wage_rm_per_worker_year,36652.09,36652.09,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2021 labour_share_of_gdp_pct,35.086,35.086,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2022 implied_average_wage_rm_per_worker_year,38538.99,38538.99,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2022 labour_share_of_gdp_pct,32.540,32.540,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2023 implied_average_wage_rm_per_worker_year,38705.16,38705.16,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2023 labour_share_of_gdp_pct,33.532,33.532,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2024 implied_average_wage_rm_per_worker_year,39663.69,39663.69,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2024 labour_share_of_gdp_pct,33.585,33.585,PASS,core: derive('ratio') DV2
+fact_labour_indicators,2025 implied_average_wage_rm_per_worker_year,41424.24,41424.24,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2025 labour_share_of_gdp_pct,33.912,33.912,PASS,core: derive('ratio') DV2
+fact_fiscal_headline,2009 revenue_bnm_rm,158639300000.00,158639300000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2009 opex_bnm_rm,157066955000.00,157066955000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2009 devex_gross_bnm_rm,49515356000.00,49515356000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2009 devex_loan_recovery_bnm_rm,518800000.00,518800000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2009 devex_net_bnm_rm,48996556000.00,48996556000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2009 revenue_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2009 opex_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2009 devex_gross_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2009 devex_loan_recovery_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2009 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2009 overall_balance_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2010 revenue_bnm_rm,159652962000.00,159652962000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2010 opex_bnm_rm,151632609000.00,151632609000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2010 devex_gross_bnm_rm,52791630000.00,52791630000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2010 devex_loan_recovery_bnm_rm,1496000000.00,1496000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2010 devex_net_bnm_rm,51295630000.00,51295630000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2010 revenue_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2010 opex_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2010 devex_gross_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2010 devex_loan_recovery_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2010 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2010 overall_balance_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2011 revenue_bnm_rm,185418920000.00,185418920000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2011 opex_bnm_rm,182593790000.00,182593790000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2011 devex_gross_bnm_rm,46416362000.00,46416362000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2011 devex_loan_recovery_bnm_rm,1082000000.00,1082000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2011 devex_net_bnm_rm,45334362000.00,45334362000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2011 revenue_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2011 opex_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2011 devex_gross_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2011 devex_loan_recovery_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2011 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2011 overall_balance_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2012 revenue_bnm_rm,207912755000.00,207912755000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2012 opex_bnm_rm,205537082000.00,205537082000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2012 devex_gross_bnm_rm,46932453000.00,46932453000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2012 devex_loan_recovery_bnm_rm,2606000000.00,2606000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2012 devex_net_bnm_rm,44326453000.00,44326453000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2012 revenue_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2012 opex_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2012 devex_gross_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2012 devex_loan_recovery_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2012 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2012 overall_balance_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2013 revenue_bnm_rm,213370213555.50,213370213555.50,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2013 opex_bnm_rm,211270336792.96,211270336792.96,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2013 devex_gross_bnm_rm,42209804000.00,42209804000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2013 devex_loan_recovery_bnm_rm,1526331000.00,1526331000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2013 devex_net_bnm_rm,40683473000.00,40683473000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2013 revenue_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2013 opex_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2013 devex_gross_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2013 devex_loan_recovery_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2013 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2013 overall_balance_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2014 revenue_bnm_rm,220625673000.00,220625673000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2014 opex_bnm_rm,219589142000.00,219589142000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2014 devex_gross_bnm_rm,39503487000.00,39503487000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2014 devex_loan_recovery_bnm_rm,1052000000.00,1052000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2014 devex_net_bnm_rm,38451487000.00,38451487000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2014 revenue_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2014 opex_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2014 devex_gross_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2014 devex_loan_recovery_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2014 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2014 overall_balance_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2015 revenue_bnm_rm,219088800000.00,219088800000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2015 opex_bnm_rm,216997500000.00,216997500000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2015 devex_gross_bnm_rm,40767712000.00,40767712000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2015 devex_loan_recovery_bnm_rm,1482569000.00,1482569000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2015 devex_net_bnm_rm,39285143000.00,39285143000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2015 revenue_mof_rm,219089000000.00,219089000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2015 opex_mof_rm,216998000000.00,216998000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2015 devex_gross_mof_rm,40768000000.00,40768000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2015 devex_loan_recovery_mof_rm,1483000000.00,1483000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2015 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2015 overall_balance_mof_rm,-37194000000.00,-37194000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2015 devex_net_rm,39285000000.00,39285000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2016 revenue_bnm_rm,212421100000.00,212421100000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2016 opex_bnm_rm,210172661000.00,210172661000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2016 devex_gross_bnm_rm,41995037000.00,41995037000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2016 devex_loan_recovery_bnm_rm,1346568000.00,1346568000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2016 devex_net_bnm_rm,40648469000.00,40648469000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2016 revenue_mof_rm,212421000000.00,212421000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2016 opex_mof_rm,210173000000.00,210173000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2016 devex_gross_mof_rm,41995000000.00,41995000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2016 devex_loan_recovery_mof_rm,1346000000.00,1346000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2016 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2016 overall_balance_mof_rm,-38401000000.00,-38401000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2016 devex_net_rm,40649000000.00,40649000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2017 revenue_bnm_rm,220406000000.00,220406000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2017 opex_bnm_rm,217695192668.16,217695192668.16,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2017 devex_gross_bnm_rm,44883839000.00,44883839000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2017 devex_loan_recovery_bnm_rm,1852160000.00,1852160000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2017 devex_net_bnm_rm,43031679000.00,43031679000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2017 revenue_mof_rm,220406000000.00,220406000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2017 opex_mof_rm,217695000000.00,217695000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2017 devex_gross_mof_rm,44884000000.00,44884000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2017 devex_loan_recovery_mof_rm,1852000000.00,1852000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2017 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2017 overall_balance_mof_rm,-40321000000.00,-40321000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2017 devex_net_rm,43032000000.00,43032000000.00,PASS,"core mof:tinjauan_fiskal@2019, to the sen"
+fact_fiscal_headline,2018 revenue_bnm_rm,232882562287.80,232882562287.80,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2018 opex_bnm_rm,230960493000.00,230960493000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2018 devex_gross_bnm_rm,56095455661.74,56095455661.74,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2018 devex_loan_recovery_bnm_rm,788182500.00,788182500.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2018 devex_net_bnm_rm,55307273161.74,55307273161.74,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2018 revenue_mof_rm,232882000000.00,232882000000.00,PASS,"core mof:tinjauan_fiskal@2020, to the sen"
+fact_fiscal_headline,2018 opex_mof_rm,230960000000.00,230960000000.00,PASS,"core mof:tinjauan_fiskal@2020, to the sen"
+fact_fiscal_headline,2018 devex_gross_mof_rm,56095000000.00,56095000000.00,PASS,"core mof:tinjauan_fiskal@2020, to the sen"
+fact_fiscal_headline,2018 devex_loan_recovery_mof_rm,788000000.00,788000000.00,PASS,"core mof:tinjauan_fiskal@2020, to the sen"
+fact_fiscal_headline,2018 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2018 overall_balance_mof_rm,-53385000000.00,-53385000000.00,PASS,"core mof:tinjauan_fiskal@2020, to the sen"
+fact_fiscal_headline,2018 devex_net_rm,55307000000.00,55307000000.00,PASS,"core mof:tinjauan_fiskal@2020, to the sen"
+fact_fiscal_headline,2019 revenue_bnm_rm,264414797000.00,264414797000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2019 opex_bnm_rm,263342865000.00,263342865000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2019 devex_gross_bnm_rm,54173235316.97,54173235316.97,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2019 devex_loan_recovery_bnm_rm,1602914000.00,1602914000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2019 devex_net_bnm_rm,52570321316.97,52570321316.97,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2019 revenue_mof_rm,264415000000.00,264415000000.00,PASS,"core mof:tinjauan_fiskal@2021, to the sen"
+fact_fiscal_headline,2019 opex_mof_rm,263343000000.00,263343000000.00,PASS,"core mof:tinjauan_fiskal@2021, to the sen"
+fact_fiscal_headline,2019 devex_gross_mof_rm,54173000000.00,54173000000.00,PASS,"core mof:tinjauan_fiskal@2021, to the sen"
+fact_fiscal_headline,2019 devex_loan_recovery_mof_rm,1603000000.00,1603000000.00,PASS,"core mof:tinjauan_fiskal@2021, to the sen"
+fact_fiscal_headline,2019 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2019 overall_balance_mof_rm,-51498000000.00,-51498000000.00,PASS,"core mof:tinjauan_fiskal@2021, to the sen"
+fact_fiscal_headline,2019 devex_net_rm,52570000000.00,52570000000.00,PASS,"core mof:tinjauan_fiskal@2021, to the sen"
+fact_fiscal_headline,2020 revenue_bnm_rm,225076000000.00,225076000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2020 opex_bnm_rm,224600200000.00,224600200000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2020 devex_gross_bnm_rm,51359855763.46,51359855763.46,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2020 devex_loan_recovery_bnm_rm,1259000000.00,1259000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2020 devex_net_bnm_rm,50100855763.46,50100855763.46,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2020 revenue_mof_rm,225076000000.00,225076000000.00,PASS,"core mof:tinjauan_fiskal@2022, to the sen"
+fact_fiscal_headline,2020 opex_mof_rm,224600000000.00,224600000000.00,PASS,"core mof:tinjauan_fiskal@2022, to the sen"
+fact_fiscal_headline,2020 devex_gross_mof_rm,51360000000.00,51360000000.00,PASS,"core mof:tinjauan_fiskal@2022, to the sen"
+fact_fiscal_headline,2020 devex_loan_recovery_mof_rm,1259000000.00,1259000000.00,PASS,"core mof:tinjauan_fiskal@2022, to the sen"
+fact_fiscal_headline,2020 covid_fund_mof_rm,38019000000.00,38019000000.00,PASS,"core mof:tinjauan_fiskal@2022, to the sen"
+fact_fiscal_headline,2020 overall_balance_mof_rm,-87644000000.00,-87644000000.00,PASS,"core mof:tinjauan_fiskal@2022, to the sen"
+fact_fiscal_headline,2020 devex_net_rm,50101000000.00,50101000000.00,PASS,"core mof:tinjauan_fiskal@2022, to the sen"
+fact_fiscal_headline,2021 revenue_bnm_rm,233751860337.56,233751860337.56,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2021 opex_bnm_rm,231516400000.00,231516400000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2021 devex_gross_bnm_rm,64256665754.57,64256665754.57,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2021 devex_loan_recovery_bnm_rm,991824003.00,991824003.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2021 devex_net_bnm_rm,63264841751.57,63264841751.57,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2021 revenue_mof_rm,233752000000.00,233752000000.00,PASS,"core mof:tinjauan_fiskal@2023, to the sen"
+fact_fiscal_headline,2021 opex_mof_rm,231516000000.00,231516000000.00,PASS,"core mof:tinjauan_fiskal@2023, to the sen"
+fact_fiscal_headline,2021 devex_gross_mof_rm,64257000000.00,64257000000.00,PASS,"core mof:tinjauan_fiskal@2023, to the sen"
+fact_fiscal_headline,2021 devex_loan_recovery_mof_rm,992000000.00,992000000.00,PASS,"core mof:tinjauan_fiskal@2023, to the sen"
+fact_fiscal_headline,2021 covid_fund_mof_rm,37711000000.00,37711000000.00,PASS,"core mof:tinjauan_fiskal@2023, to the sen"
+fact_fiscal_headline,2021 overall_balance_mof_rm,-98740000000.00,-98740000000.00,PASS,"core mof:tinjauan_fiskal@2023, to the sen"
+fact_fiscal_headline,2021 devex_net_rm,63265000000.00,63265000000.00,PASS,"core mof:tinjauan_fiskal@2023, to the sen"
+fact_fiscal_headline,2022 revenue_bnm_rm,294356800000.00,294356800000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2022 opex_bnm_rm,292693200000.00,292693200000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2022 devex_gross_bnm_rm,71573961425.79,71573961425.79,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2022 devex_loan_recovery_bnm_rm,1407000000.00,1407000000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2022 devex_net_bnm_rm,70166961425.79,70166961425.79,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2022 revenue_mof_rm,294357000000.00,294357000000.00,PASS,"core mof:tinjauan_fiskal@2024, to the sen"
+fact_fiscal_headline,2022 opex_mof_rm,292693000000.00,292693000000.00,PASS,"core mof:tinjauan_fiskal@2024, to the sen"
+fact_fiscal_headline,2022 devex_gross_mof_rm,71574000000.00,71574000000.00,PASS,"core mof:tinjauan_fiskal@2024, to the sen"
+fact_fiscal_headline,2022 devex_loan_recovery_mof_rm,1407000000.00,1407000000.00,PASS,"core mof:tinjauan_fiskal@2024, to the sen"
+fact_fiscal_headline,2022 covid_fund_mof_rm,30979000000.00,30979000000.00,PASS,"core mof:tinjauan_fiskal@2024, to the sen"
+fact_fiscal_headline,2022 overall_balance_mof_rm,-99482000000.00,-99482000000.00,PASS,"core mof:tinjauan_fiskal@2024, to the sen"
+fact_fiscal_headline,2022 devex_net_rm,70167000000.00,70167000000.00,PASS,"core mof:tinjauan_fiskal@2024, to the sen"
+fact_fiscal_headline,2023 revenue_bnm_rm,314959481731.21,314959481731.21,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2023 opex_bnm_rm,311266917827.47,311266917827.47,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2023 devex_gross_bnm_rm,96090984165.51,96090984165.51,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2023 devex_loan_recovery_bnm_rm,1007300000.00,1007300000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2023 devex_net_bnm_rm,95083684165.51,95083684165.51,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2023 revenue_mof_rm,314959000000.00,314959000000.00,PASS,"core mof:tinjauan_fiskal@2025, to the sen"
+fact_fiscal_headline,2023 opex_mof_rm,311267000000.00,311267000000.00,PASS,"core mof:tinjauan_fiskal@2025, to the sen"
+fact_fiscal_headline,2023 devex_gross_mof_rm,96091000000.00,96091000000.00,PASS,"core mof:tinjauan_fiskal@2025, to the sen"
+fact_fiscal_headline,2023 devex_loan_recovery_mof_rm,1007000000.00,1007000000.00,PASS,"core mof:tinjauan_fiskal@2025, to the sen"
+fact_fiscal_headline,2023 covid_fund_mof_rm,0.00,0.00,PASS,"core mof:tinjauan_fiskal@2025, to the sen"
+fact_fiscal_headline,2023 overall_balance_mof_rm,-91392000000.00,-91392000000.00,PASS,"core mof:tinjauan_fiskal@2025, to the sen"
+fact_fiscal_headline,2023 devex_net_rm,95084000000.00,95084000000.00,PASS,"core mof:tinjauan_fiskal@2025, to the sen"
+fact_fiscal_headline,2024 revenue_bnm_rm,324617600000.00,324617600000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2024 opex_bnm_rm,321508851861.68,321508851861.68,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2024 devex_gross_bnm_rm,84011595463.78,84011595463.78,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2024 devex_loan_recovery_bnm_rm,1736900000.00,1736900000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2024 devex_net_bnm_rm,82274695463.78,82274695463.78,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2024 revenue_mof_rm,324618000000.00,324618000000.00,PASS,"core mof:tinjauan_fiskal@2026, to the sen"
+fact_fiscal_headline,2024 opex_mof_rm,321509000000.00,321509000000.00,PASS,"core mof:tinjauan_fiskal@2026, to the sen"
+fact_fiscal_headline,2024 devex_gross_mof_rm,84012000000.00,84012000000.00,PASS,"core mof:tinjauan_fiskal@2026, to the sen"
+fact_fiscal_headline,2024 devex_loan_recovery_mof_rm,1737000000.00,1737000000.00,PASS,"core mof:tinjauan_fiskal@2026, to the sen"
+fact_fiscal_headline,2024 covid_fund_mof_rm,0.00,0.00,PASS,"core mof:tinjauan_fiskal@2026, to the sen"
+fact_fiscal_headline,2024 overall_balance_mof_rm,-79166000000.00,-79166000000.00,PASS,"core mof:tinjauan_fiskal@2026, to the sen"
+fact_fiscal_headline,2024 devex_net_rm,82275000000.00,82275000000.00,PASS,"core mof:tinjauan_fiskal@2026, to the sen"
+fact_fiscal_headline,2025 revenue_bnm_rm,336069209892.00,336069209892.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2025 opex_bnm_rm,330775661130.75,330775661130.75,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2025 devex_gross_bnm_rm,81920526113.41,81920526113.41,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2025 devex_loan_recovery_bnm_rm,1338600000.00,1338600000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2025 devex_net_bnm_rm,80581926113.41,80581926113.41,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
+fact_fiscal_headline,2025 revenue_mof_rm,336069000000.00,336069000000.00,PASS,"core mof:tinjauan_fiskal@2027, to the sen"
+fact_fiscal_headline,2025 opex_mof_rm,330776000000.00,330776000000.00,PASS,"core mof:tinjauan_fiskal@2027, to the sen"
+fact_fiscal_headline,2025 devex_gross_mof_rm,81921000000.00,81921000000.00,PASS,"core mof:tinjauan_fiskal@2027, to the sen"
+fact_fiscal_headline,2025 devex_loan_recovery_mof_rm,1339000000.00,1339000000.00,PASS,"core mof:tinjauan_fiskal@2027, to the sen"
+fact_fiscal_headline,2025 covid_fund_mof_rm,,,PASS,empty in both
+fact_fiscal_headline,2025 overall_balance_mof_rm,-75289000000.00,-75289000000.00,PASS,"core mof:tinjauan_fiskal@2027, to the sen"
+fact_fiscal_headline,2025 devex_net_rm,80582000000.00,80582000000.00,PASS,"core mof:tinjauan_fiskal@2027, to the sen"
