@@ -105,7 +105,19 @@ and 1 known gap — see below), with every known defect justified one by one in
   no per-ministry attribution in any source. A "net" ministry figure would have to be
   invented.
 
-- **`fact_fiscal_headline.csv`** — 16 national rows, FY2009–2024. Every amount column has
+- **`fact_fiscal_headline.csv`** — 17 national rows, FY2009–2025. The range runs to the
+  last year any source prints as an actual, read from the data. **FY2025 has MOF and BNM
+  figures but no audited PKKP volume yet**, so every PKKP-basis column is NULL for it (the
+  row's note says so) — MOF's figures are never written into a PKKP column to fill the gap.
+
+  **Three publishers, three sets of columns.** PKKP audited: `revenue_rm`, `opex_*`,
+  `devex_gross_rm`, `covid_fund_rm`, `overall_balance_rm` (FY2009–2024). MOF Tinjauan Fiskal
+  `official_actual`, one edition per year: `revenue_mof_rm`, `opex_mof_rm`,
+  `devex_gross_mof_rm`, `devex_loan_recovery_mof_rm`, `devex_net_rm`,
+  `overall_balance_mof_rm` (FY2015–2025; `mof_edition` names the edition, and the
+  `devex_net_source_*` columns give its file and page — every MOF figure of a year comes
+  from that one printed column). BNM MSB 3.1 reported: `*_bnm_rm` (FY2009–2025). Take one
+  publisher's columns for a series; never splice across them. Every PKKP amount column has
   a `*_basis` column beside it.
 
   All three operating-expenditure figures — `opex_net_rm` (before the transfer to the
@@ -156,6 +168,15 @@ and 1 known gap — see below), with every known defect justified one by one in
   PKKP −77,315, MOF −79,166 juta; the gap is exactly the non-loan receipts). That
   difference is reported in the validation file as `DEFINITIONAL`, never as a divergence.
   Don't compare the two as if they were the same concept.
+
+  **MOF against the audited accounts, FY2015–2024.** Revenue, opex and gross DE agree within
+  MOF's own rounding (RM1.0 juta: each sits in an identity every edition foots exactly with
+  one other rounded term) in every year but two, and in both a later edition restates the
+  figure to match the audit: **FY2020 revenue** printed 225,076 by its own (2022) edition vs
+  audited 225,074.9, restated to 225,075 by the 2023 and 2024 editions; and **FY2023 gross
+  DE** printed 96,091 by the 2025 edition vs audited 96,089.7, restated to 96,090 by the
+  2027 edition (the BNM-vs-PKKP finding below). Both are `DIVERGE`, with the restatement
+  named in the check.
 
 ### One finding, and one mess that is partly ours
 
