@@ -759,6 +759,21 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                        "rows are not a year-end debt figure.",
     ),
     dict(
+        state="Negeri Sembilan",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
+        affected_rows="the 'Penyumbang Utama Hasil' rows of CMD.34.2019 (J11) and CMD.37.2018 (J4.10)",
+        defect="The table prints two totals: 'JUMLAH HASIL RM421.24 Juta' (ALL revenue, in the header) and 'JUMLAH "
+               "PENYUMBANG UTAMA HASIL' (the five lines). The check compares the five lines with the first; in "
+               "CMD.37.2018 the (%) column (88.8) is also read as an amount, as in Selangor's table.",
+        diagnosis="Page-proved 2026-11-04 (CMD.34.2019.pdf p38): 2018 128.72 + 121.50 + 56.87 + 38.49 + 37.01 = "
+                  "382.59 = printed JUMLAH PENYUMBANG UTAMA HASIL; 2017 130.38 + 105.87 + 61.62 + 38.76 + 30.64 = "
+                  "367.27. Not an AG misprint.",
+        why_unfixed="Take the JUMLAH PENYUMBANG UTAMA line as the total and pair columns by x-position; "
+                    "re-extraction pending.",
+        impact_on_data="Analysis-table rows only; core and the gap view do not use them.",
+    ),
+    dict(
         state="Selangor",
         source_file="", pdf_page="", printed_page="", jadual="",
         match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
