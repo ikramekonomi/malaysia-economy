@@ -1,0 +1,91 @@
+# Re-extract the 13 states' audited accounts from the archived volumes (sources/states/pipeline).
+# The PDFs are not in git: they come from the private l0-archive release (meta/l0_fetch.py), so the
+# extractor can only run here. A run prints which committed files its output changes. With the
+# pipeline unchanged it must change nothing (the reproduction proof); a pipeline fix shows exactly what
+# it changes. It commits only when the triggering commit message contains [commit-extraction].
+name: States re-extraction
+
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["sources/states/pipeline/**", ".github/workflows/states-extract.yml"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: states-extract
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr > /dev/null
+          pip install -q -r requirements.txt
+
+      - name: Plan (which states have every volume archived)
+        id: plan
+        run: |
+          python3 - <<'EOF'
+          import csv, os, sys
+          sys.path.insert(0, "sources/states/pipeline")
+          import state_config as SC
+          reg = {r["file_name"]: r["sha256"] for r in csv.DictReader(open("meta/registry_file.csv"))}
+          arch = {r["sha256"] for r in csv.DictReader(open("meta/l0_archive.csv")) if r["status"] == "ARCHIVED"}
+          ready, waiting = [], []
+          for s in SC.STATES:
+              miss = [v["file"] for v in SC.VOLUMES[s] if reg.get(v["file"]) not in arch]
+              (waiting if miss else ready).append(f"{s} (missing {', '.join(miss)})" if miss else s)
+          files = [v["file"] for s in ready for v in SC.VOLUMES[s]]
+          open("ready_states.txt", "w").write("".join(s + "\n" for s in ready))
+          open("ready_files.txt", "w").write(" ".join(files))
+          print("READY:", ", ".join(ready) or "none"); print("WAITING:", "; ".join(waiting) or "none")
+          with open(os.environ["GITHUB_OUTPUT"], "a") as f:
+              f.write(f"any={'true' if ready else 'false'}\nall={'true' if not waiting else 'false'}\n")
+          open("extract_summary.txt", "w").write(f"ready: {', '.join(ready) or 'none'}\nwaiting: {'; '.join(waiting) or 'none'}\n")
+          EOF
+
+      - name: Fetch the archived volumes
+        if: steps.plan.outputs.any == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 meta/l0_fetch.py --files $(cat ready_files.txt) --dest sources/audit-negara/raw/backfill
+
+      - name: Re-extract the ready states
+        if: steps.plan.outputs.any == 'true'
+        run: |
+          while read -r s; do [ -n "$s" ] && python3 sources/states/pipeline/extract_states.py --state "$s"; done < ready_states.txt
+          if [ "${{ steps.plan.outputs.all }}" = "true" ]; then python3 sources/states/pipeline/extract_states.py --national; fi
+          python3 sources/states/pipeline/validate_states.py > /dev/null
+
+      - name: What changed
+        id: diff
+        run: |
+          {
+            echo "## States re-extraction"; echo; cat extract_summary.txt; echo
+            echo '```'; git status --porcelain --untracked-files=no -- sources/states; echo '```'
+            echo; echo "Changed rows (first 80 lines of the diff):"; echo '```'
+            git diff --unified=0 -- sources/states/data | grep -E '^[-+][^-+]' | cut -c1-220 | head -80
+            echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          if git diff --quiet -- sources/states; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Commit (only when asked)
+        if: steps.diff.outputs.changed == 'true' && contains(github.event.head_commit.message, '[commit-extraction]')
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/states/data
+          git commit -q -m "States re-extraction from the L0 archive (run ${{ github.run_id }})"
+          git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}"

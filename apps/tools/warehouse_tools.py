@@ -1,4 +1,4 @@
-"""Typed agent tools over the core warehouse (docs/DATA_MODEL.md §11). Phase 1: state level.
+"""Typed agent tools over the core warehouse (docs/DATA_MODEL.md §11). State level, small areas, distributions.
 
 No free-form SQL. Every number comes back with its citation, release_id, uncertainty and caveats.
 The language model never does arithmetic: ratios, per-capita figures, growth and gaps go through
@@ -87,7 +87,12 @@ class Tools:
         if not rs:
             return self._not_held(f"{indicator} at {geo_level} level for {period}")
         survey = any(r["estimate_method"] in ("direct_survey", "small_area_model") for r in rs)
-        if geo_level not in ("state", "country") and survey and all(r["reliability"] == "unknown" for r in rs):
+        if survey and any(r["reliability"] == "low" for r in rs):
+            return {"held": True, "refused_ranking": True,
+                    "answer": f"{indicator} is a survey estimate DOSM itself marks as low reliability; places are "
+                              "not compared or ranked on it (decision D10). Use get_series or get_distribution for "
+                              "one place", "release_id": self.w.release_id}
+        if geo_level not in ("state", "country") and survey and any(r["reliability"] in ("unknown", "low") for r in rs):
             return {"held": True, "refused_ranking": True,
                     "answer": "small-area survey estimates without published sampling error are not compared or "
                               "ranked (decision D10); use get_series for one area", "release_id": self.w.release_id}
@@ -123,6 +128,59 @@ class Tools:
                         "ranked against each other." + ("" if has_ci else " Sampling error is not published, so "
                                                         "bands use the declared rule BAND1."),
                 "national": self.w.cite(nat) if nat else None, "release_id": self.w.release_id}
+
+    def get_distribution(self, indicator, geo, period, below=None):
+        """Household income by percentile group, as published (HIES), with the decile cut-offs and, given
+        `below` (RM per month), the published bracket for the share of households earning less (rule DIST1)."""
+        period = str(period)
+        if indicator not in ("hh_income", "hh_income.gross", "hh_income.gross.mean", "hh_income.gross.median"):
+            return self._not_held(f"a published distribution of {indicator}", "distribution percentile")
+        if geo not in self.w.geo:
+            return {"held": False, "answer": f"unknown place code {geo}", "release_id": self.w.release_id}
+        pre = "hh_income.gross.pctile_group."
+        rs = [r for r in self.w.obs if r["indicator_code"].startswith(pre) and r["geo_code"] == geo
+              and r["period_code"] == period]
+        if not rs:
+            yrs = sorted({r["period_code"] for r in self.w.obs if r["indicator_code"].startswith(pre)})
+            return self._not_held(f"income distribution for {geo} in {period} (published for {', '.join(yrs)}; "
+                                  "Malaysia and the 16 states and territories only)", "percentile")
+        groups = {}
+        for r in rs:
+            p = int(r["breakdown_key"].split("=")[1])
+            g = groups.setdefault(p, {"percentile": p})
+            k = r["indicator_code"][len(pre):]
+            g[k], g[k + "_obs_id"] = r["value"], r["obs_id"]
+        groups = [groups[p] for p in sorted(groups)]
+        c = self.w.cite(rs[0])
+        out = {"held": True, "indicator": "household income, gross, RM per month", "geo_code": geo,
+               "geo_name": c["geo_name"], "period_code": period, "unit": "RM per month",
+               "groups": groups,
+               "deciles": [{"percentile": g["percentile"], "cut_off": g["max"], "obs_id": g["max_obs_id"]}
+                           for g in groups if g["percentile"] % 10 == 0 and g.get("max")],
+               "note": "Group p is the p-th hundredth of households ranked by income; its highest income is the "
+                       "p-th percentile cut-off. Values are as published; nothing is interpolated.",
+               "uncertainty": c["uncertainty"], "caveats": c["caveats"],
+               "citation": {k: c["citation"][k] for k in ("edition_id", "vintage", "file_sha256", "table")},
+               "release_id": self.w.release_id}
+        if below is not None:
+            try:
+                x = Decimal(str(below))
+            except Exception:
+                return {**out, "share_below": {"refused": f"threshold {below!r} is not a number in RM per month"}}
+            tops = [Decimal(g["max"]) for g in groups if g.get("max")]
+            if tops != sorted(tops):
+                return {**out, "share_below": {"refused": "the published cut-offs do not rise with the percentile; "
+                                                          "no bracket is given"}}
+            k = sum(1 for g in groups if g.get("max") and Decimal(g["max"]) < x)
+            nxt = next((g for g in groups if g["percentile"] == k + 1), None)
+            hi = k if (nxt is None or (nxt.get("min") and Decimal(nxt["min"]) >= x)) else k + 1
+            out["share_below"] = {"threshold": str(x), "low_percent": str(k), "high_percent": str(hi),
+                                  "answer": (f"{k}% of households" if k == hi else f"between {k}% and {hi}% of households")
+                                  + f" earned less than RM {x} a month",
+                                  "method": self.w.derivations["DIST1"],
+                                  "from_obs_ids": [g["max_obs_id"] for g in groups[max(0, k - 1):k + 1]]
+                                  + ([nxt["min_obs_id"]] if nxt and nxt.get("min_obs_id") else [])}
+        return out
 
     def derive(self, operation, a, b):
         try:

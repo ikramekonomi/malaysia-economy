@@ -102,6 +102,10 @@ class Warehouse:
         ind = r["indicator_code"]
         if r["estimate_method"] == "direct_survey" and r["reliability"] == "unknown":
             out.append("CV1")
+        if r["estimate_method"] == "direct_survey" and r["reliability"] == "low" and ind.startswith("lfs."):
+            out.append("CV12")
+        if ind.startswith("hh_income.gross.pctile_group."):
+            out.append("CV13")
         if ind in ("pop.total", "households.total"):
             out.append("CV2")
         if ind == "state_gov.revenue.nonrevenue_receipts":

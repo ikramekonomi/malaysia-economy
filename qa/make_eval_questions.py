@@ -140,10 +140,10 @@ q("4", "Real GDP of Selangor in 2024 as a ratio of its 2024 nominal state revenu
 
 # D. small areas
 q("1", "Rank the districts by median household income in 2022.", "compare_geos",
-  {"indicator": "hh_income.gross.median", "period": "2022", "geo_level": "district"}, "not_ranked",
+  {"indicator": "hh_income.gross.median", "period": "2022", "geo_level": "district"}, "refused_ranking",
   kind="trap_small_area")
 q("1", "Rank the parliamentary constituencies by poverty.", "compare_geos",
-  {"indicator": "poverty.absolute.rate", "period": "2022", "geo_level": "parlimen"}, "not_ranked",
+  {"indicator": "poverty.absolute.rate", "period": "2022", "geo_level": "parlimen"}, "refused_ranking",
   kind="trap_small_area")
 
 # E. missing documents are answers
@@ -272,6 +272,77 @@ q("6", "Compare life expectancy across all states in 2024 (banded, not ranked)?"
 # K. FAIL triage (2026-11-04): a deficit printed without its sign
 q("5", "Did Johor run a surplus or a deficit in 2018?", "get_series", series("state_gov.surplus_deficit", "MY-01", "2018"),
   "value", s(acct("Johor", "2018", "revenue_total") - acct("Johor", "2018", "expenditure_total")))
+
+# L. Phase 2: small areas (district, parlimen, DUN), from L1
+def l1a(dataset, **f):
+    with open(os.path.join(DOSM, f"{dataset}.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if all(r[k].startswith(v) if k == "date" else r[k] == v for k, v in f.items()):
+                return r
+    raise KeyError((dataset, f))
+
+
+q("1", "What was the median household income in Kota Bharu district in 2022?", "get_series",
+  series("hh_income.gross.median", "MY-03/dis:kota_bharu@dosm_2020", "2022"), "value",
+  s(Decimal(l1a("hh_income_district", state="Kelantan", district="Kota Bharu", date="2022")["income_median"])))
+q("1", "What was the median household income in P.001 Padang Besar in 2019?", "get_series",
+  series("hh_income.gross.median", "MY-09/par:P.001@ge15", "2019"), "value",
+  s(Decimal(l1a("hh_income_parlimen", state="Perlis", parlimen="P.001 Padang Besar", date="2019")["income_median"])))
+q("1", "What was the absolute poverty rate in DUN N.01 Titi Tinggi in 2019?", "get_series",
+  series("poverty.absolute.rate", "MY-09/dun:N.01@ge15", "2019"), "value",
+  s(Decimal(l1a("hh_poverty_dun", state="Perlis", dun="N.01 Titi Tinggi", date="2019")["poverty_absolute"])))
+q("1", "Is the DUN poverty estimate flagged as a survey estimate without sampling error?", "get_series",
+  series("poverty.absolute.rate", "MY-09/dun:N.01@ge15", "2019"), "field:reliability", "unknown")
+q("2", "Is the unemployment rate for P.001 Padang Besar flagged as below the survey's design domain?", "get_series",
+  series("lfs.unemployment_rate", "MY-09/par:P.001@ge15", "2021"), "field:reliability", "low")
+q("2", "Does the seat-level unemployment rate say it is only indicative?", "get_series",
+  series("lfs.unemployment_rate", "MY-09/par:P.001@ge15", "2021"), "caveat", "CV12")
+q("2", "Rank the DUN seats by unemployment rate in 2021.", "compare_geos",
+  {"indicator": "lfs.unemployment_rate", "period": "2021", "geo_level": "dun"}, "refused_ranking",
+  kind="trap_small_area")
+q("6", "What share of Kelantan households had piped water in 2022?", "get_series",
+  series("amenities.piped_water.share", "MY-03", "2022"), "value",
+  s(Decimal(l1a("hh_access_amenities", state="Kelantan", district="All Districts", date="2022")["piped_water"])))
+q("6", "What share of Perlis households had piped water in 2016 (Perlis is one district)?", "get_series",
+  series("amenities.piped_water.share", "MY-09/dis:perlis@dosm_2020", "2016"), "value",
+  s(Decimal(l1a("hh_access_amenities", state="Perlis", district="Perlis", date="2016")["piped_water"])))
+
+# M. Phase 2: income distributions (HIES percentile groups), from L1
+def pct(state, year):
+    f, keep = ("hies_malaysia_percentile", lambda r: True) if state is None else \
+        ("hies_state_percentile", lambda r: r["state"] == state)
+    out = {}
+    with open(os.path.join(DOSM, f"{f}.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if keep(r) and r["date"].startswith(year) and r["income"]:
+                out[(int(r["percentile"]), r["variable"])] = Decimal(r["income"])
+    return out
+
+
+def bracket(state, year, x):
+    g = pct(state, year)
+    k = sum(1 for p in range(1, 101) if (p, "maximum") in g and g[(p, "maximum")] < x)
+    nxt = g.get((k + 1, "minimum"))
+    return f"{k};{k if nxt is not None and nxt >= x else k + 1}"
+
+
+q("1", "Below what monthly income are the poorest 10% of households in Kelantan (2022)?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-03", "period": "2022"}, "decile:10", s(pct("Kelantan", "2022")[(10, "maximum")]))
+q("1", "What share of Malaysian households earned less than RM 3,000 a month in 2024?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY", "period": "2024", "below": 3000}, "share_bracket",
+  bracket(None, "2024", Decimal(3000)))
+q("1", "What share of Sabah households earned less than RM 2,000 a month in 2019?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-12", "period": "2019", "below": "2000"}, "share_bracket",
+  bracket("Sabah", "2019", Decimal(2000)))
+q("1", "Does the income distribution warn that single percentiles are noisy?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-10", "period": "2024"}, "caveat", "CV13")
+q("1", "What is the distribution of household spending in Kedah in 2022?", "get_distribution",
+  {"indicator": "hh_expenditure", "geo": "MY-02", "period": "2022"}, "not_held", kind="trap_missing")
+q("1", "What is Kelantan's income distribution in 2016 (not published by percentile)?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-03", "period": "2016"}, "not_held", kind="trap_missing")
+q("1", "Rank the states by the income cut-off of their poorest 40% in 2022.", "compare_geos",
+  {"indicator": "hh_income.gross.pctile_group.max", "period": "2022", "breakdown": "percentile=040"},
+  "refused_ranking", kind="trap_small_area")
 
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))

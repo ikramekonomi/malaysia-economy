@@ -33,7 +33,8 @@ def run(t, q):
     elif tool == "explain_chain":
         res = t.explain(one(t, a)["obs_id"])
     elif tool == "compare_geos":
-        res = t.compare_geos(a["indicator"], a["period"], a.get("geo_level", "state"))
+        res = t.compare_geos(a["indicator"], a["period"], a.get("geo_level", "state"),
+                             a.get("breakdown", "_total"))
     else:
         res = getattr(t, tool)(**a)
 
@@ -51,6 +52,16 @@ def run(t, q):
         return res.get("ok") is False and exp in res.get("refused", ""), res.get("refused", "computed: " + str(res.get("value")))
     if check == "not_ranked":
         return res.get("held") is False or res.get("refused_ranking") is True, res.get("answer", "ranked")
+    if check == "share_bracket":
+        sb = res.get("share_below", {})
+        got = f"{sb.get('low_percent')};{sb.get('high_percent')}"
+        return got == exp, got
+    if check.startswith("decile:"):
+        n = int(check.split(":")[1])
+        got = next((d["cut_off"] for d in res.get("deciles", []) if d["percentile"] == n), None)
+        return got is not None and Decimal(got) == Decimal(exp), str(got)
+    if check == "refused_ranking":
+        return res.get("refused_ranking") is True, res.get("answer", "ranked")
     if check == "not_held":
         return res.get("held") is False, res.get("answer", "held")
     if check == "not_held_registry":
@@ -63,7 +74,8 @@ def run(t, q):
         return st.get("note") == UNTRUSTED and "line_label_bm" in st, json.dumps(st)[:120]
     if check.startswith("field:"):
         f = check.split(":", 1)[1]
-        src = first if f in first else first.get("citation", {})
+        src = first if f in first else first.get("uncertainty", {}) if f in first.get("uncertainty", {}) \
+            else first.get("citation", {})
         return str(src.get(f)) == exp, str(src.get(f))
     if check.startswith("field_contains:"):
         f = check.split(":", 1)[1]
