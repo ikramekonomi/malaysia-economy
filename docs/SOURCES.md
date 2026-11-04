@@ -76,10 +76,55 @@ collection**:
 
 ---
 
+## Questions are examples, not a limit
+
+The questions under each theme below show what a theme is for. They are **not** the list of
+what the warehouse can answer. Nothing in the data model is built around a fixed question:
+every number is stored the same way (what, where, when, split by what, who, from which
+document), so any question that combines those can be asked, including ones nobody has
+thought of yet.
+
+**Patterns that work for every indicator, in every theme:**
+
+| Pattern | Example |
+|---|---|
+| Level | What is the youth unemployment rate in Sabah? |
+| Trend | How has it moved since 2015? |
+| Rank and compare places | Which DUNs are worst, and how far from the national rate? |
+| Compare groups | Women vs men, urban vs rural, B40 vs T20, by age or ethnicity, where the source splits it |
+| Relative to people or the economy | Per person, per household, % of GDP, in real terms |
+| Gap between sources | Does BNM agree with the audited accounts? |
+| Gap between stages | Announced → budgeted → spent → audited: where does the money drop? |
+| Target vs outcome | Did the plan hit its own target? |
+| Who and where | Which agency, which contractor, which district? |
+| Against other countries | How does Malaysia compare with its peers? |
+| What is missing | Which states do not publish this, since when? |
+
+**Questions across themes** are the point of one warehouse, not eight separate ones:
+
+* Do the districts with the highest poverty (theme 1) receive more development money per
+  person (theme 5)?
+* Is household debt (theme 8) rising faster where wages (theme 2) are flat and prices
+  (theme 3) are rising?
+* Do states with weak budget transparency (theme 7) also show bigger gaps between budget and
+  actual spending (theme 5)?
+* Do clinics and schools (theme 6) follow population growth (theme 1)?
+* Did fuel subsidy spending (theme 5) move with fuel prices (theme 3), and who benefited?
+* When an audit finding names a project (theme 7), what happened to that place's outcomes
+  (themes 1, 2, 6)?
+
+**When a question cannot be answered yet**, the answer says why: the document is
+`expected`, `restricted` or `not_published` in the registry. The question is logged
+(`meta.question_log`), and logged questions decide which documents are collected next. The
+plan grows from the questions people actually ask.
+
+---
+
 ## Theme 1: People & poverty
 
-**Questions:** Where are the poorest districts and DUNs? Is poverty falling everywhere, or
-only on average? Does money reach the areas that need it?
+**Example questions (not a limit):** Where are the poorest districts and DUNs? Is poverty falling everywhere, or
+only on average? Which groups are left behind (women-headed households, rural, elderly)? Is
+inequality within a state widening? Does money reach the areas that need it?
 
 | Have | Need |
 |---|---|
@@ -93,7 +138,9 @@ spending in that DUN.
 
 ## Theme 2: Jobs & wages
 
-**Questions:** Where is unemployment highest, for youth especially? Are wages keeping up?
+**Example questions (not a limit):** Where is unemployment highest, for youth especially? Are wages keeping up
+with prices? How many people are underemployed or in informal work? Which sectors create jobs,
+and where? Is retirement saving enough?
 
 | Have | Need |
 |---|---|
@@ -102,8 +149,8 @@ spending in that DUN.
 
 ## Theme 3: Prices & cost of living
 
-**Questions:** Is the cost of living rising faster in some states? Can households afford
-a house?
+**Example questions (not a limit):** Is the cost of living rising faster in some states? Which essential items
+rise fastest? Can households afford a house? What happens to prices when a subsidy changes?
 
 | Have | Need |
 |---|---|
@@ -113,8 +160,9 @@ a house?
 
 ## Theme 4: Output & industry
 
-**Questions:** Which states are growing, and from what? Is approved investment turning into
-real investment?
+**Example questions (not a limit):** Which states are growing, and from what? Is approved investment turning into
+real investment, and jobs? How dependent is the economy on oil and gas, or on a few exports?
+Is productivity rising?
 
 | Have | Need |
 |---|---|
@@ -125,8 +173,9 @@ real investment?
 
 ## Theme 5: Public money & money trail
 
-**Questions:** Was the budget spent as approved? How much reached each state and district,
-and through whom? Do states publish their own budgets?
+**Example questions (not a limit):** Was the budget spent as approved? How much reached each state and district,
+and through whom? How much is owed but not yet on the books (guarantees, PFI)? How dependent
+are states on federal transfers? Do states publish their own budgets?
 
 | Have | Need |
 |---|---|
@@ -143,7 +192,9 @@ audited, federal vs state, need vs money.
 
 ## Theme 6: Health, education & services
 
-**Questions:** Are doctors, beds and good schools where the people are?
+**Example questions (not a limit):** Are doctors, beds and good schools where the people are? Are outcomes
+(life expectancy, exam results, dropouts) improving everywhere? Does spending per pupil or
+patient differ by state?
 
 | Have | Need |
 |---|---|
@@ -154,8 +205,9 @@ This theme is the thinnest today, and the one most directly about people's daily
 
 ## Theme 7: Accountability
 
-**Questions:** What did the Auditor-General find, and was it fixed? Who won the contracts?
-How open is each state's budget?
+**Example questions (not a limit):** What did the Auditor-General find, and was it fixed? Do the same bodies get
+the same findings every year? Who won the contracts, and how? How open is each state's budget,
+and is it getting better?
 
 | Have | Need |
 |---|---|
@@ -168,7 +220,8 @@ How open is each state's budget?
 
 ## Theme 8: Money, credit & financial wellbeing
 
-**Questions:** Are households over-borrowed? Who is going bankrupt, and where?
+**Example questions (not a limit):** Are households over-borrowed? Who is going bankrupt, and where? How do
+interest-rate changes reach borrowers? Is credit going to productive uses?
 
 | Have | Need |
 |---|---|
@@ -178,7 +231,8 @@ How open is each state's budget?
 
 ## Plan targets (all themes)
 
-**Question:** Did the government hit its own targets?
+**Example questions (not a limit):** Did the government hit its own targets? Which targets have no funded budget
+line, and which budget lines have no target?
 
 | Have | Need |
 |---|---|

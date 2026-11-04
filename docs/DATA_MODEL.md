@@ -18,6 +18,12 @@ Companion documents: `docs/DOCUMENT_REGISTRY.md` (every document the warehouse n
 **Design rule:** the warehouse answers questions about the *economy*. Public finance is one
 theme of eight, not the frame. PKKP was the first document, not the centre.
 
+**Design rule:** no question is built in. Every number has the same shape (indicator × place ×
+period × breakdown × entity × source), so any question that combines them can be answered,
+across themes, including questions nobody has asked yet. Example questions in the docs illustrate;
+they never limit. A question the data cannot answer yet is logged (`meta.question_log`) and
+drives what is collected next.
+
 ---
 
 ## 2. Layers
@@ -345,6 +351,7 @@ meta.code_list  every controlled vocabulary and published classification
 meta.caveat     known limits an answer must carry (e.g. FY2015 OCR leaf, FY2009 cash basis)
 meta.release    what changed in each warehouse build
 meta.decision   why the model is the way it is
+meta.question_log  questions asked that could not be answered, the missing series, date; feeds registry priority
 ```
 
 The 171 underscore-prefixed QA CSVs (`_validation*`, `_source_anomalies*`, `_known_*`, …) stay in L1, where each
@@ -384,7 +391,8 @@ Each view is named, has a one-line question, a fixed grain and a documented meth
 
 **Contract:** a tool never returns a number without its citation (`edition_id`, page) and the
 `meta.caveat` rows that apply. A missing document is an answer ("not held: see registry"),
-not an empty result.
+not an empty result, and the question is written to `meta.question_log`. The tools are generic
+(any indicator, place, period, breakdown), so they cover questions across themes without new code.
 
 ---
 
