@@ -759,6 +759,20 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                        "rows are not a year-end debt figure.",
     ),
     dict(
+        state="Pahang",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V5_duplicate_code_in_table",)),
+        affected_rows="debt_total FY2019-2021 from 'Baki Hutang Awam' (CMD.44.2021 J32, CMD.46.2022 J31, CMD.43.2023 J32)",
+        defect="The table prints 'JUMLAH' (loans from the Federal Government) and, after a line for financial "
+               "institutions, 'JUMLAH HUTANG AWAM' (all public debt). Both are coded debt_total, and the canonical "
+               "pick is the federal subtotal, so FY2020 and FY2021 debt is understated (RM60.00 and RM20.00 juta).",
+        diagnosis="Page-proved 2026-11-04 (CMD.44.2021.pdf p52): 2,087.84 + 283.69 + 117.07 + 521.29 = 3,009.89 "
+                  "(JUMLAH) + 60.00 (INSTITUSI KEWANGAN) = 3,069.89 (JUMLAH HUTANG AWAM). Not an AG misprint.",
+        why_unfixed="Code the federal subtotal debt_federal and JUMLAH HUTANG AWAM debt_total; re-extraction pending. "
+                    "Core flags the two affected years (meta/extraction_defect_flag.csv, caveat CV18).",
+        impact_on_data="state_gov.debt.total for Pahang FY2020-2021 is understated in core until re-extraction.",
+    ),
+    dict(
         state="Negeri Sembilan",
         source_file="", pdf_page="", printed_page="", jadual="",
         match=dict(target="none", checks=("V1_penyumbang_utama_total",)),

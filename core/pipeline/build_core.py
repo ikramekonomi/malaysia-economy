@@ -544,6 +544,15 @@ def build_flags(obs):
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "out_of_bounds",
                         "note": f"{r['indicator_code']} = {r['value_printed']} percent, outside 0-100",
                         "register": "core/pipeline/build_core.py build_flags (declared rule)"})
+    # our own known extraction defects that reach core (meta/extraction_defect_flag.csv, each pointing to its
+    # state_config.KNOWN_EXTRACTION_DEFECTS entry): the figure is the wrong printed line, caveat CV18
+    want = {(d["indicator_code"], d["geo_code"], d["period_code"]): d
+            for d in rows(os.path.join(META, "extraction_defect_flag.csv"))}
+    for r in obs.rows:
+        d = want.get((r["indicator_code"], r["geo_code"], r["period_code"]))
+        if d:
+            out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "our_extraction_defect",
+                        "note": d["note"], "register": d["register"]})
     seen, uniq = set(), []
     for f in out:
         k = (f["l1_ref"], f["indicator_code"], f["flag"], f["note"])

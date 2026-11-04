@@ -437,6 +437,9 @@ q("5", "Does PKKP's audited 2022 operating spending say where its citation comes
 q("5", "Does PKKP's 2020 revenue say its PDF is not archived (decision D24)?", "get_series",
   fed("federal_gov.revenue.total", "2020", "pkkp"), "caveat", "CV17", kind="trap_missing")
 
+q("5", "Pahang's 2020 public debt: does the answer warn it is our known extraction error?", "get_series",
+  series("state_gov.debt.total", "MY-06", "2020"), "caveat", "CV18", kind="trap_source_defect")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

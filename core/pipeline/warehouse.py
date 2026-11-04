@@ -119,8 +119,11 @@ class Warehouse:
     def caveats_for(self, r):
         out = []
         ind = r["indicator_code"]
-        if self.source_flags(r):
+        flags = {f["flag"] for f in self.source_flags(r)}
+        if flags - {"our_extraction_defect"}:
             out.append("CV15")
+        if "our_extraction_defect" in flags:
+            out.append("CV18")
         if r["estimate_method"] == "direct_survey" and r["reliability"] == "unknown":
             out.append("CV1")
         if r["estimate_method"] == "direct_survey" and r["reliability"] == "low" and ind.startswith("lfs."):
