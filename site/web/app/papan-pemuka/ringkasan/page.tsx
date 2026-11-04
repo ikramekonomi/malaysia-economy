@@ -112,9 +112,10 @@ export default function RingkasanPage() {
         const finTotal = (rows: typeof finA.rows) => rows.reduce((s, r) => s + r.amount_rm, 0);
 
         // Net DEVEX comes from ONE publisher for both years being compared. MOF's own
-        // figure exists only for 2017-2019 and 2024, so picking "MOF where available"
-        // would quietly compare a MOF year with a BNM year. BNM MSB 3.1 is complete for
-        // 2009-2024, so it is used for both bars.
+        // figure covers 2015-2024 only, so picking "MOF where available" would quietly
+        // compare a MOF year with a BNM year for any pair reaching back before 2015. BNM
+        // MSB 3.1 is complete for 2009-2024 -- and overall_balance_rm is built on it -- so
+        // it is used for both bars.
         //
         // FY2020-2022 spending through the Kumpulan Wang COVID-19 sat outside both opex
         // and devex, so it gets its own bar, and the balance is read from the warehouse
@@ -229,9 +230,9 @@ export default function RingkasanPage() {
           </select>
         </label>
         <p className="text-xs opacity-60 max-w-sm">
-          Pecahan OPEX/DEVEX terperinci kini hanya tersedia untuk 2017-2021 (edisi
-          Tinjauan Fiskal yang telah dimasukkan setakat ini) — tahun lain boleh dipilih,
-          carta berkenaan akan menunjukkan &quot;belum tersedia&quot;.
+          Pecahan OPEX/DEVEX terperinci tersedia untuk 2015-2024 (Tinjauan Fiskal edisi
+          2019-2027) — tahun sebelum 2015 boleh dipilih, carta berkenaan akan menunjukkan
+          &quot;belum tersedia&quot;.
         </p>
       </div>
 

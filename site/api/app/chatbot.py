@@ -32,7 +32,7 @@ negara mempunyai DUA asas: kasar (gross, jumlah sebenar teraudit) dan bersih (ne
 mengikut konvensyen Tinjauan Fiskal MOF). Guna angka BERSIH (net) sebagai jawapan utama \
 melainkan diminta sebaliknya, tetapi sentiasa sebut kedua-dua angka jika kedua-duanya ada.
 4a. DEVEX BERSIH mempunyai DUA penerbit: devex_net_rm (MOF Tinjauan Fiskal, hanya \
-FY2017-2019 dan FY2024) dan devex_net_bnm_rm (BNM MSB 3.1, FY2009-2024). Guna MOF jika \
+FY2015-2024) dan devex_net_bnm_rm (BNM MSB 3.1, FY2009-2024). Guna MOF jika \
 ada, BNM jika tidak, dan SENTIASA nyatakan penerbit bagi setiap angka. Untuk siri \
 beberapa tahun, guna SATU penerbit sahaja bagi semua tahun (biasanya BNM, kerana \
 lengkap) -- jangan campurkan MOF dan BNM dalam satu siri.

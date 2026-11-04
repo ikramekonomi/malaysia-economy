@@ -1,10 +1,10 @@
 """Extract Jadual 1.1, 3.1, 3.2, 3.3 from the Tinjauan Fiskal 2021 "Statistik Kewangan
-Awam / Public Finance Statistics" appendix (tinjauan_fiskal_2021.pdf, uploaded by the
-user; not committed here — this script is the provenance trail).
+Awam / Public Finance Statistics" appendix (now cited as the official st_kewangan.pdf;
+see SOURCE_FILE below. PDFs are not committed -- this script is the provenance trail).
 
 Every value below was read directly off the named pdf_page/printed_page via
 `pdftotext -layout` on that PDF (verify with `pdftotext -layout -f <pdf_page> -l <pdf_page>
-tinjauan_fiskal_2021.pdf -`) — none is recomputed or estimated. Basis per the source's own
+raw/2021/st_kewangan.pdf -`) — none is recomputed or estimated. Basis per the source's own
 footnotes: 2017-2019 = official_actual (unlabelled in source), 2020 = official_revised
 ("Anggaran disemak"), 2021 = official_projection ("Anggaran belanjawan tidak termasuk
 langkah Belanjawan 2021" -- i.e. excludes 2021 Budget measures).
@@ -19,9 +19,16 @@ Writes: sources/mof-fiscal-outlook/data/2021_public_finance_stats/fact_headline.
 import csv
 import os
 
-SOURCE_FILE = "tinjauan_fiskal_2021.pdf"
-RETRIEVED_FROM = "user upload (2026-09-04 session); original: https://belanjawan.mof.gov.my/pdf/belanjawan2021/hasil/tinjauan_fiskal_2021.pdf"
-RETRIEVED_DATE = "2026-09-04"
+# The figures were first transcribed (2026-09-04) from a user-uploaded copy of this
+# 20-page appendix, filed then as "tinjauan_fiskal_2021.pdf" under a URL that no longer
+# resolves. The appendix is now held as the official st_kewangan.pdf
+# (data/_editions_manifest.csv), and it is cited directly: its pdf pages 5/7/8/9 and
+# printed pages 173/175-177 are the ones recorded below, and the generic parser re-reads
+# every one of the folder's 334 cells from it identically (data/_parser_check_2021*.csv).
+SOURCE_FILE = "st_kewangan.pdf"
+RETRIEVED_FROM = ("https://belanjawan.mof.gov.my/pdf/2021/hasil/st_kewangan.pdf "
+                  "(first transcribed 2026-09-04 from a user-uploaded copy of the same appendix)")
+RETRIEVED_DATE = "2026-11-04"
 YEARS = [2017, 2018, 2019, 2020, 2021]
 BASIS = {2017: "official_actual", 2018: "official_actual", 2019: "official_actual",
          2020: "official_revised", 2021: "official_projection"}
@@ -30,7 +37,7 @@ OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "2021_public_fin
 
 
 def row_common(pdf_page, printed_page, note=""):
-    return dict(source_file=SOURCE_FILE, pdf_page=pdf_page, printed_page=printed_page,
+    return dict(edition=2021, source_file=SOURCE_FILE, pdf_page=pdf_page, printed_page=printed_page,
                 retrieved_from=RETRIEVED_FROM, retrieved_date=RETRIEVED_DATE, note=note)
 
 
@@ -348,18 +355,18 @@ def main():
     devex_sector = build_devex_sector()
 
     write_csv(os.path.join(OUT_DIR, "fact_headline.csv"), headline,
-              ["table_no", "line", "target_year", "amount_rm_juta", "pct_of_gdp", "basis",
+              ["edition", "table_no", "line", "target_year", "amount_rm_juta", "pct_of_gdp", "basis",
                "source_file", "pdf_page", "printed_page", "retrieved_from", "retrieved_date", "note"])
     write_csv(os.path.join(OUT_DIR, "fact_opex_by_component.csv"), opex_component,
-              ["table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
+              ["edition", "table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
                "amount_rm_juta", "pct_share", "basis", "source_file", "pdf_page", "printed_page",
                "retrieved_from", "retrieved_date", "note"])
     write_csv(os.path.join(OUT_DIR, "fact_opex_by_sector.csv"), opex_sector,
-              ["table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
+              ["edition", "table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
                "amount_rm_juta", "pct_share", "basis", "source_file", "pdf_page", "printed_page",
                "retrieved_from", "retrieved_date", "note"])
     write_csv(os.path.join(OUT_DIR, "fact_devex_by_sector.csv"), devex_sector,
-              ["table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
+              ["edition", "table_no", "line", "line_bm", "line_en", "level", "parent_line", "target_year",
                "amount_rm_juta", "pct_share", "basis", "source_file", "pdf_page", "printed_page",
                "retrieved_from", "retrieved_date", "note"])
 

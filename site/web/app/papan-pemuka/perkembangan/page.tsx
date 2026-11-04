@@ -44,7 +44,7 @@ const COMPONENT_GROUPS: { group: string; options: { key: string; label: string }
     group: "Perbelanjaan Pembangunan",
     options: [
       { key: "devex_net_bnm", label: "Jumlah DEVEX (bersih) — BNM, 2009-2024" },
-      { key: "devex_net", label: "Jumlah DEVEX (bersih) — MOF, tahun terpilih" },
+      { key: "devex_net", label: "Jumlah DEVEX (bersih) — MOF, 2015-2024" },
       { key: "devex_gross", label: "Jumlah DEVEX (kasar)" },
       { key: "devex_sector_economic", label: "Sektor Ekonomi" },
       { key: "devex_sector_social", label: "Sektor Sosial" },
@@ -66,7 +66,7 @@ const LABEL_BY_KEY = Object.fromEntries(
 );
 
 // The 3.1/3.2/3.3-sourced components only cover the years the ingested Tinjauan Fiskal
-// appendix does (2017-2021 today) -- everything else in the picker runs the full
+// appendices do (2015 onward; earlier years sat in the Laporan Ekonomi) -- everything else in the picker runs the full
 // 2009-2024 warehouse range. Keep this in sync with sources/mof-fiscal-outlook's
 // ingested coverage; it only affects the shaded "no data" band, never a silent gap.
 const LIMITED_COVERAGE = new Set(
@@ -74,7 +74,7 @@ const LIMITED_COVERAGE = new Set(
     (k) => k.startsWith("opex_component_") || k.startsWith("devex_sector_")
   )
 );
-const LIMITED_RANGE: [number, number] = [2017, 2021];
+const LIMITED_RANGE: [number, number] = [2015, 2024];
 
 // Net DEVEX has two publishers, kept as two separate series (curated/README.md). MOF's own
 // figure exists only for the Tinjauan Fiskal editions ingested so far, so its years are
@@ -82,19 +82,11 @@ const LIMITED_RANGE: [number, number] = [2017, 2021];
 // the MOF series are shown as gaps, never filled from BNM.
 const SPARSE_NOTES: Record<string, string> = {
   devex_net:
-    "Angka MOF (Tinjauan Fiskal, sebenar rasmi) kini hanya tersedia untuk 2017, 2018, 2019 " +
-    "dan 2024 — edisi lain belum dimasukkan. Untuk siri lengkap 2009-2024, pilih " +
-    "\"Jumlah DEVEX (bersih) — BNM\". Kedua-dua penerbit berbeza tidak lebih RM0.33 juta " +
-    "bagi tahun yang ada pada kedua-duanya, tetapi ia dua penerbitan berasingan dan tidak " +
-    "dicantumkan dalam satu garis.",
-  covid_fund:
-    "Dana ini ditubuhkan pada 2020 dan berbelanja pada 2020-2022 sahaja; tiada titik " +
-    "sebelum 2020 kerana dana belum wujud (bukan sifar). Perbelanjaan ini di luar " +
-    "perbelanjaan mengurus dan pembangunan.",
-  overall_balance:
-    "Hasil tolak perbelanjaan mengurus bersih, perbelanjaan pembangunan bersih (BNM) dan " +
-    "Kumpulan Wang COVID-19 — definisi MOF, sepadan dengan baki keseluruhan terbitan MOF. " +
-    "Nilai negatif ialah defisit.",
+    "Angka MOF (Tinjauan Fiskal, sebenar rasmi) bagi 2015-2024, setiap tahun daripada edisinya " +
+    "sendiri. Sebelum 2015 MOF menerbitkan jadual ini dalam Laporan Ekonomi, yang belum " +
+    "dimasukkan — untuk siri lengkap 2009-2024, pilih \"Jumlah DEVEX (bersih) — BNM\". " +
+    "Kedua-dua penerbit berbeza dalam lingkungan pembundaran MOF (RM1 juta), tetapi ia dua " +
+    "penerbitan berasingan dan tidak dicantumkan dalam satu garis.",
   devex_net_bnm:
     "Siri lengkap daripada Bank Negara Malaysia (Buletin Statistik Bulanan, Jadual 3.1). " +
     "Penerbit berbeza daripada angka kasar PKKP teraudit; untuk angka rasmi MOF, pilih " +
@@ -183,9 +175,11 @@ export default function PerkembanganPage() {
         {sparseNote && <p className="text-xs opacity-70 mb-2">{sparseNote}</p>}
         {isLimited && (
           <p className="text-xs opacity-70 mb-2">
-            Pecahan ini kini hanya tersedia untuk {LIMITED_RANGE[0]}-{LIMITED_RANGE[1]}
-            {" "}(edisi Tinjauan Fiskal yang telah dimasukkan setakat ini) — jurang di luar
-            julat itu bukan data hilang secara senyap, sila lihat Metodologi.
+            Pecahan ini tersedia untuk {LIMITED_RANGE[0]}-{LIMITED_RANGE[1]} (edisi Tinjauan
+            Fiskal 2019-2027, setiap tahun daripada edisinya sendiri). Sebelum 2015 MOF
+            menerbitkannya dalam Laporan Ekonomi — jurang itu bukan data hilang secara senyap.
+            Perhatian: klasifikasi sektor berubah antara edisi (cth. Perumahan pada 2022), sila
+            lihat Metodologi.
           </p>
         )}
         <div style={{ width: "100%", height: 360 }}>

@@ -57,7 +57,7 @@ live LLM call itself is untested here).
 
 The OPEX-by-component (Jadual 3.1) and DEVEX-by-sector (Jadual 3.3) sections on
 `ringkasan`/`perkembangan` are only as complete as the ingested Tinjauan Fiskal editions
-— currently just the 2021 edition's own appendix, covering 2017-2021
+— the statistical appendices of the 2019-2027 editions, each year from its own edition, covering FY2015-2027 (actuals to FY2025)
 (`sources/mof-fiscal-outlook/README.md`). Any other year shows an explicit "belum
 tersedia" state rather than a DOSM-proxied or otherwise degraded figure; ingesting more
 editions (2022-2024 and pre-2017) widens this automatically once landed, no code change

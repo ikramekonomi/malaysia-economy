@@ -24,7 +24,7 @@ def _clamp_years(year_from, year_to):
 
 # Net development expenditure has two publishers in the warehouse, deliberately kept in
 # separate columns (curated/README.md): MOF Tinjauan Fiskal's official_actual figure,
-# which exists only for the editions ingested so far (FY2017-2019, FY2024), and BNM MSB
+# one year per edition from the nine editions ingested (FY2015-2024), and BNM MSB
 # 3.1's complete FY2009-2024 series. They agree to RM0.33 juta or better where both
 # exist, but they are two publications on two bases -- so both are returned, each with
 # its own basis, and neither is ever substituted into the other's column here.
@@ -51,8 +51,9 @@ def national_fiscal_headline(year_from=None, year_to=None):
             "table": "curated.fact_fiscal_headline",
             "basis": "opex gross/net and devex gross: PKKP audited actuals as printed in the "
                      "Consolidated Revenue Account (net = before transfer to the Development "
-                     "Fund). devex_net_rm: " + DEVEX_NET_MOF_BASIS + ", FY2017-2019 and FY2024 "
-                     "only (other editions not yet ingested). devex_net_bnm_rm: "
+                     "Fund). devex_net_rm: " + DEVEX_NET_MOF_BASIS + ", FY2015-2024 "
+                     "(each year from its own edition; before FY2015 MOF printed these tables "
+                     "in the Laporan Ekonomi, not held). devex_net_bnm_rm: "
                      + DEVEX_NET_BNM_BASIS + ", FY2009-2024. Two publications -- never splice "
                      "them into one series. covid_fund_rm: Kumpulan Wang COVID-19 spending, "
                      "PKKP Lampiran 3 as printed (FY2020-2022; outside opex and devex). "
@@ -195,6 +196,17 @@ def _mof_stats_year_range(con, table):
     return row[0], row[1]
 
 
+def _mof_breakdown_citation(table, rows):
+    """Name the edition and printed table the year actually came from (one edition per
+    year -- curated/pipeline/mof_editions.py), and its basis."""
+    if not rows:
+        return {"table": table}
+    ed, tno, page, basis = rows[0][9], rows[0][10], rows[0][11], rows[0][7]
+    return {"table": table,
+            "basis": f"MOF {ed.replace('tinjauan_fiskal_', 'Tinjauan Fiskal ')}, Jadual {tno} "
+                     f"(pdf p.{page}), {basis} -- own printed classification"}
+
+
 def opex_by_type(year):
     """OPEX by economic component (Jadual 3.1: Emolumen, Bayaran persaraan, Bayaran
     khidmat hutang, ... ) for one year. Finer than PKKP's own 5-bucket object
@@ -206,19 +218,21 @@ def opex_by_type(year):
     year = int(year)
     if year < lo or year > hi:
         return {"rows": [], "not_available": True,
-                "note": f"OPEX-by-component not yet ingested for {year}; "
-                        f"currently covers {lo}-{hi} (Tinjauan Fiskal 2021 edition's own appendix)",
+                "note": f"OPEX-by-component not available for {year}; covers {lo}-{hi} "
+                        f"(Tinjauan Fiskal editions 2019-2027; before FY2015 MOF printed these "
+                        f"tables in the Laporan Ekonomi, which is not held)",
                 "citations": [{"table": "curated.fact_opex_by_component"}]}
     rows = con.execute(
-        "SELECT line, line_bm, line_en, level, parent_line, amount_rm, pct_share, basis, note "
+        "SELECT line, line_bm, line_en, level, parent_line, amount_rm, pct_share, basis, note, "
+        "source_edition, source_table, pdf_page "
         "FROM curated.fact_opex_by_component WHERE year = ? ORDER BY level, line",
         [year],
     ).fetchall()
-    cols = ["line", "line_bm", "line_en", "level", "parent_line", "amount_rm", "pct_share", "basis", "note"]
+    cols = ["line", "line_bm", "line_en", "level", "parent_line", "amount_rm", "pct_share", "basis", "note",
+            "source_edition", "source_table", "pdf_page"]
     return {
         "rows": [dict(zip(cols, r)) for r in rows], "not_available": False,
-        "citations": [{"table": "curated.fact_opex_by_component",
-                        "basis": "MOF Tinjauan Fiskal, Jadual 3.1 (own printed classification)"}],
+        "citations": [_mof_breakdown_citation("curated.fact_opex_by_component", rows)],
     }
 
 
@@ -231,19 +245,21 @@ def devex_by_sector(year):
     year = int(year)
     if year < lo or year > hi:
         return {"rows": [], "not_available": True,
-                "note": f"DEVEX-by-sector not yet ingested for {year}; "
-                        f"currently covers {lo}-{hi} (Tinjauan Fiskal 2021 edition's own appendix)",
+                "note": f"DEVEX-by-sector not available for {year}; covers {lo}-{hi} "
+                        f"(Tinjauan Fiskal editions 2019-2027; before FY2015 MOF printed these "
+                        f"tables in the Laporan Ekonomi, which is not held)",
                 "citations": [{"table": "curated.fact_devex_by_sector"}]}
     rows = con.execute(
-        "SELECT line, line_bm, line_en, level, parent_line, amount_rm, pct_share, basis, note "
+        "SELECT line, line_bm, line_en, level, parent_line, amount_rm, pct_share, basis, note, "
+        "source_edition, source_table, pdf_page "
         "FROM curated.fact_devex_by_sector WHERE year = ? ORDER BY level, line",
         [year],
     ).fetchall()
-    cols = ["line", "line_bm", "line_en", "level", "parent_line", "amount_rm", "pct_share", "basis", "note"]
+    cols = ["line", "line_bm", "line_en", "level", "parent_line", "amount_rm", "pct_share", "basis", "note",
+            "source_edition", "source_table", "pdf_page"]
     return {
         "rows": [dict(zip(cols, r)) for r in rows], "not_available": False,
-        "citations": [{"table": "curated.fact_devex_by_sector",
-                        "basis": "MOF Tinjauan Fiskal, Jadual 3.3 (own printed classification)"}],
+        "citations": [_mof_breakdown_citation("curated.fact_devex_by_sector", rows)],
     }
 
 

@@ -73,26 +73,22 @@ NATIONAL HEADLINE: net per MOF Tinjauan Fiskal convention
               pdf_page. Two independent publications supply it, kept in SEPARATE columns
               so the two bases are never blended into one series:
                 devex_net_rm ...... MOF's own official_actual net-DE, basis
-                                    "official_actual (MOF Tinjauan Fiskal)":
-                                      FY2017-2019 from the 2021 edition's Jadual 1.1
-                                        (sources/mof-fiscal-outlook/data/
-                                         2021_public_finance_stats/fact_headline.csv,
-                                         line=development_expenditure_net)
-                                      FY2024 from the 2026 edition's Jadual 1.1
-                                        (sources/mof-fiscal-outlook/data/
-                                         fiscal_outlook_headline.csv -- the printed net
-                                         and loan-recovery figures live in that row's
-                                         note, read with the SAME regex that source's
-                                         own validate_headline.py check B uses)
-                                    Other years are left NULL: MOF has published them,
-                                    but those editions are not yet ingested here.
+                                    "official_actual (MOF Tinjauan Fiskal)", FY2015-2024,
+                                    one year per edition by the rule in mof_editions.py
+                                    (each year from the edition in which it is the newest
+                                    actual: FY2023 from the 2025 edition, and so on;
+                                    later restatements noted on the row). Nine editions,
+                                    2019-2027, from sources/mof-fiscal-outlook/data/
+                                    <edition>_public_finance_stats/fact_headline.csv.
+                                    FY2009-2014 are NULL: MOF printed those years in the
+                                    Laporan Ekonomi, which the warehouse does not hold.
                 devex_net_bnm_rm .. BNM Monthly Statistical Bulletin table 3.1
                                     (sources/bnm/data/msb_3_1.csv, annual rows),
                                     basis "reported (BNM MSB 3.1)" -- a complete
                                     FY2009-2024 series from an independent institution.
 
-  The two agree to RM0.3 juta or better in all four overlap years, so the BNM column is
-  a usable stand-in where MOF is missing -- but it is a DIFFERENT publication on a
+  The two agree to within MOF's whole-juta printing (RM0.5 juta) in every overlap year, so
+  the BNM column is a usable stand-in where MOF is missing -- but it is a DIFFERENT publication on a
   DIFFERENT basis and is therefore never merged into devex_net_rm. Take one column or
   the other; do not splice them.
 
@@ -114,17 +110,17 @@ import csv
 import csv as csv_module
 import os
 import re
+import sys
 
 import duckdb
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import mof_editions  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CURATED = os.path.dirname(HERE)
 ROOT = os.path.dirname(CURATED)
 DB = os.path.join(ROOT, "sources", "pkkp", "pkkp.duckdb")
-MOF_STATS_2021 = os.path.join(ROOT, "sources", "mof-fiscal-outlook", "data",
-                               "2021_public_finance_stats", "fact_headline.csv")
-MOF_OUTLOOK_HEADLINE = os.path.join(ROOT, "sources", "mof-fiscal-outlook", "data",
-                                    "fiscal_outlook_headline.csv")
 BNM_MSB_3_1 = os.path.join(ROOT, "sources", "bnm", "data", "msb_3_1.csv")
 
 OUT_CROSSWALK = os.path.join(CURATED, "dim_maksud_canonical.csv")
@@ -329,62 +325,26 @@ def build_ministry_fiscal(con, code_to_canonical):
 # Reference series, all loaded from CSVs in this repo. Nothing below is a literal.
 # ---------------------------------------------------------------------------
 
-# Tinjauan Fiskal 2021 edition's own Jadual 1.1 (sources/mof-fiscal-outlook/data/
-# 2021_public_finance_stats/) -- only rows the edition itself labels official_actual are
-# used; its 2020/2021 rows are revised-estimate/budget-estimate and are deliberately NOT
-# applied here, because mixing an estimate into an actual-basis series is exactly the
-# blending golden rule 2 forbids.
-def _load_devex_net_2021_edition():
+# MOF's own net development expenditure, one year per edition by the shared rule in
+# mof_editions.py (each year from the edition in which it is the newest actual; later
+# restatements noted). Only official_actual rows are used here: an estimate is never put
+# into an actual-basis series. Nine editions are ingested (2019-2027), so MOF's figure
+# covers FY2015-2025; before FY2015 MOF's fiscal tables sat in the Laporan Ekonomi, which
+# the warehouse does not hold.
+def _load_devex_net_mof():
     out = {}
-    if not os.path.exists(MOF_STATS_2021):
-        return out
-    with open(MOF_STATS_2021, newline="") as f:
-        for row in csv_module.DictReader(f):
-            if row["line"] == "development_expenditure_net" and row["basis"] == "official_actual":
-                out[int(row["target_year"])] = {
-                    "amount_rm": float(row["amount_rm_juta"]) * 1e6,
-                    "basis": "official_actual (MOF Tinjauan Fiskal)",
-                    "source_file": row["source_file"],
-                    "pdf_page": row["pdf_page"],
-                    "printed_page": row["printed_page"],
-                    "source_table": f"Jadual {row['table_no']}",
-                }
-    return out
-
-
-# Later Tinjauan Fiskal editions (sources/mof-fiscal-outlook/data/fiscal_outlook_headline.csv)
-# publish gross DE as the row value and the printed NET and loan-recovery figures in the
-# row's note. That is the source CSV's own convention: its validate_headline.py check B
-# parses the note with this exact pattern to prove net = gross - loan recovery against
-# the printed page. We read it the same way rather than re-typing the number.
-NET_DE_IN_NOTE = re.compile(r"net printed ([\d.]+) after loan recovery ([\d.]+)")
-
-
-def _load_devex_net_outlook_editions():
-    out = {}
-    if not os.path.exists(MOF_OUTLOOK_HEADLINE):
-        return out
-    with open(MOF_OUTLOOK_HEADLINE, newline="") as f:
-        for row in csv_module.DictReader(f):
-            if row["line"] != "development_expenditure" or row["basis"] != "official_actual":
-                continue
-            m = NET_DE_IN_NOTE.search(row["note"])
-            if not m:
-                continue
-            year = int(row["target_year"])
-            gross, net = float(row["amount_rm_bil"]), float(m.group(1))
-            rec = float(m.group(2))
-            if abs((gross - rec) - net) > 5e-4:      # the source's own identity must hold
-                raise SystemExit(f"fiscal_outlook_headline {year}: printed net {net} != "
-                                 f"gross {gross} - loan recovery {rec}")
-            out[year] = {
-                "amount_rm": net * 1e9,
-                "basis": "official_actual (MOF Tinjauan Fiskal)",
-                "source_file": row["source_file"],
-                "pdf_page": row["pdf_page"],
-                "printed_page": row["printed_page"],
-                "source_table": "Jadual 1.1 (net in row note)",
-            }
+    for year, r in mof_editions.headline("development_expenditure_net").items():
+        if r["basis"] != "official_actual":
+            continue
+        out[year] = {
+            "amount_rm": float(r["amount_rm_juta"]) * 1e6,
+            "basis": "official_actual (MOF Tinjauan Fiskal)",
+            "source_file": f"{r['edition']}/{r['source_file']}",
+            "pdf_page": r["pdf_page"],
+            "printed_page": r["printed_page"],
+            "source_table": f"Jadual {r['table_no']}, Tinjauan Fiskal {r['edition']} edition",
+            "restated_in": r["restated_in"],
+        }
     return out
 
 
@@ -419,7 +379,7 @@ def _load_bnm_msb_3_1():
     return out
 
 
-DEVEX_NET_MOF = {**_load_devex_net_2021_edition(), **_load_devex_net_outlook_editions()}
+DEVEX_NET_MOF = _load_devex_net_mof()
 BNM = _load_bnm_msb_3_1()
 
 
@@ -613,9 +573,14 @@ def build_headline(con):
         dn_bnm = bnm.get("devex_net_rm")
         ob = (rv - on - dn_bnm - cv_amt) if None not in (rv, dn_bnm) else None
         if mof is None:
-            note_parts.append("devex_net_rm NULL: MOF has published this year's net DE, but the "
-                              "Tinjauan Fiskal edition carrying it is not yet ingested here -- "
-                              "use devex_net_bnm_rm (a different publication, different basis)")
+            note_parts.append("devex_net_rm NULL: MOF's own figure for this year sits in the "
+                              "Laporan Ekonomi (before Budget 2019 MOF's fiscal tables were "
+                              "published there, not in the Tinjauan Fiskal), which the warehouse "
+                              "does not hold -- use devex_net_bnm_rm (a different publication, "
+                              "different basis)")
+        elif mof.get("restated_in"):
+            note_parts.append(f"devex_net_rm from its own edition; later editions differ: "
+                              f"{mof['restated_in']} (RM juta)")
 
         out.append({
             "year": year,
@@ -762,10 +727,21 @@ BNM_AGREEMENT_BAND_RM = 100.0e3
 # tiers of the same audited volume. They tie to the sen in 14 of 16 years; FY2010 (RM0.09)
 # and FY2020 (RM1.00) differ by the statements' own ringgit rounding.
 CROSS_TIER_BAND_RM = 1.0
-# MOF's Tinjauan Fiskal prints net DE in RM juta, so a MOF figure can sit up to half a
-# juta from a sen-exact BNM one on nothing but the printing convention. Comparing the two
-# at the sen-level band would manufacture five divergences out of MOF's rounding.
-MOF_PRINTING_BAND_RM = 0.5e6
+# MOF prints in whole RM juta -- and it does not round its headline figures one by one: it
+# DERIVES them from other rounded printed figures. Every edition's own table proves this
+# exactly (validate_editions.py, 0 failures): net DE = gross - loan recovery, current
+# balance = revenue - opex, overall balance = current balance - net DE - COVID-19 fund.
+# So a MOF figure carries up to half a juta of rounding for EACH printed term behind it:
+#   net DE           2 terms (gross, loan recovery)                      -> RM1.0 juta
+#   overall balance  4 terms (revenue, opex, gross DE, loan recovery),
+#                    5 where the COVID-19 fund prints                    -> RM2.0 / 2.5 juta
+# Measured against a sen-exact figure, anything inside that is MOF's own arithmetic on
+# rounded numbers; anything outside it is a real difference.
+MOF_HALF_JUTA_RM = 0.5e6
+
+
+def mof_band(n_printed_terms):
+    return MOF_HALF_JUTA_RM * n_printed_terms
 
 
 def build_validation(con, headline, ministry_rows):
@@ -901,7 +877,7 @@ def build_validation(con, headline, ministry_rows):
                 (f"devex_net {year} (MOF official_actual, printed in RM juta) vs BNM net DE",
                  row["devex_net_rm"], b["devex_net_rm"])):
             if ours is not None and theirs is not None:
-                band = (MOF_PRINTING_BAND_RM if "MOF official_actual" in name
+                band = (mof_band(2) if "MOF official_actual" in name   # gross - loan recovery
                         else BNM_AGREEMENT_BAND_RM)
                 add("cross_source", "AGREE", "DIVERGE", name, ours, theirs, band, src)
 
@@ -925,24 +901,18 @@ def build_validation(con, headline, ministry_rows):
                 f"PKKP {p['source_file']} pdf p.{p['pdf_page']}, {p['statement']}")
 
     # ---- I. the overall balance, against both publishers that print one --------------
-    mof_ob = {}
-    with open(MOF_STATS_2021, newline="") as f:
-        for r in csv_module.DictReader(f):
-            if r["line"] == "overall_balance" and r["basis"] == "official_actual":
-                mof_ob[int(r["target_year"])] = (float(r["amount_rm_juta"]) * 1e6,
-                                                 f"{r['source_file']} pdf p.{r['pdf_page']}")
-    with open(MOF_OUTLOOK_HEADLINE, newline="") as f:
-        for r in csv_module.DictReader(f):
-            if r["line"] == "overall_deficit" and r["basis"] == "official_actual":
-                mof_ob[int(r["target_year"])] = (float(r["amount_rm_bil"]) * 1e9,
-                                                 f"{r['source_file']} pdf p.{r['pdf_page']}")
+    mof_ob = {y: (float(r["amount_rm_juta"]) * 1e6,
+                  f"{r['edition']}/{r['source_file']} pdf p.{r['pdf_page']}, Jadual {r['table_no']}")
+              for y, r in mof_editions.headline("overall_balance").items()
+              if r["basis"] == "official_actual"}
     for year, (ref, src) in sorted(mof_ob.items()):
         ours = by_year.get(year, {}).get("overall_balance_rm")
         if ours is not None:
+            covid_printed = by_year[year].get("covid_fund_status") == "printed"
             add("cross_source", "AGREE", "DIVERGE",
                 f"overall_balance {year} vs MOF's own published overall balance "
-                "(same definition; MOF prints in RM juta)",
-                ours, ref, MOF_PRINTING_BAND_RM, f"MOF Tinjauan Fiskal, {src}")
+                "(same definition; MOF derives it from rounded printed terms)",
+                ours, ref, mof_band(5 if covid_printed else 4), f"MOF Tinjauan Fiskal, {src}")
 
     # PKKP prints an overall balance on a DIFFERENT definition (all Development Fund
     # receipts netted, not only loan recovery), so the gap is reported as definitional,
