@@ -44,4 +44,4 @@ C6 state coverage,state_gov.revenue.total,PASS,13 of 13 state governments
 C6 state coverage,state_gov.surplus_deficit,PASS,13 of 13 state governments
 C6 state coverage,water.access.share,PASS,14 of 16 states and territories (expected 14: KL and Putrajaya are subsumed under Selangor (catalogue note))
 C7 states sum to Malaysia (pop.total),pop.total,PASS,largest gap 200 persons over 57 years (rounding allowance 16 x 50)
-"C8 value = value_printed x unit scale (sign kept, except spending levels)",fact_observation,PASS,70867 rows checked
+"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,70867 rows checked

@@ -269,6 +269,10 @@ q("6", "Does Kuala Lumpur's water access say why it is missing?", "get_series",
 q("6", "Compare life expectancy across all states in 2024 (banded, not ranked)?", "compare_geos",
   {"indicator": "life_expectancy", "period": "2024"}, "place_count", "16")
 
+# K. FAIL triage (2026-11-04): a deficit printed without its sign
+q("5", "Did Johor run a surplus or a deficit in 2018?", "get_series", series("state_gov.surplus_deficit", "MY-01", "2018"),
+  "value", s(acct("Johor", "2018", "revenue_total") - acct("Johor", "2018", "expenditure_total")))
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

@@ -79,3 +79,4 @@ Q77,fact,get_series,value,7.5,7.5,PASS
 Q78,fact,derive_chain,value,0.001228,0.001228,PASS
 Q79,trap_missing,get_series,caveat,COVERAGE,COVERAGE,PASS
 Q80,fact,compare_geos,place_count,16,16,PASS
+Q81,fact,get_series,value,-19620000,-19620000,PASS

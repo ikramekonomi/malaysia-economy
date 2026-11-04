@@ -258,8 +258,16 @@ STATE_LINES = {
 }
 
 
+def sign_rules():
+    """(state, year, line_code) -> sign, from meta/sign_convention.csv: a printed figure whose sign the page
+    leaves implicit (e.g. a deficit printed unsigned), each with its page proof. value_printed keeps the page."""
+    return {(r["state"], r["fiscal_year"], r["line_code"]): r["value_sign"]
+            for r in rows(os.path.join(META, "sign_convention.csv"))}
+
+
 def build_states(obs):
     sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+    signs = sign_rules()
     for i, r in enumerate(rows(STATES), start=2):
         if r["measure"] != "actual" or r["line_code"] not in STATE_LINES:
             continue
@@ -268,6 +276,8 @@ def build_states(obs):
         v = dec(r["amount_rm"] if r["line_code"] == "surplus_deficit" else r["amount_rm_conformed"])
         if v is None:
             continue
+        if signs.get((r["state"], r["fiscal_year"], r["line_code"])) == "negative":
+            v = -abs(v)
         g = STATE_ISO[r["state"]]
         obs.add(indicator_code=STATE_LINES[r["line_code"]], geo_code=g, period_code=r["fiscal_year"],
                 entity_id=f"state_gov:{g}", basis="audited", edition_id=f"states:{r['report']}",
@@ -418,6 +428,7 @@ def checks(obs, geo, per, ind, brk, editions):
     add("C7 states sum to Malaysia (pop.total)", "pop.total", "PASS" if worst <= 800 else "FAIL",
         f"largest gap {fmt(worst)} persons over {len(nat)} years (rounding allowance 16 x 50)")
     bad, n = [], 0
+    signed = {(STATE_ISO[s], y, STATE_LINES.get(line)) for (s, y, line) in sign_rules()}
     for r in obs.rows:
         p = (r["value_printed"] or "").replace(",", "").strip()
         neg = p.startswith("(") and p.endswith(")")
@@ -428,12 +439,13 @@ def checks(obs, geo, per, ind, brk, editions):
         scale = Decimal(1000000) if ("juta" in u or "million" in u) else Decimal(1000) if "'000" in u else Decimal(1)
         want = (-pv if neg else pv) * scale
         got = Decimal(r["value"])
-        level = r["indicator_code"].startswith(("state_gov.expenditure.",))
+        level = r["indicator_code"].startswith(("state_gov.expenditure.",)) \
+            or (r["geo_code"], r["period_code"], r["indicator_code"]) in signed
         n += 1
         if (abs(got) != abs(want)) or (not level and got != want):
             bad.append(f"{r['indicator_code']} {r['geo_code']} {r['period_code']}: value {r['value']} vs printed "
                        f"{r['value_printed']} {r['unit_printed']}")
-    add("C8 value = value_printed x unit scale (sign kept, except spending levels)", "fact_observation",
+    add("C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)", "fact_observation",
         "PASS" if not bad else "FAIL", f"{n} rows checked" + (f"; {len(bad)} differ, e.g. {bad[:3]}" if bad else ""))
     return out
 
