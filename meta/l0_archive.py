@@ -30,6 +30,7 @@ import json
 import os
 import re
 import shutil
+import socket
 import ssl
 import subprocess
 import sys
@@ -121,11 +122,23 @@ def _aia_intermediates(host, port=443, depth=3):
         if not urls:
             break
         data = urllib.request.urlopen(urllib.request.Request(urls[0], headers={"User-Agent": UA}), timeout=30).read()
-        try:
-            cert = x509.load_der_x509_certificate(data)
-        except ValueError:
-            cert = x509.load_pem_x509_certificate(data)
-        chain.append(cert.public_bytes(Encoding.PEM).decode())
+        certs = []
+        for loader in (lambda d: [x509.load_der_x509_certificate(d)], lambda d: [x509.load_pem_x509_certificate(d)],
+                       lambda d: __import__("cryptography.hazmat.primitives.serialization.pkcs7",
+                                            fromlist=["x"]).load_der_pkcs7_certificates(d),
+                       lambda d: __import__("cryptography.hazmat.primitives.serialization.pkcs7",
+                                            fromlist=["x"]).load_pem_pkcs7_certificates(d)):
+            try:
+                certs = loader(data)
+                break
+            except Exception:  # noqa: BLE001 - try the next encoding
+                continue
+        if not certs:
+            print(f"  AIA {urls[0]} returned {len(data)} bytes that are not a certificate", flush=True)
+            break
+        print(f"  AIA {urls[0]}: {[c.subject.rfc4514_string()[:60] for c in certs]}", flush=True)
+        chain += [c.public_bytes(Encoding.PEM).decode() for c in certs]
+        cert = certs[0]
         if cert.issuer == cert.subject:
             break
     return chain
@@ -135,6 +148,8 @@ def context(host, fix=False):
     if host in _ctx and not fix:
         return _ctx[host]
     ctx = ssl.create_default_context(cafile=_base_bundle())
+    if os.path.exists("/etc/ssl/certs/ca-certificates.crt"):  # the system store as well as certifi's
+        ctx.load_verify_locations(cafile="/etc/ssl/certs/ca-certificates.crt")
     if fix:
         try:
             extra = _aia_intermediates(host)
@@ -205,6 +220,53 @@ def download(url, dest, tries=3):
     return last
 
 
+_pages = {}
+
+
+def discover(page, year):
+    """PDF links on a publisher's listing page whose address or link text names the edition year."""
+    import html
+    if page not in _pages:
+        try:
+            req = urllib.request.Request(page, headers={"User-Agent": UA})
+            host = urllib.parse.urlparse(page).hostname
+            with urllib.request.urlopen(req, timeout=60, context=context(host)) as r:
+                _pages[page] = r.read().decode("utf-8", "replace")
+        except Exception as e:  # noqa: BLE001
+            print(f"  discover {page}: {type(e).__name__}: {e}", flush=True)
+            _pages[page] = ""
+    out = []
+    for href, text in re.findall(r'<a[^>]+href="([^"]+\.pdf)"[^>]*>(.*?)</a>', _pages[page], flags=re.I | re.S):
+        if year and (year in href or year in re.sub("<[^>]+>", "", text)):
+            out.append(urllib.parse.urljoin(page, html.unescape(href)))
+    print(f"  discover {page} [{year}]: {out[:4]}", flush=True)
+    return out
+
+
+def diagnose(host):
+    """Print what a host's TLS chain looks like, for the run log."""
+    try:
+        pem = ssl.get_server_certificate((host, 443))
+        from cryptography import x509
+        c = x509.load_pem_x509_certificate(pem.encode())
+        print(f"diagnose {host}: leaf {c.subject.rfc4514_string()[:80]} issued by {c.issuer.rfc4514_string()[:80]}")
+        try:
+            aia = c.extensions.get_extension_for_class(x509.AuthorityInformationAccess).value
+            print("  AIA:", [d.access_location.value for d in aia])
+        except Exception as e:  # noqa: BLE001
+            print("  no AIA extension:", e)
+        for fix in (False, True):
+            try:
+                with socket.create_connection((host, 443), timeout=20) as s, \
+                        context(host, fix).wrap_socket(s, server_hostname=host) as ss:
+                    print(f"  verify (chain completed={fix}): OK, {ss.version()}")
+                    break
+            except Exception as e:  # noqa: BLE001
+                print(f"  verify (chain completed={fix}): {type(e).__name__}: {e}")
+    except Exception as e:  # noqa: BLE001
+        print(f"diagnose {host}: {type(e).__name__}: {e}")
+
+
 # ---------- GitHub release ----------
 def gh(*args, check=True):
     p = subprocess.run(["gh", *args], capture_output=True, text=True)
@@ -238,6 +300,9 @@ def main():
     todo = [t for t in targets() if not (t["sha256"] and idx.get(t["sha256"], {}).get("status") == "ARCHIVED")
             and not (t["mode"] == "identify" and any(r["file_name"] == t["file_name"] and r["status"] == "ARCHIVED"
                                                      for r in idx.values()))]
+    if "--diagnose" in sys.argv:
+        diagnose(sys.argv[sys.argv.index("--diagnose") + 1])
+        return
     if "--plan" in sys.argv:
         gb = sum(t["size"] for t in todo) / 1e9
         print(f"{len(todo)} to archive (~{gb:.1f} GB known): "
@@ -259,7 +324,10 @@ def main():
                                 "check": "sha256 matches registry", "archived_on": date.today().isoformat()}
             continue
         result = None
-        for url in t["urls"]:
+        urls = []
+        for u in t["urls"]:
+            urls += discover(u[len("discover:"):], t.get("edition", "")) if u.startswith("discover:") else [u]
+        for url in urls:
             dest = os.path.join(work, "dl.pdf")
             err = download(url, dest)
             if err:

@@ -47,9 +47,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          python3 meta/l0_archive.py --diagnose www.parlimen.gov.my || true
           python3 meta/l0_archive.py --plan
           python3 meta/l0_archive.py --run --max-gb "${{ inputs.max_gb || '9' }}" --max-minutes "${{ inputs.max_minutes || '300' }}"
-          python3 meta/build_registry.py
 
       - name: Commit the index
         if: always()
@@ -58,6 +58,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # start from the branch as it is now (other pushes may have landed during the run), lay this
+          # run's index and manifests on top, and rebuild the registry from them: no merge conflicts
+          mkdir -p /tmp/l0 && cp meta/l0_archive.csv /tmp/l0/ && cp --parents sources/*/data/_documents_manifest.csv /tmp/l0/ 2>/dev/null || true
+          git fetch -q origin "${{ github.ref_name }}"
+          git reset -q --hard "origin/${{ github.ref_name }}"
+          cp /tmp/l0/l0_archive.csv meta/ && (cd /tmp/l0 && cp --parents sources/*/data/_documents_manifest.csv "$GITHUB_WORKSPACE"/ 2>/dev/null || true)
+          python3 meta/build_registry.py
           git add meta/l0_archive.csv meta/registry_file.csv meta/_validation_registry.csv sources/*/data/_documents_manifest.csv 2>/dev/null || true
           git diff --cached --quiet && { echo "index unchanged"; exit 0; }
           git commit -q -m "L0 archive: update index (run ${{ github.run_id }})"
@@ -67,5 +74,5 @@ jobs:
             gh pr create --base main --head "$b" --title "L0 archive: index update (run ${{ github.run_id }})" \
               --body "Written by .github/workflows/l0-archive.yml. Index of raw documents archived as assets of the l0-archive release."
           else
-            git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}"
+            git push -q origin "HEAD:${{ github.ref_name }}"
           fi
