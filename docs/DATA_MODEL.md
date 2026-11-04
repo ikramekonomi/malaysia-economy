@@ -502,7 +502,7 @@ These are written into `meta.decision` and enforced where the model can enforce 
 
 | Policy | Rule | Enforced by |
 |---|---|---|
-| Licence | Every series records `licence` and `redistribution` (`open`, `attribution`, `no_redistribution`, `to_confirm`). A view or export never includes data whose terms forbid redistribution; `to_confirm` blocks publication until confirmed. | registry columns; export check |
+| Licence | Every series records `licence` and `redistribution` (`open`, `attribution`, `no_redistribution`, `to_confirm`). A view or export never includes data whose terms forbid redistribution; `to_confirm` does **not** block publication (owner decision, 2026-11-04): published official figures go out with their full citation (document, page) and the publisher named, and a publisher's takedown or correction request is honoured at once. The licence is still checked and recorded, never guessed. | registry columns; export check |
 | Personal data (PDPA) | Individuals are `natural_person` entities, held only for a recorded public-interest purpose, never returned by tools or views. Names in record text are masked on output. | §4.5, §5.3, §11 |
 | Defamation | A named body is linked to a finding or contract in public only by a `code_exact` or `human_signed` link. | §5.3 |
 | Neutrality | Methods are declared before results are seen. Every view runs for **all 13 states and 3 Federal Territories**, never a chosen few. `core.*` holds no party attribute. Election results are used only as geographic context (who represents an area), not to score parties or politicians. | `meta.decision`; view definitions |
@@ -611,6 +611,7 @@ spot-check of a sample → PR.
 | D20 | DOSM refreshed daily by a GitHub Actions workflow; a new vintage PR merges itself only when every verifier passes and the gate holds | always current, never silent | §6 |
 | D21 | Low-value global series deferred until a question needs them | maintenance cost for a small team | registry |
 | D22 | CI runs the offline check suite on every PR and blocks a script failure, a non-reproducing rebuild or a FAIL not in `qa/known_fails.csv` | checks must be enforced, not remembered | `qa/README.md` |
+| D23 | Raw documents (L0) kept on GitHub: assets of this private repository's `l0-archive` release, named by sha256, written only by `l0-archive.yml`; index `meta/l0_archive.csv`. A file with no recorded sha256 is accepted only if its cited amounts are on its cited pages (`meta/l0_identity.py`) | 13 GB is too big for git history (files over 100 MB); release assets keep clones light and need no other service | §2, `meta/l0_archive.py` |
 
 ---
 

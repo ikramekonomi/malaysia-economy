@@ -107,58 +107,77 @@ R2 vocabulary and required fields,un_sdg,PASS,
 R3 every file belongs to a registered series,all,PASS,
 R4 held series has files,dosm_population,PASS,3 file(s)
 R5 every file has a sha256,dosm_population,PASS,3 files
-R6 licence confirmed,dosm_population,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,dosm_population,PASS,3 of 3 archived (release l0-archive or git history)
+R6 licence recorded,dosm_population,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,hies,PASS,21 file(s)
 R5 every file has a sha256,hies,PASS,21 files
-R6 licence confirmed,hies,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,hies,PASS,21 of 21 archived (release l0-archive or git history)
+R6 licence recorded,hies,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,lfs,PASS,18 file(s)
 R5 every file has a sha256,lfs,PASS,18 files
-R6 licence confirmed,lfs,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,lfs,PASS,18 of 18 archived (release l0-archive or git history)
+R6 licence recorded,lfs,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,productivity,PASS,4 file(s)
 R5 every file has a sha256,productivity,PASS,4 files
-R6 licence confirmed,productivity,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,productivity,PASS,4 of 4 archived (release l0-archive or git history)
+R6 licence recorded,productivity,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,cpi,PASS,3 file(s)
 R5 every file has a sha256,cpi,PASS,3 files
-R6 licence confirmed,cpi,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,cpi,PASS,3 of 3 archived (release l0-archive or git history)
+R6 licence recorded,cpi,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,national_accounts,PASS,26 file(s)
 R5 every file has a sha256,national_accounts,PASS,26 files
-R6 licence confirmed,national_accounts,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,national_accounts,PASS,26 of 26 archived (release l0-archive or git history)
+R6 licence recorded,national_accounts,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,state_gdp,PASS,1 file(s)
 R5 every file has a sha256,state_gdp,PASS,1 files
-R6 licence confirmed,state_gdp,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,state_gdp,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,state_gdp,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,industry_trade,PASS,22 file(s)
 R5 every file has a sha256,industry_trade,PASS,22 files
-R6 licence confirmed,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,industry_trade,PASS,22 of 22 archived (release l0-archive or git history)
+R6 licence recorded,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,anggaran_perbelanjaan,PASS,3 file(s)
-R5 every file has a sha256,anggaran_perbelanjaan,OPEN,3 of 3 without sha256 (needs the L0 archive)
-R6 licence confirmed,anggaran_perbelanjaan,OPEN,licence to_confirm
+R5 every file has a sha256,anggaran_perbelanjaan,PASS,3 files
+R7 every file is in the L0 archive,anggaran_perbelanjaan,OPEN,0 of 3 archived (release l0-archive or git history)
+R6 licence recorded,anggaran_perbelanjaan,OPEN,licence to_confirm
 R4 held series has files,bnm_msb,PASS,32 file(s)
 R5 every file has a sha256,bnm_msb,PASS,32 files
-R6 licence confirmed,bnm_msb,OPEN,licence to_confirm
+R7 every file is in the L0 archive,bnm_msb,PASS,32 of 32 archived (release l0-archive or git history)
+R6 licence recorded,bnm_msb,OPEN,licence to_confirm
 R4 held series has files,pkkp,PASS,16 file(s)
 R5 every file has a sha256,pkkp,OPEN,16 of 16 without sha256 (needs the L0 archive)
-R6 licence confirmed,pkkp,OPEN,licence to_confirm
+R7 every file is in the L0 archive,pkkp,OPEN,0 of 16 archived (release l0-archive or git history)
+R6 licence recorded,pkkp,OPEN,licence to_confirm
 R4 held series has files,state_financial_statements,PASS,143 file(s)
 R5 every file has a sha256,state_financial_statements,PASS,143 files
-R6 licence confirmed,state_financial_statements,OPEN,licence to_confirm
+R7 every file is in the L0 archive,state_financial_statements,OPEN,0 of 143 archived (release l0-archive or git history)
+R6 licence recorded,state_financial_statements,OPEN,licence to_confirm
 R4 held series has files,tinjauan_fiskal,PASS,16 file(s)
 R5 every file has a sha256,tinjauan_fiskal,PASS,16 files
-R6 licence confirmed,tinjauan_fiskal,OPEN,licence to_confirm
+R7 every file is in the L0 archive,tinjauan_fiskal,OPEN,0 of 16 archived (release l0-archive or git history)
+R6 licence recorded,tinjauan_fiskal,OPEN,licence to_confirm
 R4 held series has files,anggaran_hasil,PASS,5 file(s)
-R5 every file has a sha256,anggaran_hasil,OPEN,4 of 5 without sha256 (needs the L0 archive)
-R6 licence confirmed,anggaran_hasil,OPEN,licence to_confirm
+R5 every file has a sha256,anggaran_hasil,PASS,5 files
+R7 every file is in the L0 archive,anggaran_hasil,OPEN,0 of 5 archived (release l0-archive or git history)
+R6 licence recorded,anggaran_hasil,OPEN,licence to_confirm
 R4 held series has files,dosm_gfs,PASS,11 file(s)
 R5 every file has a sha256,dosm_gfs,PASS,11 files
-R6 licence confirmed,dosm_gfs,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,dosm_gfs,PASS,11 of 11 archived (release l0-archive or git history)
+R6 licence recorded,dosm_gfs,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,amenities_access,PASS,1 file(s)
 R5 every file has a sha256,amenities_access,PASS,1 files
-R6 licence confirmed,amenities_access,PASS,CC BY 4.0 (DOSM catalogue pages)
+R7 every file is in the L0 archive,amenities_access,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,amenities_access,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,lkan_federal,PASS,57 file(s)
 R5 every file has a sha256,lkan_federal,PASS,57 files
-R6 licence confirmed,lkan_federal,OPEN,licence to_confirm
+R7 every file is in the L0 archive,lkan_federal,OPEN,0 of 57 archived (release l0-archive or git history)
+R6 licence recorded,lkan_federal,OPEN,licence to_confirm
 R4 held series has files,ag_sijil_eselfaudit,PASS,4 file(s)
 R5 every file has a sha256,ag_sijil_eselfaudit,PASS,4 files
-R6 licence confirmed,ag_sijil_eselfaudit,OPEN,licence to_confirm
+R7 every file is in the L0 archive,ag_sijil_eselfaudit,OPEN,0 of 4 archived (release l0-archive or git history)
+R6 licence recorded,ag_sijil_eselfaudit,OPEN,licence to_confirm
 R4 held series has files,lkan_state,PASS,353 file(s)
 R5 every file has a sha256,lkan_state,PASS,353 files
-R6 licence confirmed,lkan_state,OPEN,licence to_confirm
+R7 every file is in the L0 archive,lkan_state,OPEN,0 of 353 archived (release l0-archive or git history)
+R6 licence recorded,lkan_state,OPEN,licence to_confirm

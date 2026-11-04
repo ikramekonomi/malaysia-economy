@@ -71,7 +71,7 @@ Rules:
 | Field | Values | Effect |
 |---|---|---|
 | `licence` | the licence as stated by the publisher, or `to_confirm` | recorded on every answer that uses the series |
-| `redistribution` | `open` · `attribution` · `no_redistribution` · `to_confirm` | `no_redistribution` never leaves the warehouse; `to_confirm` blocks publication until confirmed |
+| `redistribution` | `open` · `attribution` · `no_redistribution` · `to_confirm` | `no_redistribution` never leaves the warehouse; `to_confirm` may be published with full citation (G1, as decided 2026-11-04) |
 | `contains_personal_data` | `no` · `public_figures` · `possible` · `yes` | `possible`/`yes` series pass through the personal-data rule before any output |
 
 Only licences stated somewhere we can cite are filled in: DOSM (CC BY 4.0, per its catalogue
@@ -121,7 +121,7 @@ row per file to **`meta/registry_file.csv`** (series, edition, file, URL, sha256
 retrieved date, manifest), then checks the registry into `meta/_validation_registry.csv`:
 vocabulary, unique ids, every held series has files, every file has a sha256 and every held series
 a confirmed licence. A missing sha256 or an unconfirmed licence is `OPEN` (a Phase 0 criterion not
-yet met), not `FAIL`. Code lists are `meta/code_list.csv`; decisions D1–D22 and G1–G7 are
+yet met), not `FAIL`. Code lists are `meta/code_list.csv`; decisions D1–D23 and G1–G7 are
 `meta/decision.csv`. All of it loads into the warehouse as `meta.*`.
 
 | Today | Rows | Becomes |

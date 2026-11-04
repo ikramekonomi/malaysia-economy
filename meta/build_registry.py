@@ -12,15 +12,18 @@ Reads (the manifests each source already writes):
   sources/mof-fiscal-outlook/data/_editions_manifest.csv
   sources/dosm/data/_vintage_log.csv            (state = current)
   sources/bnm/data/_vintage_log.csv             (if present)
-  provenance columns of pkkp / anggaran / anggaran-hasil data (file names only, no sha256 yet)
+  sources/{pkkp,anggaran,anggaran-hasil}/data/_documents_manifest.csv  (re-downloaded, identity-checked)
+  provenance columns of those sources' data, for any file no manifest covers (no sha256)
 Writes (derived, rebuilt every run):
   meta/registry_file.csv          one row per file a held series is built from
   meta/_validation_registry.csv   the checks below
 
 Checks: vocabulary values are in meta/code_list.csv; series ids are unique; every held, extracted
 or verified series has at least one file; every file has a sha256 (OPEN until the L0 archive
-holds it); every held series has a confirmed licence (OPEN while `to_confirm`). OPEN marks a
-Phase 0 done-criterion not yet met; it does not block CI. FAIL does.
+holds it); every file is archived (OPEN until meta/l0_archive.csv lists it, or git history holds it,
+as for API vintages); every held series has its licence recorded (OPEN while `to_confirm`; since G1 was revised on
+2026-11-04 this no longer blocks publication). OPEN marks work not yet done; it does not block CI.
+FAIL does.
 """
 import csv
 import glob
@@ -33,6 +36,8 @@ SERIES = os.path.join(REPO, "docs", "registry", "series_seed.csv")
 CODES = os.path.join(HERE, "code_list.csv")
 OUT_FILES = os.path.join(HERE, "registry_file.csv")
 OUT_CHECKS = os.path.join(HERE, "_validation_registry.csv")
+L0_INDEX = os.path.join(HERE, "l0_archive.csv")
+L0_TAG = "l0-archive"
 HELD = {"held", "extracted", "verified"}
 FIELDS = ["series_id", "edition", "file_name", "source_url", "sha256", "size_bytes", "pages",
           "retrieved_date", "manifest"]
@@ -105,7 +110,18 @@ def manifest_files():
                     "size_bytes": m.get("size_bytes", ""), "pages": m.get("pages", ""),
                     "retrieved_date": m.get("retrieved_date", ""),
                     "manifest": m.get("manifest", "") + " (via source_file of the AG registers)"})
-    # sources with no manifest yet: the documents their rows cite, without a sha256
+    # sources whose PDFs were re-downloaded and proved by meta/l0_identity.py
+    manifested = {}
+    for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil")):
+        p = os.path.join(REPO, "sources", src, "data", "_documents_manifest.csv")
+        if not os.path.exists(p):
+            continue
+        for r in rows(p):
+            manifested.setdefault(src, set()).add(r["file_name"])
+            out.append({"series_id": sid, "edition": r["edition"], "file_name": r["file_name"],
+                        "source_url": r["source_url"], "sha256": r["sha256"], "size_bytes": r["size_bytes"],
+                        "pages": r["pages"], "retrieved_date": r["retrieved_date"], "manifest": rel(p)})
+    # the documents their rows cite that no manifest covers yet, without a sha256
     for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil")):
         seen = set()
         for p in sorted(glob.glob(os.path.join(REPO, "sources", src, "data", "**", "*.csv"), recursive=True)):
@@ -119,7 +135,7 @@ def manifest_files():
                     name = (row["source_file"] or "").split("/")[-1]
                     if name.lower().endswith(".pdf"):
                         seen.add(name)
-        for name in sorted(seen):
+        for name in sorted(seen - manifested.get(src, set())):
             out.append({"series_id": sid, "edition": "", "file_name": name, "source_url": "", "sha256": "",
                         "size_bytes": "", "pages": "", "retrieved_date": "",
                         "manifest": f"cited in sources/{src}/data (no manifest yet)"})
@@ -132,6 +148,7 @@ def main():
     for c in rows(CODES):
         codes.setdefault(c["code_list"], set()).add(c["code"])
     files = manifest_files()
+    archived = {r["sha256"] for r in rows(L0_INDEX) if r["status"] == "ARCHIVED"} if os.path.exists(L0_INDEX) else set()
     checks = []
 
     def check(name, scope, ok, note="", open_=False):
@@ -164,7 +181,10 @@ def main():
             check("R5 every file has a sha256", s["series_id"], not no_sha,
                   f"{len(no_sha)} of {len(fs)} without sha256 (needs the L0 archive)" if no_sha else f"{len(fs)} files",
                   open_=True)
-        check("R6 licence confirmed", s["series_id"], s["licence"] != "to_confirm",
+            arch = [f for f in fs if f["sha256"] in archived or "_vintage_log" in f["manifest"]]
+            check("R7 every file is in the L0 archive", s["series_id"], len(arch) == len(fs),
+                  f"{len(arch)} of {len(fs)} archived (release {L0_TAG} or git history)", open_=True)
+        check("R6 licence recorded", s["series_id"], s["licence"] != "to_confirm",
               "licence to_confirm" if s["licence"] == "to_confirm" else s["licence"], open_=True)
 
     with open(OUT_FILES, "w", newline="") as f:
