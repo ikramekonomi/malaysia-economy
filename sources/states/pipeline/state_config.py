@@ -686,6 +686,36 @@ def state_section_end(pages: list[str], first_table_page: int) -> int:
 # listed in _source_anomalies_<slug>.csv, but marked page_proved=no, and stays a FAIL.
 PAGE_PROVED_ANOMALIES: list[dict] = [
     dict(
+        state="Kedah", fiscal_year="2016", source_file="CMD.34.2018.pdf", checks=("V1_intra_volume_contradiction",),
+        evidence="qa/evidence/CMD.34.2018.pdf/p031.txt (J4.9), p030.txt (J4.8)",
+        proof="J4.9 prints a '2016 DINYATAKAN SEMULA' (restated) column in which the three revenue categories are "
+              "reprinted, reclassified (222.75 + 213.62 + 165.26 = 601.63, the same total as J4.8), but the HASIL line "
+              "itself is printed nil (-). The nil is how the restated column is printed, not a second revenue figure.",
+    ),
+    dict(
+        state="Johor", fiscal_year="2019", source_file="CMD.38.2023.pdf", checks=("V1_revenue_categories",),
+        evidence="qa/evidence/CMD.38.2023.pdf/p037.txt (5-year Penyata Prestasi Kewangan, 2018-2022)",
+        proof="FY2019 prints Hasil Cukai 533.15 + Hasil Bukan Cukai 874.80 + Terimaan Bukan Hasil 337.77 = 1,745.72 "
+              "against JUMLAH HASIL 1,745.32 (0.40 less). Every other year of the same table adds up exactly "
+              "(2018 1,543.03; 2020 1,674.29; 2021 1,428.14; 2022 1,630.64).",
+    ),
+    dict(
+        state="Kelantan", fiscal_year="2018", source_file="CMD.43.2022.pdf", checks=("V1_cra_surplus",),
+        evidence="qa/evidence/CMD.43.2022.pdf/p042.txt (Kedudukan Akaun Hasil Disatukan 2017-2021)",
+        proof="FY2018 prints Hasil 586.94 and Perbelanjaan Mengurus 546.49, whose difference is 40.45, and "
+              "Lebihan/Defisit 40.46 with footnote (2): 'Jumlah lebihan/defisit hasil adalah perbezaan keseluruhan "
+              "yang telah dibundarkan' - the surplus is the rounded difference of the unrounded totals. The publisher's "
+              "declared rounding (0.01).",
+    ),
+    dict(
+        state="Perlis", fiscal_year="2024", source_file="CMD.22.2025.pdf", checks=("V1_continuity_cross_volume",),
+        evidence="qa/evidence/CMD.26.2024.pdf/p041.txt; qa/evidence/CMD.22.2025.pdf/p036.txt",
+        proof="A restatement, not a misprint: CMD.26.2024 closes FY2023 at (523.53) (= (501.14) + 140.54 - 162.93); "
+              "CMD.22.2025 opens FY2024 at (523.50) and reprints FY2023 as (501.11) + 140.54 - 162.93 = (523.50). "
+              "Each volume adds up; the later one restates the earlier year by 0.03. Each year is taken from its "
+              "own volume (golden rule 6).",
+    ),
+    dict(
         state="Selangor", fiscal_year="2019", source_file="CMD.50.2021.pdf",
         checks=("V1_govt_trust_fund_composition", "V1_trust_account_composition", "V1_intra_volume_contradiction"),
         evidence="qa/evidence/CMD.50.2021.pdf/p029.txt (Jadual 2), p030.txt (Jadual 3)",
@@ -706,6 +736,35 @@ def page_proved(state: str, c: dict):
 
 
 KNOWN_EXTRACTION_DEFECTS: list[dict] = [
+    dict(
+        state="Johor",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_intra_volume_contradiction", "V1_trust_account_composition"),
+                   fiscal_year=("2015",)),
+        affected_rows="FY2015 Akaun Amanah Disatukan total read from CMD.35.2016.pdf J4.20",
+        defect="J4.20 is titled 'Tahun 2015 Berbanding 2014' but prints the 2014 column FIRST; the 'Jumlah' line's "
+               "first amount (1,454.59, the 2014 balance) is assigned to FY2015.",
+        diagnosis="Page-proved 2026-11-04 (CMD.35.2016.pdf p35): header '2014 2015 Perubahan'; 2015 = 537.83 + 737.42 "
+                  "+ 353.29 = 1,628.54, and the text says RM1,628.54 juta at end-2015 against RM1,454.59 juta at "
+                  "end-2014. Not an AG misprint.",
+        why_unfixed="Year columns must come from the column header, not the table title; re-extraction pending.",
+        impact_on_data="Johor FY2015 trust_account_balance from J4.20 is the 2014 figure; use J4.1.",
+    ),
+    dict(
+        state="Sarawak",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_cra_closing", "V1_continuity_in_table"), fiscal_year=("2020", "2021")),
+        affected_rows="FY2020-2021 Akaun Hasil Disatukan balances read from CMD.48.2023.pdf J7 (5-year table)",
+        defect="The closing-balance label is printed over two lines ('BAKI PADA' / '31 DISEMBER') with its five "
+               "amounts on the line between them; the parser attaches that unlabelled line to the wrong years.",
+        diagnosis="Page-proved 2026-11-04 (CMD.48.2023.pdf p43, J7): every column adds up - 2020 20,543.13 + 366.63 "
+                  "= 20,909.76; 2021 20,909.76 - 3,709.18 = 17,200.58; 2022 17,200.58 + 1,113.88 = 18,314.46. Not an "
+                  "AG misprint.",
+        why_unfixed="A label split around its value line must be joined before the year columns are assigned; "
+                    "re-extraction pending.",
+        impact_on_data="Use the own-volume Penyata Prestasi Kewangan balances; the 5-year analysis table rows for "
+                       "these years are mis-assigned.",
+    ),
     dict(
         state="Selangor",
         source_file="", pdf_page="", printed_page="", jadual="",
