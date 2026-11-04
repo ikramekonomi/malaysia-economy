@@ -434,6 +434,9 @@ q("5", "How many publishers report federal revenue for 2022?", "get_series",
 q("5", "Does PKKP's audited 2022 operating spending say where its citation comes from?", "get_series",
   fed("federal_gov.expenditure.opex", "2022", "pkkp"), "caveat", "CV16")
 
+q("5", "Does PKKP's 2020 revenue say its PDF is not archived (decision D24)?", "get_series",
+  fed("federal_gov.revenue.total", "2020", "pkkp"), "caveat", "CV17", kind="trap_missing")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

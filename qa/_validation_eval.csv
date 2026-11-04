@@ -119,3 +119,4 @@ Q117,trap_incomparable,derive_chain,refused,compensation_of_employees,"per_emplo
 Q118,trap_missing,get_series,not_held,,"geo must be a code or a year, not list",PASS
 Q119,fact,get_series,row_count,3,3,PASS
 Q120,fact,get_series,caveat,CV16,"CV16,COVERAGE",PASS
+Q121,trap_missing,get_series,caveat,CV17,"CV16,CV17,COVERAGE",PASS

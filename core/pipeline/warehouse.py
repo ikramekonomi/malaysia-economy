@@ -59,6 +59,12 @@ class Warehouse:
         for r in self.obs:
             self.index[(r["indicator_code"], r["geo_code"], r["period_code"], r["breakdown_key"])].append(r)
         self.flags = self._state_flags()
+        self.l0_status = {}
+        ap = os.path.join(META, "l0_archive.csv")
+        if os.path.exists(ap):
+            for a in _rows(ap):
+                if self.l0_status.get(a["file_name"]) != "ARCHIVED":
+                    self.l0_status[a["file_name"]] = a["status"]
         self.obs_flags = {}
         fp = os.path.join(os.path.dirname(META), "core", "obs_flag.csv")
         if os.path.exists(fp):
@@ -133,6 +139,12 @@ class Warehouse:
             out.append("CV7")
         if r["basis"] == "audited" and ind.startswith("federal_gov."):
             out.append("CV16")
+            src = r["edition_id"].split(":", 1)[1]
+            if not src.lower().endswith(".pdf"):  # no volume cited: the year's own volume
+                src = next((f for f in self.l0_status if f.startswith(f"{r['period_code']}_") and
+                            "penyata_kewangan" in f.lower()), "")
+            if src and self.l0_status.get(src, "ARCHIVED") != "ARCHIVED":
+                out.append("CV17")
         if ind == "cpi.index":
             out.append("CV8")
         return out

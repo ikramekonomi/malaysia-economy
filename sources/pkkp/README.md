@@ -17,3 +17,9 @@ Build the query DB: `python3 ../../pipeline/build_duckdb.py` → `pkkp.duckdb` (
 Caveat: FY2015 is an image-only scan — its object-leaf/project-leaf amounts are
 OCR-provisional (see `VALIDATION_REPORT.md`); statement/register/ministry-level tables are
 fully verified.
+
+Archive (`meta/l0_archive.csv`, decision D24): 14 of the 16 volumes are in the private `l0-archive`
+release, identified by their cited amounts on their cited pages. Not archived: **FY2020** (ANM's link
+returns 404 and no other official copy has been found; its figures are kept, marked "PDF not archived",
+caveat CV17) and **FY2015** (the image-only scan did not pass the identity check: 151 of 400 cited amounts
+found by OCR).
