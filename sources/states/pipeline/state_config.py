@@ -727,6 +727,40 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     dict(
         state="Selangor",
         source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_fund_flow",), fiscal_year=("2014",)),
+        affected_rows="FY2014 Akaun Pinjaman Disatukan receipts and payments (CMD.61.2015 J4.21)",
+        defect="Jadual 4.21 prints the 2013 and 2014 columns side by side; the Terimaan and Bayaran/Pindahan rows "
+               "are indented further than the balance rows, and the extractor assigns their FIRST amount (2013) "
+               "to 2014.",
+        diagnosis="Page-proved 2026-11-04 (CMD.61.2015.pdf p39): 2013 20.89 + 10.66 - 31.55 = 0.00; 2014 0.00 + "
+                  "106.87 - 106.87 = 0.00, and the text says RM106.87 juta was transferred to the Development Fund "
+                  "in 2014. Not an AG misprint.",
+        why_unfixed="Columns must be assigned by x-position against the header years; re-extraction pending.",
+        impact_on_data="The FY2014 loan-account receipts/payments rows are 2013's; balances are correct.",
+    ),
+    dict(
+        state="Selangor",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_intra_volume_contradiction", "V5_duplicate_code_in_table"),
+                   fiscal_year=("2021", "2022")),
+        affected_rows="debt_total rows read from the debt-MOVEMENT table (CMD.52.2022 J56; CMD.49.2023 J53)",
+        defect="The 'Pergerakan Hutang Awam' table prints opening balance, new loans, repayments and closing "
+               "balance per loan group, with a JUMLAH per group and a JUMLAH KESELURUHAN. The extractor reads it as "
+               "a balance table and takes the first amount (the OPENING balance) of each JUMLAH line as debt_total "
+               "for the year, so it disagrees with the 'Kedudukan Hutang Awam' table (J55, J52).",
+        diagnosis="Page-proved 2026-11-04: CMD.49.2023.pdf p85 (J53): opening 17.31 + 14.20 = 31.51, closing "
+                  "17.31 + 8.13 = 25.44 = J52 FY2022 (p84). CMD.52.2022.pdf p80 (J56): opening 1,084.76 + 20.03 = "
+                  "1,104.79, closing 17.31 + 14.20 = 31.51 = J55 FY2021 (p79). Every printed figure reconciles; not "
+                  "an AG misprint.",
+        why_unfixed="The movement table must emit opening/closing under their own codes (debt_opening, "
+                    "debt_closing), with only the closing of JUMLAH KESELURUHAN as debt_total; re-extraction "
+                    "runs in states-extract.yml.",
+        impact_on_data="Use debt_total from the Kedudukan Hutang Awam table (is_canonical=yes); the movement-table "
+                       "rows are not a year-end debt figure.",
+    ),
+    dict(
+        state="Selangor",
+        source_file="", pdf_page="", printed_page="", jadual="",
         match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
         affected_rows="the 'Penyumbang Utama Hasil' rows of CMD.41.2019 (J11) and CMD.50.2021 (J13): year columns paired wrongly",
         defect="The five-year 'Penyumbang Utama Hasil Kerajaan Negeri' table prints an RM juta column and a (%) column "
