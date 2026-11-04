@@ -780,40 +780,6 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
         impact_on_data="The FY2014 loan-account receipts/payments rows are 2013's; balances are correct.",
     ),
     dict(
-        state="Selangor",
-        source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V1_intra_volume_contradiction", "V5_duplicate_code_in_table"),
-                   fiscal_year=("2021", "2022")),
-        affected_rows="debt_total rows read from the debt-MOVEMENT table (CMD.52.2022 J56; CMD.49.2023 J53)",
-        defect="The 'Pergerakan Hutang Awam' table prints opening balance, new loans, repayments and closing "
-               "balance per loan group, with a JUMLAH per group and a JUMLAH KESELURUHAN. The extractor reads it as "
-               "a balance table and takes the first amount (the OPENING balance) of each JUMLAH line as debt_total "
-               "for the year, so it disagrees with the 'Kedudukan Hutang Awam' table (J55, J52).",
-        diagnosis="Page-proved 2026-11-04: CMD.49.2023.pdf p85 (J53): opening 17.31 + 14.20 = 31.51, closing "
-                  "17.31 + 8.13 = 25.44 = J52 FY2022 (p84). CMD.52.2022.pdf p80 (J56): opening 1,084.76 + 20.03 = "
-                  "1,104.79, closing 17.31 + 14.20 = 31.51 = J55 FY2021 (p79). Every printed figure reconciles; not "
-                  "an AG misprint.",
-        why_unfixed="The movement table must emit opening/closing under their own codes (debt_opening, "
-                    "debt_closing), with only the closing of JUMLAH KESELURUHAN as debt_total; re-extraction "
-                    "runs in states-extract.yml.",
-        impact_on_data="Use debt_total from the Kedudukan Hutang Awam table (is_canonical=yes); the movement-table "
-                       "rows are not a year-end debt figure.",
-    ),
-    dict(
-        state="Pahang",
-        source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V5_duplicate_code_in_table",)),
-        affected_rows="debt_total FY2019-2021 from 'Baki Hutang Awam' (CMD.44.2021 J32, CMD.46.2022 J31, CMD.43.2023 J32)",
-        defect="The table prints 'JUMLAH' (loans from the Federal Government) and, after a line for financial "
-               "institutions, 'JUMLAH HUTANG AWAM' (all public debt). Both are coded debt_total, and the canonical "
-               "pick is the federal subtotal, so FY2020 and FY2021 debt is understated (RM60.00 and RM20.00 juta).",
-        diagnosis="Page-proved 2026-11-04 (CMD.44.2021.pdf p52): 2,087.84 + 283.69 + 117.07 + 521.29 = 3,009.89 "
-                  "(JUMLAH) + 60.00 (INSTITUSI KEWANGAN) = 3,069.89 (JUMLAH HUTANG AWAM). Not an AG misprint.",
-        why_unfixed="Code the federal subtotal debt_federal and JUMLAH HUTANG AWAM debt_total; re-extraction pending. "
-                    "Core flags the two affected years (meta/extraction_defect_flag.csv, caveat CV18).",
-        impact_on_data="state_gov.debt.total for Pahang FY2020-2021 is understated in core until re-extraction.",
-    ),
-    dict(
         state="Negeri Sembilan",
         source_file="", pdf_page="", printed_page="", jadual="",
         match=dict(target="none", checks=("V1_penyumbang_utama_total",)),

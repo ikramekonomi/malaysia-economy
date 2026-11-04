@@ -31,7 +31,7 @@ Q29,fact,derive_chain,value,359.393217,359.393217,PASS
 Q30,fact,derive_chain,value,18.2,18.2,PASS
 Q31,fact,derive_chain,value,0.018519,0.018519,PASS
 Q32,fact,derive_chain,value,1.117733,1.117733,PASS
-Q33,fact,derive_chain,caveat,CV9,"CV2,CV5,CV6,CV9",PASS
+Q33,fact,derive_chain,caveat,CV9,"CV2,CV5,CV9",PASS
 Q34,trap_incomparable,derive_chain,refused,different periods,different periods: 2022 vs 2016; use the population of the same year,PASS
 Q35,trap_incomparable,derive_chain,refused,cannot be divided,hh_income.gross.median is a median and cannot be divided by population,PASS
 Q36,trap_incomparable,derive_chain,refused,two percentages,gap_pp needs two percentages; got RM per month and RM per month,PASS
@@ -121,4 +121,4 @@ Q119,trap_missing,get_series,not_held,,"geo must be a code or a year, not list",
 Q120,fact,get_series,row_count,3,3,PASS
 Q121,fact,get_series,caveat,CV16,"CV16,COVERAGE",PASS
 Q122,trap_missing,get_series,caveat,CV17,"CV16,CV17,COVERAGE",PASS
-Q123,trap_source_defect,get_series,caveat,CV18,"CV18,CV5,CV6,COVERAGE",PASS
+Q123,fact,get_series,value,3069890000,3069890000,PASS

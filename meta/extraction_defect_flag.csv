@@ -1,3 +1,1 @@
 indicator_code,geo_code,period_code,note,register
-state_gov.debt.total,MY-06,2020,"Pahang FY2020 debt_total is the federal-loan subtotal 'JUMLAH' (3,009.89), not 'JUMLAH HUTANG AWAM' (3,069.89, incl. RM60.00 juta from financial institutions): CMD.44.2021.pdf p52 J32. Understated by RM60.00 juta until re-extraction","sources/states/pipeline/state_config.py KNOWN_EXTRACTION_DEFECTS (Pahang, V5 debt_total)"
-state_gov.debt.total,MY-06,2021,"Pahang FY2021 debt_total is the federal-loan subtotal 'JUMLAH' (3,088.25), not 'JUMLAH HUTANG AWAM' (3,108.25): CMD.46.2022.pdf p56 J31, CMD.43.2023.pdf p59 J32. Understated by RM20.00 juta until re-extraction","sources/states/pipeline/state_config.py KNOWN_EXTRACTION_DEFECTS (Pahang, V5 debt_total)"
