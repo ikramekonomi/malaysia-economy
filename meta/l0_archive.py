@@ -136,40 +136,71 @@ def context(host, fix=False):
         return _ctx[host]
     ctx = ssl.create_default_context(cafile=_base_bundle())
     if fix:
-        extra = _aia_intermediates(host)
+        try:
+            extra = _aia_intermediates(host)
+        except BaseException as e:  # noqa: BLE001 - a broken crypto build must not kill the run
+            print(f"  could not complete the chain for {host}: {type(e).__name__}: {e}", flush=True)
+            extra = []
         if extra:
             ctx.load_verify_locations(cadata="".join(extra))
     _ctx[host] = ctx
     return ctx
 
 
-def download(url, dest, tries=4):
+_host_failures = {}
+HOST_GIVE_UP = 3          # consecutive connection-level failures before a host is skipped for this run
+FILE_SECONDS = 20 * 60    # wall-clock cap for one download
+
+
+def _tls_error(e):
+    r = e if isinstance(e, ssl.SSLCertVerificationError) else getattr(e, "reason", None)
+    return r if isinstance(r, ssl.SSLCertVerificationError) else None
+
+
+def download(url, dest, tries=3):
+    """None on success, else the reason. Logs every attempt."""
     host = urllib.parse.urlparse(url).hostname
+    if _host_failures.get(host, 0) >= HOST_GIVE_UP:
+        return f"host {host} skipped this run after {HOST_GIVE_UP} consecutive failures"
     fix = False
     last = None
-    for i in range(tries):
+    i = 0
+    while i < tries:
+        t0 = time.time()
         try:
             req = urllib.request.Request(urllib.parse.quote(url, safe=":/%?=&+~#,;@"), headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=120, context=context(host, fix)) as r, open(dest, "wb") as f:
-                if r.status != 200:
-                    raise IOError(f"HTTP {r.status}")
-                shutil.copyfileobj(r, f, 1 << 20)
+            with urllib.request.urlopen(req, timeout=60, context=context(host, fix)) as r, open(dest, "wb") as f:
+                while True:
+                    chunk = r.read(1 << 20)
+                    if not chunk:
+                        break
+                    f.write(chunk)
+                    if time.time() - t0 > FILE_SECONDS:
+                        raise TimeoutError(f"slower than {FILE_SECONDS // 60} min")
             with open(dest, "rb") as f:
                 if f.read(5) != b"%PDF-":
                     raise IOError("not a PDF")
+            _host_failures[host] = 0
+            print(f"  got {url} ({os.path.getsize(dest):,} bytes, {time.time() - t0:.0f}s)", flush=True)
             return None
         except urllib.error.HTTPError as e:
+            _host_failures[host] = 0          # the host answered
             if e.code in (404, 410):
                 return f"HTTP {e.code}"
             last = f"HTTP {e.code}"
-        except ssl.SSLCertVerificationError as e:
-            if fix:
-                return f"TLS: {e.verify_message}"
-            fix = True
-            last = "TLS"
-            continue
-        except Exception as e:  # noqa: BLE001 - network errors of every kind are retried, then reported
-            last = f"{type(e).__name__}: {e}"
+        except Exception as e:  # noqa: BLE001 - every network error is retried, then reported
+            tls = _tls_error(e)
+            if tls and not fix:
+                print(f"  TLS {tls.verify_message} for {host}: completing the chain from AIA", flush=True)
+                fix = True
+                continue                       # retry at once with the completed chain (not counted)
+            last = f"TLS: {tls.verify_message}" if tls else f"{type(e).__name__}: {e}"
+            if not isinstance(e, urllib.error.HTTPError):
+                _host_failures[host] = _host_failures.get(host, 0) + 1
+                if _host_failures[host] >= HOST_GIVE_UP:
+                    break
+        print(f"  attempt {i + 1} failed for {url}: {last}", flush=True)
+        i += 1
         time.sleep(2 ** (i + 1))
     return last
 
