@@ -1,47 +1,51 @@
-# CLAUDE.md — Malaysia Public Finance Data Warehouse
+# CLAUDE.md — Malaysia Economy Data Warehouse
 
 Operating manual for anyone (human or AI) working in this repo. Read this first.
+(The GitHub repo is `ammarroslizar/malaysia-economy`; the old name `malaysiafinance` redirects.)
 
 ## Mission
-Build a consolidated, fully-verifiable data warehouse of **Malaysia's public finances** —
-federal **and** state — to understand, track, analyse, and **find gaps in the country's
-fiscal behaviour**. Multiple official sources are ingested (each with complete provenance),
-then curated into a comparable layer so the same concept can be traced and cross-checked
-across sources.
+Build a consolidated, fully verifiable data warehouse of **the Malaysian economy**, national and
+state (down to district, parlimen and DUN where the data exists). Its first user is **IKRAM**,
+an NGO, looking for gaps worth advocating on: plan vs outcome, budget vs spending, need vs money,
+federal vs state, reported vs audited. It is queried by people and by AI agents; the dashboard
+(`site/`) is one application on top of it, not the warehouse itself.
 
-## Architecture: hub-per-domain, truth-by-reconciliation
-No single source is "the truth" for the whole warehouse. Each **domain** has a hub —
-the record others in that domain reconcile against when they disagree — and the
-warehouse's real product is the **reconciliation layer**: where independent
-institutions agree to the ringgit, and where they diverge, by how much, kept as
-published.
+Every number must survive a hostile reader: traceable to its page, checked, carrying its
+uncertainty and its caveats.
+
+## The design, in one paragraph
+Nine themes: people & poverty · jobs & wages · prices & cost of living · output & industry ·
+public money & money trail · health, education & services · accountability · money, credit &
+financial wellbeing · environment, climate & disasters. Raw files (L0) → source tables as printed
+(L1, `sources/`) → a conformed core of 6 dimensions (geo, period, indicator, breakdown, entity,
+source) and 3 facts (observation, money flow, record) (L2) → named gap views (L3) → apps (L4:
+agent tools, dashboard, models). **The full specification is `docs/DATA_MODEL.md`**: read it
+before changing anything structural. Decisions D1–D21 are its §16.
+
+## Truth by reconciliation
+No single source is "the truth". Each domain has a hub that others reconcile against, and the
+real product is the **reconciliation layer**: where independent institutions agree to the
+ringgit, and where they diverge, by how much, kept as published.
 
 | Domain | Hub (anchor of last resort) | Reconciled against it |
 |---|---|---|
-| Federal fiscal | **PKKP** (audited actuals) | budgets, BNM fiscal series, AG tables, MOF outlook |
+| Real economy, people, prices | DOSM (national accounts, HIES, LFS, CPI) | BNM, secondary research sources, IMF |
+| Federal public money | **PKKP** (audited actuals) | budgets, BNM fiscal series, AG tables, MOF outlook, DOSM GFS |
+| States | each state's audited statements | state budgets, state LKAN, DOSM state finance |
 | Agencies & GLCs | AG certifications + company accounts | e-SelfAudit censuses, findings |
-| States | each state's audited statements | state budgets, state LKAN |
-| Real economy | DOSM national accounts | GFS, CPI, state GDP |
 | Monetary/financial | BNM | debt issuance, holdings |
 
-Domains join only through conformed dimensions (year, jurisdiction, entity, economic
-classification) in `curated/`. PKKP is the *federal fiscal* hub — never the warehouse's
-identity. Three known blind spots of a PKKP-centric view, tracked as first-class work:
-**(1) scope** — statutory bodies, GLCs and off-budget vehicles sit outside the
-consolidated fund (guarantees/contingent-liability registers + agency accounts cover
-this); **(2) accounting basis** — PKKP is modified-cash, so commitments, PFI
-liabilities, guarantees and revenue arrears live in memorandum accounts and AG
-analyses, not expenditure lines (the obligations layer covers this); **(3) domain** —
-the economy's backbone is DOSM/BNM, not any fiscal document.
+Known blind spots of any single-hub view, tracked as first-class work: **scope** (statutory
+bodies, GLCs and off-budget vehicles), **accounting basis** (modified cash; commitments, PFI and
+guarantees sit in memorandum accounts), and **place** (most federal spending has no location
+in the accounts; see `docs/DATA_MODEL.md` §10 and §13).
 
 ## Sources
-- **pkkp** (in repo) — audited *Penyata Kewangan Kerajaan Persekutuan* (Federal Government
-  Financial Statements), FY2009–FY2024, to object-level grain. The foundational source:
-  audited **federal actuals**.
-- **Planned** — federal budget estimates (*Anggaran Perbelanjaan / Hasil*), MOF *Fiscal
-  Outlook*, DOSM statistics, data.gov.my/OpenDOSM, Auditor-General reports, **state financial
-  statements & budgets**, and more. Full catalogue with priorities and gap-analysis pairings:
-  **`docs/SOURCES.md`**.
+What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (102 series:
+status, route, access, licence, priority). The plan behind it, theme by theme:
+**`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
+`sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9
+editions), bnm, dosm (110 datasets, refreshed daily), audit-negara, states (13 states).
 
 ## Golden rules — do not break these
 1. **Raw source data (the CSVs) is the source of truth.** Consolidated/curated tables and any
@@ -53,44 +57,52 @@ the economy's backbone is DOSM/BNM, not any fiscal document.
 3. **Every row keeps its source + provenance** (`source_file`, `pdf_page`, `printed_page`,
    `statement`). Traceability is the whole point — it's what lets us compare sources and
    defend a public dataset.
-4. **Join on codes, never names** (`maksud_code`, `projek_code`).
+4. **Join on codes, never names** (`maksud_code`, `projek_code`; ISO/DOSM geo codes).
 5. **Sum only leaf rows** — `row_type` in `object_aktiviti` / `project` / `detail`.
 6. **Take each year from its own volume/source** for clean series (restatements catalogued in
    the per-year `_restatements_*.csv`).
-7. **Work on a branch and open a PR** — never push data changes straight to `main`.
+7. **Work on a branch and open a PR** — never push data changes straight to `main`. (The daily
+   DOSM refresh also goes through a PR; it merges itself only when every verifier is clean.)
+8. **Keep every vintage.** A refresh never destroys the previous release: log it (sha256, as-of
+   date) so it can be recovered exactly (`sources/dosm/pipeline/vintage_get.py`).
+9. **A survey estimate carries its uncertainty**, or says it is unknown. Never rank small areas
+   as if their estimates were exact.
+10. **Licence and personal data are checked before anything leaves the warehouse.** Every series
+    has `licence`, `redistribution` and `contains_personal_data` in the registry; never guess a
+    licence. Individuals are never returned by tools or views. Only lawfully published or
+    officially requested documents; no leaked or OSA-classified material.
+11. **Neutral by construction.** Methods are declared before results are seen; every view runs
+    for all 13 states and the Federal Territories; no party attribute in the core; disclose any
+    conflict of interest as a caveat.
 
 ## Layout
 ```
-sources/            one folder per source, each independently verifiable
-  pkkp/
-    data/<year>/    the CSVs (canonical) — one folder per audited volume
-    pipeline/<year>/  extraction scripts for that volume
-    DATA_DICTIONARY.md  VALIDATION_REPORT.md  README_QUICKSTART.md
-curated/            consolidated layer (conformed dims + gap views) — built as sources land
-pipeline/
-  build_duckdb.py   rebuilds sources/pkkp/pkkp.duckdb from the CSVs
-docs/
-  SOURCES.md        the source catalogue: what to add, priority, gap-analysis pairings
-CLAUDE.md  README.md  requirements.txt
+sources/            one folder per source, each independently verifiable (L1)
+  <name>/data/      the CSVs (canonical, as printed)  + _validation*, _source_anomalies*, _vintage_log
+  <name>/pipeline/  extraction, refresh and verification scripts
+curated/            today's consolidated layer (becomes core.* / gap.* per docs/DATA_MODEL.md)
+apps/models/        model projections: an application, never warehouse data
+site/               the public site + chatbot (reads curated views; its own CLAUDE.md)
+pipeline/           build_duckdb.py (PKKP DB)
+docs/               DATA_MODEL.md · SOURCES.md · DOCUMENT_REGISTRY.md · registry/ · ANALYST_GUIDE.md
 ```
 
 ## Adding a new source
-Keep each source **namespaced and independently verified**, then consolidate on top — never
-merge raw numbers from different sources without a mapping and an audit trail. New source →
-its own `sources/<name>/` (data + pipeline + provenance + validation). Conform shared
-dimensions (fiscal year, ministry/`maksud`, object class, **state/jurisdiction**) in
-`curated/`. **Gap-finding is a first-class use case:** compare the same concept across sources
-(budgeted vs actual, estimate vs collected, federal vs state, audited vs reported) and surface
-divergences — see `docs/SOURCES.md`.
+Register it first (a row in `docs/registry/series_seed.csv`, with licence and personal-data
+fields). Keep each source **namespaced and independently verified** in its own
+`sources/<name>/` (data + pipeline + provenance + validation), then conform it to the shared
+dimensions. Never merge raw numbers from different sources without a mapping and an audit trail.
+**Gap-finding is a first-class use case:** compare the same concept across sources and surface
+divergences.
 
 ## Setup (fresh clone / cloud session)
 ```
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py       # -> sources/pkkp/pkkp.duckdb
-duckdb sources/pkkp/pkkp.duckdb
+python3 pipeline/build_duckdb.py                  # -> sources/pkkp/pkkp.duckdb
+python3 curated/pipeline/build_warehouse_duckdb.py  # -> curated/warehouse.duckdb (all sources)
 ```
-Querying needs only `duckdb`. **Extraction also needs system tools** `poppler-utils` and
-`tesseract-ocr` — install via apt in a cloud setup script when re-running a pipeline.
+Querying needs only `duckdb`. Refresh/verification needs `pyarrow` and `pandas` (in
+requirements). **Extraction also needs system tools** `poppler-utils` and `tesseract-ocr`.
 
 ## Extraction conventions
 Amounts exact RM as printed (sen kept). En-dash `–` = 0.0 (nil). Parentheses = negative.
@@ -99,19 +111,18 @@ Asterisk on a value → `has_footnote=True`. Malay labels canonical (`*_bm`).
 ## Verification rule (mandatory for any new/changed source)
 Reconcile to the source's own printed totals, THEN run an **independent adversarial verifier
 pass** (a separate agent, blind to the extraction code, re-derives from the original and
-compares). Report discrepancies; never correct silently.
+compares). Anything IKRAM publishes also needs a **human spot-check** of a sample against the
+original (`docs/DATA_MODEL.md` §7.4). Report discrepancies; never correct silently.
 
-## Known caveats (PKKP)
-- **FY2015** is an image-only scan: statements/registers/panel/ministry totals fully verified,
-  but object-leaf & project-leaf amounts are OCR-provisional (unresolved cells in
-  `sources/pkkp/data/2015/_unresolved_ocr_cells_2015.csv`). Use `fact_opex_maksud` /
-  `fact_devex_maksud` for 2015 ministry-level work.
-- **FY2009** is the archaic cash-basis presentation (no aktiviti tier, narrative-only notes,
-  no performance/commitment statements — genuine source absences).
-- See `sources/pkkp/DATA_DICTIONARY.md` for all per-era format differences.
+## Known caveats
+- **PKKP FY2015** is an image-only scan: object-leaf & project-leaf amounts are OCR-provisional
+  (`sources/pkkp/data/2015/_unresolved_ocr_cells_2015.csv`); use ministry-level tables for 2015.
+- **PKKP FY2009** is the archaic cash-basis presentation (genuine source absences).
+- **DOSM small-area estimates** (district, parlimen, DUN) carry no published sampling error and
+  some rows do not add up; see `sources/dosm/README.md` before ranking or aggregating them.
+- See each source's README for its own caveats and anomaly registers.
 
-## Good next tasks
-- Ingest source #2 — federal budget estimates (*Anggaran Perbelanjaan*) into `sources/anggaran/`,
-  then build the first **budget-vs-actual** gap view in `curated/`.
-- Begin **state** coverage — one state's financial statements into `sources/state-<name>/`.
-- Add FY2008 PKKP following the `sources/pkkp/pipeline/2009/` pattern (branch → verify → PR).
+## Next work
+Follow the build order in `docs/DATA_MODEL.md` §15. Phase 0 (foundation: registry as data, CI,
+archive, governance) then Phase 1 (a state-level, end-to-end slice: population, HIES, LFS, state
+finances → `gap_need_vs_money` with agent tools).

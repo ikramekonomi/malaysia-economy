@@ -1,0 +1,102 @@
+# Daily DOSM refresh (docs/DATA_MODEL.md, decision D20).
+# Checks every DOSM dataset for a new release. When there is one: pulls it (refresh.py --apply
+# logs the replaced vintage, then runs every verifier), rebuilds the downstream labour table,
+# measures what changed, and opens a PR. The PR merges itself only when every verifier exited 0
+# and refresh_report.py's gate passes (no FAIL, no new SOURCE_ANOMALY, no header change, no
+# rows withdrawn). Anything else waits for a person. Data is never edited to pass a check.
+#
+# Needs, once, in the repo settings: Settings -> Actions -> General -> Workflow permissions:
+# "Read and write permissions" and "Allow GitHub Actions to create and approve pull requests".
+name: DOSM refresh
+
+on:
+  schedule:
+    - cron: "17 6 * * *"      # 14:17 Malaysia time, after DOSM's usual 12:00 releases
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: dosm-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Check for new DOSM releases
+        id: check
+        run: |
+          set +e
+          python3 sources/dosm/pipeline/refresh.py > check.txt 2>&1
+          code=$?
+          set -e
+          cat check.txt
+          if [ "$code" = "0" ]; then echo "new=false" >> "$GITHUB_OUTPUT";
+          elif [ "$code" = "2" ]; then echo "new=true" >> "$GITHUB_OUTPUT";
+          else echo "check failed with exit $code"; exit 1; fi
+
+      - name: Apply, verify, rebuild
+        if: steps.check.outputs.new == 'true'
+        id: apply
+        run: |
+          set +e
+          python3 sources/dosm/pipeline/refresh.py --apply > apply.txt 2>&1
+          echo "apply_exit=$?" >> "$GITHUB_OUTPUT"
+          python3 curated/pipeline/build_labour_indicators.py >> apply.txt 2>&1
+          echo "labour_exit=$?" >> "$GITHUB_OUTPUT"
+          python3 sources/dosm/pipeline/refresh_report.py --ref origin/main --out report.md
+          echo "gate_exit=$?" >> "$GITHUB_OUTPUT"
+          set -e
+          tail -40 apply.txt
+
+      - name: Open PR, merge if clean
+        if: steps.check.outputs.new == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          APPLY: ${{ steps.apply.outputs.apply_exit }}
+          LABOUR: ${{ steps.apply.outputs.labour_exit }}
+          GATE: ${{ steps.apply.outputs.gate_exit }}
+        run: |
+          day=$(date -u +%Y%m%d)
+          branch="dosm-refresh/$day-${GITHUB_RUN_ID}"
+          git config user.name "dosm-refresh[bot]"
+          git config user.email "dosm-refresh@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add sources/dosm/data curated/fact_labour_indicators.csv curated/_validation_labour.csv
+          git commit -m "DOSM vintage refresh $day" -m "Automated by .github/workflows/dosm-refresh.yml"
+          git push -u origin "$branch"
+          {
+            echo "Automated DOSM refresh, $day."
+            echo
+            echo "| step | exit |"
+            echo "|---|---|"
+            echo "| refresh.py --apply (download + all verifiers) | $APPLY |"
+            echo "| build_labour_indicators.py | $LABOUR |"
+            echo "| refresh_report.py gate | $GATE |"
+            echo
+            cat report.md
+            echo
+            echo "Replaced vintages are logged in \`sources/dosm/data/_vintage_log.csv\`; recover any with \`sources/dosm/pipeline/vintage_get.py\`."
+          } > body.md
+          url=$(gh pr create --base main --head "$branch" --title "DOSM vintage refresh $day" --body-file body.md)
+          echo "$url"
+          if [ "$APPLY" = "0" ] && [ "$LABOUR" = "0" ] && [ "$GATE" = "0" ]; then
+            gh pr merge "$url" --merge --delete-branch
+          else
+            gh pr comment "$url" --body "Not merged automatically: a verifier or the gate did not pass (exits above). A person must review. Do not edit downloaded values to make a check pass (CLAUDE.md, golden rule 2)."
+          fi
