@@ -59,8 +59,11 @@ def main():
         if sha not in archived:
             missing.append(name)
             continue
-        subprocess.run(["gh", "release", "download", "l0-archive", "-p", f"{sha}.pdf", "-D", dest, "--clobber"],
-                       check=True)
+        p = subprocess.run(["gh", "release", "download", "l0-archive", "-p", f"{sha}.pdf", "-D", dest, "--clobber"],
+                           capture_output=True, text=True)
+        if p.returncode:
+            sys.exit(f"{name}: meta/l0_archive.csv says ARCHIVED but the release has no {sha}.pdf ({p.stderr.strip()}); "
+                     "run the L0 archive workflow, which reconciles the index and re-uploads it")
         os.replace(os.path.join(dest, f"{sha}.pdf"), out)
         if sha256(out) != sha:
             sys.exit(f"sha256 mismatch for {name}: the archive copy is not the registered file")

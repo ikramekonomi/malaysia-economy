@@ -185,6 +185,8 @@ LINE_CODES: list[tuple[str, str, str]] = [
     # series would otherwise mix the two bases silently.
     ("prestasi_kewangan", r"belanja(an)? mengurus\s*\(?\s*(selepas|termasuk) pindahan",
      "opex_after_transfer"),
+    # Pahang's third expenditure head (CMD.37.2017 p51 J4.31: 629.27 + 91.66 + 89.95 = 810.88)
+    ("prestasi_kewangan", r"belanja(an)? bekalan air", "expenditure_water_supply"),
     ("prestasi_kewangan", r"belanja(an)? mengurus", "opex_before_transfer"),
     ("prestasi_kewangan", r"belanja(an)? pembangunan", "devex_total"),
     ("prestasi_kewangan", r"^jumlah perbelanjaan", "expenditure_total"),
@@ -607,6 +609,7 @@ PRIMARY_SPEC_OF: dict[str, tuple[str, ...]] = {
     "opex_before_transfer": ("prestasi_kewangan",),
     "opex_after_transfer": ("prestasi_kewangan",),
     "devex_total": ("prestasi_kewangan",),
+    "expenditure_water_supply": ("prestasi_kewangan",),
     "expenditure_total": ("prestasi_kewangan",),
     "surplus_deficit": ("prestasi_kewangan",),
     "financing_external_loans": ("prestasi_kewangan",),

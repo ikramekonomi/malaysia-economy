@@ -681,39 +681,112 @@ def state_section_end(pages: list[str], first_table_page: int) -> int:
 # entry with no `match` is a standing limitation with no single page to point
 # at; it is reported in the file only.
 
+# Auditor-General misprints PROVED ON THE ARCHIVED PAGE (qa/evidence/). Only these turn a FAIL into
+# SOURCE_ANOMALY in _validation_<slug>.csv (golden rule 2). Every other unexplained V1 failure is still
+# listed in _source_anomalies_<slug>.csv, but marked page_proved=no, and stays a FAIL.
+PAGE_PROVED_ANOMALIES: list[dict] = [
+    dict(
+        state="Selangor", fiscal_year="2019", source_file="CMD.50.2021.pdf",
+        checks=("V1_govt_trust_fund_composition", "V1_trust_account_composition", "V1_intra_volume_contradiction"),
+        evidence="qa/evidence/CMD.50.2021.pdf/p029.txt (Jadual 2), p030.txt (Jadual 3)",
+        proof="The FY2019 subtotal 'Kumpulan Wang Amanah Kerajaan' is printed 1,114.60 in Jadual 2 and Jadual 3, but "
+              "its own four printed components sum to 50.00 + 6.31 + 987.41 + 27.15 = 1,070.87, and only 1,070.87 "
+              "reconciles upward: 1,070.87 + 376.26 + 427.34 = 1,874.47 (printed Akaun Amanah Disatukan) and "
+              "267.29 + 0.00 + 1,874.47 = 2,141.76 (printed BAKI PADA 31 DISEMBER). Jadual 24 prints 1,070.87.",
+    ),
+]
+
+
+def page_proved(state: str, c: dict):
+    for d in PAGE_PROVED_ANOMALIES:
+        if (d["state"] == state and c["check"] in d["checks"] and str(c.get("fiscal_year")) == d["fiscal_year"]
+                and c.get("source_file") == d["source_file"]):
+            return d
+    return None
+
+
 KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     dict(
-        state="Pahang",
-        source_file="", pdf_page="", printed_page="", jadual="4.31",
-        match=dict(target="none", checks=("N2_identity_expenditure",)),
-        affected_rows="0 rows carry a wrong figure; 1 printed line per year is MISSING (water-supply spending)",
-        defect="Pahang's Penyata Prestasi Kewangan prints THREE spending lines: Perbelanjaan Mengurus, "
-               "Perbelanjaan Pembangunan and Perbelanjaan Bekalan Air. The water-supply line is not extracted, "
-               "so opex + devex falls short of the printed JUMLAH PERBELANJAAN by exactly that line.",
-        diagnosis="Page-proved 2026-11-04 from the archived volumes (qa/evidence/): FY2016 CMD.37.2017.pdf p51 "
-                  "(J4.31): 629.27 + 91.66 + 89.95 = 810.88; FY2017 CMD.38.2018.pdf p51: 613.91 + 98.63 + 55.66 "
-                  "= 768.20; FY2021 CMD.46.2022.pdf p32: the text states the total covers mengurus, pembangunan "
-                  "and bekalan air (RM931.11 juta). FY2022 (CMD.43.2023.pdf) awaits its archived copy.",
-        why_unfixed="Needs a conformed code for state water-supply spending (e.g. expenditure_water_supply) "
-                    "emitted by the extractor and added to the N2 identity; re-extraction runs where the PDFs "
-                    "are (the L0 archive), not in this container.",
-        impact_on_data="No figure is wrong. expenditure_total (as printed) is correct and is what "
-                       "core/gap_need_vs_money uses; do not derive Pahang's total as opex + devex.",
+        state="Selangor",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_fund_flow",), fiscal_year=("2014",)),
+        affected_rows="FY2014 Akaun Pinjaman Disatukan receipts and payments (CMD.61.2015 J4.21)",
+        defect="Jadual 4.21 prints the 2013 and 2014 columns side by side; the Terimaan and Bayaran/Pindahan rows "
+               "are indented further than the balance rows, and the extractor assigns their FIRST amount (2013) "
+               "to 2014.",
+        diagnosis="Page-proved 2026-11-04 (CMD.61.2015.pdf p39): 2013 20.89 + 10.66 - 31.55 = 0.00; 2014 0.00 + "
+                  "106.87 - 106.87 = 0.00, and the text says RM106.87 juta was transferred to the Development Fund "
+                  "in 2014. Not an AG misprint.",
+        why_unfixed="Columns must be assigned by x-position against the header years; re-extraction pending.",
+        impact_on_data="The FY2014 loan-account receipts/payments rows are 2013's; balances are correct.",
     ),
     dict(
-        state="Johor",
+        state="Selangor",
         source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V1_cra_closing",), fiscal_year=("2018", "2019")),
-        affected_rows="0 rows carry a wrong figure; 1 printed line per year is MISSING (prior-year adjustment)",
-        defect="Johor's Akaun Hasil Disatukan prints a `(-) Pelarasan Tahun Sebelum` line between the opening "
-               "balance and the surplus. It is not extracted, so opening + surplus misses the closing balance by "
-               "exactly that adjustment.",
-        diagnosis="Page-proved 2026-11-04: FY2018 CMD.30.2019.pdf p33: 1,122.84 - 1.65 + 5.25 = 1,126.44; "
-                  "FY2019 CMD.39.2021.pdf p35 (2018 column restated): 1,126.44 - 1.09 = 1,125.35 before the "
-                  "surplus.",
-        why_unfixed="Needs the adjustment emitted under a conformed code (cra_prior_year_adjustment) and the V1 "
-                    "identity extended to opening - adjustment + surplus = closing; re-extraction pending.",
-        impact_on_data="No figure is wrong; the opening and closing balances are as printed.",
+        match=dict(target="none", checks=("V1_intra_volume_contradiction", "V5_duplicate_code_in_table"),
+                   fiscal_year=("2021", "2022")),
+        affected_rows="debt_total rows read from the debt-MOVEMENT table (CMD.52.2022 J56; CMD.49.2023 J53)",
+        defect="The 'Pergerakan Hutang Awam' table prints opening balance, new loans, repayments and closing "
+               "balance per loan group, with a JUMLAH per group and a JUMLAH KESELURUHAN. The extractor reads it as "
+               "a balance table and takes the first amount (the OPENING balance) of each JUMLAH line as debt_total "
+               "for the year, so it disagrees with the 'Kedudukan Hutang Awam' table (J55, J52).",
+        diagnosis="Page-proved 2026-11-04: CMD.49.2023.pdf p85 (J53): opening 17.31 + 14.20 = 31.51, closing "
+                  "17.31 + 8.13 = 25.44 = J52 FY2022 (p84). CMD.52.2022.pdf p80 (J56): opening 1,084.76 + 20.03 = "
+                  "1,104.79, closing 17.31 + 14.20 = 31.51 = J55 FY2021 (p79). Every printed figure reconciles; not "
+                  "an AG misprint.",
+        why_unfixed="The movement table must emit opening/closing under their own codes (debt_opening, "
+                    "debt_closing), with only the closing of JUMLAH KESELURUHAN as debt_total; re-extraction "
+                    "runs in states-extract.yml.",
+        impact_on_data="Use debt_total from the Kedudukan Hutang Awam table (is_canonical=yes); the movement-table "
+                       "rows are not a year-end debt figure.",
+    ),
+    dict(
+        state="Pahang",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V5_duplicate_code_in_table",)),
+        affected_rows="debt_total FY2019-2021 from 'Baki Hutang Awam' (CMD.44.2021 J32, CMD.46.2022 J31, CMD.43.2023 J32)",
+        defect="The table prints 'JUMLAH' (loans from the Federal Government) and, after a line for financial "
+               "institutions, 'JUMLAH HUTANG AWAM' (all public debt). Both are coded debt_total, and the canonical "
+               "pick is the federal subtotal, so FY2020 and FY2021 debt is understated (RM60.00 and RM20.00 juta).",
+        diagnosis="Page-proved 2026-11-04 (CMD.44.2021.pdf p52): 2,087.84 + 283.69 + 117.07 + 521.29 = 3,009.89 "
+                  "(JUMLAH) + 60.00 (INSTITUSI KEWANGAN) = 3,069.89 (JUMLAH HUTANG AWAM). Not an AG misprint.",
+        why_unfixed="Code the federal subtotal debt_federal and JUMLAH HUTANG AWAM debt_total; re-extraction pending. "
+                    "Core flags the two affected years (meta/extraction_defect_flag.csv, caveat CV18).",
+        impact_on_data="state_gov.debt.total for Pahang FY2020-2021 is understated in core until re-extraction.",
+    ),
+    dict(
+        state="Negeri Sembilan",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
+        affected_rows="the 'Penyumbang Utama Hasil' rows of CMD.34.2019 (J11) and CMD.37.2018 (J4.10)",
+        defect="The table prints two totals: 'JUMLAH HASIL RM421.24 Juta' (ALL revenue, in the header) and 'JUMLAH "
+               "PENYUMBANG UTAMA HASIL' (the five lines). The check compares the five lines with the first; in "
+               "CMD.37.2018 the (%) column (88.8) is also read as an amount, as in Selangor's table.",
+        diagnosis="Page-proved 2026-11-04 (CMD.34.2019.pdf p38): 2018 128.72 + 121.50 + 56.87 + 38.49 + 37.01 = "
+                  "382.59 = printed JUMLAH PENYUMBANG UTAMA HASIL; 2017 130.38 + 105.87 + 61.62 + 38.76 + 30.64 = "
+                  "367.27. Not an AG misprint.",
+        why_unfixed="Take the JUMLAH PENYUMBANG UTAMA line as the total and pair columns by x-position; "
+                    "re-extraction pending.",
+        impact_on_data="Analysis-table rows only; core and the gap view do not use them.",
+    ),
+    dict(
+        state="Selangor",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
+        affected_rows="the 'Penyumbang Utama Hasil' rows of CMD.41.2019 (J11) and CMD.50.2021 (J13): year columns paired wrongly",
+        defect="The five-year 'Penyumbang Utama Hasil Kerajaan Negeri' table prints an RM juta column and a (%) column "
+               "per year, and in the text layer an amount and its share often fall on different lines. The extractor "
+               "pairs them by position, so a share (often the JUMLAH row's 100.0) is read as an amount and the year "
+               "columns shift.",
+        diagnosis="Page-proved 2026-11-04 (qa/evidence/): every printed column adds up. CMD.41.2019.pdf p38 (J11): "
+                  "2014 1,138.90 + 395.37 + 0.04 + 51.01 + 64.28 = 1,649.60; 2015 = 1,886.80; 2016 = 1,912.34; "
+                  "2017 = 2,194.80; 2018 = 1,343.67. CMD.50.2021.pdf p38 (J13): 2016 1,946.54; 2017 2,246.29; "
+                  "2018 1,320.32; 2019 1,008.37 + 465.99 + 79.62 + 96.59 + 75.25 = 1,725.82; 2020 1,749.01. "
+                  "Not an AG misprint.",
+        why_unfixed="The table parser must pair amounts and shares by column x-position, not by order; "
+                    "re-extraction runs where the PDFs are (states-extract.yml).",
+        impact_on_data="These analysis-table rows are not used by core or the gap view (which use the audited "
+                       "statements); do not read the top-contributor amounts from the current extraction.",
     ),
     dict(
         state="Sarawak",

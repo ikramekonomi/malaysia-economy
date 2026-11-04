@@ -1,0 +1,95 @@
+# 2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf  sha256 5181b69847f4a76446453d543832a2434b9553d6e7bb543484330874e37abf77  pdf_page 183 of 444  (pdftotext -layout)
+
+                                                                            PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2023                                             171
+
+
+Penyata Perbelanjaan Mengurus
+bagi tahun berakhir 31 Disember 2023
+                                                                                                                                                      (sambungan)
+
+                                                                        Anggaran                                         Sebenar                     Varian
+              Maksud Perbelanjaan                                              Viremen                                                           Kurang/(Lebih)
+                                                   Asal          Tambahan/
+                                                                                                    Jumlah           Amaun            Prestasi
+                                                                 (Kurangan) Tambah/(Kurang)                                                         Belanja
+                                                    RM               RM           RM                  RM               RM               %              RM
+
+       PERBELANJAAN BEKALAN – (SAMB.)
+
+ B.48 KEMENTERIAN PEMBANGUNAN
+      WANITA, KELUARGA DAN
+      MASYARAKAT – (SAMB.)
+
+030000 PROGRAM KHUSUS – (SAMB.)
+032200 Subsidi Ujian Saringan Kanser
+       Serviks
+ 40000 Pemberian dan Kenaan Bayaran Tetap           5,500,000           –                  –          5,500,000       5,500,000.00     100.00                  –
+       Jumlah 032200                                5,500,000           –                  –          5,500,000        5,500,000.00    100.00                  –
+032300 Pusat Sokongan Sosial Setempat
+ 40000 Pemberian dan Kenaan Bayaran Tetap           8,300,000           –                  –          8,300,000       8,300,000.00     100.00                  –
+       Jumlah 032300                                8,300,000           –                  –          8,300,000        8,300,000.00    100.00                  –
+       Perkhidmatan dan Bekalan                     35,269,700          –              170,600        35,440,300      30,309,966.60     85.52        5,130,333.40
+       Pemberian dan Kenaan Bayaran Tetap        2,590,702,000          –          (91,212,600)    2,499,489,400   2,439,353,747.26     97.59       60,135,652.74
+       Jumlah 030000                             2,625,971,700          –          (91,042,000)    2,534,929,700   2,469,663,713.86     97.43       65,265,986.14
+040000 "ONE-OFF"
+040100 Harta Modal
+ 30000 Aset                                         1,500,000           –          12,616,590        14,116,590      12,130,206.69      85.93        1,986,383.31
+       Jumlah 040100                                1,500,000           –          12,616,590        14,116,590      12,130,206.69      85.93        1,986,383.31
+040200 Sistem Keselamatan
+ 30000 Aset                                           500,000           –             (500,000)              –                 –         –                     –
+       Jumlah 040200                                  500,000           –             (500,000)              –                 –         –                     –
+       Aset                                         2,000,000           –          12,116,590        14,116,590      12,130,206.69      85.93        1,986,383.31
+       Jumlah 040000                                2,000,000           –          12,116,590        14,116,590      12,130,206.69      85.93        1,986,383.31
+       Jumlah Emolumen                             342,498,500          –           18,231,924       360,730,424     360,530,629.37     99.94          199,794.63
+       Jumlah Perkhidmatan dan Bekalan             172,339,400          –           15,776,255       188,115,655     175,127,908.24     93.10       12,987,746.76
+       Jumlah Aset                                   2,858,000          –           12,499,090        15,357,090      13,310,807.97     86.68        2,046,282.03
+       Jumlah Pemberian & Kenaan Bayaran Tetap   2,679,265,000          –          (46,507,269)    2,632,757,731   2,570,453,528.55     97.63       62,304,202.45
+       JUMLAH KEMENTERIAN PEMBANGUNAN            3,196,960,900          –                  –       3,196,960,900   3,119,422,874.13     97.57       77,538,025.87
+       WANITA, KELUARGA DAN MASYARAKAT
+
+ B.60 KEMENTERIAN PERTAHANAN
+
+010000 PENGURUSAN
+010100 Pengurusan Am
+ 10000 Emolumen                                   129,314,500           –          (11,463,400)     117,851,100     117,851,065.71      99.99                34.29
+ 20000 Perkhidmatan dan Bekalan                   399,261,100           –          (50,993,756)     348,267,344     581,765,914.06     167.05      (233,498,570.06)
+ 30000 Aset                                         7,020,100           –              887,076        7,907,176       7,907,166.69      99.99                 9.31
+ 40000 Pemberian dan Kenaan Bayaran Tetap           5,672,200           –           32,044,905       37,717,105      37,717,102.00      99.99                 3.00
+ 50000 Perbelanjaan-perbelanjaan Lain                 162,400           –               (30,041)        132,359         132,358.89      99.99                 0.11
+       Jumlah 010100                              541,430,300           –          (29,555,216)     511,875,084     745,373,607.35     145.62      (233,498,523.35)
+010200 Pengurusan Jabatan Hal Ehwal Veteran
+ 10000 Emolumen                                     8,460,400           –                 –           8,460,400       8,460,400.00     100.00                  –
+ 20000 Perkhidmatan dan Bekalan                    34,360,500           –          11,233,909        45,594,409      45,594,331.19      99.99                 77.81
+ 30000 Aset                                               –             –              69,575            69,575          69,521.50      99.92                 53.50
+ 40000 Pemberian dan Kenaan Bayaran Tetap          75,624,200           –          75,755,958       151,380,158     151,380,157.48      99.99                  0.52
+       Jumlah 010200                              118,445,100           –          87,059,442       205,504,542     205,504,410.17      99.99               131.83
+       Emolumen                                   137,774,900           –         (11,463,400)      126,311,500     126,311,465.71      99.99                34.29
+       Perkhidmatan dan Bekalan                   433,621,600           –         (39,759,847)      393,861,753     627,360,245.25     159.28      (233,498,492.25)
+       Aset                                         7,020,100           –             956,651         7,976,751       7,976,688.19      99.99                62.81
+       Pemberian dan Kenaan Bayaran Tetap          81,296,400           –        107,800,863        189,097,263     189,097,259.48      99.99                 3.52
+       Perbelanjaan-perbelanjaan Lain                 162,400           –              (30,041)         132,359         132,358.89      99.99                 0.11
+       Jumlah 010000                              659,875,400           –          57,504,226       717,379,626     950,878,017.52     132.55      (233,498,391.52)
+020000 PERTAHANAN NEGARA
+020100 Bantuan Bersama
+ 10000 Emolumen                                   845,950,600           –                 –         845,950,600     845,950,600.00     100.00                  –
+ 20000 Perkhidmatan dan Bekalan                   492,126,400           –          17,536,154       509,662,554     509,662,526.46      99.99                 27.54
+ 30000 Aset                                        65,117,600           –           (3,550,076)      61,567,524      61,567,462.45      99.99                 61.55
+ 40000 Pemberian dan Kenaan Bayaran Tetap           8,402,100           –           (1,809,850)       6,592,250       6,592,247.59      99.99                  2.41
+ 50000 Perbelanjaan-perbelanjaan Lain                 435,400           –              (26,025)         409,375         409,374.54      99.99                  0.46
+       Jumlah 020100                             1,412,032,100          –          12,150,203      1,424,182,303   1,424,182,211.04     99.99                 91.96
+020200 Pertahanan Darat
+ 10000 Emolumen                                  4,995,551,900          –          (81,759,314)    4,913,792,586   4,913,792,586.00    100.00                 –
+ 20000 Perkhidmatan dan Bekalan                    677,157,900          –           29,198,130       706,356,030     750,505,179.13    106.25       (44,149,149.13)
+ 30000 Aset                                         31,366,900          –            (6,532,775)      24,834,125      24,834,099.79     99.99                25.21
+ 40000 Pemberian dan Kenaan Bayaran Tetap            3,442,700          –            (2,245,819)       1,196,881       1,196,880.87     99.99                 0.13
+ 50000 Perbelanjaan-perbelanjaan Lain                    1,000          –                  (873)             127             126.89     99.91                 0.11
+       Jumlah 020200                             5,707,520,400          –          (61,340,651)    5,646,179,749   5,690,328,872.68    100.78       (44,149,123.68)
+                                                                                                                                                     (disambung...)
+
+                                                                                                                                                   110
+
+
+
+
+                                                                                     LAMPIRAN 1 - PENYATA PERBELANJAAN MENGURUS
+

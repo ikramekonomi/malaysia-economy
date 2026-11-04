@@ -1,0 +1,92 @@
+# 2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf  sha256 5181b69847f4a76446453d543832a2434b9553d6e7bb543484330874e37abf77  pdf_page 172 of 444  (pdftotext -layout)
+
+160      PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2023
+
+
+
+  Penyata Perbelanjaan Mengurus
+  bagi tahun berakhir 31 Disember 2023
+                                                                                                                                                        (sambungan)
+
+                                                                           Anggaran                                        Sebenar                     Varian
+                Maksud Perbelanjaan                                               Viremen                                                          Kurang/(Lebih)
+                                                      Asal          Tambahan/
+                                                                                                      Jumlah           Amaun            Prestasi
+                                                                    (Kurangan) Tambah/(Kurang)                                                        Belanja
+                                                       RM               RM           RM                 RM               RM               %             RM
+
+           PERBELANJAAN BEKALAN – (SAMB.)
+
+      B.43 KEMENTERIAN PERUMAHAN DAN
+           KERAJAAN TEMPATAN – (SAMB.)
+
+  030000 KOMUNITI BANDAR MAMPAN
+  030100 Bomba dan Penyelamat
+   10000 Emolumen                                    695,638,000           –           5,749,000      701,387,000     701,387,000.00     100.00                  –
+   20000 Perkhidmatan dan Bekalan                    266,367,500           –           7,378,805      273,746,305     273,746,258.75      99.99                 46.25
+   30000 Aset                                          2,310,000           –            (338,040)       1,971,960       1,971,874.13      99.99                 85.87
+   40000 Pemberian dan Kenaan Bayaran Tetap            1,694,400           –           2,945,600        4,640,000       4,639,907.00      99.99                 93.00
+          Jumlah 030100                              966,009,900           –          15,735,365      981,745,265     981,745,039.88      99.99              225.12
+  030200 Perumahan Negara
+   10000 Emolumen                                     19,555,500           –           2,333,500       21,889,000      21,888,952.42      99.99                 47.58
+   20000 Perkhidmatan dan Bekalan                     10,418,300           –            (337,359)      10,080,941      10,080,909.70      99.99                 31.30
+   30000 Aset                                             60,000           –                (500)          59,500          59,448.00      99.91                 52.00
+   40000 Pemberian dan Kenaan Bayaran Tetap            5,580,000           –            (262,500)       5,317,500       5,317,493.49      99.99                  6.51
+          Jumlah 030200                               35,613,800           –           1,733,141       37,346,941      37,346,803.61      99.99              137.39
+  030300 Bahagian Kawalan Kredit Komuniti
+   10000 Emolumen                                      4,883,400           –             (71,400)       4,812,000       4,811,931.23      99.99                 68.77
+   20000 Perkhidmatan dan Bekalan                        549,400           –            196,949           746,349         746,303.90      99.99                 45.10
+   30000 Aset                                              3,600           –              16,500           20,100          20,100.00     100.00                  –
+          Jumlah 030300                                5,436,400           –            142,049         5,578,449       5,578,335.13      99.99              113.87
+  030400 Tribunal Perumahan dan Pengurusan Strata
+   10000 Emolumen                                      6,006,000           –             152,400        6,158,400       6,158,387.67      99.99                 12.33
+   20000 Perkhidmatan dan Bekalan                      2,840,000           –            (360,168)       2,479,832       2,479,797.99      99.99                 34.01
+   30000 Aset                                              8,700           –               (8,700)            –                 –          –                     –
+          Jumlah 030400                                8,854,700           –            (216,468)       8,638,232       8,638,185.66      99.99                 46.34
+  030500 Kesejahteraan Komuniti
+   10000 Emolumen                                      7,512,600           –            (371,400)       7,141,200       7,141,179.38      99.99                 20.62
+   20000 Perkhidmatan dan Bekalan                      1,912,600           –            (492,184)       1,420,416       1,420,400.59      99.99                 15.41
+   40000 Pemberian dan Kenaan Bayaran Tetap            5,300,000           –          (1,619,520)       3,680,480       3,680,409.00      99.99                 71.00
+          Jumlah 030500                               14,725,200           –          (2,483,104)      12,242,096      12,241,988.97      99.99              107.03
+  030600 Perancangan Perumahan
+   10000 Emolumen                                      4,655,400           –          (1,011,700)       3,643,700       3,643,634.95      99.99                 65.05
+   20000 Perkhidmatan dan Bekalan                      1,111,200           –             482,790        1,593,990       1,593,970.52      99.99                 19.48
+   30000 Aset                                              4,300           –               (4,300)            –                 –          –                     –
+          Jumlah 030600                                5,770,900           –            (533,210)       5,237,690       5,237,605.47      99.99                 84.53
+          Emolumen                                   738,250,900           –           6,780,400      745,031,300     745,031,085.65      99.99              214.35
+          Perkhidmatan dan Bekalan                   283,199,000           –           6,868,833      290,067,833     290,067,641.45      99.99              191.55
+          Aset                                         2,386,600           –            (335,040)       2,051,560       2,051,422.13      99.99              137.87
+          Pemberian dan Kenaan Bayaran Tetap          12,574,400           –           1,063,580       13,637,980      13,637,809.49      99.99              170.51
+          Jumlah 030000                             1,036,410,900          –          14,377,773     1,050,788,673   1,050,787,958.72     99.99              714.28
+  040000 PROGRAM KHUSUS
+  040100 Bertugas ke Luar Negara
+   20000 Perkhidmatan dan Bekalan                      1,500,000           –            126,100         1,626,100       1,626,081.56      99.99                 18.44
+          Jumlah 040100                                1,500,000           –            126,100         1,626,100       1,626,081.56      99.99                 18.44
+  040200 Emolumen Kakitangan Kontrak
+   20000 Perkhidmatan dan Bekalan                      4,956,300           –            (694,600)       4,261,700       4,261,605.43      99.99                 94.57
+          Jumlah 040200                                4,956,300           –            (694,600)       4,261,700       4,261,605.43      99.99                 94.57
+  040300 Sumbangan Membantu Kadar (SMK)
+   40000 Pemberian dan Kenaan Bayaran Tetap          320,138,100           –                –         320,138,100     377,048,649.05     117.78       (56,910,549.05)
+          Jumlah 040300                              320,138,100           –                –         320,138,100     377,048,649.05     117.78       (56,910,549.05)
+  040400 Sewaan CCTV
+   20000 Perkhidmatan dan Bekalan                        259,600           –            (259,600)              –                 –         –                     –
+          Jumlah 040400                                  259,600           –            (259,600)              –                 –         –                     –
+  040500 Elaun Pegawai Bomba Bantuan (PBB)
+   20000 Perkhidmatan dan Bekalan                     50,134,000           –          (2,009,300)      48,124,700      48,124,622.30      99.99                 77.70
+          Jumlah 040500                               50,134,000           –          (2,009,300)      48,124,700      48,124,622.30      99.99                 77.70
+  040600 Penyelenggaraan Landskap
+   40000 Pemberian dan Kenaan Bayaran Tetap            1,500,000           –            (528,300)         971,700         971,690.00      99.99                 10.00
+          Jumlah 040600                                1,500,000           –            (528,300)         971,700         971,690.00      99.99                 10.00
+  040700 Program Kebersihan Negara
+   40000 Pemberian dan Kenaan Bayaran Tetap            1,250,000           –                –           1,250,000       1,250,000.00     100.00                  –
+          Jumlah 040700                                1,250,000           –                –           1,250,000       1,250,000.00     100.00                  –
+
+                                                                                                                                                       (disambung...)
+
+                                                                                                                                                      99
+
+
+
+
+      LAMPIRAN 1 - PENYATA PERBELANJAAN MENGURUS
+

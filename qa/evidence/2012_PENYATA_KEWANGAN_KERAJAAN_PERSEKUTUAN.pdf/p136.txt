@@ -1,0 +1,88 @@
+# 2012_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf  sha256 0d7c901537305a86380093adef3e9ff9cb167743d40885f8a39a535b7f417564  pdf_page 136 of 265  (pdftotext -layout)
+
+                Penyata Perbelanjaan Mengurus
+                bagi tahun berakhir 31 Disember 2012!
+                                                                                                                                              (sambungan)!
+
+                                                                             Anggaran!                                    Sebenar!
+
+                                     Maksud Perbelanjaan!
+                                                               Asal!                     Dipinda             Amaun!                  Anggaran!
+
+                                                               RM!                        RM!                 RM!                       %!
+
+                          PERBELANJAAN BEKALAN – (SAMB.)
+
+                    B.25 KEMENTERIAN PERDAGANGAN DALAM
+                         NEGERI, KOPERASI DAN KEPENGGUNAAN
+                         – (SAMB.)
+
+                  030000 KEPENGGUNAAN DAN PENGURUSAN
+                  030100 Tribunal Tuntutan Pengguna
+                   10000 Emolumen                                      1,086,900                   914,900       908,732.07                        99.33
+                   20000 Perkhidmatan dan Bekalan                      1,460,100                   783,100       708,718.13                        90.50
+
+                          Jumlah 030100                              2,547,000                  1,698,000      1,617,450.20                        95.26
+
+                  030200 Gerakan Kepenggunaan
+                   10000 Emolumen                                    1,058,300                1,279,939        1,279,938.65                       100.00
+                   20000 Perkhidmatan dan Bekalan                    8,372,000                2,650,411        2,542,800.27                        95.94
+                   40000 Pemberian dan Kenaan Bayaran Tetap          2,500,000               13,969,750       13,969,750.00                       100.00
+                          Jumlah 030200                           11,930,300                 17,900,100       17,792,488.92                        99.40
+                  030300 Penyelidikan dan Dasar
+                   10000 Emolumen                                      553,600                    513,600        499,743.29                        97.30
+                   20000 Perkhidmatan dan Bekalan                    4,265,400                  4,135,400      1,986,484.05                        48.04
+                          Jumlah 030300                              4,819,000                  4,649,000      2,486,227.34                        53.48
+                  030400 Standart Kepenggunaan
+                   10000 Emolumen                                      330,700                     461,173       461,173.25                       100.00
+                   20000 Perkhidmatan dan Bekalan                    1,194,000                     709,927       550,741.83                        77.58
+                          Jumlah 030400                              1,524,700                  1,171,100      1,011,915.08                        86.41
+                  030500 Khidmat Pengurusan Dan Kewangan
+                   10000 Emolumen                                  2,926,700                  3,231,000        3,075,796.11                        95.20
+                   20000 Perkhidmatan dan Bekalan                 58,554,000                 63,441,140       60,688,762.14                        95.66
+                   30000 Aset                                             –                          –                 –                            –
+                   40000 Pemberian dan Kenaan Bayaran Tetap           51,000                    189,000          150,192.62                        79.47
+                   50000 Perbelanjaan-Perbelanjaan Lain                   –                     112,250           83,463.97                        74.36
+                          Jumlah 030500                           61,531,700                 66,973,390       63,998,214.84                        95.56
+                  030600 Pengurusan Sumber Manusia
+                   10000 Emolumen                                    2,636,700                  2,311,545      2,311,544.62                       100.00
+                   20000 Perkhidmatan dan Bekalan                    3,642,500                  3,616,655      3,063,840.64                        84.71
+                   40000 Pemberian dan Kenaan Bayaran Tetap             50,000                     50,000         38,707.08                        77.41
+                          Jumlah 030600                              6,329,200                  5,978,200      5,414,092.34                        90.56
+                  030700 Pengurusan Sumber Maklumat
+                   10000 Emolumen                                    1,823,000                  2,032,333      2,032,332.76                       100.00
+                   20000 Perkhidmatan dan Bekalan                    8,595,200                  8,734,867      7,810,328.98                        89.42
+                          Jumlah 030700                           10,418,200                 10,767,200        9,842,661.74                        91.41
+
+                          Emolumen                                10,415,900                 10,744,490       10,569,260.75                        98.37
+                          Perkhidmatan dan Bekalan                86,083,200                 84,071,500       77,351,676.04                        92.01
+                          Pemberian dan Kenaan Bayaran Tetap         2,601,000               14,208,750       14,158,649.70                        99.65
+                          Perbelanjaan-perbelanjaan Lain                     –                     112,250          83,463.97                      74.36
+
+                          Jumlah 030000                           99,100,100                109,136,990      102,163,050.46                        93.61
+                  040000 SURUHANJAYA KOPERASI MALAYSIA (SKM)
+                   40000 Pemberian dan Kenaan Bayaran Tetap       76,809,000                 77,979,000       77,979,000.00                          –
+                          Jumlah 040000                           76,809,000                 77,979,000       77,979,000.00                          –
+                  050000 MAKTAB KERJASAMA MALAYSIA (MKM)
+                   40000 Pemberian dan Kenaan Bayaran Tetap          9,216,800               10,137,400       10,137,400.00                      100.00
+                          Jumlah 050000                              9,216,800               10,137,400       10,137,400.00                      100.00
+                  070000 PROGRAM KHUSUS
+                  070100 Bertugas Di Luar Negara
+                   20000 Perkhidmatan dan Bekalan                    1,500,000                  2,360,000      1,978,964.70                        83.85
+                          Jumlah 070100                              1,500,000                  2,360,000      1,978,964.70                        83.85
+                  070200 Sumbangan Kepada Badan-Badan Lain
+                   40000 Pemberian dan Kenaan Bayaran Tetap          4,000,000                  4,000,000      3,999,850.00                      100.00
+                          Jumlah 070200                              4,000,000                  4,000,000      3,999,850.00                      100.00
+
+                                                                                                                                             (disambung...)!
+
+
+
+
+               114
+
+
+
+
+5a lampiran 1 (BM).indd 114                                                                                                                                    10/9/13 5:30:24 PM
+

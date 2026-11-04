@@ -287,8 +287,33 @@ def release_assets():
         gh("release", "create", TAG, "--title", "L0 archive (raw source documents)", "--notes",
            "Every raw document the warehouse is built from, named by sha256. Index: meta/l0_archive.csv. "
            "Written only by .github/workflows/l0-archive.yml. Never edit or delete an asset.")
-    p = gh("release", "view", TAG, "--json", "assets")
-    return {a["name"] for a in json.loads(p.stdout)["assets"]}
+    rid = gh("api", f"repos/{{owner}}/{{repo}}/releases/tags/{TAG}", "--jq", ".id").stdout.strip()
+    p = gh("api", "--paginate", f"repos/{{owner}}/{{repo}}/releases/{rid}/assets?per_page=100",
+           "--jq", '.[] | [.name, .size, .state] | @tsv')
+    out = {}
+    for line in p.stdout.splitlines():
+        name, size, state = line.split("\t")
+        if state == "uploaded":
+            out[name] = int(size)
+    return out  # name -> size, uploaded assets only (paginated: the release holds hundreds)
+
+
+def reconcile(idx, assets):
+    """An index row says ARCHIVED only while the release really holds that asset at that size. Run 5 recorded
+    two uploads that never landed (CMD.4.2022, CMD.44.2018; found by l0_fetch on 2026-11-04): such rows are
+    demoted to UPLOAD_FAILED here, which re-queues them."""
+    bad = []
+    for k, r in idx.items():
+        if r["status"] != "ARCHIVED":
+            continue
+        size = assets.get(r["asset_name"])
+        if size is None or (r["size_bytes"] and str(r["size_bytes"]).isdigit() and int(r["size_bytes"]) != size):
+            why = "absent from the release" if size is None else f"release size {size} != {r['size_bytes']}"
+            r.update(status="UPLOAD_FAILED", release_tag="", asset_name="", archived_on="",
+                     check=f"reconciled {date.today().isoformat()}: index said ARCHIVED but the asset is {why}; re-queued")
+            bad.append(r["file_name"])
+    print(f"reconcile: {len(bad)} index rows not backed by a release asset" + (f": {', '.join(bad)}" if bad else ""))
+    return bad
 
 
 def write_manifest(source, entry):
@@ -304,6 +329,11 @@ def write_manifest(source, entry):
 
 def main():
     idx = load_index()
+    if "--plan" in sys.argv or "--run" in sys.argv or "--reconcile" in sys.argv:
+        if reconcile(idx, release_assets()) and "--plan" not in sys.argv:
+            save_index(idx)
+        if "--reconcile" in sys.argv:
+            return
     todo = [t for t in targets() if not (t["sha256"] and idx.get(t["sha256"], {}).get("status") == "ARCHIVED")
             and not (t["mode"] == "identify" and any(r["file_name"] == t["file_name"] and r["status"] == "ARCHIVED"
                                                      for r in idx.values()))]
@@ -372,13 +402,14 @@ def main():
             if f"{key}.pdf" not in have:
                 for attempt in range(4):
                     p_up = gh("release", "upload", TAG, asset, check=False)
+                    # success means the release lists the asset at its size, whatever the response said
+                    now = release_assets()
+                    if now.get(f"{key}.pdf") == os.path.getsize(asset):
+                        have[f"{key}.pdf"] = now[f"{key}.pdf"]
+                        break
                     if p_up.returncode == 0:
-                        have.add(f"{key}.pdf")
-                        break
-                    # the upload may have landed even though the response failed
-                    if f"{key}.pdf" in release_assets():
-                        have.add(f"{key}.pdf")
-                        break
+                        print(f"  upload attempt {attempt + 1}: gh reported success but the asset is not listed",
+                              flush=True)
                     print(f"  upload attempt {attempt + 1} failed: {p_up.stderr.strip()[:160]}", flush=True)
                     time.sleep(5 * 2 ** attempt)
                 else:

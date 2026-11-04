@@ -1,0 +1,88 @@
+# 2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf  sha256 8fe75e5b7d7e1c839bd3f426a97d941ca76e732501dc17d5baaceb773e96763f  pdf_page 143 of 456  (pdftotext -layout)
+
+                                                                                      PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2021 | 131
+
+
+
+
+Penyata Perbelanjaan Mengurus
+bagi tahun berakhir 31 Disember 2021
+                                                                                                                                                         (sambungan)
+
+                                                                                Anggaran                                        Sebenar                 Varian
+
+                    Maksud Perbelanjaan
+                                                                   Tambahan/          Viremen              Jumlah                                    Kurang/(Lebih)
+                                                       Asal                                                                Amaun          Prestasi
+                                                                   (Kurangan)      Tambah/(Kurang)                                                      Belanja
+                                                        RM            RM                    RM              RM               RM              %           RM
+
+        PERBELANJAAN BEKALAN – (SAMB.)
+
+   B.25 KEMENTERIAN PERDAGANGAN DALAM NEGERI
+        DAN HAL EHWAL PENGGUNA
+
+ 010000 PENGURUSAN
+ 010100 Pengurusan Korporat
+  10000 Emolumen                                       7,234,000           –                  (327,800)     6,906,200      6,906,153.99     99.99                46.01
+  20000 Perkhidmatan dan Bekalan                       2,688,900           –                (1,143,900)     1,545,000      1,544,929.78     99.99                70.22
+        Jumlah 010100                                  9,922,900           –                (1,471,700)     8,451,200      8,451,083.77     99.99             116.23
+ 010200 Dasar dan Perancangan Strategik
+  10000 Emolumen                                       1,904,700           –                 (110,800)      1,793,900      1,793,809.29     99.99                90.71
+  20000 Perkhidmatan dan Bekalan                         637,100           –                 (423,600)        213,500        213,489.67     99.99                10.33
+        Jumlah 010200                                  2,541,800           –                 (534,400)      2,007,400      2,007,298.96     99.99             101.04
+ 010300 Integriti
+  10000 Emolumen                                       1,310,200           –                  (97,100)      1,213,100      1,213,000.19     99.99                99.81
+  20000 Perkhidmatan dan Bekalan                         287,800           –                 (224,100)         63,700         63,632.54     99.89                67.46
+        Jumlah 010300                                  1,598,000           –                 (321,200)      1,276,800      1,276,632.73     99.99             167.27
+ 010400 Akaun
+  10000 Emolumen                                       1,379,300           –                   58,000       1,437,300      1,437,102.79     99.99             197.21
+  20000 Perkhidmatan dan Bekalan                         265,900           –                 (168,900)         97,000         96,934.91     99.93              65.09
+        Jumlah 010400                                  1,645,200           –                  (110,900)     1,534,300      1,534,037.70     99.98             262.30
+ 010500 Komunikasi Korporat
+  10000 Emolumen                                        801,100            –                 (147,700)       653,400        653,314.97      99.99                85.03
+  20000 Perkhidmatan dan Bekalan                        490,700            –                 (200,200)       290,500        290,429.25      99.98                70.75
+        Jumlah 010500                                  1,291,800           –                 (347,900)       943,900        943,744.22      99.98             155.78
+ 010600 Pengurusan Sumber Manusia
+  10000 Emolumen                                       3,348,100           –                  (163,760)     3,184,340      3,184,326.56     99.99                13.44
+  20000 Perkhidmatan dan Bekalan                       2,153,400           –                (1,181,170)       972,230        972,165.72     99.99                64.28
+        Jumlah 010600                                  5,501,500           –                (1,344,930)     4,156,570      4,156,492.28     99.99                77.72
+ 010700 Khidmat Pengurusan dan Kewangan
+  10000 Emolumen                                       4,974,600           –                 (257,540)      4,717,060      4,717,041.97     99.99                18.03
+  20000 Perkhidmatan dan Bekalan                      27,379,900           –               (1,155,816)     26,224,084     26,223,988.31     99.99                95.69
+  30000 Aset                                                –              –                  465,372         465,372        465,300.00     99.98                72.00
+  40000 Pemberian dan Kenaan Bayaran Tetap               374,500           –               24,359,900      24,734,400     24,734,308.98     99.99                91.02
+        Jumlah 010700                                 32,729,000           –               23,411,916      56,140,916     56,140,639.26     99.99             276.74
+ 010800 Pengurusan Maklumat
+  10000 Emolumen                                       3,447,200           –                  (449,600)     2,997,600      2,997,516.56     99.99                83.44
+  20000 Perkhidmatan dan Bekalan                       7,750,800           –                (1,028,500)     6,722,300      6,722,224.28     99.99                75.72
+  30000 Aset                                             600,000           –                   241,600        841,600        841,507.68     99.99                92.32
+        Jumlah 010800                                 11,798,000           –                (1,236,500)    10,561,500     10,561,248.52     99.99             251.48
+ 010900 PPDNHEP Negeri
+  10000 Emolumen                                     136,815,000           –                   708,800    137,523,800    137,522,229.58     99.99          1,570.42
+  20000 Perkhidmatan dan Bekalan                      56,285,000           –                (8,554,040)    47,730,960     47,729,874.28     99.99          1,085.72
+  50000 Perbelanjaan-perbelanjaan Lain                      –              –                     3,540          3,540          3,540.00    100.00              –
+        Jumlah 010900                                193,100,000           –                (7,841,700)   185,258,300    185,255,643.86     99.99          2,656.14
+        Emolumen                                     161,214,200           –                  (787,500)   160,426,700    160,424,495.90     99.99          2,204.10
+        Perkhidmatan dan Bekalan                      97,939,500           –               (14,080,226)    83,859,274     83,857,668.74     99.99          1,605.26
+        Aset                                             600,000           –                   706,972      1,306,972      1,306,807.68     99.99            164.32
+        Pemberian dan Kenaan Bayaran Tetap              374,500            –               24,359,900      24,734,400     24,734,308.98     99.99                91.02
+        Perbelanjaan-perbelanjaan Lain                        –            –                     3,540           3,540         3,540.00    100.00                 –
+        Jumlah 010000                                260,128,200           –               10,202,686     270,330,886    270,326,821.30     99.99          4,064.70
+ 020000 PEMBANGUNAN PERDAGANGAN DALAM NEGERI
+ 020100 Pengawalseliaan Barang Kawalan dan Subsidi
+  10000 Emolumen                                       2,911,900           –                  (28,500)      2,883,400      2,883,327.87     99.99                72.13
+  20000 Perkhidmatan dan Bekalan                       1,300,000           –                 (788,300)        511,700        511,628.18     99.99                71.82
+        Jumlah 020100                                  4,211,900           –                 (816,800)      3,395,100      3,394,956.05     99.99             143.95
+ 020200 Perdagangan Pengedaran dan Perniagaan
+  10000 Emolumen                                       5,548,300           –                  (924,600)     4,623,700      4,623,621.19     99.99                78.81
+  20000 Perkhidmatan dan Bekalan                       3,233,400           –                (1,564,900)     1,668,500      1,668,485.81     99.99                14.19
+        Jumlah 020200                                  8,781,700           –                (2,489,500)     6,292,200      6,292,107.00     99.99                93.00
+
+                                                                                                                                                         (disambung...)
+
+
+
+
+                                                                                                    LAMPIRAN 1 - PERBELANJAAN MENGURUS
+

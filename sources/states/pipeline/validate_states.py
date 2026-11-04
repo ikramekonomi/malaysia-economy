@@ -291,6 +291,16 @@ def v1(fin, rev):
                                  "revenue_total", "opex_total")
                              and r["unit_printed"].startswith("(RM")]
                     cands = [("opening + surplus", ob + sd)]
+                    # Johor prints `(-) Pelarasan Tahun Sebelum` (a prior-year adjustment, always subtracted;
+                    # printed 1.65 in FY2018 and (1.09) in FY2019) and `Baki Selepas Pelarasan` between the
+                    # opening balance and the surplus (CMD.30.2019.pdf p33, CMD.39.2021.pdf p35)
+                    adj = [r for r in sub if r["line_code"] == "akaun_hasil_disatukan.pelarasan_tahun_sebelum"]
+                    after = [r for r in sub if r["line_code"] == "akaun_hasil_disatukan.baki_selepas_pelarasan"]
+                    if adj:
+                        cands.append(("opening - printed prior-year adjustment + surplus",
+                                      ob - abs(juta(adj[0])) + sd))
+                    if after:
+                        cands.append(("printed balance after adjustment + surplus", juta(after[0]) + sd))
                     if flows:
                         alt = ob + sum(juta(r) for r in flows)
                         cands.append(("opening + every printed flow line", alt))
@@ -830,6 +840,11 @@ def validate_state(state: str) -> dict:
     v2(fin, rev)
     v3(fin, rev, state)
 
+    for c in CHECKS:  # FAIL -> SOURCE_ANOMALY only when proved on the archived page (state_config)
+        d = SC.page_proved(state, c) if c["status"] == "FAIL" and c["check"].startswith("V1_") else None
+        if d:
+            c["status"] = "SOURCE_ANOMALY"
+            c["proof"] = (c["proof"] + " | " if c["proof"] else "") + f"page-proved: {d['proof']} ({d['evidence']})"
     out = os.path.join(DATA, key, f"_validation_{key}.csv")
     with open(out, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(CHECKS[0].keys()))
@@ -847,7 +862,7 @@ def validate_state(state: str) -> dict:
     anomalies = []
     diverted = 0
     for c in CHECKS:
-        if c["check"].startswith("V1_") and c["status"] == "FAIL":
+        if c["check"].startswith("V1_") and c["status"] in ("FAIL", "SOURCE_ANOMALY"):
             if SC.is_known_defect_check(state, c):
                 diverted += 1
                 continue
@@ -866,6 +881,7 @@ def validate_state(state: str) -> dict:
                 proof=c["proof"] or
                       f'printed {c["expected"]} vs components summing to '
                       f'{c["actual"]} (difference {c["diff"]} RM juta)',
+                page_proved="yes" if c["status"] == "SOURCE_ANOMALY" else "no (arithmetic only; stays a FAIL until proved on the archived page)",
                 treatment="kept as printed; no figure altered. This file "
                           "contains ONLY inconsistencies verified on the "
                           "printed page; defects of our own extraction are "
@@ -874,7 +890,7 @@ def validate_state(state: str) -> dict:
             ))
     fields = ["state", "fiscal_year", "source_file", "pdf_page", "printed_page",
               "jadual", "anomaly", "rule", "printed_total", "sum_of_components",
-              "difference_rm_juta", "proof", "treatment"]
+              "difference_rm_juta", "proof", "page_proved", "treatment"]
     with open(os.path.join(DATA, key, f"_source_anomalies_{key}.csv"),
               "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)
@@ -965,12 +981,13 @@ def national() -> None:
                 f"{sd:.2f}", f"{rev-exp:.2f}", f"{d:.2f}",
                 r["source_file"], r["pdf_page"], r["printed_page"], r["jadual"])
         opex, dev = g("opex_before_transfer"), g("devex_total")
+        water = g("expenditure_water_supply") or 0.0  # Pahang prints a third head, Perbelanjaan Bekalan Air
         if None not in (opex, dev, exp):
-            d = (opex + dev) - exp
+            d = (opex + dev + water) - exp
             r = cells[("expenditure_total", "actual")]
             add("N2_identity_expenditure", "PASS" if abs(d) <= TOL else "FAIL", y,
-                f"{state}: opex + devex = expenditure_total (conformed panel)",
-                f"{exp:.2f}", f"{opex+dev:.2f}", f"{d:.2f}",
+                f"{state}: opex + devex" + (" + water supply" if water else "") + " = expenditure_total (conformed panel)",
+                f"{exp:.2f}", f"{opex+dev+water:.2f}", f"{d:.2f}",
                 r["source_file"], r["pdf_page"], r["printed_page"], r["jadual"])
 
     # N3 code-space: no conformed code carries a state-specific fund

@@ -1,0 +1,93 @@
+# 2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf  sha256 5181b69847f4a76446453d543832a2434b9553d6e7bb543484330874e37abf77  pdf_page 174 of 444  (pdftotext -layout)
+
+162      PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2023
+
+
+
+  Penyata Perbelanjaan Mengurus
+  bagi tahun berakhir 31 Disember 2023
+                                                                                                                                                (sambungan)
+
+                                                                       Anggaran                                    Sebenar                     Varian
+                Maksud Perbelanjaan                                           Viremen                                                      Kurang/(Lebih)
+                                                  Asal          Tambahan/
+                                                                                                 Jumlah        Amaun            Prestasi
+                                                                (Kurangan) Tambah/(Kurang)                                                    Belanja
+                                                   RM               RM           RM               RM             RM               %             RM
+
+           PERBELANJAAN BEKALAN – (SAMB.)
+
+      B.45 KEMENTERIAN BELIA DAN SUKAN
+           – (SAMB.)
+
+  020000 PEMBANGUNAN BELIA DAN SUKAN
+         – (SAMB.)
+  020500 Institut Pembangunan dan Kecemerlangan
+         Kepimpinan (i-LEAD)
+   10000 Emolumen                                  15,778,500          –                 –        15,778,500    15,778,500.00    100.00                  –
+   20000 Perkhidmatan dan Bekalan                  14,660,000          –             237,600      14,897,600    14,897,555.04     99.99                 44.96
+   30000 Aset                                       1,030,000          –            (835,570)        194,430       194,352.00     99.96                 78.00
+   40000 Pemberian dan Kenaan Bayaran Tetap           991,800          –            (326,800)        665,000       664,955.43     99.99                 44.57
+          Jumlah 020500                            32,460,300          –            (924,770)     31,535,530    31,535,362.47     99.99              167.53
+          Emolumen                                193,358,600          –           4,105,150     197,463,750   197,463,750.00    100.00                 –
+          Perkhidmatan dan Bekalan                106,615,000          –          14,201,366     120,816,366   120,800,497.35     99.99            15,868.65
+          Aset                                      3,060,000          –             641,140       3,701,140     3,701,008.46     99.99               131.54
+          Pemberian dan Kenaan Bayaran Tetap       37,031,800          –            (615,496)     36,416,304    36,416,165.54     99.99               138.46
+          Perbelanjaan-perbelanjaan Lain              740,000          –              (59,120)       680,880       680,802.40     99.99                77.60
+          Jumlah 020000                           340,805,400          –          18,273,040     359,078,440   359,062,223.75     99.99            16,216.25
+  030000 PROGRAM KHUSUS
+  030100 Bertugas ke Luar Negara
+   20000 Perkhidmatan dan Bekalan                    750,000           –             102,200        852,200       852,128.51      99.99                 71.49
+          Jumlah 030100                              750,000           –             102,200        852,200       852,128.51      99.99                 71.49
+  030200 Emolumen Kakitangan Kontrak
+   20000 Perkhidmatan dan Bekalan                  20,445,100          –            (290,100)     20,155,000    20,154,909.29     99.99                 90.71
+          Jumlah 030200                            20,445,100          –            (290,100)     20,155,000    20,154,909.29     99.99                 90.71
+  030300 Hari Sukan Negara
+   20000 Perkhidmatan dan Bekalan                     300,000          –                 –           300,000       300,000.00    100.00                  –
+   40000 Pemberian dan Kenaan Bayaran Tetap         2,400,000          –               (2,500)     2,397,500     2,397,500.00    100.00                  –
+          Jumlah 030300                             2,700,000          –               (2,500)     2,697,500     2,697,500.00    100.00                  –
+  030400 Program Belia dan Sukan
+   20000 Perkhidmatan dan Bekalan                   8,000,000          –            (442,200)      7,557,800     7,557,702.43     99.99                 97.57
+   40000 Pemberian dan Kenaan Bayaran Tetap         9,500,000          –           1,915,800      11,415,800    11,415,770.00     99.99                 30.00
+          Jumlah 030400                            17,500,000          –           1,473,600      18,973,600    18,973,472.43     99.99              127.57
+  030500 Penyelenggaraan Pejabat dan
+         Kompleks Belia dan Sukan
+   20000 Perkhidmatan dan Bekalan                   6,000,000          –              (36,700)     5,963,300     5,963,221.95     99.99                 78.05
+          Jumlah 030500                             6,000,000          –              (36,700)     5,963,300     5,963,221.95     99.99                 78.05
+  030600 Penyelenggaraan Peralatan Latihan
+         dan Bangunan IKBN
+   20000 Perkhidmatan dan Bekalan                  10,000,000          –               (2,000)     9,998,000     9,997,980.30     99.99                 19.70
+          Jumlah 030600                            10,000,000          –               (2,000)     9,998,000     9,997,980.30     99.99                 19.70
+  030700 Perkhidmatan Bekalan Makanan
+         Bermasak di Institut Latihan KBS
+   20000 Perkhidmatan dan Bekalan                  42,000,000          –          (15,991,150)    26,008,850    26,008,804.92     99.99                 45.08
+          Jumlah 030700                            42,000,000          –          (15,991,150)    26,008,850    26,008,804.92     99.99                 45.08
+  030800 Program Kemahiran Belia
+   20000 Perkhidmatan dan Bekalan                   3,000,000          –              (45,924)     2,954,076     2,953,981.90     99.99                 94.10
+   40000 Pemberian dan Kenaan Bayaran Tetap               –            –               11,424         11,424        11,424.00    100.00                  –
+          Jumlah 030800                             3,000,000          –              (34,500)     2,965,500     2,965,405.90     99.99                 94.10
+  030900 Elaun Pelajar Institusi Latihan
+         Kemahiran Belia
+   40000 Pemberian dan Kenaan Bayaran Tetap        20,733,600          –           (4,870,050)    15,863,550    15,863,506.76     99.99                 43.24
+          Jumlah 030900                            20,733,600          –           (4,870,050)    15,863,550    15,863,506.76     99.99                 43.24
+  031000 Program Latihan dan Pembangunan Sukan
+         Majlis Sukan Negara
+   40000 Pemberian dan Kenaan Bayaran Tetap        52,000,000          –                 –        52,000,000    52,000,000.00    100.00                  –
+          Jumlah 031000                            52,000,000          –                 –        52,000,000    52,000,000.00    100.00                  –
+  031100 International Youth Centre
+   40000 Pemberian dan Kenaan Bayaran Tetap         2,500,000          –                 –         2,500,000     2,500,000.00    100.00                  –
+          Jumlah 031100                             2,500,000          –                 –         2,500,000     2,500,000.00    100.00                  –
+  031200 Program Kluster i-LEAD
+   20000 Perkhidmatan dan Bekalan                   2,650,000          –               (2,700)     2,647,300     2,647,203.06     99.99                 96.94
+   40000 Pemberian dan Kenaan Bayaran Tetap           350,000          –                 –           350,000       350,000.00    100.00                  –
+          Jumlah 031200                             3,000,000          –               (2,700)     2,997,300     2,997,203.06     99.99                 96.94
+                                                                                                                                               (disambung...)
+
+
+                                                                                                                                             101
+
+
+
+
+      LAMPIRAN 1 - PENYATA PERBELANJAAN MENGURUS
+

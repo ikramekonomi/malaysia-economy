@@ -96,10 +96,23 @@ def validation_files():
     return sorted({f for p in pats for f in glob.glob(os.path.join(REPO, p), recursive=True)})
 
 
+def registered_anomalies(path):
+    """Keys explained by the _source_anomalies*.csv registers in the same folder (qa/source_anomaly.py).
+    For check files no CI script can rebuild (PKKP 2013-2024 core checks are written by the extraction
+    run), the suite applies the register itself: same strict rule, whole row minus status, nothing edited."""
+    sys.path.insert(0, os.path.join(REPO, "qa"))
+    from source_anomaly import explained
+    keys = set()
+    for reg in glob.glob(os.path.join(os.path.dirname(path), "_source_anomalies*.csv")):
+        keys |= explained(reg)
+    return keys
+
+
 def fail_rows():
     """{(file, row text)} for every FAIL row; row text = the whole row, so a changed value counts as new."""
     out = set()
     for path in validation_files():
+        keys = registered_anomalies(path)
         with open(path, newline="") as f:
             r = csv.reader(f)
             head = next(r, None)
@@ -110,6 +123,8 @@ def fail_rows():
                 continue
             for row in r:
                 if len(row) > idx[0] and row[idx[0]].strip().upper() == "FAIL":
+                    if "|".join(c for i, c in enumerate(row) if i != idx[0]) in keys:
+                        continue  # SOURCE_ANOMALY: the register proves it (golden rule 2)
                     out.add((os.path.relpath(path, REPO), "|".join(row)))
     return out
 

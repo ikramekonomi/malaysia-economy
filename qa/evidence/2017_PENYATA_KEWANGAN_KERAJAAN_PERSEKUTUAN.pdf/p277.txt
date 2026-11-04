@@ -1,0 +1,110 @@
+# 2017_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf  sha256 d3a9e1d4de3af0c20a0e54984fd3a834f5f7410bee1f4a22e402c4d58ed3eae9  pdf_page 277 of 400  (pdftotext -layout)
+
+                                                             Perangkaan Kewangan Kerajaan Persekutuan, 2008 - 2017!
+                                                             (dalam RM juta)!
+                                                                                                                                                                                                                                            (sambungan...)!
+
+                                                                                                                         2017!         2016!       2015!       2014!        2013!       2012!           2011!       2010!       2009!          2008!
+
+                                                              Penyata Kedudukan Kewangan
+                                                              Wang Awam
+                                                              Wang Tunai                                                   18,064       16,063       22,973      17,427       25,051       29,356        24,467      21,350       21,722         15,401
+                                                              Pelaburan                                                    24,120       23,310       25,754      23,414       24,032       24,049        22,843      20,566       21,813         16,690
+
+                                                              Jumlah Wang Awam                                             42,184       39,373       48,727      40,841       49,083       53,405        47,310      41,916       43,535         32,091
+
+                                                              Kumpulan Wang Disatukan
+                                                              Akaun Hasil Disatukan 1                                      11,863       11,863       11,863       11,863      11,863       11,863        11,863      11,863       11,863         11,863
+                                                              Akaun Pinjaman Disatukan                                     33,482       20,324       28,386       39,592      26,380       28,905        38,909      26,068        8,360         43,903
+                                                              Akaun Amanah Disatukan                                       (3,161)       7,186        8,478      (10,614)     10,840       12,637        (3,462)      3,985       23,312        (23,675)
+
+                                                              Jumlah Kumpulan Wang Disatukan                               42,184       39,373       48,727      40,841       49,083       53,405        47,310      41,916       43,535         32,091
+
+                                                              Kumpulan Wang Disatukan
+                                                              Akaun Hasil Disatukan
+                                                              Baki pada 1 Januari                                        (610,385)     (570,638)   (531,961)    (493,495)   (453,385)    (408,829)      (365,238)   (320,467)   (272,524)      (235,971)
+
+                                                              Hasil                                                       220,406      212,421      219,089     220,626      213,370      207,913       185,419     159,653      158,639        159,793
+                                                              ( - ) Perbelanjaan Mengurus (tidak termasuk                 217,695      210,173      216,998     219,589      211,270      205,537       182,594     151,633      157,067        153,499
+                                                                     pindahan ke Kumpulan Wang Pembangunan)
+                                                              Lebihan/(Kurangan) Akaun Semasa                               2,711         2,248       2,091        1,037       2,100            2,376      2,825       8,020       1,572           6,294
+
+                                                               ( - ) Perbelanjaan Pembangunan                              44,884       41,995       40,768      39,503       42,210       46,932        46,416      52,791       49,515         42,847
+
+                                                              Lebihan/(Kurangan) bagi Tahun                               (42,173)      (39,747)    (38,677)     (38,466)    (40,110)     (44,556)       (43,591)    (44,771)    (47,943)       (36,553)
+
+                                                              Baki pada 31 Disember                                      (652,558)     (610,385)   (570,638)    (531,961)   (493,495)    (453,385)      (408,829)   (365,238)   (320,467)      (272,524)
+
+                                                              Akaun Pinjaman Disatukan
+                                                              Baki pada 1 Januari                                          20,324        28,386      39,592       26,380      28,905       38,909         26,068       8,360      43,903         29,402
+                                                              Pinjaman Bersih                                              40,391        38,517      43,743       42,588      40,505       46,728         48,211      45,394      56,240         37,581
+                                                              Pindahan                                                    (27,233)      (46,579)    (54,949)     (29,376)    (43,030)     (56,732)       (35,370)    (27,686)    (91,783)       (23,080)
+
+                                                              Baki pada 31 Disember                                        33,482       20,324       28,386      39,592      26,380        28,905        38,909      26,068        8,360         43,903
+
+                                                              Akaun Amanah Disatukan
+                                                              Baki pada 1 Januari                                           7,186         8,478     (10,614)      10,840     12,637        (3,462)         3,985      23,312     (23,675)       (14,342)
+                                                              Terimaan/(Bayaran) Bersih                                   (10,347)       (1,292)     19,092      (21,454)    (1,797)       16,099         (7,447)    (19,327)     46,987         (9,333)
+
+                                                              Baki pada 31 Disember                                         (3,161)       7,186       8,478      (10,614)    10,840        12,637         (3,462)      3,985      23,312        (23,675)
+
+                                                              Kewangan
+      PERANGKAAN KEWANGAN KERAJAAN PERSEKUTUAN 2008 - 2017
+
+
+
+
+                                                              Lebihan/(Kurangan) Akaun Semasa                                  -            -              -           -         -               -              -        -              -            -
+                                                              Lebihan/(Kurangan) Akaun Pembangunan 2                      (40,321)      (38,400)    (37,193)     (37,353)    (38,541)     (41,921)       (42,509)    (43,500)    (47,421)       (35,569)
+
+                                                              Lebihan/(Kurangan) Keseluruhan                              (40,321)      (38,400)    (37,193)     (37,353)    (38,541)     (41,921)       (42,509)    (43,500)    (47,421)       (35,569)
+
+                                                              Dibiayai oleh:
+                                                              Pinjaman Bersih Dalam Negeri 3                               40,750       37,859       42,630      42,957      38,326        46,742        47,668      41,756       62,480         38,054
+                                                              Pinjaman Bersih Luar Negeri                                    (341)       1,312          726        (359)       (221)          (14)          550       3,664       (6,286)           (474)
+                                                              Baki Akaun                                                      (88)        (771)      (6,163)     (5,245)        436        (4,807)       (5,709)     (1,920)      (8,773)         (2,011)
+
+                                                              Jumlah                                                       40,321       38,400       37,193      37,353      38,541        41,921        42,509      43,500       47,421         35,569
+
+                                                              Perubahan Dalam Kedudukan Kewangan
+                                                              Punca Dana
+                                                              Hasil                                                       220,158      212,019      219,088     219,075      209,152      203,908       185,419     159,653      158,639        159,793
+                                                              Terimaan Kumpulan Wang Pembangunan                            1,852        1,347        1,030       1,095        2,157        2,608           866         816          522            976
+                                                              Terimaan Bersih Kumpulan Wang Amanah Lain                     1,624          -            -           -            -            -             -           -          2,626            -
+
+                                                              Jumlah Punca Dana                                           223,634      213,366      220,118     220,170     211,309       206,516       186,285     160,469      161,787        160,769
+
+                                                              Penggunaan Dana
+                                                              Perbelanjaan Mengurus (tidak termasuk pindahan              216,330      208,381      215,045     216,490      207,752      199,666       182,594     151,633      157,067        153,499
+                                                              ke Kumpulan Wang Pembangunan)
+                                                              Perbelanjaan Pembangunan                                     44,884       41,995       40,768      39,469       42,210       46,932        46,416      52,792       49,515         42,847
+                                                              Bayaran Bersih Kumpulan Wang Amanah Lain                        -         10,960          640      15,024        3,771          551           308       3,769          -            7,172
+
+                                                              Jumlah Penggunaan Dana                                      261,214      261,336      256,453     270,983     253,733       247,149       229,318     208,194      206,582        203,518
+
+                                                              Tambahan/(Kurangan) Dana                                    (37,580)      (47,970)    (36,335)     (50,813)    (42,424)     (40,633)       (43,033)    (47,725)    (44,795)       (42,749)
+
+                                                              Perubahan Dalam Modal Kerja
+                                                              Tambahan/(Kurangan) Wang Tunai dan Pelaburan                  2,811        (9,453)       7,411      (8,242)     (4,319)       6,095          5,178      (2,330)     11,445         (5,168)
+                                                              Pinjaman Bersih Dalam dan Luar Negeri                       (40,391)      (38,517)    (43,746)     (42,571)    (38,105)     (46,728)       (48,211)    (45,395)    (56,240)       (37,581)
+
+                                                              Tambahan/(Kurangan) Modal Kerja                             (37,580)      (47,970)    (36,335)     (50,813)    (42,424)     (40,633)       (43,033)    (47,725)    (44,795)       (42,749)
+
+                                                              Nota :    (1) - Baki terkumpul sebelum tahun 1996.                                                                                                                            (disambung…)!
+                                                                        (2) - Tidak termasuk pindahan dari Akaun Pinjaman Disatukan.
+                                                                       (3) - Tidak termasuk Bil Perbendaharaan.
+
+
+
+
+  266
+                                                                $10 Excellent Accounting @ Your Service
+
+
+                                                             PENYATA KEWANGAN KERAJAAN PERSEKUTUAN                                                                                                                                               2
+
+
+
+
+7 WJD010860 Lampiran dan Organisasi BM.indd 266                                                                                                                                                                                                          26/07/2018 11:16 AM
+

@@ -1,0 +1,105 @@
+# 2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf  sha256 8fe75e5b7d7e1c839bd3f426a97d941ca76e732501dc17d5baaceb773e96763f  pdf_page 294 of 456  (pdftotext -layout)
+
+282 | PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2021
+
+
+  Perangkaan Kewangan Kerajaan Persekutuan, 2012 - 2021
+  (dalam RM juta)
+                                                                                                                                                                                (sambungan)
+
+                                                                    2021           2020       2019       2018        2017        2016       2015       2014          2013           2012
+
+
+    Hasil
+
+    Cukai Langsung                                                  130,116        112,511    134,723    130,035     116,024     109,608    111,770    126,743       120,523        116,937
+    Cukai Tidak Langsung                                             43,587         41,887     45,843     44,026      61,634      59,736     27,012     37,462        35,430         34,706
+    Terimaan Lain                                                       60,049      70,677     83,849     58,822      42,748      43,077     80,307     56,421        57,417          56,270
+
+    Jumlah Hasil                                                    233,752        225,075    264,415    232,883     220,406     212,421    219,089    220,626       213,370         207,913
+
+    Perbelanjaan Mengurus
+
+    Emolumen                                                            85,853      82,996     80,534     79,989      77,036      73,108     70,050     66,947        61,001          60,016
+    Perkhidmatan dan Bekalan                                            24,924      29,323     31,507     35,283      34,738      30,070     36,373     34,259        33,860          31,963
+    Aset                                                                596            631        770        447         516         676      1,723      1,802         1,415          1,770
+    Pemberian dan Kenaan
+    Pemberian dan KenaanBayaran  Tetap44
+                         BayaranTetap                               121,579        111,163    149,849    116,067     107,076     107,653    109,835    116,134       115,862        112,698
+    Perbelanjaan Lain                                                     800         962       1,755      1,097       1,040        914       1,108      1,484         1,232           1,466
+
+    Jumlah Perbelanjaan Mengurus                                    233,752        225,075    264,415    232,883     220,406     212,421    219,089    220,626       213,370        207,913
+
+    Pinjaman
+    Terimaan Pinjaman Dalam Negeri
+    Bil Perbendaharaan                                                  44,862      31,601     11,778     16,229      15,269       7,876     12,551      6,569         6,500           6,401
+    Terbitan Pelaburan Kerajaan                                         78,931      81,797     60,012     64,305      53,500      42,500     41,000     33,500        41,000          42,000
+    Sekuriti Kerajaan Malaysia                                          88,132      80,491     59,465     51,030      60,416      43,500     54,253     57,240        59,457          54,244
+    Pinjaman Pasaran                                                           -          -          -           -           -          -          -            -           -                -
+    Sukuk                                                                      -      666            -           -           -          -          -            -           -                -
+    Pinjaman Lain                                                              -          -          -           -           -          -     8,000     11,500         4,400           5,500
+
+    Jumlah Terimaan Pinjaman Dalam Negeri                           211,925        194,555    131,255    131,564     129,185      93,876    115,804    108,809       111,357         108,145
+
+    Terimaan Pinjaman Luar Negeri
+    Pinjaman Pasaran                                                     5,277            -     7,170            -           -     5,837      5,303         -             -                -
+    Pinjaman Projek                                                        -              -       134           36          63       145        257       274           413              683
+    Pinjaman Lain                                                          -              -          -           -           -          -          -            -           -                -
+
+    Jumlah Terimaan Pinjaman Luar Negeri                                 5,277            -     7,304           36          63     5,982      5,560       274           413              683
+    Jumlah Terimaan Pinjaman                                        217,202        194,555    138,559    131,600     129,248      99,858    121,364    109,083       111,770         108,828
+
+    Bayaran Balik Dalam Negeri
+    Bil Perbendaharaan                                                  32,579      20,731     13,710     14,310      15,287       8,053     12,165      6,579         6,499           6,404
+    Terbitan Pelaburan Kerajaan                                         29,000      40,000     24,000     27,500      20,000      22,000     12,500     20,500        12,000           8,500
+    Sekuriti Kerajaan Malaysia                                          42,642      34,297     43,413     35,327      53,166      26,141     43,823     32,683        46,532          39,807
+    Pinjaman Pasaran                                                           -          -          -           -           -          -          -            -           -                -
+    Sukuk                                                                6,000       2,700      1,600            -           -          -          -            -      2,399           4,593
+    Pinjaman Lain                                                              -          -          -           -           -          -     4,300      6,100         5,600           2,100
+
+    Jumlah Bayaran Balik Dalam Negeri                               110,221         97,728     82,723     77,137      88,453      56,194     72,788     65,862        73,030          61,404
+
+    Bayaran Balik Luar Negeri
+    Pinjaman Pasaran                                                     3,248            -          -           -           -     4,670      4,420             -           -                -
+    Pinjaman Projek                                                       295         330        327        356         404         477        413        633           634              697
+    Pinjaman Lain                                                         -             -          -          -           -           -          -          -             -                -
+
+    Jumlah Bayaran Balik Luar Negeri                                     3,543        330        327        356         404        4,670      4,833       633           634              697
+    Jumlah Bayaran Balik                                            113,764         98,058     83,050     77,493      88,857      60,864     77,621     66,495        73,664          62,101
+
+    Pinjaman Bersih Dalam Negeri
+    Bil Perbendaharaan                                                  12,283      10,870     (1,932)     1,919         (18)       (177)      386            (10)          1               (2)
+    Terbitan Pelaburan Kerajaan                                         49,931      41,797     36,012     36,805      33,500      20,500     28,500     13,000        29,000          33,500
+    Sekuriti Kerajaan Malaysia                                          45,490      46,194     16,052     15,703       7,250      17,359     10,430     24,557        12,925          14,437
+    Pinjaman Pasaran                                                         -           -          -          -           -           -          -          -             -               -
+    Sukuk                                                               (6,000)     (2,034)    (1,600)         -           -           -          -          -        (2,399)         (4,593)
+    Pinjaman Lain                                                              -          -          -           -           -          -     3,700      5,400        (1,200)          3,400
+
+    Jumlah Pinjaman Bersih Dalam Negeri                             101,704         96,827     48,532     54,427      40,732      37,682     43,016     42,947        38,327          46,742
+
+    Pinjaman Bersih Luar Negeri
+    Pinjaman Pasaran                                                     2,029           -      7,170          -           -       1,167        884          -             -                 -
+    Pinjaman Projek                                                       (295)       (330)      (193)      (320)       (341)       (332)      (157)      (359)         (221)              (14)
+    Pinjaman Lain                                                              -          -          -           -           -          -          -            -           -                -
+
+    Jumlah Pinjaman Bersih Luar Negeri                                   1,734        (330)     6,977       (320)       (341)       835        727        (359)         (221)              (14)
+
+    Jumlah Pinjaman Bersih                                          103,438         96,497     55,509     54,107      40,391      38,517     43,743     42,588        38,106          46,728
+
+    Kumpulan Wang Pembangunan
+
+    Baki pada 1 Januari                                             (13,255)       (24,700)   (27,786)   (46,767)    (33,678)    (41,857)   (53,912)   (40,535)      (43,824)        (55,235)
+
+    Penerimaan
+    Caruman daripada Akaun Hasil Disatukan                               2,236        475       1,072      1,923       2,711       2,248      2,091      1,037         2,100           2,376
+    Pindahan daripada Akaun Pinjaman Disatukan                          62,317      61,071     54,456     72,365      27,232      46,579     49,249     23,976        41,830          53,332
+    Lain-lain                                                             990        1,259      1,731       788        1,852       1,347      1,483      1,114         1,569           2,635
+
+    Jumlah Penerimaan                                                   65,543      62,805     57,259     75,076      31,795      50,174     52,823     26,127        45,499          58,343
+    Nota :      (4) - Termasuk pindahan ke Kumpulan Wang Pembangunan.                                                                                                           (disambung...)    (
+
+
+
+
+  PERANGKAAN KEWANGAN KERAJAAN PERSEKUTUAN 2012 - 2021
+

@@ -370,6 +370,7 @@ STATE_LINES = {
     "revenue_nonrevenue_receipts": "state_gov.revenue.nonrevenue_receipts",
     "opex_before_transfer": "state_gov.expenditure.opex",
     "devex_total": "state_gov.expenditure.devex",
+    "expenditure_water_supply": "state_gov.expenditure.water_supply",
     "expenditure_total": "state_gov.expenditure.total",
     "surplus_deficit": "state_gov.surplus_deficit",
     "debt_total": "state_gov.debt.total",
@@ -406,7 +407,8 @@ def build_states(obs):
                 l1_ref=f"sources/states/data/_national/fact_state_finance_all.csv#row{i}")
 
 
-FEDERAL = {"opex_net_rm": ("federal_gov.expenditure.opex", "opex_source_file", "opex_pdf_page", "opex_printed_page"),
+FEDERAL = {"revenue_rm": ("federal_gov.revenue.total", "revenue_source_file", None, None),
+           "opex_net_rm": ("federal_gov.expenditure.opex", "opex_source_file", "opex_pdf_page", "opex_printed_page"),
            "devex_gross_rm": ("federal_gov.expenditure.devex", None, None, None),
            "covid_fund_rm": ("federal_gov.expenditure.covid_fund", "covid_fund_source_file", "covid_fund_pdf_page",
                              "covid_fund_printed_page")}
@@ -494,6 +496,73 @@ def build_federal_reported(obs):
                 l1_ref=r["_l1"])
 
 
+def build_flags(obs):
+    """Phase 2: flags from L1 carried onto every observation they concern (the verifier's G1, 2026-11-04).
+
+    Three sources, each declared here before use:
+      identity_breach  sources/dosm/data/_identity_breaches_realeconomy.csv: the L1 row's own columns do
+                       not add up (e.g. labour force != employed + unemployed); every figure from that row
+      out_of_bounds    a rate or share outside 0-100 (e.g. Telang Usan 2018, unemployment 293%)
+      duplicate_area   two or more areas of one state and year print identical LFS figures (employed,
+                       unemployed, outside the labour force, both rates): a copied row, not a measurement
+    Nothing is changed or dropped: the figure stays as published and carries caveat CV15."""
+    reg = os.path.join(DOSM, "_identity_breaches_realeconomy.csv")
+    breach = {}
+    for r in rows(reg):
+        breach.setdefault((r["dataset"], r["key"]), []).append(f"{r['identity']}: published {r['published']}, implied {r['implied']}")
+    keyf = {"lfs_dun": lambda r: f"{r['dun']} {r['parlimen']} {r['state']} {r['date'][:7]}",
+            "lfs_parlimen": lambda r: f"{r['parlimen']} {r['state']} {r['date'][:7]}",
+            "lfs_district": lambda r: f"{r['district']} {r['state']} {r['date'][:7]}",
+            "hies_state_percentile": lambda r: f"{r['state']}/{r['date']}",
+            "hies_malaysia_percentile": lambda r: r["date"]}
+    out = []
+    l1_rows = {}
+    for ds, kf in keyf.items():
+        for i, r in enumerate(rows(os.path.join(DOSM, f"{ds}.csv")), start=2):
+            ref = f"sources/dosm/data/{ds}.csv#row{i}"
+            l1_rows[ref] = r
+            for note in breach.get((ds, kf(r)), []):
+                out.append({"l1_ref": ref, "indicator_code": "", "flag": "identity_breach", "note": note,
+                            "register": "sources/dosm/data/_identity_breaches_realeconomy.csv"})
+    # duplicate areas: identical LFS figures for two or more areas of one state and year
+    for ds in ("lfs_dun", "lfs_parlimen", "lfs_district"):
+        groups = defaultdict(list)
+        for ref, r in l1_rows.items():
+            if ref.startswith(f"sources/dosm/data/{ds}.csv#"):
+                sig = tuple(r.get(c, "") for c in ("lf_employed", "lf_unemployed", "lf_outside", "u_rate", "p_rate"))
+                if all(sig):
+                    groups[(r["state"], r["date"], sig)].append(ref)
+        for (st, d, sig), refs in groups.items():
+            if len(refs) > 1:
+                for ref in refs:
+                    out.append({"l1_ref": ref, "indicator_code": "", "flag": "duplicate_area",
+                                "note": f"{len(refs)} areas of {st} print identical LFS figures for {d[:4]} "
+                                        f"(employed {sig[0]}, unemployed {sig[1]}, rates {sig[3]}/{sig[4]})",
+                                "register": "core/pipeline/build_core.py build_flags (declared rule)"})
+    for r in obs.rows:
+        if (r["unit_printed"] == "percent" and r["value"] and
+                not (Decimal(0) <= Decimal(r["value"]) <= Decimal(100))):
+            out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "out_of_bounds",
+                        "note": f"{r['indicator_code']} = {r['value_printed']} percent, outside 0-100",
+                        "register": "core/pipeline/build_core.py build_flags (declared rule)"})
+    # our own known extraction defects that reach core (meta/extraction_defect_flag.csv, each pointing to its
+    # state_config.KNOWN_EXTRACTION_DEFECTS entry): the figure is the wrong printed line, caveat CV18
+    want = {(d["indicator_code"], d["geo_code"], d["period_code"]): d
+            for d in rows(os.path.join(META, "extraction_defect_flag.csv"))}
+    for r in obs.rows:
+        d = want.get((r["indicator_code"], r["geo_code"], r["period_code"]))
+        if d:
+            out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "our_extraction_defect",
+                        "note": d["note"], "register": d["register"]})
+    seen, uniq = set(), []
+    for f in out:
+        k = (f["l1_ref"], f["indicator_code"], f["flag"], f["note"])
+        if k not in seen:
+            seen.add(k)
+            uniq.append(f)
+    return sorted(uniq, key=lambda f: (f["l1_ref"], f["flag"], f["note"]))
+
+
 # ---------------------------------------------------------------- dimensions
 def dim_geo(obs):
     out = [{"geo_code": "MY", "geo_level": "country", "local_code": "MY", "name_bm": "Malaysia", "name_en": "Malaysia",
@@ -506,8 +575,9 @@ def dim_geo(obs):
                     "name_en": STATE_EN.get(name, name), "parent_geo_code": "MY", "hierarchy": "administrative",
                     "boundary_vintage": "", "boundary_vintage_proof": "stated (ISO 3166-2:MY)"})
     proof = ("inferred: DOSM's HIES (2019-2024) and LFS (2021-2023) constituency files publish the same 222 parlimen "
-             "and 600 DUN labels every year, the seat counts of the delineations used at GE14 (2018) and GE15 (2022); "
-             "DOSM does not state the boundary set")
+             "and 600 DUN labels every year, the seat counts of the GE15 (2022) delineation (600 DUN includes Sabah's 73 "
+             "seats from its 2019 redelineation; GE14 had 587). The 2019 figures are therefore tabulated on these later "
+             "boundaries; DOSM does not state the boundary set")
     for g, (st, code, name) in sorted(obs.parlimen.items()):
         out.append({"geo_code": g, "geo_level": "parlimen", "local_code": code, "name_bm": name, "name_en": name,
                     "parent_geo_code": STATE_ISO[st], "hierarchy": "electoral",
@@ -607,6 +677,16 @@ def checks(obs, geo, per, ind, brk, editions):
         "hh_income.gross.pctile_group.max", "PASS" if not off else "INFO",
         f"{len(grp)} place-years; within RM1 except " + "; ".join(f"{g} {y}: {fmt(d)}" for (g, y), d in off)
         if off else f"{len(grp)} place-years within RM1")
+    # two DOSM files print district Gini: core loads hh_inequality_district; where hies_district differs,
+    # say so (both kept as published; the verifier's C2, 2026-11-04)
+    a = {(r["state"], r["district"], r["date"][:4]): r["gini"] for r in rows(os.path.join(DOSM, "hies_district.csv"))
+         if r.get("gini")}
+    b = {(r["state"], r["district"], r["date"][:4]): r["gini"] for r in rows(os.path.join(DOSM, "hh_inequality_district.csv"))
+         if r.get("gini")}
+    diff = sorted(f"{k[1]} ({k[0]}) {k[2]}: {a[k]} vs {b[k]}" for k in a.keys() & b.keys() if Decimal(a[k]) != Decimal(b[k]))
+    add("C11 district Gini: hies_district vs hh_inequality_district (core uses the latter)", "hh_income.gini",
+        "PASS" if not diff else "INFO", f"{len(a.keys() & b.keys())} cells in both; " +
+        (f"{len(diff)} differ: " + "; ".join(diff) if diff else "all agree"))
     # coverage: every view must be able to run for all 16 states and territories (golden rule 11)
     for i in sorted({r["indicator_code"] for r in obs.rows}):
         g = {r["geo_code"] for r in obs.rows if r["indicator_code"] == i and r["geo_code"].startswith("MY-")
@@ -696,6 +776,8 @@ def main():
           ["hierarchy", "child_geo_code", "parent_geo_code"])
     write("dim_period.csv", per, list(per[0]))
     write("dim_breakdown.csv", brk, list(brk[0]))
+    flags = build_flags(obs)
+    write("obs_flag.csv", flags, ["l1_ref", "indicator_code", "flag", "note", "register"])
     write("dim_indicator.csv", [r for r in ind if r["indicator_code"] in used], list(ind[0]))
     write("fact_observation.csv", obs.rows, OBS_FIELDS)
     ck = checks(obs, geo, per, [r for r in ind if r["indicator_code"] in used], brk, ed)

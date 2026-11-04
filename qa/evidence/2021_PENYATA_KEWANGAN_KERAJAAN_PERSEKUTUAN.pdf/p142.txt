@@ -1,0 +1,86 @@
+# 2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf  sha256 8fe75e5b7d7e1c839bd3f426a97d941ca76e732501dc17d5baaceb773e96763f  pdf_page 142 of 456  (pdftotext -layout)
+
+130 | PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2021
+
+
+ Penyata Perbelanjaan Mengurus
+ bagi tahun berakhir 31 Disember 2021
+                                                                                                                                                        (sambungan)
+
+                                                                                Anggaran                                      Sebenar                  Varian
+                      Maksud Perbelanjaan
+                                                                        Tambahan/       Viremen                                                    Kurang/(Lebih)
+                                                            Asal                                          Jumlah         Amaun          Prestasi
+                                                                        (Kurangan)   Tambah/(Kurang)                                                  Belanja
+
+                                                            RM             RM               RM             RM              RM              %            RM
+
+          PERBELANJAAN BEKALAN – (SAMB.)
+
+     B.24 KEMENTERIAN PERDAGANGAN
+          ANTARABANGSA DAN INDUSTRI – (SAMB.)
+
+   030000 PENGUKUHAN PERDAGANGAN ANTARABANGSA
+          – (SAMB.)
+
+   040000 PENGUKUHAN PELABURAN BERKUALITI – (SAMB.)
+   040200 Ekonomi Digital
+    10000 Emolumen                                           575,900            –              37,900       613,800       604,924.52      98.55           8,875.48
+    20000 Perkhidmatan dan Bekalan                            59,000            –             (41,400)       17,600             –          –             17,600.00
+          Jumlah 040200                                      634,900            –              (3,500)      631,400       604,924.52      95.81          26,475.48
+   040300 Lembaga Pembangunan Pelaburan Malaysia (MIDA)
+    40000 Pemberian dan Kenaan Bayaran Tetap              160,000,000           –          14,749,062    174,749,062   174,749,062.00    100.00                 –
+          Jumlah 040300                                   160,000,000           –          14,749,062    174,749,062   174,749,062.00    100.00                 –
+          Emolumen                                          2,556,900           –             412,600      2,969,500     2,948,054.26     99.28          21,445.74
+          Perkhidmatan dan Bekalan                            136,800           –             549,214        686,014       643,447.74     93.80          42,566.26
+          Pemberian dan Kenaan Bayaran Tetap              160,000,000           –          14,749,062    174,749,062   174,749,062.00    100.00               –
+          Jumlah 040000                                   162,693,700           –          15,710,876    178,404,576   178,340,564.00     99.96          64,012.00
+   050000 PROGRAM KHUSUS
+   050100 Bertugas ke Luar Negara
+    20000 Perkhidmatan dan Bekalan                          8,500,000           –          (6,962,502)     1,537,498      851,525.87      55.38         685,972.13
+          Jumlah 050100                                     8,500,000           –          (6,962,502)     1,537,498      851,525.87      55.38         685,972.13
+   050200 Emolumen Kakitangan Kontrak
+    20000 Perkhidmatan dan Bekalan                          3,500,000           –                –         3,500,000     2,643,321.19     75.52         856,678.81
+          Jumlah 050200                                     3,500,000           –                –         3,500,000     2,643,321.19     75.52         856,678.81
+   050300 Promosi Penggalakan Pelaburan dan
+          Perdagangan
+    10000 Emolumen                                               –              –              13,000         13,000         9,616.43     73.97           3,383.57
+    20000 Perkhidmatan dan Bekalan                          4,327,800           –             (13,000)     4,314,800     2,448,970.30     56.76       1,865,829.70
+          Jumlah 050300                                     4,327,800           –                –         4,327,800     2,458,586.73     56.81       1,869,213.27
+   050400 Halal Development Corporation (HDC)
+    40000 Pemberian dan Kenaan Bayaran Tetap               12,400,000           –            300,000      12,700,000    12,700,000.00    100.00                 –
+          Jumlah 050400                                    12,400,000           –            300,000      12,700,000    12,700,000.00    100.00                 –
+   050500 SIRIM Berhad
+    40000 Pemberian dan Kenaan Bayaran Tetap               32,702,700           –           5,904,000     38,606,700    38,606,700.00    100.00                 –
+          Jumlah 050500                                    32,702,700           –           5,904,000     38,606,700    38,606,700.00    100.00                 –
+   050600 InvestKL
+    40000 Pemberian dan Kenaan Bayaran Tetap               12,000,000           –           1,652,610     13,652,610    13,652,610.00    100.00                 –
+          Jumlah 050600                                    12,000,000           –           1,652,610     13,652,610    13,652,610.00    100.00                 –
+          Emolumen                                               –              –              13,000         13,000         9,616.43     73.97           3,383.57
+          Perkhidmatan dan Bekalan                         16,327,800           –          (6,975,502)     9,352,298     5,943,817.36     63.55       3,408,480.64
+          Pemberian dan Kenaan Bayaran Tetap               57,102,700           –           7,856,610     64,959,310    64,959,310.00    100.00               –
+          Jumlah 050000                                    73,430,500           –            894,108      74,324,608    70,912,743.79     95.41       3,411,864.21
+   060000 "ONE-OFF"
+   060100 Persidangan APEC 2020
+    10000 Emolumen                                          2,512,000           –         (1,720,060)        791,940       581,675.09     73.45         210,264.91
+    20000 Perkhidmatan dan Bekalan                         22,488,000           –        (16,529,458)      5,958,542     5,711,635.10     95.86         246,906.90
+    40000 Pemberian dan Kenaan Bayaran Tetap                     –              –          1,000,000       1,000,000     1,000,000.00    100.00               –
+          Jumlah 060100                                    25,000,000           –        (17,249,518)      7,750,482     7,293,310.19     94.10         457,171.81
+          Emolumen                                          2,512,000           –         (1,720,060)        791,940       581,675.09     73.45         210,264.91
+          Perkhidmatan dan Bekalan                         22,488,000           –        (16,529,458)      5,958,542     5,711,635.10     95.86         246,906.90
+          Pemberian dan Kenaan Bayaran Tetap                     –              –          1,000,000       1,000,000     1,000,000.00    100.00               –
+          Jumlah 060000                                    25,000,000           –        (17,249,518)      7,750,482     6,293,310.19     81.20       1,457,171.81
+          Jumlah Emolumen                                  81,205,500           –         (4,361,936)     76,843,564    71,593,853.72     93.17       5,249,710.28
+          Jumlah Perkhidmatan dan Bekalan                 101,589,000           –        (30,734,401)     70,854,599    57,814,681.01     81.60      13,039,917.99
+          Jumlah Aset                                       5,113,700           –            202,850       5,316,550     3,825,394.58     71.95       1,491,155.42
+          Jumlah Pemberian dan Kenaan Bayaran Tetap       394,420,100           –         34,779,337     429,199,437   428,504,710.20     99.84         694,726.80
+          Jumlah Perbelanjaan-perbelanjaan Lain                10,000           –            114,150         124,150        96,523.90     77.75          27,626.10
+          JUMLAH KEMENTERIAN PERDAGANGAN                  582,338,300           –                –       582,338,300   561,835,163.41     96.48      20,503,136.59
+          ANTARABANGSA DAN INDUSTRI
+                                                                                                                                                        (disambung...)
+
+
+
+
+  LAMPIRAN 1 - PERBELANJAAN MENGURUS
+

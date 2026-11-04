@@ -167,8 +167,10 @@ q("5", "Which page does Pahang's 2016 spending figure come from?", "explain_chai
 # G. the gap view
 q("5", "Does the need-vs-money view cover every state and territory in 2022?", "get_gap_view",
   {"name": "gap_need_vs_money", "year": "2022"}, "row_count", "16")
-q("5", "Is Pahang's 2022 spending flagged as under check?", "get_gap_view",
-  {"name": "gap_need_vs_money", "geo": "MY-06", "year": "2022"}, "field:under_check", "N2_identity_expenditure")
+q("5", "How much did Pahang spend on water supply in 2022 (its third spending head)?", "get_series",
+  series("state_gov.expenditure.water_supply", "MY-06", "2022"), "value", s(acct("Pahang", "2022", "expenditure_water_supply")))
+q("5", "Is Pahang's 2022 spending still under check now that its water-supply head is extracted?", "get_gap_view",
+  {"name": "gap_need_vs_money", "geo": "MY-06", "year": "2022"}, "field:under_check", "")
 q("5", "Is federal spending by state published in 2022?", "get_gap_view",
   {"name": "gap_need_vs_money", "geo": "MY-03", "year": "2022"}, "field:federal_publishable", "false")
 q("5", "Does the view say why Kuala Lumpur has no state-government spending?", "get_gap_view",
@@ -401,6 +403,44 @@ q("5", "By how much does BNM's 2023 operating expenditure differ from MOF's?", "
   {"operation": "difference", "a": fed("federal_gov.expenditure.opex", "2023", "bnm"),
    "b": fed("federal_gov.expenditure.opex", "2023", "mof")}, "value",
   s(bnm("cur_bud_exp", "2023") - mof("operating_expenditure", "2023", 2025)), "0.000001")
+
+# P. the blind verifier's findings on Phase 2 (2026-11-04), one question each
+q("2", "Kedah seat N.03 Kota Siputeh, employed 2022: does the answer warn it is a copied row?", "get_series",
+  series("lfs.employed", "MY-02/dun:N.03@ge15", "2022"), "caveat", "CV15", kind="trap_source_defect")
+q("2", "Telang Usan's 2018 unemployment rate (published as 293%): is it flagged?", "get_series",
+  series("lfs.unemployment_rate", "MY-13/dis:telang_usan@dosm_2020", "2018"), "caveat", "CV15",
+  kind="trap_source_defect")
+q("2", "Does explain() list the anomaly for Telang Usan 2018?", "explain_chain",
+  series("lfs.unemployment_rate", "MY-13/dis:telang_usan@dosm_2020", "2018"), "field_nonempty:anomalies",
+  kind="trap_source_defect")
+q("1", "What share of Malaysian households earned less than RM 37,583 a month in 2022 (above the 99th cut-off)?",
+  "get_distribution", {"indicator": "hh_income", "geo": "MY", "period": "2022", "below": 37583}, "share_bracket",
+  bracket(None, "2022", Decimal(37583)))
+q("1", "What share of Perlis households earned less than RM 10 million a month in 2024?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY-09", "period": "2024", "below": 10000000}, "share_bracket",
+  bracket("Perlis", "2024", Decimal(10000000)))
+q("1", "What share of households earned less than RM -5 a month?", "get_distribution",
+  {"indicator": "hh_income", "geo": "MY", "period": "2022", "below": -5}, "share_refused", kind="trap_incomparable")
+q("1", "Rank the districts by population in 2022.", "compare_geos",
+  {"indicator": "pop.total", "period": "2022", "geo_level": "district"}, "refused_ranking", kind="trap_small_area")
+q("5", "Growth of federal opex from BNM's 2021 figure to PKKP's 2022 figure?", "derive_chain",
+  {"operation": "growth", "a": fed("federal_gov.expenditure.opex", "2022", "pkkp"),
+   "b": fed("federal_gov.expenditure.opex", "2021", "bnm")}, "refused", "publisher", kind="trap_incomparable")
+q("4", "Nominal GDP per employed person, as if it were a wage?", "derive_chain",
+  {"operation": "per_employed", "a": series("gdp.nominal", "MY", "2022"), "b": series("lfs.employed", "MY", "2022")},
+  "refused", "compensation_of_employees", kind="trap_incomparable")
+q("1", "Johor's population, asked with a list for the place?", "get_series",
+  {"indicator": "pop.total", "geo": ["MY-01"], "start": "2022", "end": "2022"}, "not_held", kind="trap_missing")
+q("5", "How many publishers report federal revenue for 2022?", "get_series",
+  series("federal_gov.revenue.total", "MY", "2022"), "row_count", "3")
+q("5", "Does PKKP's audited 2022 operating spending say where its citation comes from?", "get_series",
+  fed("federal_gov.expenditure.opex", "2022", "pkkp"), "caveat", "CV16")
+
+q("5", "Does PKKP's 2020 revenue say its PDF is not archived (decision D24)?", "get_series",
+  fed("federal_gov.revenue.total", "2020", "pkkp"), "caveat", "CV17", kind="trap_missing")
+
+q("5", "Pahang's 2020 public debt: does the answer warn it is our known extraction error?", "get_series",
+  series("state_gov.debt.total", "MY-06", "2020"), "caveat", "CV18", kind="trap_source_defect")
 
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))

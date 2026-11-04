@@ -1,0 +1,113 @@
+# 2021_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf  sha256 8fe75e5b7d7e1c839bd3f426a97d941ca76e732501dc17d5baaceb773e96763f  pdf_page 295 of 456  (pdftotext -layout)
+
+                                                                                 PENYATA KEWANGAN KERAJAAN PERSEKUTUAN 2021 | 283
+
+
+
+
+Perangkaan Kewangan Kerajaan Persekutuan, 2012 - 2021
+(dalam RM juta)
+                                                                                                                                                      (sambungan)
+
+                                                2021       2020       2019       2018       2017       2016       2015       2014          2013           2012
+
+
+ Kumpulan Wang Pembangunan - (Samb.)
+ Pembayaran
+ Perbelanjaan Pembangunan
+ Langsung                                        63,275     49,331     52,058     54,405     42,277     40,052     38,596     37,624        40,473          44,978
+ Pinjaman                                           982      2,029      2,115      1,690      2,607      1,943      2,172      1,880         1,737           1,954
+
+ Jumlah Pembayaran                               64,257     51,360     54,173     56,095     44,884     41,995     40,768     39,504        42,210          46,932
+
+ Lebihan/(Kurangan) bagi Tahun                    1,286     11,445      3,086     18,981    (13,089)     8,179     12,055    (13,377)        3,289          11,411
+ Baki pada 31 Disember                          (11,969)   (13,255)   (24,700)   (27,786)   (46,767)   (33,678)   (41,857)   (53,912)      (40,535)        (43,824)
+
+ Kumpulan Wang COVID-19
+
+ Baki pada 1 Januari                                   1          -          -          -          -          -          -            -           -                -
+
+ Penerimaan
+ Pindahan daripada Akaun Pinjaman Disatukan      38,000     38,020           -          -          -          -          -            -           -                -
+ Lain-lain                                            2          -           -          -          -          -          -            -           -                -
+
+ Jumlah Penerimaan                               38,002     38,020           -          -          -          -          -            -           -                -
+
+ Pembayaran
+ Perbelanjaan COVID-19                           37,711     38,019           -          -          -          -          -            -           -                -
+
+ Jumlah Pembayaran                               37,711     38,019           -          -          -          -          -            -           -                -
+ Lebihan/(Kurangan) bagi Tahun                     291            1          -          -          -          -          -            -           -                -
+
+ Baki pada 31 Disember                             292            1          -          -          -          -          -            -           -                -
+
+ Kumpulan Wang Pinjaman Perumahan
+ Baki pada 1 Januari                                   -          -          -          -          -          -     1,240      1,325         1,515           1,908
+ Terimaan/(Bayaran) Bersih                             -          -          -          -          -          -      544            (86)      (190)            (393)
+
+ Baki pada 31 Disember                                 -          -          -          -          -          -     1,784      1,239         1,325           1,515
+
+ Pelbagai Kumpulan Wang Amanah Kerajaan
+
+ Baki pada 1 Januari                             35,977     35,129     31,538     23,225     23,092     29,980     23,282     29,605        35,752          34,555
+ Terimaan/(Bayaran) Bersih                        6,742        848      3,591      8,313        133     (6,888)     6,698     (6,323)       (6,147)          1,197
+
+ Baki pada 31 Disember                           42,719     35,977     35,129     31,538     23,225     23,092     29,980     23,282        29,605          35,752
+
+ Kumpulan Wang Amanah Awam
+ Baki pada 1 Januari                             20,072      9,494     10,211      9,262      8,220      9,456      8,580     10,707         9,740           6,320
+ Terimaan/(Bayaran) Bersih                        3,000     10,578       (717)       949      1,042     (1,236)       876     (2,127)          967           3,420
+
+ Baki pada 31 Disember                           23,072     20,072      9,494     10,211      9,262      8,220      9,456      8,580        10,707           9,740
+
+ Wang Deposit
+
+ Baki pada 1 Januari                             11,436     11,168     11,859     11,118      9,551      9,114     10,197      9,738         9,454           8,990
+ Terimaan/(Bayaran) Bersih                          530        268       (691)       741      1,567        437     (1,083)       459           284             464
+
+ Baki pada 31 Disember                           11,966     11,436     11,168     11,859     11,118      9,551      9,114     10,197         9,738           9,454
+
+ Wang Tunai
+
+ Wang Tunai Dalam Bank                           33,594     23,386     19,723     22,213     16,664     14,880     22,031     16,479        24,151          28,543
+ Wang Tunai Dalam Tangan dan Dalam Perjalanan       958      2,644        774      1,435      1,400      1,183        942        948           900             813
+
+ Jumlah Wang Tunai                               34,552     26,030     20,497     23,648     18,064     16,063     22,973     17,427        25,051          29,356
+
+ Pelaburan
+
+ Pelaburan Kumpulan Wang Amanah                  36,367     33,290     26,203     21,577     17,146     16,204     17,013     14,764        13,673          13,389
+ Pelaburan Am                                     7,024      6,774     12,531      7,685      6,974      7,106      8,741      8,650        10,359          10,660
+
+ Jumlah Pelaburan                                43,391     40,064     38,734     29,262     24,120     23,310     25,754     23,414        24,032          24,049
+
+ Pinjaman Boleh Dituntut
+
+ Kerajaan Negeri                                 14,219     15,979     16,345     18,221     18,785     18,164     17,901     16,470        15,941          15,797
+ Pihak Berkuasa Tempatan                            136        143        185        192        298        305        444        451           458             520
+ Badan Berkanun                                   6,963      7,121      6,954      6,328      6,338      6,363      6,358      6,821         6,656          14,073
+ Koperasi                                           237        237        248        265        271        258        208        158           178             197
+ Syarikat                                        34,613     33,471     31,922     30,764     30,522     28,634     28,956     28,857        29,624          25,509
+ Perseorangan                                       154        262        292        266        366        354     51,223     44,061        36,460          36,566
+ Pelbagai                                         1,524      1,688      1,715      1,761      1,864      1,735      1,731      2,218         3,128           2,952
+
+ Jumlah Pinjaman Boleh Dituntut                  57,846     58,901     57,661     57,797     58,444     55,813    106,821     99,036        92,445          95,614
+
+ Hutang Persekutuan
+
+ Hutang Persekutuan Dalam Negeri
+
+ Bil Perbendaharaan                              28,000     15,500      4,500      6,500      4,500      4,500      4,700      4,320         4,320           4,320
+ Terbitan Pelaburan Kerajaan                    422,600    374,600    338,800    304,300    268,000    234,500    214,000    185,500       172,500         143,500
+ Sekuriti Kerajaan Malaysia                     480,718    436,418    394,133    380,345    364,672    357,422    340,063    329,632       305,075         292,150
+ Sukuk                                           18,766     24,766     26,800     28,400     28,400     28,400     28,400     20,400         8,900           2,399
+ Pinjaman Lain                                        -          -          -          -          -          -     21,900     26,200        32,300          42,400
+
+ Jumlah Hutang Persekutuan Dalam Negeri         950,084    851,284    764,233    719,545    665,572    624,822    609,063    566,052       523,095         484,769
+                                                                                                                                                      (disambung...)
+
+
+
+
+                                                           PERANGKAAN KEWANGAN KERAJAAN PERSEKUTUAN 2012 - 2021
+
