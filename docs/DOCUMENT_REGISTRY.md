@@ -68,13 +68,13 @@ Rules:
 
 ## 3. Seed: what the first rows say
 
-43 series across all 8 themes (`docs/registry/series_seed.csv`).
+45 series across all 8 themes (`docs/registry/series_seed.csv`).
 
 | Status | Series |
 |---|---|
 | verified / extracted | 16: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities |
 | held, not extracted | 1: LKAN state volumes (findings) |
-| expected | 24 |
+| expected | 26 |
 | restricted | 2: SSM company register, PADU/eKasih |
 
 **The P1 gaps** (priority 1 and not yet held):

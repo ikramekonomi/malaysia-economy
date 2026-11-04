@@ -67,12 +67,34 @@ Every fact joins to these through **codes**. Names are attributes, never keys (g
 
 | column | example | note |
 |---|---|---|
-| `geo_code` PK | `MY`, `MY-10`, `MY-10/dis:<dosm>`, `MY-10/par:P.094`, `MY-10/dun:N.01` | ISO 3166-2:MY for states; DOSM codes below state |
+| `geo_code` PK | `MY`, `MY-10`, `MY-10/dis:<dosm>@<vintage>`, `MY-10/par:P.094@2018`, `MY-10/dun:N.01@2018` | ISO 3166-2:MY for states; DOSM/SPR codes below state, **always with the boundary vintage** |
 | `geo_level` | `country` · `state` · `district` · `parlimen` · `dun` · `strata` | enum |
 | `parent_geo_code` | `MY-10` | strict tree within one `boundary_vintage` |
+| `local_code` | `P.094` | the code as published, without the vintage |
 | `name_bm`, `name_en` | Selangor | display only |
-| `boundary_vintage` | `2018` (Peninsula re-delineation), `2015` (Sarawak DUN) | parlimen/DUN boundaries change |
-| `valid_from`, `valid_to` | | a renamed or split district is a new row |
+| `boundary_vintage` | `2018` (Peninsula re-delineation), `2015` (Sarawak DUN), `2019` (Sabah DUN) | the boundary set the area belongs to |
+| `valid_from`, `valid_to` | | dates the boundary set was in force |
+
+States and the country have no vintage suffix: their ISO codes are stable.
+
+**Boundary rule: keep every boundary set as published, and link them with a concordance.**
+
+* Parlimen, DUN and district boundaries change (re-delineation, new districts). `P.094` in
+  one boundary set is not the same area as `P.094` in another, so the vintage is part of the key.
+* Data is stored against the boundary set its publisher used. It is **never re-mapped silently**.
+* `bridge_geo_concordance` links old areas to new ones:
+
+  ```
+  bridge_geo_concordance (from_geo_code, to_geo_code, weight, weight_basis, source_edition_id)
+    weight_basis  area · population · polling_districts · exact (unchanged area)
+  ```
+
+* A figure moved onto another boundary set through the concordance is a new observation with
+  `basis = derived` and `derived_from` pointing to the original. Both stay.
+* Tools default to the boundary set in force for the requested period, so a DUN figure lines up
+  with the representative elected on those boundaries.
+* The concordance source (SPR delimitation reports, DOSM boundary files) is a registry series
+  like any other.
 
 State codes (ISO 3166-2:MY): 01 Johor · 02 Kedah · 03 Kelantan · 04 Melaka · 05 Negeri Sembilan ·
 06 Pahang · 07 Pulau Pinang · 08 Perak · 09 Perlis · 10 Selangor · 11 Terengganu · 12 Sabah ·
@@ -130,17 +152,39 @@ never from labels typed by us.
 
 Every body that spends, receives, audits or is audited. This is the spine of the money trail.
 
+**Rule: every entity has a permanent opaque ID, and its readable codes are attributes with dates.**
+Readable codes are not keys because Malaysia's codes move: vote codes are renumbered at cabinet
+restructures, so `B.45` can name different ministries in different years, and codes get reused.
+
+```
+dim_entity           (entity_id PK, entity_type, name_bm, name_en, parent_entity_id, gfs_sector, seat_geo_code)
+bridge_entity_code   (entity_id, code_system, code, valid_from, valid_to, proof)
+meta.entity_register  committed CSV: every entity_id ever issued, with issue date and reason; never reused, never deleted
+```
+
 | column | example | note |
 |---|---|---|
-| `entity_id` PK | `fed:maksud:B.45` · `fed:projek:P.45:<projek_code>` · `state:MY-03:gov` · `agency:<ag_code>` · `co:<ssm_no>` | readable, stable, never reused |
+| `entity_id` PK | `E000123` | issued once from `meta.entity_register`; stable across rebuilds |
 | `entity_type` | `government` · `ministry` · `programme` · `activity` · `project` · `statutory_body` · `glc` · `company` · `auditor` | enum |
-| `parent_entity_id` | project → ministry → federal government | |
+| `name_bm`, `name_en` | | current name; past names in `bridge_entity_code` (`code_system = name`) |
+| `parent_entity_id` | project → ministry → federal government | parent changes over time are dated in a bridge, not overwritten |
 | `gfs_sector` | `central_gov` · `state_gov` · `local_gov` · `public_corp` · `private` | puts off-budget bodies in scope |
 | `seat_geo_code` | `MY-16` | where it sits, which is **not** where its money goes |
-| `ext_ids` | `{maksud_code, projek_code, ssm_no, ag_agency_code}` | join keys to L1 |
-| `valid_from`, `valid_to` | | ministry renumbering = new validity, same canonical id (as `dim_maksud_canonical` does today) |
 
-A state *as a place* (`dim_geo MY-03`) and a state *as a government* (`state:MY-03:gov`) are
+`bridge_entity_code` holds every readable code with its validity (illustrative: `maksud` `B.45` valid 2020–2022),
+`projek_code`, `ssm_no`, `ag_agency_code`, state government `MY-03`. Its rules:
+
+* a code points to exactly one entity on any given date (enforced by the build);
+* every link that is not the first appearance of a code carries a `proof`, the way
+  `dim_maksud_canonical` proves each renumbering today;
+* agent tools accept a readable code plus a date (`B.45`, 2024) and resolve it to the
+  `entity_id`, so agents never need to see opaque IDs unless they want to.
+
+Issuing IDs: a build that meets a code with no entity for that date stops and lists it. An ID
+is issued only when a person (or a reviewed rule) decides whether it is a new body or a
+renumbered old one. This is the one place where judgement is recorded, not computed.
+
+A state *as a place* (`dim_geo MY-03`) and a state *as a government* (an entity with code `MY-03` in `code_system = state_gov`) are
 different rows. Spending by Kelantan's government is not spending in Kelantan.
 
 ### 4.6 `dim_source`: from which document
@@ -188,7 +232,7 @@ Plan targets are observations with `basis = target`, so "target vs outcome" is o
 | column | note |
 |---|---|
 | `flow_id` | |
-| `from_entity_id`, `to_entity_id` | e.g. `fed:maksud:B.45` → `fed:projek:P.45:…` → `co:<ssm_no>` |
+| `from_entity_id`, `to_entity_id` | entity IDs; e.g. a ministry (maksud code) → its project (projek_code) → a contractor (SSM number) |
 | `stage` | `announced` · `budgeted` · `revised` · `spent` · `received` (§7.3) |
 | `period_code` | |
 | `amount` | RM (unit in `meta.column`) |
@@ -385,8 +429,49 @@ as `_unallocated` with its total, so a map never looks more complete than the da
 | `sources/audit-negara` findings, sijil, e-SelfAudit | `fact_record` + `bridge_link` | Track B |
 | `curated/fact_obligations` | `fact_observation` (stocks) + `fact_record` (guarantees) | |
 | `curated/fact_fiscal_headline` (wide) | becomes `v_fiscal_headline`, a view, so the site keeps working | |
-| `curated/dim_maksud_canonical` | absorbed into `dim_entity` | |
-| `curated/forecast/`, `curated/dashboard/` | proposed for removal (awaiting your decision) | |
+| `curated/dim_maksud_canonical` | absorbed into `dim_entity` + `bridge_entity_code` (its proofs move with it) | |
+| `curated/forecast/` | moves to `apps/models/`, outside the warehouse (§13.1) | |
+| `curated/dashboard/` | retired after a feature-by-feature decision (§13.2) | |
+
+### 13.1 `curated/forecast/` → `apps/models/`
+
+Model output is an application on top of the warehouse, not warehouse data. It never enters
+`core.*`. Its own supersession rule has fired: MOF's official figures (Tinjauan Fiskal
+2019–2027, FY2025 actuals included) are now ingested.
+
+| Piece | Goes to |
+|---|---|
+| `fact_utilisation_signatures` (actual ÷ original budget per vote) | folded into `gap_budget_vs_actual`: it is a gap measure, not a forecast |
+| `fact_nowcast_2025` | kept in `apps/models/` and **scored once** against MOF's FY2025 actuals; the score is published with the method |
+| `fact_projection_headline`, `fact_projection_detail`, `build_forecast2026` | kept in `apps/models/` as a cross-check on official projections only |
+| `official_vs_model_2025_26`, `fact_gap_projection` | kept in `apps/models/`; re-run against the 2027 edition |
+
+References in `sources/anggaran/README.md`, `sources/mof-fiscal-outlook/README.md` and
+`curated/pipeline/build_planning_efficiency.py` are updated in the same PR.
+
+### 13.2 `curated/dashboard/` → retired
+
+It is the earlier single-file dashboard (PKKP only, FY2010–2024), superseded by `site/`.
+`site/` reads neither folder. Before retiring it, each feature it has and the site lacks gets
+an explicit decision:
+
+| Feature | Decision |
+|---|---|
+| Pension reform simulator | port to the site as an app (a model, so it lives with `apps/models/`) |
+| Refinancing wall / debt maturity | port: becomes a view over BNM and MOF debt observations |
+| Debt vs the 60/65%-of-GDP ceiling | port: a `gap_*` view (target vs outcome, the ceiling as a `target`) |
+| Peer benchmarks | **not ported as is.** `external_peers.csv` is typed in by hand and compares Malaysia's federal debt against other countries' general-government debt, which is not like for like. Returns only as a registry source (IMF WEO) with matched definitions |
+
+Other dependencies:
+
+| File | Change |
+|---|---|
+| `curated/dashboard/external_denominators.csv` | retired; GDP and population come from `fact_observation` |
+| `sources/dosm/pipeline/build_denominators.py` | retired with it |
+| `sources/dosm/pipeline/refresh.py` | drop the dashboard rebuild step |
+| `sources/dosm/README.md` | references updated |
+
+Git history keeps both folders in full.
 
 ---
 
@@ -394,22 +479,27 @@ as `_unallocated` with its total, so a map never looks more complete than the da
 
 | Phase | Deliverable | Done when |
 |---|---|---|
-| 0 | registry table + `meta` + code lists | every held file has a registry row with sha256 |
-| 1 | `dim_geo`, `dim_period`, `dim_indicator`, `dim_breakdown` | every DOSM/BNM file maps; no name joins left |
+| 0 | registry table + `meta` + code lists; move `curated/forecast/` to `apps/models/`; retire `curated/dashboard/` (§13) | every held file has a registry row with sha256; nothing outside L1–L3 sits in `curated/` |
+| 1 | `dim_geo` (with boundary vintages + concordance), `dim_period`, `dim_indicator`, `dim_breakdown` | every DOSM/BNM file maps; no name joins left |
 | 2 | `fact_observation` from DOSM, BNM, MOF | reproduces today's curated tables to the ringgit |
-| 3 | `dim_entity` + `fact_money_flow` from PKKP, Anggaran, states | project spine verified across years |
-| 4 | `fact_record` + links from LKAN, sijil | findings carry entity codes |
-| 5 | typed agent tools + `gap_*` views; site reads views | every tool output cited |
+| 3 | `meta.entity_register` + `dim_entity` + `bridge_entity_code` + `fact_money_flow` from PKKP, Anggaran, states | every code resolves to one entity per date; project spine verified across years |
+| 4 | `fact_record` + links from LKAN, sijil | findings carry entity IDs |
+| 5 | typed agent tools + `gap_*` views; site reads views; ported dashboard features; FY2025 nowcast scored | every tool output cited |
 
 Each phase: branch → reconcile to today's numbers → independent adversarial verifier → PR.
 
 ---
 
-## 15. Open questions for review
+## 15. Decisions
 
-1. **Entity id style:** readable (`fed:maksud:B.45`) as drafted, or opaque surrogate keys
-   with the readable code as an attribute? Readable is easier for agents. Opaque survives
-   code changes better.
-2. **Parlimen/DUN boundary vintages:** keep both 2018 and pre-2018 boundaries, or only the
-   boundaries DOSM publishes against?
-3. **`curated/forecast/` and `curated/dashboard/`:** remove, as proposed earlier?
+| # | Decision | Why | Where |
+|---|---|---|---|
+| D1 | Fiscal is one of 8 themes; architecture is economy-wide | PKKP was the first document, not the centre | §1, §3 |
+| D2 | ISO 3166-2:MY for states; DOSM/SPR codes below state | standard, published codes | §4.1 |
+| D3 | Keep every vintage; "clean" is a view | revisions are evidence | §6 |
+| D4 | Typed agent tools first; read-only SQL as escape hatch | every answer cited | §11 |
+| D5 | Follow the money both ways: place (Track A) and recipient (Track B) | IKRAM works at national and state level | §12 |
+| D6 | Permanent opaque `entity_id` + dated readable codes in `bridge_entity_code`; tools accept readable codes | vote codes are renumbered and reused | §4.5 |
+| D7 | Keep every boundary set as published, with the vintage in `geo_code`; link by `bridge_geo_concordance`; re-mapped figures are `derived` | boundaries change; DUN data must match the representatives elected on them | §4.1 |
+| D8 | `curated/forecast/` → `apps/models/`; FY2025 nowcast scored once against actuals | models are apps, not warehouse data | §13.1 |
+| D9 | `curated/dashboard/` retired after porting the simulator, refinancing wall and debt ceiling; peer benchmarks only via a proper IMF WEO source | superseded by `site/`; peer table was not like for like | §13.2 |
