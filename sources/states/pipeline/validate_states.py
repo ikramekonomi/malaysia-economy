@@ -830,6 +830,11 @@ def validate_state(state: str) -> dict:
     v2(fin, rev)
     v3(fin, rev, state)
 
+    for c in CHECKS:  # FAIL -> SOURCE_ANOMALY only when proved on the archived page (state_config)
+        d = SC.page_proved(state, c) if c["status"] == "FAIL" and c["check"].startswith("V1_") else None
+        if d:
+            c["status"] = "SOURCE_ANOMALY"
+            c["proof"] = (c["proof"] + " | " if c["proof"] else "") + f"page-proved: {d['proof']} ({d['evidence']})"
     out = os.path.join(DATA, key, f"_validation_{key}.csv")
     with open(out, "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=list(CHECKS[0].keys()))
@@ -847,7 +852,7 @@ def validate_state(state: str) -> dict:
     anomalies = []
     diverted = 0
     for c in CHECKS:
-        if c["check"].startswith("V1_") and c["status"] == "FAIL":
+        if c["check"].startswith("V1_") and c["status"] in ("FAIL", "SOURCE_ANOMALY"):
             if SC.is_known_defect_check(state, c):
                 diverted += 1
                 continue
@@ -866,6 +871,7 @@ def validate_state(state: str) -> dict:
                 proof=c["proof"] or
                       f'printed {c["expected"]} vs components summing to '
                       f'{c["actual"]} (difference {c["diff"]} RM juta)',
+                page_proved="yes" if c["status"] == "SOURCE_ANOMALY" else "no (arithmetic only; stays a FAIL until proved on the archived page)",
                 treatment="kept as printed; no figure altered. This file "
                           "contains ONLY inconsistencies verified on the "
                           "printed page; defects of our own extraction are "
@@ -874,7 +880,7 @@ def validate_state(state: str) -> dict:
             ))
     fields = ["state", "fiscal_year", "source_file", "pdf_page", "printed_page",
               "jadual", "anomaly", "rule", "printed_total", "sum_of_components",
-              "difference_rm_juta", "proof", "treatment"]
+              "difference_rm_juta", "proof", "page_proved", "treatment"]
     with open(os.path.join(DATA, key, f"_source_anomalies_{key}.csv"),
               "w", newline="", encoding="utf-8") as fh:
         w = csv.DictWriter(fh, fieldnames=fields)

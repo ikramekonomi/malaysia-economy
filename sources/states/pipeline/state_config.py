@@ -681,6 +681,30 @@ def state_section_end(pages: list[str], first_table_page: int) -> int:
 # entry with no `match` is a standing limitation with no single page to point
 # at; it is reported in the file only.
 
+# Auditor-General misprints PROVED ON THE ARCHIVED PAGE (qa/evidence/). Only these turn a FAIL into
+# SOURCE_ANOMALY in _validation_<slug>.csv (golden rule 2). Every other unexplained V1 failure is still
+# listed in _source_anomalies_<slug>.csv, but marked page_proved=no, and stays a FAIL.
+PAGE_PROVED_ANOMALIES: list[dict] = [
+    dict(
+        state="Selangor", fiscal_year="2019", source_file="CMD.50.2021.pdf",
+        checks=("V1_govt_trust_fund_composition", "V1_trust_account_composition", "V1_intra_volume_contradiction"),
+        evidence="qa/evidence/CMD.50.2021.pdf/p029.txt (Jadual 2), p030.txt (Jadual 3)",
+        proof="The FY2019 subtotal 'Kumpulan Wang Amanah Kerajaan' is printed 1,114.60 in Jadual 2 and Jadual 3, but "
+              "its own four printed components sum to 50.00 + 6.31 + 987.41 + 27.15 = 1,070.87, and only 1,070.87 "
+              "reconciles upward: 1,070.87 + 376.26 + 427.34 = 1,874.47 (printed Akaun Amanah Disatukan) and "
+              "267.29 + 0.00 + 1,874.47 = 2,141.76 (printed BAKI PADA 31 DISEMBER). Jadual 24 prints 1,070.87.",
+    ),
+]
+
+
+def page_proved(state: str, c: dict):
+    for d in PAGE_PROVED_ANOMALIES:
+        if (d["state"] == state and c["check"] in d["checks"] and str(c.get("fiscal_year")) == d["fiscal_year"]
+                and c.get("source_file") == d["source_file"]):
+            return d
+    return None
+
+
 KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     dict(
         state="Pahang",
@@ -699,6 +723,25 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                     "are (the L0 archive), not in this container.",
         impact_on_data="No figure is wrong. expenditure_total (as printed) is correct and is what "
                        "core/gap_need_vs_money uses; do not derive Pahang's total as opex + devex.",
+    ),
+    dict(
+        state="Selangor",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
+        affected_rows="the 'Penyumbang Utama Hasil' rows of CMD.41.2019 (J11) and CMD.50.2021 (J13): year columns paired wrongly",
+        defect="The five-year 'Penyumbang Utama Hasil Kerajaan Negeri' table prints an RM juta column and a (%) column "
+               "per year, and in the text layer an amount and its share often fall on different lines. The extractor "
+               "pairs them by position, so a share (often the JUMLAH row's 100.0) is read as an amount and the year "
+               "columns shift.",
+        diagnosis="Page-proved 2026-11-04 (qa/evidence/): every printed column adds up. CMD.41.2019.pdf p38 (J11): "
+                  "2014 1,138.90 + 395.37 + 0.04 + 51.01 + 64.28 = 1,649.60; 2015 = 1,886.80; 2016 = 1,912.34; "
+                  "2017 = 2,194.80; 2018 = 1,343.67. CMD.50.2021.pdf p38 (J13): 2016 1,946.54; 2017 2,246.29; "
+                  "2018 1,320.32; 2019 1,008.37 + 465.99 + 79.62 + 96.59 + 75.25 = 1,725.82; 2020 1,749.01. "
+                  "Not an AG misprint.",
+        why_unfixed="The table parser must pair amounts and shares by column x-position, not by order; "
+                    "re-extraction runs where the PDFs are (states-extract.yml).",
+        impact_on_data="These analysis-table rows are not used by core or the gap view (which use the audited "
+                       "statements); do not read the top-contributor amounts from the current extraction.",
     ),
     dict(
         state="Johor",
