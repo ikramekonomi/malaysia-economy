@@ -167,8 +167,10 @@ q("5", "Which page does Pahang's 2016 spending figure come from?", "explain_chai
 # G. the gap view
 q("5", "Does the need-vs-money view cover every state and territory in 2022?", "get_gap_view",
   {"name": "gap_need_vs_money", "year": "2022"}, "row_count", "16")
-q("5", "Is Pahang's 2022 spending flagged as under check?", "get_gap_view",
-  {"name": "gap_need_vs_money", "geo": "MY-06", "year": "2022"}, "field:under_check", "N2_identity_expenditure")
+q("5", "How much did Pahang spend on water supply in 2022 (its third spending head)?", "get_series",
+  series("state_gov.expenditure.water_supply", "MY-06", "2022"), "value", s(acct("Pahang", "2022", "expenditure_water_supply")))
+q("5", "Is Pahang's 2022 spending still under check now that its water-supply head is extracted?", "get_gap_view",
+  {"name": "gap_need_vs_money", "geo": "MY-06", "year": "2022"}, "field:under_check", "")
 q("5", "Is federal spending by state published in 2022?", "get_gap_view",
   {"name": "gap_need_vs_money", "geo": "MY-03", "year": "2022"}, "field:federal_publishable", "false")
 q("5", "Does the view say why Kuala Lumpur has no state-government spending?", "get_gap_view",

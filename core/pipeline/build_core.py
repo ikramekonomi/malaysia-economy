@@ -370,6 +370,7 @@ STATE_LINES = {
     "revenue_nonrevenue_receipts": "state_gov.revenue.nonrevenue_receipts",
     "opex_before_transfer": "state_gov.expenditure.opex",
     "devex_total": "state_gov.expenditure.devex",
+    "expenditure_water_supply": "state_gov.expenditure.water_supply",
     "expenditure_total": "state_gov.expenditure.total",
     "surplus_deficit": "state_gov.surplus_deficit",
     "debt_total": "state_gov.debt.total",

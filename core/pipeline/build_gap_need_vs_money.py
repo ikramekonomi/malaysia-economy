@@ -166,10 +166,13 @@ def main():
         if r["state_gov_expenditure_rm"] and r["state_gov_expenditure_basis"] == "audited":
             op = w.get("state_gov.expenditure.opex", r["geo_code"], r["year"], basis="audited")
             dv = w.get("state_gov.expenditure.devex", r["geo_code"], r["year"], basis="audited")
+            ws = w.get("state_gov.expenditure.water_supply", r["geo_code"], r["year"], basis="audited")
             if op and dv:
-                d = Decimal(r["state_gov_expenditure_rm"]) - Decimal(op["value"]) - Decimal(dv["value"])
+                # Pahang prints a third head, Perbelanjaan Bekalan Air, inside its printed total
+                d = (Decimal(r["state_gov_expenditure_rm"]) - Decimal(op["value"]) - Decimal(dv["value"])
+                     - (Decimal(ws["value"]) if ws else 0))
                 status = "PASS" if abs(d) <= Decimal(20000) else ("FLAGGED" if r["under_check"] else "FAIL")
-                checks.append(["G5 printed total = opex + devex", f"{r['geo_code']} {r['year']}", status,
+                checks.append(["G5 printed total = opex + devex (+ water supply where printed)", f"{r['geo_code']} {r['year']}", status,
                                f"diff RM{fmt(d)}" + (f" (under check: {r['under_check']})" if r["under_check"] else "")])
     with open(os.path.join(CORE, "gap_need_vs_money.csv"), "w", newline="") as f:
         wr = csv.DictWriter(f, fieldnames=FIELDS)
