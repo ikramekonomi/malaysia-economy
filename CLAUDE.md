@@ -82,7 +82,9 @@ editions), bnm, dosm (110 datasets, refreshed daily), audit-negara, states (13 s
 sources/            one folder per source, each independently verifiable (L1)
   <name>/data/      the CSVs (canonical, as printed)  + _validation*, _source_anomalies*, _vintage_log
   <name>/pipeline/  extraction, refresh and verification scripts
-curated/            today's consolidated layer (becomes core.* / gap.* per docs/DATA_MODEL.md)
+core/               the conformed layer (L2: dims + fact_observation) and gap views (L3); see core/README.md
+curated/            the older consolidated layer, moving into core/ view by view
+apps/tools/         typed agent tools over core/ (no SQL; every number cited; arithmetic only via derive)
 apps/models/        model projections: an application, never warehouse data
 site/               the public site + chatbot (reads curated views; its own CLAUDE.md)
 pipeline/           build_duckdb.py (PKKP DB)

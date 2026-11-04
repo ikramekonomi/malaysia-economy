@@ -5,7 +5,7 @@
 `python3 qa/run_offline_suite.py` is what `.github/workflows/validate.yml` runs on every pull request
 and on `main`. It needs no PDFs and no network, and takes about 20 seconds. A PR is blocked when:
 
-1. **a script fails**: any of the 49 scripts in its `SUITE` list exits non-zero;
+1. **a script fails**: any of the 53 scripts in its `SUITE` list exits non-zero;
 2. **outputs don't reproduce**: re-running the pipeline changes any committed file, so the committed
    CSVs are not exactly what the code produces from the committed inputs;
 3. **a new FAIL appears**: a row with status `FAIL` in any `_validation*.csv` that is not listed in

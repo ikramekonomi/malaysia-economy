@@ -77,6 +77,9 @@ SUITE = [
     "curated/pipeline/build_gap_views.py",
     "curated/pipeline/build_labour_indicators.py",
     "meta/build_registry.py",
+    "core/pipeline/build_core.py",
+    "core/pipeline/build_gap_need_vs_money.py",
+    "qa/run_eval.py",
 ]
 STATUS_COLS = ("status", "result", "verdict", "outcome")
 
@@ -87,7 +90,7 @@ def git(*args):
 
 def validation_files():
     pats = ["sources/**/_validation*.csv", "curated/**/_validation*.csv", "apps/**/_validation*.csv",
-            "meta/_validation*.csv"]
+            "meta/_validation*.csv", "core/_validation*.csv", "qa/_validation*.csv"]
     return sorted({f for p in pats for f in glob.glob(os.path.join(REPO, p), recursive=True)})
 
 

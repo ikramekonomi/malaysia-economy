@@ -134,6 +134,20 @@ def main():
         total_rows += load_group(con, "meta", name.lstrip("_"), [path], failures)
         total_tables += 1
 
+    # core: the conformed L2 layer (DATA_MODEL.md §4-5, §10), built by core/pipeline/build_core.py.
+    print("=== core -> schema core ===")
+    con.execute("CREATE SCHEMA core")
+    # read as text, then `value` as an exact DECIMAL(38,6) (no binary floats in L2, D11)
+    for path in sorted(glob.glob(os.path.join(ROOT, "core", "*.csv"))):
+        name = os.path.basename(path)[:-4].lstrip("_")
+        cast = " REPLACE (CAST(value AS DECIMAL(38,6)) AS value)" if name == "fact_observation" else ""
+        con.execute(f'CREATE TABLE core."{name}" AS SELECT *{cast} FROM '
+                    f"read_csv('{path}', header=true, all_varchar=true, quote='\"', escape='\"')")
+        n = con.execute(f'SELECT count(*) FROM core."{name}"').fetchone()[0]
+        print(f"  core.{name}: {n} rows")
+        total_rows += n
+        total_tables += 1
+
     # Convenience views carried over from pipeline/build_duckdb.py (leaf rows only).
     con.execute("CREATE VIEW pkkp.v_opex_leaf AS "
                 "SELECT * FROM pkkp.fact_opex_detail WHERE row_type='object_aktiviti'")

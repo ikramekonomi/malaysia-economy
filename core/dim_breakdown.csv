@@ -1,0 +1,17 @@
+breakdown_key,label,axis,member_code
+_total,no split,,
+coicop=01,coicop=01,coicop,01
+coicop=02,coicop=02,coicop,02
+coicop=03,coicop=03,coicop,03
+coicop=04,coicop=04,coicop,04
+coicop=05,coicop=05,coicop,05
+coicop=06,coicop=06,coicop,06
+coicop=07,coicop=07,coicop,07
+coicop=08,coicop=08,coicop,08
+coicop=09,coicop=09,coicop,09
+coicop=10,coicop=10,coicop,10
+coicop=11,coicop=11,coicop,11
+coicop=12,coicop=12,coicop,12
+coicop=13,coicop=13,coicop,13
+sex=female,sex=female,sex,female
+sex=male,sex=male,sex,male
