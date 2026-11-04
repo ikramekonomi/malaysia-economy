@@ -17,7 +17,8 @@ from apps.tools.warehouse_tools import UNTRUSTED, Tools  # noqa: E402
 
 
 def one(t, s):
-    r = t.get_series(s["indicator"], s["geo"], s.get("start"), s.get("end"), s.get("breakdown", "_total"))
+    r = t.get_series(s["indicator"], s["geo"], s.get("start"), s.get("end"), s.get("breakdown", "_total"),
+                     s.get("basis"), s.get("publisher"))
     if not r.get("held") or len(r["rows"]) != 1:
         raise LookupError(f"expected one row for {s}, got {r.get('answer') or len(r.get('rows', []))}")
     return r["rows"][0]

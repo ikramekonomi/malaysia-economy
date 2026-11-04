@@ -372,6 +372,36 @@ q("4", "Real GDP of Selangor divided by Malaysia's nominal GDP?", "derive_chain"
 q("2", "Find the indicator for compensation of employees", "find_indicator", {"text": "compensation of employees"},
   "first_indicator", "na.compensation_of_employees")
 
+# O. Phase 2: federal totals by publisher (BNM MSB 3.1, MOF Tinjauan Fiskal), from L1
+def bnm(col, year):
+    with open(os.path.join(REPO, "sources", "bnm", "data", "msb_3_1.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if not r["period"].strip() and r["year_dt"] == year:
+                return Decimal(r[col]) * 1000000
+    raise KeyError(col)
+
+
+def mof(line, year, edition):  # the own-volume edition (Y+2), read from that edition's folder
+    p = os.path.join(REPO, "sources", "mof-fiscal-outlook", "data", f"{edition}_public_finance_stats", "fact_headline.csv")
+    with open(p, newline="") as fh:
+        for r in csv.DictReader(fh):
+            if r["line"] == line and r["target_year"] == year and r["basis"] == "official_actual":
+                return Decimal(r["amount_rm_juta"]) * 1000000
+    raise KeyError(line)
+
+
+fed = lambda ind, y, pub: {**series(ind, "MY", y), "publisher": pub}  # noqa: E731
+q("5", "What net development expenditure did BNM report for 2024?", "get_series",
+  fed("federal_gov.expenditure.devex_net", "2024", "bnm"), "value", s(bnm("dev_exp_net_dev_exp", "2024")))
+q("5", "What overall balance did MOF print for 2024 (its own volume)?", "get_series",
+  fed("federal_gov.overall_balance", "2024", "mof"), "value", s(mof("overall_balance", "2024", 2026)))
+q("5", "How many publishers report federal operating expenditure for 2022?", "get_series",
+  series("federal_gov.expenditure.opex", "MY", "2022"), "row_count", "3")
+q("5", "By how much does BNM's 2023 operating expenditure differ from MOF's?", "derive_chain",
+  {"operation": "difference", "a": fed("federal_gov.expenditure.opex", "2023", "bnm"),
+   "b": fed("federal_gov.expenditure.opex", "2023", "mof")}, "value",
+  s(bnm("cur_bud_exp", "2023") - mof("operating_expenditure", "2023", 2025)), "0.000001")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

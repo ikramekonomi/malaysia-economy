@@ -103,3 +103,7 @@ Q101,fact,derive_chain,caveat,CV14,"CV1,CV14",PASS
 Q102,trap_incomparable,derive_chain,refused,lfs.employed,per_employed needs lfs.employed (no split) as the denominator,PASS
 Q103,trap_incomparable,derive_chain,refused,price bases,different price bases: constant_2015 vs current,PASS
 Q104,fact,find_indicator,first_indicator,na.compensation_of_employees,na.compensation_of_employees,PASS
+Q105,fact,get_series,value,82274695463.78,82274695463.78,PASS
+Q106,fact,get_series,value,-79166000000,-79166000000,PASS
+Q107,fact,get_series,row_count,3,3,PASS
+Q108,fact,derive_chain,value,-82172.53,-82172.53,PASS

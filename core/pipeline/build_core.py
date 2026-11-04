@@ -433,6 +433,67 @@ def build_federal(obs):
                     l1_ref=f"curated/fact_fiscal_headline.csv#row{i}")
 
 
+BNM_FED = {"cur_bud_rev": "federal_gov.revenue.total", "cur_bud_exp": "federal_gov.expenditure.opex",
+           "dev_exp_gro_dev_exp": "federal_gov.expenditure.devex",
+           "dev_exp_les_loa_rec": "federal_gov.expenditure.devex_loan_recovery",
+           "dev_exp_net_dev_exp": "federal_gov.expenditure.devex_net"}
+MOF_FED = {"revenue": "federal_gov.revenue.total", "operating_expenditure": "federal_gov.expenditure.opex",
+           "development_expenditure_gross": "federal_gov.expenditure.devex",
+           "development_expenditure_loan_recovery": "federal_gov.expenditure.devex_loan_recovery",
+           "development_expenditure_net": "federal_gov.expenditure.devex_net",
+           "covid19_fund": "federal_gov.expenditure.covid_fund", "overall_balance": "federal_gov.overall_balance"}
+
+
+def build_federal_reported(obs):
+    """Phase 2: the same federal totals as published by two other institutions, beside PKKP's audited ones.
+
+    BNM Monthly Statistical Bulletin table 3.1 (annual rows; basis actual, reported by BNM) and MOF's
+    Tinjauan Fiskal Jadual 1.1 (official actuals; one edition per year by the rule in
+    curated/pipeline/mof_editions.py, own volume Y+2; later restatements stay in L1). Where the three
+    publishers differ, all three are kept as published: that difference is the reconciliation product."""
+    import glob
+    sys.path.insert(0, os.path.join(REPO, "curated", "pipeline"))
+    import mof_editions
+    m = Decimal(1000000)
+    bnm_dir = os.path.join(REPO, "sources", "bnm", "data")
+    vin = {r["dataset"]: r for r in rows(os.path.join(bnm_dir, "_vintage_log.csv")) if r["state"] == "current"}["msb_3_1"]
+    d = vin["data_as_of"][:10]
+    for i, r in enumerate(rows(os.path.join(bnm_dir, "msb_3_1.csv")), start=2):
+        if r["period"].strip():
+            continue  # quarterly rows
+        for col, ind in BNM_FED.items():
+            v = dec(r[col])
+            if v is None:
+                continue
+            obs.add(indicator_code=ind, geo_code="MY", period_code=r["year_dt"], entity_id="federal_gov:MY",
+                    basis="actual", edition_id=f"bnm:msb_3_1@{d}", vintage=d, value=v * m, value_printed=r[col],
+                    unit_printed="RM million", precision_printed="0.000000000001", estimate_method="accounting",
+                    reliability="ok", file_id=vin["sha256"], table_ref="BNM MSB 3.1 Federal Government Finance",
+                    l1_ref=f"sources/bnm/data/msb_3_1.csv#row{i}")
+    reg = {(r["edition"], r["file_name"]): r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))
+           if r["series_id"] == "tinjauan_fiskal"}
+    cand = []
+    for folder in sorted(glob.glob(os.path.join(REPO, "sources", "mof-fiscal-outlook", "data", "*_public_finance_stats"))):
+        rel = os.path.relpath(os.path.join(folder, "fact_headline.csv"), REPO)
+        for i, r in enumerate(rows(os.path.join(REPO, rel)), start=2):
+            r.update(edition=int(r["edition"]), target_year=int(r["target_year"]), _l1=f"{rel}#row{i}")
+            r["line"] = mof_editions.LINE_CROSSWALK.get(r["line"], r["line"])
+            cand.append(r)
+    for (line, year), r in sorted(mof_editions.choose(cand).items()):
+        v = dec(r["amount_rm_juta"])
+        if line not in MOF_FED or r["basis"] != "official_actual" or v is None:
+            continue
+        sha = reg.get((str(r["edition"]), r["source_file"]))
+        if not sha:
+            sys.exit(f"MOF {r['edition']} {r['source_file']}: no sha256 in meta/registry_file.csv")
+        obs.add(indicator_code=MOF_FED[line], geo_code="MY", period_code=str(year), entity_id="federal_gov:MY",
+                basis="actual", edition_id=f"mof:tinjauan_fiskal@{r['edition']}", vintage=str(r["edition"]),
+                value=v * m, value_printed=r["amount_rm_juta"], unit_printed="RM million", precision_printed="1",
+                estimate_method="accounting", reliability="ok", file_id=sha, pdf_page=r["pdf_page"],
+                printed_page=r["printed_page"], table_ref=f"Tinjauan Fiskal {r['edition']}, Jadual {r['table_no']}",
+                l1_ref=r["_l1"])
+
+
 # ---------------------------------------------------------------- dimensions
 def dim_geo(obs):
     out = [{"geo_code": "MY", "geo_level": "country", "local_code": "MY", "name_bm": "Malaysia", "name_en": "Malaysia",
@@ -610,6 +671,7 @@ def main():
     build_national_accounts(obs, ed)
     build_states(obs)
     build_federal(obs)
+    build_federal_reported(obs)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

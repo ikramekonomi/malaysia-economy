@@ -95,6 +95,8 @@ class Warehouse:
         rs = self.index.get((indicator, geo, period, breakdown), [])
         if basis:
             rs = [r for r in rs if r["basis"] == basis]
+        if len({r["edition_id"].split(":")[0] for r in rs}) > 1:
+            return None  # two publishers for one concept: never choose between them silently
         return rs[0] if len(rs) == 1 else (sorted(rs, key=lambda r: r["vintage"])[-1] if rs else None)
 
     def caveats_for(self, r):

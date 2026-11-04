@@ -63,7 +63,9 @@ class Tools:
             return self._not_held(text)
         return {"held": True, "indicators": [h[1] for h in hits[:8]], "release_id": self.w.release_id}
 
-    def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None):
+    def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None, publisher=None):
+        """publisher: 'pkkp', 'bnm', 'mof' or 'dosm' (the edition's publisher). Without it, every publisher's
+        figure for the same concept comes back, each cited: where they differ, the difference is the answer."""
         start, end = (None if start is None else str(start)), (None if end is None else str(end))
         if indicator not in self.w.ind:
             return self._not_held(indicator)
@@ -71,10 +73,11 @@ class Tools:
             return {"held": False, "answer": f"unknown place code {geo}", "release_id": self.w.release_id}
         rs = [r for r in self.w.obs if r["indicator_code"] == indicator and r["geo_code"] == geo
               and r["breakdown_key"] == breakdown and (not basis or r["basis"] == basis)
+              and (not publisher or r["edition_id"].split(":")[0] == publisher)
               and self._period_in(r["period_code"], start, end)]
         if not rs:
             return self._not_held(f"{indicator} for {geo} {start or ''}-{end or ''}", self.w.ind[indicator]["name_en"])
-        rs.sort(key=lambda r: r["period_code"])
+        rs.sort(key=lambda r: (r["period_code"], r["edition_id"]))
         return {"held": True, "indicator_code": indicator, "unit": self.w.ind[indicator]["unit"],
                 "rows": [self.w.cite(r) for r in rs], "release_id": self.w.release_id}
 

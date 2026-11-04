@@ -8,7 +8,7 @@ hand (golden rule 1). CI rebuilds them on every PR and fails if the committed fi
 ```
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 104 questions against the agent tools
+python3 qa/run_eval.py                            # 108 questions against the agent tools
 python3 qa/reproduce_curated.py                   # curated tables rebuilt from core, digit for digit
 ```
 
@@ -19,9 +19,9 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_geo.csv` | 1,006 | Malaysia, `_unallocated`, 16 states and FTs (ISO 3166-2:MY), 166 districts (boundary set `dosm_2020`), 222 parliamentary seats and 600 state seats (boundary set `ge15`) |
 | `geo_hierarchy.csv` | 1,020 | child → parent, one row per hierarchy (`administrative`: district → state; `electoral`: DUN → parlimen → state) |
 | `dim_period.csv` | 258 | years, months |
-| `dim_indicator.csv` | 51 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
+| `dim_indicator.csv` | 55 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
 | `dim_breakdown.csv` | 178 | `_total`, `sex=…`, `coicop=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
-| `fact_observation.csv` | 125,936 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,978; DUN 18,000; district 11,013; parlimen 6,660; national 2,274) |
+| `fact_observation.csv` | 126,157 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,978; DUN 18,000; district 11,013; parlimen 6,660; national 2,495) |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -90,8 +90,19 @@ employers' EPF and SOCSO contributions.
 
 **Phase 2's finish line** is that core reproduces today's curated tables to the last printed digit.
 `qa/reproduce_curated.py` (in CI) rebuilds each curated cell through the agent tools, never from the
-curated file, and writes `qa/_validation_reproduce.csv`. So far: `curated/fact_labour_indicators.csv`,
-32 of 32 cells.
+curated file, and writes `qa/_validation_reproduce.csv`. So far, 230 of 230 cells:
+`curated/fact_labour_indicators.csv` (32) and the BNM and MOF columns of `curated/fact_fiscal_headline.csv`
+(198, to the sen). The PKKP columns of that table are not claimed: core still reads them from it (Phase 3
+moves them to PKKP observations), so that comparison would be circular.
+
+**Federal totals from three publishers.** Revenue, operating spending, gross and net development
+spending, loan recoveries, the COVID-19 Fund and the overall balance are held as each institution
+published them: PKKP (audited), BNM MSB 3.1 (actual, as reported), MOF Tinjauan Fiskal Jadual 1.1
+(actual; one edition per year by the own-volume rule in `curated/pipeline/mof_editions.py`). They are the
+same indicator, told apart by `basis` and edition. `get_series` returns all of them unless asked for one
+(`publisher='pkkp' | 'bnm' | 'mof'`), and `Warehouse.get` never chooses between publishers silently. FY2015–2024
+operating and development spending agree to within RM0.5 million, except 2023 development spending (BNM
+and MOF about RM1.2 million above the audited figure, in `qa/known_fails.csv`).
 
 ## gap_need_vs_money (state level)
 
@@ -125,7 +136,7 @@ units or price bases, a median divided by population, growth across two places. 
 returns **bands**, not ranks (rule BAND1: a new band starts after a step of more than 1 percentage
 point, or 5% for other units; declared before results were seen), with the national value.
 
-`qa/eval_questions.csv` (104 questions, made by `qa/make_eval_questions.py` from L1 directly)
+`qa/eval_questions.csv` (108 questions, made by `qa/make_eval_questions.py` from L1 directly)
 includes traps: incomparable pairs, small-area rankings, missing documents, and document text that
 must come back marked as data. `qa/run_eval.py` runs them in CI.
 
