@@ -29,7 +29,7 @@ ringgit, and where they diverge, by how much, kept as published.
 
 | Domain | Hub (anchor of last resort) | Reconciled against it |
 |---|---|---|
-| Real economy, people, prices | DOSM (national accounts, HIES, LFS, CPI) | BNM, KRI and other secondary sources, IMF |
+| Real economy, people, prices | DOSM (national accounts, HIES, LFS, CPI) | BNM, secondary research sources, IMF |
 | Federal public money | **PKKP** (audited actuals) | budgets, BNM fiscal series, AG tables, MOF outlook, DOSM GFS |
 | States | each state's audited statements | state budgets, state LKAN, DOSM state finance |
 | Agencies & GLCs | AG certifications + company accounts | e-SelfAudit censuses, findings |
@@ -41,7 +41,7 @@ guarantees sit in memorandum accounts), and **place** (most federal spending has
 in the accounts; see `docs/DATA_MODEL.md` §10 and §13).
 
 ## Sources
-What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (103 series:
+What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (102 series:
 status, route, access, licence, priority). The plan behind it, theme by theme:
 **`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
 `sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9

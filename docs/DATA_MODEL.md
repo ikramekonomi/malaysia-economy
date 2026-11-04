@@ -1,9 +1,9 @@
 # Data model: Malaysia Economy Data Warehouse
 
 **Status: agreed design, revision 2 (2026-11-04).** Most of it is not built yet; §15 is the
-order. Revision 2 folds in two independent reviews: a blind-spot review of this plan, and a
-check of whether the warehouse could produce Khazanah Research Institute's *State of
-Households 2026*. §17 maps every finding to the section that answers it.
+order. Revision 2 folds in two independent checks: a blind-spot review of this plan, and a
+check of whether the model could carry a full household-wellbeing report. §17 maps every
+finding to the section that answers it.
 Companion documents: `docs/DOCUMENT_REGISTRY.md`, `docs/registry/series_seed.csv`,
 `docs/SOURCES.md`.
 
@@ -111,8 +111,7 @@ geo_hierarchy (hierarchy, child_geo_code, parent_geo_code)
 A rollup names its hierarchy. Nothing assumes a district can be summed into a parlimen.
 
 **Boundary rule: keep every boundary set as published.** Parlimen, DUN and district boundaries
-change (districts went from 144 to 166 over the survey rounds, as reported in KRI SOH2026 p.29
-note 45). `P.094` in one boundary set is not the same area as `P.094` in another, so the vintage is
+change (new districts are created between survey rounds). `P.094` in one boundary set is not the same area as `P.094` in another, so the vintage is
 part of the key. Data is stored against the boundary set its publisher used and is **never
 re-mapped silently**. Re-mapping across boundary sets (`bridge_geo_concordance`) is built only
 when a concrete question needs it. Its output is `basis = derived` and the original stays.
@@ -162,7 +161,7 @@ period (§6).
 **Composite indices** (the Malaysian Well-Being Index, a happiness index, any index IKRAM
 builds) store their **components as their own indicators**. The weights and normalisation are a
 row in `meta.index_definition` (components, weights, method, source). An index is never stored
-without its parts, because how the parts are weighted is itself contested (KRI SOH2026 p.18).
+without its parts, because how the parts are weighted is itself contested.
 
 ### 4.4 `dim_breakdown`: how it is split
 
@@ -188,7 +187,7 @@ bridge_breakdown_member  (breakdown_key, axis, member_code)     axis ∈ meta.co
 **Groups defined relative to a distribution** (B40, a decile, a percentile) depend on whose
 distribution and which year. Each such member names its `reference_population` (national or
 state) and `threshold_year` in `meta.code_list`. Otherwise national B40 and a state's bottom 40%
-get confused (KRI SOH2026 p.46).
+get confused.
 
 ### 4.5 `dim_entity`: who
 
@@ -358,7 +357,7 @@ Stored in `meta.code_list`, enforced by the build: an unknown value fails the bu
 | `projection` | forecast by the publisher | economic projections |
 | `target` | a plan target | RMK, NIMP, NETR … |
 | `statistic` | official statistic (survey, census or administrative) | DOSM, BNM non-fiscal |
-| `third_party` | a figure printed by a non-official source (e.g. KRI, IDEAS) from data it obtained | KRI SOH2026 tables |
+| `third_party` | a figure printed by a non-official source from data it obtained (e.g. a research institute's table built from a data request) | new |
 | `derived` | computed by us from other observations, by a `meta.derivation` rule | identities, per-capita, real terms |
 
 The money trail is read across `basis`: announced → budget_estimate → revised_estimate → actual →
@@ -576,7 +575,7 @@ the view must return the same numbers to the ringgit:
 |---|---|---|
 | 0 Foundation | registry as data, with licence / redistribution / personal-data fields; `meta` + code lists; **CI** running every offline validator on PRs; L0 archive (sha256 store + public archive copies); vintage logs for every API source (DOSM done); governance policies in `meta.decision`; daily DOSM refresh workflow (done; needs Actions write permission enabled once) | every held file has a registry row with sha256 and licence; CI blocks a PR with a new FAIL |
 | 1 First useful slice: **state level, end to end** | population by state and district; HIES, LFS, CPI by state; state finances; federal→state transfers → `dim_geo` (state, district), `dim_period`, `dim_indicator`, `dim_breakdown` → `fact_observation` with uncertainty fields → `get_series`, `compare_geos` (bands), `derive`, `explain` → `gap_need_vs_money` **at state level** with `placed_share`; first 50 `qa.eval_question` | IKRAM can ask a state-level need-vs-money question and get a cited, banded, checked answer |
-| 2 Broaden the statistics | all DOSM/BNM/MOF series; DOSM survey report tables (HIS, HES, LFS annual report, Basic Amenities: 83 of KRI SOH2026's exhibits); NHMS; wellbeing indices; `get_distribution`; full `geo_hierarchy` | reproduces today's curated tables to the ringgit; SOH2026 coverage measured again |
+| 2 Broaden the statistics | all DOSM/BNM/MOF series; DOSM survey report tables (HIS, HES, LFS annual report, Basic Amenities); NHMS; wellbeing indices; `get_distribution`; full `geo_hierarchy` | reproduces today's curated tables to the ringgit |
 | 3 Money-trail spine | `meta.entity_register`, `dim_entity`, `bridge_entity_code`; PKKP and Anggaran as entity observations; transfers as flows; development estimates; social-transfer placement | every code resolves to one entity per date; `placed_share` reported per state |
 | 4 Records and links | LKAN, PAC, procurement as `fact_record` + `bridge_link`, under the personal-data and defamation rules | findings carry entity IDs; no unsigned name-match is publishable |
 | 5 Complete | remaining `gap_*` views; site templates all on views; ported dashboard features; FY2025 nowcast scored; district-level need vs money where `placed_share` holds | every tool output cited; eval suite green |
@@ -634,13 +633,11 @@ spot-check of a sample → PR.
 | 12 | One-theme rule vs the registry; `additive` too coarse; non-calendar years | minor | §3, §4.3, §4.2 |
 | — | Simplify: defer global series; budgets are not flows; concordance only on demand | — | D21, D12, D7 |
 
-**KRI *State of Households 2026* check (independent agent, 2026-11-04).** Of the report's 198
-data exhibits, 28 (14%) can be produced from held data, 14 (7%) from planned series, 135 (68%)
-need sources not yet in the registry, and 21 (11%) need data requests. Four public DOSM survey
-reports unlock 83 of the 135. Design gaps it found, and where they are answered: household and
-income breakdown axes (§4.4); statistic and universe (§4.3); uncertainty and `suppressed` /
-`low_reliability` (§5.1, §7.2); derivations as declared rules (`meta.derivation`, `derive`);
-distributions (`get_distribution`); composite indices with stored components
-(`meta.index_definition`); strata as a breakdown, not a place (§4.1); partner countries (§4.1,
-§4.4); third-party figures (`basis = third_party`); district boundary changes (§4.1). The new
-series it implies are in the registry.
+**Household-wellbeing coverage check (independent agent, 2026-11-04).** The design gaps it found,
+and where they are answered: household and income breakdown axes (§4.4); statistic and universe
+(§4.3); uncertainty and `suppressed` / `low_reliability` (§5.1, §7.2); derivations as declared
+rules (`meta.derivation`, `derive`); distributions (`get_distribution`); composite indices with
+stored components (`meta.index_definition`); strata as a breakdown, not a place (§4.1); partner
+countries (§4.1, §4.4); third-party figures (`basis = third_party`); district boundary changes
+(§4.1). The biggest data gap it found was four public DOSM survey reports (household income,
+household expenditure, the annual labour force report, basic amenities); they are in the registry.

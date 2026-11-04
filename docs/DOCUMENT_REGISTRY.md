@@ -75,23 +75,22 @@ Rules:
 | `contains_personal_data` | `no` · `public_figures` · `possible` · `yes` | `possible`/`yes` series pass through the personal-data rule before any output |
 
 Only licences stated somewhere we can cite are filled in: DOSM (CC BY 4.0, per its catalogue
-pages), KRI (CC BY 3.0, printed in the report) and World Bank WDI (CC BY 4.0). Everything else is `to_confirm` until checked.
+pages) and World Bank WDI (CC BY 4.0). Everything else is `to_confirm` until checked.
 
 ---
 
 ## 3. Seed: what the first rows say
 
-103 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
+102 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
 theme, is `docs/SOURCES.md`. Each row also says how it is reached (`access`: `api`, `bulk_file`,
-`pdf`, `web_table`, `paid`, `none`). Revision 2 added 29 series from the two reviews (KRI SOH2026
+`pdf`, `web_table`, `paid`, `none`). Revision 2 added 28 series from the two reviews (household-coverage
 check and plan review) and deferred 12 low-value global series (`priority = deferred`).
 
 | Status | Series |
 |---|---|
 | verified / extracted | 16: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities |
 | held, not extracted | 1: LKAN state volumes (findings) |
-| located | 1: KRI State of Households (PDF supplied, not yet in the warehouse) |
-| expected | 81 (32 of all 103 series are reachable by API), including every state budget document: whether each state publishes it is to be checked state by state |
+| expected | 81 (32 of all 102 series are reachable by API), including every state budget document: whether each state publishes it is to be checked state by state |
 | restricted | 4: SSM company register, PADU/eKasih, DOSM and KPM data requests |
 
 **The P1 gaps** (priority 1 and not yet held):
@@ -107,7 +106,7 @@ check and plan review) and deferred 12 low-value global series (`priority = defe
 | Health facts | 6 | doctors and beds per capita by state |
 | Education statistics | 6 | school outcomes by district |
 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | cross | the spine of target vs outcome |
-| DOSM survey report tables (HIS, HES, LFS annual) | 1, 3, 2 | unlock 67 of KRI SOH2026's exhibits (with Basic Amenities, P2: 83) |
+| DOSM survey report tables (HIS, HES, LFS annual) | 1, 3, 2 | strata, ethnicity, income source, spending by item and decile, labour detail: published, but not in the API |
 | National Health and Morbidity Survey | 6 | health outcomes, not only facilities |
 | Cash transfer and welfare recipients by state | 5 | places operating spending by area, so need vs money is not built on projects alone |
 

@@ -2,7 +2,7 @@
 
 What the warehouse needs, theme by theme: what we hold, what we must get, and how we get it
 (an API to connect, or a document to collect). The **row-level detail is in
-`docs/registry/series_seed.csv`** (103 series, revision 2). This page is the plan; the registry is the
+`docs/registry/series_seed.csv`** (102 series, revision 2). This page is the plan; the registry is the
 checklist. How the registry works: `docs/DOCUMENT_REGISTRY.md`. How the data fits together:
 `docs/DATA_MODEL.md`.
 
@@ -14,7 +14,7 @@ Financial Procedure Act 1957 uses the same term ("public moneys").
 
 | # | Theme | Held | Must get first (P1) | Main way in |
 |---|---|---|---|---|
-| 1 | People & poverty | 1 of 14 | population by state and district; HIS report tables; HES report tables; cash-transfer recipients by state | API (OpenDOSM) + DOSM reports |
+| 1 | People & poverty | 1 of 13 | population by state and district; HIS report tables; HES report tables; cash-transfer recipients by state | API (OpenDOSM) + DOSM reports |
 | 2 | Jobs & wages | 2 of 8 | salaries & wages survey; LFS annual report | API (OpenDOSM) + DOSM reports |
 | 3 | Prices & cost of living | 1 of 6 | HES report tables (P2: CPI detail, item prices, house prices) | API (data.gov.my) + PDF |
 | 4 | Output & industry | 3 of 15 | (P2: investment, Economic Census, district GDP) | API (OpenDOSM) |
@@ -26,7 +26,7 @@ Financial Procedure Act 1957 uses the same term ("public moneys").
 | — | Plan targets and cross-cutting | 0 of 7 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | PDF |
 
 "Held" counts series that are held, extracted or verified. A series can serve two themes,
-so the column does not add to 103.
+so the column does not add to 102.
 
 **The pattern:** the economy themes (1–4, 8) mostly come through **APIs we already use**, so
 each new series costs little. Public money and accountability (5, 7) come from **PDFs**. These
@@ -43,7 +43,7 @@ usable form.
 | `storage.dosm.gov.my` (bulk files) | DOSM | **connected** | the canonical CSVs behind the API |
 | `api.bnm.gov.my` (OpenAPI) | BNM | **connected** | federal finance, rates, FX, money supply, credit |
 | data.gov.my datasets (ids to confirm) | DOSM, KPDN, MOF, KPM, SPR | to connect | population by state/district, Kawasanku constituency profiles, election results, PriceCatcher, fuel prices, education, CPI detail |
-| DOSM data request service | DOSM | to request | custom HIES and Basic Amenities tabulations (21 of KRI SOH2026's exhibits rest on such requests) |
+| DOSM data request service | DOSM | to request | custom HIES and Basic Amenities tabulations not in any publication |
 
 **Global**, for peer comparison and independent cross-checks. Every one needs its
 definitions matched before a comparison is shown (federal vs general government, for one).
@@ -134,10 +134,10 @@ inequality within a state widening? Does money reach the areas that need it?
 | Have | Need |
 |---|---|
 | HIES 2019–2024: income, poverty, inequality, state to DUN | **P1** population by state and district: every per-capita figure depends on it |
-| | **P1** DOSM Household Income Survey report tables: strata, ethnicity, income source, disposable income, household head (30 of KRI SOH2026's exhibits) |
+| | **P1** DOSM Household Income Survey report tables: strata, ethnicity, income source, disposable income, household head |
 | | **P1** cash-transfer and welfare recipients by state (places operating spending, theme 5) |
 | | P2 Census 2020; Kawasanku constituency profiles; MyWI and happiness indices (components stored separately) |
-| | P2 KRI State of Households tables (third-party figures, CC BY 3.0) as an interim route; DOSM data requests |
+| | P2 DOSM data requests for tabulations not published |
 | | P3 zakat collection and distribution by state |
 | | restricted: PADU / eKasih (aggregates via parliamentary answers only) |
 
