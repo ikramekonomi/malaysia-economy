@@ -107,8 +107,8 @@ rec("X_crossbook_summary", f"{n_same} identical", f"{n_diff} restated", "", "", 
 
 # X3: sebenar_2024 vs PKKP audited FY2024 (by-vote OE incl. Development Fund transfer; gross DE)
 con = duckdb.connect(DB, read_only=True)
-pk_oe = con.sql("SELECT sum(sebenar_rm) FROM fact_opex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024").fetchone()[0]
-pk_de = con.sql("SELECT sum(sebenar_jumlah_rm) FROM fact_devex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024 AND maksud_code LIKE 'P.%'").fetchone()[0]
+pk_oe = con.execute("SELECT sum(sebenar_rm) FROM fact_opex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024").fetchone()[0]
+pk_de = con.execute("SELECT sum(sebenar_jumlah_rm) FROM fact_devex_maksud WHERE source_file ILIKE '2024_PENYATA%' AND year=2024 AND maksud_code LIKE 'P.%'").fetchone()[0]
 for scope, pk, pr in (("OE (by-vote total)", int(pk_oe), PRINTED["mengurus"][1]),
                       ("DE (gross)", int(pk_de), PRINTED["pembangunan"][1])):
     d = pr - pk

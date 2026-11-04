@@ -20,7 +20,7 @@ financial wellbeing · environment, climate & disasters. Raw files (L0) → sour
 (L1, `sources/`) → a conformed core of 6 dimensions (geo, period, indicator, breakdown, entity,
 source) and 3 facts (observation, money flow, record) (L2) → named gap views (L3) → apps (L4:
 agent tools, dashboard, models). **The full specification is `docs/DATA_MODEL.md`**: read it
-before changing anything structural. Decisions D1–D21 are its §16.
+before changing anything structural. Decisions D1–D22 are its §16 (and `meta/decision.csv`).
 
 ## Truth by reconciliation
 No single source is "the truth". Each domain has a hub that others reconcile against, and the
@@ -41,7 +41,7 @@ guarantees sit in memorandum accounts), and **place** (most federal spending has
 in the accounts; see `docs/DATA_MODEL.md` §10 and §13).
 
 ## Sources
-What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (102 series:
+What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (104 series:
 status, route, access, licence, priority). The plan behind it, theme by theme:
 **`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
 `sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9
@@ -85,7 +85,14 @@ apps/models/        model projections: an application, never warehouse data
 site/               the public site + chatbot (reads curated views; its own CLAUDE.md)
 pipeline/           build_duckdb.py (PKKP DB)
 docs/               DATA_MODEL.md · SOURCES.md · DOCUMENT_REGISTRY.md · registry/ · ANALYST_GUIDE.md
+meta/               code lists, decisions, the file registry (build_registry.py) -> warehouse meta.*
+qa/                 the offline check suite CI runs on every PR, and its known-FAIL baseline
 ```
+
+**CI:** `python3 qa/run_offline_suite.py` runs on every PR (`.github/workflows/validate.yml`). It
+blocks a script that fails, a rebuild that changes a committed file, and any `FAIL` row not in
+`qa/known_fails.csv`. Run it before you push. If you add a validator that runs offline, add it to
+the suite's `SUITE` list.
 
 ## Adding a new source
 Register it first (a row in `docs/registry/series_seed.csv`, with licence and personal-data

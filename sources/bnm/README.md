@@ -97,6 +97,16 @@ carries endpoint + retrieval date + the API's own `last_updated`. Refresh = re-r
 `pipeline/fetch_bnm_fiscal.py` and `pipeline/fetch_bnm_msb_wide.py` (explicit,
 provenance-updating — same discipline as sources/dosm).
 
+## Vintages (`data/_vintage_log.csv`, golden rule 8)
+
+Every BNM file in `data/` is the current vintage. `data/_vintage_log.csv` lists every vintage the
+warehouse has held (dataset, `api_last_updated`, retrieved date, rows, sha256, state), append-only;
+it was seeded on 2026-11-04 with the 32 files then held. The fetchers write through
+`pipeline/vintage.py`'s `replace_with_log`: when a refetch changes the bytes, the old file is
+logged `superseded` and the new one `current`; an identical refetch logs nothing. An earlier
+vintage is recovered exactly from git history by its sha256 (the DOSM method,
+`sources/dosm/pipeline/vintage_get.py`).
+
 ## Basis discipline (why this is namespaced, never blended)
 
 The **fiscal aggregates (3.1–3.1.3) are BNM-compiled from MOF/AGD** — a *reported*

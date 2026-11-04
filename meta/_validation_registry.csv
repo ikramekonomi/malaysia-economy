@@ -1,0 +1,164 @@
+check,scope,status,note
+R1 series_id unique,all,PASS,
+R2 vocabulary and required fields,dosm_population,PASS,
+R2 vocabulary and required fields,hies,PASS,
+R2 vocabulary and required fields,hies_report_tables,PASS,
+R2 vocabulary and required fields,population_subnational,PASS,
+R2 vocabulary and required fields,census_2020,PASS,
+R2 vocabulary and required fields,datagovmy_kawasanku,PASS,
+R2 vocabulary and required fields,dosm_data_request_hies,PASS,
+R2 vocabulary and required fields,dosm_mhi,PASS,
+R2 vocabulary and required fields,dosm_mywi,PASS,
+R2 vocabulary and required fields,padu_ekasih,PASS,
+R2 vocabulary and required fields,zakat,PASS,
+R2 vocabulary and required fields,undp_hdr,PASS,
+R2 vocabulary and required fields,lfs,PASS,
+R2 vocabulary and required fields,lfs_annual_report,PASS,
+R2 vocabulary and required fields,salaries_wages,PASS,
+R2 vocabulary and required fields,epf_socso,PASS,
+R2 vocabulary and required fields,perkeso_lmx,PASS,
+R2 vocabulary and required fields,employment_stats_qtr,PASS,
+R2 vocabulary and required fields,productivity,PASS,
+R2 vocabulary and required fields,ilostat,PASS,
+R2 vocabulary and required fields,cpi,PASS,
+R2 vocabulary and required fields,hes_report_tables,PASS,
+R2 vocabulary and required fields,cpi_detail,PASS,
+R2 vocabulary and required fields,house_prices,PASS,
+R2 vocabulary and required fields,pricecatcher,PASS,
+R2 vocabulary and required fields,fuel_prices,PASS,
+R2 vocabulary and required fields,national_accounts,PASS,
+R2 vocabulary and required fields,state_gdp,PASS,
+R2 vocabulary and required fields,district_gdp,PASS,
+R2 vocabulary and required fields,economic_census,PASS,
+R2 vocabulary and required fields,investment_mida,PASS,
+R2 vocabulary and required fields,laporan_ekonomi,PASS,
+R2 vocabulary and required fields,petronas_accounts,PASS,
+R2 vocabulary and required fields,energy_stats,PASS,
+R2 vocabulary and required fields,imf_weo,PASS,
+R2 vocabulary and required fields,industry_trade,PASS,
+R2 vocabulary and required fields,un_comtrade,PASS,
+R2 vocabulary and required fields,faostat,PASS,
+R2 vocabulary and required fields,imf_sdmx,PASS,
+R2 vocabulary and required fields,wb_wits,PASS,
+R2 vocabulary and required fields,world_bank_wdi,PASS,
+R2 vocabulary and required fields,anggaran_pembangunan,PASS,
+R2 vocabulary and required fields,anggaran_perbelanjaan,PASS,
+R2 vocabulary and required fields,bnm_msb,PASS,
+R2 vocabulary and required fields,federal_devex_by_state,PASS,
+R2 vocabulary and required fields,pkkp,PASS,
+R2 vocabulary and required fields,social_transfers_by_state,PASS,
+R2 vocabulary and required fields,state_budget_estimates,PASS,
+R2 vocabulary and required fields,state_financial_statements,PASS,
+R2 vocabulary and required fields,tinjauan_fiskal,PASS,
+R2 vocabulary and required fields,anggaran_hasil,PASS,
+R2 vocabulary and required fields,budget_speech,PASS,
+R2 vocabulary and required fields,constituency_funds,PASS,
+R2 vocabulary and required fields,dosm_gfs,PASS,
+R2 vocabulary and required fields,glic_accounts,PASS,
+R2 vocabulary and required fields,lhdn_reports,PASS,
+R2 vocabulary and required fields,pantau_laksana,PASS,
+R2 vocabulary and required fields,pfi_ppp_register,PASS,
+R2 vocabulary and required fields,state_budget_speech,PASS,
+R2 vocabulary and required fields,state_enacted_budget,PASS,
+R2 vocabulary and required fields,supplementary_estimates,PASS,
+R2 vocabulary and required fields,local_gov_finances,PASS,
+R2 vocabulary and required fields,state_supply_bill,PASS,
+R2 vocabulary and required fields,state_year_end_report,PASS,
+R2 vocabulary and required fields,tax_expenditure,PASS,
+R2 vocabulary and required fields,oecd_revenue_stats,PASS,
+R2 vocabulary and required fields,education_stats,PASS,
+R2 vocabulary and required fields,health_facts,PASS,
+R2 vocabulary and required fields,nhms,PASS,
+R2 vocabulary and required fields,amenities_access,PASS,
+R2 vocabulary and required fields,ba_survey_report,PASS,
+R2 vocabulary and required fields,dosm_causes_of_death,PASS,
+R2 vocabulary and required fields,moe_data_request,PASS,
+R2 vocabulary and required fields,who_gho,PASS,
+R2 vocabulary and required fields,unesco_uis,PASS,
+R2 vocabulary and required fields,lkan_federal,PASS,
+R2 vocabulary and required fields,procurement_awards,PASS,
+R2 vocabulary and required fields,ag_dashboard,PASS,
+R2 vocabulary and required fields,ag_sijil_eselfaudit,PASS,
+R2 vocabulary and required fields,company_register,PASS,
+R2 vocabulary and required fields,dewan_rakyat_hansard,PASS,
+R2 vocabulary and required fields,lkan_state,PASS,
+R2 vocabulary and required fields,pac_reports,PASS,
+R2 vocabulary and required fields,pantau_projek,PASS,
+R2 vocabulary and required fields,state_pac_reports,PASS,
+R2 vocabulary and required fields,dun_hansard,PASS,
+R2 vocabulary and required fields,dun_questions,PASS,
+R2 vocabulary and required fields,ibp_open_budget_survey,PASS,
+R2 vocabulary and required fields,ti_cpi,PASS,
+R2 vocabulary and required fields,wb_governance,PASS,
+R2 vocabulary and required fields,bis_credit,PASS,
+R2 vocabulary and required fields,bnm_fsr,PASS,
+R2 vocabulary and required fields,insolvency_stats,PASS,
+R2 vocabulary and required fields,nadma_disasters,PASS,
+R2 vocabulary and required fields,emissions_inventory,PASS,
+R2 vocabulary and required fields,flood_events,PASS,
+R2 vocabulary and required fields,climate_exposure,PASS,
+R2 vocabulary and required fields,rmk_targets,PASS,
+R2 vocabulary and required fields,datagovmy_elections,PASS,
+R2 vocabulary and required fields,district_boundaries,PASS,
+R2 vocabulary and required fields,dosm_sdg_indicators,PASS,
+R2 vocabulary and required fields,electoral_boundaries,PASS,
+R2 vocabulary and required fields,sector_plans,PASS,
+R2 vocabulary and required fields,un_sdg,PASS,
+R3 every file belongs to a registered series,all,PASS,
+R4 held series has files,dosm_population,PASS,3 file(s)
+R5 every file has a sha256,dosm_population,PASS,3 files
+R6 licence confirmed,dosm_population,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,hies,PASS,21 file(s)
+R5 every file has a sha256,hies,PASS,21 files
+R6 licence confirmed,hies,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,lfs,PASS,18 file(s)
+R5 every file has a sha256,lfs,PASS,18 files
+R6 licence confirmed,lfs,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,productivity,PASS,4 file(s)
+R5 every file has a sha256,productivity,PASS,4 files
+R6 licence confirmed,productivity,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,cpi,PASS,3 file(s)
+R5 every file has a sha256,cpi,PASS,3 files
+R6 licence confirmed,cpi,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,national_accounts,PASS,26 file(s)
+R5 every file has a sha256,national_accounts,PASS,26 files
+R6 licence confirmed,national_accounts,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,state_gdp,PASS,1 file(s)
+R5 every file has a sha256,state_gdp,PASS,1 files
+R6 licence confirmed,state_gdp,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,industry_trade,PASS,22 file(s)
+R5 every file has a sha256,industry_trade,PASS,22 files
+R6 licence confirmed,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,anggaran_perbelanjaan,PASS,3 file(s)
+R5 every file has a sha256,anggaran_perbelanjaan,OPEN,3 of 3 without sha256 (needs the L0 archive)
+R6 licence confirmed,anggaran_perbelanjaan,OPEN,licence to_confirm
+R4 held series has files,bnm_msb,PASS,32 file(s)
+R5 every file has a sha256,bnm_msb,PASS,32 files
+R6 licence confirmed,bnm_msb,OPEN,licence to_confirm
+R4 held series has files,pkkp,PASS,16 file(s)
+R5 every file has a sha256,pkkp,OPEN,16 of 16 without sha256 (needs the L0 archive)
+R6 licence confirmed,pkkp,OPEN,licence to_confirm
+R4 held series has files,state_financial_statements,PASS,143 file(s)
+R5 every file has a sha256,state_financial_statements,PASS,143 files
+R6 licence confirmed,state_financial_statements,OPEN,licence to_confirm
+R4 held series has files,tinjauan_fiskal,PASS,16 file(s)
+R5 every file has a sha256,tinjauan_fiskal,PASS,16 files
+R6 licence confirmed,tinjauan_fiskal,OPEN,licence to_confirm
+R4 held series has files,anggaran_hasil,PASS,5 file(s)
+R5 every file has a sha256,anggaran_hasil,OPEN,4 of 5 without sha256 (needs the L0 archive)
+R6 licence confirmed,anggaran_hasil,OPEN,licence to_confirm
+R4 held series has files,dosm_gfs,PASS,11 file(s)
+R5 every file has a sha256,dosm_gfs,PASS,11 files
+R6 licence confirmed,dosm_gfs,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,amenities_access,PASS,1 file(s)
+R5 every file has a sha256,amenities_access,PASS,1 files
+R6 licence confirmed,amenities_access,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,lkan_federal,PASS,57 file(s)
+R5 every file has a sha256,lkan_federal,PASS,57 files
+R6 licence confirmed,lkan_federal,OPEN,licence to_confirm
+R4 held series has files,ag_sijil_eselfaudit,PASS,4 file(s)
+R5 every file has a sha256,ag_sijil_eselfaudit,PASS,4 files
+R6 licence confirmed,ag_sijil_eselfaudit,OPEN,licence to_confirm
+R4 held series has files,lkan_state,PASS,353 file(s)
+R5 every file has a sha256,lkan_state,PASS,353 files
+R6 licence confirmed,lkan_state,OPEN,licence to_confirm

@@ -1,0 +1,27 @@
+# Offline check suite on every pull request and on main (docs/DATA_MODEL.md §15, Phase 0).
+# Blocks a PR when a script fails, when re-running the pipeline changes a committed file, or
+# when a FAIL row appears that is not in qa/known_fails.csv. Details: qa/README.md.
+name: Validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  offline-suite:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install
+        run: pip install -r requirements.txt
+      - name: Run the offline check suite
+        run: python3 qa/run_offline_suite.py

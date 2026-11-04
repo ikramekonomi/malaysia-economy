@@ -2,7 +2,7 @@
 
 What the warehouse needs, theme by theme: what we hold, what we must get, and how we get it
 (an API to connect, or a document to collect). The **row-level detail is in
-`docs/registry/series_seed.csv`** (102 series, revision 2). This page is the plan; the registry is the
+`docs/registry/series_seed.csv`** (104 series, revision 2). This page is the plan; the registry is the
 checklist. How the registry works: `docs/DOCUMENT_REGISTRY.md`. How the data fits together:
 `docs/DATA_MODEL.md`.
 
@@ -14,11 +14,11 @@ Financial Procedure Act 1957 uses the same term ("public moneys").
 
 | # | Theme | Held | Must get first (P1) | Main way in |
 |---|---|---|---|---|
-| 1 | People & poverty | 1 of 13 | population by state and district; HIS report tables; HES report tables; cash-transfer recipients by state | API (OpenDOSM) + DOSM reports |
+| 1 | People & poverty | 2 of 14 | population by state and district; HIS report tables; HES report tables; cash-transfer recipients by state | API (OpenDOSM) + DOSM reports |
 | 2 | Jobs & wages | 2 of 8 | salaries & wages survey; LFS annual report | API (OpenDOSM) + DOSM reports |
 | 3 | Prices & cost of living | 1 of 6 | HES report tables (P2: CPI detail, item prices, house prices) | API (data.gov.my) + PDF |
 | 4 | Output & industry | 3 of 15 | (P2: investment, Economic Census, district GDP) | API (OpenDOSM) |
-| 5 | Public money & money trail | 6 of 29 | development estimates; federal development money by state; state budget estimates; cash-transfer recipients by state | PDF |
+| 5 | Public money & money trail | 7 of 30 | development estimates; federal development money by state; state budget estimates; cash-transfer recipients by state | PDF |
 | 6 | Health, education & services | 1 of 9 | NHMS; health facts; education statistics | PDF + data.gov.my |
 | 7 | Accountability | 3 of 17 | procurement awards | PDF + web |
 | 8 | Money, credit & financial wellbeing | 1 of 7 | (P2: household debt, EPF/SOCSO) | API (BNM) + PDF |
@@ -26,7 +26,7 @@ Financial Procedure Act 1957 uses the same term ("public moneys").
 | — | Plan targets and cross-cutting | 0 of 7 | Malaysia Plan targets (RMK-12 MTR, RMK-13) | PDF |
 
 "Held" counts series that are held, extracted or verified. A series can serve two themes,
-so the column does not add to 102.
+so the column does not add to 104.
 
 **The pattern:** the economy themes (1–4, 8) mostly come through **APIs we already use**, so
 each new series costs little. Public money and accountability (5, 7) come from **PDFs**. These

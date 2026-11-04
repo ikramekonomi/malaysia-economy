@@ -124,6 +124,16 @@ def main():
         total_rows += load_group(con, "curated", name, paths, failures)
         total_tables += 1
 
+    # meta: the document registry, code lists and decisions, stored as data (DATA_MODEL.md §9).
+    print("=== meta -> schema meta ===")
+    con.execute("CREATE SCHEMA meta")
+    meta_files = sorted(glob.glob(os.path.join(ROOT, "meta", "*.csv")))
+    meta_files.append(os.path.join(ROOT, "docs", "registry", "series_seed.csv"))
+    for path in meta_files:
+        name = "registry_series" if path.endswith("series_seed.csv") else os.path.basename(path)[:-4]
+        total_rows += load_group(con, "meta", name.lstrip("_"), [path], failures)
+        total_tables += 1
+
     # Convenience views carried over from pipeline/build_duckdb.py (leaf rows only).
     con.execute("CREATE VIEW pkkp.v_opex_leaf AS "
                 "SELECT * FROM pkkp.fact_opex_detail WHERE row_type='object_aktiviti'")

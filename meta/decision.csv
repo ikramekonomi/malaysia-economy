@@ -1,0 +1,30 @@
+decision_id,kind,decision,why,where,decided_on
+D1,design,Public money is one theme of nine; the architecture is economy-wide,PKKP was the first document; not the centre,docs/DATA_MODEL.md §1 §3,2026-11-04
+D2,design,ISO 3166-2:MY for states; DOSM/SPR codes below state; ISO 3166-1 for other countries,standard published codes,docs/DATA_MODEL.md §4.1,2026-11-04
+D3,design,Keep every vintage in L1 (vintage log) and L2; the clean series is a view,revisions are evidence,docs/DATA_MODEL.md §6,2026-11-04
+D4,design,Typed agent tools only for IKRAM-facing and public agents; read-only SQL internal only,every answer cited and checked; matches site/CLAUDE.md,docs/DATA_MODEL.md §11,2026-11-04
+D5,design,Follow the money both ways: by place (Track A) and by recipient (Track B),IKRAM works at national and state level,docs/DATA_MODEL.md §13,2026-11-04
+D6,design,Permanent opaque entity_id plus dated readable codes; tools accept readable codes,vote codes are renumbered and reused,docs/DATA_MODEL.md §4.5,2026-11-04
+D7,design,Every boundary set kept as published with the vintage in geo_code; several hierarchies; re-mapping built only on demand,boundaries change and do not nest,docs/DATA_MODEL.md §4.1,2026-11-04
+D8,design,curated/forecast moved to apps/models,models are apps; not warehouse data,docs/DATA_MODEL.md §14,2026-11-04
+D9,design,curated/dashboard retired; three features to port,superseded by site/,docs/DATA_MODEL.md §14,2026-11-04
+D10,design,Uncertainty stored with every survey estimate; small areas shown in bands not ranks,a noisy ranking is the easiest claim to discredit,docs/DATA_MODEL.md §5.1 §11,2026-11-04
+D11,design,basis is part of the observation key; values are DECIMAL,one edition prints actual; revised and target for one line; reconciliation is to the sen,docs/DATA_MODEL.md §5.1,2026-11-04
+D12,design,Flows only for money moving between two bodies; budgets and spending totals are observations,an appropriation is not a transfer,docs/DATA_MODEL.md §5.2,2026-11-04
+D13,design,General-government consolidation removes intergovernmental flows,no double counting,docs/DATA_MODEL.md §5.2,2026-11-04
+D14,design,The language model never does arithmetic; derive does with comparability checks,cited numbers can still be wrongly combined,docs/DATA_MODEL.md §11,2026-11-04
+D15,design,Governance: licence; personal data; defamation; neutrality; lawful sources; conflicts of interest (G1-G7),an NGO's credibility and legal exposure,docs/DATA_MODEL.md §12,2026-11-04
+D16,design,Verification tiers; publication needs a human spot-check,AI checking AI is not enough,docs/DATA_MODEL.md §7.4,2026-11-04
+D17,design,Raw files archived outside the publisher (sha256 store plus public archive),government links break,docs/DATA_MODEL.md §2,2026-11-04
+D18,design,Phase 1 delivers a state-level end-to-end slice; CI in Phase 0,value early; checks enforced,docs/DATA_MODEL.md §15,2026-11-04
+D19,design,Ninth theme: environment; climate & disasters; housing; water; transport and ICT sit in theme 6,the review found them missing,docs/DATA_MODEL.md §3,2026-11-04
+D20,design,DOSM refreshed daily by a GitHub Actions workflow; a refresh PR merges itself only when every verifier passes and the gate holds,always current; never silent,docs/DATA_MODEL.md §6,2026-11-04
+D21,design,Low-value global series deferred until a question needs them,maintenance cost for a small team,docs/registry/series_seed.csv,2026-11-04
+D22,design,CI runs the offline check suite on every PR and blocks a script failure; a non-reproducing rebuild or a FAIL not in qa/known_fails.csv,checks must be enforced; not remembered,qa/README.md,2026-11-04
+G1,governance,Licence: every series records licence and redistribution; to_confirm blocks publication; no_redistribution never leaves the warehouse,legal exposure,docs/DATA_MODEL.md §12,2026-11-04
+G2,governance,Personal data: individuals are natural_person entities held only for a recorded public-interest purpose and never returned by tools or views; names masked in output,PDPA,docs/DATA_MODEL.md §12,2026-11-04
+G3,governance,Defamation: a named body is linked to a finding or contract in public only by a code_exact or human_signed link,one wrong match is a defamation exposure,docs/DATA_MODEL.md §5.3 §12,2026-11-04
+G4,governance,Neutrality: methods declared before results are seen; every view covers all 13 states and 3 Federal Territories; no party attribute in the core; elections only as geographic context,credibility across the political spectrum,docs/DATA_MODEL.md §12,2026-11-04
+G5,governance,Lawful sources only: published by the owner; released under law; or obtained through an official data request; no leaked or OSA-classified documents,legal exposure,docs/DOCUMENT_REGISTRY.md §2,2026-11-04
+G6,governance,Conflicts of interest: where IKRAM or its people helped produce a source a caveat discloses it on every answer that uses it,transparency,docs/DATA_MODEL.md §12,2026-11-04
+G7,governance,Sensitive breakdowns: ethnicity published only as the official source publishes it; never inferred,legal and social sensitivity,docs/DATA_MODEL.md §12,2026-11-04

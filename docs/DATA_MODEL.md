@@ -573,7 +573,7 @@ the view must return the same numbers to the ringgit:
 
 | Phase | Deliverable | Done when |
 |---|---|---|
-| 0 Foundation | registry as data, with licence / redistribution / personal-data fields; `meta` + code lists; **CI** running every offline validator on PRs; L0 archive (sha256 store + public archive copies); vintage logs for every API source (DOSM done); governance policies in `meta.decision`; daily DOSM refresh workflow (done; needs Actions write permission enabled once) | every held file has a registry row with sha256 and licence; CI blocks a PR with a new FAIL |
+| 0 Foundation | registry as data, with licence / redistribution / personal-data fields (done: `meta/registry_file.csv`, `meta/_validation_registry.csv`); `meta` + code lists (done); **CI** running every offline validator on PRs (done: `qa/run_offline_suite.py`, 23 scripts; 46 PKKP validators to port); L0 archive (sha256 store + public archive copies) (open); vintage logs for every API source (DOSM and BNM done); governance policies in `meta.decision` (done); daily DOSM refresh workflow (done; needs Actions write permission enabled once) | every held file has a registry row with sha256 and licence; CI blocks a PR with a new FAIL |
 | 1 First useful slice: **state level, end to end** | population by state and district; HIES, LFS, CPI by state; state finances; federal→state transfers → `dim_geo` (state, district), `dim_period`, `dim_indicator`, `dim_breakdown` → `fact_observation` with uncertainty fields → `get_series`, `compare_geos` (bands), `derive`, `explain` → `gap_need_vs_money` **at state level** with `placed_share`; first 50 `qa.eval_question` | IKRAM can ask a state-level need-vs-money question and get a cited, banded, checked answer |
 | 2 Broaden the statistics | all DOSM/BNM/MOF series; DOSM survey report tables (HIS, HES, LFS annual report, Basic Amenities); NHMS; wellbeing indices; `get_distribution`; full `geo_hierarchy` | reproduces today's curated tables to the ringgit |
 | 3 Money-trail spine | `meta.entity_register`, `dim_entity`, `bridge_entity_code`; PKKP and Anggaran as entity observations; transfers as flows; development estimates; social-transfer placement | every code resolves to one entity per date; `placed_share` reported per state |
@@ -610,6 +610,7 @@ spot-check of a sample → PR.
 | D19 | Ninth theme: environment, climate & disasters; housing, water, transport and ICT sit in theme 6 | the review found them missing | §3 |
 | D20 | DOSM refreshed daily by a GitHub Actions workflow; a new vintage PR merges itself only when every verifier passes and the gate holds | always current, never silent | §6 |
 | D21 | Low-value global series deferred until a question needs them | maintenance cost for a small team | registry |
+| D22 | CI runs the offline check suite on every PR and blocks a script failure, a non-reproducing rebuild or a FAIL not in `qa/known_fails.csv` | checks must be enforced, not remembered | `qa/README.md` |
 
 ---
 

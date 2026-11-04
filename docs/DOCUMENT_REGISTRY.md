@@ -81,16 +81,18 @@ pages) and World Bank WDI (CC BY 4.0). Everything else is `to_confirm` until che
 
 ## 3. Seed: what the first rows say
 
-102 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
+104 series across all 9 themes (`docs/registry/series_seed.csv`). The plan behind them, theme by
 theme, is `docs/SOURCES.md`. Each row also says how it is reached (`access`: `api`, `bulk_file`,
 `pdf`, `web_table`, `paid`, `none`). Revision 2 added 28 series from the two reviews (household-coverage
-check and plan review) and deferred 12 low-value global series (`priority = deferred`).
+check and plan review) and deferred 12 low-value global series (`priority = deferred`). Phase 0
+registered two DOSM series already held but not yet listed: population (`dosm_population`) and
+government finance statistics (`dosm_gfs`).
 
 | Status | Series |
 |---|---|
-| verified / extracted | 16: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities |
+| verified / extracted | 18: PKKP, Anggaran (operating), Anggaran Hasil, Tinjauan Fiskal, BNM MSB, state statements, LKAN federal, AG sijil, HIES, LFS, productivity, CPI, national accounts, state GDP, industry and trade, amenities, DOSM population (national), DOSM government finance |
 | held, not extracted | 1: LKAN state volumes (findings) |
-| expected | 81 (32 of all 102 series are reachable by API), including every state budget document: whether each state publishes it is to be checked state by state |
+| expected | 81 (34 of all 104 series are reachable by API), including every state budget document: whether each state publishes it is to be checked state by state |
 | restricted | 4: SSM company register, PADU/eKasih, DOSM and KPM data requests |
 
 **The P1 gaps** (priority 1 and not yet held):
@@ -114,6 +116,14 @@ check and plan review) and deferred 12 low-value global series (`priority = defe
 
 ## 4. What exists today and gets unified
 
+Phase 0 unifies them: `python3 meta/build_registry.py` reads every manifest below and writes one
+row per file to **`meta/registry_file.csv`** (series, edition, file, URL, sha256, size, pages,
+retrieved date, manifest), then checks the registry into `meta/_validation_registry.csv`:
+vocabulary, unique ids, every held series has files, every file has a sha256 and every held series
+a confirmed licence. A missing sha256 or an unconfirmed licence is `OPEN` (a Phase 0 criterion not
+yet met), not `FAIL`. Code lists are `meta/code_list.csv`; decisions D1–D22 and G1–G7 are
+`meta/decision.csv`. All of it loads into the warehouse as `meta.*`.
+
 | Today | Rows | Becomes |
 |---|---|---|
 | `sources/audit-negara/data/lkan_reports_backfill.csv` | 402 volumes, sha256 | edition + file rows |
@@ -121,7 +131,8 @@ check and plan review) and deferred 12 low-value global series (`priority = defe
 | `sources/mof-fiscal-outlook/data/_editions_manifest.csv` | 17 files | edition + file rows |
 | `sources/dosm/data/_vintage.json` + `_vintage_log.csv` | 110 datasets; 173 vintages logged (2026-11-04) | edition + file rows (one per vintage, with sha256) |
 | `sources/states/data/<state>/state_reports_<state>.csv` | per state volume | edition + file rows |
-| PKKP, Anggaran, Anggaran Hasil, BNM | **no manifest** | to be written (Phase 0) |
+| `sources/bnm/data/_vintage_log.csv` | 32 datasets (seeded 2026-11-04) | edition + file rows, with sha256 |
+| PKKP, Anggaran, Anggaran Hasil | **no manifest**: file names from row provenance, no sha256 | sha256 when the L0 archive holds the PDFs |
 
 ---
 
