@@ -6,7 +6,7 @@ G1 federal placed share,2022,INFO,0.91% (11 states' receipts / federal total); p
 G1 federal placed share,2024,INFO,0.29% (6 states' receipts / federal total); publishable: no
 G2 every state and territory present,all,PASS,"{'2014': 16, '2016': 16, '2019': 16, '2022': 16, '2024': 16}"
 G3 no federal value below the placed-share guard,all,PASS,0 rows
-G4 every state-year with an open headline FAIL is flagged,all,PASS,3 flagged
+G4 every state-year with an open headline FAIL is flagged,all,PASS,2 flagged
 G5 printed total = opex + devex,MY-01 2014,PASS,diff RM0
 G5 printed total = opex + devex,MY-05 2014,PASS,diff RM0
 G5 printed total = opex + devex,MY-06 2014,PASS,diff RM0
@@ -16,7 +16,7 @@ G5 printed total = opex + devex,MY-05 2016,PASS,diff RM0
 G5 printed total = opex + devex,MY-06 2016,FLAGGED,diff RM89950000 (under check: N2_identity_expenditure)
 G5 printed total = opex + devex,MY-08 2016,PASS,diff RM0
 G5 printed total = opex + devex,MY-10 2016,PASS,diff RM0
-G5 printed total = opex + devex,MY-01 2019,PASS,diff RM0 (under check: V1_cra_closing)
+G5 printed total = opex + devex,MY-01 2019,PASS,diff RM0
 G5 printed total = opex + devex,MY-04 2019,PASS,diff RM0
 G5 printed total = opex + devex,MY-08 2019,PASS,diff RM0
 G5 printed total = opex + devex,MY-10 2019,PASS,diff RM0

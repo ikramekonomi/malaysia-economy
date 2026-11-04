@@ -707,24 +707,6 @@ def page_proved(state: str, c: dict):
 
 KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     dict(
-        state="Pahang",
-        source_file="", pdf_page="", printed_page="", jadual="4.31",
-        match=dict(target="none", checks=("N2_identity_expenditure",)),
-        affected_rows="0 rows carry a wrong figure; the water-supply line is extracted but was not conformed",
-        defect="Pahang's Penyata Prestasi Kewangan prints THREE spending lines: Perbelanjaan Mengurus, "
-               "Perbelanjaan Pembangunan and Perbelanjaan Bekalan Air. The water-supply line was extracted only "
-               "under its spec-local code (prestasi_kewangan.perbelanjaan_bekalan_air), so the conformed panel "
-               "lacked it and opex + devex fell short of the printed JUMLAH PERBELANJAAN by exactly that line.",
-        diagnosis="Page-proved 2026-11-04 from the archived volumes (qa/evidence/): FY2016 CMD.37.2017.pdf p51 "
-                  "(J4.31): 629.27 + 91.66 + 89.95 = 810.88; FY2017 CMD.38.2018.pdf p51: 613.91 + 98.63 + 55.66 "
-                  "= 768.20; FY2021 CMD.46.2022.pdf p32: the text states the total covers mengurus, pembangunan "
-                  "and bekalan air (RM931.11 juta). FY2022 (CMD.43.2023.pdf) awaits its archived copy.",
-        why_unfixed="Fixed in code 2026-11-04: table_catalog conforms it as expenditure_water_supply and N2 adds "
-                    "it; takes effect when states-extract.yml re-extracts (the conformed code is set at extraction).",
-        impact_on_data="No figure is wrong. expenditure_total (as printed) is correct and is what "
-                       "core/gap_need_vs_money uses; do not derive Pahang's total as opex + devex.",
-    ),
-    dict(
         state="Selangor",
         source_file="", pdf_page="", printed_page="", jadual="",
         match=dict(target="none", checks=("V1_fund_flow",), fiscal_year=("2014",)),
