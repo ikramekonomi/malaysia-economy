@@ -357,15 +357,21 @@ track A; D29). The method, declared and committed before any result by state, is
   kept (`geo_evidence`); `pdf_page` is the page printing the name, the amounts sit on the facing page.
 * **Grants by name** to a state government or territory administration (`fact_money_flow`, `stated`); class
   grants are never split (D27).
+* **Class grants at the payer's own split** (FY2019-2024, D30): the Budget books' Lampiran E prints what each state
+  was actually paid of each grant (`sources/anggaran`). A grant is placed this way only in a year its national
+  total equals PKKP's audited line within RM2 (capitation, road maintenance, revenue growth, petroleum-duty
+  compensation, street lighting, state services every year; GTBKK FY2019-2022; the Concurrent List with
+  libraries and museums FY2023-2024): RM6.3-7.7b a year (`grants_split_by_payer_rm`).
 * **Not used:** an agency's seat, or any allocation key (population, staff, need).
 
 | | FY2009 | FY2014 | FY2019 | FY2024 |
 |---|---|---|---|---|
-| placed (projects by name + grants by name) | RM6.59b (no FY2009 grants held) | RM3.79b | RM2.94b | RM3.14b |
+| placed (projects by name + grants by name + grants at the payer's split) | RM6.59b (no FY2009 grants held) | RM3.79b | RM9.32b | RM10.87b |
+| of which grants at the payer's split (from FY2019) | | | RM6.32b | RM7.73b |
 | federal total spending | RM207b | RM259b | RM318b | RM406b |
-| `placed_share` | 3.2% | 1.5% | 0.9% | 0.8% |
+| `placed_share` | 3.2% | 1.5% | 2.9% | 2.7% |
 
-`placed_share` is under 4% in every year (highest 3.9%, FY2010), so the amounts by state are withheld by
+`placed_share` is under 4% in every year (highest 3.9%, FY2010; 2.5-2.9% from FY2019 with the payer's split), so the amounts by state are withheld by
 `get_gap_view('gap_federal_placement', geo, year)` under the 60% guard; the national row and what could not be
 placed are returned (the CSV keeps them for verification, marked `publishable=false`). Sabah and Sarawak hold
 about 54% of the placed project money over the years held (42-65% by year), partly because the accounts print their lines separately while the
@@ -404,6 +410,12 @@ Auditor General's state report prints them; capitation, Concurrent List, and Sab
   columns were found misaligned on the page). Page-proved notes on single rows: `meta/gap_note.csv`. Blind
   verifier: `qa/audits/2026-11-05_phase3_gap_fed_verifier.md` (418 of 418 re-derived; 59 of 59 state figures
   right on the page). Tool: `get_gap_view('gap_federal_vs_state', geo, year, transfer)`.
+* **A third side for the class grants (FY2019-2024, D30):** the Budget books' Lampiran E prints what MOF paid each
+  state of each grant. Where its national total equals PKKP's audited line, `federal_by_state_rm` gives the
+  state's figure and `by_state_status` compares it with the state's own record (agree within RM10,000): the
+  capitation grant agrees in all 14 state-years where the state prints it, the Concurrent List in all 4
+  (FY2023-2024); for the Concurrent List in FY2019-2022 MOF's split does not add up to the audited line
+  (`lampiran_e_unreconciled`), so it is not used.
 
 ## gap_need_vs_money (state level)
 

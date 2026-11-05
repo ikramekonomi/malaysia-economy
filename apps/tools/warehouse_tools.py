@@ -579,7 +579,9 @@ class Tools:
         "How much federal spending (PKKP audited) can be placed in a state from the federal accounts themselves: "
         "development projects whose name names one state (stated_state), districts of one state (parsed_district) or "
         "a listed town or region (parsed_place), and "
-        "grants to a named state government or territory administration. placed_share is that money in all states "
+        "grants to a named state government or territory administration, and from FY2019 the class grants at MOF's own "
+        "split by state (grants_split_by_payer_rm, Lampiran E, used only where it adds up to the audited line, D30). "
+        "placed_share is that money in all states "
         "over the year's federal total; it is under 4% in every year held, so the amounts by state are withheld (the "
         "60% guard: a map must not look more complete than the accounts). The MY row gives the national amounts by "
         "method, the _unallocated row what could not be placed (projects naming several states, only the Peninsula, "
@@ -596,7 +598,11 @@ class Tools:
         "equal expected (agree within RM10,000, the state's rounding); for loans federal_paid_rm holds the BALANCE "
         "owed at year-end, not a payment. Where the state's debt table prints other lenders (bonds, financial "
         "institutions) the federal part is compared (agree_after_other_lenders). A 'differ' is a difference between "
-        "two publishers, reported as printed; the row's note gives any reason a report prints.")
+        "two publishers, reported as printed; the row's note gives any reason a report prints. From FY2019 the class "
+        "grants have a third side: federal_by_state_rm is MOF's own record of what that state was paid (the Budget "
+        "book's Lampiran E), used only in years its national total equals the audited line (D30); by_state_status "
+        "says whether the state's record agrees with it within RM10,000. For the Concurrent List in FY2019-2022 it "
+        "is lampiran_e_unreconciled: MOF's split does not add up to the audited line, so it is not used.")
 
     def get_gap_view(self, name, geo=None, year=None, transfer=None):
         import csv

@@ -71,6 +71,7 @@ from decimal import Decimal
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from warehouse import CORE, REPO, Warehouse, fmt  # noqa: E402
+import lampiran_e  # noqa: E402
 
 META = os.path.join(REPO, "meta")
 YEARS = [str(y) for y in range(2009, 2025) if y != 2015]
@@ -89,7 +90,12 @@ STATE_ALIASES = {"MY-07": ["pulau pinang", "penang"], "MY-05": ["negeri sembilan
 FIELDS_FACT = ["placement_id", "period_code", "entity_id", "maksud_code", "projek_code", "name_bm", "amount",
                "geo_code", "geo_method", "geo_confidence", "geo_evidence", "basis", "edition_id", "file_id",
                "pdf_page", "printed_page", "l1_ref"]
+# D30: the class grants Lampiran E splits by state that are placed (special_annual is placed by name already; the
+# B.12 grants are paid out of a trust account; tourism and the EFT have no PKKP line to reconcile to)
+SPLIT_GRANTS = ("capitation", "road_maintenance", "revenue_growth", "gtbkk", "state_services", "concurrent_list",
+                "libraries", "museums", "petroleum_duty_compensation", "street_lighting")
 FIELDS_GAP = ["geo_code", "name", "year", "projects_stated_rm", "projects_parsed_rm", "grants_by_name_rm",
+              "grants_split_by_payer_rm",
               "placed_rm", "projects_multiple_states_rm", "projects_peninsula_rm", "projects_none_rm", "not_itemised_rm",
               "federal_total_rm", "devex_projects_total_rm", "placed_share", "publishable", "note",
               "caveats", "federal_source_obs_ids", "release_id"]
@@ -222,6 +228,13 @@ def main():
             grants[(f["geo_code"], f["period_code"])] += Decimal(f["amount"])
     n_stated = sum(1 for f in flows if f["geo_method"] == "stated" and f["period_code"] in YEARS)
     flow_years = {f["period_code"] for f in flows}
+    # D30: class grants placed at the payer's own split (Lampiran E), reconciled grants only
+    ok, le = lampiran_e.reconciled(), lampiran_e.cells()
+    split = defaultdict(Decimal)
+    split_years = set(ok)
+    for (y, geo, g), c in le.items():
+        if y in YEARS and geo != "MY" and g in SPLIT_GRANTS and g in ok.get(y, {}) and c["amount_rm"]:
+            split[(geo, y)] += Decimal(c["amount_rm"])
 
     states = sorted(c for c, g in w.geo.items() if g["geo_level"] == "state")
     fed = {}
@@ -238,13 +251,14 @@ def main():
         for f in fy:
             by[f["geo_code"]][f["geo_method"]] += Decimal(f["amount"])
         total, ids = fed.get(y, (None, ""))
-        placed_all = sum(sum(by[g][m] for m in PLACED) + grants[(g, y)] for g in states)
+        placed_all = sum(sum(by[g][m] for m in PLACED) + grants[(g, y)] + split[(g, y)] for g in states)
         share = (placed_all / total) if total else None
         pub = share is not None and share >= PLACED_MIN
         note = "" if pub else (f"amounts by state are kept here for verification and withheld by the tools and from "
                                f"publication: only {float(share):.1%} of federal spending in {y} can be placed by state "
-                               "(projects whose name names one place, and grants to a named state government or "
-                               "territory administration), so a state's amount is a floor of what the federal accounts "
+                               "(projects whose name names one place, grants to a named state government or "
+                               "territory administration, and from FY2019 the class grants at MOF's own split by state, "
+                               "Lampiran E), so a state's amount is a floor of what the federal accounts "
                                "place there, not what it received; salaries, subsidies, cash transfers and most projects "
                                "have no place in the federal accounts. Guard: 60%." if share is not None
                                else "federal total not held")
@@ -255,20 +269,24 @@ def main():
         for g in states + ["_unallocated", "MY"]:
             if g in states:
                 st, pa, gr = by[g]["stated_state"], by[g]["parsed_district"] + by[g]["parsed_place"], grants[(g, y)]
+                sp = split[(g, y)]
                 multi = pen = none = ni = Decimal(0)
                 multi = pen = none = ni = None  # not applicable to a state: unplaced money has no state
             elif g == "_unallocated":
-                st = pa = gr = Decimal(0)
+                st = pa = gr = sp = Decimal(0)
                 multi, pen, none, ni = by[g]["multiple_states"], by[g]["peninsula"], by[g]["none"], nonitem
             else:
                 st = sum(by[s]["stated_state"] for s in states)
                 pa = sum(by[s]["parsed_district"] + by[s]["parsed_place"] for s in states)
                 gr = sum(grants[(s, y)] for s in states)
+                sp = sum(split[(s, y)] for s in states)
                 u = by["_unallocated"]
                 multi, pen, none, ni = u["multiple_states"], u["peninsula"], u["none"], nonitem
             yr_rows.append(dict(geo_code=g, name=w.geo.get(g, {}).get("name_bm", "") if g != "_unallocated" else
                                 "not placed", year=y, projects_stated_rm=fmt(st), projects_parsed_rm=fmt(pa),
-                                grants_by_name_rm=fmt(gr) if y in flow_years else "", placed_rm=fmt(st + pa + gr),
+                                grants_by_name_rm=fmt(gr) if y in flow_years else "",
+                                grants_split_by_payer_rm=fmt(sp) if y in split_years else "",
+                                placed_rm=fmt(st + pa + gr + sp),
                                 projects_multiple_states_rm=fmt(multi) or "", projects_peninsula_rm=fmt(pen) or "",
                                 projects_none_rm=fmt(none) or "",
                                 not_itemised_rm=fmt(ni) or "", federal_total_rm=fmt(total) if total else "",
@@ -288,6 +306,16 @@ def main():
         "PASS" if g_sum == g_ref else "FAIL", f"{n_stated} flows, {fmt(g_ref)}" + ("" if g_sum == g_ref else f" vs {fmt(g_sum)}"))
     add("P5 the 16 places + not placed = every project leaf, each year", "core/gap_federal_placement.csv",
         "PASS" if not bad5 else "FAIL", "ok" if not bad5 else str(bad5))
+    # P7 (D30): what is placed at the payer's split equals, grant by grant, the Lampiran E national total of the
+    # reconciled grants (and so PKKP's audited line within RM2)
+    bad7 = []
+    for y in sorted(split_years & set(YEARS)):
+        want = sum(Decimal(le[(y, "MY", g)]["amount_rm"] or "0") for g in SPLIT_GRANTS if g in ok[y] and (y, "MY", g) in le)
+        got = sum(split[(s, y)] for s in states)
+        if want != got:
+            bad7.append(f"{y}: {fmt(got)} vs {fmt(want)}")
+    add("P7 grants split by the payer equal Lampiran E's reconciled national totals", "core/gap_federal_placement.csv",
+        "PASS" if not bad7 else "FAIL", f"FY{min(split_years)}-{max(split_years)}" + (f"; {bad7}" if bad7 else ""))
     add("P6 placed_share in [0, 1]", "core/gap_federal_placement.csv", "PASS" if not bad6 else "FAIL",
         "ok" if not bad6 else str(bad6))
 
