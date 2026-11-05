@@ -119,7 +119,9 @@ SPECS: list[tuple[str, str, str, str]] = [
      r"(kutipan |terimaan )?hasil( sebenar)?( kerajaan negeri)?"
      r"( pada tahun \d{4})? berbanding anggaran"),
     ("hasil_kategori", "revenue", "akaun_hasil_disatukan",
-     _PRE + r"(kutipan|terimaan) hasil( sebenar)?( kerajaan(?: negeri)?)? "
+     # Sarawak prints `KUTIPAN / PUNGUTAN HASIL NEGERI PADA TAHUN ...` (verifier 2026-11-05: its federal-grants
+     # head was missed in 7 volumes because `Hasil Negeri` without `Kerajaan` did not match)
+     _PRE + r"(kutipan|terimaan|pungutan) hasil( sebenar)?( kerajaan)?( negeri)? "
      r"(berbanding|" + _PER + r")"),
     ("hasil_penyumbang_utama", "revenue", "akaun_hasil_disatukan",
      r"penyumbang utama hasil|" + _PRE + r"hasil utama kerajaan negeri"),
@@ -145,7 +147,10 @@ SECTIONED_SPECS = {"prestasi_kewangan"}
 # local-authority halves of the volume reuse similar wording.
 _EXCLUDE = re.compile(
     r"\b(agensi|badan berkanun|pihak berkuasa tempatan|pbt|bbn|syarikat|"
-    r"subsidiari|majlis agama|msns|mbsj|mdsb|ppas)\b", re.I)
+    r"subsidiari|majlis agama|msns|mbsj|mdsb|ppas)\b|"
+    # an ageing table (`... PADA TAHUN 2021 MENGIKUT TEMPOH TUNGGAKAN`) is a different grain from the receivables
+    # statement; its bucket JUMLAH was read as receivables_total (Selangor CMD.52.2022 J61, verifier 2026-11-05)
+    r"\bmengikut tempoh tunggakan\b", re.I)
 
 
 def classify(heading: str, in_state_section: bool) -> tuple[str, str, str] | None:

@@ -526,6 +526,8 @@ class Tools:
         if transfer is not None and name != "gap_federal_vs_state":
             return {"held": False, "answer": "transfer applies to gap_federal_vs_state only",
                     "release_id": self.w.release_id}
+        if transfer is not None:
+            transfer = str(transfer).strip().lower().replace(" ", "_").replace("-", "_")
         if transfer is not None and transfer not in ("capitation", "concurrent_list", "named"):
             return {"held": False, "answer": f"unknown transfer {transfer!r}: use capitation, concurrent_list or named",
                     "release_id": self.w.release_id}
@@ -544,7 +546,9 @@ class Tools:
             return {"held": False, "answer": f"no row for {geo or 'any place'} in {year or 'any year'}"
                                              + (f" for {transfer}" if transfer else "")
                                              + f"; the view covers {years_note}"
-                                             + ("; named grants exist only for Kedah, Selangor, Sabah and Sarawak"
+                                             + ("; this view's named grants are those to a STATE government "
+                                                "(Kedah, Selangor, Sabah, Sarawak); the Federal Territories' "
+                                                "administrations' grants are in get_flows (to=MY-14/15/16)"
                                                 if transfer == "named" else ""),
                     "release_id": self.w.release_id}
         for r in rs:

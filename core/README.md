@@ -323,7 +323,11 @@ Auditor General's state report prints them; capitation, Concurrent List, and Sab
 * **Printings**: every printing of a state's figure is listed; Kedah FY2020's Concurrent List grant is 37.51 in its
   own report (CMD.40.2021 J10) and 31.74 in the next (CMD.42.2022 J10), kept as printed (check GF5).
 * A state figure exists only where the grant is among the state's top revenue items: `state_not_printed` is not
-  zero (CV26). Tool: `get_gap_view('gap_federal_vs_state', geo, year, transfer)`.
+  zero (CV26); where the state's table could not be parsed the status says `state_table_not_extracted`, and a
+  figure printed only in a later volume is listed but not compared (`printed_in_later_volume_only`: two later
+  columns were found misaligned on the page). Page-proved notes on single rows: `meta/gap_note.csv`. Blind
+  verifier: `qa/audits/2026-11-05_phase3_gap_fed_verifier.md` (418 of 418 re-derived; 59 of 59 state figures
+  right on the page). Tool: `get_gap_view('gap_federal_vs_state', geo, year, transfer)`.
 
 ## gap_need_vs_money (state level)
 

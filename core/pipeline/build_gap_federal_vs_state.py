@@ -28,6 +28,12 @@ Method (declared 2026-11-05, before any result of this view was looked at):
   volume and later volumes) is listed, and printings that disagree are flagged, both kept as printed.
 * A missing state figure is 'not printed', never zero (CV26): the grants are printed only among a state's top
   revenue items. Flows are a floor (CV25). Status words, not rankings; no state is compared with another.
+* Amended 2026-11-05 after the blind verifier (qa/audits/2026-11-05_phase3_gap_fed_verifier.md), before any
+  conclusion was drawn from the view: a figure printed only in a LATER volume is listed but never compared
+  (status printed_in_later_volume_only: two such later columns were found misaligned on the page, Kedah and Sabah
+  2020); where the state's own top-revenue table for that year is registered as not parsed
+  (_unparsed_tables_<state>.csv) the status is state_table_not_extracted, not state_not_printed; page-proved notes
+  on single rows come from meta/gap_note.csv.
 """
 import csv
 import glob
@@ -83,8 +89,39 @@ def printings(code):
     return out
 
 
+def no_state_status(pr, state, y, unparsed, notes):
+    """Why there is no own-year state figure: printed only later, table not parsed, or not printed."""
+    if pr:
+        notes.append("printed only in a later volume (listed, not compared: later columns have been found "
+                     "misaligned on the page)")
+        return "printed_in_later_volume_only"
+    if (state, y) in unparsed:
+        notes.append(f"the state's top-revenue table {unparsed[(state, y)]} is registered as not parsed: the grant "
+                     "may be printed there")
+        return "state_table_not_extracted"
+    return "state_not_printed"
+
+
+def unparsed_years():
+    """(state, fiscal_year) whose own top-revenue table could not be parsed (registered, with the reason)."""
+    out = {}
+    for p in glob.glob(os.path.join(STATES_DIR, "*", "_unparsed_tables_*.csv")):
+        with open(p, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r["spec_id"] in ("hasil_penyumbang_utama", "hasil_kategori"):
+                    out[(r["state"], r["fiscal_year"])] = f"{r['source_file'][:-4]} J{r['jadual']} p{r['pdf_page']}"
+    return out
+
+
+def gap_notes():
+    with open(os.path.join(REPO, "meta", "gap_note.csv"), newline="", encoding="utf-8") as f:
+        return {(r["transfer"], r["geo_code"], r["year"]): r for r in csv.DictReader(f)
+                if r["view"] == "gap_federal_vs_state"}
+
+
 def main():
     w = Warehouse()
+    unparsed, notes_reg = unparsed_years(), gap_notes()
     places = sorted(c for c, g in w.geo.items() if g["geo_level"] == "state")
     gov = {}                                  # geo -> state government entity
     for c in w.entity_codes:
@@ -155,8 +192,10 @@ def main():
                         row["status"] = "federal_not_held"
                         notes.append(f"PKKP FY{y} is not loaded (the image-only scan), so the federal side is "
                                      "not held")
+                        if obs:
+                            agg_n += 1                # the state still printed it: counted, not compared
                     elif not obs:
-                        row["status"] = "state_not_printed"
+                        row["status"] = no_state_status(pr, state_name[g], y, unparsed, notes)
                     else:
                         row["status"] = "share"
                         row["state_share_of_federal"] = fmt(Decimal(obs["value"]) / fed_class, 4)
@@ -175,14 +214,18 @@ def main():
                     if y not in fed_years:
                         row["status"] = "federal_not_held"
                     elif not obs:
-                        row["status"] = "state_not_printed"
-                        notes.append("the state prints no line for all its federal grants in this year")
+                        row["status"] = no_state_status(pr, state_name[g], y, unparsed, notes)
+                        if row["status"] == "state_not_printed":
+                            notes.append("the state prints no line for all its federal grants in this year")
                     else:
                         ok = Decimal(obs["value"]) >= Decimal(row["federal_paid_rm"])
                         row["status"] = "consistent" if ok else "inconsistent"
                         notes.append("the state's record of all its federal grants is "
                                      + ("at least" if ok else "LESS than") + " the grants paid to it by name"
                                      + (" (it also receives class grants, so it should be more)" if ok else ""))
+                reg = notes_reg.get((t, g, y))
+                if reg:
+                    notes.append(f"{reg['note']} [{reg['proof']}]")
                 row["note"] = "; ".join(notes)
                 row["caveats"] = ";".join(sorted(cv))
                 out.append(row)
@@ -197,6 +240,7 @@ def main():
                     agg["federal_flow_ids"] = ";".join(f["flow_id"] for f in fl)
                 if y not in fed_years:
                     agg["status"] = "federal_not_held"
+                    agg["note"] = f"{agg_n} of 13 states print this grant; the federal side is not held for FY{y}"
                 elif not agg_n:
                     agg["status"] = "state_not_printed"
                 else:

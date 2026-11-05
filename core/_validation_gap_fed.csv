@@ -1,6 +1,6 @@
 check,scope,status,note
-GF2 capitation: the printing states' receipts are at most the federal class total,2014,INFO,"consistent: 3 states, recorded 118770000 vs federal 380890620"
-GF2 capitation: the printing states' receipts are at most the federal class total,2015,INFO,"federal_not_held: 0 states, recorded - vs federal -"
+GF2 capitation: the printing states' receipts are at most the federal class total,2014,INFO,"consistent: 4 states, recorded 133330000 vs federal 380890620"
+GF2 capitation: the printing states' receipts are at most the federal class total,2015,INFO,"federal_not_held: 3 states, recorded - vs federal -"
 GF2 capitation: the printing states' receipts are at most the federal class total,2016,INFO,"consistent: 4 states, recorded 142450000 vs federal 397390560"
 GF2 capitation: the printing states' receipts are at most the federal class total,2017,INFO,"consistent: 4 states, recorded 143990000 vs federal 401604420"
 GF2 capitation: the printing states' receipts are at most the federal class total,2018,INFO,"consistent: 4 states, recorded 145520000 vs federal 415836040"
@@ -11,7 +11,7 @@ GF2 capitation: the printing states' receipts are at most the federal class tota
 GF2 capitation: the printing states' receipts are at most the federal class total,2023,INFO,"consistent: 2 states, recorded 93970000 vs federal 426640380"
 GF2 capitation: the printing states' receipts are at most the federal class total,2024,INFO,"consistent: 1 states, recorded 16360000 vs federal 430642500"
 GF2 concurrent_list: the printing states' receipts are at most the federal class total,2014,INFO,"consistent: 2 states, recorded 81550000 vs federal 524299792"
-GF2 concurrent_list: the printing states' receipts are at most the federal class total,2015,INFO,"federal_not_held: 0 states, recorded - vs federal -"
+GF2 concurrent_list: the printing states' receipts are at most the federal class total,2015,INFO,"federal_not_held: 2 states, recorded - vs federal -"
 GF2 concurrent_list: the printing states' receipts are at most the federal class total,2016,INFO,"consistent: 2 states, recorded 83780000 vs federal 687188278.97"
 GF2 concurrent_list: the printing states' receipts are at most the federal class total,2017,INFO,"consistent: 1 states, recorded 47770000 vs federal 723707264.89"
 GF2 concurrent_list: the printing states' receipts are at most the federal class total,2018,INFO,"consistent: 1 states, recorded 36330000 vs federal 725872450.09"
