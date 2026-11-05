@@ -100,7 +100,8 @@ class Tools:
         """publisher: 'pkkp', 'bnm', 'mof', 'dosm' or 'anggaran' (the edition's publisher). Without it, every
         publisher's figure for the same concept comes back, each cited: where they differ, the difference is the
         answer. entity: who spends (federal_gov.vote.*): a vote code (B.45, P.45; resolved year by year), a state
-        (MY-03) or an entity_id."""
+        (MY-03) or an entity_id. A plan's target (basis 'target') comes back only when asked for by basis; to set
+        targets beside outcomes use get_gap_view('gap_target_vs_outcome')."""
         bad = self._bad_input(indicator=indicator, geo=geo, start=start, end=end, breakdown=breakdown, basis=basis,
                               publisher=publisher, entity=entity)
         if bad:
@@ -132,7 +133,7 @@ class Tools:
         if ent is None:
             return {"held": False, "answer": why, "release_id": self.w.release_id}
         rs = [r for r in self.w.obs if r["indicator_code"] == indicator and r["geo_code"] == geo
-              and r["breakdown_key"] == breakdown and (not basis or r["basis"] == basis)
+              and r["breakdown_key"] == breakdown and (r["basis"] == basis if basis else r["basis"] != "target")
               and (not publisher or r["edition_id"].split(":")[0] == publisher)
               and self._period_in(r["period_code"], start, end) and ent(r)]
         vote = indicator.startswith("federal_gov.vote.")
