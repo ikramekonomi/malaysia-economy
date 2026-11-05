@@ -518,6 +518,43 @@ q("8", "M3 growth from 2026-05 back to 2025-05, with the months given the wrong 
   {"operation": "growth", "a": series("money.m3", "MY", "2025-05"), "b": series("money.m3", "MY", "2026-05")},
   "refused", "earlier period", kind="trap_incomparable")
 
+# ---------------------------------------------------------------- Phase 3: the entity spine
+# expected names come from PKKP's own dim_maksud (L1), never from meta/entity_register.csv
+def pkkp_name(code, year):
+    for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", str(year), "dim_maksud.csv"))):
+        if r["maksud_code"] == code:
+            return r["name_bm"]
+    raise LookupError(f"{code} not printed in PKKP FY{year}")
+
+
+def ent(code, year=None):
+    return {"code": code, "year": year} if year is not None else {"code": code}
+
+
+q("5", "Which body was supply vote B.45 in 2024?", "get_entity", ent("B.45", 2024), "printed_name",
+  pkkp_name("B.45", 2024))
+q("5", "Which ministry held vote B.23 in 2019 (portfolio reshuffled since 2009)?", "get_entity", ent("B.23", 2019),
+  "printed_name", pkkp_name("B.23", 2019))
+q("5", "Is vote B.41 in 2013 the same body as vote B.63 in 2020 (Education renumbered)?", "entity_same",
+  {"a": ent("B.41", 2013), "b": ent("B.63", 2020)}, "same_entity", "same")
+q("5", "Is vote B.49 in 2012 the same body as B.64 in 2021 (Higher Education renumbered)?", "entity_same",
+  {"a": ent("B.49", 2012), "b": ent("B.64", 2021)}, "same_entity", "same")
+q("5", "Is development vote P.29 in 2020 (after B.29 ended in 2018) the same body as B.29 in 2017?", "entity_same",
+  {"a": ent("P.29", 2020), "b": ent("B.29", 2017)}, "same_entity", "same")
+q("5", "Is B.15 in 2019 the same body as B.15 in 2024?", "entity_same",
+  {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "same_entity", "different", kind="trap_identity")
+q("5", "Does the answer say the B.15 split is not yet confirmed by a person?", "entity_same",
+  {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "entity_caveat", "rule D26", kind="trap_identity")
+q("5", "Is B.26 in 2009 the same body as B.26 in 2020?", "entity_same",
+  {"a": ent("B.26", 2009), "b": ent("B.26", 2020)}, "same_entity", "different", kind="trap_identity")
+q("5", "Who is B.15, with no year given?", "get_entity", ent("B.15"), "entity_count", "2", kind="trap_identity")
+q("5", "Which body is T.13 (debt service charges)?", "get_entity", ent("T.13"), "not_held", kind="trap_identity")
+q("5", "Which body held vote B.99 in 2020?", "get_entity", ent("B.99", 2020), "not_held", kind="trap_missing")
+q("5", "Is MY-03 the Kelantan state government (not the place)?", "get_entity", ent("MY-03"),
+  "entity_field:gfs_sector", "state_gov")
+q("5", "Does a state-government figure name the government it belongs to?", "get_series",
+  series("state_gov.revenue.total", "MY-03", "2023"), "field_contains:entity_name", "Kelantan")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

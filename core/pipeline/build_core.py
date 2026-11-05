@@ -56,6 +56,25 @@ def rows(path):
         return list(csv.DictReader(f))
 
 
+_BRIDGE = None
+
+
+def entity(system, code, year):
+    """The entity_id of a readable code in a year (core/bridge_entity_code.csv, built by build_entities.py).
+    Stops when the code resolves to no entity or to two: the spine is the only place identity is decided."""
+    global _BRIDGE
+    if _BRIDGE is None:
+        _BRIDGE = rows(os.path.join(REPO, "core", "bridge_entity_code.csv"))
+    y = int(str(year)[:4])
+    hit = sorted({c["entity_id"] for c in _BRIDGE if c["code_system"] == system and c["code"] == code
+                  and (not c["valid_from"] or int(c["valid_from"]) <= y)
+                  and (not c["valid_to"] or y <= int(c["valid_to"]))})
+    if len(hit) != 1:
+        sys.exit(f"build_core: {system}:{code} in {year} resolves to {hit or 'no entity'} "
+                 "(run core/pipeline/build_entities.py; a new code needs a person, rule D26)")
+    return hit[0]
+
+
 def dec(s):
     s = (s or "").strip().replace(",", "")
     if s in ("", "-", "–", "NA", "nan"):
@@ -461,7 +480,7 @@ def build_states(obs):
             v = -abs(v)
         g = STATE_ISO[r["state"]]
         obs.add(indicator_code=STATE_LINES[r["line_code"]], geo_code=g, period_code=r["fiscal_year"],
-                entity_id=f"state_gov:{g}", basis="audited", edition_id=f"states:{r['report']}",
+                entity_id=entity("state_gov", g, r["fiscal_year"]), basis="audited", edition_id=f"states:{r['report']}",
                 vintage=r["fiscal_year"], value=v, value_printed=r["amount_printed"], unit_printed=r["unit_printed"],
                 precision_printed="10000" if "Juta" in (r["unit_printed"] or "") else "",
                 estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
@@ -488,7 +507,7 @@ def build_federal(obs):
             if v is None:
                 continue
             src = r.get(f_col, "") if f_col else ""
-            obs.add(indicator_code=ind, geo_code="MY", period_code=r["year"], entity_id="federal_gov:MY",
+            obs.add(indicator_code=ind, geo_code="MY", period_code=r["year"], entity_id=entity("federal_gov", "MY", r["year"]),
                     basis="audited", edition_id=f"pkkp:{src or 'FY' + r['year']}", vintage=r["year"], value=v,
                     value_printed=r[col], unit_printed="RM", estimate_method="accounting", reliability="ok",
                     file_id=sha, pdf_page=r.get(p_col, "") if p_col else "",
@@ -529,7 +548,7 @@ def build_federal_reported(obs):
             v = dec(r[col])
             if v is None:
                 continue
-            obs.add(indicator_code=ind, geo_code="MY", period_code=r["year_dt"], entity_id="federal_gov:MY",
+            obs.add(indicator_code=ind, geo_code="MY", period_code=r["year_dt"], entity_id=entity("federal_gov", "MY", r["year_dt"]),
                     basis="actual", edition_id=f"bnm:msb_3_1@{d}", vintage=d, value=v * m, value_printed=r[col],
                     unit_printed="RM million", precision_printed="0.000000000001", estimate_method="accounting",
                     reliability="ok", file_id=vin["sha256"], table_ref="BNM MSB 3.1 Federal Government Finance",
@@ -550,7 +569,7 @@ def build_federal_reported(obs):
         sha = reg.get((str(r["edition"]), r["source_file"]))
         if not sha:
             sys.exit(f"MOF {r['edition']} {r['source_file']}: no sha256 in meta/registry_file.csv")
-        obs.add(indicator_code=MOF_FED[line], geo_code="MY", period_code=str(year), entity_id="federal_gov:MY",
+        obs.add(indicator_code=MOF_FED[line], geo_code="MY", period_code=str(year), entity_id=entity("federal_gov", "MY", year),
                 basis="actual", edition_id=f"mof:tinjauan_fiskal@{r['edition']}", vintage=str(r["edition"]),
                 value=v * m, value_printed=r["amount_rm_juta"], unit_printed="RM million", precision_printed="1",
                 estimate_method="accounting", reliability="ok", file_id=sha, pdf_page=r["pdf_page"],
@@ -821,6 +840,11 @@ def checks(obs, geo, per, ind, brk, editions):
                 stale.append(ds)
     add("C14 the file read is the vintage logged as current (sha256; national series)", "fact_observation",
         "PASS" if not stale else "FAIL", f"{len(files)} files" + (f"; differ: {stale}" if stale else ", all match"))
+    ents = {r["entity_id"] for r in rows(os.path.join(REPO, "core", "dim_entity.csv"))} | {"_none"}
+    stray = sorted({r["entity_id"] for r in obs.rows} - ents)
+    add("C15 every entity_id is a registered entity (core/dim_entity.csv) or _none", "fact_observation",
+        "PASS" if not stray else "FAIL", f"{len({r['entity_id'] for r in obs.rows}) - 1} entities used"
+        + (f"; unregistered {stray}" if stray else ""))
     add("C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)", "fact_observation",
         "PASS" if not bad else "FAIL", f"{n} rows checked" + (f"; {len(bad)} differ, e.g. {bad[:3]}" if bad else ""))
     return out

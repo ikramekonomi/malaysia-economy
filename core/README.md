@@ -7,9 +7,10 @@ from `sources/` (L1) and rebuilt by the scripts in `core/pipeline/`; never edit 
 hand (golden rule 1). CI rebuilds them on every PR and fails if the committed files differ.
 
 ```
+python3 core/pipeline/build_entities.py           # dim_entity + bridge_entity_code + entity_name (Phase 3)
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 146 questions against the agent tools
+python3 qa/run_eval.py                            # 159 questions against the agent tools
 python3 qa/reproduce_curated.py                   # curated tables rebuilt from core, digit for digit
 ```
 
@@ -23,6 +24,9 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_indicator.csv` | 63 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
 | `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
 | `fact_observation.csv` | 134,612 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
+| `dim_entity.csv` | 59 | who: the federal government, 13 state governments, 45 federal votes (Phase 3) |
+| `bridge_entity_code.csv` | 99 | readable code → entity, with validity years and proof |
+| `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -177,6 +181,40 @@ because the own-volume edition for those years prints no such line.
   and traps (Selangor's CPI over Malaysia's, Kuala Lumpur's minus Sabah's, growth across two places,
   a month of exports over a year of GDP, reversed months, a CPI division before DOSM prints it, the OPR).
 
+## The entity spine (Phase 3, 2026-11-05)
+
+Who spends, receives, audits or is audited (DATA_MODEL §4.5). The decisions are committed data in
+`meta/`; `core/pipeline/build_entities.py` builds `dim_entity`, `bridge_entity_code` and
+`entity_name` from them and from the votes printed in every PKKP volume (FY2009-2024) and Anggaran
+book (2024-2026).
+
+| File | What it holds |
+|---|---|
+| `meta/entity_register.csv` | every `entity_id` ever issued (E000001 …), with type, sector, parent, reason and `decision_status`; never reused, never deleted (check E1: IDs contiguous) |
+| `meta/entity_code.csv` | every readable code of an entity (`federal_gov` MY, `state_gov` MY-01…MY-13, `maksud_bekalan` B.xx, `maksud_pembangunan` P.xx) with its years and a proof |
+| `meta/spending_head.csv` | T.01-T.14 (Tanggungan) and P.70 (contingency reserve): spending heads, not bodies |
+
+The identity rule (decision D26), declared before any spending is loaded against it:
+
+* **A federal body is its supply vote.** A B code keeps one ID through renames and portfolio
+  changes while it is printed every year (B.23 has held four portfolios since 2009; it is one vote).
+* **Its P code is the same body**, including the years after the B vote ends: P.29 is printed
+  2019-2021 after B.29 (Energy, Green Technology and Water) ended in 2018, paying for its projects.
+* **A B vote printed again after a lapse is a new body** unless a person links it. B.15 (Economic
+  Affairs 2018-2020; Economy from 2023), B.26 (2009; Entrepreneur Development from 2018) and B.33
+  (Environment and Water 2020-2022; Energy Transition from 2024) are split this way and marked
+  `proposed`; the tools say so on every answer about them.
+* **Renumberings link only with a proof:** B.41→B.63 (Education) and B.49→B.64 (Higher Education),
+  approved before the register (`curated/pipeline/build_ministry_fiscal.py`).
+* **Budget books do not extend a lineage:** the 2024 and 2025 books reprint B.32 (Federal
+  Territories, ended 2022) with zeros; the code resolves to the old ministry, nothing more.
+
+A code printed in a source with no entity for that year **stops the build** and is listed: an ID is
+issued only by a person. Checks E1-E8 are in `_validation_entity.csv`. Core's state and federal rows
+carry entity IDs (check C15), every citation names its entity, and the tool `get_entity(code, year)`
+resolves `B.45` + 2024, `MY-03` or `E000052`, refuses a spending head (`T.13`) and lists every body a
+code ever named when no year is given.
+
 ## gap_need_vs_money (state level)
 
 **Question:** does money follow need? The method was declared before results were seen and is in
@@ -202,14 +240,14 @@ sample against the archived pages** (`docs/DATA_MODEL.md` §7.4).
 ## The agent tools (`apps/tools/warehouse_tools.py`)
 
 `find_indicator`, `get_series`, `get_distribution`, `compare_geos`, `derive`, `explain`,
-`list_documents`, `get_gap_view`. No SQL. Every number comes with its citation, `release_id` (a hash of
+`get_entity`, `list_documents`, `get_gap_view`. No SQL. Every number comes with its citation, `release_id` (a hash of
 `fact_observation.csv`), uncertainty and caveats (`meta/caveat.csv`). Arithmetic only through
 `derive` (rules in `meta/derivation.csv`), which refuses mismatched inputs: different years,
 units or price bases, a median divided by population, growth across two places. `compare_geos`
 returns **bands**, not ranks (rule BAND1: a new band starts after a step of more than 1 percentage
 point, or 5% for other units; declared before results were seen), with the national value.
 
-`qa/eval_questions.csv` (146 questions, made by `qa/make_eval_questions.py` from L1 directly)
+`qa/eval_questions.csv` (159 questions, made by `qa/make_eval_questions.py` from L1 directly)
 includes traps: incomparable pairs, small-area rankings, missing documents, and document text that
 must come back marked as data. `qa/run_eval.py` runs them in CI.
 

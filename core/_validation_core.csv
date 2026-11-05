@@ -71,4 +71,5 @@ C7 states sum to Malaysia (pop.total),pop.total,PASS,largest gap 200 persons ove
 "C12 trade balance = exports - imports (DOSM trade_headline, to the ringgit)",trade.balance,PASS,"441 months, all exact"
 C13 banking-system loans = commercial + Islamic + investment banks (BNM MSB 1.18),credit.loans.banking_system,PASS,"59 months, within RM0.01 million"
 C14 the file read is the vintage logged as current (sha256; national series),fact_observation,PASS,"4 files, all match"
+C15 every entity_id is a registered entity (core/dim_entity.csv) or _none,fact_observation,PASS,14 entities used
 "C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,134612 rows checked
