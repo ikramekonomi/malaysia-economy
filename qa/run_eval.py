@@ -112,6 +112,17 @@ def run(t, q):
     if check == "first_indicator":
         ids = [i["indicator_code"] for i in res.get("indicators", [])]
         return bool(ids) and ids[0] == exp, ",".join(ids[:3])
+    if check == "flow_value":
+        fl = res.get("flows", [])
+        return len(fl) == 1 and Decimal(fl[0]["amount"]) == Decimal(exp), ";".join(f["amount"] for f in fl)
+    if check == "flow_count":
+        return str(len(res.get("flows", []))) == exp, str(len(res.get("flows", [])))
+    if check == "class_flow_count":
+        n = len(res.get("not_split_by_state", {}).get("flows", []))
+        return str(n) == exp, str(n)
+    if check == "flow_geo":
+        fl = res.get("flows", [])
+        return bool(fl) and all(f["geo_code"] == exp for f in fl), ",".join(sorted({f["geo_code"] for f in fl}))
     if check == "same_entity":
         return res["same"] == exp, f"{res['same']} {res['ids']}"
     if check == "entity_caveat":

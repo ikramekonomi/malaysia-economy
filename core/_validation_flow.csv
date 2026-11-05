@@ -1,0 +1,7 @@
+check,scope,status,detail
+F1 every T.12 programme 010000 activity has a recipient rule (meta/flow_rule.csv),fact_money_flow,PASS,140 flows
+F2 the printed activity name matches its rule (the code has not moved),fact_money_flow,PASS,ok
+"F3 a year's flows equal T.12 programme 010000's printed JUMLAH, to the sen",fact_money_flow,PASS,14 years
+F4 every flow's entities are registered (core/dim_entity.csv),fact_money_flow,PASS,ok
+F5 the grants stay inside the T.12 head's audited total in core,fact_money_flow,PASS,"14 years, grants <= T.12 head every year"
+F6 years not loaded (declared),fact_money_flow,INFO,"FY2009: no activity tier in the FY2009 presentation; FY2015: image-only scan: activity codes misaligned, leaf amounts OCR-provisional"

@@ -9,8 +9,9 @@ hand (golden rule 1). CI rebuilds them on every PR and fails if the committed fi
 ```
 python3 core/pipeline/build_entities.py           # dim_entity + bridge_entity_code + entity_name (Phase 3)
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
+python3 core/pipeline/build_flows.py              # fact_money_flow.csv + _validation_flow.csv (Phase 3)
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 182 questions against the agent tools
+python3 qa/run_eval.py                            # 193 questions against the agent tools
 python3 qa/reproduce_curated.py                   # curated tables rebuilt from core, digit for digit
 ```
 
@@ -24,8 +25,9 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_indicator.csv` | 65 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
 | `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
 | `fact_observation.csv` | 138,511 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
-| `dim_entity.csv` | 59 | who: the federal government, 13 state governments, 45 federal votes (Phase 3) |
-| `bridge_entity_code.csv` | 105 | readable code → entity, with validity years, scope and proof |
+| `dim_entity.csv` | 61 | who: the federal government, 13 state governments, 45 federal votes, 2 class recipients (Phase 3) |
+| `fact_money_flow.csv` | 140 | money moving from one body to another: federal grants to the states (PKKP T.12), FY2010-2024 except FY2015 |
+| `bridge_entity_code.csv` | 107 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
@@ -254,6 +256,27 @@ printed total, cited to its volume and page:
   nobody, because Education printed as B.41 then), a state or an entity_id; `derive('growth')` refuses two
   different bodies or two budget books (rule DV3); `derive('difference')` of audited and budget_estimate is
   the budget-vs-outcome gap.
+
+## Money flows: federal grants to the states (Phase 3, 2026-11-05)
+
+`fact_money_flow.csv` holds money moving between two bodies (DATA_MODEL §5.2), only where the payer's accounts
+show it (D27). First slice: the federal grants and assignments to the states, Tanggungan T.12
+(programme 010000), one row per printed activity per year, audited, from PKKP's operating detail.
+
+* **Recipient by code, with a name guard** (`meta/flow_rule.csv`): the special annual grants to Sabah and
+  Sarawak and the annual payments to Selangor and Kedah go to that state's government (geo stated); the
+  capitation grant, the state road maintenance grants and the revenue growth grant go to the state
+  governments as a class (E000060), and the local authority grant to the local authorities as a class
+  (E000061), geo `_unallocated`: the federal accounts do not split them by state and they are not split here.
+* **Checks** (`_validation_flow.csv`): every activity has a rule (F1), its printed name matches (F2), a
+  year's flows equal the programme's printed JUMLAH to the sen (F3), entities registered (F4), the grants stay
+  inside the T.12 head (F5). FY2009 (no activity tier) and FY2015 (the image-only scan, OCR-provisional) are
+  not loaded (F6).
+* **Tool** `get_flows(to, frm, start, end)`: `to='MY-12'` returns Sabah's named grants and, beside them, the
+  class grants of those years (`not_split_by_state`); a state with no named grant gets the class grants and
+  an answer saying so. Caveat CV25.
+* **Not yet:** what each state records receiving (state accounts) matched to these flows; B.11 grants and
+  development grants to the states.
 
 ## gap_need_vs_money (state level)
 

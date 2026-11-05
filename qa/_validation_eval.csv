@@ -183,3 +183,12 @@ Q181,trap_source_defect,get_series,field:reliability,low,low,PASS
 Q182,fact,derive_chain,caveat,CV24,"CV17,CV23,CV24",PASS
 Q183,trap_incomparable,derive_chain,refused,one basis,growth compares one basis with itself; got budget_estimate -> audited. For budget against outcome in one year use derive('difference'),PASS
 Q184,fact,get_series,value,33951697947,33951697947,PASS
+Q185,fact,get_flows,flow_value,306000000,306000000.0,PASS
+Q186,fact,get_flows,flow_value,16000000,16000000.0,PASS
+Q187,fact,get_flows,flow_value,308412080.22,308412080.22,PASS
+Q188,trap_placement,get_flows,flow_geo,_unallocated,_unallocated,PASS
+Q189,trap_placement,get_flows,flow_count,0,0,PASS
+Q190,trap_placement,get_flows,class_flow_count,5,5,PASS
+Q191,trap_identity,get_flows,not_held,,unknown recipient or payer: MY-14,PASS
+Q192,trap_missing,get_flows,not_held,,"no flow held for that recipient/payer and period (held: federal grants to the states and local authorities, T.12, FY2010-2024 except FY2015)",PASS
+Q193,fact,get_flows,caveat,CV25,CV25,PASS

@@ -1,0 +1,11 @@
+maksud_code,program_code,aktiviti_code,name_must_contain,to_entity_id,geo_code,geo_method,purpose_en
+T.12,010000,010100,bilangan orang,E000060,,none,capitation grant to the state governments (printed: Pemberian Mengikut Bilangan Orang)
+T.12,010000,010200,mutu minimum,E000060,,none,"state road maintenance grant, roads at the minimum standard (printed: Penyelenggaraan Jalan Raya Negeri yang Mencapai Mutu Minimum)"
+T.12,010000,010300,substandard,E000060,,none,"state road maintenance grant, substandard roads (printed: Penyelenggaraan Jalan Raya Negeri yang Substandard)"
+T.12,010000,010400,sehala,E000060,,none,"state road maintenance, one-way roads on tourist islands (printed: ... Jalan Sehala di Pulau Destinasi Pelancongan)"
+T.12,010000,010500,sarawak,E000014,MY-13,stated,special annual grant to Sarawak (printed: Pemberian Khas Tahunan Sarawak)
+T.12,010000,010600,sabah,E000013,MY-12,stated,special annual grant to Sabah (printed: Pemberian Khas Tahunan Sabah)
+T.12,010000,010700,pertambahan hasil,E000060,,none,revenue growth grant to the state governments (printed: Pemberian Pertambahan Hasil)
+T.12,010000,010800,berkuasa tempatan,E000061,,none,"annual grant to local authorities, balancing method (printed: Pemberian Tahunan Kepada Pihak Berkuasa Tempatan)"
+T.12,010000,010900,selangor,E000011,MY-10,stated,annual payment to Selangor (printed: Pemberian Tahunan Selangor)
+T.12,010000,011000,kedah,E000003,MY-02,stated,annual payment to Kedah; from FY2020 with a special contribution (printed: Pemberian Tahunan [dan Sumbangan Khas] Kedah)

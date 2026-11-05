@@ -651,6 +651,34 @@ q("5", "Growth from Health's 2024 original estimate to its 2024 audited spending
 q("5", "Health's audited 2024 operating spending, asked with basis in capitals?", "get_series",
   {**vote("opex", 2024, "B.42"), "basis": "AUDITED"}, "value", s(pk("fact_opex_maksud", "B.42", 2024, "sebenar_rm")))
 
+# ---------------------------------------------------------------- Phase 3.4: money flows (PKKP T.12, from L1)
+def t12(year, aktiviti):
+    for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", str(year), "fact_opex_detail.csv"))):
+        if (r["maksud_code"] == "T.12" and r["program_code"] == "010000" and r["aktiviti_code"] == aktiviti
+                and r["row_type"] == "jumlah_aktiviti" and r["source_file"].startswith(str(year))):
+            return Decimal(r["sebenar_rm"])
+    raise LookupError(f"T.12 {year} {aktiviti}")
+
+
+q("5", "How much did the federal government pay Sabah as its special annual grant in 2024?", "get_flows",
+  {"to": "MY-12", "start": "2024", "end": "2024"}, "flow_value", s(t12(2024, "010600")))
+q("5", "How much did Sarawak receive as its special annual grant in 2022 (federal accounts)?", "get_flows",
+  {"to": "MY-13", "start": "2022", "end": "2022"}, "flow_value", s(t12(2022, "010500")))
+q("5", "What was the federal annual grant to local authorities in 2023?", "get_flows",
+  {"to": "local_authorities", "start": "2023", "end": "2023"}, "flow_value", s(t12(2023, "010800")))
+q("5", "Is the local-authority grant placed in any state?", "get_flows",
+  {"to": "local_authorities", "start": "2023", "end": "2023"}, "flow_geo", "_unallocated", kind="trap_placement")
+q("5", "How much capitation grant did Johor receive in 2020, by the federal accounts?", "get_flows",
+  {"to": "MY-01", "start": "2020", "end": "2020"}, "flow_count", "0", kind="trap_placement")
+q("5", "Does Johor's answer show the class grants the federal accounts do not split by state?", "get_flows",
+  {"to": "MY-01", "start": "2020", "end": "2020"}, "class_flow_count", "5", kind="trap_placement")
+q("5", "Federal grants to Kuala Lumpur's state government?", "get_flows", {"to": "MY-14"}, "not_held",
+  kind="trap_identity")
+q("5", "Federal grants to the states in 2015 (the image-only volume)?", "get_flows",
+  {"to": "state_governments", "start": "2015", "end": "2015"}, "not_held", kind="trap_missing")
+q("5", "Does a flow say what it can and cannot place?", "get_flows", {"to": "MY-12", "start": "2024", "end": "2024"},
+  "caveat", "CV25")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()
