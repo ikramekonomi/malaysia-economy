@@ -95,3 +95,21 @@ Projection rows may only be rendered with explicit projection styling (dashed/co
 "model projection, unaudited" labelling), mirroring the pension-simulator treatment. They
 are not yet wired into the dashboard: per the warehouse-first rule, the 2025–26 view ships
 when the official `budgeted`/`projected` bases land together.
+
+## 5. `_score_nowcast_2025.csv` (built by `score_nowcast_2025.py`, Phase 5)
+The FY2025 projections above, scored against FY2025 **as reported**, by a method declared before any score was
+computed (the script's header). MOF (Tinjauan Fiskal, FY2025 official_actual) and BNM (MSB 3.1 annual) are
+scored separately. Every score is **provisional** until PKKP FY2025 (the audited accounts) is loaded and the
+script is re-run.
+
+Result (2026-11-06): all 10 scores are inside their band. The errors of the central estimate (mid) against
+MOF's actual are:
+* revenue: -0.3% (RM336.1b against 337.1b);
+* operating spending, trend model: -0.7%;
+* operating spending, vote-by-vote nowcast (TOTAL_OE): -3.9%. History said the tabled budget under-states the
+  outturn; FY2025 came in below the tabled RM335.0b;
+* gross development spending: -9.6% (RM81.9b against 89.8b);
+* deficit, on the model's identity (revenue - operating - gross development): +11.8%.
+
+The bands are wide: development spending's band is 31% of the actual, and the deficit's is 115%. So "inside the
+band" is a weak test. The central errors are the informative part.
