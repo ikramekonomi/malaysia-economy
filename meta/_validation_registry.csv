@@ -107,6 +107,8 @@ R2 vocabulary and required fields,un_sdg,PASS,
 R2 vocabulary and required fields,vital_statistics,PASS,
 R2 vocabulary and required fields,water_access,PASS,
 R2 vocabulary and required fields,crime_stats,PASS,
+R2 vocabulary and required fields,mnha_state,PASS,
+R2 vocabulary and required fields,federal_grants_to_states_actual,PASS,
 R3 every file belongs to a registered series,all,PASS,
 R4 held series has files,dosm_population,PASS,3 file(s)
 R5 every file has a sha256,dosm_population,PASS,3 files
