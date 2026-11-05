@@ -538,6 +538,7 @@ V2_restatement,PASS,2023,revenue_total for FY2023: own volume CMD.20.2024.pdf J1
 V2_restatement,PASS,2023,govt_trust_funds for FY2023: own volume CMD.20.2024.pdf J2 vs later volume CMD.16.2025.pdf J13 (akaun_amanah_disatukan),318.55,318.55,0.00,CMD.16.2025.pdf,46,38,13,
 V2_restatement,PASS,2023,public_trust_funds for FY2023: own volume CMD.20.2024.pdf J2 vs later volume CMD.16.2025.pdf J13 (akaun_amanah_disatukan),92.09,92.09,0.00,CMD.16.2025.pdf,46,38,13,
 V2_restatement,PASS,2023,deposit_account for FY2023: own volume CMD.20.2024.pdf J2 vs later volume CMD.16.2025.pdf J13 (akaun_amanah_disatukan),577.95,577.95,0.00,CMD.16.2025.pdf,46,38,13,
+V2_restatement,PASS,2023,debt_total for FY2023: own volume CMD.20.2024.pdf J39 vs later volume CMD.16.2025.pdf J41 (hutang_awam),1934.10,1934.10,0.00,CMD.16.2025.pdf,67,59,41,
 V2_restatement,PASS,2014,revenue_total for FY2014: own volume CMD.50.2015.pdf J4.8 vs later volume CMD.34.2016.pdf J4.10 (hasil_kategori),506.48,506.48,0.00,CMD.34.2016.pdf,31,15,4.10,
 V2_restatement,PASS,2015,revenue_tax for FY2015: own volume CMD.34.2016.pdf J4.10 vs later volume CMD.34.2017.pdf J4.10 (hasil_kategori),212.23,212.23,0.00,CMD.34.2017.pdf,32,16,4.10,
 V2_restatement,PASS,2015,revenue_nontax for FY2015: own volume CMD.34.2016.pdf J4.10 vs later volume CMD.34.2017.pdf J4.10 (hasil_kategori),73.92,73.92,0.00,CMD.34.2017.pdf,32,16,4.10,

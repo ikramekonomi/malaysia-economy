@@ -515,7 +515,12 @@ class Tools:
         "by state in the federal accounts, so a state row gives its share of the federal total and cannot 'agree'; "
         "the _states row tests that the printing states together recorded no more than the federal total. A "
         "state's figure is printed only when the grant is among its top revenue items: 'state_not_printed' is not "
-        "zero. Named grants: a state's record of all its federal grants must be at least what it was paid by name.")
+        "zero. Named grants: a state's record of all its federal grants must be at least what it was paid by name. "
+        "Loans: what the federal accounts say a state owes at year-end against the state's own printed public debt, "
+        "equal expected (agree within RM10,000, the state's rounding); for loans federal_paid_rm holds the BALANCE "
+        "owed at year-end, not a payment. Where the state's debt table prints other lenders (bonds, financial "
+        "institutions) the federal part is compared (agree_after_other_lenders). A 'differ' is a difference between "
+        "two publishers, reported as printed; the row's note gives any reason a report prints.")
 
     def get_gap_view(self, name, geo=None, year=None, transfer=None):
         import csv
@@ -528,8 +533,9 @@ class Tools:
                     "release_id": self.w.release_id}
         if transfer is not None:
             transfer = str(transfer).strip().lower().replace(" ", "_").replace("-", "_")
-        if transfer is not None and transfer not in ("capitation", "concurrent_list", "named"):
-            return {"held": False, "answer": f"unknown transfer {transfer!r}: use capitation, concurrent_list or named",
+        if transfer is not None and transfer not in ("capitation", "concurrent_list", "named", "loans"):
+            return {"held": False, "answer": f"unknown transfer {transfer!r}: use capitation, concurrent_list, named "
+                                             "or loans",
                     "release_id": self.w.release_id}
         year = None if year is None else str(year)
         if geo and geo not in self.w.geo and not (geo == "_states" and name == "gap_federal_vs_state"):

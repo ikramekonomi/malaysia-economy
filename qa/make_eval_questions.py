@@ -802,6 +802,45 @@ q("5", "Does the federal-vs-state view say a missing state figure is not zero?",
   {"name": "gap_federal_vs_state", "geo": "MY-01", "year": "2020", "transfer": "capitation"},
   "field_contains:how_to_read", "is not zero", kind="trap_missing")
 
+def pk_loan(year, state):
+    for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", str(year), "fact_loans_receivable.csv"))):
+        if (r["section_bm"].upper() == "PINJAMAN" and r["category_bm"].upper().startswith("KERAJAAN NEGERI")
+                and r["peminjam_bm"].strip() == state and r["year"] == str(year)):
+            return Decimal(r["baki_belum_selesai_rm"])
+    raise LookupError((year, state))
+
+
+q("5", "How much did Negeri Sembilan owe the federal government at end-2022, by the federal accounts?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-05", "year": "2022", "transfer": "loans"}, "field:federal_paid_rm",
+  s(pk_loan(2022, "Negeri Sembilan")))
+q("5", "Does Negeri Sembilan's own 2022 debt agree with what the federal accounts say it owes?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-05", "year": "2022", "transfer": "loans"}, "field:status",
+  "agree" if abs(acct("Negeri Sembilan", "2022", "debt_total") - pk_loan(2022, "Negeri Sembilan")) <= 10000 else "differ")
+q("5", "Sabah's debt vs the federal loan in 2017: is the note about other lenders there?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-12", "year": "2017", "transfer": "loans"},
+  "field_contains:note", "lenders other than the federal government", kind="trap_placement")
+q("5", "Federal loans to Putrajaya vs its state debt?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-16", "year": "2022", "transfer": "loans"},
+  "field:status", "no_state_government", kind="trap_identity")
+
+def st_debt_line(state, year, pattern):
+    import re
+    slug = state.lower().replace(" ", "_")
+    for r in csv.DictReader(open(os.path.join(REPO, "sources", "states", "data", slug, f"fact_state_finance_{slug}.csv"))):
+        if (r["spec_id"] == "hutang_awam" and r["fiscal_year"] == year and r["column_role"] == "own_year"
+                and re.search(pattern, r["line_label_bm"], re.I)):
+            return Decimal(r["amount_rm_conformed"])
+    raise LookupError((state, year, pattern))
+
+
+_sab = acct("Sabah", "2017", "debt_total") - st_debt_line("Sabah", "2017", r"bon terbitan") - pk_loan(2017, "Sabah")
+q("5", "Does Sabah's 2017 debt match the federal loan once its bonds are taken out?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-12", "year": "2017", "transfer": "loans"}, "field:status",
+  "agree_after_other_lenders" if abs(_sab) <= 10000 else "differ")
+q("5", "Why does Melaka's 2020 debt sit below the federal balance?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-04", "year": "2020", "transfer": "loans"}, "field_contains:note",
+  "conversion of RM162.72 juta of loans into grants", kind="trap_restatement")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

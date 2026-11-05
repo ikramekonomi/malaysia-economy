@@ -34,6 +34,21 @@ Method (declared 2026-11-05, before any result of this view was looked at):
   2020); where the state's own top-revenue table for that year is registered as not parsed
   (_unparsed_tables_<state>.csv) the status is state_table_not_extracted, not state_not_printed; page-proved notes
   on single rows come from meta/gap_note.csv.
+* Added 2026-11-05, declared before any loans result was computed (Phase 3.9):
+    loans            federal: federal_gov.loans_receivable.state_government (PKKP: what the state government owes
+                     the federal government at 31 December, Baki Belum Selesai); state: state_gov.debt.total (the
+                     state's printed Hutang Awam at 31 December, its own report)
+  Comparison equal_expected: both sides are the same balance seen from the two ends, so difference = state minus
+  federal, in RM. Status agree when |difference| <= RM10,000 (the state report prints RM juta to 2 decimals, the
+  federal accounts to the sen), else differ; a difference is reported, never explained away. A state whose own
+  debt table prints a lender other than the federal government (financial institutions, bonds, sukuk) is noted:
+  its debt can rightly exceed the federal loan. Advances (Pendahuluan) are a separate section, not compared.
+* Amended 2026-11-05 after the loans verifier (qa/audits/2026-11-05_phase3_loans_verifier.md), before any
+  conclusion was drawn: where the state's debt table prints lenders other than the federal government, the
+  comparison is made on the federal part (state total minus those lenders) and a match there is
+  agree_after_other_lenders; a year whose state report is not held is own_volume_not_held; an unparsed own table
+  takes precedence over later printings (state_table_not_extracted); meta/gap_note.csv notes can cover a year
+  range and, where a page proves the state figure is printed but not extracted, set that status.
 """
 import csv
 import glob
@@ -60,16 +75,23 @@ TRANSFERS = {
                             name="federal grant to state departments under the Concurrent List (Senarai Bersama)"),
     "named": dict(fed=None, ind="state_gov.revenue.federal_grants_total", code="revenue_item_federal_grants_total",
                   kind="named", name="federal grants paid to the state government by name"),
+    "loans": dict(fed=None, ind="state_gov.debt.total", code="debt_total", kind="stock",
+                  fed_ind="federal_gov.loans_receivable.state_government",
+                  name="what the state government owes the federal government at year-end"),
 }
+TOL_STOCK = Decimal(10000)
+OTHER_LENDER = re.compile(r"institusi kewangan|\bbank\b|sukuk|\bbon\b|pasaran modal|pinjaman pasaran", re.I)
 FIELDS = ["transfer", "geo_code", "place", "year", "comparison", "status", "federal_paid_rm", "federal_recipient",
-          "federal_flow_ids", "state_recorded_rm", "state_obs_id", "state_share_of_federal", "state_printings",
+          "federal_flow_ids", "state_recorded_rm", "state_obs_id", "state_share_of_federal", "difference_rm",
+          "state_printings",
           "printings_agree", "states_printing", "note", "caveats", "release_id"]
 
 
 def printings(code):
     """(state, year) -> every printed value of this conformed line, own volume first, from the L1 revenue tables."""
     out = defaultdict(list)
-    for p in sorted(glob.glob(os.path.join(STATES_DIR, "*", "fact_state_revenue_*.csv"))):
+    for p in sorted(glob.glob(os.path.join(STATES_DIR, "*", "fact_state_revenue_*.csv"))
+                    + glob.glob(os.path.join(STATES_DIR, "[!_]*", "fact_state_finance_*.csv"))):
         with open(p, newline="", encoding="utf-8") as f:
             for i, r in enumerate(csv.DictReader(f), start=2):
                 if r["line_code"] != code or r["measure"] != "actual" or r["line_code_conformed"] != "yes":
@@ -91,26 +113,43 @@ def printings(code):
 
 # which unparsed tables could hold a grant: the top-revenue table for a class grant; for the named comparison also
 # the revenue-category table (Sabah and Sarawak print all federal grants as a category); a whole volume for any
-SPECS_FOR = {"class": ("hasil_penyumbang_utama",), "named": ("hasil_penyumbang_utama", "hasil_kategori")}
+SPECS_FOR = {"class": ("hasil_penyumbang_utama",), "named": ("hasil_penyumbang_utama", "hasil_kategori"),
+             "stock": ("hutang_awam",)}
 
 
 def no_state_status(pr, state, y, kind, unparsed, extracted, notes):
-    """Why there is no own-year state figure: printed only later, table not parsed, or not printed."""
-    if pr:
-        notes.append("printed only in a later volume (listed, not compared: later columns have been found "
-                     "misaligned on the page)")
-        return "printed_in_later_volume_only"
+    """Why there is no own-year state figure: report not held, table not parsed, printed only later, not printed."""
+    if (state, y) not in HELD:
+        notes.append(f"the state's report for FY{y} is not held")
+        return "own_volume_not_held"
     whole = unparsed.get((state, y, "(whole volume)"))
     if whole:
-        notes.append(f"the state's report {whole} is registered as not parsed (image-only): the grant may be "
+        notes.append(f"the state's report {whole} is registered as not parsed (image-only): the figure may be "
                      "printed there")
         return "state_table_not_extracted"
     hits = [unparsed[(state, y, sp)] for sp in SPECS_FOR[kind] if (state, y, sp) in unparsed]
     # an unparsed table explains a missing figure only if no table of that kind WAS extracted for the year
     if hits and not any((state, y, sp) in extracted for sp in SPECS_FOR[kind]):
-        notes.append(f"the state's table {hits[0]} is registered as not parsed: the grant may be printed there")
+        notes.append(f"the state's table {hits[0]} is registered as not parsed: the figure may be printed there")
         return "state_table_not_extracted"
+    if pr:
+        notes.append("printed only in a later volume (listed, not compared: later columns have been found "
+                     "misaligned on the page)")
+        return "printed_in_later_volume_only"
     return "state_not_printed"
+
+
+def held_reports():
+    out = set()
+    for p in glob.glob(os.path.join(STATES_DIR, "[!_]*", "state_reports_*.csv")):
+        with open(p, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r["fiscal_year_audited"]:
+                    out.add((r["state"], r["fiscal_year_audited"]))
+    return out
+
+
+HELD = held_reports()
 
 
 def unparsed_years():
@@ -127,7 +166,8 @@ def unparsed_years():
 def extracted_tables():
     """(state, fiscal_year, spec) for which an own-year table of that kind was extracted."""
     out = set()
-    for p in glob.glob(os.path.join(STATES_DIR, "*", "fact_state_revenue_*.csv")):
+    for p in (glob.glob(os.path.join(STATES_DIR, "[!_]*", "fact_state_revenue_*.csv"))
+              + glob.glob(os.path.join(STATES_DIR, "[!_]*", "fact_state_finance_*.csv"))):
         with open(p, newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):
                 if r["column_role"] == "own_year":
@@ -135,15 +175,36 @@ def extracted_tables():
     return out
 
 
+def other_lenders():
+    """(state, fiscal_year) -> lender lines in the state's own debt table that are not the federal government."""
+    out = defaultdict(set)
+    for p in glob.glob(os.path.join(STATES_DIR, "[!_]*", "fact_state_finance_*.csv")):
+        with open(p, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if (r["spec_id"] == "hutang_awam" and r["column_role"] == "own_year" and r["is_leaf"] == "yes"
+                        and OTHER_LENDER.search(r["line_label_bm"])):
+                    out[(r["state"], r["fiscal_year"])].add((r["line_label_bm"].strip(), r["amount_printed"],
+                                                            Decimal(r["amount_rm_conformed"] or 0)))
+    return out
+
+
 def gap_notes():
+    """(transfer, geo, year) -> page-proved note; `year` may be a range (2019-2024)."""
+    out = {}
     with open(os.path.join(REPO, "meta", "gap_note.csv"), newline="", encoding="utf-8") as f:
-        return {(r["transfer"], r["geo_code"], r["year"]): r for r in csv.DictReader(f)
-                if r["view"] == "gap_federal_vs_state"}
+        for r in csv.DictReader(f):
+            if r["view"] != "gap_federal_vs_state":
+                continue
+            a, _, b = r["year"].partition("-")
+            for y in range(int(a), int(b or a) + 1):
+                out[(r["transfer"], r["geo_code"], str(y))] = r
+    return out
 
 
 def main():
     w = Warehouse()
     unparsed, notes_reg, extracted = unparsed_years(), gap_notes(), extracted_tables()
+    lenders = other_lenders()
     places = sorted(c for c, g in w.geo.items() if g["geo_level"] == "state")
     gov = {}                                  # geo -> state government entity
     for c in w.entity_codes:
@@ -176,7 +237,7 @@ def main():
                     continue                      # no grant to this government by name in any year
                 row = {k: "" for k in FIELDS}
                 row.update(transfer=t, geo_code=g, place=state_name[g], year=y, release_id=w.release_id)
-                cv = {"CV25", "CV26"}
+                cv = set() if spec["kind"] == "stock" else {"CV25", "CV26"}
                 notes = []
                 if g in ("MY-14", "MY-15", "MY-16"):
                     row.update(comparison="not_applicable", status="no_state_government")
@@ -224,6 +285,34 @@ def main():
                         agg_sum += Decimal(obs["value"])
                         agg_n += 1
                         agg_ids.append(obs["obs_id"])
+                elif spec["kind"] == "stock":
+                    row["comparison"] = "equal_expected"
+                    row["federal_recipient"] = f"the {state_name[g]} state government ({gov.get(g, '')}), borrower"
+                    fo = w.get(spec["fed_ind"], g, y, basis="audited")
+                    if fo:
+                        row["federal_paid_rm"], row["federal_flow_ids"] = fo["value"], fo["obs_id"]
+                        cv |= set(w.caveats_for(fo))
+                    ol = {x for x in lenders.get((state_name[g], y), set()) if x[2]}
+                    other = sum(x[2] for x in ol)
+                    if ol:
+                        notes.append("the state's debt table also prints lenders other than the federal government ("
+                                     + "; ".join(f"{a} {b}" for a, b, _ in sorted(ol)) + ")")
+                    if not fo:
+                        row["status"] = "federal_not_held"
+                    elif not obs:
+                        row["status"] = no_state_status(pr, state_name[g], y, "stock", unparsed, extracted, notes)
+                    else:
+                        d = Decimal(obs["value"]) - Decimal(fo["value"])
+                        row["difference_rm"] = fmt(d)
+                        if abs(d) <= TOL_STOCK:
+                            row["status"] = "agree"
+                        elif ol:
+                            dr = d - other
+                            notes.append(f"on the federal part (state total minus the other lenders, "
+                                         f"{fmt(Decimal(obs['value']) - other)}) the difference is RM{fmt(dr)}")
+                            row["status"] = "agree_after_other_lenders" if abs(dr) <= TOL_STOCK else "differ"
+                        else:
+                            row["status"] = "differ"
                 else:
                     nf = named_by.get((g, y), [])
                     if not nf and y in fed_years:
@@ -248,6 +337,9 @@ def main():
                 reg = notes_reg.get((t, g, y))
                 if reg:
                     notes.append(f"{reg['note']} [{reg['proof']}]")
+                    if reg.get("status") and not row["state_recorded_rm"]:
+                        row["status"] = reg["status"]
+                        notes[:] = [n for n in notes if not n.startswith("printed only in a later volume")]
                 row["note"] = "; ".join(notes)
                 row["caveats"] = ";".join(sorted(cv))
                 out.append(row)

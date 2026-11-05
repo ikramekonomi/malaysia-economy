@@ -102,7 +102,8 @@ SPECS: list[tuple[str, str, str, str]] = [
 
     # ---- Penyata Akaun Memorandum ------------------------------------------
     ("hutang_awam", "finance", "akaun_memorandum",
-     _PRE + r"hutang awam( kerajaan negeri)? " + _PER),
+     # Perlis from FY2023 titles it `KEDUDUKAN BAKI HUTANG KERAJAAN NEGERI PADA ...` (loans verifier 2026-11-05)
+     _PRE + r"hutang (awam( kerajaan negeri)?|kerajaan negeri) " + _PER),
     ("pinjaman_boleh_dituntut", "finance", "akaun_memorandum",
      _PRE + r"pinjaman boleh dituntut( kerajaan negeri)?(?:\s+" + _PER + r"|\s*$)"),
     # `... MENGIKUT TEMPOH TUNGGAKAN` is the ageing table, a different grain.
@@ -300,7 +301,7 @@ LINE_CODES: list[tuple[str, str, str]] = [
     # --- memorandum accounts -------------------------------------------------
     ("hutang_awam", r"^jumlah", "debt_total"),
     ("hutang_awam", r"baki pada 1 januari", "debt_opening_balance"),
-    ("hutang_awam", r"baki pada 31 disember", "debt_closing_balance"),
+    ("hutang_awam", r"baki pada (31 )?disember", "debt_closing_balance"),
     ("pinjaman_boleh_dituntut", r"^jumlah", "loans_receivable_total"),
     ("pinjaman_boleh_dituntut", r"badan berkanun negeri", "loans_receivable_bbn"),
     ("pinjaman_boleh_dituntut", r"pihak berkuasa tempatan", "loans_receivable_pbt"),

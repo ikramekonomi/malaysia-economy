@@ -597,6 +597,44 @@ def build_states(obs):
                 l1_ref=f"sources/states/data/_national/fact_state_finance_all.csv#row{i}")
 
 
+def build_federal_loans(obs, checks):
+    """What each state government owes the federal government at year-end, by the payer's accounts (Phase 3,
+    gap_federal_vs_state transfer `loans`): PKKP Penyata Akaun Memorandum Pinjaman dan Pendahuluan Boleh
+    Dituntut, section PINJAMAN, category KERAJAAN NEGERI, one row per state, Baki Belum Selesai (outstanding
+    balance), each year from its own volume (golden rule 6). FY2009 prints only the total. Advances
+    (PENDAHULUAN) are a separate section and not loaded here. Check C17: the states add up to the printed
+    'Jumlah Kerajaan Negeri' to the sen."""
+    import glob
+    sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_loans_receivable.csv"))):
+        rel = os.path.relpath(path, REPO)
+        yr = os.path.basename(os.path.dirname(path))
+        detail, total = Decimal(0), None
+        for i, r in enumerate(rows(path), start=2):
+            if (r["section_bm"].upper() != "PINJAMAN" or not r["category_bm"].upper().startswith("KERAJAAN NEGERI")
+                    or r["year"] != yr or not r["source_file"].startswith(yr)):
+                continue
+            v = dec(r["baki_belum_selesai_rm"])
+            if r["row_type"] == "subtotal":
+                total = v
+                continue
+            g = STATE_ISO.get(r["peminjam_bm"].strip())
+            if not g or v is None:
+                sys.exit(f"PKKP {yr} loans receivable: unknown state government {r['peminjam_bm']!r}")
+            detail += v
+            obs.add(indicator_code="federal_gov.loans_receivable.state_government", geo_code=g, period_code=yr,
+                    entity_id=entity("federal_gov", "MY", yr), basis="audited", edition_id=f"pkkp:{r['source_file']}",
+                    vintage=yr, value=v, value_printed=r["baki_belum_selesai_rm"], unit_printed="RM",
+                    precision_printed="0.01", estimate_method="accounting", reliability="ok",
+                    file_id=sha.get(r["source_file"], ""), pdf_page=r["pdf_page"], printed_page=r["printed_page"],
+                    table_ref="Penyata Akaun Memorandum Pinjaman dan Pendahuluan Boleh Dituntut: Pinjaman, Kerajaan Negeri",
+                    l1_ref=f"{rel}#row{i}")
+        if total is not None and detail:
+            d = detail - total
+            checks.append(["C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri", yr,
+                           "PASS" if abs(d) <= Decimal("0.01") else "FAIL", f"states {detail} vs printed {total}"])
+
+
 PERF_LINES = {"revenue": "federal_gov.revenue.total", "opex": "federal_gov.expenditure.opex",
               "devex": "federal_gov.expenditure.devex", "covid_fund_exp": "federal_gov.expenditure.covid_fund"}
 TRANSFER_LINE = "Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan"
@@ -1038,6 +1076,8 @@ def checks(obs, geo, per, ind, brk, editions):
            "curated/_known_extraction_defects_curated.csv (caveat CV21)" if known else ""))
     add("C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)", "fact_observation",
         "PASS" if not bad else "FAIL", f"{n} rows checked" + (f"; {len(bad)} differ, e.g. {bad[:3]}" if bad else ""))
+    for c, scope, status, note in getattr(obs, "extra_checks", []):
+        add(c, scope, status, note)
     return out
 
 
@@ -1058,6 +1098,8 @@ def main():
     build_federal_reported(obs)
     build_national_series(obs, ed)
     build_votes(obs)
+    obs.extra_checks = []
+    build_federal_loans(obs, obs.extra_checks)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

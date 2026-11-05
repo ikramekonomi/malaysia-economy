@@ -216,5 +216,11 @@ Q214,trap_missing,get_gap_view,field:status,state_not_printed,state_not_printed,
 Q215,fact,get_gap_view,field:status,consistent,consistent,PASS
 Q216,trap_identity,get_gap_view,field:status,no_state_government,no_state_government,PASS
 Q217,trap_missing,get_gap_view,field:status,federal_not_held,federal_not_held,PASS
-Q218,trap_incomparable,get_gap_view,not_held,,"unknown transfer 'roads': use capitation, concurrent_list or named",PASS
+Q218,trap_incomparable,get_gap_view,not_held,,"unknown transfer 'roads': use capitation, concurrent_list, named or loans",PASS
 Q219,trap_missing,get_gap_view,field_contains:how_to_read,is not zero,"Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts",PASS
+Q220,fact,get_gap_view,field:federal_paid_rm,926834078.11,926834078.11,PASS
+Q221,fact,get_gap_view,field:status,agree,agree,PASS
+Q222,trap_placement,get_gap_view,field_contains:note,lenders other than the federal government,"the state's debt table also prints lenders other than the federal government (Bon Terbitan 1,000.00)",PASS
+Q223,trap_identity,get_gap_view,field:status,no_state_government,no_state_government,PASS
+Q224,fact,get_gap_view,field:status,agree_after_other_lenders,agree_after_other_lenders,PASS
+Q225,trap_restatement,get_gap_view,field_contains:note,conversion of RM162.72 juta of loans into grants,Melaka's report explains its debt fell because the Ministry of Finance approved a write-off of RM10.,PASS
