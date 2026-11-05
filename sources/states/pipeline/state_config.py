@@ -808,8 +808,13 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                   "2017 = 2,194.80; 2018 = 1,343.67. CMD.50.2021.pdf p38 (J13): 2016 1,946.54; 2017 2,246.29; "
                   "2018 1,320.32; 2019 1,008.37 + 465.99 + 79.62 + 96.59 + 75.25 = 1,725.82; 2020 1,749.01. "
                   "Not an AG misprint.",
-        why_unfixed="The table parser must pair amounts and shares by column x-position, not by order; "
-                    "re-extraction runs where the PDFs are (states-extract.yml).",
+        why_unfixed="ROOT CAUSE found 2026-11-05: lkan_state_parser._value_tokens drops any value separated "
+                    "from the previous one by a SINGLE space (`1,886.80 100.0`): _NUM_RE's optional leading \\s "
+                    "puts the match start on the space, and the digit-flank guard then sees the previous number's "
+                    "last digit. Fixing it (start the match at its first non-space character) clears these rows "
+                    "but changes ~1,300 rows in all 13 states and unlocks tables never parsed before whose wrapped "
+                    "labels are mis-stitched (Pulau Pinang CMD.58.2015 J4.11), so it needs its own reviewed "
+                    "re-extraction, not a quick fix.",
         impact_on_data="These analysis-table rows are not used by core or the gap view (which use the audited "
                        "statements); do not read the top-contributor amounts from the current extraction.",
     ),
