@@ -517,7 +517,10 @@ class Tools:
         "state's figure is printed only when the grant is among its top revenue items: 'state_not_printed' is not "
         "zero. Named grants: a state's record of all its federal grants must be at least what it was paid by name. "
         "Loans: what the federal accounts say a state owes at year-end against the state's own printed public debt, "
-        "equal expected (agree within RM10,000, the state's rounding); a state that also borrows elsewhere is noted.")
+        "equal expected (agree within RM10,000, the state's rounding); for loans federal_paid_rm holds the BALANCE "
+        "owed at year-end, not a payment. Where the state's debt table prints other lenders (bonds, financial "
+        "institutions) the federal part is compared (agree_after_other_lenders). A 'differ' is a difference between "
+        "two publishers, reported as printed; the row's note gives any reason a report prints.")
 
     def get_gap_view(self, name, geo=None, year=None, transfer=None):
         import csv

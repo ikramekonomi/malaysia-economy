@@ -43,6 +43,12 @@ Method (declared 2026-11-05, before any result of this view was looked at):
   federal accounts to the sen), else differ; a difference is reported, never explained away. A state whose own
   debt table prints a lender other than the federal government (financial institutions, bonds, sukuk) is noted:
   its debt can rightly exceed the federal loan. Advances (Pendahuluan) are a separate section, not compared.
+* Amended 2026-11-05 after the loans verifier (qa/audits/2026-11-05_phase3_loans_verifier.md), before any
+  conclusion was drawn: where the state's debt table prints lenders other than the federal government, the
+  comparison is made on the federal part (state total minus those lenders) and a match there is
+  agree_after_other_lenders; a year whose state report is not held is own_volume_not_held; an unparsed own table
+  takes precedence over later printings (state_table_not_extracted); meta/gap_note.csv notes can cover a year
+  range and, where a page proves the state figure is printed but not extracted, set that status.
 """
 import csv
 import glob
@@ -112,22 +118,38 @@ SPECS_FOR = {"class": ("hasil_penyumbang_utama",), "named": ("hasil_penyumbang_u
 
 
 def no_state_status(pr, state, y, kind, unparsed, extracted, notes):
-    """Why there is no own-year state figure: printed only later, table not parsed, or not printed."""
-    if pr:
-        notes.append("printed only in a later volume (listed, not compared: later columns have been found "
-                     "misaligned on the page)")
-        return "printed_in_later_volume_only"
+    """Why there is no own-year state figure: report not held, table not parsed, printed only later, not printed."""
+    if (state, y) not in HELD:
+        notes.append(f"the state's report for FY{y} is not held")
+        return "own_volume_not_held"
     whole = unparsed.get((state, y, "(whole volume)"))
     if whole:
-        notes.append(f"the state's report {whole} is registered as not parsed (image-only): the grant may be "
+        notes.append(f"the state's report {whole} is registered as not parsed (image-only): the figure may be "
                      "printed there")
         return "state_table_not_extracted"
     hits = [unparsed[(state, y, sp)] for sp in SPECS_FOR[kind] if (state, y, sp) in unparsed]
     # an unparsed table explains a missing figure only if no table of that kind WAS extracted for the year
     if hits and not any((state, y, sp) in extracted for sp in SPECS_FOR[kind]):
-        notes.append(f"the state's table {hits[0]} is registered as not parsed: the grant may be printed there")
+        notes.append(f"the state's table {hits[0]} is registered as not parsed: the figure may be printed there")
         return "state_table_not_extracted"
+    if pr:
+        notes.append("printed only in a later volume (listed, not compared: later columns have been found "
+                     "misaligned on the page)")
+        return "printed_in_later_volume_only"
     return "state_not_printed"
+
+
+def held_reports():
+    out = set()
+    for p in glob.glob(os.path.join(STATES_DIR, "[!_]*", "state_reports_*.csv")):
+        with open(p, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r["fiscal_year_audited"]:
+                    out.add((r["state"], r["fiscal_year_audited"]))
+    return out
+
+
+HELD = held_reports()
 
 
 def unparsed_years():
@@ -144,7 +166,8 @@ def unparsed_years():
 def extracted_tables():
     """(state, fiscal_year, spec) for which an own-year table of that kind was extracted."""
     out = set()
-    for p in glob.glob(os.path.join(STATES_DIR, "*", "fact_state_revenue_*.csv")):
+    for p in (glob.glob(os.path.join(STATES_DIR, "[!_]*", "fact_state_revenue_*.csv"))
+              + glob.glob(os.path.join(STATES_DIR, "[!_]*", "fact_state_finance_*.csv"))):
         with open(p, newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):
                 if r["column_role"] == "own_year":
@@ -158,16 +181,24 @@ def other_lenders():
     for p in glob.glob(os.path.join(STATES_DIR, "[!_]*", "fact_state_finance_*.csv")):
         with open(p, newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):
-                if (r["spec_id"] == "hutang_awam" and r["column_role"] == "own_year"
+                if (r["spec_id"] == "hutang_awam" and r["column_role"] == "own_year" and r["is_leaf"] == "yes"
                         and OTHER_LENDER.search(r["line_label_bm"])):
-                    out[(r["state"], r["fiscal_year"])].add(f"{r['line_label_bm'].strip()} {r['amount_printed']}")
+                    out[(r["state"], r["fiscal_year"])].add((r["line_label_bm"].strip(), r["amount_printed"],
+                                                            Decimal(r["amount_rm_conformed"] or 0)))
     return out
 
 
 def gap_notes():
+    """(transfer, geo, year) -> page-proved note; `year` may be a range (2019-2024)."""
+    out = {}
     with open(os.path.join(REPO, "meta", "gap_note.csv"), newline="", encoding="utf-8") as f:
-        return {(r["transfer"], r["geo_code"], r["year"]): r for r in csv.DictReader(f)
-                if r["view"] == "gap_federal_vs_state"}
+        for r in csv.DictReader(f):
+            if r["view"] != "gap_federal_vs_state":
+                continue
+            a, _, b = r["year"].partition("-")
+            for y in range(int(a), int(b or a) + 1):
+                out[(r["transfer"], r["geo_code"], str(y))] = r
+    return out
 
 
 def main():
@@ -261,10 +292,11 @@ def main():
                     if fo:
                         row["federal_paid_rm"], row["federal_flow_ids"] = fo["value"], fo["obs_id"]
                         cv |= set(w.caveats_for(fo))
-                    ol = lenders.get((state_name[g], y))
+                    ol = {x for x in lenders.get((state_name[g], y), set()) if x[2]}
+                    other = sum(x[2] for x in ol)
                     if ol:
                         notes.append("the state's debt table also prints lenders other than the federal government ("
-                                     + "; ".join(sorted(ol)) + "): its debt can rightly exceed the federal loan")
+                                     + "; ".join(f"{a} {b}" for a, b, _ in sorted(ol)) + ")")
                     if not fo:
                         row["status"] = "federal_not_held"
                     elif not obs:
@@ -272,7 +304,15 @@ def main():
                     else:
                         d = Decimal(obs["value"]) - Decimal(fo["value"])
                         row["difference_rm"] = fmt(d)
-                        row["status"] = "agree" if abs(d) <= TOL_STOCK else "differ"
+                        if abs(d) <= TOL_STOCK:
+                            row["status"] = "agree"
+                        elif ol:
+                            dr = d - other
+                            notes.append(f"on the federal part (state total minus the other lenders, "
+                                         f"{fmt(Decimal(obs['value']) - other)}) the difference is RM{fmt(dr)}")
+                            row["status"] = "agree_after_other_lenders" if abs(dr) <= TOL_STOCK else "differ"
+                        else:
+                            row["status"] = "differ"
                 else:
                     nf = named_by.get((g, y), [])
                     if not nf and y in fed_years:
@@ -297,6 +337,9 @@ def main():
                 reg = notes_reg.get((t, g, y))
                 if reg:
                     notes.append(f"{reg['note']} [{reg['proof']}]")
+                    if reg.get("status") and not row["state_recorded_rm"]:
+                        row["status"] = reg["status"]
+                        notes[:] = [n for n in notes if not n.startswith("printed only in a later volume")]
                 row["note"] = "; ".join(notes)
                 row["caveats"] = ";".join(sorted(cv))
                 out.append(row)

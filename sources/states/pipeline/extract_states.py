@@ -707,6 +707,12 @@ def fix_debt_totals(rows: list[dict]) -> int:
     for grp in groups.values():
         dt = [r for r in grp if r["line_code"] == "debt_total"]
         if not dt:
+            # a table printed as a movement by ROWS (Baki Pada 1 Januari / Pinjaman / Bayaran / BAKI PADA 31
+            # DISEMBER) with no JUMLAH: its one closing balance is the year-end debt (Kedah CMD.16.2025 J41,
+            # loans verifier 2026-11-05)
+            cb = [r for r in grp if r["line_code"] == "debt_closing_balance"]
+            if len(cb) == 1 and not any("pergerakan" in (r.get("table_title_bm") or "").lower() for r in grp):
+                cb[0]["line_code"], n = "debt_total", n + 1
             continue
         if any("pergerakan" in (r.get("table_title_bm") or "").lower() for r in grp):
             for r in dt:

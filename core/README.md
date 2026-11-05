@@ -324,7 +324,10 @@ Auditor General's state report prints them; capitation, Concurrent List, and Sab
   federal government at 31 December (`federal_gov.loans_receivable.state_government`, new; the states add up
   to the printed Jumlah Kerajaan Negeri every year, check C17) against the state's own printed public debt.
   Equal expected: `agree` within RM10,000 (the state prints RM juta to 2 dp), else `differ` with the
-  difference; a state whose debt table prints another lender (bonds, financial institutions) is noted.
+  difference; where the state's debt table prints another lender (bonds, financial institutions) the federal
+  part is compared (`agree_after_other_lenders`). Blind verifier (`qa/audits/2026-11-05_phase3_loans_verifier.md`):
+  every federal value right on the page, and no `differ` caused by our extraction; causes the state reports print
+  (write-offs, loans turned into grants, interest arrears) are on the rows.
 * **Printings**: every printing of a state's figure is listed; Kedah FY2020's Concurrent List grant is 37.51 in its
   own report (CMD.40.2021 J10) and 31.74 in the next (CMD.42.2022 J10), kept as printed (check GF5).
 * A state figure exists only where the grant is among the state's top revenue items: `state_not_printed` is not
