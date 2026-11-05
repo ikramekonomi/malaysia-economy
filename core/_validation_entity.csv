@@ -7,5 +7,5 @@ E5 every vote printed in an Anggaran book resolves at the book's year,sources/an
 E6 every code link carries a proof (a renumbering cites its evidence),meta/entity_code.csv,PASS,112 links
 "E7 entity_type, gfs_sector and code_system in their vocabularies; parents registered",meta,PASS,ok
 E8 identity decisions awaiting a person (decision_status=proposed),meta/entity_register.csv,PASS,0
-"E9 every lineage link joins two bodies, each evidence line is printed in PKKP under that body's vote that year, and the old vote spends nothing on a moved line the next year unless the move is declared mid-year",meta/entity_lineage*.csv,PASS,"8 links, 43 evidence lines"
+"E9 every lineage link joins two bodies; each evidence line is printed in PKKP under that body's vote that year; in the move year the old vote spends on moved work only when declared mid-year, and the new vote spent nothing on it the year before",meta/entity_lineage*.csv,PASS,"14 links, 63 evidence lines"
 E10 a reused vote code: each later body is reachable from the earlier one through lineage,meta/entity_lineage.csv,PASS,3 reused B codes

@@ -351,9 +351,28 @@ class Tools:
             if system == "state_gov":
                 return {"held": False, "answer": f"{code} has no state government in the register (the Federal "
                         "Territories MY-14, MY-15 and MY-16 are governed federally)", "release_id": self.w.release_id}
-            return {"held": False, "answer": f"no body held {code}" + (f" in {y}" if y else "")
-                    + " (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books)",
-                    "release_id": self.w.release_id}
+            res = {"held": False, "answer": f"no body held {code}" + (f" in {y}" if y else "")
+                   + " (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books)",
+                   "release_id": self.w.release_id}
+            if y is not None and system:
+                # a year inside a lapse: say where the work of the body before (and the body after) was printed
+                runs = [c for c in self.w.entity_codes if c["code_system"] == system and c["code"] == code
+                        and not c.get("scope") and c["valid_from"] and c["valid_to"]]
+                prev = max((c for c in runs if int(c["valid_to"]) < y), key=lambda c: int(c["valid_to"]), default=None)
+                nxt = min((c for c in runs if int(c["valid_from"]) > y), key=lambda c: int(c["valid_from"]), default=None)
+                # the moves out of the body before (from its last printed year) and into the body after
+                links = [r for r in self.w.entity_lineage if prev and nxt and (
+                    r["from_entity_id"] == prev["entity_id"] and int(prev["valid_to"]) <= int(r["first_year"]) <= y
+                    or r["to_entity_id"] == nxt["entity_id"] and y < int(r["first_year"]) <= int(nxt["valid_from"]))]
+                if links:
+                    a, b = prev["entity_id"], nxt["entity_id"]
+                    res["answer"] += ("; the code is in a lapse " + (f"of {a}'s vote" if a == b else f"between {a} and {b}")
+                                      + ": 'lineage' says where the work was printed in the meantime")
+                    res["lineage"] = {"links": [{k: r[k] for k in ("lineage_id", "from_entity_id", "from_name_bm",
+                                                                   "to_entity_id", "to_name_bm", "first_year",
+                                                                   "moved_mid_year", "what_moved", "evidence")}
+                                                for r in links], "how_to_read": self.LINEAGE_NOTE}
+            return res
         out = []
         for eid in ids:
             e = self.w.entity[eid]
@@ -365,6 +384,12 @@ class Tools:
                  "parent_entity_id": e["parent_entity_id"], "decision_status": e["decision_status"],
                  "codes": codes, "source_text": {"name_bm": e["name_bm"], "name_en": e["name_en"],
                                                  "printed_names": names, "note": UNTRUSTED}}
+            if y is not None:
+                d["printed_in_year"] = [{"code": n["code"], "name_bm": n["name_bm"], "name_en": n["name_en"]}
+                                        for n in names if int(n["valid_from"]) <= y <= int(n["valid_to"])]
+            if e["name_en"] and not any(n["name_en"] for n in names):
+                d["name_en_note"] = ("name_en is the register's label (the body's official English name); the "
+                                     "source prints no English name for it")
             def link(r, other):
                 return {"lineage_id": r["lineage_id"], "entity_id": r[f"{other}_entity_id"],
                         "name_bm": r[f"{other}_name_bm"], "first_year": int(r["first_year"]),
@@ -400,7 +425,8 @@ class Tools:
                     "spending covers different work, so a series joined across a link changes scope (compare the "
                     "named activities, not the vote totals). A move made during the year (moved_mid_year) splits that "
                     "year's spending between both votes. Links are recorded only at the vote lapses and the moves "
-                    "that led to them; not every move between ministries is listed.")
+                    "that led to them; not every move between ministries is listed. 'first_year' is the first year the new body's vote "
+                    "prints the work.")
 
     FLOW_COVERAGE = ("held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): "
                      "the federal grants and assignments to the states under Tanggungan T.12, and the grants to "

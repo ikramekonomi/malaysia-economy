@@ -574,6 +574,10 @@ q("5", "Where did the Environment and Water ministry's (B.33) work go in 2023?",
   "lineage_went_to", "E000034", kind="trap_identity")
 q("5", "Where did the 2024 B.33 body's water and energy work come from?", "get_entity", ent("B.33", 2024),
   "lineage_came_from", "E000034", kind="trap_identity")
+q("5", "B.15 is not printed in 2021: does the answer say where the economic planning work was printed (link L02)?",
+  "get_entity", ent("B.15", 2021), "lapse_link", "L02", kind="trap_identity")
+q("5", "Did B.06 already pay for economic planning in 2020, before B.15 ended (L02 first year)?", "get_entity",
+  ent("B.06", 2020), "lineage_first_year:L02", "2020", kind="trap_identity")
 q("5", "Was the 2018 move of cooperatives to B.26 made during the year (spending split between two votes)?",
   "get_entity", ent("B.26", 2020), "lineage_mid_year", "True", kind="trap_identity")
 q("5", "Is B.26 in 2009 the same body as B.26 in 2020?", "entity_same",

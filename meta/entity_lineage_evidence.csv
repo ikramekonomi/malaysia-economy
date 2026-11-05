@@ -5,8 +5,8 @@ L01,to,2018,B.15,Unit Perancang Ekonomi (UPE)
 L01,to,2018,B.15,Jabatan Perangkaan
 L02,from,2020,B.15,Perancangan Ekonomi
 L02,from,2020,B.15,Jabatan Perangkaan Malaysia
-L02,to,2021,B.06,Unit Perancang Ekonomi (UPE)
-L02,to,2021,B.06,Jabatan Perangkaan Malaysia (DOSM)
+L02,to,2020,B.06,Unit Perancang Ekonomi (UPE)
+L02,to,2020,B.06,Jabatan Perangkaan Malaysia (DOSM)
 L03,from,2022,B.06,Unit Perancang Ekonomi (UPE)
 L03,from,2022,B.06,Jabatan Perangkaan Malaysia (DOSM)
 L03,from,2022,B.06,Majlis Pembangunan Wilayah Ekonomi Pantai Timur (ECERDC)
@@ -16,9 +16,9 @@ L03,to,2023,B.15,Jabatan Perangkaan Malaysia (DOSM)
 L03,to,2023,B.15,Majlis Pembangunan Wilayah Ekonomi Pantai Timur (ECERDC)
 L03,to,2023,B.15,Pihak Berkuasa Wilayah Pembangunan Iskandar (IRDA)
 L04,from,2009,B.26,SURUHANJAYA KOPERASI MALAYSIA
-L04,to,2010,B.25,SURUHANJAYA KOPERASI MALAYSIA (SKM)
+L04,to,2009,B.25,SURUHANJAYA KOPERASI MALAYSIA (SKM)
 L05,from,2009,B.26,MAJLIS AMANAH RAKYAT (MARA)
-L05,to,2010,B.22,MAJLIS AMANAH RAKYAT (MARA)
+L05,to,2009,B.22,MAJLIS AMANAH RAKYAT (MARA)
 L06,from,2017,B.25,Pembangunan Koperasi
 L06,from,2017,B.25,Suruhanjaya Koperasi Malaysia (SKM)
 L06,from,2017,B.25,Maktab Koperasi Malaysia (MKM)
@@ -42,3 +42,23 @@ L08,to,2024,B.33,PEMBANGUNAN TENAGA
 L08,to,2024,B.33,Bekalan Air Ibu Pejabat
 L08,to,2024,B.33,Tenaga Lestari
 L08,stays,2024,B.23,PENGURUSAN ALAM SEKITAR DAN PERUBAHAN IKLIM
+L09,from,2018,B.22,Majlis Amanah Rakyat (MARA)
+L09,from,2018,B.22,Pihak Berkuasa Kemajuan Pekebun Kecil Perusahaan Getah (RISDA)
+L09,to,2018,B.15,Majlis Amanah Rakyat (MARA)
+L09,to,2018,B.15,Pihak Berkuasa Kemajuan Pekebun Kecil Perusahaan Getah (RISDA)
+L10,from,2018,B.15,Majlis Amanah Rakyat (MARA)
+L10,to,2019,B.22,Majlis Amanah Rakyat (MARA)
+L11,from,2020,B.15,Pihak Berkuasa Kemajuan Pekebun Kecil Perusahaan Getah (RISDA)
+L11,to,2020,B.22,Pihak Berkuasa Kemajuan Pekebun Kecil Perusahaan Getah (RISDA)
+L12,from,2013,B.49,Universiti Malaya (UM)
+L12,from,2013,B.49,PENGAJIAN POLITEKNIK
+L12,to,2013,B.41,Universiti Malaya (UM)
+L12,to,2013,B.41,PENGAJIAN POLITEKNIK
+L13,from,2018,B.64,Universiti Malaya (UM)
+L13,from,2018,B.64,Agensi Kelayakan Malaysia (MQA)
+L13,to,2019,B.63,Universiti Malaya (UM)
+L13,to,2019,B.63,Agensi Kelayakan Malaysia (MQA)
+L14,from,2019,B.63,Universiti Malaya (UM)
+L14,from,2019,B.63,Agensi Kelayakan Malaysia (MQA)
+L14,to,2020,B.64,Universiti Malaya (UM)
+L14,to,2020,B.64,Agensi Kelayakan Malaysia (MQA)

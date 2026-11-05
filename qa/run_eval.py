@@ -145,6 +145,14 @@ def run(t, q):
         side = "work_went_to" if check == "lineage_went_to" else "work_came_from"
         got = [x["entity_id"] for e in res.get("entities", []) for x in e.get("lineage", {}).get(side, [])]
         return exp in got, ",".join(got)
+    if check == "lapse_link":
+        got = [x["lineage_id"] for x in res.get("lineage", {}).get("links", [])]
+        return exp in got, ",".join(got)
+    if check.startswith("lineage_first_year:"):
+        lid = check.split(":", 1)[1]
+        got = [str(x["first_year"]) for e in res.get("entities", []) for side in ("work_came_from", "work_went_to")
+               for x in e.get("lineage", {}).get(side, []) if x["lineage_id"] == lid]
+        return exp in got, ",".join(got)
     if check == "lineage_mid_year":
         got = [str(x["moved_mid_year"]) for e in res.get("entities", []) for x in e.get("lineage", {}).get("work_came_from", [])]
         return exp in got, ",".join(got)

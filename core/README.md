@@ -29,7 +29,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
-| `entity_lineage.csv` | 8 | where a body's work went when its vote lapsed (D28): a link between two bodies, with printed evidence (`entity_lineage_evidence.csv`, 43 lines with PDF pages) |
+| `entity_lineage.csv` | 14 | where a body's work went when its vote lapsed (D28): a link between two bodies, with printed evidence (`entity_lineage_evidence.csv`, 63 lines with PDF pages and both votes' spending in the move year) |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
@@ -217,17 +217,26 @@ The identity rule (decision D26), declared before any spending is loaded against
   so `meta/entity_lineage.csv` links the bodies with the printed lines that show the move
   (`meta/entity_lineage_evidence.csv`, re-found in PKKP L1 on every build):
 
-  | Link | From → to | Year | What moved |
-  |---|---|---|---|
-  | L01 | B.06 Prime Minister's Dept → B.15 Economic Affairs | 2018 | economic planning (EPU), statistics |
-  | L02 | B.15 Economic Affairs → B.06 | 2021 | economic planning, statistics |
-  | L03 | B.06 → B.15 Economy | 2023 | economic planning, statistics, corridor authorities |
-  | L04 | B.26 (2009) → B.25 Domestic Trade, Co-operatives | 2010 | Cooperatives Commission |
-  | L05 | B.26 (2009) → B.22 Rural Development | 2010 | MARA |
-  | L06 | B.25 → B.26 Entrepreneur Development | 2018 | cooperatives (mid-year: FY2018 split between both votes) |
-  | L07 | B.33 Environment and Water → B.23 Natural Resources | 2023 | water, sewerage, environment |
-  | L08 | B.23 → B.33 Energy Transition | 2024 | water, sewerage, energy (environment stays in B.23) |
+  | Link | From → to | First year | Mid-year | What moved |
+  |---|---|---|---|---|
+  | L01 | B.06 Prime Minister's Dept → B.15 Economic Affairs | 2018 | yes | economic planning (EPU), statistics |
+  | L09 | B.22 Rural Development → B.15 Economic Affairs | 2018 | yes | MARA, RISDA |
+  | L10 | B.15 → B.22 | 2019 | no | MARA |
+  | L02 | B.15 → B.06 | 2020 | yes | economic planning, statistics |
+  | L11 | B.15 → B.22 | 2020 | yes | RISDA |
+  | L03 | B.06 → B.15 Economy | 2023 | no | economic planning, statistics, corridor authorities |
+  | L04 | B.26 (2009) → B.25 Domestic Trade, Co-operatives | 2009 | no | Cooperatives Commission (B.25 spends all of FY2009) |
+  | L05 | B.26 (2009) → B.22 Rural Development | 2009 | yes | MARA |
+  | L06 | B.25 → B.26 Entrepreneur Development | 2018 | yes | cooperatives |
+  | L07 | B.33 Environment and Water → B.23 Natural Resources | 2023 | no | water, sewerage, environment |
+  | L08 | B.23 → B.33 Energy Transition | 2024 | no | water, sewerage, energy (environment stays in B.23) |
+  | L12 | B.49 Higher Education → B.41 Education | 2013 | yes | universities, polytechnics |
+  | L13 | B.64 Higher Education → B.63 Education | 2019 | no | universities, qualifications agency |
+  | L14 | B.63 → B.64 | 2020 | yes | universities, qualifications agency |
 
+  `first_year` is the first year the new body's vote prints the work; a mid-year move splits that year's
+  spending between both votes. The build tests both votes' actual spending in the move year (E9).
+  Higher Education's return as B.64 in 2015 is not linked (FY2015 is an OCR-provisional scan).
   A series joined across a link changes scope: compare the named activities, not the vote totals. Links are
   recorded at the lapses and the moves that led to them, not for every move between ministries.
 * **Renumberings link only with a proof:** B.41→B.63 (Education) and B.49→B.64 (Higher Education),
