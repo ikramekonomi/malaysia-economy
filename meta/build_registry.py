@@ -126,6 +126,19 @@ def manifest_files():
             out.append({"series_id": sid, "edition": r["edition"], "file_name": r["file_name"],
                         "source_url": r["source_url"], "sha256": r["sha256"], "size_bytes": r["size_bytes"],
                         "pages": r["pages"], "retrieved_date": r["retrieved_date"], "manifest": rel(p)})
+    # Lampiran E (actual grants to the states) is its own series, printed in the Budget books: the files its rows
+    # cite are listed under it too (the 2021-2023 appendices alone, the 2024-2026 full books)
+    man = {r["file_name"]: r for r in rows(os.path.join(REPO, "sources", "anggaran", "data", "_documents_manifest.csv"))}
+    cited = set()
+    for p in sorted(glob.glob(os.path.join(REPO, "sources", "anggaran", "data", "*", "fact_anggaran_lampiran_e_*.csv"))):
+        cited |= {r["source_file"] for r in rows(p)}
+    for fn in sorted(cited):
+        m = man.get(fn, {})
+        out.append({"series_id": "federal_grants_to_states_actual", "edition": m.get("edition", ""), "file_name": fn,
+                    "source_url": m.get("source_url", ""), "sha256": m.get("sha256", ""),
+                    "size_bytes": m.get("size_bytes", ""), "pages": m.get("pages", ""),
+                    "retrieved_date": m.get("retrieved_date", ""),
+                    "manifest": "sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)"})
     # the documents their rows cite that no manifest covers yet, without a sha256
     for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil")):
         seen = set()

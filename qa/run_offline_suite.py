@@ -81,6 +81,7 @@ SUITE = [
     "core/pipeline/build_entities.py",
     "core/pipeline/build_core.py",
     "core/pipeline/build_flows.py",
+    "sources/anggaran/pipeline/validate_lampiran_e.py",
     "core/pipeline/build_gap_need_vs_money.py",
     "core/pipeline/build_gap_federal_vs_state.py",
     "core/pipeline/build_federal_placement.py",
