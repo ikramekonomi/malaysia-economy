@@ -744,6 +744,10 @@ _BIL_TOK = re.compile(r"^\s{0,40}(\d{1,3})\.(?=\s|$)")
 _TOTAL_LAB = re.compile(r"^\s*(jumlah|total)\b", re.I)
 
 
+# a bare count or Bil. in a label-only line (`38 NEGERI`), not a percentage inside a name (`Pemberian 50% Kos`)
+_BARE_NUM = re.compile(r"(?<![\w.,])\d+(?![\d%.,\w])")
+
+
 def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
     """Group the body into printed rows delimited by the BIL. column.
 
@@ -817,7 +821,7 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
             target = nxt
         elif nxt is None:
             target = prev
-        elif (i - prev) == (nxt - i) and not _has_money(table.body[i]) and not re.search(r"\d", table.body[i]):
+        elif (i - prev) == (nxt - i) and not _has_money(table.body[i]) and not _BARE_NUM.search(table.body[i]):
             # A label-only line exactly between two rows: the text cannot tell a continuation of the row above
             # from the first line of a label centred on the row below.  The glyph positions can: a line inside
             # a cell sits closer to its own row.  Kedah CMD.42.2022 J10 printed `Pemberian Bayaran Bagi
@@ -856,6 +860,15 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
             target = prev
         groups[target].append(i)
 
+    # A second text column (`JENIS HASIL`: Hasil Cukai / Hasil Bukan Cukai / Terimaan Bukan Hasil) is the row's
+    # revenue class, not its name: the label stops where that column's heading starts, or the class text is
+    # interleaved into the name (Johor CMD.29.2020 J10 `Hasil Bukan Premium Bagi Geran Cukai`).
+    jenis_x = len(max(table.body, key=len)) + 1 if table.body else 0
+    for hl in split_header(table):
+        m = re.search(r"JENIS\s+HASIL|Jenis\s+Hasil", hl)
+        b = re.search(r"BUTIRAN|Butiran", hl)
+        if m and b and b.start() < m.start():           # a second column, right of the BUTIRAN (name) column
+            jenis_x = m.start() - 1
     rows: list[Row] = []
     for a in anchors:
         idxs = sorted(groups[a])
@@ -866,7 +879,7 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
             toks = [t for t in _value_tokens(ln)
                     if _MONEY_RE.match(t[2].replace(" ", "")) or t[2] in NIL_CHARS]
             first = min((t[0] for t in toks), default=len(ln))
-            lab = ln[:first]
+            lab = ln[:min(first, jenis_x)]
             lab = re.sub(r"^\s*\d{1,3}[.)]\s*", "", lab)
             lab = re.sub(r"\s+", " ", lab).strip(" .:")
             if lab:
@@ -1109,7 +1122,7 @@ def parse_rows(table: RawTable, cols: list[Column],
             # digits: those are section heads or prose under the table (`JUMLAH` + `ii. Tunggakan ...`).
             closed = re.match(r"\s*(?:jumlah|baki pada|lebihan|kurangan|\(kurangan\)|surplus|defisit|"
                               r"perbelanjaan sebenar)\b", _base(prev), re.I)
-            opens = (re.match(r"\s*(?:[a-z]|[ivx]+|\d{1,2}(?:\.\d+)*)[.)]\s", txt) or re.search(r"\d", txt)
+            opens = (re.match(r"\s*(?:[a-z]|[ivx]+|\d{1,2}(?:\.\d+)*)[.)]\s", txt) or _BARE_NUM.search(txt)
                      or re.match(r"\s*[\u2022\u25cf\u25aa\u25a0\u00b7\ue000-\uf8ff]", txt))
             if not (pe or ne or closed or opens):
                 if ys is None:

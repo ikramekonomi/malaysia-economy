@@ -50,3 +50,23 @@ the same defects across the state tables.
 | 8-9 | label-only issues; integer-printed `0`/`5` cells missing | left (labels; absent, not wrong) |
 
 A second blind pass covers changes 2-3 (`2026-11-05_state_column_shift_verifier2.md`).
+
+## Blind verifier (second pass, on changes 2-3) and what was done
+
+175 of 190 relabel groups opened on the page: 169 better, 4 same, 2 worse; all 5 year moves and all 5 core
+changes right; checker 2,267 ok vs 2,248 at the first fix. Findings:
+
+| # | Finding | Done |
+|---|---|---|
+| 1 | Johor CMD.29.2020 J10: the JENIS HASIL column text interleaved into the name, land premium lost its conformed code | the label stops at a JENIS HASIL column printed right of BUTIRAN; `Premium Bagi Geran` conformed again |
+| 2 | Pahang CMD.46.2022 J4 stray `)` | left (label only) |
+| 3-5 | Real rows dropped as prose: Pahang CMD.35.2020 J7 Terimaan Bukan Hasil 366.95/213.24, Kedah CMD.40.2021 J33 JUMLAH 1,207.19, Sabah `5. a) Pendahuluan Kenderaan` in 4 volumes | amount phrases (`RM200 juta`, `sebanyak RM`, `meningkat sejumlah`) now reject only a row whose figures repeat another row or that prints fewer figures than the table's fullest row; sentence markers (`Pada tahun 2020,`, `membelanjakan`, `di Jadual`, `8.3.3.`) stay unconditional; the original prose rule is back at 8 words. All restored. |
+| 6, 7, 9 | Defect-entry wording (Sarawak J4.30 FY2014, Kedah flag too wide, Melaka impact) | corrected; Kedah split into J4.8 and J4.9 entries |
+| 8 | Selangor CMD.49.2023 J13 claimed fixed but was not (the guard against digits blocked `Pemberian 50% Kos`) | guard now ignores percentages: J13's Concurrent List grant labelled and conformed FY2018-2022 |
+| 10 | prose rows left (NS CMD.23.2024 J12, NS CMD.34.2019 J43, Pulau Pinang CMD.49.2022 J26, Perlis CMD.39.2017 J4.19) | partly cleared by the new markers; the rest unconformed |
+
+After the fixes: checker 2,294 tables ok (2,248 at the first fix), no table worse except where the checker
+cannot match a dropped prose copy whose real row remains; the only conformed rows removed are narrative copies
+that carried a figure under the wrong year or line (Kedah CMD.40.2021 J25 FY2020 135.81 for 116.65, Melaka
+CMD.32.2020 J4, Pahang CMD.55.2015 J4.19 and CMD.39.2016 J4.22, Perak CMD.36.2019 J5, Sarawak CMD.29.2024
+J16) or duplicates of a row still present; `core/fact_observation.csv` is unchanged by this round.

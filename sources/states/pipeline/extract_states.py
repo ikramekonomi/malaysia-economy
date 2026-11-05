@@ -375,7 +375,13 @@ def extract_volume(state: str, v: dict, rev_rules) -> tuple[list, list, list, li
             if g and not r.cells:
                 group = g
                 continue
-            quality, why = label_quality(r.label)
+            # a narrative row restates a figure (repeats another row) or carries one stray figure where the
+            # table's rows print a figure per year; a real row with prose welded on prints its full set
+            vals = {abs(v) for _, v in r.cells.values() if v}
+            widest = max((len(o.cells) for o in rows if o is not r), default=0)
+            repeats = (bool(vals) and any(vals <= {abs(v) for _, v in o.cells.values()} for o in rows
+                                          if o is not r and o.cells)) or (len(r.cells) < widest)
+            quality, why = label_quality(r.label, repeats)
             if quality == "reject":
                 dropped.append(dict(
                     state=state, fiscal_year=fy, spec_id=spec_id,
@@ -499,19 +505,29 @@ def extract_volume(state: str, v: dict, rev_rules) -> tuple[list, list, list, li
 _SENTENCE = re.compile(r"\.\s+[a-z]")
 _PROSE = re.compile(r"\bialah\b|\bdisebabkan\b|\bmenyebabkan\b|\bseperti di\b|"
                     r"\bseperti dalam\b|\badalah seperti\b|\bmanakala\b|"
-                    r"\bBagaimanapun\b|\bAnalisis Audit\b|"
-                    # an amount quoted in words (`RM184 juta berbanding`): a justification column, never a row label
-                    r"\bRM\s?\d[\d,.]*\s+(?:juta|bilion)\b|\bberbanding\s+RM|"
-                    # the audit's own sentences under a table (verifier 2026-11-05: Johor CMD.39.2021 J23/J24,
-                    # Pahang CMD.55.2015 J4.19, Terengganu CMD.42.2019 J29 / CMD.46.2016 J4.18, Sarawak CMD.39.2020 J6)
-                    r"^\s*Pada tahun (?:19|20)\d\d\b|\bPihak Audit\b|\bmencatatkan\b|\bmemaklumkan\b|"
-                    # (not `sebanyak RM` / `sejumlah RM`: those are welded onto REAL labels whose code is conformed,
-                    # e.g. Perak CMD.25.2024 J7 `JUMLAH KESELURUHAN HASIL adalah sebanyak RM`, and would drop them)
-                    r"\bmembelanjakan\b|\bdi Jadual\b", re.I)
+                    r"\bBagaimanapun\b|\bAnalisis Audit\b", re.I)
+# Narrative markers added 2026-11-05. They reject a row only when its figures REPEAT another row of the same table
+# (the audit's sentence restating a table figure): a real row whose label has prose welded on keeps its figure
+# (Pahang CMD.35.2020 J7 `... RM200 juta ... Terimaan Bukan Hasil` 366.95, Kedah CMD.40.2021 J33 JUMLAH).
+_PROSE_DUP = re.compile(
+    # an amount quoted in words (`RM184 juta berbanding`): a justification column - but such text is also welded
+    # onto real labels, so it rejects only a row whose figures repeat another row of the table
+    r"\bRM\s?\d[\d,.]*\s+(?:juta|bilion)\b|\bberbanding\s+RM|\b(?:sebanyak|sejumlah)\s+RM\b|"
+    # a sentence's verbs: also printed in a justification column beside real rows (Kedah CMD.30.2020 J9)
+    r"\b(?:meningkat|menurun)\s+(?:sejumlah|sebanyak)\b|\bpeningkatan hasil sebanyak\b", re.I)
+# The audit's own sentences under a table (verifier 2026-11-05: Johor CMD.39.2021 J23/J24, Pahang CMD.55.2015
+# J4.19, Terengganu CMD.42.2019 J29 / CMD.46.2016 J4.18, Sarawak CMD.39.2020 J6): rejected from 6 words.
+# `sebanyak RM` / `sejumlah RM` are in _PROSE_DUP: they are also welded onto REAL labels whose code is conformed
+# (Perak CMD.25.2024 J7 `JUMLAH KESELURUHAN HASIL adalah sebanyak RM`).
+_NARRATIVE = re.compile(r"^\s*Pada tahun (?:19|20)\d\d\b|\bPihak Audit\b|\bmencatatkan\b|\bmemaklumkan\b|"
+                        r"\bmembelanjakan\b|\bdibelanjakan\b|\bdi Jadual\b|\bPada (?:akhir tahun|keseluruhannya)\b|"
+                        # `Pada tahun 2023,` anywhere, a paragraph number (`8.3.3.`) opening it
+                        r"\bPada tahun (?:19|20)\d\d,|^\s*\d+(?:\.\d+)+\.\s",
+                        re.I)
 _STRAY_BIL = re.compile(r"(?<=[A-Za-z%)])\s\d{1,2}\.?\s(?=[A-Z])")
 
 
-def label_quality(label: str) -> tuple[str, str]:
+def label_quality(label: str, repeats: bool = False) -> tuple[str, str]:
     """-> ('clean'|'partial'|'reject', reason).
 
     The `-layout` dump can interleave a neighbouring narrative column or a
@@ -520,8 +536,12 @@ def label_quality(label: str) -> tuple[str, str]:
     whose identity cannot be defended is not a row).
     """
     n = len(label.split())
-    if (_PROSE.search(label) or _SENTENCE.search(label)) and n >= 6:
+    if (_PROSE.search(label) or _SENTENCE.search(label)) and n >= 8:
         return "reject", "label reads as narrative prose, not a table row label"
+    if _NARRATIVE.search(label) and n >= 6:
+        return "reject", "label reads as narrative prose, not a table row label"
+    if repeats and _PROSE_DUP.search(label) and n >= 6:
+        return "reject", "label reads as narrative prose and its figures repeat another row of the table"
     if n > 25:
         return "reject", f"label is {n} words - column interleaving suspected"
     if _STRAY_BIL.search(label):

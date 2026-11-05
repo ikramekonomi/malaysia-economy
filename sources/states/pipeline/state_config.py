@@ -746,8 +746,9 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
         match=dict(target="finance", jadual="4.30", checks=()),
         affected_rows="CMD.44.2016 J4.30 (Akaun Deposit by type), every row",
         defect="The table prints a block of depositor COUNTS (Bilangan Pendeposit 2015 / 2014) then the amounts "
-               "(RM Juta 2015 / 2014) under a two-tier header; the columns are read off by one block, so the counts "
-               "ship as RM Juta for FY2015 (11,988 / 3,106 / 15,094) and FY2014 takes the 2015 amounts.",
+               "(RM Juta 2015 / 2014) under a two-tier header; the columns are read off by one block, so the 2014 "
+               "counts ship as RM Juta for FY2015 (11,988 / 3,106 / 15,094) and the FY2014 Jumlah carries the 2015 "
+               "total (613.08 for 461.03); the FY2014 Deposit Am 64.88 and Deposit Khas 396.15 are right.",
         diagnosis="Page-proved (CMD.44.2016.pdf p48): printed 2015 RM 73.49 / 539.59 / 613.08, 2014 RM 64.88 / "
                   "396.15 / 461.03. Not an AG misprint.",
         why_unfixed="A two-tier header with a non-money block needs the header tiers read as such; one table.",
@@ -756,8 +757,21 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     dict(
         state="Kedah",
         source_file="CMD.34.2018.pdf", pdf_page="", printed_page="", jadual="",
-        match=dict(target="finance", fiscal_year=("2016",), checks=()),
-        affected_rows="CMD.34.2018 J4.8 and J4.9, the FY2016 comparatives",
+        match=dict(target="finance", jadual="4.8", fiscal_year=("2016",), checks=()),
+        affected_rows="CMD.34.2018 J4.8 (and J4.9, next entry), the FY2016 comparatives",
+        defect="FY2016 is printed twice, as originally reported and 'Dinyatakan Semula' (restated); the extractor "
+               "reads the restated column, where '-' means 'not restated', and ships 0.00 (e.g. Baki 1 Januari "
+               "-497.93 -> 0; Perbelanjaan 545.91 / 660.91 -> 0).",
+        diagnosis="Page-proved by the verifier (CMD.34.2018.pdf p30-31).",
+        why_unfixed="Needs the 'Dinyatakan Semula' column recognised as a restatement basis, not the year column.",
+        impact_on_data="The national panel takes Kedah FY2016 from its own volume (CMD.34.2017), so core is "
+                       "unaffected; do not use these comparatives.",
+    ),
+    dict(
+        state="Kedah",
+        source_file="CMD.34.2018.pdf", pdf_page="", printed_page="", jadual="",
+        match=dict(target="finance", jadual="4.9", fiscal_year=("2016",), checks=()),
+        affected_rows="CMD.34.2018 J4.9 (and J4.8, previous entry), the FY2016 comparatives",
         defect="FY2016 is printed twice, as originally reported and 'Dinyatakan Semula' (restated); the extractor "
                "reads the restated column, where '-' means 'not restated', and ships 0.00 (e.g. Baki 1 Januari "
                "-497.93 -> 0; Perbelanjaan 545.91 / 660.91 -> 0).",
@@ -776,7 +790,8 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
         diagnosis="The FY2015 volume prints 69.05 / 142.49. The header misprint is the source's; reading the column "
                   "as FY2015 is ours.",
         why_unfixed="One table; a header-year override needs its own page-proved rule.",
-        impact_on_data="Unconformed / non-canonical rows. Do not use this table's FY2015 figures.",
+        impact_on_data="Some rows are conformed (Saham Tidak Tersiar Harga) or canonical (Hartanah); all are "
+                       "flagged suspect. Do not use this table's FY2015 figures.",
     ),
     dict(
         state="Sabah",
@@ -910,8 +925,8 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                "Awam`; the by-Bil. parser does the same in Sarawak CMD.44.2016 J4.13 (`Kewangan Pampasan Gantian "
                "Hak Ke Atas` = printed `Pampasan Gantian Hak Ke Atas Minyak`; `Minyak Royalti Hutan` = `Royalti "
                "Hutan`). (b) FIXED 2026-11-05: a label line exactly between two rows is now placed by its glyph "
-               "position (pdftotext -bbox-layout) in both parsers, never onto a closed total/balance line - 158 labels "
-               "in 13 states moved to their own row (Selangor CMD.49.2023 J13, Kedah CMD.42.2022 J10 `Lain-Lain "
+               "position (pdftotext -bbox-layout) in both parsers, never onto a closed total/balance line - labels "
+               "in 12 states moved to their own row (Kedah CMD.42.2022 J10 `Lain-Lain "
                "Levi` / the Concurrent List grant, the many `<name tail> Jumlah` totals; "
                "qa/audits/2026-11-05_state_column_shift.md). (c) The running "
                "footer `Penyata Kewangan` survives on some JUMLAH labels (Melaka CMD.33.2019 J15, Perlis "
