@@ -29,7 +29,7 @@ fact_labour_indicators,2023 implied_average_wage_rm_per_worker_year,38705.16,387
 fact_labour_indicators,2023 labour_share_of_gdp_pct,33.532,33.532,PASS,core: derive('ratio') DV2
 fact_labour_indicators,2024 implied_average_wage_rm_per_worker_year,39663.69,39663.69,PASS,core: derive('per_employed') DV6
 fact_labour_indicators,2024 labour_share_of_gdp_pct,33.585,33.585,PASS,core: derive('ratio') DV2
-fact_labour_indicators,2025 implied_average_wage_rm_per_worker_year,41424.24,41424.24,PASS,core: derive('per_employed') DV6
+fact_labour_indicators,2025 implied_average_wage_rm_per_worker_year,41424.24,,FAIL,input not held in core
 fact_labour_indicators,2025 labour_share_of_gdp_pct,33.912,33.912,PASS,core: derive('ratio') DV2
 fact_fiscal_headline,2009 revenue_bnm_rm,158639300000.00,158639300000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"
 fact_fiscal_headline,2009 opex_bnm_rm,157066955000.00,157066955000.00,PASS,"core bnm:msb_3_1@2026-07-20, to the sen"

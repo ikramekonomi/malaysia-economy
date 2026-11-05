@@ -89,6 +89,8 @@ SUITE = [
     "core/pipeline/build_gap_revenue.py",
     "core/pipeline/build_gap_reported_vs_audited.py",
     "core/pipeline/build_gap_obligations.py",
+    "sources/rmk/pipeline/validate_rmk12.py",
+    "core/pipeline/build_gap_target.py",
     "apps/models/score_nowcast_2025.py",
     "qa/run_eval.py",
     "qa/reproduce_curated.py",

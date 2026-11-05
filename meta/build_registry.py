@@ -117,7 +117,8 @@ def manifest_files():
                     "manifest": m.get("manifest", "") + " (via source_file of the AG registers)"})
     # sources whose PDFs were re-downloaded and proved by meta/l0_identity.py
     manifested = {}
-    for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil")):
+    for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil"),
+                     ("rmk", "rmk_targets")):
         p = os.path.join(REPO, "sources", src, "data", "_documents_manifest.csv")
         if not os.path.exists(p):
             continue
@@ -140,7 +141,8 @@ def manifest_files():
                     "retrieved_date": m.get("retrieved_date", ""),
                     "manifest": "sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)"})
     # the documents their rows cite that no manifest covers yet, without a sha256
-    for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil")):
+    for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil"),
+                     ("rmk", "rmk_targets")):
         seen = set()
         for p in sorted(glob.glob(os.path.join(REPO, "sources", src, "data", "**", "*.csv"), recursive=True)):
             if os.path.basename(p).startswith("_"):

@@ -59,6 +59,7 @@ crime_category=property|crime_type=theft_vehicle_motorcycle,crime_category=prope
 facility_type=hospital_moh,facility_type=hospital_moh,facility_type,hospital_moh
 facility_type=hospital_non_moh,facility_type=hospital_non_moh,facility_type,hospital_non_moh
 facility_type=special_medical_institution,facility_type=special_medical_institution,facility_type,special_medical_institution
+geo_scope=MY-14+MY-16,geo_scope=MY-14+MY-16,geo_scope,MY-14+MY-16
 hasil_kod=60000,hasil_kod=60000,hasil_kod,60000
 hasil_kod=70000,hasil_kod=70000,hasil_kod,70000
 hasil_kod=80000,hasil_kod=80000,hasil_kod,80000

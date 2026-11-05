@@ -198,6 +198,10 @@ R4 held series has files,lkan_state,PASS,353 file(s)
 R5 every file has a sha256,lkan_state,PASS,353 files
 R7 every file is in the L0 archive,lkan_state,PASS,353 of 353 archived (release l0-archive or git history)
 R6 licence recorded,lkan_state,OPEN,licence to_confirm
+R4 held series has files,rmk_targets,PASS,1 file(s)
+R5 every file has a sha256,rmk_targets,PASS,1 files
+R7 every file is in the L0 archive,rmk_targets,OPEN,0 of 1 archived (release l0-archive or git history)
+R6 licence recorded,rmk_targets,OPEN,licence to_confirm
 R4 held series has files,vital_statistics,PASS,2 file(s)
 R5 every file has a sha256,vital_statistics,PASS,2 files
 R7 every file is in the L0 archive,vital_statistics,PASS,2 of 2 archived (release l0-archive or git history)

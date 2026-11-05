@@ -36,6 +36,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
 | `gap_reported_vs_audited.csv` | 89 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
 | `gap_obligations_growth.csv` | 68 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
+| `gap_target_vs_outcome.csv` | 41 | plan target × place: RMKe-12's 2025 targets (GDP by state, federal finance, labour) beside the outcome (Phase 5) |
 | `gap_revenue_estimate_vs_collected.csv` | 90 | federal revenue by type (tax, non-tax, non-revenue receipts, Federal Territories, total) × year: the accounts' original and revised estimates and actual beside the Budget revenue books'; collection rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
@@ -487,6 +488,41 @@ The FY2018 volume's 2017 comparatives for PFI, commitments and committed guarant
 its own volume), so those series start in 2018. A blind verifier re-derived every number:
 `qa/audits/2026-11-06_phase5_obligations_verifier.md`. The Auditor-General's and MOF's figures stay in `curated/fact_obligations.csv`. Checks O1-O5 are
 in `_validation_gap_obl.csv`.
+
+## gap_target_vs_outcome (Phase 5, 2026-11-06)
+
+Was the plan target met? The targets come from a new source, `sources/rmk/`: the Twelfth Malaysia Plan
+(RMKe-12, 2021-2025) appendix as printed, 1,070 cells checked against the tables' own identities. Core holds them
+as basis `target` (41 observations, check C22):
+* real GDP by state, the 2025 level and the 2021/2025 average growth (a new multi-year period code);
+* federal finance, 2025;
+* the labour market, 2025.
+
+The view sets each target beside its outcome from core:
+* DOSM GDP by state (constant 2015 prices), and its 2020-2025 compound growth from the same vintage;
+* MOF's FY2025 actuals, with BNM beside them, until PKKP FY2025 is loaded;
+* the DOSM labour force survey, 2025.
+
+The method was declared before the targets were extracted (`core/pipeline/build_gap_target.py`). Status states
+the position only: `at_target` is within 1% of a level target or 0.1 point of a growth target; otherwise
+`above_target` or `below_target`. Whether above is good depends on the line.
+
+Results:
+* **GDP growth:** 14 places are computed (13 states and Labuan). 3 grew faster than their target: Selangor
+  (7.1% a year against 4.3%), Pulau Pinang (7.1% against 5.4%) and Johor (6.0% against 5.1%). The other 11 grew
+  slower. The largest shortfalls are Sabah (2.7% against 6.5%), Kelantan (3.4% against 6.7%) and Terengganu (3.6%
+  against 6.6%).
+* **Kuala Lumpur:** not computed. The plan's KL row includes Putrajaya, and DOSM prints Putrajaya separately only
+  from 2023. The note gives the evidence that DOSM's earlier KL figure includes it, but this is not assumed.
+* **Federal finance**, in nominal ringgit:
+  * revenue: 1.24x the target;
+  * operating spending: 1.25x;
+  * gross development spending: 1.08x;
+  * overall deficit: RM75.3b against a planned RM68.5b.
+* **Labour:** unemployment came in at 3.0% against a 4.0% target.
+
+Extracted but not compared, because core holds no outcome (check T5): GDP per capita, sectors, and Jadual 10's
+current balance and %-of-GDP range. Checks T1-T6 are in `_validation_gap_tvo.csv`.
 
 ## gap_federal_placement (Phase 3, 2026-11-05)
 

@@ -118,6 +118,8 @@ class Warehouse:
         rs = self.index.get((indicator, geo, period, breakdown), [])
         if basis:
             rs = [r for r in rs if r["basis"] == basis]
+        else:
+            rs = [r for r in rs if r["basis"] != "target"]  # a plan's target is never the outcome; ask for it by basis
         if len({r["edition_id"].split(":")[0] for r in rs}) > 1:
             return None  # two publishers for one concept: never choose between them silently
         return rs[0] if len(rs) == 1 else (sorted(rs, key=lambda r: r["vintage"])[-1] if rs else None)

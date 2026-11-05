@@ -584,6 +584,8 @@ class Tools:
                                     "BNM 1996-2025, MOF 2015-2025 and PKKP FY2009-2024, where two of them print a year"),
         "gap_obligations_growth": ("core/pipeline/build_gap_obligations.py (declared 2026-11-06)",
                                    "PKKP FY2009-2024 (PFI, commitments and committed guarantees from FY2018)"),
+        "gap_target_vs_outcome": ("core/pipeline/build_gap_target.py (declared 2026-11-06)",
+                                  "RMKe-12's 2025 targets (GDP by state, federal finance, labour)"),
         "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
                                   "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
@@ -712,6 +714,14 @@ class Tools:
                 "debt's growth the same year; ratio_to_debt and the indexes (first year held = 100) compare levels. "
                 "Never add instruments: commitments include the committed guarantees, and deposit guarantees overlap "
                 "deposit insurance (CV30). A later volume's restatement is in the note, not applied.")
+        if name == "gap_target_vs_outcome":
+            out["how_to_read"] = (
+                "One row per RMKe-12 (2021-2025) target and place: its 2025 target as printed in the plan's appendix, "
+                "beside the outcome from core (DOSM GDP by state at constant 2015 prices and its 2020-2025 compound "
+                "growth; MOF's FY2025 actuals, BNM beside them, until PKKP FY2025 is loaded; DOSM labour force). Status "
+                "is only the position (at_target within 1% of a level or 0.1 point of a growth rate, above_target, "
+                "below_target); whether above is good depends on the line. Federal money targets are in nominal ringgit. "
+                "The plan's Kuala Lumpur row includes Putrajaya.")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:

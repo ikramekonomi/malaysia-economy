@@ -294,6 +294,24 @@ q("5", "Did PFI liabilities grow faster than federal debt in 2024?", "get_gap_vi
   {"name": "gap_obligations_growth", "year": "2024"}, "row_field:instrument=pfi:status", "grew_slower_than_debt")
 
 
+def rmk12(jadual, section, line, measure):
+    with open(os.path.join(REPO, "sources", "rmk", "data", "rmk12", "fact_rmk12_lampiran.csv"), newline="",
+              encoding="utf-8") as fh:
+        return next(Decimal(r["value"]) for r in csv.DictReader(fh) if r["jadual"] == jadual and
+                    r["section_bm"] == section and r["line_bm"] == line and r["measure"] == measure)
+
+
+q("5", "What was RMKe-12's 2025 target for Selangor's real GDP?", "get_gap_view",
+  {"name": "gap_target_vs_outcome", "geo": "MY-10", "year": "2025"}, "row_field:indicator_code=gdp.real:target",
+  s(rmk12("5", "Selangor", "KDNK", "sasaran_2025") * 1000000))
+q("5", "What average growth did RMKe-12 target for Sabah's real GDP over 2021-2025?", "get_gap_view",
+  {"name": "gap_target_vs_outcome", "geo": "MY-12", "year": "2021/2025"},
+  "row_field:indicator_code=gdp.real.avg_growth:target", s(rmk12("5", "Sabah", "KDNK", "sasaran_purata_rmk12_2021_2025")))
+q("5", "What federal revenue did RMKe-12 target for 2025?", "get_gap_view",
+  {"name": "gap_target_vs_outcome", "geo": "MY", "year": "2025"},
+  "row_field:indicator_code=federal_gov.revenue.total:target", s(rmk12("10", "", "Hasil", "sasaran_2025") * 1000000))
+
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")

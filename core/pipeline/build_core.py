@@ -735,6 +735,59 @@ def build_obligations(obs, checks):
                    "PASS" if not bad else "FAIL", f"{len(seen)} instrument-years" + (f"; {bad}" if bad else "")])
 
 
+PLAN_STATE = {"Johor": "MY-01", "Kedah": "MY-02", "Kelantan": "MY-03", "Melaka": "MY-04", "Negeri Sembilan": "MY-05",
+              "Pahang": "MY-06", "Pulau Pinang": "MY-07", "Perak": "MY-08", "Perlis": "MY-09", "Selangor": "MY-10",
+              "Terengganu": "MY-11", "Sabah": "MY-12", "Sarawak": "MY-13", "WP Kuala Lumpur1": "MY-14",
+              "WP Labuan": "MY-15"}
+PLAN_J10 = {"Hasil": "federal_gov.revenue.total", "Perbelanjaan Mengurus": "federal_gov.expenditure.opex",
+            "Perbelanjaan Pembangunan Kasar": "federal_gov.expenditure.devex",
+            "Tolak: Terimaan Balik Pinjaman": "federal_gov.expenditure.devex_loan_recovery",
+            "Perbelanjaan Pembangunan Bersih": "federal_gov.expenditure.devex_net",
+            "Baki Keseluruhan": "federal_gov.overall_balance"}
+PLAN_J14 = {"Jumlah Guna Tenaga": ("lfs.employed", 1000), "Jumlah Tenaga Buruh": ("lfs.labour_force", 1000),
+            "Penganggur": ("lfs.unemployed", 1000), "Kadar Pengangguran, %": ("lfs.unemployment_rate", 1),
+            "Kadar Penyertaan Tenaga Buruh, %": ("lfs.participation_rate", 1)}
+
+
+def build_plan_targets(obs, checks):
+    """RMKe-12's 2025 targets (Phase 5, gap_target_vs_outcome; method in core/pipeline/build_gap_target.py), basis
+    target, from sources/rmk: GDP by state (level 2025 and the 2021/2025 average growth; the plan's KL row includes
+    Putrajaya, so it is MY-14 with breakdown geo_scope=MY-14+MY-16, never the KL total), federal finance and the
+    labour market (2025). Lines whose outcome core does not hold stay at L1."""
+    man = {r["file_name"]: r for r in rows(os.path.join(REPO, "sources", "rmk", "data", "_documents_manifest.csv"))}
+    path = os.path.join(REPO, "sources", "rmk", "data", "rmk12", "fact_rmk12_lampiran.csv")
+    rel = os.path.relpath(path, REPO)
+    n = 0
+    for i, r in enumerate(rows(path), start=2):
+        j, line, m = r["jadual"], r["line_bm"], r["measure"]
+        ind = per = None
+        geo, bk, v = "MY", "_total", dec(r["value"])
+        if j == "5" and line == "KDNK" and m in ("sasaran_2025", "sasaran_purata_rmk12_2021_2025"):
+            geo = PLAN_STATE[r["section_bm"]]
+            bk = "geo_scope=MY-14+MY-16" if geo == "MY-14" else "_total"
+            if m == "sasaran_2025":
+                ind, per, v = "gdp.real", "2025", v * 1000000
+            else:
+                ind, per = "gdp.real.avg_growth", "2021/2025"
+        elif j == "10" and line in PLAN_J10 and m == "sasaran_2025":
+            ind, per, v = PLAN_J10[line], "2025", v * 1000000
+        elif j == "14" and line in PLAN_J14 and m == "sasaran_2025":
+            ind, mult = PLAN_J14[line]
+            per, v = "2025", v * mult
+        if not ind:
+            continue
+        n += 1
+        obs.add(indicator_code=ind, geo_code=geo, period_code=per, breakdown_key=bk, entity_id=entity(
+                    "federal_gov", "MY", per[-4:]) if ind.startswith("federal_gov.") else "_none",
+                basis="target", edition_id="rmk:rmk12.pdf", vintage="2021", value=v, value_printed=r["value_printed"],
+                unit_printed=r["unit_printed"], precision_printed="1" if r["unit_printed"] == "RM juta" else "0.1",
+                estimate_method="plan", reliability="ok", file_id=man["rmk12.pdf"]["sha256"], pdf_page=r["pdf_page"],
+                printed_page=r["printed_page"], table_ref=f"RMKe-12 Lampiran Jadual {j}: {r['table_title_bm']}",
+                l1_ref=f"{rel}#row{i}")
+    checks.append(["C22 RMKe-12 targets loaded (15 state GDP levels and growth, 6 federal, 5 labour)", "rmk",
+                   "PASS" if n == 41 else "FAIL", f"{n} targets"])
+
+
 def build_revenue_by_type(obs, checks):
     """Federal revenue by type (Phase 5, gap_revenue_estimate_vs_collected): PKKP Nota 5(a) levels 0 and 1, FY2009-
     2024 own volume, original and revised estimates and actual; the Budget revenue books' (Anggaran Hasil 2025-
@@ -1051,7 +1104,11 @@ def dim_geo(obs):
 def dim_period(obs):
     out = []
     for p in sorted(obs.periods):
-        if re.fullmatch(r"\d{4}", p):
+        if re.fullmatch(r"\d{4}/\d{4}", p):  # a multi-year period, e.g. a plan's 2021/2025 average growth
+            a, b = p.split("/")
+            out.append({"period_code": p, "freq": "P", "period_start": f"{a}-01-01", "period_end": f"{b}-12-31",
+                        "year": b})
+        elif re.fullmatch(r"\d{4}", p):
             out.append({"period_code": p, "freq": "A", "period_start": f"{p}-01-01", "period_end": f"{p}-12-31",
                         "year": p})
         elif "-Q" in p:
@@ -1277,6 +1334,7 @@ def main():
     build_federal_loans(obs, obs.extra_checks)
     build_revenue_by_type(obs, obs.extra_checks)
     build_obligations(obs, obs.extra_checks)
+    build_plan_targets(obs, obs.extra_checks)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})
