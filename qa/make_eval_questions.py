@@ -718,6 +718,23 @@ q("5", "Federal special grant to the Federal Territories in 2024 (moved from B.1
   "get_flows", {"to": "federal_territories", "start": "2024", "end": "2024"},
   "flow_purpose_value:special grant to the Federal Territories",
   s(vote_grant(2024, "B.06", r"pemberian khas kepada wilayah persekutuan")))
+def named_grant(year, maksud, pattern):
+    import re
+    hits = [r for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", str(year), "fact_opex_detail.csv")))
+            if r["maksud_code"] == maksud and r["row_type"] == "object_aktiviti" and r["objek_code"] == "40000"
+            and re.search(pattern, (r["aktiviti_name_bm"].strip() or r["program_name_bm"]), re.I)
+            and r["source_file"].startswith(str(year))]
+    assert len(hits) == 1, (year, maksud, pattern, len(hits))
+    return Decimal(hits[0]["sebenar_rm"])
+
+
+q("5", "How much did the federal government pay Perbadanan Putrajaya in 2011 (a whole programme in B.32)?", "get_flows",
+  {"to": "perbadanan_putrajaya", "start": "2011", "end": "2011"}, "flow_value",
+  s(named_grant(2011, "B.32", r"^\s*perbadanan putrajaya")))
+q("5", "What did Labuan's administration receive by name from the federal government in 2024?", "get_flows",
+  {"to": "MY-15", "start": "2024", "end": "2024"}, "flow_value", s(named_grant(2024, "B.06", r"^\s*perbadanan labuan")))
+q("5", "Did Kuala Lumpur City Hall receive a federal grant by name in 2019?", "get_flows",
+  {"to": "dbkl", "start": "2019", "end": "2019"}, "not_held", kind="trap_missing")
 q("5", "Is Putrajaya shown the local-authority grants paid to the states' local authorities?", "get_flows",
   {"to": "MY-16", "start": "2024", "end": "2024"}, "class_excludes", "Pihak Berkuasa Tempatan", kind="trap_placement")
 q("5", "Does a group answer say no amount is one body's money?", "get_flows",

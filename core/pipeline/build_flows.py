@@ -108,30 +108,35 @@ def main():
                 file_id=sha.get(r["source_file"], ""), pdf_page=r["pdf_page"], printed_page=r["printed_page"],
                 table_ref=f"{r['statement']} ({r['label_bm']})", l1_ref=f"{rel}#row{i}"))
 
-    # B.11 programme 020000 (Bayaran Pindahan dan Pemberian): its activity codes renumber almost every year, so
-    # these rules match the printed name (a regex), and a rule may match at most one activity in a year.
-    # Only the activities a rule names are loaded: most of the programme is not money to a government.
+    # Name-matched grants (B.11 programme 020000; B.06; B.32): activity codes renumber almost every year, so these
+    # rules match the printed name (a regex), and a rule may match at most one block in a year. A block is an
+    # activity, or a programme printed with no activities (B.32 FY2010-2013 prints 'PERBADANAN PUTRAJAYA' as a whole
+    # programme). A rule with no programme_code matches in any programme of its vote. Only the blocks a rule names
+    # are loaded: most of these votes are not money to a government.
     import re
     multi, b11_leaves, b11_years = [], defaultdict(list), defaultdict(set)
-    name_scopes = {(n["maksud_code"], n["program_code"]) for n in name_rules}
+    rule_votes = {n["maksud_code"] for n in name_rules}
     b11 = []
     for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_opex_detail.csv"))):
         rel = os.path.relpath(path, REPO)
-        for i, r in enumerate(rows(path), start=2):
-            if (r["maksud_code"], r["program_code"]) not in name_scopes or not r["source_file"].startswith(r["year"]):
-                continue
+        scoped = [(i, r) for i, r in enumerate(rows(path), start=2)
+                  if r["maksud_code"] in rule_votes and r["source_file"].startswith(r["year"]) and r["year"] not in SKIP_YEARS]
+        with_acts = {(r["year"], r["maksud_code"], r["program_code"]) for i, r in scoped if r["aktiviti_code"].strip()}
+        for i, r in scoped:
             y = r["year"]
-            if y in SKIP_YEARS:
-                continue
             if r["row_type"] == "object_aktiviti":
-                b11_leaves[(y, r["maksud_code"], r["aktiviti_code"])].append((i, r))
+                b11_leaves[(y, r["maksud_code"], r["program_code"], r["aktiviti_code"].strip())].append((i, r))
                 continue
-            if r["row_type"] != "jumlah_aktiviti":
+            if r["row_type"] == "jumlah_aktiviti":
+                name = r["aktiviti_name_bm"]
+            elif r["row_type"] == "jumlah_program" and (y, r["maksud_code"], r["program_code"]) not in with_acts:
+                name = r["program_name_bm"]
+            else:
                 continue
-            hit = [n for n in name_rules if (n["maksud_code"], n["program_code"]) == (r["maksud_code"], r["program_code"])
-                   and re.search(n["name_pattern"], r["aktiviti_name_bm"], re.I)]
+            hit = [n for n in name_rules if n["maksud_code"] == r["maksud_code"]
+                   and n["program_code"] in ("", r["program_code"]) and re.search(n["name_pattern"], name, re.I)]
             if len(hit) > 1:
-                multi.append(f"FY{y} {r['aktiviti_code']} {r['aktiviti_name_bm']!r} matches {len(hit)} rules")
+                multi.append(f"FY{y} {r['maksud_code']} {r['program_code']}/{r['aktiviti_code']} {name!r} matches {len(hit)} rules")
                 continue
             if hit:
                 b11.append((hit[0], r, rel, i))
@@ -142,24 +147,26 @@ def main():
     seen, b11_bad, other_lines = defaultdict(list), [], []
     resolved = []
     for rule, jr, rel, ji in b11:
-        lines = b11_leaves[(jr["year"], jr["maksud_code"], jr["aktiviti_code"])]
+        lines = b11_leaves[(jr["year"], jr["maksud_code"], jr["program_code"], jr["aktiviti_code"].strip())]
         grant = [(i, r) for i, r in lines if r["objek_code"] == "40000"]
         if len(grant) != 1:
-            b11_bad.append(f"FY{jr['year']} {jr['maksud_code']} {jr['aktiviti_code']}: {len(grant)} 40000 lines")
+            b11_bad.append(f"FY{jr['year']} {jr['maksud_code']} {jr['program_code']}/{jr['aktiviti_code']}: {len(grant)} 40000 lines")
             continue
         rest = [(r["objek_code"], r["sebenar_rm"]) for i, r in lines if r["objek_code"] != "40000"]
         if rest:
             other_lines.append(f"FY{jr['year']} {jr['maksud_code']} {jr['aktiviti_code']} {rest} (not paid to the recipient; not in the flow)")
         resolved.append((rule, grant[0][1], rel, grant[0][0]))
     for rule, r, rel, i in resolved:
-        seen[(rule["name_pattern"], r["year"])].append(r["aktiviti_code"])
+        block = r["aktiviti_code"].strip() or r["program_code"]
+        printed = r["aktiviti_name_bm"].strip() or r["program_name_bm"].strip()
+        seen[(rule["name_pattern"], r["year"])].append(f"{r['maksud_code']} {block}")
         to = rule["to_entity_id"]
-        key = "|".join([federal, to, r["year"], r["maksud_code"], r["aktiviti_code"], r["source_file"]])
+        key = "|".join([federal, to, r["year"], r["maksud_code"], r["program_code"], r["aktiviti_code"], r["source_file"]])
         out.append(dict(
             flow_id="f" + hashlib.sha1(key.encode()).hexdigest()[:12], from_entity_id=federal, to_entity_id=to,
             flow_type="grant", period_code=r["year"], amount=str(Decimal(r["sebenar_rm"])),
             amount_printed=r["sebenar_rm"], unit_printed="RM", economic_class=r.get("objek_class_bm") or "",
-            purpose=f"{r['maksud_code']} {r['aktiviti_code']}: {rule['purpose_en']}; printed: {r['aktiviti_name_bm'].strip()}",
+            purpose=f"{r['maksud_code']} {block}: {rule['purpose_en']}; printed: {printed}",
             geo_code=rule["geo_code"] or "_unallocated", geo_method=rule["geo_method"],
             geo_confidence="high" if rule["geo_method"] == "stated" else "none", is_leaf="true",
             basis="audited", status="final", edition_id=f"pkkp:{r['source_file']}",
@@ -202,8 +209,8 @@ def main():
                for (y, a), v in sorted(jumlah.items()) if len(leaves[(y, a)]) != 1 or leaves[(y, a)][0] != v]
     add("F7 each activity prints one object line, equal to its JUMLAH (so the JUMLAH is the leaf)", "fact_money_flow",
         "PASS" if not notleaf else "FAIL", f"{len(jumlah)} activities" + (f"; {notleaf}" if notleaf else ", all single-leaf"))
-    add("F8 a name rule (B.11, B.06) matches at most one activity a year, and an activity at most one rule", "fact_money_flow",
-        "PASS" if not multi else "FAIL", f"{len(resolved)} B.11 flows" + (f"; {multi}" if multi else ""))
+    add("F8 a name rule (B.11, B.06, B.32) matches at most one block a year, and a block at most one rule", "fact_money_flow",
+        "PASS" if not multi else "FAIL", f"{len(resolved)} name-matched flows" + (f"; {multi}" if multi else ""))
     add("F9 each name-matched grant prints exactly one 40000 (Pemberian dan Kenaan Bayaran Tetap) line, the flow's amount",
         "fact_money_flow", "PASS" if not b11_bad else "FAIL",
         f"{len(resolved)} activities" + (f"; {b11_bad}" if b11_bad else "")
@@ -222,9 +229,10 @@ def main():
         "government); the World Bank Group / IsDB offices in Kuala Lumpur (not a state); FY2018: the Federal "
         "Territories' grants are not found in B.11 or B.06 - B.32 040400 'Penyelenggaraan dan Kemudahan Awam' prints "
         "RM65,000,000.00 that year only, about their combined size, but its name does not say so (not loaded until a "
-        "page or budget book proves it); grants by name to Perbadanan Putrajaya, Perbadanan Labuan and Dewan Bandaraya "
-        "Kuala Lumpur (B.32, later B.06) and B.43's local-government lines: not loaded yet (they need those bodies as "
-        "entities)")
+        "page or budget book proves it); the Federal Territories ministry's (B.32, later B.06) other "
+        "lines for the territories (PICC upkeep, the Putrajaya bus service, Labuan water supply, the DBKL landfill fee "
+        "and duty collection): services the ministry buys, not grants to an administration; B.43's 'Kerajaan "
+        "Tempatan' and solid-waste lines: the recipient is not stated")
     add("F6 years not loaded (declared)", "fact_money_flow", "INFO",
         "; ".join(f"FY{y}: {why}" for y, why in SKIP_YEARS.items()))
 

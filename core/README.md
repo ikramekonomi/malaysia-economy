@@ -11,7 +11,7 @@ python3 core/pipeline/build_entities.py           # dim_entity + bridge_entity_c
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_flows.py              # fact_money_flow.csv + _validation_flow.csv (Phase 3)
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 206 questions against the agent tools
+python3 qa/run_eval.py                            # 209 questions against the agent tools
 python3 qa/reproduce_curated.py                   # curated tables rebuilt from core, digit for digit
 ```
 
@@ -25,9 +25,9 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_indicator.csv` | 65 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
 | `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
 | `fact_observation.csv` | 138,511 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
-| `dim_entity.csv` | 63 | who: the federal government, 13 state governments, 45 federal votes, 4 group recipients (Phase 3) |
-| `fact_money_flow.csv` | 236 | money moving from one body to another: federal grants to governments (PKKP T.12 and B.11), FY2010-2024 except FY2015 |
-| `bridge_entity_code.csv` | 109 | readable code → entity, with validity years, scope and proof |
+| `dim_entity.csv` | 66 | who: the federal government, 13 state governments, 45 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
+| `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12 and B.11), FY2010-2024 except FY2015 |
+| `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
@@ -291,9 +291,15 @@ show it (D27). First slice: the federal grants and assignments to the states, Ta
   `meta/group_member.csv` says which places each group covers, so Johor is not shown the Sabah-Sarawak grants
   and Kuala Lumpur sees the Federal Territories' grants (not the local-authority grants: nothing shows the
   territories receiving them). Declared and not loaded (F11): the interest subsidy on
-  a Sabah housing company's loans, the World Bank/IsDB offices in Kuala Lumpur, and (next slice) the payments by
-  name to Perbadanan Putrajaya, Perbadanan Labuan and DBKL and the local-government ministry's lines. Blind
+  a Sabah housing company's loans, the World Bank/IsDB offices in Kuala Lumpur, the territories ministry's
+  service lines (PICC, buses, water), and the local-government ministry's lines (recipient not stated). Blind
   verifier: `qa/audits/2026-11-05_phase3_b11_verifier.md` (94 of 94 re-derived).
+* **Grants by name to the territories' administrations** (third slice): Perbadanan Putrajaya (RM60-157 million
+  a year), Perbadanan Labuan (RM35-52 million) and Dewan Bandaraya Kuala Lumpur (RM55-76 million to 2014, small
+  since; none by name in FY2010 and FY2019), paid under the Federal Territories ministry's vote B.32 and from
+  FY2023 under B.06; FY2010-2013 print each as a whole programme with no activity tier, which the name rules
+  match. They are local-authority entities (E000064-E000066), geo stated, members of the class E000063; a
+  territory's `get_flows` answer lists its administration's grants by name and the class grants beside them.
 * **Not yet:** what each state records receiving (state accounts) matched to these flows; development grants
   and federal projects in a state.
 
