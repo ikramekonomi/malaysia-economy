@@ -208,7 +208,7 @@ V1_revenue_categories,PASS,2018,the three printed categories = jumlah hasil,1543
 V1_prestasi_expenditure_total,PASS,2019,opex + devex = expenditure_total,1669.74,1669.74,-0.00,CMD.38.2023.pdf,37,29,2,
 V1_prestasi_surplus,PASS,2019,|revenue_total - expenditure_total| = |surplus_deficit|,75.58,75.58,-0.00,CMD.38.2023.pdf,37,29,2,
 V1_prestasi_financing_vs_surplus,PASS,2019,|financing_total| = |surplus_deficit|,75.58,75.58,0.00,CMD.38.2023.pdf,37,29,2,
-V1_revenue_categories,FAIL,2019,the three printed categories = jumlah hasil,1745.32,1745.72,0.40,CMD.38.2023.pdf,37,29,2,
+V1_revenue_categories,SOURCE_ANOMALY,2019,the three printed categories = jumlah hasil,1745.32,1745.72,0.40,CMD.38.2023.pdf,37,29,2,"page-proved: FY2019 prints Hasil Cukai 533.15 + Hasil Bukan Cukai 874.80 + Terimaan Bukan Hasil 337.77 = 1,745.72 against JUMLAH HASIL 1,745.32 (0.40 less). Every other year of the same table adds up exactly (2018 1,543.03; 2020 1,674.29; 2021 1,428.14; 2022 1,630.64). (qa/evidence/CMD.38.2023.pdf/p037.txt (5-year Penyata Prestasi Kewangan, 2018-2022))"
 V1_prestasi_expenditure_total,PASS,2020,opex + devex = expenditure_total,1634.46,1634.46,0.00,CMD.38.2023.pdf,37,29,2,
 V1_prestasi_surplus,PASS,2020,|revenue_total - expenditure_total| = |surplus_deficit|,39.83,39.83,-0.00,CMD.38.2023.pdf,37,29,2,
 V1_prestasi_financing_vs_surplus,PASS,2020,|financing_total| = |surplus_deficit|,39.83,39.83,0.00,CMD.38.2023.pdf,37,29,2,

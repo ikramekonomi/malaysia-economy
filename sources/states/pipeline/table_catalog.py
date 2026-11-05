@@ -584,7 +584,7 @@ LEVEL_CODES = {
     "cash_total", "cash_in_bank", "cash_in_transit", "cash_in_hand",
     "investment_total", "investment_general", "investment_shares",
     "investment_trust_funds", "investment_domestic_deposits",
-    "debt_total", "debt_opening_balance", "debt_closing_balance",
+    "debt_total", "debt_subtotal", "debt_movement_total", "debt_opening_balance", "debt_closing_balance",
     "loans_receivable_total", "loans_receivable_bbn", "loans_receivable_pbt",
     "receivables_total", "financial_assets_total", "liabilities_total",
     "loan_receipts", "loan_payments", "devfund_receipts", "devfund_payments",

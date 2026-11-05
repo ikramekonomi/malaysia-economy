@@ -643,6 +643,38 @@ def mark_trust_hierarchy(rows: list[dict]) -> None:
                 r["is_leaf"] = "yes"
 
 
+def fix_debt_totals(rows: list[dict]) -> int:
+    """Public-debt tables print several JUMLAH lines; only one is the year-end debt (page-proved 2026-11-04).
+
+    * a MOVEMENT table ('PERGERAKAN HUTANG AWAM': opening, loans, repayments, closing) prints balances, not
+      the year-end figure, by column (Selangor CMD.52.2022 J56, CMD.49.2023 J53): its JUMLAH lines become
+      debt_movement_total;
+    * where a table prints a grand total ('JUMLAH HUTANG AWAM' / 'JUMLAH KESELURUHAN'), a plain 'JUMLAH' in
+      the same table is a subtotal (Pahang CMD.44.2021 J32: JUMLAH 3,009.89 federal loans + 60.00 financial
+      institutions = JUMLAH HUTANG AWAM 3,069.89): it becomes debt_subtotal;
+    * a table with one JUMLAH keeps it as debt_total."""
+    groups: dict[tuple, list[dict]] = defaultdict(list)
+    for r in rows:
+        if r["spec_id"] == "hutang_awam":
+            groups[(r["source_file"], r["pdf_page"], r["jadual"], r["fiscal_year"], r["measure"],
+                    r["column_role"])].append(r)
+    n = 0
+    for grp in groups.values():
+        dt = [r for r in grp if r["line_code"] == "debt_total"]
+        if not dt:
+            continue
+        if any("pergerakan" in (r.get("table_title_bm") or "").lower() for r in grp):
+            for r in dt:
+                r["line_code"], n = "debt_movement_total", n + 1
+            continue
+        grand = [r for r in dt if re.search(r"hutang awam|keseluruhan", r["line_label_bm"], re.I)]
+        if grand:
+            for r in dt:
+                if r not in grand:
+                    r["line_code"], n = "debt_subtotal", n + 1
+    return n
+
+
 def mark_canonical(rows: list[dict]) -> None:
     """Exactly one row per (source_file, fiscal_year, measure, line_code) gets
     is_canonical=yes.  Because a volume's own_year rows exist in that volume
@@ -1286,6 +1318,9 @@ def run_state(state: str) -> dict:
               f"revenue={len(r)} unparsed={len(b)}")
 
     mark_trust_hierarchy(fin)
+    nd = fix_debt_totals(fin)
+    if nd:
+        print(f"  re-coded {nd} public-debt JUMLAH row(s) that are not the year-end debt (subtotal or movement)")
     arb = arbitrate_prestasi(fin)
     if arb:
         print(f"  arbitrated {len(arb)} duplicate Penyata Prestasi Kewangan "

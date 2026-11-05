@@ -279,11 +279,6 @@ V1_continuity_cross_volume,PASS,2019,CRA closing FY2018 (CMD.35.2019.pdf) = open
 V1_continuity_cross_volume,PASS,2020,CRA closing FY2019 (CMD.35.2020.pdf) = opening FY2020 (CMD.44.2021.pdf),-23.07,-23.07,0.00,CMD.44.2021.pdf,33,19,6,
 V1_continuity_cross_volume,PASS,2021,CRA closing FY2020 (CMD.44.2021.pdf) = opening FY2021 (CMD.46.2022.pdf),164.95,164.95,0.00,CMD.46.2022.pdf,37,29,6,
 V1_continuity_cross_volume,PASS,2022,CRA closing FY2021 (CMD.46.2022.pdf) = opening FY2022 (CMD.43.2023.pdf),170.81,170.81,0.00,CMD.43.2023.pdf,39,31,6,
-V5_duplicate_code_in_table,FAIL,2021,debt_total is produced twice by the same printed table CMD.43.2023.pdf J32 with different values,3088.25,3108.25,20.00,CMD.43.2023.pdf,59,51,32,"JUMLAH 3,088.25 | JUMLAH HUTANG AWAM 3,108.25"
-V5_duplicate_code_in_table,FAIL,2019,debt_total is produced twice by the same printed table CMD.44.2021.pdf J32 with different values,2966.49,3066.49,100.00,CMD.44.2021.pdf,52,38,32,"JUMLAH 2,966.49 | JUMLAH HUTANG AWAM 3,066.49"
-V5_duplicate_code_in_table,FAIL,2020,debt_total is produced twice by the same printed table CMD.44.2021.pdf J32 with different values,3009.89,3069.89,60.00,CMD.44.2021.pdf,52,38,32,"JUMLAH 3,009.89 | JUMLAH HUTANG AWAM 3,069.89"
-V5_duplicate_code_in_table,FAIL,2020,debt_total is produced twice by the same printed table CMD.46.2022.pdf J31 with different values,3009.89,3069.89,60.00,CMD.46.2022.pdf,56,48,31,"JUMLAH 3,009.89 | JUMLAH HUTANG AWAM 3,069.89"
-V5_duplicate_code_in_table,FAIL,2021,debt_total is produced twice by the same printed table CMD.46.2022.pdf J31 with different values,3088.25,3108.25,20.00,CMD.46.2022.pdf,56,48,31,"JUMLAH 3,088.25 | JUMLAH HUTANG AWAM 3,108.25"
 V2_restatement,PASS,2014,cra_balance for FY2014: own volume CMD.55.2015.pdf J4.1 vs later volume CMD.39.2016.pdf J4.1 (kumpulan_wang_disatukan),53.07,53.07,0.00,CMD.39.2016.pdf,25,9,4.1,
 V2_restatement,PASS,2014,loan_account_balance for FY2014: own volume CMD.55.2015.pdf J4.1 vs later volume CMD.39.2016.pdf J4.1 (kumpulan_wang_disatukan),0.00,0.00,0.00,CMD.39.2016.pdf,25,9,4.1,
 V2_restatement,PASS,2014,trust_account_balance for FY2014: own volume CMD.55.2015.pdf J4.1 vs later volume CMD.39.2016.pdf J4.1 (kumpulan_wang_disatukan),206.13,206.13,0.00,CMD.39.2016.pdf,25,9,4.1,
@@ -455,7 +450,7 @@ V2_restatement,PASS,2019,misc_govt_trust_funds for FY2019: own volume CMD.35.202
 V2_restatement,PASS,2019,public_trust_funds for FY2019: own volume CMD.35.2020.pdf J18 vs later volume CMD.44.2021.pdf J17 (akaun_amanah_disatukan),132.47,132.47,0.00,CMD.44.2021.pdf,40,26,17,
 V2_restatement,PASS,2019,deposit_account for FY2019: own volume CMD.35.2020.pdf J18 vs later volume CMD.44.2021.pdf J17 (akaun_amanah_disatukan),249.32,249.32,0.00,CMD.44.2021.pdf,40,26,17,
 V2_restatement,PASS,2019,trust_account_balance for FY2019: own volume CMD.35.2020.pdf J2 vs later volume CMD.44.2021.pdf J17 (akaun_amanah_disatukan),354.76,354.76,0.00,CMD.44.2021.pdf,40,26,17,
-V2_restatement,RESTATEMENT,2019,debt_total for FY2019: own volume CMD.35.2020.pdf J34 vs later volume CMD.44.2021.pdf J32 (hutang_awam),3066.50,2966.49,-100.01,CMD.44.2021.pdf,52,38,32,
+V2_restatement,PASS,2019,debt_total for FY2019: own volume CMD.35.2020.pdf J34 vs later volume CMD.44.2021.pdf J32 (hutang_awam),3066.50,3066.49,-0.01,CMD.44.2021.pdf,52,38,32,
 V2_restatement,PASS,2020,revenue_nontax for FY2020: own volume CMD.44.2021.pdf J8 vs later volume CMD.46.2022.pdf J1 (prestasi_kewangan),301.62,301.62,0.00,CMD.46.2022.pdf,32,24,1,
 V2_restatement,PASS,2020,revenue_total for FY2020: own volume CMD.44.2021.pdf J1 vs later volume CMD.46.2022.pdf J1 (prestasi_kewangan),850.46,850.46,0.00,CMD.46.2022.pdf,32,24,1,
 V2_restatement,PASS,2020,opex_before_transfer for FY2020: own volume CMD.44.2021.pdf J1 vs later volume CMD.46.2022.pdf J1 (prestasi_kewangan),605.14,605.14,0.00,CMD.46.2022.pdf,32,24,1,
@@ -476,7 +471,7 @@ V2_restatement,PASS,2020,misc_govt_trust_funds for FY2020: own volume CMD.44.202
 V2_restatement,PASS,2020,public_trust_funds for FY2020: own volume CMD.44.2021.pdf J17 vs later volume CMD.46.2022.pdf J17 (akaun_amanah_disatukan),116.55,116.55,0.00,CMD.46.2022.pdf,44,36,17,
 V2_restatement,PASS,2020,deposit_account for FY2020: own volume CMD.44.2021.pdf J17 vs later volume CMD.46.2022.pdf J17 (akaun_amanah_disatukan),292.30,292.30,0.00,CMD.46.2022.pdf,44,36,17,
 V2_restatement,PASS,2020,trust_account_balance for FY2020: own volume CMD.44.2021.pdf J2 vs later volume CMD.46.2022.pdf J17 (akaun_amanah_disatukan),377.04,377.04,0.00,CMD.46.2022.pdf,44,36,17,
-V2_restatement,PASS,2020,debt_total for FY2020: own volume CMD.44.2021.pdf J32 vs later volume CMD.46.2022.pdf J31 (hutang_awam),3009.89,3009.89,0.00,CMD.46.2022.pdf,56,48,31,
+V2_restatement,PASS,2020,debt_total for FY2020: own volume CMD.44.2021.pdf J32 vs later volume CMD.46.2022.pdf J31 (hutang_awam),3069.89,3069.89,0.00,CMD.46.2022.pdf,56,48,31,
 V2_restatement,PASS,2021,revenue_tax for FY2021: own volume CMD.46.2022.pdf J1 vs later volume CMD.43.2023.pdf J1 (prestasi_kewangan),422.07,422.07,0.00,CMD.43.2023.pdf,34,26,1,
 V2_restatement,PASS,2021,revenue_nontax for FY2021: own volume CMD.46.2022.pdf J1 vs later volume CMD.43.2023.pdf J1 (prestasi_kewangan),265.44,265.44,0.00,CMD.43.2023.pdf,34,26,1,
 V2_restatement,PASS,2021,revenue_nonrevenue_receipts for FY2021: own volume CMD.46.2022.pdf J1 vs later volume CMD.43.2023.pdf J1 (prestasi_kewangan),178.48,178.48,0.00,CMD.43.2023.pdf,34,26,1,
@@ -500,7 +495,7 @@ V2_restatement,PASS,2021,misc_govt_trust_funds for FY2021: own volume CMD.46.202
 V2_restatement,PASS,2021,public_trust_funds for FY2021: own volume CMD.46.2022.pdf J17 vs later volume CMD.43.2023.pdf J17 (akaun_amanah_disatukan),136.37,136.37,0.00,CMD.43.2023.pdf,47,39,17,
 V2_restatement,PASS,2021,deposit_account for FY2021: own volume CMD.46.2022.pdf J17 vs later volume CMD.43.2023.pdf J17 (akaun_amanah_disatukan),304.09,304.09,0.00,CMD.43.2023.pdf,47,39,17,
 V2_restatement,PASS,2021,trust_account_balance for FY2021: own volume CMD.46.2022.pdf J2 vs later volume CMD.43.2023.pdf J17 (akaun_amanah_disatukan),470.14,470.14,0.00,CMD.43.2023.pdf,47,39,17,
-V2_restatement,PASS,2021,debt_total for FY2021: own volume CMD.46.2022.pdf J31 vs later volume CMD.43.2023.pdf J32 (hutang_awam),3088.25,3088.25,0.00,CMD.43.2023.pdf,59,51,32,
+V2_restatement,PASS,2021,debt_total for FY2021: own volume CMD.46.2022.pdf J31 vs later volume CMD.43.2023.pdf J32 (hutang_awam),3108.25,3108.25,0.00,CMD.43.2023.pdf,59,51,32,
 V2_restatement,PASS,2022,revenue_tax for FY2022: own volume CMD.43.2023.pdf J1 vs later volume CMD.24.2024.pdf J1 (prestasi_kewangan),469.22,469.22,0.00,CMD.24.2024.pdf,47,39,1,
 V2_restatement,PASS,2022,revenue_nontax for FY2022: own volume CMD.43.2023.pdf J1 vs later volume CMD.24.2024.pdf J1 (prestasi_kewangan),547.15,547.15,0.00,CMD.24.2024.pdf,47,39,1,
 V2_restatement,PASS,2022,revenue_total for FY2022: own volume CMD.43.2023.pdf J1 vs later volume CMD.24.2024.pdf J1 (prestasi_kewangan),1288.03,1288.03,0.00,CMD.24.2024.pdf,47,39,1,
