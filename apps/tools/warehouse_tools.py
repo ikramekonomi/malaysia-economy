@@ -590,7 +590,7 @@ class Tools:
     FED_VS_STATE_NOTE = (
         "Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts "
         "record received. The capitation and Concurrent List grants are paid to the states as a class and not split "
-        "by state in the federal accounts, so a state row gives its share of the federal total and cannot 'agree'; "
+        "by state in the federal accounts, so from those accounts alone a state row gives its share of the federal total and cannot 'agree' (comparison share_of_class_total); "
         "the _states row tests that the printing states together recorded no more than the federal total. A "
         "state's figure is printed only when the grant is among its top revenue items: 'state_not_printed' is not "
         "zero. Named grants: a state's record of all its federal grants must be at least what it was paid by name. "
@@ -602,7 +602,8 @@ class Tools:
         "grants have a third side: federal_by_state_rm is MOF's own record of what that state was paid (the Budget "
         "book's Lampiran E), used only in years its national total equals the audited line (D30); by_state_status "
         "says whether the state's record agrees with it within RM10,000. For the Concurrent List in FY2019-2022 it "
-        "is lampiran_e_unreconciled: MOF's split does not add up to the audited line, so it is not used.")
+        "is lampiran_e_unreconciled: MOF prints the Concurrent List, libraries and museums grants separately and "
+        "together they do not equal the audited line that carries all three, so none of them is used (CV28).")
 
     def get_gap_view(self, name, geo=None, year=None, transfer=None):
         import csv

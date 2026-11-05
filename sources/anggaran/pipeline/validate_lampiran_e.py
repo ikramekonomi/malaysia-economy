@@ -10,12 +10,15 @@
      the PKKP line(s) are the grants already loaded as flows (core/fact_money_flow.csv, matched by code and
      name each year), plus B.11 'Bayaran Perkhidmatan' for state_services. Whole ringgit against sen: equal
      within RM2. A difference is WARN with its amount, kept as printed (golden rule 2), never corrected.
-     Grants PKKP does not print as a line of their own (libraries, museums, tourism, the two B.12 grants,
-     which are paid out of the State Reserve Fund trust account) are INFO.
+     tourism and tourism_tax against B.11 'Lain-lain Bayaran Balik' (objek 40000), where PKKP prints them
+     (found by the blind verifier, 2026-11-05). Grants PKKP does not print as a line of their own (libraries,
+     museums, the biodiversity EFT, the two B.12 grants, which are paid out of the State Reserve Fund trust
+     account) are INFO.
   L6 the grants PKKP pays to a named state (special annual grants to Sabah, Sarawak, Selangor and Kedah; the
      petroleum-duty compensation to Sabah and Sarawak together) against Lampiran E's figure for that state
   L7 libraries + museums + Concurrent List against PKKP's Concurrent List line (the PKKP line appears to
-     include them; equal in FY2024): WARN where it is not, with the difference
+     include them; equal in FY2023-2024): WARN where it is not, with the difference
+  L8 each road-maintenance sub-column (FY2019-2020) against PKKP's matching road-maintenance line
 
 Writes sources/anggaran/data/_validation_lampiran_e.csv. Exit 1 on a FAIL (L1-L4 are the table's own sums).
 """
@@ -109,6 +112,15 @@ def main():
                 diff = v[("MY", g)] - pk
                 add(f"L5 {g} against PKKP", scope, "PASS" if abs(diff) <= TOL else "WARN",
                     f"Lampiran E {v[('MY', g)]} vs PKKP {pk} ({n} line(s))" + ("" if abs(diff) <= TOL else f"; difference {diff}"))
+            elif g in ("tourism", "tourism_tax"):
+                pk = sum(D(r["sebenar_rm"]) for r in rows(os.path.join(REPO, "sources", "pkkp", "data", year,
+                                                                      "fact_opex_detail.csv"))
+                         if r["maksud_code"] == "B.11" and r["row_type"] == "object_aktiviti" and r["objek_code"] == "40000"
+                         and r["aktiviti_name_bm"].strip().lower() == "lain-lain bayaran balik")
+                diff = v[("MY", g)] - pk
+                add(f"L5 {g} against PKKP", scope, "PASS" if pk and abs(diff) <= TOL else "WARN",
+                    f"Lampiran E {v[('MY', g)]} vs PKKP B.11 'Lain-lain Bayaran Balik' (40000) {pk}"
+                    + ("" if pk and abs(diff) <= TOL else f"; difference {diff}"))
             elif g == "state_services":
                 pk = sum(D(r["sebenar_rm"]) for r in rows(os.path.join(REPO, "sources", "pkkp", "data", year,
                                                                       "fact_opex_detail.csv"))
@@ -123,6 +135,12 @@ def main():
                     f"Lampiran E {v[('MY', g)]}; not a line of its own in PKKP"
                     + (" (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)" if g in
                        ("development_level", "opex_deficit") else ""))
+        if PARTS[0] in grants:
+            for part, pre in zip(PARTS, FLOWS["road_maintenance"]):
+                pk, n = flow_sum([pre])
+                diff = v[("MY", part)] - pk
+                add(f"L8 {part} against PKKP '{pre}'", scope, "PASS" if n and abs(diff) <= TOL else "WARN",
+                    f"Lampiran E {v[('MY', part)]} vs PKKP {pk}" + ("" if n and abs(diff) <= TOL else f"; difference {diff}"))
         for (g, geo), pre in NAMED.items():
             if g in leaves:
                 pk, n = flow_sum(pre)

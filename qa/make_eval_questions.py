@@ -218,6 +218,8 @@ q("5", "What did MOF record paying Selangor in capitation grant in 2022 (Lampira
 q("5", "Does Selangor's own record of its 2022 capitation grant agree with what MOF says it paid?", "get_gap_view",
   {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2022", "transfer": "capitation"},
   "field:by_state_status", "agree")
+q("5", "Does the answer say MOF's per-state capitation figure is not the audited accounts?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2022", "transfer": "capitation"}, "caveat", "CV28")
 q("5", "Is MOF's split of the 2020 Concurrent List grant by state used, though it does not add up to the audited line?",
   "get_gap_view", {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2020", "transfer": "concurrent_list"},
   "field:by_state_status", "lampiran_e_unreconciled", kind="trap_missing")

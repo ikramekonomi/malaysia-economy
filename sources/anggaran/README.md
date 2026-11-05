@@ -136,13 +136,16 @@ Held for the 2021-2026 books (FY2019-2024): the 2021-2023 appendices alone (`raw
 tables inside the full books (p514, p536, p578). Earlier books are not at the publisher's URLs.
 
 * `pipeline/extract_lampiran_e.py` -> `data/<book>/fact_anggaran_lampiran_e_<book>.csv` (one row per state or
-  Jumlah x column; `tb` = not applicable kept as printed with a blank amount; `-` = 0). The columns of each
+  Jumlah x column; `tb` = not applicable kept as printed with a blank amount; `-` = 0; `column_type` leaf /
+  part / row_total: sum only `leaf`). The columns of each
   book are declared in the script (the headers are rotated multi-line text) and checked against the printed
-  vote-code row. FY2019-2020 split road maintenance into three unlabelled sub-columns and a JUMLAH.
+  vote-code row. FY2019-2020 split road maintenance into three unlabelled sub-columns and a JUMLAH; each
+  sub-column equals one of PKKP's three road-maintenance lines to the ringgit (L8), which names it.
 * `pipeline/validate_lampiran_e.py` -> `data/_validation_lampiran_e.csv`: every row and column adds up (L1-L4,
   all PASS); each grant's national total against PKKP's audited line the same year (L5: capitation, road
   maintenance, special annual, revenue growth, petroleum-duty compensation, street lighting and state services
-  equal within RM2 every year; GTBKK differs by RM1.4m in FY2023 and RM1.2m in FY2024); the grants PKKP pays to a
+  equal within RM2 every year; the tourism grants equal B.11 'Lain-lain Bayaran Balik' in FY2020-2024 (RM8.0m apart
+  in FY2019); GTBKK differs by RM1.4m in FY2023 and RM1.2m in FY2024); the grants PKKP pays to a
   named state (L6, all equal); PKKP's Concurrent List line carries the libraries and museums grants too (L7:
   equal in FY2023-2024, RM54k-2.5m apart in FY2019-2022). Differences are kept as printed.
 * `data/_source_anomalies_lampiran_e.csv`: the 2024 and 2025 books title the table "Anggaran" (estimate) though it

@@ -21,7 +21,10 @@ Older books are not at the publisher's URLs (checked 2026-11-05).
 The column headers are rotated or wrapped multi-line text, so each book's columns are DECLARED below (read from
 the page and checked against the printed vote-code row, which the script re-reads: a mismatch stops it). The
 FY2019 and FY2020 tables split the road-maintenance grant into three unlabelled sub-columns and a JUMLAH: the
-sub-columns are kept as `road_maintenance_part1..3` (row_type `part`) and the grant is its printed JUMLAH.
+sub-columns are kept as `road_maintenance_part1..3` (column_type `part`) and the grant is its printed JUMLAH; each
+sub-column equals one of PKKP's three road-maintenance lines to the ringgit (validate L8), which names them.
+`column_type`: `leaf` (a grant: sum only these, golden rule 5), `part` (a road sub-column, inside its leaf) or
+`row_total` (the printed JUMLAH column). `row_type`: `state` or `total` (the printed Jumlah row).
 
 Output: sources/anggaran/data/<book>/fact_anggaran_lampiran_e_<book>.csv, one row per state (or Jumlah) x
 column. Validation: validate_lampiran_e.py.
@@ -47,9 +50,12 @@ LABEL = {"N. Sembilan": "Negeri Sembilan", "P. Pinang": "Pulau Pinang"}
 G = {
     "capitation": ("Pemberian Mengikut Bilangan Penduduk", "T.12"),
     "road_maintenance": ("Pemberian Penyenggaraan Jalan Negeri", "T.12"),
-    "road_maintenance_part1": ("Pemberian Penyenggaraan Jalan Negeri (sub-column 1, unlabelled)", "T.12"),
-    "road_maintenance_part2": ("Pemberian Penyenggaraan Jalan Negeri (sub-column 2, unlabelled)", "T.12"),
-    "road_maintenance_part3": ("Pemberian Penyenggaraan Jalan Negeri (sub-column 3, unlabelled)", "T.12"),
+    "road_maintenance_part1": ("Pemberian Penyenggaraan Jalan Negeri (sub-column 1, unlabelled; equals PKKP T.12 "
+                               "'Penyelenggaraan Jalan Raya Negeri yang Mutu Minimum')", "T.12"),
+    "road_maintenance_part2": ("Pemberian Penyenggaraan Jalan Negeri (sub-column 2, unlabelled; equals PKKP T.12 "
+                               "'Penyelenggaraan Jalan Raya Negeri yang Substandard')", "T.12"),
+    "road_maintenance_part3": ("Pemberian Penyenggaraan Jalan Negeri (sub-column 3, unlabelled; equals PKKP T.12 "
+                               "'Penyelenggaraan Jalan Raya Negeri Jalan Sehala di Pulau Destinasi Pelancongan')", "T.12"),
     "special_annual": ("Pemberian Khas Tahunan", "T.12"),
     "revenue_growth": ("Pemberian Pertambahan Hasil", "T.12"),
     "gtbkk": ("Geran Tahunan Kepada Pihak Berkuasa Tempatan (GTBKK)", "T.12"),
@@ -90,7 +96,8 @@ BOOKS = {
                  cols=TAIL15 + ["biodiversity_eft", "development_level", "opex_deficit", "total"]),
 }
 TOKEN = re.compile(r"^(?:\d{1,3}(?:,\d{3})*|tb|-)$")
-FIELDS = ["book", "year", "geo_code", "state", "row_type", "grant_id", "grant_name_bm", "vote_code", "amount_rm",
+FIELDS = ["book", "year", "geo_code", "state", "row_type", "column_type", "grant_id", "grant_name_bm", "vote_code",
+          "amount_rm",
           "printed", "source_file", "pdf_page", "printed_page", "statement"]
 
 
@@ -135,6 +142,7 @@ def main():
                 amt = "" if raw == "tb" else "0" if raw == "-" else raw.replace(",", "")
                 out.append(dict(book=book, year=b["year"], geo_code=geo, state=name,
                                 row_type="total" if name == "Jumlah" else "state",
+                                column_type="row_total" if col == "total" else "part" if "_part" in col else "leaf",
                                 grant_id=col, grant_name_bm=G[col][0], vote_code=G[col][1], amount_rm=amt,
                                 printed=raw, source_file=b["file"], pdf_page=str(b["page"] or 1),
                                 printed_page=printed_page, statement=title))

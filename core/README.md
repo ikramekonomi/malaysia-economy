@@ -356,18 +356,20 @@ track A; D29). The method, declared and committed before any result by state, is
   only the Sabah and Sarawak ones can be placed); 11,277 name none. None of these is placed. The words matched are
   kept (`geo_evidence`); `pdf_page` is the page printing the name, the amounts sit on the facing page.
 * **Grants by name** to a state government or territory administration (`fact_money_flow`, `stated`); class
-  grants are never split (D27).
+  grants are never split by formula (D27).
 * **Class grants at the payer's own split** (FY2019-2024, D30): the Budget books' Lampiran E prints what each state
   was actually paid of each grant (`sources/anggaran`). A grant is placed this way only in a year its national
   total equals PKKP's audited line within RM2 (capitation, road maintenance, revenue growth, petroleum-duty
-  compensation, street lighting, state services every year; GTBKK FY2019-2022; the Concurrent List with
-  libraries and museums FY2023-2024): RM6.3-7.7b a year (`grants_split_by_payer_rm`).
+  compensation, street lighting, state services every year; GTBKK FY2019-2022; the tourism grants, which PKKP
+  prints as B.11 'Lain-lain Bayaran Balik', FY2020-2024; the Concurrent List with libraries and museums
+  FY2023-2024): RM6.3-7.8b a year (`grants_split_by_payer_rm`). The national test cannot check how MOF split a
+  total between states: several states' figures are round hundreds or repeat the previous year's (CV28).
 * **Not used:** an agency's seat, or any allocation key (population, staff, need).
 
 | | FY2009 | FY2014 | FY2019 | FY2024 |
 |---|---|---|---|---|
-| placed (projects by name + grants by name + grants at the payer's split) | RM6.59b (no FY2009 grants held) | RM3.79b | RM9.32b | RM10.87b |
-| of which grants at the payer's split (from FY2019) | | | RM6.32b | RM7.73b |
+| placed (projects by name + grants by name + grants at the payer's split) | RM6.59b (no FY2009 grants held) | RM3.79b | RM9.32b | RM10.90b |
+| of which grants at the payer's split (from FY2019) | | | RM6.32b | RM7.76b |
 | federal total spending | RM207b | RM259b | RM318b | RM406b |
 | `placed_share` | 3.2% | 1.5% | 2.9% | 2.7% |
 
@@ -389,8 +391,8 @@ in the header of `core/pipeline/build_gap_federal_vs_state.py`. Two audited side
 Auditor General's state report prints them; capitation, Concurrent List, and Sabah/Sarawak's all-federal-grants line).
 
 * **Class grants** (capitation, Concurrent List) are paid to the states as a class and not split by state in the
-  federal accounts (D27), so a state row cannot agree or differ: it gives the state's receipt and its share of the
-  federal total. The year's `_states` row tests what must hold: the states that print the grant together recorded no
+  federal accounts (D27), so from those accounts alone a state row cannot agree or differ: it gives the state's
+  receipt and its share of the federal total (from FY2019 the payer's own split adds a per-state side, below). The year's `_states` row tests what must hold: the states that print the grant together recorded no
   more than the federal total (every year consistent; 1-4 of 13 states print it).
 * **Named grants**: a state's record of ALL its federal grants must be at least what it was paid by name (Sabah,
   Sarawak: consistent every year printed; Selangor and Kedah print no such line).
@@ -414,8 +416,10 @@ Auditor General's state report prints them; capitation, Concurrent List, and Sab
   state of each grant. Where its national total equals PKKP's audited line, `federal_by_state_rm` gives the
   state's figure and `by_state_status` compares it with the state's own record (agree within RM10,000): the
   capitation grant agrees in all 14 state-years where the state prints it, the Concurrent List in all 4
-  (FY2023-2024); for the Concurrent List in FY2019-2022 MOF's split does not add up to the audited line
-  (`lampiran_e_unreconciled`), so it is not used.
+  (FY2023-2024). For the Concurrent List in FY2019-2022 it is `lampiran_e_unreconciled`: MOF prints the
+  Concurrent List, libraries and museums grants as three columns, the audited accounts as one line, and the three
+  together do not equal it (RM54k-2.5m apart), so none is used; which of the three differs cannot be told. MOF's
+  figure is not the audited accounts (CV28).
 
 ## gap_need_vs_money (state level)
 

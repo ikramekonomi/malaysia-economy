@@ -28,7 +28,7 @@ while scoping: 3-15%):
      (`di luar Kuala Lumpur`, outside KL) are removed before matching.
   3. `grant_by_name`: a federal grant whose recipient is a named state government or territory administration
      (core/fact_money_flow.csv, geo_method `stated`); the class grants (all states, all local authorities)
-     are never split (D27).
+     are never split by formula (D27); from FY2019 they are placed at the payer's own split (method 4, D30).
   A project naming two or more states (or a state and another state's district or place) is `multiple_states`
   and is not placed; a project naming the Peninsula and no state (`Semenanjung`: PKKP splits some programmes
   into Peninsula / Sabah / Sarawak lines) is `peninsula` [added 2026-11-05, finding 5] and is not placed, so the
@@ -41,8 +41,10 @@ while scoping: 3-15%):
      national total equals PKKP's audited line within RM2 that year (_validation_lampiran_e.csv L5; the
      Concurrent List with libraries and museums through L7); a grant already placed by name (method 3: the
      special annual grants) is not placed twice; the two B.12 grants are paid out of the State Reserve Fund trust
-     account and the grants PKKP does not print as a line (tourism, the biodiversity EFT) cannot be reconciled,
-     so neither is placed. The unreconciled remainder of a class grant stays `_unallocated`.
+     account and the biodiversity EFT has no PKKP line to reconcile to, so neither is placed. The unreconciled
+     remainder of a class grant stays `_unallocated`. [Amended 2026-11-05 after the blind verifier: the tourism
+     grants were first excluded as having no PKKP line; PKKP prints them as B.11 'Lain-lain Bayaran Balik', so
+     they are placed where they reconcile (FY2020-2024), like every other grant.]
 * Not used, by design: an agency's seat (it would put ministries' headquarters spending in Putrajaya), any
   allocation key (population, staff counts, need): placing money by formula makes a map look more complete than
   the accounts are (D27, DATA_MODEL §13). Operating spending (salaries in schools and clinics, subsidies, cash
@@ -91,9 +93,9 @@ FIELDS_FACT = ["placement_id", "period_code", "entity_id", "maksud_code", "proje
                "geo_code", "geo_method", "geo_confidence", "geo_evidence", "basis", "edition_id", "file_id",
                "pdf_page", "printed_page", "l1_ref"]
 # D30: the class grants Lampiran E splits by state that are placed (special_annual is placed by name already; the
-# B.12 grants are paid out of a trust account; tourism and the EFT have no PKKP line to reconcile to)
+# B.12 grants are paid out of a trust account; the EFT has no PKKP line to reconcile to)
 SPLIT_GRANTS = ("capitation", "road_maintenance", "revenue_growth", "gtbkk", "state_services", "concurrent_list",
-                "libraries", "museums", "petroleum_duty_compensation", "street_lighting")
+                "libraries", "museums", "petroleum_duty_compensation", "street_lighting", "tourism", "tourism_tax")
 FIELDS_GAP = ["geo_code", "name", "year", "projects_stated_rm", "projects_parsed_rm", "grants_by_name_rm",
               "grants_split_by_payer_rm",
               "placed_rm", "projects_multiple_states_rm", "projects_peninsula_rm", "projects_none_rm", "not_itemised_rm",
@@ -292,7 +294,7 @@ def main():
                                 not_itemised_rm=fmt(ni) or "", federal_total_rm=fmt(total) if total else "",
                                 devex_projects_total_rm=fmt(leaf_total[y]),
                                 placed_share=fmt(share, 4) if share is not None else "", publishable=str(pub).lower(),
-                                note=note, caveats="CV27", federal_source_obs_ids=ids, release_id=w.release_id))
+                                note=note, caveats="CV27;CV28" if y in split_years else "CV27", federal_source_obs_ids=ids, release_id=w.release_id))
         # P5: 16 places + not placed (projects) = the MY row's project total
         s_proj = sum(sum(by[g][m] for m in PLACED) for g in states) + sum(by["_unallocated"].values())
         if abs(s_proj - leaf_total[y]) > Decimal("0.01"):

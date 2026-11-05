@@ -309,6 +309,7 @@ def main():
                             notes.append(f"Lampiran E prints {cell['printed']} for this state, not used: its national "
                                          f"total does not equal PKKP's line this year ({v5})")
                         elif cell["amount_rm"]:
+                            cv.add("CV28")
                             row["federal_by_state_rm"] = cell["amount_rm"]
                             row["federal_by_state_ref"] = cell["l1_ref"]
                             if obs:
