@@ -673,8 +673,12 @@ class Tools:
                 "accounts' original and revised estimates (for devex, the accounts' own allocation column, not the "
                 "tabled estimate), the Budget book's original estimate, the audited actual and the book's reprint of "
                 "it. execution_rate = audited actual / revised estimate (or allocation); status: within_estimate "
-                "(0.90-1.00), underspent (< 0.90), overspent (> 1.00), not_held. A body is its vote: a lapsed vote's "
-                "successor is another body (get_entity lineage), so do not join rows across bodies. No ranking.")
+                "(0.90-1.00), underspent (< 0.90), overspent (> 1.00), not_held. For devex the rate is against an "
+                "allocation; execution_rate_book (actual / the Budget book's original estimate) is beside it. Read each "
+                "row's note: P.70 is a reserve drawn by transfers (always 'underspent'), B.12 moves money to statutory "
+                "funds (always 'overspent'), and spending above the estimate may have been authorised later. A body is "
+                "its vote: a lapsed vote's successor is another body (get_entity lineage), so do not join rows across "
+                "bodies. No ranking.")
         if name == "gap_revenue_estimate_vs_collected":
             out["how_to_read"] = (
                 "One row per revenue type (breakdown hasil_kod: 60000 tax, 70000 non-tax, 80000 non-revenue receipts, "

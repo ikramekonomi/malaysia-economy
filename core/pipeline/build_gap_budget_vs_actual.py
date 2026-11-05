@@ -29,11 +29,25 @@ Method (declared 2026-11-05, committed before any result of this view was comput
   sen) or differ. Thresholds declared here, before results.
 * A body's row is only ever its own vote: a lapsed vote's successor is another body (lineage, never summed);
   growth across years is not computed in this view.
+* Added after the blind verifier (2026-11-05, before publication; no threshold changed):
+    - one Budget book per year for estimate_original_book: the book of that year where it exists, else the
+      earliest book printing it (a later book restates the year under its own, reorganised votes: FY2024 under
+      PETRA and Digital in the 2025 book); another book's figure is named in the note, never used
+    - a book's reprinted actual is shown only on a body that held the vote that year (has an audited actual);
+      a reprint filed under a successor's vote (KASA's FY2022 under PETRA in the 2025 book) is not a row of
+      the successor; such reprints are counted in V8
+    - execution_rate_book = actual_audited / estimate_original_book, beside the accounts-based rate (for devex
+      the accounts' column is an allocation, not the tabled estimate)
+    - each row carries the caveats of the observations it uses (CV21 where the printed vote total and its lines
+      disagree, e.g. FY2009 P.26/P.44), and notes on the contingency reserve (P.70), the contributions to
+      statutory funds (B.12) and spending above the printed estimate
 * Checks: V1 every row's audited actual equals its fact_observation; V2 each year's opex and devex rows add up to
-  the PKKP vote totals (C16); V3 every value traces to an observation id; V4 every body and year present once.
+  the PKKP vote totals (C16); V3 every value traces to an observation id; V4 every body and year present once;
+  V7 each year's book-estimate column adds up to that one book's printed votes; V8 book reprints not shown (INFO).
 """
 import csv
 import os
+import re
 import sys
 from collections import defaultdict
 from decimal import Decimal
@@ -46,6 +60,7 @@ FLOW = {"federal_gov.vote.opex": "opex", "federal_gov.vote.devex": "devex"}
 LOW, HIGH = Decimal("0.90"), Decimal("1.00")
 FIELDS = ["geo_code", "entity_id", "body", "breakdown_key", "flow", "year", "estimate_original_pkkp", "estimate_revised_pkkp",
           "estimate_revised_kind", "estimate_original_book", "actual_audited", "actual_book", "execution_rate",
+          "execution_rate_book",
           "unspent_rm", "status", "book_vs_pkkp_estimate_rm", "book_vs_pkkp_estimate_status", "estimate_printings",
           "book_vs_pkkp_actual_rm", "book_vs_pkkp_actual_status", "actual_printings", "source_obs_ids", "note",
           "caveats", "release_id"]
@@ -65,12 +80,36 @@ def main():
                 ("anggaran", "actual"): "actual_book"}.get((pub, r["basis"]))
         if slot:
             cells[(r["entity_id"], r["breakdown_key"], f, r["period_code"])][slot].append(r)
+    def book_year(r):
+        m = re.search(r"(\d{4})\.pdf$", r["edition_id"])
+        return m.group(1) if m else r["vintage"][:4]
+    # one book per year for the original estimate: the book of that year, else the earliest book printing it
+    books = defaultdict(set)
+    for d in cells.values():
+        for r in d.get("estimate_original_book", []):
+            books[r["period_code"]].add(book_year(r))
+    chosen = {y: (y if y in bs else min(bs)) for y, bs in books.items()}
+    audited_years = {k[3] for k, d in cells.items() if d.get("actual_audited")}
+    hidden = []   # book reprints not shown: filed under a body that did not hold the vote that year
     out, checks = [], []
     for (eid, bk, f, y), d in sorted(cells.items(), key=lambda x: (x[0][3], x[0][2], x[0][0], x[0][1])):
         row = {k: "" for k in FIELDS}
         e = w.entity.get(eid, {})
         row.update(geo_code="MY", entity_id=eid, body=e.get("name_bm", ""), breakdown_key=bk, flow=f, year=y, release_id=w.release_id)
-        ids, notes = [], []
+        ids, notes, used = [], [], []
+        other = [r for r in d.get("estimate_original_book", []) if book_year(r) != chosen[y]]
+        if other:
+            d["estimate_original_book"] = [r for r in d["estimate_original_book"] if book_year(r) == chosen[y]]
+            for r in other:
+                notes.append(f"the {book_year(r)} Budget book prints an original estimate of {fmt(Decimal(r['value']))} "
+                             f"for this body under its own votes; not used (this year's estimate is from the "
+                             f"{chosen[y]} book)")
+        if d.get("actual_book") and not d.get("actual_audited") and y in audited_years:
+            hidden.extend((eid, bk, f, y, r["edition_id"], r["value"]) for r in d["actual_book"])
+            d["actual_book"] = []
+        if not any(d.get(k) for k in ("estimate_original_pkkp", "estimate_revised_pkkp", "estimate_original_book",
+                                      "actual_audited", "actual_book")):
+            continue
 
         def one(slot, pick=min):
             lst = d.get(slot, [])
@@ -79,6 +118,7 @@ def main():
             # a book's estimate or actual can be printed by two books: the earliest printing is used, all are counted
             r = pick(lst, key=lambda x: x["vintage"])
             ids.append(r["obs_id"])
+            used.append(r)
             return r
         val = {}
         for slot in ("estimate_original_pkkp", "estimate_revised_pkkp", "estimate_original_book", "actual_audited",
@@ -107,6 +147,20 @@ def main():
         else:
             row["status"] = "not_held"
             notes.append("no audited actual (a Budget-book year)" if a is None else "no estimate printed in the accounts")
+        if a is not None and val.get("estimate_original_book"):
+            row["execution_rate_book"] = fmt(a / val["estimate_original_book"], 4)
+        if rv and a is not None and a > rv:
+            notes.append("spent above the estimate printed in the accounts; whether the excess was authorised "
+                         "later (supplementary supply) is not stated in this view")
+        if bk == "reserve_head=P.70":
+            notes.append("the contingency reserve: it is drawn by transfers to other votes, so its own spending "
+                         "is not expected to match its allocation")
+        if eid == "E000026" and f == "opex":
+            notes.append("B.12 carries the transfer to the Development Fund (and other statutory funds); its "
+                         "spending is money moved to those funds, not spent by a body")
+        if f == "devex" and y == "2015":
+            notes.append("FY2015 accounts are an image-only scan: the allocation column is OCR-read (the printed "
+                         "grand total differs from its lines by RM60,000)")
         if "estimate_original_book" in val and "estimate_original_pkkp" in val:
             dd = val["estimate_original_book"] - val["estimate_original_pkkp"]
             row["book_vs_pkkp_estimate_rm"] = fmt(dd)
@@ -117,10 +171,11 @@ def main():
             row["book_vs_pkkp_actual_status"] = "agree" if abs(dd) <= 1 else "differ"
         # CV23 on every vote figure (gross of what the body pays on); CV22 where a Budget book's reprint is used
         cv = {"CV23"} | ({"CV22"} if row["actual_book"] or row["estimate_original_book"] else set())
+        for r in used:
+            cv |= set(w.caveats_for(r)) - {"CV22"}
         row["caveats"] = ";".join(sorted(cv))
-        if row.get("book_vs_pkkp_estimate_status") == "differ" and val.get("estimate_original_pkkp") == 0:
-            notes.append("the accounts print no original estimate (the vote was created during the year); the "
-                         "Budget book restates one under its own votes")
+        if val.get("estimate_original_pkkp") == 0 and val.get("estimate_revised_pkkp"):
+            notes.append("the accounts print no original estimate (the vote was created during the year)")
         row["source_obs_ids"] = ";".join(ids)
         row["note"] = "; ".join(notes)
         out.append(row)
@@ -151,6 +206,25 @@ def main():
     keys = [(r["entity_id"], r["breakdown_key"], r["flow"], r["year"]) for r in out]
     add("V4 every body, flow and year present once", "core/gap_budget_vs_actual.csv",
         "PASS" if len(keys) == len(set(keys)) else "FAIL", f"{len(keys)} rows")
+    bt = defaultdict(Decimal)
+    for r in w.obs:
+        fl = FLOW.get(r["indicator_code"])
+        if fl and r["edition_id"].startswith("anggaran:") and r["basis"] == "budget_estimate" \
+                and chosen.get(r["period_code"]) == book_year(r):
+            bt[(fl, r["period_code"])] += Decimal(r["value"])
+    vb = defaultdict(Decimal)
+    for r in out:
+        if r["estimate_original_book"]:
+            vb[(r["flow"], r["year"])] += Decimal(r["estimate_original_book"])
+    bad = [f"{k}: {vb[k]} vs {bt[k]}" for k in bt if vb[k] != bt[k]]
+    add("V7 each year's book-estimate column adds up to one book's votes", "core/gap_budget_vs_actual.csv",
+        "PASS" if not bad else "FAIL", ", ".join(f"{y} from book {b}" for y, b in sorted(chosen.items()))
+        + (f"; {bad}" if bad else ""))
+    hz = Decimal(sum(Decimal(h[5]) for h in hidden))
+    add("V8 book reprints filed under a body without its own vote that year, not shown (INFO)",
+        "core/gap_budget_vs_actual.csv", "INFO", f"{len(hidden)} reprints, RM{fmt(hz)}: " +
+        "; ".join(f"{h[0]} {h[2]} {h[3]} ({h[4].split(':')[1]}) {h[5]}" for h in hidden if Decimal(h[5])) +
+        " (the rest are zeros)")
     from collections import Counter
     st = Counter((r["flow"], r["status"]) for r in out)
     for k in ("book_vs_pkkp_estimate_status", "book_vs_pkkp_actual_status"):

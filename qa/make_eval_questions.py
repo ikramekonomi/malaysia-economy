@@ -239,7 +239,7 @@ q("5", "How much of its revised 2022 operating estimate did B.45 leave unspent?"
   {"name": "gap_budget_vs_actual", "year": "2022", "entity": "B.45"}, "row_field:flow=opex:unspent_rm", s(_rv - _a))
 q("5", "Does the budget-vs-actual view say PETRA's 2024 vote had no original estimate in the accounts?",
   "get_gap_view", {"name": "gap_budget_vs_actual", "year": "2024", "entity": "B.33"},
-  "row_field:flow=opex:book_vs_pkkp_estimate_status", "differ", kind="trap_identity")
+  "row_field:flow=opex:estimate_original_pkkp", "0", kind="trap_identity")
 
 
 

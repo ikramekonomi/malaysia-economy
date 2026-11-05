@@ -1,8 +1,10 @@
 check,scope,status,detail
 V1 every audited actual is its observation,core/gap_budget_vs_actual.csv,PASS,1267 rows
 V2 each year's rows add up to the audited vote totals,core/gap_budget_vs_actual.csv,PASS,32 flow-years
-V3 every value traces to an observation,core/gap_budget_vs_actual.csv,PASS,1452 rows
-"V4 every body, flow and year present once",core/gap_budget_vs_actual.csv,PASS,1452 rows
-V6 book_vs_pkkp_estimate_status counts (INFO),core/gap_budget_vs_actual.csv,INFO,"opex/agree 102, opex/differ 2"
+V3 every value traces to an observation,core/gap_budget_vs_actual.csv,PASS,1440 rows
+"V4 every body, flow and year present once",core/gap_budget_vs_actual.csv,PASS,1440 rows
+V7 each year's book-estimate column adds up to one book's votes,core/gap_budget_vs_actual.csv,PASS,"2023 from book 2024, 2024 from book 2024, 2025 from book 2025, 2026 from book 2026"
+"V8 book reprints filed under a body without its own vote that year, not shown (INFO)",core/gap_budget_vs_actual.csv,INFO,"19 reprints, RM3428224620: E000046 devex 2022 (Anggaran_Perbelanjaan_Persekutuan_2025.pdf) 2863320477; E000046 opex 2022 (Anggaran_Perbelanjaan_Persekutuan_2025.pdf) 564904143 (the rest are zeros)"
+V6 book_vs_pkkp_estimate_status counts (INFO),core/gap_budget_vs_actual.csv,INFO,opex/agree 102
 V6 book_vs_pkkp_actual_status counts (INFO),core/gap_budget_vs_actual.csv,INFO,"devex/agree 117, opex/agree 208"
-V5 status counts (INFO),core/gap_budget_vs_actual.csv,INFO,"devex/not_held 78, devex/overspent 22, devex/underspent 58, devex/within_estimate 363, opex/not_held 117, opex/overspent 105, opex/underspent 119, opex/within_estimate 590"
+V5 status counts (INFO),core/gap_budget_vs_actual.csv,INFO,"devex/not_held 72, devex/overspent 22, devex/underspent 58, devex/within_estimate 363, opex/not_held 111, opex/overspent 105, opex/underspent 119, opex/within_estimate 590"

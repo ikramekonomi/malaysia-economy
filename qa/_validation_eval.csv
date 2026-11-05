@@ -66,7 +66,7 @@ Q64,fact,get_gap_view,caveat,CV28,"CV25,CV26,CV28,CV5",PASS
 Q65,trap_missing,get_gap_view,field:by_state_status,lampiran_e_unreconciled,lampiran_e_unreconciled,PASS
 Q66,fact,get_gap_view,row_field:flow=opex:execution_rate,0.993,0.993,PASS
 Q67,fact,get_gap_view,row_field:flow=opex:unspent_rm,4226644,4226644,PASS
-Q68,trap_identity,get_gap_view,row_field:flow=opex:book_vs_pkkp_estimate_status,differ,differ,PASS
+Q68,trap_identity,get_gap_view,row_field:flow=opex:estimate_original_pkkp,0,0,PASS
 Q69,fact,get_gap_view,row_field:breakdown_key=hasil_kod=60000:actual_audited,240191461212,240191461212,PASS
 Q70,fact,get_gap_view,row_field:breakdown_key=hasil_kod=60000:collection_rate_original,1.2182,1.2182,PASS
 Q71,fact,get_gap_view,row_field:breakdown_key=_total:book_vs_pkkp_actual_status,differ,differ,PASS

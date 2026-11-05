@@ -33,7 +33,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 | `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
-| `gap_budget_vs_actual.csv` | 1,452 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
+| `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
 | `gap_revenue_estimate_vs_collected.csv` | 90 | federal revenue by type (tax, non-tax, non-revenue receipts, Federal Territories, total) × year: the accounts' original and revised estimates and actual beside the Budget revenue books'; collection rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
@@ -357,15 +357,29 @@ any result (`core/pipeline/build_gap_budget_vs_actual.py`). Each column is one s
   estimates; for devex the accounts print one column, 'Anggaran' in Lampiran 2, loaded as basis `allocation`
   because it is not the tabled estimate (FY2024: RM85.2b against the Budget book's RM92.0b).
 * `estimate_original_book`, `actual_book`: the Budget books' original estimate for the year and their reprint of
-  the actual, beside the audit (`book_vs_pkkp_*`: 102 of 104 operating estimates agree, every reprinted actual
-  agrees; the two differences are votes created during FY2024, PETRA and Digital, which the accounts print with
-  no original estimate).
+  the actual, beside the audit (`book_vs_pkkp_*`: all 102 operating estimates the accounts and the book both
+  print agree, and so does every reprinted actual; PETRA and Digital, created during FY2024, have no original
+  estimate in the accounts).
 * `execution_rate` = audited actual / revised estimate (or allocation): `within_estimate` 0.90-1.00,
-  `underspent` below 0.90, `overspent` above 1.00, `not_held` where a side is missing. No ranking.
+  `underspent` below 0.90, `overspent` above 1.00, `not_held` where a side is missing. No ranking. For devex the
+  rate is against the accounts' allocation; `execution_rate_book` = audited actual / the Budget book's original
+  estimate is beside it (devex FY2023: allocation RM93.4b against the book's RM99.0b).
+* One Budget book per year for `estimate_original_book` (the book of that year; V7 proves the column adds up to
+  that book). A later book restates a year under its own, reorganised votes (the 2025 book prints FY2024 under
+  PETRA and Digital, money the 2024 book held under the old ministries); that figure is named in the row's note,
+  never added. A book's reprinted actual is shown only on the body that held the vote that year: the 2025 book
+  files KASA's FY2022 spending (RM3.43b) under PETRA's vote B.33, which is not PETRA's (V8 lists them).
+
+How to read the status words: `P.70` (the contingency reserve) is always underspent because it is drawn by
+transfers to other votes; B.12 (contributions to statutory funds, incl. the Development Fund) is always overspent
+because it is money moved to those funds; spending above the printed estimate may have been authorised later
+(supplementary supply), which this view does not show. FY2009 devex: the rows add up to the vote observations
+but not the printed grand total (P.26 and P.44 were transferred out during the year, RM224.3m, documented at L1;
+those rows carry CV21). FY2015 devex allocations are OCR-read from a scan (grand total off its lines by RM60,000).
 
 A body is its vote (D26, D28, D31): a lapsed vote's successor is another body, so rows are never joined across
-bodies. Tool: `get_gap_view('gap_budget_vs_actual', year=..., entity='B.45')`. Checks V1-V6 in
-`_validation_gap_bva.csv`.
+bodies. Tool: `get_gap_view('gap_budget_vs_actual', year=..., entity='B.45')`. Checks V1-V8 in
+`_validation_gap_bva.csv`; blind verifier: `qa/audits/2026-11-05_phase5_budget_vs_actual_verifier.md`.
 
 ## gap_revenue_estimate_vs_collected (Phase 5, 2026-11-05)
 
