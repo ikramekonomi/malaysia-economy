@@ -34,6 +34,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
 | `gap_budget_vs_actual.csv` | 1,452 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
+| `gap_revenue_estimate_vs_collected.csv` | 90 | federal revenue by type (tax, non-tax, non-revenue receipts, Federal Territories, total) × year: the accounts' original and revised estimates and actual beside the Budget revenue books'; collection rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -365,6 +366,21 @@ any result (`core/pipeline/build_gap_budget_vs_actual.py`). Each column is one s
 A body is its vote (D26, D28, D31): a lapsed vote's successor is another body, so rows are never joined across
 bodies. Tool: `get_gap_view('gap_budget_vs_actual', year=..., entity='B.45')`. Checks V1-V6 in
 `_validation_gap_bva.csv`.
+
+## gap_revenue_estimate_vs_collected (Phase 5, 2026-11-05)
+
+Did revenue come in as estimated? Core gains `federal_gov.revenue.by_type` (breakdown `hasil_kod`: the Budget
+revenue book's section codes 60000 tax, 70000 non-tax, 80000 non-revenue receipts, 90000 the Federal
+Territories, and `_total`), from PKKP Nota 5(a) (FY2009-2024: original and revised estimates, actual; PKKP prints
+names, mapped to the codes by a declared table, `REV_NAME_TO_KOD` in build_core) and the Anggaran Hasil books
+2025-2026. Check C18: the types add up to the printed total, every year and basis (48 PASS).
+
+The view (method declared before results, `core/pipeline/build_gap_revenue.py`): one row per type and year;
+`collection_rate_original` = actual / original estimate, status `on_estimate` (0.97-1.03), `above_estimate`,
+`below_estimate`, `not_held`; the book's revised estimate and actual beside the audit (agree within RM1: 5 of 5
+revised estimates and 8 of 10 actuals; FY2024's total and non-revenue receipts are RM144 below the audit in the
+book, kept as printed). FY2009 prints a fifth type, miscellaneous receipts, kept apart. Checks R2-R6 in
+`_validation_gap_rev.csv`.
 
 ## gap_federal_placement (Phase 3, 2026-11-05)
 

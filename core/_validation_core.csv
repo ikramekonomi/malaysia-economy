@@ -1,12 +1,12 @@
 check,scope,status,note
-C1 primary key unique,fact_observation,PASS,139272 rows
+C1 primary key unique,fact_observation,PASS,139542 rows
 C2 indicator_code resolves,fact_observation,PASS,all resolve
 C2 geo_code resolves,fact_observation,PASS,all resolve
 C2 period_code resolves,fact_observation,PASS,all resolve
 C2 breakdown_key resolves,fact_observation,PASS,all resolve
 C3 basis in meta/code_list.csv,fact_observation,PASS,ok
 C3 status in meta/code_list.csv,fact_observation,PASS,ok
-C4 every row has provenance (file sha256 + L1 row; D24 volumes: page + L1 row),fact_observation,PASS,"0 rows without; 460 rows from D24 volumes (no PDF held, caveat CV17)"
+C4 every row has provenance (file sha256 + L1 row; D24 volumes: page + L1 row),fact_observation,PASS,"0 rows without; 490 rows from D24 volumes (no PDF held, caveat CV17)"
 C5 a survey estimate without published uncertainty says so (reliability = unknown),fact_observation,PASS,0 rows claim reliability without uncertainty
 C9 percentile cut-offs rise with the percentile,hh_income.gross.pctile_group.max,PASS,51 place-years
 "C10 50th percentile cut-off vs the headline median (DOSM files, kept as published)",hh_income.gross.pctile_group.max,INFO,51 place-years; within RM1 except MY 2019: 6; MY-04 2019: 9; MY-09 2019: 2; MY-15 2019: 2; MY-16 2019: 3; MY-16 2022: -14
@@ -76,7 +76,7 @@ C13 banking-system loans = commercial + Islamic + investment banks (BNM MSB 1.18
 C14 the file read is the vintage logged as current (sha256; national series),fact_observation,PASS,"4 files, all match"
 C15 every entity_id is a registered entity (core/dim_entity.csv) or _none,fact_observation,PASS,61 entities used
 "C16 PKKP votes add up to the printed audited totals (opex + transfer, devex; within RM2: the statement prints whole ringgit)",federal_gov.vote.*,INFO,"32 year-totals; differ: ['devex 2009: votes 49291023062.69 vs printed 49515355570.54']; FY2009 devex: printed vote totals vs the printed grand total, diagnosed in curated/_known_extraction_defects_curated.csv (caveat CV21)"
-"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,139272 rows checked
+"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,139542 rows checked
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2010,PASS,states 18170277815.79 vs printed 18170277815.79
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2011,PASS,states 16820200196.15 vs printed 16820200196.15
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2012,PASS,states 15722068017.98 vs printed 15722068017.98
@@ -92,3 +92,51 @@ C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,202
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2022,PASS,states 10405396609.61 vs printed 10405396609.61
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2023,PASS,states 10743007293.11 vs printed 10743007293.11
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2024,PASS,states 10842490516.89 vs printed 10842490516.89
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2009 budget_estimate,PASS,types 175855425000.0 vs total 175855425000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2009 revised_estimate,PASS,types 162099806000.0 vs total 162099806000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2009 audited,PASS,types 158639304227.70 vs total 158639304227.7
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2010 budget_estimate,PASS,types 154560240000.0 vs total 154560240000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2010 revised_estimate,PASS,types 162131333000.0 vs total 162131333000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2010 audited,PASS,types 159652962318.0 vs total 159652962318.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2011 budget_estimate,PASS,types 165922132000.0 vs total 165922132000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2011 revised_estimate,PASS,types 183374609000.0 vs total 183374609000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2011 audited,PASS,types 185418919743.0 vs total 185418919743.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2012 budget_estimate,PASS,types 185857560000.0 vs total 185857560000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2012 revised_estimate,PASS,types 207246482000.0 vs total 207246482000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2012 audited,PASS,types 207912754669.0 vs total 207912754669.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2013 budget_estimate,PASS,types 208120519000.0 vs total 208120519000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2013 revised_estimate,PASS,types 220422427000.0 vs total 220422427000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2013 audited,PASS,types 213370213558.0 vs total 213370213558.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2014 budget_estimate,PASS,types 224244429000.0 vs total 224244429000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2014 revised_estimate,PASS,types 225094429000.0 vs total 225094429000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2014 audited,PASS,types 220625673356.0 vs total 220625673356.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2015 budget_estimate,PASS,types 234975961000.0 vs total 234975961000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2015 revised_estimate,PASS,types 222454645000.0 vs total 222454645000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2015 audited,PASS,types 219088760826.0 vs total 219088760826.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2016 budget_estimate,PASS,types 224891628000.0 vs total 224891628000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2016 revised_estimate,PASS,types 212595375000.0 vs total 212595375000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2016 audited,PASS,types 212421098894.0 vs total 212421098894.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2017 budget_estimate,PASS,types 218975845000.0 vs total 218975845000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2017 revised_estimate,PASS,types 225336794000.0 vs total 225336794000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2017 audited,PASS,types 220406001884.0 vs total 220406001884.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2018 budget_estimate,PASS,types 239860154000.0 vs total 239860154000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2018 revised_estimate,PASS,types 236460319000.0 vs total 236460319000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2018 audited,PASS,types 232882562288.0 vs total 232882562288.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2019 budget_estimate,PASS,types 261814363000.0 vs total 261814363000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2019 revised_estimate,PASS,types 263299755000.0 vs total 263299755000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2019 audited,PASS,types 264414755876.0 vs total 264414755876.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2020 budget_estimate,PASS,types 244530029000.0 vs total 244530029000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2020 revised_estimate,PASS,types 227270015000.0 vs total 227270015000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2020 audited,PASS,types 225074947242.0 vs total 225074947242.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2021 budget_estimate,PASS,types 236900000000.0 vs total 236900000000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2021 revised_estimate,PASS,types 228244000000.0 vs total 228244000000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2021 audited,PASS,types 233752055029.0 vs total 233752055029.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2022 budget_estimate,PASS,types 234011430000.0 vs total 234011430000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2022 revised_estimate,PASS,types 285217488000.0 vs total 285217488000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2022 audited,PASS,types 294356760615.0 vs total 294356760615.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2023 budget_estimate,PASS,types 291500000000.0 vs total 291500000000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2023 revised_estimate,PASS,types 303200253000.0 vs total 303200253000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2023 audited,PASS,types 314959481731.0 vs total 314959481731.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2024 budget_estimate,PASS,types 307600000000.0 vs total 307600000000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2024 revised_estimate,PASS,types 322050247000.0 vs total 322050247000.0
+C18 PKKP revenue types add up to the printed total (Nota 5(a)),2024 audited,PASS,types 324617649248.0 vs total 324617649248.0

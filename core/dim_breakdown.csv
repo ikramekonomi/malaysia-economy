@@ -59,6 +59,11 @@ crime_category=property|crime_type=theft_vehicle_motorcycle,crime_category=prope
 facility_type=hospital_moh,facility_type=hospital_moh,facility_type,hospital_moh
 facility_type=hospital_non_moh,facility_type=hospital_non_moh,facility_type,hospital_non_moh
 facility_type=special_medical_institution,facility_type=special_medical_institution,facility_type,special_medical_institution
+hasil_kod=60000,hasil_kod=60000,hasil_kod,60000
+hasil_kod=70000,hasil_kod=70000,hasil_kod,70000
+hasil_kod=80000,hasil_kod=80000,hasil_kod,80000
+hasil_kod=90000,hasil_kod=90000,hasil_kod,90000
+hasil_kod=pelbagai_terimaan_2009,hasil_kod=pelbagai_terimaan_2009,hasil_kod,pelbagai_terimaan_2009
 percentile=001,percentile=001,percentile,001
 percentile=002,percentile=002,percentile,002
 percentile=003,percentile=003,percentile,003

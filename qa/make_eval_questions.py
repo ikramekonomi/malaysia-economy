@@ -241,6 +241,24 @@ q("5", "Does the budget-vs-actual view say PETRA's 2024 vote had no original est
   "get_gap_view", {"name": "gap_budget_vs_actual", "year": "2024", "entity": "B.33"},
   "row_field:flow=opex:book_vs_pkkp_estimate_status", "differ", kind="trap_identity")
 
+
+
+def pk_rev(year, item, col):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_revenue.csv"), newline="") as fh:
+        return next(Decimal(r[col]) for r in csv.DictReader(fh) if r["level"] in ("0", "1") and r["item_bm"].strip() == item)
+
+
+q("5", "What was federal tax revenue in 2024, audited?", "get_gap_view",
+  {"name": "gap_revenue_estimate_vs_collected", "year": "2024"}, "row_field:breakdown_key=hasil_kod=60000:actual_audited",
+  s(pk_rev("2024", "HASIL CUKAI", "sebenar_rm")))
+q("5", "Did federal tax revenue in 2022 come in on its original estimate?", "get_gap_view",
+  {"name": "gap_revenue_estimate_vs_collected", "year": "2022"},
+  "row_field:breakdown_key=hasil_kod=60000:collection_rate_original",
+  s((pk_rev("2022", "HASIL CUKAI", "sebenar_rm") / pk_rev("2022", "HASIL CUKAI", "anggaran_asal_rm")).quantize(Decimal("0.0001"))))
+q("5", "Does the revenue book's 2024 total agree with the audited accounts to the ringgit?", "get_gap_view",
+  {"name": "gap_revenue_estimate_vs_collected", "year": "2024"}, "row_field:breakdown_key=_total:book_vs_pkkp_actual_status",
+  "differ")
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")

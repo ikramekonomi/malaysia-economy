@@ -1,0 +1,6 @@
+check,scope,status,detail
+R2 PKKP Nota 5(a) revenue total vs the performance statement's revenue (federal_gov.revenue.total),PKKP,PASS,16 years
+R3 every value traces to an observation,core,PASS,90 rows
+R4 the book's sections add up to its total,anggaran_hasil,PASS,6 totals
+R5 status counts (INFO),view,INFO,"_total/above_estimate 6, _total/below_estimate 4, _total/not_held 2, _total/on_estimate 6, hasil_kod=60000/above_estimate 4, hasil_kod=60000/below_estimate 6, hasil_kod=60000/not_held 2, hasil_kod=60000/on_estimate 6, hasil_kod=70000/above_estimate 11, hasil_kod=70000/below_estimate 1, hasil_kod=70000/not_held 2, hasil_kod=70000/on_estimate 4, hasil_kod=80000/above_estimate 13, hasil_kod=80000/below_estimate 1, hasil_kod=80000/not_held 2, hasil_kod=80000/on_estimate 1, hasil_kod=90000/above_estimate 7, hasil_kod=90000/below_estimate 7, hasil_kod=90000/not_held 2, hasil_kod=90000/on_estimate 2, hasil_kod=pelbagai_terimaan_2009/above_estimate 1"
+R6 book vs PKKP (INFO),view,INFO,"book_vs_pkkp_revised_status: {'agree': 5}, book_vs_pkkp_actual_status: {'agree': 8, 'differ': 2}"

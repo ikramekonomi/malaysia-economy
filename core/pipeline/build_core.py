@@ -645,6 +645,77 @@ def build_federal_loans(obs, checks):
                            "PASS" if abs(d) <= Decimal("0.01") else "FAIL", f"states {detail} vs printed {total}"])
 
 
+# PKKP prints revenue categories by name; the Budget revenue book's section codes (D: gap_revenue method) name them
+REV_NAME_TO_KOD = {"HASIL CUKAI": "60000", "JUMLAH HASIL CUKAI": "60000",
+                   "HASIL BUKAN CUKAI": "70000", "JUMLAH HASIL BUKAN CUKAI": "70000",
+                   "TERIMAAN BUKAN HASIL": "80000", "JUMLAH TERIMAAN BUKAN HASIL": "80000",
+                   "HASIL WILAYAH PERSEKUTUAN": "90000", "JUMLAH HASIL WILAYAH PERSEKUTUAN": "90000",
+                   "JUMLAH HASIL WILAYAH-WILAYAH PERSEKUTUAN": "90000",
+                   "JUMLAH PELBAGAI TERIMAAN": "pelbagai_terimaan_2009", "HASIL": "_total", "JUMLAH HASIL": "_total"}
+REV_BASIS = {"anggaran_asal_rm": "budget_estimate", "anggaran_disemak_rm": "revised_estimate", "sebenar_rm": "audited"}
+
+
+def build_revenue_by_type(obs, checks):
+    """Federal revenue by type (Phase 5, gap_revenue_estimate_vs_collected): PKKP Nota 5(a) levels 0 and 1, FY2009-
+    2024 own volume, original and revised estimates and actual; the Budget revenue books' (Anggaran Hasil 2025-
+    2026) section and total rows: actual, revised estimate, estimate. Breakdown hasil_kod = the book's section
+    code (REV_NAME_TO_KOD maps PKKP's printed names). Check C18: PKKP's level-1 rows add up to its level 0."""
+    import glob
+    sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_revenue.csv"))):
+        rel = os.path.relpath(path, REPO)
+        yr = os.path.basename(os.path.dirname(path))
+        sums = defaultdict(Decimal)
+        tot = {}
+        for i, r in enumerate(rows(path), start=2):
+            if r["level"] not in ("0", "1") or r["year"] != yr or not r["source_file"].startswith(yr):
+                continue
+            name = r["item_bm"].strip().upper()
+            kod = REV_NAME_TO_KOD.get(name)
+            if kod is None:
+                sys.exit(f"PKKP {yr} revenue: no hasil_kod for level-{r['level']} {name!r} (declare it)")
+            bk = "_total" if kod == "_total" else f"hasil_kod={kod}"
+            for col, basis in REV_BASIS.items():
+                v = dec(r[col])
+                if v is None:
+                    continue
+                if kod == "_total":
+                    tot[basis] = v
+                else:
+                    sums[basis] += v
+                obs.add(indicator_code="federal_gov.revenue.by_type", geo_code="MY", period_code=yr, breakdown_key=bk,
+                        entity_id=entity("federal_gov", "MY", yr), basis=basis, edition_id=f"pkkp:{r['source_file']}",
+                        vintage=yr, value=v, value_printed=r[col], unit_printed="RM", precision_printed="0.01",
+                        estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                        pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"],
+                        l1_ref=f"{rel}#row{i}")
+        for basis, t in tot.items():
+            d = sums[basis] - t
+            checks.append(["C18 PKKP revenue types add up to the printed total (Nota 5(a))", f"{yr} {basis}",
+                           "PASS" if abs(d) <= Decimal("2") else "FAIL", f"types {sums[basis]} vs total {t}"])
+    for path in sorted(glob.glob(os.path.join(REPO, "sources", "anggaran-hasil", "data", "*", "fact_hasil_ringkasan_*.csv"))):
+        rel = os.path.relpath(path, REPO)
+        book = os.path.basename(os.path.dirname(path))
+        for i, r in enumerate(rows(path), start=2):
+            if r["level"] not in ("section", "total"):
+                continue
+            m = re.fullmatch(r"(sebenar|anggaran_disemak|anggaran)_(\d{4})", r["measure"])
+            if not m:
+                continue
+            basis = {"sebenar": "actual", "anggaran_disemak": "revised_estimate", "anggaran": "budget_estimate"}[m.group(1)]
+            v = dec(r["amount_rm"])
+            if v is None:
+                continue
+            bk = "_total" if r["level"] == "total" else f"hasil_kod={r['kod']}"
+            obs.add(indicator_code="federal_gov.revenue.by_type", geo_code="MY", period_code=m.group(2), breakdown_key=bk,
+                    entity_id=entity("federal_gov", "MY", m.group(2)), basis=basis,
+                    edition_id=f"anggaran_hasil:{r['source_file']}", vintage=book, value=v,
+                    value_printed=r["amount_rm"], unit_printed="RM", precision_printed="1", estimate_method="accounting",
+                    reliability="ok", file_id=sha.get(r["source_file"], ""), pdf_page=r["pdf_page"],
+                    printed_page=r["printed_page"], table_ref=f"Anggaran Hasil Kerajaan Persekutuan {book}: Ringkasan",
+                    l1_ref=f"{rel}#row{i}")
+
+
 PERF_LINES = {"revenue": "federal_gov.revenue.total", "opex": "federal_gov.expenditure.opex",
               "devex": "federal_gov.expenditure.devex", "covid_fund_exp": "federal_gov.expenditure.covid_fund"}
 TRANSFER_LINE = "Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan"
@@ -1110,6 +1181,7 @@ def main():
     build_votes(obs)
     obs.extra_checks = []
     build_federal_loans(obs, obs.extra_checks)
+    build_revenue_by_type(obs, obs.extra_checks)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

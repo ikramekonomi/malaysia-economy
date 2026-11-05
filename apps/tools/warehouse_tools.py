@@ -578,6 +578,8 @@ class Tools:
                                  "FY2014-2024 (FY2015 has no federal side)"),
         "gap_budget_vs_actual": ("core/pipeline/build_gap_budget_vs_actual.py (declared 2026-11-05)",
                                  "PKKP FY2009-2024 and the Budget books' estimate years 2023-2026"),
+        "gap_revenue_estimate_vs_collected": ("core/pipeline/build_gap_revenue.py (declared 2026-11-05)",
+                                              "PKKP FY2009-2024 and the revenue books' years 2023-2026"),
         "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
                                   "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
@@ -673,6 +675,13 @@ class Tools:
                 "it. execution_rate = audited actual / revised estimate (or allocation); status: within_estimate "
                 "(0.90-1.00), underspent (< 0.90), overspent (> 1.00), not_held. A body is its vote: a lapsed vote's "
                 "successor is another body (get_entity lineage), so do not join rows across bodies. No ranking.")
+        if name == "gap_revenue_estimate_vs_collected":
+            out["how_to_read"] = (
+                "One row per revenue type (breakdown hasil_kod: 60000 tax, 70000 non-tax, 80000 non-revenue receipts, "
+                "90000 the Federal Territories; _total) and year: the audited accounts' original and revised estimates "
+                "and actual, beside the Budget revenue book's estimate, revised estimate and actual. "
+                "collection_rate_original = actual / original estimate; status on_estimate (0.97-1.03), above_estimate, "
+                "below_estimate, not_held. Differences between the book and the audit are kept as printed.")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:
