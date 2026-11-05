@@ -1,0 +1,7 @@
+check,scope,status,detail
+P1 project leaves add up to each volume's printed development total,sources/pkkp fact_devex_project,WARN,15 years; short: 2009 410577249.88 (FY2009 aligns 1266 of 1412 project rows in its own validation; the difference is not itemised and not placed)
+P2 every project row is placed by exactly one method,core/fact_placement.csv,PASS,14112 rows
+P3 a stated or parsed place cites the words matched,core/fact_placement.csv,PASS,ok
+P4 grants by name equal fact_money_flow's stated flows,core/fact_money_flow.csv,PASS,"96 flows, 4580508927"
+"P5 the 16 places + not placed = every project leaf, each year",core/gap_federal_placement.csv,PASS,ok
+"P6 placed_share in [0, 1]",core/gap_federal_placement.csv,PASS,ok

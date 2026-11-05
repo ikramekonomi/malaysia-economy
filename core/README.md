@@ -29,7 +29,10 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
+| `entity_lineage.csv` | 15 | where a body's work went when its vote lapsed (D28): a link between two bodies, with printed evidence (`entity_lineage_evidence.csv`, 66 lines with PDF pages and both votes' spending in the move year) |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
+| `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
+| `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -199,6 +202,7 @@ book (2024-2026).
 | `meta/entity_register.csv` | every `entity_id` ever issued (E000001 …), with type, sector, parent, reason and `decision_status`; never reused, never deleted (check E1: IDs contiguous) |
 | `meta/entity_code.csv` | every readable code of an entity (`federal_gov` MY, `state_gov` MY-01…MY-13, `maksud_bekalan` B.xx, `maksud_pembangunan` P.xx) with its years and a proof |
 | `meta/spending_head.csv` | T.01-T.14 (Tanggungan) and P.70 (contingency reserve): spending heads, not bodies |
+| `meta/entity_lineage.csv`, `meta/entity_lineage_evidence.csv` | where a body's work went at a vote lapse, and the printed lines on both sides that show it (D28) |
 
 The identity rule (decision D26), declared before any spending is loaded against it:
 
@@ -208,8 +212,37 @@ The identity rule (decision D26), declared before any spending is loaded against
   2019-2021 after B.29 (Energy, Green Technology and Water) ended in 2018, paying for its projects.
 * **A B vote printed again after a lapse is a new body** unless a person links it. B.15 (Economic
   Affairs 2018-2020; Economy from 2023), B.26 (2009; Entrepreneur Development from 2018) and B.33
-  (Environment and Water 2020-2022; Energy Transition from 2024) are split this way and marked
-  `proposed`; the tools say so on every answer about them.
+  (Environment and Water 2020-2022; Energy Transition from 2024) are split this way, and a person confirmed
+  all six as separate bodies (D28). The tools warn on every answer about them that the code was also held by
+  a different body.
+* **Where the work went is lineage, not identity (D28).** In each gap the work was paid from another vote,
+  so `meta/entity_lineage.csv` links the bodies with the printed lines that show the move
+  (`meta/entity_lineage_evidence.csv`, re-found in PKKP L1 on every build):
+
+  | Link | From → to | First year | Mid-year | What moved |
+  |---|---|---|---|---|
+  | L01 | B.06 Prime Minister's Dept → B.15 Economic Affairs | 2018 | yes | economic planning (EPU), statistics |
+  | L09 | B.22 Rural Development → B.15 Economic Affairs | 2018 | yes | MARA, RISDA |
+  | L10 | B.15 → B.22 | 2019 | no | MARA |
+  | L02 | B.15 → B.06 | 2020 | yes | economic planning, statistics |
+  | L11 | B.15 → B.22 | 2020 | yes | RISDA |
+  | L03 | B.06 → B.15 Economy | 2023 | no | economic planning, statistics, corridor authorities |
+  | L04 | B.26 (2009) → B.25 Domestic Trade, Co-operatives | 2009 | no | Cooperatives Commission (B.25 spends all of FY2009) |
+  | L05 | B.26 (2009) → B.22 Rural Development | 2009 | yes | MARA |
+  | L06 | B.25 → B.26 Entrepreneur Development | 2018 | yes | cooperatives |
+  | L07 | B.33 Environment and Water → B.23 Natural Resources | 2023 | no | water, sewerage, environment |
+  | L08 | B.23 → B.33 Energy Transition | 2024 | no | water, sewerage, energy (environment stays in B.23) |
+  | L12 | B.49 Higher Education → B.41 Education | 2013 | yes | universities, polytechnics |
+  | L13 | B.64 Higher Education → B.63 Education | 2019 | no | universities, qualifications agency |
+  | L14 | B.63 → B.64 | 2020 | yes | universities, qualifications agency |
+  | L15 | B.41 Education → B.64 Higher Education | 2015 | no | universities, qualifications agency (new vote's side evidenced at vote level: FY2015 activity names are OCR-provisional) |
+
+  `first_year` is the first year the new body's vote prints the work; a mid-year move splits that year's
+  spending between both votes. The build tests both votes' actual spending (leaf rows) in the move year and
+  the year before (E9). A year inside a lapse (`get_entity('B.15', 2021)`, `('B.64', 2014)`) returns the
+  links out of the body before and into the body after.
+  A series joined across a link changes scope: compare the named activities, not the vote totals. Links are
+  recorded at the lapses and the moves that led to them, not for every move between ministries.
 * **Renumberings link only with a proof:** B.41→B.63 (Education) and B.49→B.64 (Higher Education),
   approved before the register (`curated/pipeline/build_ministry_fiscal.py`).
 * **Budget books do not extend a lineage, and can name an older holder:** a book is tabled before its year,
@@ -219,7 +252,7 @@ The identity rule (decision D26), declared before any spending is loaded against
   (`anggaran:2024`): a scoped row wins for that source only, so `get_entity('B.32', 2024)` is not held.
 
 A code printed in a source with no entity for that year **stops the build** and is listed: an ID is
-issued only by a person. Checks E1-E8 are in `_validation_entity.csv`. Core's state and federal rows
+issued only by a person. Checks E1-E10 are in `_validation_entity.csv`. Core's state and federal rows
 carry entity IDs (check C15), every citation names its entity, and the tool `get_entity(code, year)`
 resolves `B.45` + 2024, `MY-03` or `E000052`, refuses a spending head (`T.13`) and lists every body a
 code ever named when no year is given.
@@ -307,6 +340,41 @@ show it (D27). First slice: the federal grants and assignments to the states, Ta
 * **Not yet:** what each state records receiving (state accounts) matched to these flows; development grants
   and federal projects in a state.
 
+## gap_federal_placement (Phase 3, 2026-11-05)
+
+How much federal spending can be placed in a state from the federal accounts themselves (DATA_MODEL §10, §13
+track A; D29). The method, declared and committed before any result by state, is in the header of
+`core/pipeline/build_federal_placement.py`:
+
+* **Projects** (`core/fact_placement.csv`, one row per PKKP development project leaf, its actual spending): placed
+  in a state when the printed name names exactly one state or Federal Territory (`stated_state`, 2,205 rows), or
+  no state but districts of one state (`parsed_district`, 263; DOSM 2020 districts, whole words, common-word names
+  excluded; a state named only inside a district's name, as in Kuala Terengganu, counts as that district), or a
+  town, region, island or facility listed with its proof in `meta/place_gazetteer.csv` (`parsed_place`, 127:
+  Iskandar Malaysia, Cyberjaya, Ipoh, IADA Pekan, IADA Kalaka Saribas, Angkasapuri, ...). A name naming two or more places is `multiple_states` (104); one
+  naming only the Peninsula is `peninsula` (136, RM4.24b: PKKP's Peninsula / Sabah / Sarawak split lines, of which
+  only the Sabah and Sarawak ones can be placed); 11,277 name none. None of these is placed. The words matched are
+  kept (`geo_evidence`); `pdf_page` is the page printing the name, the amounts sit on the facing page.
+* **Grants by name** to a state government or territory administration (`fact_money_flow`, `stated`); class
+  grants are never split (D27).
+* **Not used:** an agency's seat, or any allocation key (population, staff, need).
+
+| | FY2009 | FY2014 | FY2019 | FY2024 |
+|---|---|---|---|---|
+| placed (projects by name + grants by name) | RM6.59b (no FY2009 grants held) | RM3.79b | RM2.94b | RM3.14b |
+| federal total spending | RM207b | RM259b | RM318b | RM406b |
+| `placed_share` | 3.2% | 1.5% | 0.9% | 0.8% |
+
+`placed_share` is under 4% in every year (highest 3.9%, FY2010), so the amounts by state are withheld by
+`get_gap_view('gap_federal_placement', geo, year)` under the 60% guard; the national row and what could not be
+placed are returned (the CSV keeps them for verification, marked `publishable=false`). Sabah and Sarawak hold
+about 54% of the placed project money over the years held (42-65% by year), partly because the accounts print their lines separately while the
+Peninsula's cannot be placed (CV27). Some placed lines are loans, equity or regional agencies. Most federal money (salaries, subsidies, cash transfers, and most projects, whose names name
+no place) has no location in the federal accounts. Placing it needs sources by area that are not held (KKM/KPM
+by state, STR/JKM recipients by state). A place in a project name is where the project is, not who benefits
+(CV27). Checks P1-P6 in `_validation_placement.csv` (P1 WARN: FY2009's project rows are RM410.6m short of its
+printed development total, known in that volume's own validation and shown as not itemised).
+
 ## gap_federal_vs_state (Phase 3, 2026-11-05)
 
 **Question:** do federal transfers match what states record receiving? Method declared before results were seen,
@@ -346,9 +414,10 @@ the header of `core/pipeline/build_gap_need_vs_money.py`. In short:
 * **State-government money:** audited spending (printed total, or opex + devex where the volume
   prints no total, marked `derived`), non-revenue receipts (mostly federal grants, as recorded by
   the state), both per person.
-* **Federal money placed in each state is not published yet.** Today only what state governments
-  record receiving can be placed: 0.3–1.5% of federal spending, far below the 60% guard. Each row
-  says so. Placing operating spending (schools, clinics, cash transfers) needs the registry series
+* **Federal money placed in each state is not published yet.** This view's federal column counts
+  only what state governments record receiving (0.3–1.5% of federal spending); `gap_federal_placement`
+  places federal money from the federal accounts themselves (0.6–3.9%). Both are far below the 60%
+  guard, and each row says so. Placing operating spending (schools, clinics, cash transfers) needs the registry series
   `social_transfers_by_state`, `health_facts` and `education_stats` (Phase 3).
 * **Under check:** a state-year with an open FAIL on a headline identity (`qa/known_fails.csv`) is
   published with `under_check` naming the check: Pahang 2016/2017/2021/2022, Johor 2018/2019,

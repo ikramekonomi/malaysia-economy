@@ -182,6 +182,28 @@ v = l1("hh_poverty_state", "Kelantan", "2022", "poverty_absolute")
 q("1", "What poverty rate does the view show for Kelantan in 2022?", "get_gap_view",
   {"name": "gap_need_vs_money", "geo": "MY-03", "year": "2022"}, "field:poverty_absolute_rate", s(v))
 
+# G2. federal spending placed by state (Phase 3.11): the expected development total comes from L1's printed grand total
+
+
+def pk_devex_total(year):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_devex_project.csv"), newline="") as fh:
+        return next(Decimal(r["sebenar_jumlah_rm"]) for r in csv.DictReader(fh) if r["row_type"] == "grand_total")
+
+
+q("5", "Are federal amounts placed in Kelantan published for 2024?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY-03", "year": "2024"}, "field:publishable", "false")
+q("5", "How much federal money was placed in Kelantan in 2024 (the guard withholds it)?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY-03", "year": "2024"}, "field:placed_rm", "None", kind="trap_missing")
+q("5", "Does the placement view carry the caveat that a project's place is where it is, not who benefits?",
+  "get_gap_view", {"name": "gap_federal_placement", "geo": "MY", "year": "2024"}, "caveat", "CV27")
+q("5", "What did federal development projects total in 2024 (the placement view's MY row)?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY", "year": "2024"}, "field:devex_projects_total_rm",
+  s(pk_devex_total("2024")))
+q("5", "Is federal spending placed by state for FY2015 (an OCR-provisional scan)?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY", "year": "2015"}, "not_held", kind="trap_missing")
+q("5", "Does the placement view cover all 16 states and territories plus the national and not-placed rows in 2020?",
+  "get_gap_view", {"name": "gap_federal_placement", "year": "2020"}, "row_count", "18")
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")
@@ -558,8 +580,30 @@ q("5", "Is development vote P.29 in 2020 (after B.29 ended in 2018) the same bod
   {"a": ent("P.29", 2020), "b": ent("B.29", 2017)}, "same_entity", "same")
 q("5", "Is B.15 in 2019 the same body as B.15 in 2024?", "entity_same",
   {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "same_entity", "different", kind="trap_identity")
-q("5", "Does the answer say the B.15 split is not yet confirmed by a person?", "entity_same",
-  {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "entity_caveat", "rule D26", kind="trap_identity")
+q("5", "Does the answer warn that B.15's code was also held by a different body, so the two are not one series?",
+  "entity_same", {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "entity_caveat", "not one series",
+  kind="trap_identity")
+q("5", "Is B.33 in 2022 (Environment and Water) the same body as B.33 in 2024 (Energy Transition)?", "entity_same",
+  {"a": ent("B.33", 2022), "b": ent("B.33", 2024)}, "same_entity", "different", kind="trap_identity")
+q("5", "Has a person confirmed that the 2018-2020 B.15 is a body of its own?", "get_entity", ent("B.15", 2019),
+  "entity_field:decision_status", "confirmed")
+# lineage (D28): where a body's work went when its vote ended, from meta/entity_lineage.csv (a human decision)
+q("5", "Where was B.15's economic planning work printed after the vote ended in 2020?", "get_entity",
+  ent("B.15", 2019), "lineage_went_to", "E000020", kind="trap_identity")
+q("5", "Which body's vote paid for the 2009 B.26 body's cooperatives work from 2010?", "get_entity",
+  ent("B.26", 2009), "lineage_went_to", "E000036", kind="trap_identity")
+q("5", "Where did the Environment and Water ministry's (B.33) work go in 2023?", "get_entity", ent("B.33", 2022),
+  "lineage_went_to", "E000034", kind="trap_identity")
+q("5", "Where did the 2024 B.33 body's water and energy work come from?", "get_entity", ent("B.33", 2024),
+  "lineage_came_from", "E000034", kind="trap_identity")
+q("5", "B.15 is not printed in 2021: does the answer say where the economic planning work was printed (link L02)?",
+  "get_entity", ent("B.15", 2021), "lapse_link", "L02", kind="trap_identity")
+q("5", "Neither B.49 nor B.64 is printed in 2014: does the answer say Higher Education came back from Education in 2015 (L15)?",
+  "get_entity", ent("B.64", 2014), "lapse_link", "L15", kind="trap_identity")
+q("5", "Did B.06 already pay for economic planning in 2020, before B.15 ended (L02 first year)?", "get_entity",
+  ent("B.06", 2020), "lineage_first_year:L02", "2020", kind="trap_identity")
+q("5", "Was the 2018 move of cooperatives to B.26 made during the year (spending split between two votes)?",
+  "get_entity", ent("B.26", 2020), "lineage_mid_year", "True", kind="trap_identity")
 q("5", "Is B.26 in 2009 the same body as B.26 in 2020?", "entity_same",
   {"a": ent("B.26", 2009), "b": ent("B.26", 2020)}, "same_entity", "different", kind="trap_identity")
 q("5", "Who is B.15, with no year given?", "get_entity", ent("B.15"), "entity_count", "2", kind="trap_identity")

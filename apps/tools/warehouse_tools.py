@@ -351,9 +351,39 @@ class Tools:
             if system == "state_gov":
                 return {"held": False, "answer": f"{code} has no state government in the register (the Federal "
                         "Territories MY-14, MY-15 and MY-16 are governed federally)", "release_id": self.w.release_id}
-            return {"held": False, "answer": f"no body held {code}" + (f" in {y}" if y else "")
-                    + " (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books)",
-                    "release_id": self.w.release_id}
+            res = {"held": False, "answer": f"no body held {code}" + (f" in {y}" if y else "")
+                   + " (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books)",
+                   "release_id": self.w.release_id}
+            if y is not None and system:
+                # a year inside a lapse: say where the work of the body before (and the body after) was printed
+                runs = [c for c in self.w.entity_codes if c["code_system"] == system and c["code"] == code
+                        and not c.get("scope") and c["valid_from"] and c["valid_to"]]
+                prev = max((c for c in runs if int(c["valid_to"]) < y), key=lambda c: int(c["valid_to"]), default=None)
+                nxt = min((c for c in runs if int(c["valid_from"]) > y), key=lambda c: int(c["valid_from"]), default=None)
+
+                def other_runs(eid):
+                    return [c for c in self.w.entity_codes if c["entity_id"] == eid and c["code_system"] == system
+                            and not c.get("scope") and c["valid_from"] and c["valid_to"]]
+                # a body renumbered across the lapse (B.49 to 2013, B.64 from 2015): its run under its other code
+                if nxt and not prev:
+                    prev = max((c for c in other_runs(nxt["entity_id"]) if int(c["valid_to"]) < y),
+                               key=lambda c: int(c["valid_to"]), default=None)
+                if prev and not nxt:
+                    nxt = min((c for c in other_runs(prev["entity_id"]) if int(c["valid_from"]) > y),
+                              key=lambda c: int(c["valid_from"]), default=None)
+                # the moves out of the body before (from its last printed year) and into the body after
+                links = [r for r in self.w.entity_lineage if prev and nxt and (
+                    r["from_entity_id"] == prev["entity_id"] and int(prev["valid_to"]) <= int(r["first_year"]) <= y
+                    or r["to_entity_id"] == nxt["entity_id"] and y < int(r["first_year"]) <= int(nxt["valid_from"]))]
+                if links:
+                    a, b = prev["entity_id"], nxt["entity_id"]
+                    res["answer"] += ("; the code is in a lapse " + (f"of {a}'s vote" if a == b else f"between {a} and {b}")
+                                      + ": 'lineage' says where the work was printed in the meantime")
+                    res["lineage"] = {"links": [{k: r[k] for k in ("lineage_id", "from_entity_id", "from_name_bm",
+                                                                   "to_entity_id", "to_name_bm", "first_year",
+                                                                   "moved_mid_year", "what_moved", "evidence")}
+                                                for r in links], "how_to_read": self.LINEAGE_NOTE}
+            return res
         out = []
         for eid in ids:
             e = self.w.entity[eid]
@@ -365,15 +395,49 @@ class Tools:
                  "parent_entity_id": e["parent_entity_id"], "decision_status": e["decision_status"],
                  "codes": codes, "source_text": {"name_bm": e["name_bm"], "name_en": e["name_en"],
                                                  "printed_names": names, "note": UNTRUSTED}}
+            if y is not None:
+                d["printed_in_year"] = [{"code": n["code"], "name_bm": n["name_bm"], "name_en": n["name_en"]}
+                                        for n in names if int(n["valid_from"]) <= y <= int(n["valid_to"])]
+            if e["name_en"] and not any(n["name_en"] for n in names):
+                d["name_en_note"] = ("name_en is the register's label (the body's official English name); the "
+                                     "source prints no English name for it")
+            def link(r, other):
+                return {"lineage_id": r["lineage_id"], "entity_id": r[f"{other}_entity_id"],
+                        "name_bm": r[f"{other}_name_bm"], "first_year": int(r["first_year"]),
+                        "moved_mid_year": r["moved_mid_year"] == "yes", "what_moved": r["what_moved"],
+                        "evidence": r["evidence"]}
+            came = [link(r, "from") for r in self.w.entity_lineage if r["to_entity_id"] == eid]
+            went = [link(r, "to") for r in self.w.entity_lineage if r["from_entity_id"] == eid]
+            if came or went:
+                d["lineage"] = {"work_came_from": came, "work_went_to": went, "how_to_read": self.LINEAGE_NOTE}
+            caveats = []
             if e["decision_status"] == "proposed":
-                d["caveat"] = ("identity proposed by rule D26 and not yet confirmed by a person: this vote lapsed "
+                caveats.append("identity proposed by rule D26 and not yet confirmed by a person: this vote lapsed "
                                "and was printed again, and the two runs are kept as separate bodies until someone "
                                "decides otherwise")
+            reused = sorted({c["entity_id"] for x in codes if x["code_system"] == "maksud_bekalan"
+                             for c in self.w.entity_codes if c["code_system"] == "maksud_bekalan"
+                             and c["code"] == x["code"] and c["entity_id"] != eid and not c.get("scope")})
+            if reused:
+                caveats.append(f"its supply vote code was also held by a different body ({', '.join(reused)}) in other "
+                               "years: their spending is not one series (rule D26, confirmed by a person: D28); "
+                               "'lineage' says where the work went")
+            if caveats:
+                d["caveat"] = "; ".join(caveats)
             out.append(d)
         res = {"held": True, "entities": out, "release_id": self.w.release_id}
         if len(out) > 1:
             res["answer"] = (f"{code} named {len(out)} different bodies over time; give the year to pick one")
         return res
+
+    LINEAGE_NOTE = ("a lineage link (decision D28) says that named work printed under one body's vote is printed under "
+                    "another body's vote from 'first_year' (in the same year for a move made during the year); the "
+                    "evidence names the printed programme or activity and its PDF page (level 'vote': the vote itself, "
+                    "used only where the volume's activity names are OCR-provisional). It is a link between two bodies, never one body: the two bodies' "
+                    "spending covers different work, so a series joined across a link changes scope (compare the "
+                    "named activities, not the vote totals). A move made during the year (moved_mid_year) splits that "
+                    "year's spending between both votes. Links are recorded only at the vote lapses and the moves "
+                    "that led to them; not every move between ministries is listed.")
 
     FLOW_COVERAGE = ("held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): "
                      "the federal grants and assignments to the states under Tanggungan T.12, and the grants to "
@@ -508,7 +572,19 @@ class Tools:
                               "the HIES years 2014, 2016, 2019, 2022 and 2024"),
         "gap_federal_vs_state": ("core/pipeline/build_gap_federal_vs_state.py (declared 2026-11-05)",
                                  "FY2014-2024 (FY2015 has no federal side)"),
+        "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
+                                  "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
+    PLACEMENT_NOTE = (
+        "How much federal spending (PKKP audited) can be placed in a state from the federal accounts themselves: "
+        "development projects whose name names one state (stated_state), districts of one state (parsed_district) or "
+        "a listed town or region (parsed_place), and "
+        "grants to a named state government or territory administration. placed_share is that money in all states "
+        "over the year's federal total; it is under 4% in every year held, so the amounts by state are withheld (the "
+        "60% guard: a map must not look more complete than the accounts). The MY row gives the national amounts by "
+        "method, the _unallocated row what could not be placed (projects naming several states, only the Peninsula, "
+        "or none, and FY2009's printed total not itemised). Sabah and Sarawak lines are printed separately while "
+        "the Peninsula's cannot be placed, which favours them in any comparison (CV27). Nothing is split by population or any other formula.")
     FED_VS_STATE_NOTE = (
         "Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts "
         "record received. The capitation and Concurrent List grants are paid to the states as a class and not split "
@@ -562,4 +638,15 @@ class Tools:
         out = {"held": True, "view": name, "rows": rs, "method": method, "release_id": self.w.release_id}
         if name == "gap_federal_vs_state":
             out["how_to_read"] = self.FED_VS_STATE_NOTE
+        if name == "gap_federal_placement":
+            out["how_to_read"] = self.PLACEMENT_NOTE
+            for r in rs:
+                for k, v in list(r.items()):
+                    if k.endswith("_rm") and v == "":
+                        r[k] = None  # not applicable (a state's unplaced money) or not held (FY2009 grants)
+                # the 60% guard (DATA_MODEL 10): a state's amounts are withheld while the year's placed_share is low
+                if r["geo_code"].startswith("MY-") and r["publishable"] != "true":
+                    for k in ("projects_stated_rm", "projects_parsed_rm", "grants_by_name_rm", "placed_rm"):
+                        r[k] = None
+                    r["withheld"] = "amounts by state withheld below the 60% placed_share guard; see note"
         return out
