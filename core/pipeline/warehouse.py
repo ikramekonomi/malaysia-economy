@@ -124,7 +124,7 @@ class Warehouse:
         out = []
         ind = r["indicator_code"]
         flags = {f["flag"] for f in self.source_flags(r)}
-        if flags - {"our_extraction_defect"}:
+        if flags - {"our_extraction_defect", "leaf_total_mismatch"}:
             out.append("CV15")
         if "our_extraction_defect" in flags:
             out.append("CV18")
@@ -144,14 +144,21 @@ class Warehouse:
                 out.append("CV6")
         if ind == "gdp.real":
             out.append("CV7")
+        if "leaf_total_mismatch" in flags:
+            out.append("CV21")
         if r["basis"] == "audited" and ind.startswith("federal_gov."):
-            out.append("CV16")
+            if r["l1_ref"].startswith("curated/"):
+                out.append("CV16")
             src = r["edition_id"].split(":", 1)[1]
             if not src.lower().endswith(".pdf"):  # no volume cited: the year's own volume
                 src = next((f for f in self.l0_status if f.startswith(f"{r['period_code']}_") and
                             "penyata_kewangan" in f.lower()), "")
             if src and self.l0_status.get(src, "ARCHIVED") != "ARCHIVED":
                 out.append("CV17")
+        if ind.startswith("federal_gov.vote."):
+            out.append("CV23")
+        if r["edition_id"].startswith("anggaran:") and r["period_code"][:4] < r["vintage"][:4]:
+            out.append("CV22")
         if ind == "cpi.index":
             out.append("CV8")
         if ind.startswith("trade."):
@@ -259,6 +266,12 @@ class Warehouse:
             same = all(a[k] == b[k] for k in ("indicator_code", "geo_code", "breakdown_key"))
             if not same:
                 raise Refused("growth compares one series with itself: same indicator, place and breakdown")
+            if a["entity_id"] != b["entity_id"]:
+                raise Refused(f"growth compares one body with itself; got {b['entity_id']} -> {a['entity_id']} (a vote "
+                              "code can name different bodies in different years: see get_entity)")
+            if a["edition_id"].startswith("anggaran:") and a["edition_id"] != b["edition_id"]:
+                raise Refused("each Anggaran book restates past years to its own votes (caveat CV22): take both years "
+                              "from the same book")
             if len(a["period_code"]) != len(b["period_code"]):
                 raise Refused("different frequencies")
             pa, pb = a["edition_id"].split(":")[0], b["edition_id"].split(":")[0]

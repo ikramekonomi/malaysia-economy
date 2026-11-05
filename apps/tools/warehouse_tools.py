@@ -71,11 +71,35 @@ class Tools:
             return self._not_held(text)
         return {"held": True, "indicators": [h[1] for h in hits[:8]], "release_id": self.w.release_id}
 
-    def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None, publisher=None):
-        """publisher: 'pkkp', 'bnm', 'mof' or 'dosm' (the edition's publisher). Without it, every publisher's
-        figure for the same concept comes back, each cited: where they differ, the difference is the answer."""
+    def _entity_filter(self, entity):
+        """entity -> a test on an observation row: an entity_id matches itself; a readable code (B.45, P.45,
+        MY-03, MY) matches the body that held the code IN THE ROW'S YEAR (a code can name different bodies)."""
+        if entity is None:
+            return lambda r: True, None
+        e = str(entity).strip().upper().replace(" ", "")
+        if e in self.w.entity:
+            return lambda r: r["entity_id"] == e, None
+        if e in self.w.spending_heads:
+            kind = "charged_head" if self.w.spending_heads[e]["kind"] == "charged" else "reserve_head"
+            return None, (f"{e} is a spending head, not a body: ask for breakdown='{kind}={e}' "
+                          "(its entity is the federal government)")
+        probe = self.get_entity(e)
+        if not probe.get("held"):
+            return None, probe["answer"]
+
+        def match(r):
+            hit = self.get_entity(e, int(r["period_code"][:4]))
+            return hit.get("held") and len(hit["entities"]) == 1 and hit["entities"][0]["entity_id"] == r["entity_id"]
+        return match, None
+
+    def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None, publisher=None,
+                   entity=None):
+        """publisher: 'pkkp', 'bnm', 'mof', 'dosm' or 'anggaran' (the edition's publisher). Without it, every
+        publisher's figure for the same concept comes back, each cited: where they differ, the difference is the
+        answer. entity: who spends (federal_gov.vote.*): a vote code (B.45, P.45; resolved year by year), a state
+        (MY-03) or an entity_id."""
         bad = self._bad_input(indicator=indicator, geo=geo, start=start, end=end, breakdown=breakdown, basis=basis,
-                              publisher=publisher)
+                              publisher=publisher, entity=entity)
         if bad:
             return {**bad, "release_id": self.w.release_id}
         start, end = (None if start is None else str(start)), (None if end is None else str(end))
@@ -86,10 +110,13 @@ class Tools:
             return self._not_held(indicator)
         if geo not in self.w.geo:
             return {"held": False, "answer": f"unknown place code {geo}", "release_id": self.w.release_id}
+        ent, why = self._entity_filter(entity)
+        if ent is None:
+            return {"held": False, "answer": why, "release_id": self.w.release_id}
         rs = [r for r in self.w.obs if r["indicator_code"] == indicator and r["geo_code"] == geo
               and r["breakdown_key"] == breakdown and (not basis or r["basis"] == basis)
               and (not publisher or r["edition_id"].split(":")[0] == publisher)
-              and self._period_in(r["period_code"], start, end)]
+              and self._period_in(r["period_code"], start, end) and ent(r)]
         if not rs:
             return self._not_held(f"{indicator} for {geo} {start or ''}-{end or ''}", self.w.ind[indicator]["name_en"])
         rs.sort(key=lambda r: (r["period_code"], r["edition_id"]))

@@ -555,6 +555,64 @@ q("5", "Is MY-03 the Kelantan state government (not the place)?", "get_entity", 
 q("5", "Does a state-government figure name the government it belongs to?", "get_series",
   series("state_gov.revenue.total", "MY-03", "2023"), "field_contains:entity_name", "Kelantan")
 
+# ---------------------------------------------------------------- Phase 3.2: spending by vote (L1 directly)
+def pk(table, code, year, col, **f):
+    for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", str(year), f"{table}.csv"))):
+        if r["maksud_code"] == code and all(r[k] == v for k, v in f.items()):
+            return Decimal(r[col])
+    raise LookupError(f"{table} {code} {year} {col} {f}")
+
+
+def ag(book, code, measure, comp):
+    for r in csv.DictReader(open(os.path.join(REPO, "sources", "anggaran", "data", str(book),
+                                              f"fact_anggaran_maksud_{book}.csv"))):
+        if r["maksud_code"] == code and r["measure"] == measure and r["component"] == comp and r["row_type"] == "total":
+            return Decimal(r["amount_rm"])
+    raise LookupError(f"anggaran {book} {code} {measure} {comp}")
+
+
+def vote(ind, y, entity=None, basis="audited", publisher="pkkp", breakdown="_total"):
+    d = {"indicator": f"federal_gov.vote.{ind}", "geo": "MY", "start": str(y), "end": str(y), "basis": basis,
+         "publisher": publisher, "breakdown": breakdown}
+    if entity:
+        d["entity"] = entity
+    return d
+
+
+q("5", "How much did the Ministry of Health (B.42) spend on operations in 2024, audited?", "get_series",
+  vote("opex", 2024, "B.42"), "value", s(pk("fact_opex_maksud", "B.42", 2024, "sebenar_rm")))
+q("5", "What was the Ministry of Health's revised operating estimate for 2024?", "get_series",
+  vote("opex", 2024, "B.42", basis="revised_estimate"), "value", s(pk("fact_opex_maksud", "B.42", 2024, "anggaran_dipinda_rm")))
+q("5", "What was Education's (B.41) audited operating spending in 2013?", "get_series",
+  vote("opex", 2013, "B.41"), "value", s(pk("fact_opex_maksud", "B.41", 2013, "sebenar_rm")))
+q("5", "How much was paid in debt service charges (T.13) in 2024?", "get_series",
+  vote("opex", 2024, breakdown="charged_head=T.13"), "value", s(pk("fact_opex_maksud", "T.13", 2024, "sebenar_rm")))
+q("5", "What did Education (P.63) spend on development in 2019 (printed in two blocks)?", "get_series",
+  vote("devex", 2019, "P.63"), "value",
+  s(pk("fact_devex_maksud", "P.63", 2019, "sebenar_jumlah_rm", jumlah_label_bm="KEMENTERIAN PENDIDIKAN")))
+q("5", "What is the Ministry of Health's operating budget for 2026 (Anggaran 2026)?", "get_series",
+  vote("opex", 2026, "B.42", basis="budget_estimate", publisher="anggaran"), "value",
+  s(ag(2026, "B.42", "anggaran_2026", "mengurus")))
+q("5", "Does MOF's 2024 actual for Health, as printed in the 2026 budget book, say it is not the audited figure?",
+  "get_series", {**vote("opex", 2024, "B.42", basis="actual", publisher="anggaran")}, "caveat", "CV22")
+q("5", "Does a vote's spending say it is gross and not placed?", "get_series", vote("opex", 2024, "B.42"), "caveat", "CV23")
+q("5", "Does P.47's FY2009 development total warn that it disagrees with its own project lines?", "get_series",
+  vote("devex", 2009, "P.47"), "caveat", "CV21")
+q("5", "Does Health's FY2015 spending say the PKKP volume is not archived?", "get_series",
+  vote("opex", 2015, "B.42"), "caveat", "CV17")
+a, b = pk("fact_opex_maksud", "B.42", 2024, "sebenar_rm"), pk("fact_opex_maksud", "B.42", 2024, "anggaran_asal_rm")
+q("5", "By how much did Health's audited 2024 operating spending differ from its original estimate?", "derive_chain",
+  {"operation": "difference", "a": vote("opex", 2024, "B.42"), "b": vote("opex", 2024, "B.42", basis="budget_estimate")},
+  "value", s(a - b))
+q("5", "Who spent T.13 (as an entity)?", "get_series", vote("opex", 2024, "T.13"), "not_held", kind="trap_identity")
+q("5", "Growth of B.15's spending from 2019 to 2024 (two different bodies under one code)?", "derive_chain",
+  {"operation": "growth", "a": vote("opex", 2024, "B.15"), "b": vote("opex", 2019, "B.15")},
+  "refused", "one body with itself", kind="trap_identity")
+q("5", "Growth of Health's actuals 2021->2024 taken from two budget books (2024 and 2026)?", "derive_chain",
+  {"operation": "growth", "a": vote("opex", 2024, "B.42", basis="actual", publisher="anggaran"),
+   "b": vote("opex", 2021, "B.42", basis="actual", publisher="anggaran")},
+  "refused", "same book", kind="trap_incomparable")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

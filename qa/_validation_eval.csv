@@ -158,3 +158,17 @@ Q156,trap_identity,get_entity,not_held,,"T.13 is a spending head, not a body: Ta
 Q157,trap_missing,get_entity,not_held,,no body held B.99 in 2020 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
 Q158,fact,get_entity,entity_field:gfs_sector,state_gov,state_gov,PASS
 Q159,fact,get_series,field_contains:entity_name,Kelantan,Kerajaan Negeri Kelantan,PASS
+Q160,fact,get_series,value,33951697947,33951697947,PASS
+Q161,fact,get_series,value,35150181800,35150181800,PASS
+Q162,fact,get_series,value,42765244711,42765244711,PASS
+Q163,fact,get_series,value,50481359234,50481359234,PASS
+Q164,fact,get_series,value,4682466910.01,4682466910.01,PASS
+Q165,fact,get_series,value,39775712300,39775712300,PASS
+Q166,fact,get_series,caveat,CV22,"CV23,CV22,COVERAGE",PASS
+Q167,fact,get_series,caveat,CV23,"CV23,COVERAGE",PASS
+Q168,fact,get_series,caveat,CV21,"CV21,CV23,COVERAGE",PASS
+Q169,fact,get_series,caveat,CV17,"CV17,CV23,COVERAGE",PASS
+Q170,fact,derive_chain,value,-1198483853,-1198483853,PASS
+Q171,trap_identity,get_series,not_held,,"T.13 is a spending head, not a body: ask for breakdown='charged_head=T.13' (its entity is the federal government)",PASS
+Q172,trap_identity,derive_chain,refused,one body with itself,growth compares one body with itself; got E000029 -> E000030 (a vote code can name different bodies in different years: see get_entity),PASS
+Q173,trap_incomparable,derive_chain,refused,same book,each Anggaran book restates past years to its own votes (caveat CV22): take both years from the same book,PASS
