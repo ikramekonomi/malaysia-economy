@@ -25,5 +25,5 @@ GF1 capitation: every state and territory present,all,PASS,"{'2014': 16, '2015':
 GF1 concurrent_list: every state and territory present,all,PASS,"{'2014': 16, '2015': 16, '2016': 16, '2017': 16, '2018': 16, '2019': 16, '2020': 16, '2021': 16, '2022': 16, '2023': 16, '2024': 16}"
 GF3 every figure traces to an observation or a flow,all,PASS,0 untraced
 GF4 rows where the two sides cannot both be right (status inconsistent),all,INFO,0
-GF5 state figures printed differently in two of the state's own reports,all,INFO,1: ['concurrent_list MY-02 2020']
+GF5 state figures printed differently in two of the state's own reports,all,INFO,"2: ['concurrent_list MY-02 2020', 'loans MY-09 2015']"
 GF6 no state-government figure for a Federal Territory,all,PASS,0
