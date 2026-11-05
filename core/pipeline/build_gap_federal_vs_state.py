@@ -89,27 +89,49 @@ def printings(code):
     return out
 
 
-def no_state_status(pr, state, y, unparsed, notes):
+# which unparsed tables could hold a grant: the top-revenue table for a class grant; for the named comparison also
+# the revenue-category table (Sabah and Sarawak print all federal grants as a category); a whole volume for any
+SPECS_FOR = {"class": ("hasil_penyumbang_utama",), "named": ("hasil_penyumbang_utama", "hasil_kategori")}
+
+
+def no_state_status(pr, state, y, kind, unparsed, extracted, notes):
     """Why there is no own-year state figure: printed only later, table not parsed, or not printed."""
     if pr:
         notes.append("printed only in a later volume (listed, not compared: later columns have been found "
                      "misaligned on the page)")
         return "printed_in_later_volume_only"
-    if (state, y) in unparsed:
-        notes.append(f"the state's top-revenue table {unparsed[(state, y)]} is registered as not parsed: the grant "
-                     "may be printed there")
+    whole = unparsed.get((state, y, "(whole volume)"))
+    if whole:
+        notes.append(f"the state's report {whole} is registered as not parsed (image-only): the grant may be "
+                     "printed there")
+        return "state_table_not_extracted"
+    hits = [unparsed[(state, y, sp)] for sp in SPECS_FOR[kind] if (state, y, sp) in unparsed]
+    # an unparsed table explains a missing figure only if no table of that kind WAS extracted for the year
+    if hits and not any((state, y, sp) in extracted for sp in SPECS_FOR[kind]):
+        notes.append(f"the state's table {hits[0]} is registered as not parsed: the grant may be printed there")
         return "state_table_not_extracted"
     return "state_not_printed"
 
 
 def unparsed_years():
-    """(state, fiscal_year) whose own top-revenue table could not be parsed (registered, with the reason)."""
+    """(state, fiscal_year, spec) -> the own-volume table that could not be parsed (registered, with the reason)."""
     out = {}
     for p in glob.glob(os.path.join(STATES_DIR, "*", "_unparsed_tables_*.csv")):
         with open(p, newline="", encoding="utf-8") as f:
             for r in csv.DictReader(f):
-                if r["spec_id"] in ("hasil_penyumbang_utama", "hasil_kategori"):
-                    out[(r["state"], r["fiscal_year"])] = f"{r['source_file'][:-4]} J{r['jadual']} p{r['pdf_page']}"
+                ref = f"{r['source_file'][:-4]}" + (f" J{r['jadual']} p{r['pdf_page']}" if r["jadual"] else "")
+                out.setdefault((r["state"], r["fiscal_year"], r["spec_id"]), ref)
+    return out
+
+
+def extracted_tables():
+    """(state, fiscal_year, spec) for which an own-year table of that kind was extracted."""
+    out = set()
+    for p in glob.glob(os.path.join(STATES_DIR, "*", "fact_state_revenue_*.csv")):
+        with open(p, newline="", encoding="utf-8") as f:
+            for r in csv.DictReader(f):
+                if r["column_role"] == "own_year":
+                    out.add((r["state"], r["fiscal_year"], r["spec_id"]))
     return out
 
 
@@ -121,7 +143,7 @@ def gap_notes():
 
 def main():
     w = Warehouse()
-    unparsed, notes_reg = unparsed_years(), gap_notes()
+    unparsed, notes_reg, extracted = unparsed_years(), gap_notes(), extracted_tables()
     places = sorted(c for c, g in w.geo.items() if g["geo_level"] == "state")
     gov = {}                                  # geo -> state government entity
     for c in w.entity_codes:
@@ -195,7 +217,7 @@ def main():
                         if obs:
                             agg_n += 1                # the state still printed it: counted, not compared
                     elif not obs:
-                        row["status"] = no_state_status(pr, state_name[g], y, unparsed, notes)
+                        row["status"] = no_state_status(pr, state_name[g], y, spec["kind"], unparsed, extracted, notes)
                     else:
                         row["status"] = "share"
                         row["state_share_of_federal"] = fmt(Decimal(obs["value"]) / fed_class, 4)
@@ -214,7 +236,7 @@ def main():
                     if y not in fed_years:
                         row["status"] = "federal_not_held"
                     elif not obs:
-                        row["status"] = no_state_status(pr, state_name[g], y, unparsed, notes)
+                        row["status"] = no_state_status(pr, state_name[g], y, spec["kind"], unparsed, extracted, notes)
                         if row["status"] == "state_not_printed":
                             notes.append("the state prints no line for all its federal grants in this year")
                     else:

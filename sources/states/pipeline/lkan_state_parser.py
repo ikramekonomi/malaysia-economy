@@ -1153,6 +1153,11 @@ def parse_rows(table: RawTable, cols: list[Column],
                     # only if the row also wraps BELOW; otherwise it continues the row above (Melaka CMD.53.2015
                     # J4.12 `Pemberian Caj Perkhidmatan Projek` / `Persekutuan` / `4 Pemberian Hitung Kepala`)
                     below = nxt + 1 < len(entries) and not entries[nxt + 1][2] and entries[nxt + 1][1].strip()
+                    # ...unless that line opens the NEXT row, whose figures line prints no name of its own (Melaka
+                    # CMD.37.2016 J4.12: `Bayaran Pendaftaran` / `5  10.30 ...` / `Pindah Milik Tanah`)
+                    nn = nxt + 2
+                    if below and nn < len(entries) and entries[nn][2] and _base(nn) == "":
+                        below = False
                     # ...and a line above a row that opens with a sub-item letter (`2. a. Simpanan Tetap`) is the
                     # GROUP heading of what follows (Sarawak CMD.43.2018 J4.6 `Pelaburan Kumpulan Wang Amanah`)
                     sub_item = re.match(r"\s*(?:\d{1,3}[.)]?\s+)?(?:[a-z]|[ivx]+)[.)]\s", entries[nxt][1])

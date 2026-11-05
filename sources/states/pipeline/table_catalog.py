@@ -340,8 +340,9 @@ LINE_CODES: list[tuple[str, str, str]] = [
     # (50%) bagi Jabatan di bawah Senarai Bersama`, Terengganu `Pemberian 50% Perbelanjaan Mengurus Jabatan Di
     # Bawah Senarai Bersama`, Selangor before 2019 `Pemberian Bagi Membiayai Perbelanjaan Mengurus Bagi
     # Jabatan-Jabatan Di Bawah Senarai Bersama`
-    ("hasil_", r"kos pengurusan jabatan negeri|^(pemberian\b.{0,80})?(perbelanjaan )?(pengurusan|mengurus)\b.{0,30}"
-     r"jabatan(-jabatan)? di bawah senarai bersama$", "revenue_item_federal_dept_grant"),
+    ("hasil_", r"kos pengurusan jabatan negeri|^(pemberian\b.{0,80}|membiayai\b.{0,40})?(perbelanjaan )?"
+     r"(pengurusan|mengurus)\b.{0,30}jabatan(-jabatan)? di bawah senarai bersama$",
+     "revenue_item_federal_dept_grant"),
     # all federal grants as one line in the revenue-by-category table (Sabah, Sarawak): what the state records
     # receiving from the federal government; Sarawak adds `dan Bayaran Balik` (and reimbursements)
     ("hasil_", r"^pemberian kerajaan persekutuan( dan bayaran balik)?$", "revenue_item_federal_grants_total"),

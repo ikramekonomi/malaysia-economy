@@ -27,3 +27,20 @@ While fixing 1-3 the label changes were re-checked against main: no conformed ro
 Negeri Sembilan CMD.54.2015 J4.19, the J61 ageing bucket); one regression found and fixed before commit (Sarawak
 CMD.43.2018 J4.6: a group heading attached to the row above made 91.23 `investment_trust_funds`). Page-blind
 checker: 2,307 tables ok (2,294 before), none worse. Not verified: Kelantan FY2022 (CMD.40.2023, image-only).
+
+## Second blind pass (on the fixes) and what was done
+
+29 new core observations, all right on the page (every Sarawak year's four categories add up to its printed
+Jumlah); every national-panel change right; 62 label groups judged: 50 better, 5 same, 7 worse; checker no table
+worse; `_states` rows, all four `meta/gap_note.csv` notes and the tool's transfer handling right.
+
+| # | Finding | Done |
+|---|---|---|
+| 1 | Kedah FY2017 Concurrent List 35.38 printed in its own volume, unconformed (label lost its first line) | the rule also reads `Membiayai Separuh Kos ... Senarai Bersama`; now a `share` row, the 2017 sum counts 2 states |
+| 2 | Melaka FY2015 capitation 15.25 still welded (`Projek Persekutuan Pemberian Hitung Kepala`) | a line below a row is that row's wrap only if the next row prints its own name; now conformed |
+| 3 | 21 `state_table_not_extracted` rows cited a category table that cannot print these grants; Johor 2014 has extracted top-revenue tables | a class grant counts only an unparsed top-revenue table (a named grant also the category table), and only when no table of that kind was extracted for the year |
+| 4 | Kelantan FY2022 (whole volume unparsed, image-only) said `state_not_printed` | now `state_table_not_extracted` citing the volume |
+| 5 | Perlis: two prose figures coded `devfund_payments` | a label ending in `RM` (an amount cut off) is prose, unless it is a printed JUMLAH; also removes a prose 21.03 that was Kelantan's FY2020 `devfund_payments` in the national panel (the table prints 198.48 under `Pembayaran`, unconformed) |
+| 6-9 | label-only residue (group headings on the row above in NS CMD.43.2021 J5, Selangor CMD.41.2019 J26 / CMD.52.2022 J29, Sabah CMD.48.2021 J71; Sarawak five-year tables' three-line label; Pahang CMD.39.2016 J4.39, Sabah CMD.59.2015 J4.31) | left: unconformed codes, labels only |
+
+After: checker 2,339 tables ok (2,307), BAD 199 (231), none worse; conformed rows lost only the three prose figures.
