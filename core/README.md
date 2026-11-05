@@ -1,14 +1,15 @@
 # core/: the conformed layer (L2) and the first gap view
 
 Phase 1 of `docs/DATA_MODEL.md` §15 (**state level, end to end**), and Phase 2 so far: health,
-education and services, and the **small areas** (districts, parliamentary and state seats). Everything here is derived
+education and services, the **small areas** (districts, parliamentary and state seats), national accounts,
+federal totals by publisher and the **national monthly series** (CPI, trade, money and credit). Everything here is derived
 from `sources/` (L1) and rebuilt by the scripts in `core/pipeline/`; never edit these CSVs by
 hand (golden rule 1). CI rebuilds them on every PR and fails if the committed files differ.
 
 ```
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 108 questions against the agent tools
+python3 qa/run_eval.py                            # 146 questions against the agent tools
 python3 qa/reproduce_curated.py                   # curated tables rebuilt from core, digit for digit
 ```
 
@@ -18,17 +19,18 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 |---|---|---|
 | `dim_geo.csv` | 1,006 | Malaysia, `_unallocated`, 16 states and FTs (ISO 3166-2:MY), 166 districts (boundary set `dosm_2020`), 222 parliamentary seats and 600 state seats (boundary set `ge15`) |
 | `geo_hierarchy.csv` | 1,020 | child → parent, one row per hierarchy (`administrative`: district → state; `electoral`: DUN → parlimen → state) |
-| `dim_period.csv` | 258 | years, months |
-| `dim_indicator.csv` | 55 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
-| `dim_breakdown.csv` | 178 | `_total`, `sex=…`, `coicop=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
-| `fact_observation.csv` | 126,157 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,978; DUN 18,000; district 11,013; parlimen 6,660; national 2,495) |
+| `dim_period.csv` | 618 | years, months (monthly from 1980-01 for national CPI) |
+| `dim_indicator.csv` | 63 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
+| `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
+| `fact_observation.csv` | 134,612 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
 income, Gini, household spending, absolute, hardcore and relative poverty (HIES); labour force,
-employed, unemployed, participation and unemployment rates (LFS); CPI by state and COICOP
-division; real GDP by state; and the 13 states' audited revenue, receipts, operating and
-development spending, total spending, surplus and debt.
+employed, unemployed, participation and unemployment rates (LFS); CPI for Malaysia and by state, by COICOP
+division; real GDP by state; the 13 states' audited revenue, receipts, operating and
+development spending, total spending, surplus and debt; and, for Malaysia only, monthly exports,
+imports and the trade balance, M1, M2, M3 and banking-system loans.
 
 Every observation carries its value in the base unit (persons, RM) as an exact decimal, the value
 and unit **as printed**, its edition and vintage, the sha256 of the file it came from, the L1 row,
@@ -124,6 +126,57 @@ spending FY2009–2023 is the comparative printed in the following year's volume
 ringgit). Phase 3 cites each year's own volume and page. MOF's COVID-19 Fund for 2018–2019 is not loaded
 because the own-volume edition for those years prints no such line.
 
+## National monthly series: CPI, trade, money and credit (Phase 2, 2026-11-05)
+
+`build_national_series` in `core/pipeline/build_core.py`, 8,432 rows, Malaysia only, monthly, as published:
+
+| indicator | L1 file (edition) | rows | months | printed unit |
+|---|---|---|---|---|
+| `cpi.index`, geo `MY`, `_total` and `coicop=01…13` | DOSM `cpi_headline` (`dosm:cpi_headline@2026-10-19`) | 6,390 | 1980-01 to 2026-09 | index 2010=100 |
+| `trade.exports`, `trade.imports`, `trade.balance` | DOSM `trade_headline`, series `abs` (`dosm:trade_headline@2026-10-28`) | 441 each | 1990-01 to 2026-09 | RM |
+| `money.m1`, `money.m2`, `money.m3` | BNM MSB 1.3 (`bnm:msb_1_3@2026-08-01`) | 161 each | 2013-01 to 2026-05 | RM million |
+| `credit.loans.banking_system`, `_total` and `bank_type=commercial / islamic / investment` | BNM MSB 1.18, column `tot_fin` (`bnm:msb_1_18@2026-08-01`) | 236 (59 months × 4) | 2021-07 to 2026-05 | RM million |
+
+* **National CPI is the same indicator as state CPI.** Checked before joining them: the same DOSM
+  product (`cpi_2d.csv` and `cpi_2d_state.csv`), the same base (the 2010 average of the national
+  headline index is 100.02; Selangor's is 99.98), the same 14 codes (`overall`, `01`…`13`), unit and
+  precision. In DOSM's national file divisions 08, 10, 11 and 13 start in 2003-01 and 12 in 2010-01; the
+  1,464 earlier cells are blank and have no row. The file is one series on 2010=100 from 1980; it does
+  not say how earlier bases were linked.
+* **New refusal.** With Malaysia's CPI in core, `derive('ratio')` would have divided a state's index by the
+  national one ("is Selangor dearer than Malaysia?"). `derive` now refuses `ratio`, `difference` and
+  `gap_pp` of an index across two places (rules DV2 and DV5, caveat CV8); `compare_geos` already refused.
+* **Trade.** Check C12 tests balance = exports − imports on all 441 months: exact to the ringgit. (In L1,
+  exports = domestic exports + re-exports, and the total = exports + imports, also hold on every row; those
+  columns are not loaded.) 49 months are deficits, kept negative as published. DOSM's `growth_mom` and
+  `growth_yoy` rows are its own transforms and are not loaded. Caveat CV19: DOSM says the latest two
+  months may be revised, and its 2026-11-04 release revised 175 earlier rows (`sources/dosm/README.md`).
+  Core holds the current vintage only, like every DOSM series; the replaced one is logged in
+  `sources/dosm/data/_vintage_log.csv` and recoverable with `vintage_get.py`.
+* **Money.** In MSB 1.3, M1 = currency in circulation + demand deposits, M2 = M1 + narrow quasi-money,
+  M3 = M2 + deposits placed with other banking institutions, on every row (to 10⁻⁹ RM million; BNM's
+  validator V4 and rechecked here). The table serves monthly rows only. Whether a level is the month's end
+  or its average is not stated in the file, and is not claimed.
+* **Loans.** MSB 1.18's `Jumlah/Total` row equals commercial + Islamic + investment banks every month
+  (check C13). It is a level outstanding, not lending in the month: it moves by −RM3.2 bn to +RM24.2 bn a
+  month while MSB 1.14 records RM145–224 bn disbursed a month. It is **not** the same aggregate as loans
+  and advances in BNM's statement of assets (MSB 1.7): that is RM56.2–94.1 bn lower every month, with a
+  step from RM59.0 bn to RM82.6 bn in 2022-07. Kept as published, not reconciled (caveat CV20).
+* **Check C14**: the sha256 of each file read equals the current row of its vintage log.
+* **Not loaded, and why.** The **OPR** (MSB 2.3): one value per year (the row served twice for 2004–2023), with
+  no month or day, so the file does not say whether it is the year-end rate or an average; its interbank
+  columns print 0.00 for 2004–2005; and the API serves nothing after 2024. The **average lending rate**
+  (MSB 2.1): the file carries two, `cb_alr_out_loa` (a simple mean whose divisor changes with the number
+  of banks) and `cb_wavg_alr_out_loa` (weighted, from 2005), which cross (2013: 4.65 vs 5.43; 2023: 5.32
+  vs 5.00); the file has no labels, so which one is the ALR, what `out_loa` and the `ib_` prefix denote,
+  cannot be stated from the data. **Loans and advances in MSB 1.7**: its `db_`/`fb_` column prefixes are
+  not decodable from the file. To load any of these, first bring BNM's field labels
+  (`api.bnm.gov.my/api/specification/tag`) into L1.
+* No curated table holds these series, so `qa/reproduce_curated.py` is unchanged (230 of 230).
+* Evals: 23 questions (Q124–Q146): a value from L1 for every new series, growth of national CPI and M3,
+  and traps (Selangor's CPI over Malaysia's, Kuala Lumpur's minus Sabah's, growth across two places,
+  a month of exports over a year of GDP, reversed months, a CPI division before DOSM prints it, the OPR).
+
 ## gap_need_vs_money (state level)
 
 **Question:** does money follow need? The method was declared before results were seen and is in
@@ -156,7 +209,7 @@ units or price bases, a median divided by population, growth across two places. 
 returns **bands**, not ranks (rule BAND1: a new band starts after a step of more than 1 percentage
 point, or 5% for other units; declared before results were seen), with the national value.
 
-`qa/eval_questions.csv` (108 questions, made by `qa/make_eval_questions.py` from L1 directly)
+`qa/eval_questions.csv` (146 questions, made by `qa/make_eval_questions.py` from L1 directly)
 includes traps: incomparable pairs, small-area rankings, missing documents, and document text that
 must come back marked as data. `qa/run_eval.py` runs them in CI.
 

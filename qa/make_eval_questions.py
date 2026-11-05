@@ -442,6 +442,82 @@ q("5", "Does PKKP's 2020 revenue say its PDF is not archived (decision D24)?", "
 q("5", "What was Pahang's total public debt at the end of 2020 (JUMLAH HUTANG AWAM, not the federal-loan subtotal)?",
   "get_series", series("state_gov.debt.total", "MY-06", "2020"), "value", s(acct("Pahang", "2020", "debt_total")))
 
+# Q. Phase 2: national monthly series (DOSM CPI and trade; BNM money and credit), from L1
+def cpi_my(date, division="overall"):
+    return l1x("cpi_headline", lambda r: r["date"].startswith(date) and r["division"] == division, "index")
+
+
+def trade(date, col):
+    return l1x("trade_headline", lambda r: r["series"] == "abs" and r["date"].startswith(date), col)
+
+
+def msb(table, year, month, col, **f):
+    with open(os.path.join(REPO, "sources", "bnm", "data", f"{table}.csv"), newline="") as fh:
+        for r in csv.DictReader(fh):
+            if r["year_dt"] == year and r["month_dt"] == month and all(r[k] == v for k, v in f.items()):
+                return Decimal(r[col]) * 1000000
+    raise KeyError((table, year, month, col))
+
+
+q("3", "What was Malaysia's CPI (2010=100) in September 2026?", "get_series", series("cpi.index", "MY", "2026-09"),
+  "value", s(cpi_my("2026-09")))
+q("3", "What was Malaysia's food and non-alcoholic beverages CPI (COICOP 01) in September 2026?", "get_series",
+  {**series("cpi.index", "MY", "2026-09"), "breakdown": "coicop=01"}, "value", s(cpi_my("2026-09", "01")))
+q("3", "What was Malaysia's CPI in January 1980 (the start of DOSM's national series)?", "get_series",
+  series("cpi.index", "MY", "1980-01"), "value", s(cpi_my("1980-01")))
+a, b = cpi_my("2026-09"), cpi_my("2025-09")
+q("3", "How much did prices rise in Malaysia from September 2025 to September 2026?", "derive_chain",
+  {"operation": "growth", "a": series("cpi.index", "MY", "2026-09"), "b": series("cpi.index", "MY", "2025-09")},
+  "value", s((a / b - 1).quantize(Decimal("0.000001"))), "0.000001")
+q("3", "Is Malaysia's CPI for COICOP 12 held for 2005 (DOSM prints that division from 2010 only)?", "get_series",
+  {**series("cpi.index", "MY", "2005-06"), "breakdown": "coicop=12"}, "not_held", kind="trap_missing")
+q("3", "Does the national CPI warn that its level does not compare places?", "get_series",
+  series("cpi.index", "MY", "2026-09"), "caveat", "CV8")
+q("4", "What were Malaysia's exports of goods in September 2026?", "get_series", series("trade.exports", "MY", "2026-09"),
+  "value", s(trade("2026-09", "exports")))
+q("4", "What were Malaysia's imports of goods in September 2026?", "get_series", series("trade.imports", "MY", "2026-09"),
+  "value", s(trade("2026-09", "imports")))
+q("4", "What was Malaysia's trade balance in April 1991 (a deficit, sign as published)?", "get_series",
+  series("trade.balance", "MY", "1991-04"), "value", s(trade("1991-04", "balance")))
+q("4", "Does a trade figure warn that recent months are revised?", "get_series",
+  series("trade.exports", "MY", "2026-09"), "caveat", "CV19")
+q("8", "What was M1 in May 2026?", "get_series", series("money.m1", "MY", "2026-05"), "value",
+  s(msb("msb_1_3", "2026", "5", "m_one_tot")))
+q("8", "What was M2 in December 2019?", "get_series", series("money.m2", "MY", "2019-12"), "value",
+  s(msb("msb_1_3", "2019", "12", "m_two_tot")))
+q("8", "What was broad money M3 in January 2013?", "get_series", series("money.m3", "MY", "2013-01"), "value",
+  s(msb("msb_1_3", "2013", "1", "m_thr_tot")))
+a, b = msb("msb_1_3", "2026", "5", "m_thr_tot"), msb("msb_1_3", "2025", "5", "m_thr_tot")
+q("8", "How fast did M3 grow from May 2025 to May 2026?", "derive_chain",
+  {"operation": "growth", "a": series("money.m3", "MY", "2026-05"), "b": series("money.m3", "MY", "2025-05")},
+  "value", s((a / b - 1).quantize(Decimal("0.000001"))), "0.000001")
+q("8", "What were total banking-system loans/financing in May 2026?", "get_series",
+  series("credit.loans.banking_system", "MY", "2026-05"), "value",
+  s(msb("msb_1_18", "2026", "5", "tot_fin", type="Jumlah/Total")))
+q("8", "What were Islamic banks' loans/financing in December 2025?", "get_series",
+  {**series("credit.loans.banking_system", "MY", "2025-12"), "breakdown": "bank_type=islamic"}, "value",
+  s(msb("msb_1_18", "2025", "12", "tot_fin", type="Bank-bank Islam / Islamic Banks")))
+q("8", "Does the loans figure warn that it is not BNM's balance-sheet loans and advances?", "get_series",
+  series("credit.loans.banking_system", "MY", "2026-05"), "caveat", "CV20")
+q("8", "What was the overnight policy rate in 2024 (BNM MSB 2.3 not loaded)?", "find_indicator",
+  {"text": "overnight policy rate"}, "not_held", kind="trap_missing")
+# traps: a CPI level is not a price level, so it compares no places; a month is not a year
+q("3", "Is Selangor dearer than Malaysia (Selangor's CPI divided by Malaysia's)?", "derive_chain",
+  {"operation": "ratio", "a": series("cpi.index", "MY-10", "2026-09"), "b": series("cpi.index", "MY", "2026-09")},
+  "refused", "do not compare places", kind="trap_incomparable")
+q("3", "By how many index points is Kuala Lumpur's CPI above Sabah's?", "derive_chain",
+  {"operation": "difference", "a": series("cpi.index", "MY-14", "2026-09"), "b": series("cpi.index", "MY-12", "2026-09")},
+  "refused", "do not compare places", kind="trap_incomparable")
+q("3", "Growth from Malaysia's CPI in 2025-09 to Selangor's in 2026-09?", "derive_chain",
+  {"operation": "growth", "a": series("cpi.index", "MY-10", "2026-09"), "b": series("cpi.index", "MY", "2025-09")},
+  "refused", "same indicator, place", kind="trap_incomparable")
+q("4", "Exports as a share of GDP, using December 2025 exports and 2025 GDP?", "derive_chain",
+  {"operation": "ratio", "a": series("trade.exports", "MY", "2025-12"), "b": series("gdp.nominal", "MY", "2025")},
+  "refused", "different periods", kind="trap_incomparable")
+q("8", "M3 growth from 2026-05 back to 2025-05, with the months given the wrong way round?", "derive_chain",
+  {"operation": "growth", "a": series("money.m3", "MY", "2025-05"), "b": series("money.m3", "MY", "2026-05")},
+  "refused", "earlier period", kind="trap_incomparable")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()
