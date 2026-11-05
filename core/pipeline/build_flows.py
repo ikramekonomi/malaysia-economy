@@ -113,21 +113,23 @@ def main():
     # Only the activities a rule names are loaded: most of the programme is not money to a government.
     import re
     multi, b11_leaves, b11_years = [], defaultdict(list), defaultdict(set)
+    name_scopes = {(n["maksud_code"], n["program_code"]) for n in name_rules}
     b11 = []
     for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_opex_detail.csv"))):
         rel = os.path.relpath(path, REPO)
         for i, r in enumerate(rows(path), start=2):
-            if r["maksud_code"] != "B.11" or r["program_code"] != "020000" or not r["source_file"].startswith(r["year"]):
+            if (r["maksud_code"], r["program_code"]) not in name_scopes or not r["source_file"].startswith(r["year"]):
                 continue
             y = r["year"]
             if y in SKIP_YEARS:
                 continue
             if r["row_type"] == "object_aktiviti":
-                b11_leaves[(y, r["aktiviti_code"])].append((i, r))
+                b11_leaves[(y, r["maksud_code"], r["aktiviti_code"])].append((i, r))
                 continue
             if r["row_type"] != "jumlah_aktiviti":
                 continue
-            hit = [n for n in name_rules if n["maksud_code"] == "B.11" and re.search(n["name_pattern"], r["aktiviti_name_bm"], re.I)]
+            hit = [n for n in name_rules if (n["maksud_code"], n["program_code"]) == (r["maksud_code"], r["program_code"])
+                   and re.search(n["name_pattern"], r["aktiviti_name_bm"], re.I)]
             if len(hit) > 1:
                 multi.append(f"FY{y} {r['aktiviti_code']} {r['aktiviti_name_bm']!r} matches {len(hit)} rules")
                 continue
@@ -140,24 +142,24 @@ def main():
     seen, b11_bad, other_lines = defaultdict(list), [], []
     resolved = []
     for rule, jr, rel, ji in b11:
-        lines = b11_leaves[(jr["year"], jr["aktiviti_code"])]
+        lines = b11_leaves[(jr["year"], jr["maksud_code"], jr["aktiviti_code"])]
         grant = [(i, r) for i, r in lines if r["objek_code"] == "40000"]
         if len(grant) != 1:
-            b11_bad.append(f"FY{jr['year']} {jr['aktiviti_code']}: {len(grant)} 40000 lines")
+            b11_bad.append(f"FY{jr['year']} {jr['maksud_code']} {jr['aktiviti_code']}: {len(grant)} 40000 lines")
             continue
         rest = [(r["objek_code"], r["sebenar_rm"]) for i, r in lines if r["objek_code"] != "40000"]
         if rest:
-            other_lines.append(f"FY{jr['year']} {jr['aktiviti_code']} {rest} (not paid to the recipient; not in the flow)")
+            other_lines.append(f"FY{jr['year']} {jr['maksud_code']} {jr['aktiviti_code']} {rest} (not paid to the recipient; not in the flow)")
         resolved.append((rule, grant[0][1], rel, grant[0][0]))
     for rule, r, rel, i in resolved:
         seen[(rule["name_pattern"], r["year"])].append(r["aktiviti_code"])
         to = rule["to_entity_id"]
-        key = "|".join([federal, to, r["year"], "B.11", r["aktiviti_code"], r["source_file"]])
+        key = "|".join([federal, to, r["year"], r["maksud_code"], r["aktiviti_code"], r["source_file"]])
         out.append(dict(
             flow_id="f" + hashlib.sha1(key.encode()).hexdigest()[:12], from_entity_id=federal, to_entity_id=to,
             flow_type="grant", period_code=r["year"], amount=str(Decimal(r["sebenar_rm"])),
             amount_printed=r["sebenar_rm"], unit_printed="RM", economic_class=r.get("objek_class_bm") or "",
-            purpose=f"B.11 {r['aktiviti_code']}: {rule['purpose_en']}; printed: {r['aktiviti_name_bm'].strip()}",
+            purpose=f"{r['maksud_code']} {r['aktiviti_code']}: {rule['purpose_en']}; printed: {r['aktiviti_name_bm'].strip()}",
             geo_code=rule["geo_code"] or "_unallocated", geo_method=rule["geo_method"],
             geo_confidence="high" if rule["geo_method"] == "stated" else "none", is_leaf="true",
             basis="audited", status="final", edition_id=f"pkkp:{r['source_file']}",
@@ -200,19 +202,29 @@ def main():
                for (y, a), v in sorted(jumlah.items()) if len(leaves[(y, a)]) != 1 or leaves[(y, a)][0] != v]
     add("F7 each activity prints one object line, equal to its JUMLAH (so the JUMLAH is the leaf)", "fact_money_flow",
         "PASS" if not notleaf else "FAIL", f"{len(jumlah)} activities" + (f"; {notleaf}" if notleaf else ", all single-leaf"))
-    add("F8 a B.11 name rule matches at most one activity a year, and an activity at most one rule", "fact_money_flow",
+    add("F8 a name rule (B.11, B.06) matches at most one activity a year, and an activity at most one rule", "fact_money_flow",
         "PASS" if not multi else "FAIL", f"{len(resolved)} B.11 flows" + (f"; {multi}" if multi else ""))
-    add("F9 each B.11 grant prints exactly one 40000 (Pemberian dan Kenaan Bayaran Tetap) line, the flow's amount",
+    add("F9 each name-matched grant prints exactly one 40000 (Pemberian dan Kenaan Bayaran Tetap) line, the flow's amount",
         "fact_money_flow", "PASS" if not b11_bad else "FAIL",
         f"{len(resolved)} activities" + (f"; {b11_bad}" if b11_bad else "")
         + (f"; other object lines left out: {other_lines}" if other_lines else ""))
     years_all = sorted({f["period_code"] for f in out})
-    gaps = {n["purpose_en"][:50]: [y for y in years_all if y not in b11_years[n["name_pattern"]]] for n in name_rules}
-    add("F10 years in which a B.11 grant is not printed (INFO: grants start, stop or are renamed)", "fact_money_flow",
-        "INFO", "; ".join(f"{k}: {v}" for k, v in gaps.items() if v) or "every grant printed every year")
-    add("F11 B.11 activities naming a state or territory that are NOT loaded (declared)", "fact_money_flow", "INFO",
+    by_pat = defaultdict(set)
+    for n in name_rules:
+        by_pat[n["name_pattern"]] |= b11_years[n["name_pattern"]]
+    label = {n["name_pattern"]: n["purpose_en"].split(" (")[0] for n in name_rules}
+    gaps = {label[p]: [y for y in years_all if y not in ys] for p, ys in by_pat.items()}
+    add("F10 years in which a name-matched grant is not found under its rules' votes (INFO: it may be printed under "
+        "another vote, see F11)", "fact_money_flow",
+        "INFO", "; ".join(f"{k}: {v}" for k, v in gaps.items() if v) or "every grant found every year")
+    add("F11 grants to governments seen in L1 and NOT loaded (declared)", "fact_money_flow", "INFO",
         "interest subsidy on Syarikat Kemajuan Perumahan Borneo (Sabah) loans (paid on a company's loans, not to a "
-        "government); the World Bank Group / IsDB offices in Kuala Lumpur (not a state)")
+        "government); the World Bank Group / IsDB offices in Kuala Lumpur (not a state); FY2018: the Federal "
+        "Territories' grants are not found in B.11 or B.06 - B.32 040400 'Penyelenggaraan dan Kemudahan Awam' prints "
+        "RM65,000,000.00 that year only, about their combined size, but its name does not say so (not loaded until a "
+        "page or budget book proves it); grants by name to Perbadanan Putrajaya, Perbadanan Labuan and Dewan Bandaraya "
+        "Kuala Lumpur (B.32, later B.06) and B.43's local-government lines: not loaded yet (they need those bodies as "
+        "entities)")
     add("F6 years not loaded (declared)", "fact_money_flow", "INFO",
         "; ".join(f"FY{y}: {why}" for y, why in SKIP_YEARS.items()))
 

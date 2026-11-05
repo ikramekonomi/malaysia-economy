@@ -380,9 +380,12 @@ class Tools:
                      "governments under supply vote B.11 programme 020000 (petroleum duty compensation and the "
                      "transfer-money refund to Sabah and Sarawak jointly, the Concurrent List grants and state road "
                      "slope maintenance to the state governments, street lighting to the local authorities, the "
-                     "special and road grants to the Federal Territories' administrations). NOT loaded: development "
-                     "grants and federal projects in a state, and money paid by ministries to state agencies. So the "
-                     "flows here are a floor, not what a state received.")
+                     "special and road grants to the Federal Territories' administrations, under B.06 from FY2024). "
+                     "NOT loaded: the Federal Territories' grants in FY2018 (not found under B.11 or B.06), the "
+                     "payments by name to Perbadanan Putrajaya, Perbadanan Labuan and Dewan Bandaraya Kuala Lumpur "
+                     "(B.32, later B.06) and the housing and local government ministry's local-government lines, "
+                     "development grants and federal projects in a state, and money paid by ministries to state "
+                     "agencies. So the flows here are a floor, not what a place received.")
 
     def get_flows(self, to=None, frm=None, start=None, end=None):
         """Money the payer's accounts show moving to a recipient (fact_money_flow). to / frm: a state (MY-12), a
@@ -463,11 +466,17 @@ class Tools:
         out = {"held": True, "flows": [cite(f) for f in rs], "coverage": self.FLOW_COVERAGE,
                "years_not_held": missing, "release_id": self.w.release_id,
                "caveats": [{"id": c, "text": self.w.caveats[c]["text_en"]} for c in used]}
+        groups = {e for e in (to_ids or set()) if self.w.entity.get(e, {}).get("entity_type") == "group"}
+        if groups and rs:
+            out["answer"] = ("these are paid to a class or to several bodies together: the federal accounts do not say "
+                             "how much each member received, so no amount here is one body's money")
         if ft:
             out["answer"] = (f"{ft} is a Federal Territory: it has no state government, so no grant is paid to it by "
-                             "name; the grants under not_split_by_state are paid to the Federal Territories' "
-                             "administrations or to all local authorities as a class, not divided by territory: do not "
-                             "add them up as what this territory received")
+                             "name here; the grants under not_split_by_state are paid to the Federal Territories' "
+                             "administrations as a class, not divided by territory (the local-authority grants are "
+                             "not counted for the territories: nothing in the accounts shows them receiving them), and "
+                             "the payments by name to its administration are not loaded yet (see coverage): do not add "
+                             "them up as what this territory received")
             out["not_split_by_state"] = {"note": "grants to a class this territory belongs to; its share is not in the "
                                                  "federal accounts",
                                          "flows": [cite(f) for f in sorted(cls, key=lambda f: (f["period_code"], f["purpose"]))]}
@@ -479,7 +488,8 @@ class Tools:
                                "two together), which the federal accounts do not divide, and in money not loaded yet "
                                "(see coverage): do not add up 'flows' as what the state received")
             out["not_split_by_state"] = {"note": "grants paid to the state governments or the local authorities as a "
-                                                 "class in these years; this state's share is not in the federal accounts",
+                                                 "class, or (Sabah and Sarawak) to the two states together, in these "
+                                                 "years; this state's share is not in the federal accounts",
                                          "flows": [cite(f) for f in sorted(cls, key=lambda f: (f["period_code"], f["purpose"]))]}
         return out
 

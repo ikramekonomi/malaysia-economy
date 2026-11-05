@@ -705,6 +705,24 @@ q("5", "Does Sarawak's answer include the grants paid to Sabah and Sarawak toget
 q("5", "Federal special grant to the Federal Territories in 2023?", "get_flows",
   {"to": "federal_territories", "start": "2023", "end": "2023"}, "flow_purpose_value:special grant to the Federal Territories",
   s(b11(2023, r"pemberian khas kepada wilayah persekutuan")))
+def vote_grant(year, maksud, pattern):
+    import re
+    hits = [r for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", str(year), "fact_opex_detail.csv")))
+            if r["maksud_code"] == maksud and r["row_type"] == "object_aktiviti" and r["objek_code"] == "40000"
+            and re.search(pattern, r["aktiviti_name_bm"], re.I) and r["source_file"].startswith(str(year))]
+    assert len(hits) == 1, (year, maksud, pattern, len(hits))
+    return Decimal(hits[0]["sebenar_rm"])
+
+
+q("5", "Federal special grant to the Federal Territories in 2024 (moved from B.11 to the Prime Minister's Department)?",
+  "get_flows", {"to": "federal_territories", "start": "2024", "end": "2024"},
+  "flow_purpose_value:special grant to the Federal Territories",
+  s(vote_grant(2024, "B.06", r"pemberian khas kepada wilayah persekutuan")))
+q("5", "Is Putrajaya shown the local-authority grants paid to the states' local authorities?", "get_flows",
+  {"to": "MY-16", "start": "2024", "end": "2024"}, "class_excludes", "Pihak Berkuasa Tempatan", kind="trap_placement")
+q("5", "Does a group answer say no amount is one body's money?", "get_flows",
+  {"to": "state_governments", "start": "2024", "end": "2024"}, "field_contains:answer", "no amount here is one body",
+  kind="trap_placement")
 q("5", "Sabah's federal grants 2014-2016: does the answer say FY2015 is not held?", "get_flows",
   {"to": "MY-12", "start": "2014", "end": "2016"}, "field_contains:years_not_held", "2015", kind="trap_missing")
 q("5", "Does Sabah's answer warn not to add up its named grants as what it received?", "get_flows",
