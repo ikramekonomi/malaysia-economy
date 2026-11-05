@@ -641,6 +641,9 @@ class Tools:
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:
+                for k, v in list(r.items()):
+                    if k.endswith("_rm") and v == "":
+                        r[k] = None  # not applicable (a state's unplaced money) or not held (FY2009 grants)
                 # the 60% guard (DATA_MODEL 10): a state's amounts are withheld while the year's placed_share is low
                 if r["geo_code"].startswith("MY-") and r["publishable"] != "true":
                     for k in ("projects_stated_rm", "projects_parsed_rm", "grants_by_name_rm", "placed_rm"):

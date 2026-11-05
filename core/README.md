@@ -349,10 +349,11 @@ track A; D29). The method, declared and committed before any result by state, is
 * **Projects** (`core/fact_placement.csv`, one row per PKKP development project leaf, its actual spending): placed
   in a state when the printed name names exactly one state or Federal Territory (`stated_state`, 2,205 rows), or
   no state but districts of one state (`parsed_district`, 263; DOSM 2020 districts, whole words, common-word names
-  excluded), or a town, region or island listed with its proof in `meta/place_gazetteer.csv` (`parsed_place`, 75:
-  Iskandar, Cyberjaya, Ipoh, IADA Pekan, ...). A name naming two or more places is `multiple_states` (104); one
+  excluded; a state named only inside a district's name, as in Kuala Terengganu, counts as that district), or a
+  town, region, island or facility listed with its proof in `meta/place_gazetteer.csv` (`parsed_place`, 127:
+  Iskandar Malaysia, Cyberjaya, Ipoh, IADA Pekan, IADA Kalaka Saribas, Angkasapuri, ...). A name naming two or more places is `multiple_states` (104); one
   naming only the Peninsula is `peninsula` (136, RM4.24b: PKKP's Peninsula / Sabah / Sarawak split lines, of which
-  only the Sabah and Sarawak ones can be placed); 11,329 name none. None of these is placed. The words matched are
+  only the Sabah and Sarawak ones can be placed); 11,277 name none. None of these is placed. The words matched are
   kept (`geo_evidence`); `pdf_page` is the page printing the name, the amounts sit on the facing page.
 * **Grants by name** to a state government or territory administration (`fact_money_flow`, `stated`); class
   grants are never split (D27).
@@ -367,7 +368,7 @@ track A; D29). The method, declared and committed before any result by state, is
 `placed_share` is under 4% in every year (highest 3.9%, FY2010), so the amounts by state are withheld by
 `get_gap_view('gap_federal_placement', geo, year)` under the 60% guard; the national row and what could not be
 placed are returned (the CSV keeps them for verification, marked `publishable=false`). Sabah and Sarawak hold
-about 54% of the placed project money, partly because the accounts print their lines separately while the
+about 54% of the placed project money over the years held (42-65% by year), partly because the accounts print their lines separately while the
 Peninsula's cannot be placed (CV27). Some placed lines are loans, equity or regional agencies. Most federal money (salaries, subsidies, cash transfers, and most projects, whose names name
 no place) has no location in the federal accounts. Placing it needs sources by area that are not held (KKM/KPM
 by state, STR/JKM recipients by state). A place in a project name is where the project is, not who benefits
@@ -413,9 +414,10 @@ the header of `core/pipeline/build_gap_need_vs_money.py`. In short:
 * **State-government money:** audited spending (printed total, or opex + devex where the volume
   prints no total, marked `derived`), non-revenue receipts (mostly federal grants, as recorded by
   the state), both per person.
-* **Federal money placed in each state is not published yet.** Today only what state governments
-  record receiving can be placed: 0.3–1.5% of federal spending, far below the 60% guard. Each row
-  says so. Placing operating spending (schools, clinics, cash transfers) needs the registry series
+* **Federal money placed in each state is not published yet.** This view's federal column counts
+  only what state governments record receiving (0.3–1.5% of federal spending); `gap_federal_placement`
+  places federal money from the federal accounts themselves (0.6–3.9%). Both are far below the 60%
+  guard, and each row says so. Placing operating spending (schools, clinics, cash transfers) needs the registry series
   `social_transfers_by_state`, `health_facts` and `education_stats` (Phase 3).
 * **Under check:** a state-year with an open FAIL on a headline identity (`qa/known_fails.csv`) is
   published with `under_check` naming the check: Pahang 2016/2017/2021/2022, Johor 2018/2019,

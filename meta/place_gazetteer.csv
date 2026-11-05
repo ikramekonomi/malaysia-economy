@@ -1,5 +1,7 @@
 phrase,geo_code,kind,proof
-iskandar,MY-01,region,"Iskandar Malaysia (Wilayah Pembangunan Iskandar) lies wholly in Johor (Iskandar Regional Development Authority Act 2007, s.2 and First Schedule: districts of Johor Bahru, Kulai, Pontian)"
+wilayah pembangunan iskandar,MY-01,region,"Iskandar Malaysia (Wilayah Pembangunan Iskandar) lies wholly in Johor (Iskandar Regional Development Authority Act 2007, s.2 and First Schedule: districts of Johor Bahru, Kulai, Pontian); matched only as this phrase: 'Iskandar' alone also names people and places elsewhere (Jambatan Sultan Iskandar, Perak)"
+iskandar malaysia,MY-01,region,"Iskandar Malaysia (Wilayah Pembangunan Iskandar) lies wholly in Johor (Iskandar Regional Development Authority Act 2007, s.2 and First Schedule: districts of Johor Bahru, Kulai, Pontian); matched only as this phrase: 'Iskandar' alone also names people and places elsewhere (Jambatan Sultan Iskandar, Perak)"
+iskandar puteri,MY-01,region,"Iskandar Malaysia (Wilayah Pembangunan Iskandar) lies wholly in Johor (Iskandar Regional Development Authority Act 2007, s.2 and First Schedule: districts of Johor Bahru, Kulai, Pontian); matched only as this phrase: 'Iskandar' alone also names people and places elsewhere (Jambatan Sultan Iskandar, Perak)"
 nusajaya,MY-01,town,"Nusajaya (now Bandar Iskandar Puteri), Johor Bahru district, Johor"
 cyberjaya,MY-10,town,"Cyberjaya, Sepang district, Selangor"
 shah alam,MY-10,town,"Shah Alam, Petaling district, Selangor (state capital)"
@@ -17,6 +19,8 @@ iada pekan,MY-06,region,"the IADA Pekan integrated agricultural development area
 pulau layang-layang,MY-12,island,"Pulau Layang-layang (Swallow Reef), administered as part of Sabah"
 sipadan,MY-12,island,"Pulau Sipadan, Semporna district, Sabah"
 jalan duta,MY-14,street,"Jalan Duta, Kuala Lumpur"
-p.pinang,MY-07,alias,"abbreviation of Pulau Pinang"
-p. pinang,MY-07,alias,"abbreviation of Pulau Pinang"
-kl,MY-14,alias,"abbreviation of Kuala Lumpur"
+p.pinang,MY-07,alias,abbreviation of Pulau Pinang
+p. pinang,MY-07,alias,abbreviation of Pulau Pinang
+kl,MY-14,alias,abbreviation of Kuala Lumpur
+kalaka saribas,MY-13,region,"the IADA Kalaka Saribas integrated agricultural development area, Betong division, Sarawak ('betong' alone is not used)"
+angkasapuri,MY-14,facility,"Angkasapuri, the RTM broadcasting complex, Jalan Pantai Dalam, Kuala Lumpur"

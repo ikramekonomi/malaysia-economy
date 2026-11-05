@@ -21,6 +21,7 @@ while scoping: 3-15%):
      compass phrases are not used (STOP_DISTRICTS, declared below), nor a district inside a regional name
      (Lembah Klang). [Amended 2026-11-05: "exactly one district" read "districts of one state", as the code
      always did; verifier finding 7.]
+  A state named only inside a district's name (Kuala Terengganu, Johor Bahru) counts as that district.
   2a. `parsed_place` [added 2026-11-05 after the blind verifier, finding 1-4]: no state named, but a town,
      region, island or street, or an abbreviation of a state, listed with its proof in meta/place_gazetteer.csv
      (Iskandar, Cyberjaya, Ipoh, Kangar, P.Pinang, ...). Place names that only describe where something is NOT
@@ -114,14 +115,17 @@ def matcher(w):
             if n not in STOP_DISTRICTS:
                 out.append((g["parent_geo_code"], n, "district"))
     for r in rows(os.path.join(META, "place_gazetteer.csv")):
-        out.append((r["geo_code"], norm(r["phrase"]), "state" if r["kind"] == "alias" else "place"))
+        # the phrase is cleaned like a project name (hyphens and other punctuation become spaces), or it never matches
+        ph = re.sub(r"\s+", " ", re.sub(r"[^\w.]+", " ", norm(r["phrase"]))).strip()
+        out.append((r["geo_code"], ph, "state" if r["kind"] == "alias" else "place"))
     return sorted(out, key=lambda t: -len(t[1]))
 
 
 def place(name, pats):
     """-> (geo_code, geo_method, evidence). A phrase is matched as whole words; a longer phrase consumes its
     words so a district inside a state's name (Kuala Terengganu) or a state inside a district's (Hilir Perak) is
-    read once, as the longer phrase."""
+    read once, as the longer phrase: a state named only inside a district's name (Kuala Terengganu, Johor Bahru)
+    is therefore `parsed_district`, same state."""
     text = " " + re.sub(r"[^\w.]+", " ", norm(name)) + " "
     for p in EXCLUDE_PHRASES:
         text = text.replace(f" {p} ", " ")
@@ -244,6 +248,7 @@ def main():
             if g in states:
                 st, pa, gr = by[g]["stated_state"], by[g]["parsed_district"] + by[g]["parsed_place"], grants[(g, y)]
                 multi = pen = none = ni = Decimal(0)
+                multi = pen = none = ni = None  # not applicable to a state: unplaced money has no state
             elif g == "_unallocated":
                 st = pa = gr = Decimal(0)
                 multi, pen, none, ni = by[g]["multiple_states"], by[g]["peninsula"], by[g]["none"], nonitem
@@ -256,9 +261,9 @@ def main():
             yr_rows.append(dict(geo_code=g, name=w.geo.get(g, {}).get("name_bm", "") if g != "_unallocated" else
                                 "not placed", year=y, projects_stated_rm=fmt(st), projects_parsed_rm=fmt(pa),
                                 grants_by_name_rm=fmt(gr) if y in flow_years else "", placed_rm=fmt(st + pa + gr),
-                                projects_multiple_states_rm=fmt(multi), projects_peninsula_rm=fmt(pen),
-                                projects_none_rm=fmt(none),
-                                not_itemised_rm=fmt(ni), federal_total_rm=fmt(total) if total else "",
+                                projects_multiple_states_rm=fmt(multi) or "", projects_peninsula_rm=fmt(pen) or "",
+                                projects_none_rm=fmt(none) or "",
+                                not_itemised_rm=fmt(ni) or "", federal_total_rm=fmt(total) if total else "",
                                 devex_projects_total_rm=fmt(leaf_total[y]),
                                 placed_share=fmt(share, 4) if share is not None else "", publishable=str(pub).lower(),
                                 note=note, caveats="CV27", federal_source_obs_ids=ids, release_id=w.release_id))
