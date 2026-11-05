@@ -119,7 +119,9 @@ SPECS: list[tuple[str, str, str, str]] = [
      r"(kutipan |terimaan )?hasil( sebenar)?( kerajaan negeri)?"
      r"( pada tahun \d{4})? berbanding anggaran"),
     ("hasil_kategori", "revenue", "akaun_hasil_disatukan",
-     _PRE + r"(kutipan|terimaan) hasil( sebenar)?( kerajaan(?: negeri)?)? "
+     # Sarawak prints `KUTIPAN / PUNGUTAN HASIL NEGERI PADA TAHUN ...` (verifier 2026-11-05: its federal-grants
+     # head was missed in 7 volumes because `Hasil Negeri` without `Kerajaan` did not match)
+     _PRE + r"(kutipan|terimaan|pungutan) hasil( sebenar)?( kerajaan)?( negeri)? "
      r"(berbanding|" + _PER + r")"),
     ("hasil_penyumbang_utama", "revenue", "akaun_hasil_disatukan",
      r"penyumbang utama hasil|" + _PRE + r"hasil utama kerajaan negeri"),
@@ -145,7 +147,10 @@ SECTIONED_SPECS = {"prestasi_kewangan"}
 # local-authority halves of the volume reuse similar wording.
 _EXCLUDE = re.compile(
     r"\b(agensi|badan berkanun|pihak berkuasa tempatan|pbt|bbn|syarikat|"
-    r"subsidiari|majlis agama|msns|mbsj|mdsb|ppas)\b", re.I)
+    r"subsidiari|majlis agama|msns|mbsj|mdsb|ppas)\b|"
+    # an ageing table (`... PADA TAHUN 2021 MENGIKUT TEMPOH TUNGGAKAN`) is a different grain from the receivables
+    # statement; its bucket JUMLAH was read as receivables_total (Selangor CMD.52.2022 J61, verifier 2026-11-05)
+    r"\bmengikut tempoh tunggakan\b", re.I)
 
 
 def classify(heading: str, in_state_section: bool) -> tuple[str, str, str] | None:
@@ -326,9 +331,21 @@ LINE_CODES: list[tuple[str, str, str]] = [
     ("hasil_", r"^cukai tanah", "revenue_item_land_tax"),
     ("hasil_", r"^permit tanah( dan galian)?", "revenue_item_land_mineral_permit"),
     ("hasil_", r"^pemberian .{0,10}(mengikut )?(bilangan |ramai )?penduduk|"
-     r"pemberian mengikut ramai penduduk|pemberian kepala",
+     r"pemberian mengikut ramai penduduk|pemberian kepala|"
+     # Selangor to 2019 `Pemberian Mengikut Bilangan Orang`, Melaka `Pemberian Hitung Kepala`
+     r"^pemberian mengikut bilangan orang$|^pemberian hitung kepala$",
      "revenue_item_federal_capitation_grant"),
-    ("hasil_", r"kos pengurusan jabatan negeri", "revenue_item_federal_dept_grant"),
+    # the federal grant towards the state departments under the Concurrent List (Senarai Bersama): Selangor and
+    # Johor print `Pemberian 50% Kos Pengurusan Jabatan Negeri`, Kedah `... Separuh Kos Perbelanjaan Pengurusan
+    # (50%) bagi Jabatan di bawah Senarai Bersama`, Terengganu `Pemberian 50% Perbelanjaan Mengurus Jabatan Di
+    # Bawah Senarai Bersama`, Selangor before 2019 `Pemberian Bagi Membiayai Perbelanjaan Mengurus Bagi
+    # Jabatan-Jabatan Di Bawah Senarai Bersama`
+    ("hasil_", r"kos pengurusan jabatan negeri|^(pemberian\b.{0,80}|membiayai\b.{0,40})?(perbelanjaan )?"
+     r"(pengurusan|mengurus)\b.{0,30}jabatan(-jabatan)? di bawah senarai bersama$",
+     "revenue_item_federal_dept_grant"),
+    # all federal grants as one line in the revenue-by-category table (Sabah, Sarawak): what the state records
+    # receiving from the federal government; Sarawak adds `dan Bayaran Balik` (and reimbursements)
+    ("hasil_", r"^pemberian kerajaan persekutuan( dan bayaran balik)?$", "revenue_item_federal_grants_total"),
     ("hasil_", r"^hasil hutan|^royalti (kayu|balak|hutan)", "revenue_item_forest_produce"),
     ("hasil_", r"royalti petroleum|^wang ihsan|petroleum", "revenue_item_petroleum_royalty"),
     ("hasil_", r"cukai jualan negeri|^cukai jualan", "revenue_item_state_sales_tax"),

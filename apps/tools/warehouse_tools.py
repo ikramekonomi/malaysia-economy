@@ -503,27 +503,57 @@ class Tools:
                                                   "redistribution", "held_coverage", "missing_coverage")}
                               for r in rs], "release_id": self.w.release_id}
 
-    def get_gap_view(self, name, geo=None, year=None):
+    GAP_VIEWS = {
+        "gap_need_vs_money": ("core/pipeline/build_gap_need_vs_money.py (declared 2026-11-04)",
+                              "the HIES years 2014, 2016, 2019, 2022 and 2024"),
+        "gap_federal_vs_state": ("core/pipeline/build_gap_federal_vs_state.py (declared 2026-11-05)",
+                                 "FY2014-2024 (FY2015 has no federal side)"),
+    }
+    FED_VS_STATE_NOTE = (
+        "Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts "
+        "record received. The capitation and Concurrent List grants are paid to the states as a class and not split "
+        "by state in the federal accounts, so a state row gives its share of the federal total and cannot 'agree'; "
+        "the _states row tests that the printing states together recorded no more than the federal total. A "
+        "state's figure is printed only when the grant is among its top revenue items: 'state_not_printed' is not "
+        "zero. Named grants: a state's record of all its federal grants must be at least what it was paid by name.")
+
+    def get_gap_view(self, name, geo=None, year=None, transfer=None):
         import csv
-        if name != "gap_need_vs_money":
-            return {"held": False, "answer": f"view {name} is not built yet (Phase 1 builds gap_need_vs_money)",
+        if name not in self.GAP_VIEWS:
+            return {"held": False, "answer": f"view {name} is not built yet (built: {', '.join(self.GAP_VIEWS)})",
+                    "release_id": self.w.release_id}
+        method, years_note = self.GAP_VIEWS[name]
+        if transfer is not None and name != "gap_federal_vs_state":
+            return {"held": False, "answer": "transfer applies to gap_federal_vs_state only",
+                    "release_id": self.w.release_id}
+        if transfer is not None:
+            transfer = str(transfer).strip().lower().replace(" ", "_").replace("-", "_")
+        if transfer is not None and transfer not in ("capitation", "concurrent_list", "named"):
+            return {"held": False, "answer": f"unknown transfer {transfer!r}: use capitation, concurrent_list or named",
                     "release_id": self.w.release_id}
         year = None if year is None else str(year)
-        if geo and geo not in self.w.geo:
+        if geo and geo not in self.w.geo and not (geo == "_states" and name == "gap_federal_vs_state"):
             names = {g["name_bm"].lower(): c for c, g in self.w.geo.items() if g["geo_level"] == "state"}
             hint = names.get(str(geo).lower())
             return {"held": False, "answer": f"unknown place code {geo}" + (f"; did you mean {hint}?" if hint else
                                                                             "; use an ISO 3166-2:MY code, e.g. MY-01"),
                     "release_id": self.w.release_id}
-        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "core", "gap_need_vs_money.csv")
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "core", f"{name}.csv")
         with open(path, newline="") as f:
-            rs = [r for r in csv.DictReader(f) if (not geo or r["geo_code"] == geo) and (not year or r["year"] == year)]
+            rs = [r for r in csv.DictReader(f) if (not geo or r["geo_code"] == geo) and (not year or r["year"] == year)
+                  and (not transfer or r.get("transfer") == transfer)]
         if not rs:
-            return {"held": False, "answer": f"no row for {geo or 'any place'} in {year or 'any year'}; the view covers "
-                                             "the HIES years 2014, 2016, 2019, 2022 and 2024",
+            return {"held": False, "answer": f"no row for {geo or 'any place'} in {year or 'any year'}"
+                                             + (f" for {transfer}" if transfer else "")
+                                             + f"; the view covers {years_note}"
+                                             + ("; this view's named grants are those to a STATE government "
+                                                "(Kedah, Selangor, Sabah, Sarawak); the Federal Territories' "
+                                                "administrations' grants are in get_flows (to=MY-14/15/16)"
+                                                if transfer == "named" else ""),
                     "release_id": self.w.release_id}
         for r in rs:
             r["caveats"] = [{"id": c, "text": self.w.caveats[c]["text_en"]} for c in r["caveats"].split(";") if c]
-        return {"held": True, "view": name, "rows": rs,
-                "method": "core/pipeline/build_gap_need_vs_money.py (declared 2026-11-04)",
-                "release_id": self.w.release_id}
+        out = {"held": True, "view": name, "rows": rs, "method": method, "release_id": self.w.release_id}
+        if name == "gap_federal_vs_state":
+            out["how_to_read"] = self.FED_VS_STATE_NOTE
+        return out

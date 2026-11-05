@@ -114,9 +114,15 @@ def body_line_ys(table: "RawTable") -> list[float | None]:
         words = _norm(s).split(" ")
         y = None
         if words and words[0]:
-            head = " ".join(words[:3])
+            # a figures-only line (`3.` + amounts) is matched on its first figure alone: the bbox prints each
+            # amount as a line of its own (Selangor CMD.30.2024 J7 row 3)
+            numeric = bool(re.fullmatch(r"[(\-]?[\d,]+(\.\d+)?\)?", words[0]))
+            head = words[0] if numeric else " ".join(words[:3])
             for py, pt in plines:
-                if py >= floor - 1 and (pt.startswith(head) or (len(pt) >= 6 and head.startswith(pt))):
+                if py < floor - 1:
+                    continue
+                if (pt == head or pt.startswith(head + " ")) if numeric else (
+                        pt.startswith(head) or (len(pt) >= 6 and head.startswith(pt))):
                     y = py
                     break
         ys.append(y)
@@ -1120,16 +1126,42 @@ def parse_rows(table: RawTable, cols: list[Column],
             # `Wang Amanah Jumlah`, a leaf component.
             # Never onto a complete total/balance line, never a line that opens a new numbered item or carries
             # digits: those are section heads or prose under the table (`JUMLAH` + `ii. Tunggakan ...`).
-            closed = re.match(r"\s*(?:jumlah|baki pada|lebihan|kurangan|\(kurangan\)|surplus|defisit|"
-                              r"perbelanjaan sebenar)\b", _base(prev), re.I)
+            closed = (re.match(r"\s*(?:jumlah|baki pada|lebihan|kurangan|\(kurangan\)|surplus|defisit|"
+                               r"perbelanjaan sebenar)\b", _base(prev), re.I)
+                      or re.fullmatch(r"\s*[A-Z][A-Z ]+:?\s*", _base(prev) or "x"))   # a bare caption: HASIL
+            # a caption is never a wrapped name: `PERBELANJAAN:`, `Tolak:`, `PELABURAN AKAUN AMANAH`
+            caption = (txt.strip().endswith(":") or re.match(r"\s*(tolak|dibiayai oleh)\b", txt, re.I)
+                       or (txt.strip().isupper() and len(txt.split()) <= 4))
+            closed = closed or caption
             opens = (re.match(r"\s*(?:[a-z]|[ivx]+|\d{1,2}(?:\.\d+)*)[.)]\s", txt) or _BARE_NUM.search(txt)
                      or re.match(r"\s*[\u2022\u25cf\u25aa\u25a0\u00b7\ue000-\uf8ff]", txt))
-            if not (pe or ne or closed or opens):
+            # A line that opens with a connective (`Dan Bayaran Balik`), or follows a label that ends with one
+            # (`... Persekutuan Dan` / `Bayaran Balik`), continues the row above: no printed name starts with
+            # `dan`. Sarawak CMD.60.2015 J4.7 and CMD.44.2016 J4.9, where the two lines sit equidistant.
+            _CONJ = r"(?:dan|serta|atau|bagi|di|ke|dari|daripada|untuk|termasuk|&)"
+            if not (pe or closed or opens) and (re.match(r"\s*" + _CONJ + r"\b", txt, re.I)
+                                                or re.search(r"\b" + _CONJ + r"\s*$", _acc(prev), re.I)):
+                target = prev
+            elif not (pe or ne or closed or opens):
                 if ys is None:
                     ys = body_line_ys(table)
                 yi, yp, yn = ys[entries[k][0]], ys[entries[prev][0]], ys[entries[nxt][0]]
                 if None not in (yi, yp, yn) and yp < yi < yn and abs((yi - yp) - (yn - yi)) > 1.0:
                     target = prev if (yi - yp) < (yn - yi) else nxt
+                else:
+                    # equidistant: a wrapped name is centred on its figures, so a line above a row is that row's
+                    # only if the row also wraps BELOW; otherwise it continues the row above (Melaka CMD.53.2015
+                    # J4.12 `Pemberian Caj Perkhidmatan Projek` / `Persekutuan` / `4 Pemberian Hitung Kepala`)
+                    below = nxt + 1 < len(entries) and not entries[nxt + 1][2] and entries[nxt + 1][1].strip()
+                    # ...unless that line opens the NEXT row, whose figures line prints no name of its own (Melaka
+                    # CMD.37.2016 J4.12: `Bayaran Pendaftaran` / `5  10.30 ...` / `Pindah Milik Tanah`)
+                    nn = nxt + 2
+                    if below and nn < len(entries) and entries[nn][2] and _base(nn) == "":
+                        below = False
+                    # ...and a line above a row that opens with a sub-item letter (`2. a. Simpanan Tetap`) is the
+                    # GROUP heading of what follows (Sarawak CMD.43.2018 J4.6 `Pelaburan Kumpulan Wang Amanah`)
+                    sub_item = re.match(r"\s*(?:\d{1,3}[.)]?\s+)?(?:[a-z]|[ivx]+)[.)]\s", entries[nxt][1])
+                    target = nxt if (below or sub_item) else prev
         frag_for[target].append((k, txt))
 
     # a BIL. column exists if the printed header block names one - reading it

@@ -538,6 +538,11 @@ def label_quality(label: str, repeats: bool = False) -> tuple[str, str]:
     n = len(label.split())
     if (_PROSE.search(label) or _SENTENCE.search(label)) and n >= 8:
         return "reject", "label reads as narrative prose, not a table row label"
+    if re.search(r"\bRM\s*$", label) and not re.match(r"\s*jumlah\b", label, re.I):
+        # (a printed total keeps its row: Perak CMD.21.2025 J7 `JUMLAH KESELURUHAN HASIL RM` 1,332.22)
+        # a name never ends in `RM`: an amount quoted in a sentence whose figure was cut off (`perbelanjaan yang
+        # tertinggi berjumlah RM`, Perlis CMD.39.2017 J4.19; `menjadi RM`)
+        return "reject", "label reads as narrative prose (an amount cut off after RM), not a table row label"
     if _NARRATIVE.search(label) and n >= 6:
         return "reject", "label reads as narrative prose, not a table row label"
     if repeats and _PROSE_DUP.search(label) and n >= 6:

@@ -145,6 +145,8 @@ class Warehouse:
             out.append("CV2")
         if ind == "state_gov.revenue.nonrevenue_receipts":
             out.append("CV3")
+        if ind.startswith("state_gov.revenue.federal_"):
+            out.append("CV26")
         if r["basis"] == "audited" and r["geo_code"].startswith("MY-"):
             out.append("CV5")
             if self.flags.get((r["geo_code"], r["period_code"])):

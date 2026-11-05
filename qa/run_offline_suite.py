@@ -82,6 +82,7 @@ SUITE = [
     "core/pipeline/build_core.py",
     "core/pipeline/build_flows.py",
     "core/pipeline/build_gap_need_vs_money.py",
+    "core/pipeline/build_gap_federal_vs_state.py",
     "qa/run_eval.py",
     "qa/reproduce_curated.py",
 ]

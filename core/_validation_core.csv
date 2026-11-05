@@ -1,5 +1,5 @@
 check,scope,status,note
-C1 primary key unique,fact_observation,PASS,138531 rows
+C1 primary key unique,fact_observation,PASS,138621 rows
 C2 indicator_code resolves,fact_observation,PASS,all resolve
 C2 geo_code resolves,fact_observation,PASS,all resolve
 C2 period_code resolves,fact_observation,PASS,all resolve
@@ -58,6 +58,9 @@ C6 state coverage,state_gov.expenditure.devex,PASS,13 of 13 state governments
 C6 state coverage,state_gov.expenditure.opex,PASS,13 of 13 state governments
 C6 state coverage,state_gov.expenditure.total,INFO,12 of 13 state governments; never printed or not extracted for MY-02
 C6 state coverage,state_gov.expenditure.water_supply,INFO,"1 of 13 state governments; never printed or not extracted for MY-01, MY-02, MY-03, MY-04, MY-05, MY-07, MY-08, MY-09, MY-10, MY-11, MY-12, MY-13"
+C6 state coverage,state_gov.revenue.federal_capitation_grant,INFO,"5 of 13 state governments; never printed or not extracted for MY-01, MY-05, MY-06, MY-08, MY-09, MY-11, MY-12, MY-13"
+C6 state coverage,state_gov.revenue.federal_concurrent_list_grant,INFO,"5 of 13 state governments; never printed or not extracted for MY-04, MY-05, MY-06, MY-07, MY-08, MY-09, MY-12, MY-13"
+C6 state coverage,state_gov.revenue.federal_grants_total,INFO,"2 of 13 state governments; never printed or not extracted for MY-01, MY-02, MY-03, MY-04, MY-05, MY-06, MY-07, MY-08, MY-09, MY-10, MY-11"
 C6 state coverage,state_gov.revenue.nonrevenue_receipts,PASS,13 of 13 state governments
 C6 state coverage,state_gov.revenue.nontax,PASS,13 of 13 state governments
 C6 state coverage,state_gov.revenue.tax,PASS,13 of 13 state governments
@@ -73,4 +76,4 @@ C13 banking-system loans = commercial + Islamic + investment banks (BNM MSB 1.18
 C14 the file read is the vintage logged as current (sha256; national series),fact_observation,PASS,"4 files, all match"
 C15 every entity_id is a registered entity (core/dim_entity.csv) or _none,fact_observation,PASS,59 entities used
 "C16 PKKP votes add up to the printed audited totals (opex + transfer, devex; within RM2: the statement prints whole ringgit)",federal_gov.vote.*,INFO,"32 year-totals; differ: ['devex 2009: votes 49291023062.69 vs printed 49515355570.54']; FY2009 devex: printed vote totals vs the printed grand total, diagnosed in curated/_known_extraction_defects_curated.csv (caveat CV21)"
-"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,138531 rows checked
+"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,138621 rows checked

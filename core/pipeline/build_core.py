@@ -559,6 +559,11 @@ STATE_LINES = {
     "expenditure_total": "state_gov.expenditure.total",
     "surplus_deficit": "state_gov.surplus_deficit",
     "debt_total": "state_gov.debt.total",
+    # the federal grants as the state records them (Phase 3, gap_federal_vs_state): printed only in the
+    # top-contributor and category tables, so a year without a value is not printed, not zero (CV26)
+    "revenue_item_federal_capitation_grant": "state_gov.revenue.federal_capitation_grant",
+    "revenue_item_federal_dept_grant": "state_gov.revenue.federal_concurrent_list_grant",
+    "revenue_item_federal_grants_total": "state_gov.revenue.federal_grants_total",
 }
 
 
