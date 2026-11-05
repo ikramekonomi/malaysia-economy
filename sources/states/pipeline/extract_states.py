@@ -52,6 +52,8 @@ SOURCE = "parlimen.gov.my Command Paper"
 # manifest
 # ---------------------------------------------------------------------------
 
+_PENYUMBANG_TOTAL = re.compile(r"^\s*jumlah\s+penyumbang\b", re.I)
+
 def cover_title(pages: list[str]) -> str:
     """The title block printed on the volume's own title page."""
     for p in pages[:6]:
@@ -220,6 +222,8 @@ def extract_volume(state: str, v: dict, rev_rules) -> tuple[list, list, list, li
             t, group_by_bil=spec_id in TC.BIL_GROUPED_SPECS,
             strict_sections=spec_id in TC.SECTIONED_SPECS)
         rows = _undouble(rows)
+        penyumbang_total = (spec_id == "hasil_penyumbang_utama"
+                            and any(_PENYUMBANG_TOTAL.match(r.label or "") for r in rows))
         year_cols = [ci for ci, c in enumerate(cols) if c.year and unit_factor(c.unit)]
 
         # `KUTIPAN HASIL SEBENAR BERBANDING ANGGARAN` prints estimate/actual
@@ -382,6 +386,14 @@ def extract_volume(state: str, v: dict, rev_rules) -> tuple[list, list, list, li
             if g:
                 group = g
             code, conformed = TC.line_code(spec_id, r.label, section)
+            # Table-level rule: Negeri Sembilan prints a `JUMLAH HASIL RM421.24 Juta` banner (ALL revenue) above
+            # the contributor list AND the real subtotal `JUMLAH PENYUMBANG UTAMA HASIL 382.59` (CMD.34.2019 J11).
+            # Where a table prints a `JUMLAH PENYUMBANG ...` line, that line alone is the top-five total; any
+            # other JUMLAH line keeps its printed label under an unconformed code. In tables without one (15
+            # other states), `JUMLAH HASIL` IS the top-five caption and the dictionary rule stands.
+            if (code == "revenue_top_contributors_total" and penyumbang_total
+                    and not _PENYUMBANG_TOTAL.match(r.label)):
+                code, conformed = f"{spec_id}.{TC.slug(r.label)}", False
             # Once a financing line has been printed, a later bare `JUMLAH` is
             # the financing total - several states print the `Dibiayai oleh:`
             # caption glued to the first financing row instead of as its own

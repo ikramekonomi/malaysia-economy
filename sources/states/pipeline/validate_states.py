@@ -492,7 +492,9 @@ def v1(fin, rev):
                 money = [r for r in sub if r["unit_printed"].startswith("(RM")]
                 tot_r = [r for r in money
                          if r["line_code"] == "revenue_top_contributors_total"]
-                comp = [r for r in money if r not in tot_r]
+                # contributor lines only: a printed banner total (`JUMLAH HASIL RM421.24 Juta`, all revenue,
+                # Negeri Sembilan) is a total row, not a sixth contributor
+                comp = [r for r in money if r not in tot_r and r["row_type"] != "total"]
                 if tot_r and len(comp) >= 2:
                     s = sum(juta(r) for r in comp)
                     d = s - juta(tot_r[0])

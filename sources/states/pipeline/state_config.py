@@ -751,21 +751,6 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
         impact_on_data="Johor FY2015 trust_account_balance from J4.20 is the 2014 figure; use J4.1.",
     ),
     dict(
-        state="Sarawak",
-        source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V1_cra_closing", "V1_continuity_in_table"), fiscal_year=("2020", "2021")),
-        affected_rows="FY2020-2021 Akaun Hasil Disatukan balances read from CMD.48.2023.pdf J7 (5-year table)",
-        defect="The closing-balance label is printed over two lines ('BAKI PADA' / '31 DISEMBER') with its five "
-               "amounts on the line between them; the parser attaches that unlabelled line to the wrong years.",
-        diagnosis="Page-proved 2026-11-04 (CMD.48.2023.pdf p43, J7): every column adds up - 2020 20,543.13 + 366.63 "
-                  "= 20,909.76; 2021 20,909.76 - 3,709.18 = 17,200.58; 2022 17,200.58 + 1,113.88 = 18,314.46. Not an "
-                  "AG misprint.",
-        why_unfixed="A label split around its value line must be joined before the year columns are assigned; "
-                    "re-extraction pending.",
-        impact_on_data="Use the own-volume Penyata Prestasi Kewangan balances; the 5-year analysis table rows for "
-                       "these years are mis-assigned.",
-    ),
-    dict(
         state="Selangor",
         source_file="", pdf_page="", printed_page="", jadual="",
         match=dict(target="none", checks=("V1_fund_flow",), fiscal_year=("2014",)),
@@ -778,45 +763,6 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                   "in 2014. Not an AG misprint.",
         why_unfixed="Columns must be assigned by x-position against the header years; re-extraction pending.",
         impact_on_data="The FY2014 loan-account receipts/payments rows are 2013's; balances are correct.",
-    ),
-    dict(
-        state="Negeri Sembilan",
-        source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
-        affected_rows="the 'Penyumbang Utama Hasil' rows of CMD.34.2019 (J11) and CMD.37.2018 (J4.10)",
-        defect="The table prints two totals: 'JUMLAH HASIL RM421.24 Juta' (ALL revenue, in the header) and 'JUMLAH "
-               "PENYUMBANG UTAMA HASIL' (the five lines). The check compares the five lines with the first; in "
-               "CMD.37.2018 the (%) column (88.8) is also read as an amount, as in Selangor's table.",
-        diagnosis="Page-proved 2026-11-04 (CMD.34.2019.pdf p38): 2018 128.72 + 121.50 + 56.87 + 38.49 + 37.01 = "
-                  "382.59 = printed JUMLAH PENYUMBANG UTAMA HASIL; 2017 130.38 + 105.87 + 61.62 + 38.76 + 30.64 = "
-                  "367.27. Not an AG misprint.",
-        why_unfixed="Take the JUMLAH PENYUMBANG UTAMA line as the total and pair columns by x-position; "
-                    "re-extraction pending.",
-        impact_on_data="Analysis-table rows only; core and the gap view do not use them.",
-    ),
-    dict(
-        state="Selangor",
-        source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V1_penyumbang_utama_total",)),
-        affected_rows="the 'Penyumbang Utama Hasil' rows of CMD.41.2019 (J11) and CMD.50.2021 (J13): year columns paired wrongly",
-        defect="The five-year 'Penyumbang Utama Hasil Kerajaan Negeri' table prints an RM juta column and a (%) column "
-               "per year, and in the text layer an amount and its share often fall on different lines. The extractor "
-               "pairs them by position, so a share (often the JUMLAH row's 100.0) is read as an amount and the year "
-               "columns shift.",
-        diagnosis="Page-proved 2026-11-04 (qa/evidence/): every printed column adds up. CMD.41.2019.pdf p38 (J11): "
-                  "2014 1,138.90 + 395.37 + 0.04 + 51.01 + 64.28 = 1,649.60; 2015 = 1,886.80; 2016 = 1,912.34; "
-                  "2017 = 2,194.80; 2018 = 1,343.67. CMD.50.2021.pdf p38 (J13): 2016 1,946.54; 2017 2,246.29; "
-                  "2018 1,320.32; 2019 1,008.37 + 465.99 + 79.62 + 96.59 + 75.25 = 1,725.82; 2020 1,749.01. "
-                  "Not an AG misprint.",
-        why_unfixed="ROOT CAUSE found 2026-11-05: lkan_state_parser._value_tokens drops any value separated "
-                    "from the previous one by a SINGLE space (`1,886.80 100.0`): _NUM_RE's optional leading \\s "
-                    "puts the match start on the space, and the digit-flank guard then sees the previous number's "
-                    "last digit. Fixing it (start the match at its first non-space character) clears these rows "
-                    "but changes ~1,300 rows in all 13 states and unlocks tables never parsed before whose wrapped "
-                    "labels are mis-stitched (Pulau Pinang CMD.58.2015 J4.11), so it needs its own reviewed "
-                    "re-extraction, not a quick fix.",
-        impact_on_data="These analysis-table rows are not used by core or the gap view (which use the audited "
-                       "statements); do not read the top-contributor amounts from the current extraction.",
     ),
     dict(
         state="Sarawak",
@@ -850,111 +796,6 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                     "DOSM comparison to DEFINITIONAL once the code exists.",
         impact_on_data="No figure in the panel is wrong. Do not derive Sarawak "
                        "revenue by summing components; use revenue_total.",
-    ),
-    dict(
-        state="Negeri Sembilan",
-        source_file="CMD.34.2019.pdf", pdf_page="38", printed_page="22",
-        jadual="11",
-        match=dict(target="revenue", jadual="11",
-                   line_code=("revenue_top_contributors_total",),
-                   is_canonical=("yes",),
-                   checks=("V1_penyumbang_utama_total",)),
-        affected_rows="2 (the canonical `revenue_top_contributors_total`, "
-                      "FY2017 and FY2018)",
-        defect="`revenue_top_contributors_total` carries TOTAL REVENUE "
-               "(413.46 / 421.24) instead of the top-five subtotal "
-               "(367.27 / 382.59).",
-        diagnosis="The table prints a banner row `JUMLAH HASIL   RM421.24 "
-                  "Juta` above the contributor list as well as the real "
-                  "subtotal `JUMLAH PENYUMBANG UTAMA HASIL   382.59`.  Both "
-                  "labels open with `JUMLAH`, so the dictionary's "
-                  "`^jumlah\\b -> revenue_top_contributors_total` rule matched "
-                  "the banner first.  The five contributor lines are correct "
-                  "and sum to the printed 382.59 exactly "
-                  "(128.72 + 121.50 + 56.87 + 38.49 + 37.01).",
-        why_unfixed="Needs a TABLE-level rule (`JUMLAH HASIL` is total revenue "
-                    "only when the same table also prints a `JUMLAH PENYUMBANG "
-                    "UTAMA` row).  The label-level rule was tried and reverted: "
-                    "it regressed 15 other states' tables, where `JUMLAH HASIL` "
-                    "IS the top-five caption.",
-        impact_on_data="Two `revenue_top_contributors_total` values are total "
-                       "revenue.  No contributor item is affected; no figure "
-                       "was altered.  N7 (subtotal <= revenue) still passes "
-                       "because the value IS the revenue total.",
-    ),
-    dict(
-        state="Negeri Sembilan",
-        source_file="CMD.37.2018.pdf", pdf_page="34", printed_page="18",
-        jadual="4.10",
-        match=dict(target="revenue", jadual="4.10",
-                   line_code=("revenue_top_contributors_total",),
-                   fiscal_year=("2017",),
-                   checks=("V1_penyumbang_utama_total",)),
-        affected_rows="1 (`revenue_top_contributors_total`, FY2017)",
-        defect="The FY2017 top-five subtotal reads 88.8 - the printed "
-               "PERCENTAGE - instead of the printed 367.27 RM juta.",
-        diagnosis="The JUMLAH row is typeset with its own spacing "
-                  "(`JUMLAH      367.27       88.8            341.92    89.9`), "
-                  "so its tokens sit left of the column grid the contributor "
-                  "rows establish and the FY2017 money cell picked up the "
-                  "percent token.  The FY2016 cell (341.92) and all five "
-                  "contributor rows are correct.",
-        why_unfixed="Same root cause as the Selangor entries below - a printed "
-                    "JUMLAH row set to its own measure in an interleaved "
-                    "`(RM Juta)`/`(%)` matrix.  Fixing it needs the row-level "
-                    "ordinal fallback to be re-derived from the money columns "
-                    "alone, which touches every trend table in the source.",
-        impact_on_data="One `revenue_top_contributors_total` value is a "
-                       "percentage.  The conformed contributor items "
-                       "(`revenue_item_*`) on this page are unaffected.",
-    ),
-    dict(
-        state="Selangor",
-        source_file="CMD.41.2019.pdf", pdf_page="38", printed_page="12",
-        jadual="11",
-        match=dict(target="revenue", jadual="11",
-                   line_code=("revenue_top_contributors_total",),
-                   fiscal_year=("2015", "2016", "2017", "2018"),
-                   checks=("V1_penyumbang_utama_total",)),
-        affected_rows="4 (`revenue_top_contributors_total`, FY2015-FY2018; "
-                      "the FY2014 cell, 1,649.60, is correct)",
-        defect="The printed JUMLAH row's cells drift one year to the right "
-               "and pick up percentages.  Printed FY2014-FY2018: 1,649.60 / "
-               "1,886.80 / 1,912.34 / 2,194.80 / 1,343.67.  Shipped: 1,649.60 "
-               "(correct) / 100.0 / 1,886.80 / 1,912.34 / 100.0.",
-        diagnosis="A five-year matrix that interleaves `(RM Juta)` and `(%)`; "
-                  "the JUMLAH row is typeset with its own spacing "
-                  "(`JUMLAH   1,649.60   100.0   1,886.80 100.0 ...`) so "
-                  "overlap matching drifts it against the column grid the "
-                  "contributor rows establish.",
-        why_unfixed="The contributor rows on this page are all correct and "
-                    "were RECOVERED by this pass (the table was refused "
-                    "outright before).  Refusing the table again to hide one "
-                    "bad row would lose 25 correct values; the row-level fix "
-                    "belongs with the tokeniser pass described below.",
-        impact_on_data="Four `revenue_top_contributors_total` values are "
-                       "unusable.  Every `revenue_item_*` contributor value on "
-                       "this page was checked line by line against the printed "
-                       "page and is correct.",
-    ),
-    dict(
-        state="Selangor",
-        source_file="CMD.50.2021.pdf", pdf_page="38", printed_page="20",
-        jadual="13",
-        match=dict(target="revenue", jadual="13",
-                   line_code=("revenue_top_contributors_total",),
-                   fiscal_year=("2017", "2018", "2019", "2020"),
-                   checks=("V1_penyumbang_utama_total",)),
-        affected_rows="4 (`revenue_top_contributors_total`, FY2017-FY2020; "
-                      "the FY2016 cell, 1,946.54, is correct)",
-        defect="Same as CMD.41.2019 J11.  Printed FY2016-FY2020: 1,946.54 / "
-               "2,246.29 / 1,320.32 / 1,725.82 / 1,749.01.  Shipped: 1,946.54 "
-               "(correct) / 1,320.32 / 100.0 / 1,749.01 / 100.0.",
-        diagnosis="Five-year `(RM Juta)`/`(%)` matrix, JUMLAH row typeset with "
-                  "its own spacing.",
-        why_unfixed="As above.",
-        impact_on_data="Four `revenue_top_contributors_total` values are "
-                       "unusable; the contributor items are correct.",
     ),
     dict(
         state="Perak",
@@ -1014,16 +855,54 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                   "the last digit of the first figure and the date / "
                   "section-number guard discards it.  Seen on Sarawak "
                   "CMD.43.2018 J4.14, where every row lost `27.5 25.8 35.2`.",
-        why_unfixed="The root fix (trim leading white space before applying "
-                    "the guard) was implemented and DELIBERATELY REVERTED: it "
-                    "moved roughly 2,000 rows across all 13 states, raised the "
-                    "refusal count, and degraded the frozen Selangor "
-                    "regression.  It needs its own pass with the column "
-                    "clustering retuned alongside it.",
+        why_unfixed="A global fix (trim leading white space before applying "
+                    "the guard) moved roughly 2,000 rows and broke column "
+                    "geometry (Pahang lost 63 rows), so it is applied only at "
+                    "ROW level (2026-11-05): column building keeps the "
+                    "historical tokeniser, and a row whose historical tokens do "
+                    "not fit the columns falls back to the exact ones (one per "
+                    "column, one per money-year column, or amount/share pairs "
+                    "in a `(RM Juta)`/`(%)` matrix).  That cleared every "
+                    "top-contributor JUMLAH defect (Selangor CMD.41.2019 J11 "
+                    "and CMD.50.2021 J13, Negeri Sembilan CMD.37.2018 J4.10); "
+                    "rows that still fit the columns with a value missing are "
+                    "not re-tokenised.",
         impact_on_data="Mostly percentage and PERUBAHAN columns, which are not "
                        "extracted anyway.  Where it hits a money column the row "
                        "is marked `column_geometry=incomplete_row`, so no "
                        "figure is wrong - some are absent.",
+    ),
+    dict(
+        state="(all)",
+        source_file="", pdf_page="", printed_page="", jadual="",
+        affected_rows="labels only, in analysis tables, under UNCONFORMED line codes; located by the blind "
+                      "verifier of the 2026-11-05 parser pass (qa/audits/2026-11-05_state_parser_verifier.md)",
+        defect="Some printed labels are stitched wrongly; every amount and year on these rows is right. "
+               "(a) A label wrapped BELOW its line joins the NEXT row in the line-at-a-time parser: Sarawak "
+               "CMD.60.2015 / CMD.44.2016 J4.2 ship `Kumpulan Wang Amanah i. Kumpulan Wang` (printed: `i. Kumpulan "
+               "Wang Pembangunan`), `Pembangunan ii. Kumpulan Wang Amanah` (printed: `ii. Kumpulan Wang Amanah "
+               "Kerajaan`), `Awam b. Deposit`; Johor CMD.35.2016 J4.2 `Amanah Kerajaan b) Kumpulan Wang Amanah "
+               "Awam`; the by-Bil. parser does the same in Sarawak CMD.44.2016 J4.13 (`Kewangan Pampasan Gantian "
+               "Hak Ke Atas` = printed `Pampasan Gantian Hak Ke Atas Minyak`; `Minyak Royalti Hutan` = `Royalti "
+               "Hutan`). (b) A label line exactly between two Bil. lines goes to the row above: Selangor CMD.49.2023 "
+               "J13 `Permit Tanah dan Galian Pemberian 50% Kos` / `Pengurusan Jabatan Negeri`. (c) The running "
+               "footer `Penyata Kewangan` survives on some JUMLAH labels (Melaka CMD.33.2019 J15, Perlis "
+               "CMD.37.2019 J5, Kedah, Perak, Pahang `JUMLAH Pahang Tahun`). (d) Five label-only footer lines "
+               "become nil (`-`) phantom rows: Melaka CMD.33.2019 p39 J15, Perak CMD.36.2019 p29 J3, Sarawak "
+               "CMD.40.2019 p31 J3 and p35 J8, Terengganu CMD.41.2020 p35 J7.",
+        diagnosis="All pre-date the 2026-11-05 pass (the same labels are on main for the other years of each "
+                  "line). A rule sending a label-only line to the row ABOVE whenever every Bil. line carries label "
+                  "text fixed Sarawak J4.13 and Kedah J4.14 but broke Johor CMD.39.2021 J9, Kedah CMD.40.2021 "
+                  "J10 and stitched prose into two new Sabah CMD.41.2017 J4.9 rows, so it was reverted: the text "
+                  "layer alone does not say whether a wrapped line continues the row above or opens the row "
+                  "below.",
+        why_unfixed="Telling continuation from lead-in needs the glyph positions (pdftotext -bbox: a "
+                    "continuation sits closer to the line above), a change to every state's tables that needs "
+                    "its own verified pass; the phantoms and footer residue need the footer filter to recognise "
+                    "single footer words without eating real labels.",
+        impact_on_data="No amount is wrong. The affected rows carry unconformed codes (not read by core or the "
+                       "gap view) except Johor J4.2 `public_trust_funds`, whose code is right. Do not quote "
+                       "these labels; the nil phantoms are 0.00 rows with no printed item.",
     ),
 ]
 
