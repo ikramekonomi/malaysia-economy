@@ -1013,6 +1013,13 @@ def parse_rows(table: RawTable, cols: list[Column],
             target = nxt
         elif nxt is None:
             target = prev
+        elif (k - 1 not in value_idx and entries[k - 1][1].rstrip().endswith("-")
+              and any(fk == k - 1 for v in value_idx for fk, _ in frag_for[v])):
+            # the line above ends in a hyphen (`Jabatan-` / `Jabatan Di Bawah ...`): a word broken
+            # across lines, so this line continues the SAME label.  Distance alone handed the second
+            # half to the JUMLAH row below (Selangor CMD.61.2015 J4.11 shipped
+            # `Jabatan Di Bawah Senarai Bersama Jumlah` as a component leaf).
+            target = next(v for v in value_idx for fk, _ in frag_for[v] if fk == k - 1)
         elif (k - prev) != (nxt - k):
             target = prev if (k - prev) < (nxt - k) else nxt
         else:
@@ -1034,7 +1041,11 @@ def parse_rows(table: RawTable, cols: list[Column],
         li, label, toks = entries[k]
         own = "" if re.fullmatch(r"\s*\d{1,3}[.)]?\s*", label) else label
         pieces = sorted(frag_for[k] + [(k, own)], key=lambda x: x[0])
-        lab = " ".join(p[1].strip() for p in pieces if p[1].strip())
+        lab = ""
+        for p in pieces:                                       # a word broken at its hyphen rejoins with no space
+            t = p[1].strip()
+            if t:
+                lab = lab + t if lab.endswith("-") and t[:1].isalpha() else (lab + " " + t).strip()
         lab = re.sub(r"\s+", " ", lab).strip()
         lab = re.sub(r"^\d{1,3}[.)]?\s+", "", lab)            # drop Bil.
         lab = re.sub(r"^\d{1,3}[.)]\s*", "", lab)
@@ -1075,6 +1086,21 @@ def parse_rows(table: RawTable, cols: list[Column],
             merged.append(Row(label=re.sub(r"\s+", " ", htxt).strip(" .:"), cells={}))
         merged.extend(rows[ri:])
         rows = merged
+
+    # Shifted block: every value row prints the same number of figures as the header strip prints
+    # units, but the rows are set at different offsets, so right-edge clustering made MORE data columns
+    # than the header labels and some figures fell into columns with no unit at all.  The printed order
+    # is then the only reliable geometry: the k-th figure of each row belongs to the k-th unit column.
+    # Selangor CMD.61.2015 J4.11: row 1 is set ~10 characters left of rows 2-5, which shipped the 2013
+    # column (386.30, 62.97, 63.86, 45.37) as FY2014 and dropped the 2014 figures.
+    unit_cols = [ci for ci, c in enumerate(cols) if c.unit]
+    counts = {len(r.tokens or []) for r in rows if r.cells}
+    stray = any(not cols[ci].unit for r in rows for ci in r.cells)
+    if stray and len(counts) == 1 and len(unit_cols) == next(iter(counts)) >= 2:
+        for r in rows:
+            if any(not cols[ci].unit for ci in r.cells):      # only the rows that landed off the strip
+                r.cells = dict(zip(unit_cols, r.tokens))
+                r.ordinal_fallback = True
 
     # Ordinal fallback: a few rows (typically the JUMLAH row) are printed with
     # their own spacing, so their tokens cluster into neighbouring columns.

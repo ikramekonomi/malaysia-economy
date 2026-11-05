@@ -736,34 +736,9 @@ def page_proved(state: str, c: dict):
 
 
 KNOWN_EXTRACTION_DEFECTS: list[dict] = [
-    dict(
-        state="Johor",
-        source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V1_intra_volume_contradiction", "V1_trust_account_composition"),
-                   fiscal_year=("2015",)),
-        affected_rows="FY2015 Akaun Amanah Disatukan total read from CMD.35.2016.pdf J4.20",
-        defect="J4.20 is titled 'Tahun 2015 Berbanding 2014' but prints the 2014 column FIRST; the 'Jumlah' line's "
-               "first amount (1,454.59, the 2014 balance) is assigned to FY2015.",
-        diagnosis="Page-proved 2026-11-04 (CMD.35.2016.pdf p35): header '2014 2015 Perubahan'; 2015 = 537.83 + 737.42 "
-                  "+ 353.29 = 1,628.54, and the text says RM1,628.54 juta at end-2015 against RM1,454.59 juta at "
-                  "end-2014. Not an AG misprint.",
-        why_unfixed="Year columns must come from the column header, not the table title; re-extraction pending.",
-        impact_on_data="Johor FY2015 trust_account_balance from J4.20 is the 2014 figure; use J4.1.",
-    ),
-    dict(
-        state="Selangor",
-        source_file="", pdf_page="", printed_page="", jadual="",
-        match=dict(target="none", checks=("V1_fund_flow",), fiscal_year=("2014",)),
-        affected_rows="FY2014 Akaun Pinjaman Disatukan receipts and payments (CMD.61.2015 J4.21)",
-        defect="Jadual 4.21 prints the 2013 and 2014 columns side by side; the Terimaan and Bayaran/Pindahan rows "
-               "are indented further than the balance rows, and the extractor assigns their FIRST amount (2013) "
-               "to 2014.",
-        diagnosis="Page-proved 2026-11-04 (CMD.61.2015.pdf p39): 2013 20.89 + 10.66 - 31.55 = 0.00; 2014 0.00 + "
-                  "106.87 - 106.87 = 0.00, and the text says RM106.87 juta was transferred to the Development Fund "
-                  "in 2014. Not an AG misprint.",
-        why_unfixed="Columns must be assigned by x-position against the header years; re-extraction pending.",
-        impact_on_data="The FY2014 loan-account receipts/payments rows are 2013's; balances are correct.",
-    ),
+    # Johor CMD.35.2016 J4.20 (FY2015 trust total read as 2014's) and Selangor CMD.61.2015 J4.21 (FY2014 loan-account
+    # receipts/payments read as 2013's) were registered here 2026-11-04 and are FIXED by the parser's shifted-block rule
+    # (lkan_state_parser.parse_rows, 2026-11-05); see qa/audits/2026-11-05_state_column_shift.md.
     dict(
         state="Sarawak",
         source_file="CMD.49.2021.pdf", pdf_page="", printed_page="",
