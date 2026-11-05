@@ -29,6 +29,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
+| `entity_lineage.csv` | 8 | where a body's work went when its vote lapsed (D28): a link between two bodies, with printed evidence (`entity_lineage_evidence.csv`, 43 lines with PDF pages) |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
@@ -199,6 +200,7 @@ book (2024-2026).
 | `meta/entity_register.csv` | every `entity_id` ever issued (E000001 …), with type, sector, parent, reason and `decision_status`; never reused, never deleted (check E1: IDs contiguous) |
 | `meta/entity_code.csv` | every readable code of an entity (`federal_gov` MY, `state_gov` MY-01…MY-13, `maksud_bekalan` B.xx, `maksud_pembangunan` P.xx) with its years and a proof |
 | `meta/spending_head.csv` | T.01-T.14 (Tanggungan) and P.70 (contingency reserve): spending heads, not bodies |
+| `meta/entity_lineage.csv`, `meta/entity_lineage_evidence.csv` | where a body's work went at a vote lapse, and the printed lines on both sides that show it (D28) |
 
 The identity rule (decision D26), declared before any spending is loaded against it:
 
@@ -208,8 +210,26 @@ The identity rule (decision D26), declared before any spending is loaded against
   2019-2021 after B.29 (Energy, Green Technology and Water) ended in 2018, paying for its projects.
 * **A B vote printed again after a lapse is a new body** unless a person links it. B.15 (Economic
   Affairs 2018-2020; Economy from 2023), B.26 (2009; Entrepreneur Development from 2018) and B.33
-  (Environment and Water 2020-2022; Energy Transition from 2024) are split this way and marked
-  `proposed`; the tools say so on every answer about them.
+  (Environment and Water 2020-2022; Energy Transition from 2024) are split this way, and a person confirmed
+  all six as separate bodies (D28). The tools warn on every answer about them that the code was also held by
+  a different body.
+* **Where the work went is lineage, not identity (D28).** In each gap the work was paid from another vote,
+  so `meta/entity_lineage.csv` links the bodies with the printed lines that show the move
+  (`meta/entity_lineage_evidence.csv`, re-found in PKKP L1 on every build):
+
+  | Link | From → to | Year | What moved |
+  |---|---|---|---|
+  | L01 | B.06 Prime Minister's Dept → B.15 Economic Affairs | 2018 | economic planning (EPU), statistics |
+  | L02 | B.15 Economic Affairs → B.06 | 2021 | economic planning, statistics |
+  | L03 | B.06 → B.15 Economy | 2023 | economic planning, statistics, corridor authorities |
+  | L04 | B.26 (2009) → B.25 Domestic Trade, Co-operatives | 2010 | Cooperatives Commission |
+  | L05 | B.26 (2009) → B.22 Rural Development | 2010 | MARA |
+  | L06 | B.25 → B.26 Entrepreneur Development | 2018 | cooperatives (mid-year: FY2018 split between both votes) |
+  | L07 | B.33 Environment and Water → B.23 Natural Resources | 2023 | water, sewerage, environment |
+  | L08 | B.23 → B.33 Energy Transition | 2024 | water, sewerage, energy (environment stays in B.23) |
+
+  A series joined across a link changes scope: compare the named activities, not the vote totals. Links are
+  recorded at the lapses and the moves that led to them, not for every move between ministries.
 * **Renumberings link only with a proof:** B.41→B.63 (Education) and B.49→B.64 (Higher Education),
   approved before the register (`curated/pipeline/build_ministry_fiscal.py`).
 * **Budget books do not extend a lineage, and can name an older holder:** a book is tabled before its year,
@@ -219,7 +239,7 @@ The identity rule (decision D26), declared before any spending is loaded against
   (`anggaran:2024`): a scoped row wins for that source only, so `get_entity('B.32', 2024)` is not held.
 
 A code printed in a source with no entity for that year **stops the build** and is listed: an ID is
-issued only by a person. Checks E1-E8 are in `_validation_entity.csv`. Core's state and federal rows
+issued only by a person. Checks E1-E10 are in `_validation_entity.csv`. Core's state and federal rows
 carry entity IDs (check C15), every citation names its entity, and the tool `get_entity(code, year)`
 resolves `B.45` + 2024, `MY-03` or `E000052`, refuses a spending head (`T.13`) and lists every body a
 code ever named when no year is given.

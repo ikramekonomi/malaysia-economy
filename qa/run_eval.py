@@ -141,6 +141,13 @@ def run(t, q):
         names = [n for e in res.get("entities", []) for n in e["source_text"]["printed_names"]
                  if n["code"] == code and int(n["valid_from"]) <= year <= int(n["valid_to"])]
         return any(n["name_bm"] == exp for n in names), ";".join(n["name_bm"] for n in names)
+    if check in ("lineage_went_to", "lineage_came_from"):
+        side = "work_went_to" if check == "lineage_went_to" else "work_came_from"
+        got = [x["entity_id"] for e in res.get("entities", []) for x in e.get("lineage", {}).get(side, [])]
+        return exp in got, ",".join(got)
+    if check == "lineage_mid_year":
+        got = [str(x["moved_mid_year"]) for e in res.get("entities", []) for x in e.get("lineage", {}).get("work_came_from", [])]
+        return exp in got, ",".join(got)
     if check == "entity_count":
         return str(len(res.get("entities", []))) == exp, str(len(res.get("entities", [])))
     if check.startswith("entity_field:"):

@@ -365,15 +365,42 @@ class Tools:
                  "parent_entity_id": e["parent_entity_id"], "decision_status": e["decision_status"],
                  "codes": codes, "source_text": {"name_bm": e["name_bm"], "name_en": e["name_en"],
                                                  "printed_names": names, "note": UNTRUSTED}}
+            def link(r, other):
+                return {"lineage_id": r["lineage_id"], "entity_id": r[f"{other}_entity_id"],
+                        "name_bm": r[f"{other}_name_bm"], "first_year": int(r["first_year"]),
+                        "moved_mid_year": r["moved_mid_year"] == "yes", "what_moved": r["what_moved"],
+                        "evidence": r["evidence"]}
+            came = [link(r, "from") for r in self.w.entity_lineage if r["to_entity_id"] == eid]
+            went = [link(r, "to") for r in self.w.entity_lineage if r["from_entity_id"] == eid]
+            if came or went:
+                d["lineage"] = {"work_came_from": came, "work_went_to": went, "how_to_read": self.LINEAGE_NOTE}
+            caveats = []
             if e["decision_status"] == "proposed":
-                d["caveat"] = ("identity proposed by rule D26 and not yet confirmed by a person: this vote lapsed "
+                caveats.append("identity proposed by rule D26 and not yet confirmed by a person: this vote lapsed "
                                "and was printed again, and the two runs are kept as separate bodies until someone "
                                "decides otherwise")
+            reused = sorted({c["entity_id"] for x in codes if x["code_system"] == "maksud_bekalan"
+                             for c in self.w.entity_codes if c["code_system"] == "maksud_bekalan"
+                             and c["code"] == x["code"] and c["entity_id"] != eid and not c.get("scope")})
+            if reused:
+                caveats.append(f"its supply vote code was also held by a different body ({', '.join(reused)}) in other "
+                               "years: their spending is not one series (rule D26, confirmed by a person: D28); "
+                               "'lineage' says where the work went")
+            if caveats:
+                d["caveat"] = "; ".join(caveats)
             out.append(d)
         res = {"held": True, "entities": out, "release_id": self.w.release_id}
         if len(out) > 1:
             res["answer"] = (f"{code} named {len(out)} different bodies over time; give the year to pick one")
         return res
+
+    LINEAGE_NOTE = ("a lineage link (decision D28) says that named work printed under one body's vote in one year is "
+                    "printed under another body's vote the next year; the evidence names the printed programme or "
+                    "activity and its PDF page. It is a link between two bodies, never one body: the two bodies' "
+                    "spending covers different work, so a series joined across a link changes scope (compare the "
+                    "named activities, not the vote totals). A move made during the year (moved_mid_year) splits that "
+                    "year's spending between both votes. Links are recorded only at the vote lapses and the moves "
+                    "that led to them; not every move between ministries is listed.")
 
     FLOW_COVERAGE = ("held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): "
                      "the federal grants and assignments to the states under Tanggungan T.12, and the grants to "

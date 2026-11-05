@@ -558,8 +558,24 @@ q("5", "Is development vote P.29 in 2020 (after B.29 ended in 2018) the same bod
   {"a": ent("P.29", 2020), "b": ent("B.29", 2017)}, "same_entity", "same")
 q("5", "Is B.15 in 2019 the same body as B.15 in 2024?", "entity_same",
   {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "same_entity", "different", kind="trap_identity")
-q("5", "Does the answer say the B.15 split is not yet confirmed by a person?", "entity_same",
-  {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "entity_caveat", "rule D26", kind="trap_identity")
+q("5", "Does the answer warn that B.15's code was also held by a different body, so the two are not one series?",
+  "entity_same", {"a": ent("B.15", 2019), "b": ent("B.15", 2024)}, "entity_caveat", "not one series",
+  kind="trap_identity")
+q("5", "Is B.33 in 2022 (Environment and Water) the same body as B.33 in 2024 (Energy Transition)?", "entity_same",
+  {"a": ent("B.33", 2022), "b": ent("B.33", 2024)}, "same_entity", "different", kind="trap_identity")
+q("5", "Has a person confirmed that the 2018-2020 B.15 is a body of its own?", "get_entity", ent("B.15", 2019),
+  "entity_field:decision_status", "confirmed")
+# lineage (D28): where a body's work went when its vote ended, from meta/entity_lineage.csv (a human decision)
+q("5", "Where was B.15's economic planning work printed after the vote ended in 2020?", "get_entity",
+  ent("B.15", 2019), "lineage_went_to", "E000020", kind="trap_identity")
+q("5", "Which body's vote paid for the 2009 B.26 body's cooperatives work from 2010?", "get_entity",
+  ent("B.26", 2009), "lineage_went_to", "E000036", kind="trap_identity")
+q("5", "Where did the Environment and Water ministry's (B.33) work go in 2023?", "get_entity", ent("B.33", 2022),
+  "lineage_went_to", "E000034", kind="trap_identity")
+q("5", "Where did the 2024 B.33 body's water and energy work come from?", "get_entity", ent("B.33", 2024),
+  "lineage_came_from", "E000034", kind="trap_identity")
+q("5", "Was the 2018 move of cooperatives to B.26 made during the year (spending split between two votes)?",
+  "get_entity", ent("B.26", 2020), "lineage_mid_year", "True", kind="trap_identity")
 q("5", "Is B.26 in 2009 the same body as B.26 in 2020?", "entity_same",
   {"a": ent("B.26", 2009), "b": ent("B.26", 2020)}, "same_entity", "different", kind="trap_identity")
 q("5", "Who is B.15, with no year given?", "get_entity", ent("B.15"), "entity_count", "2", kind="trap_identity")

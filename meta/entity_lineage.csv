@@ -1,0 +1,9 @@
+lineage_id,from_entity_id,to_entity_id,first_year,moved_mid_year,what_moved,note
+L01,E000020,E000029,2018,no,economic planning (the Economic Planning Unit) and the statistics department,"B.15 first printed in 2018, taking work printed under B.06 in 2017"
+L02,E000029,E000020,2021,no,economic planning and the statistics department,B.15 ends after 2020 (its development vote P.15 is printed to 2021); the same work is printed under B.06 in 2021-2022
+L03,E000020,E000030,2023,no,"economic planning, the statistics department and the regional corridor authorities","B.15 printed again from 2023 as a new body (D26, confirmed by a person 2026-11-05: D28)"
+L04,E000037,E000036,2010,no,the Cooperatives Commission,B.26 is printed in FY2009 only; in 2010 its cooperatives work is printed under B.25 and MARA under B.22 (L05)
+L05,E000037,E000033,2010,no,MARA (Majlis Amanah Rakyat),see L04
+L06,E000036,E000038,2018,yes,"cooperative development, the Cooperatives Commission and the Cooperative College","B.26 printed again from 2018 as a new body (D26, confirmed by a person 2026-11-05: D28); FY2018 is split: B.25 and B.26 each print half the year's cooperative grants (SKM RM38.4m each, p143 and p147)"
+L07,E000045,E000034,2023,no,"water and sewerage, and environment and climate change",B.33 ends after 2022 (P.33 to 2023); in 2023 both parts are printed under B.23
+L08,E000034,E000046,2024,no,"water and sewerage, and energy","B.33 printed again from 2024 as a new body (D26, confirmed by a person 2026-11-05: D28); environment stays under B.23; B.23 prints these lines in FY2024 with their original estimate revised to 0 and no spending (p149-150)"

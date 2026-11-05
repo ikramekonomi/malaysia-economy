@@ -224,8 +224,12 @@ issued only when a person decides whether it is a new body or a renumbered old o
 **Built 2026-11-05 (D26):** `meta/entity_register.csv` (59 entities: the federal government, 13
 state governments, 45 federal votes), `meta/entity_code.csv` (99 dated codes with proofs),
 `meta/spending_head.csv` (T.01-T.14, P.70: heads, not bodies) -> `core/dim_entity.csv`,
-`core/bridge_entity_code.csv`, `core/entity_name.csv` (`core/pipeline/build_entities.py`, checks E1-E8).
-Six entities (B.15, B.26 and B.33, each split at a lapse) are `proposed` until a person decides.
+`core/bridge_entity_code.csv`, `core/entity_name.csv` (`core/pipeline/build_entities.py`, checks E1-E10).
+B.15, B.26 and B.33 each name two bodies, split at a lapse; a person confirmed them as six separate bodies
+(D28, 2026-11-05). Where their work went in the lapse years is **lineage**, a link between bodies, never one
+ID: `meta/entity_lineage.csv` (8 links) with `meta/entity_lineage_evidence.csv` (the printed programme or
+activity on each side, re-found in PKKP L1 on every build, E9) -> `core/entity_lineage.csv`; every reused
+vote code is reachable through lineage (E10), and `get_entity` returns it.
 
 A state *as a place* (`dim_geo MY-03`) and a state *as a government* (an entity with code `MY-03`
 in `code_system = state_gov`) are different rows. Spending by Kelantan's government is not
@@ -619,6 +623,7 @@ spot-check of a sample → PR.
 | D22 | CI runs the offline check suite on every PR and blocks a script failure, a non-reproducing rebuild or a FAIL not in `qa/known_fails.csv` | checks must be enforced, not remembered | `qa/README.md` |
 | D23 | Raw documents (L0) kept on GitHub: assets of this private repository's `l0-archive` release, named by sha256, written only by `l0-archive.yml`; index `meta/l0_archive.csv`. A file with no recorded sha256 is accepted only if its cited amounts are on its cited pages (`meta/l0_identity.py`) | 13 GB is too big for git history (files over 100 MB); release assets keep clones light and need no other service | §2, `meta/l0_archive.py` |
 | D26 | A federal body is its supply vote: one ID through renames while printed every year; P vote = same body (incl. residual years); a B vote printed again after a lapse is a new body until a person links it; T heads and P.70 are spending heads, not bodies | codes are renumbered and reused; identity decided before the money is loaded | §4.5, `meta/entity_register.csv` |
+| D28 | B.15, B.26 and B.33 (votes printed again after a lapse) are six separate bodies, confirmed by a person; where the work went in the lapse years is lineage, a link between bodies with printed evidence on both sides, never one ID | in each gap the work was paid from another vote, and B.33's predecessor split two ways: joining a code's two bodies would hide a change of scope | §4.5, `meta/entity_lineage.csv` |
 | D27 | A flow only where the payer's accounts show money moving to a recipient; a class recipient (all states, all local authorities) is a group entity with geo `_unallocated`, never split by formula; recipients by code with a name guard | a map must not look more complete than the accounts | §5.2, `meta/flow_rule.csv` |
 
 ---

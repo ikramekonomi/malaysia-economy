@@ -5,13 +5,17 @@ Reads (never edits):
   meta/entity_register.csv   every entity_id ever issued, with the reason; never reused, never deleted
   meta/entity_code.csv       every readable code of an entity, with its years and a proof (the human decisions)
   meta/spending_head.csv     Tanggungan (T.*) and reserve (P.70) heads: spending heads, NOT bodies
+  meta/entity_lineage.csv    where a body's work went when its vote ended (D28): a link between two bodies, never one ID
+  meta/entity_lineage_evidence.csv  the printed programme/activity names that show each move, re-found in PKKP L1
   sources/pkkp/data/<year>/dim_maksud.csv            the votes printed in each audited volume, FY2009-2024
   sources/anggaran/data/<year>/fact_anggaran_maksud_<year>.csv   the votes printed in each budget book
 Writes (derived, rebuilt every run, committed so a reviewer can diff them):
   core/dim_entity.csv          one row per entity, its latest printed names
   core/bridge_entity_code.csv  code -> entity with validity years and proof
   core/entity_name.csv         every name each entity was printed under, by code and years
-  core/_validation_entity.csv  checks E1-E8
+  core/entity_lineage.csv      each lineage link with both bodies' names and its evidence lines summarised
+  core/entity_lineage_evidence.csv  each evidence line with the PKKP file, PDF page and printed page it was found on
+  core/_validation_entity.csv  checks E1-E10
 
 A code printed in a source with no entity for that year STOPS the build and is listed: an ID is issued
 only when a person decides whether it is a new body or a renumbered old one (rule D26).
@@ -174,6 +178,107 @@ def main():
     add("E8 identity decisions awaiting a person (decision_status=proposed)", "meta/entity_register.csv",
         "INFO" if prop else "PASS", f"{len(prop)}" + (f": {prop}" if prop else ""))
 
+    # E9 lineage (D28): every evidence line is printed in that year's PKKP volume under its code, the code names the
+    # stated body that year, a moved line is no longer printed under the old vote the next year, and every link
+    # joins two different registered bodies with evidence on both sides
+    lin = rows(os.path.join(META, "entity_lineage.csv"))
+    ev = rows(os.path.join(META, "entity_lineage_evidence.csv"))
+    printed = {}
+
+    def printed_in(y):
+        if y not in printed:
+            d = defaultdict(lambda: {})
+            p = os.path.join(REPO, "sources", "pkkp", "data", str(y), "fact_opex_detail.csv")
+            spent = defaultdict(float)
+            for r in (rows(p) if os.path.exists(p) else []):
+                for n in (r["program_name_bm"], r["aktiviti_name_bm"]):
+                    if n.strip():
+                        d[r["maksud_code"]].setdefault(n.strip(), r)
+                        if r["row_type"] in ("object_aktiviti", "object_program") and r["sebenar_rm"].strip():
+                            spent[(r["maksud_code"], n.strip())] += float(r["sebenar_rm"])
+            printed[y] = d
+            printed[(y, "spent")] = spent
+        return printed[y]
+
+    byid = {r["lineage_id"]: r for r in lin}
+    e9, ev_out = [], []
+    for r in lin:
+        if r["from_entity_id"] not in known or r["to_entity_id"] not in known or r["from_entity_id"] == r["to_entity_id"]:
+            e9.append(f"{r['lineage_id']} bodies {r['from_entity_id']}->{r['to_entity_id']}")
+        sides = {e["side"] for e in ev if e["lineage_id"] == r["lineage_id"]}
+        if not {"from", "to"} <= sides:
+            e9.append(f"{r['lineage_id']} evidence on {sorted(sides)} only")
+    for r in lin:
+        if r["moved_mid_year"] not in ("yes", "no"):
+            e9.append(f"{r['lineage_id']} moved_mid_year={r['moved_mid_year']!r}")
+        elif r["moved_mid_year"] == "yes":
+            fy = int(r["first_year"])
+            printed_in(fy)
+            if not any(printed[(fy, "spent")].get((e["maksud_code"], e["printed_name"]))
+                       for e in ev if e["lineage_id"] == r["lineage_id"] and e["side"] == "from"):
+                e9.append(f"{r['lineage_id']} declared moved_mid_year but the old vote spent nothing on it in {fy}")
+    if len(byid) != len(lin):
+        e9.append("duplicate lineage_id")
+    for e in ev:
+        L = byid.get(e["lineage_id"])
+        if not L:
+            e9.append(f"evidence for unknown {e['lineage_id']}")
+            continue
+        y, fy = int(e["year"]), int(L["first_year"])
+        want_y = fy - 1 if e["side"] == "from" else fy
+        want_e = L["to_entity_id"] if e["side"] == "to" else L["from_entity_id"]
+        tag = f"{e['lineage_id']} {e['side']} {y} {e['maksud_code']} {e['printed_name']!r}"
+        if e["side"] not in ("from", "to", "stays") or y != want_y:
+            e9.append(f"{tag}: side/year (want {want_y})")
+        if br.resolve("maksud_bekalan", e["maksud_code"], y) != [want_e]:
+            e9.append(f"{tag}: code names {br.resolve('maksud_bekalan', e['maksud_code'], y)} not {want_e}")
+        hit = printed_in(y).get(e["maksud_code"], {}).get(e["printed_name"])
+        if not hit:
+            e9.append(f"{tag}: not printed")
+            continue
+        left = ""
+        if e["side"] == "from":
+            # the old vote may still print the line in the move year: with no spending (the budget was moved
+            # before it was spent) or, for a move made during the year, with part of it (moved_mid_year=yes)
+            printed_in(fy)
+            left = printed[(fy, "spent")].get((e["maksud_code"], e["printed_name"]))
+            if left and L["moved_mid_year"] != "yes":
+                e9.append(f"{tag}: old vote still spent {left:,.2f} on it in {fy} (not declared moved_mid_year)")
+            left = "" if left is None else f"{left:.2f}"
+        ev_out.append(dict(lineage_id=e["lineage_id"], side=e["side"], year=y, maksud_code=e["maksud_code"],
+                           entity_id=want_e, printed_name=e["printed_name"], source_file=hit["source_file"],
+                           pdf_page=hit["pdf_page"], printed_page=hit["printed_page"],
+                           old_vote_actual_rm_in_first_year=left))
+    add("E9 every lineage link joins two bodies, each evidence line is printed in PKKP under that body's vote that "
+        "year, and the old vote spends nothing on a moved line the next year unless the move is declared mid-year", "meta/entity_lineage*.csv",
+        "PASS" if not e9 else "FAIL", f"{len(lin)} links, {len(ev)} evidence lines" + (f"; {e9[:8]}" if e9 else ""))
+
+    # E10 a vote code that named more than one body: the later body is reachable from the earlier one through
+    # lineage, so nobody meets a reused code without being told where the earlier body's work went
+    nxt = defaultdict(set)
+    for r in lin:
+        nxt[r["from_entity_id"]].add(r["to_entity_id"])
+
+    def reach(a, b):
+        seen, todo = {a}, [a]
+        while todo:
+            for n in nxt[todo.pop()] - seen:
+                seen.add(n)
+                todo.append(n)
+        return b in seen
+    e10, nre = [], 0
+    for (s_, c), lst in br.by.items():
+        runs = sorted({(yr(x["valid_from"], -10**9), x["entity_id"]) for x in lst if not x.get("scope")})
+        order = []
+        for _, eid in runs:
+            if not order or order[-1] != eid:
+                order.append(eid)
+        if s_ == "maksud_bekalan" and len(order) > 1:
+            nre += 1
+            e10 += [f"{c} {a}->{b}" for a, b in zip(order, order[1:]) if not reach(a, b)]
+    add("E10 a reused vote code: each later body is reachable from the earlier one through lineage", "meta/entity_lineage.csv",
+        "PASS" if not e10 else "FAIL", f"{nre} reused B codes" + (f"; no lineage {e10}" if e10 else ""))
+
     os.makedirs(CORE, exist_ok=True)
     write(os.path.join(CORE, "_validation_entity.csv"), ["check", "scope", "status", "detail"], out)
     if stop:
@@ -207,6 +312,22 @@ def main():
                                                          "valid_to", "scope", "proof"],
           sorted(codes, key=lambda c: (c["entity_id"], c["code_system"], yr(c["valid_from"], -10**9))))
     write(os.path.join(CORE, "entity_name.csv"), list(hist[0]), hist)
+    def nm(eid, y):
+        # the name the body's supply vote was printed under that year (a body is renamed; the link shows the
+        # name a reader meets on that page), else its register name
+        hit = [bm for (code, bm, en), ys in names[eid].items() if code.startswith("B.") and y in ys]
+        return hit[0] if hit else next(r["name_bm"] for r in reg if r["entity_id"] == eid)
+    lo = []
+    for r in lin:
+        mine = [e for e in ev_out if e["lineage_id"] == r["lineage_id"]]
+        lo.append(dict(lineage_id=r["lineage_id"], from_entity_id=r["from_entity_id"], from_name_bm=nm(r["from_entity_id"], int(r["first_year"]) - 1),
+                       to_entity_id=r["to_entity_id"], to_name_bm=nm(r["to_entity_id"], int(r["first_year"])), first_year=r["first_year"],
+                       moved_mid_year=r["moved_mid_year"],
+                       what_moved=r["what_moved"], note=r["note"],
+                       evidence="; ".join(f"{e['side']} {e['year']} {e['maksud_code']} '{e['printed_name']}' p{e['pdf_page']}"
+                                          for e in mine)))
+    write(os.path.join(CORE, "entity_lineage.csv"), list(lo[0]), lo)
+    write(os.path.join(CORE, "entity_lineage_evidence.csv"), list(ev_out[0]), ev_out)
     st = defaultdict(int)
     for r in out:
         st[r["status"]] += 1

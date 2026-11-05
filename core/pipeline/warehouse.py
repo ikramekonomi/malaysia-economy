@@ -54,6 +54,7 @@ class Warehouse:
         self.entity = {r["entity_id"]: r for r in _rows(os.path.join(CORE, "dim_entity.csv"))}
         self.entity_codes = _rows(os.path.join(CORE, "bridge_entity_code.csv"))
         self.entity_names = _rows(os.path.join(CORE, "entity_name.csv"))
+        self.entity_lineage = _rows(os.path.join(CORE, "entity_lineage.csv"))
         self.spending_heads = {r["code"]: r for r in _rows(os.path.join(META, "spending_head.csv"))}
         fl = os.path.join(CORE, "fact_money_flow.csv")
         self.flows = _rows(fl) if os.path.exists(fl) else []

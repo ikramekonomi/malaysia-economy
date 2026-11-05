@@ -6,4 +6,6 @@ E4 every vote printed in PKKP FY2009-2024 resolves to exactly one entity,sources
 E5 every vote printed in an Anggaran book resolves at the book's year,sources/anggaran,PASS,206 code-books
 E6 every code link carries a proof (a renumbering cites its evidence),meta/entity_code.csv,PASS,112 links
 "E7 entity_type, gfs_sector and code_system in their vocabularies; parents registered",meta,PASS,ok
-E8 identity decisions awaiting a person (decision_status=proposed),meta/entity_register.csv,INFO,"6: ['E000029 Kementerian Hal Ehwal Ekonomi', 'E000030 Kementerian Ekonomi', 'E000037 Kementerian Pembangunan Usahawan dan Koperasi', 'E000038 Kementerian Pembangunan Usahawan dan Koperasi', 'E000045 Kementerian Alam Sekitar dan Air', 'E000046 Kementerian Peralihan Tenaga dan Transformasi Air']"
+E8 identity decisions awaiting a person (decision_status=proposed),meta/entity_register.csv,PASS,0
+"E9 every lineage link joins two bodies, each evidence line is printed in PKKP under that body's vote that year, and the old vote spends nothing on a moved line the next year unless the move is declared mid-year",meta/entity_lineage*.csv,PASS,"8 links, 43 evidence lines"
+E10 a reused vote code: each later body is reachable from the earlier one through lineage,meta/entity_lineage.csv,PASS,3 reused B codes

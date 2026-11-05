@@ -27,24 +27,24 @@ E000025,vote,Perkhidmatan Am Perbendaharaan,Treasury General Services,E000024,ce
 E000026,vote,Peruntukan kepada Kumpulan Wang Terkanun,Contributions to Statutory Funds,E000024,central_gov,,12,confirmed
 E000027,ministry,Kementerian Luar Negeri,Ministry of Foreign Affairs,E000001,central_gov,,12,confirmed
 E000028,ministry,Kementerian Perpaduan Negara,Ministry of National Unity,E000001,central_gov,,12,confirmed
-E000029,ministry,Kementerian Hal Ehwal Ekonomi,Ministry of Economic Affairs,E000001,central_gov,,12,proposed
-E000030,ministry,Kementerian Ekonomi,Ministry of Economy,E000001,central_gov,,12,proposed
+E000029,ministry,Kementerian Hal Ehwal Ekonomi,Ministry of Economic Affairs,E000001,central_gov,,12,confirmed
+E000030,ministry,Kementerian Ekonomi,Ministry of Economy,E000001,central_gov,,12,confirmed
 E000031,ministry,Kementerian Perladangan dan Komoditi,Ministry of Plantation and Commodities,E000001,central_gov,,12,confirmed
 E000032,ministry,Kementerian Pertanian dan Keterjaminan Makanan,Ministry of Agriculture and Food Security,E000001,central_gov,,12,confirmed
 E000033,ministry,Kementerian Kemajuan Desa dan Wilayah,Ministry of Rural and Regional Development,E000001,central_gov,,12,confirmed
 E000034,ministry,Kementerian Sumber Asli dan Kelestarian Alam,Ministry of Natural Resources and Environmental Sustainability,E000001,central_gov,,12,confirmed
 E000035,ministry,"Kementerian Pelaburan, Perdagangan dan Industri","Ministry of Investment, Trade and Industry",E000001,central_gov,,12,confirmed
 E000036,ministry,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,Ministry of Domestic Trade and Cost of Living,E000001,central_gov,,12,confirmed
-E000037,ministry,Kementerian Pembangunan Usahawan dan Koperasi,,E000001,central_gov,,12,proposed
-E000038,ministry,Kementerian Pembangunan Usahawan dan Koperasi,Ministry of Entrepreneur and Cooperatives Development,E000001,central_gov,,12,proposed
+E000037,ministry,Kementerian Pembangunan Usahawan dan Koperasi,Ministry of Entrepreneur and Co-operative Development,E000001,central_gov,,12,confirmed
+E000038,ministry,Kementerian Pembangunan Usahawan dan Koperasi,Ministry of Entrepreneur and Cooperatives Development,E000001,central_gov,,12,confirmed
 E000039,ministry,Kementerian Kerja Raya,Ministry of Works,E000001,central_gov,,12,confirmed
 E000040,ministry,Kementerian Pengangkutan,Ministry of Transport,E000001,central_gov,,12,confirmed
 E000041,ministry,"Kementerian Tenaga, Teknologi Hijau dan Air","Ministry of Energy, Green Technology and Water",E000001,central_gov,,12,confirmed
 E000042,ministry,"Kementerian Sains, Teknologi dan Inovasi","Ministry of Science, Technology and Innovation",E000001,central_gov,,12,confirmed
 E000043,ministry,"Kementerian Pelancongan, Seni dan Budaya","Ministry of Tourism, Arts and Culture",E000001,central_gov,,12,confirmed
 E000044,ministry,Kementerian Wilayah Persekutuan,Ministry of Federal Territories,E000001,central_gov,,12,confirmed
-E000045,ministry,Kementerian Alam Sekitar dan Air,Ministry of Environment and Water,E000001,central_gov,,12,proposed
-E000046,ministry,Kementerian Peralihan Tenaga dan Transformasi Air,Ministry of Energy Transition and Water Transformation,E000001,central_gov,,12,proposed
+E000045,ministry,Kementerian Alam Sekitar dan Air,Ministry of Environment and Water,E000001,central_gov,,12,confirmed
+E000046,ministry,Kementerian Peralihan Tenaga dan Transformasi Air,Ministry of Energy Transition and Water Transformation,E000001,central_gov,,12,confirmed
 E000047,department,Suruhanjaya Perkhidmatan Pendidikan,Education Service Commission,E000001,central_gov,,12,confirmed
 E000048,ministry,Kementerian Pendidikan,Ministry of Education,E000001,central_gov,,12,confirmed
 E000049,ministry,Kementerian Kesihatan,Ministry of Health,E000001,central_gov,,12,confirmed

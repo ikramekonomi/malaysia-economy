@@ -1,0 +1,44 @@
+lineage_id,side,year,maksud_code,printed_name
+L01,from,2017,B.06,UNIT PERANCANG EKONOMI (UPE)
+L01,from,2017,B.06,JABATAN PERANGKAAN
+L01,to,2018,B.15,Unit Perancang Ekonomi (UPE)
+L01,to,2018,B.15,Jabatan Perangkaan
+L02,from,2020,B.15,Perancangan Ekonomi
+L02,from,2020,B.15,Jabatan Perangkaan Malaysia
+L02,to,2021,B.06,Unit Perancang Ekonomi (UPE)
+L02,to,2021,B.06,Jabatan Perangkaan Malaysia (DOSM)
+L03,from,2022,B.06,Unit Perancang Ekonomi (UPE)
+L03,from,2022,B.06,Jabatan Perangkaan Malaysia (DOSM)
+L03,from,2022,B.06,Majlis Pembangunan Wilayah Ekonomi Pantai Timur (ECERDC)
+L03,from,2022,B.06,Pihak Berkuasa Wilayah Pembangunan Iskandar (IRDA)
+L03,to,2023,B.15,Unit Perancang Ekonomi (UPE)
+L03,to,2023,B.15,Jabatan Perangkaan Malaysia (DOSM)
+L03,to,2023,B.15,Majlis Pembangunan Wilayah Ekonomi Pantai Timur (ECERDC)
+L03,to,2023,B.15,Pihak Berkuasa Wilayah Pembangunan Iskandar (IRDA)
+L04,from,2009,B.26,SURUHANJAYA KOPERASI MALAYSIA
+L04,to,2010,B.25,SURUHANJAYA KOPERASI MALAYSIA (SKM)
+L05,from,2009,B.26,MAJLIS AMANAH RAKYAT (MARA)
+L05,to,2010,B.22,MAJLIS AMANAH RAKYAT (MARA)
+L06,from,2017,B.25,Pembangunan Koperasi
+L06,from,2017,B.25,Suruhanjaya Koperasi Malaysia (SKM)
+L06,from,2017,B.25,Maktab Koperasi Malaysia (MKM)
+L06,to,2018,B.26,Pembangunan Koperasi
+L06,to,2018,B.26,Suruhanjaya Koperasi Malaysia (SKM)
+L06,to,2018,B.26,Maktab Koperasi Malaysia (MKM)
+L07,from,2022,B.33,PENGURUSAN AIR DAN PEMBENTUNGAN
+L07,from,2022,B.33,PENGURUSAN ALAM SEKITAR DAN PERUBAHAN IKLIM
+L07,from,2022,B.33,Bekalan Air Ibu Pejabat
+L07,from,2022,B.33,Institut Penyelidikan Air Kebangsaan Malaysia (NAHRIM)
+L07,to,2023,B.23,PENGURUSAN AIR DAN PEMBENTUNGAN
+L07,to,2023,B.23,PENGURUSAN ALAM SEKITAR DAN PERUBAHAN IKLIM
+L07,to,2023,B.23,Bekalan Air Ibu Pejabat
+L07,to,2023,B.23,Institut Penyelidikan Air Kebangsaan Malaysia (NAHRIM)
+L08,from,2023,B.23,PENGURUSAN AIR DAN PEMBENTUNGAN
+L08,from,2023,B.23,PEMBANGUNAN TENAGA
+L08,from,2023,B.23,Bekalan Air Ibu Pejabat
+L08,from,2023,B.23,Tenaga Lestari
+L08,to,2024,B.33,PENGURUSAN AIR DAN PEMBENTUNGAN
+L08,to,2024,B.33,PEMBANGUNAN TENAGA
+L08,to,2024,B.33,Bekalan Air Ibu Pejabat
+L08,to,2024,B.33,Tenaga Lestari
+L08,stays,2024,B.23,PENGURUSAN ALAM SEKITAR DAN PERUBAHAN IKLIM
