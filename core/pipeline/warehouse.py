@@ -55,6 +55,8 @@ class Warehouse:
         self.entity_codes = _rows(os.path.join(CORE, "bridge_entity_code.csv"))
         self.entity_names = _rows(os.path.join(CORE, "entity_name.csv"))
         self.spending_heads = {r["code"]: r for r in _rows(os.path.join(META, "spending_head.csv"))}
+        self.bases = {r["code"] for r in _rows(os.path.join(META, "code_list.csv")) if r["code_list"] == "basis"}
+        self.breakdowns = {r["breakdown_key"] for r in _rows(os.path.join(CORE, "dim_breakdown.csv"))}
         self.caveats = {r["caveat_id"]: r for r in _rows(os.path.join(META, "caveat.csv"))}
         self.derivations = {r["derivation_id"]: r for r in _rows(os.path.join(META, "derivation.csv"))}
         self.registry = _rows(os.path.join(REPO, "docs", "registry", "series_seed.csv"))
@@ -146,8 +148,8 @@ class Warehouse:
             out.append("CV7")
         if "leaf_total_mismatch" in flags:
             out.append("CV21")
-        if r["basis"] == "audited" and ind.startswith("federal_gov."):
-            if r["l1_ref"].startswith("curated/"):
+        if r["edition_id"].startswith("pkkp:") and ind.startswith("federal_gov."):
+            if r["l1_ref"].startswith("curated/") and r["basis"] == "audited":
                 out.append("CV16")
             src = r["edition_id"].split(":", 1)[1]
             if not src.lower().endswith(".pdf"):  # no volume cited: the year's own volume
@@ -166,6 +168,9 @@ class Warehouse:
         if ind == "credit.loans.banking_system":
             out.append("CV20")
         return out
+
+    def entity_of_federal_gov(self):
+        return next((c["entity_id"] for c in self.entity_codes if c["code_system"] == "federal_gov"), "")
 
     def cite(self, r):
         """Everything a returned number must carry (docs/DATA_MODEL.md §11 contract)."""
@@ -275,9 +280,12 @@ class Warehouse:
             if len(a["period_code"]) != len(b["period_code"]):
                 raise Refused("different frequencies")
             pa, pb = a["edition_id"].split(":")[0], b["edition_id"].split(":")[0]
-            if pa != pb or a["basis"] != b["basis"]:
-                raise Refused(f"growth compares one publisher's series with itself; got {pb} ({b['basis']}) -> "
-                              f"{pa} ({a['basis']}). Take both years from the same publisher (get_series publisher=...)")
+            if pa != pb:
+                raise Refused(f"growth compares one publisher's series with itself; got {pb} -> {pa}. Take both years "
+                              "from the same publisher (get_series publisher=...)")
+            if a["basis"] != b["basis"]:
+                raise Refused(f"growth compares one basis with itself; got {b['basis']} -> {a['basis']}. For budget "
+                              "against outcome in one year use derive('difference')")
             if a["period_code"] <= b["period_code"]:
                 raise Refused(f"growth is from the earlier period (second input) to the later (first input); got "
                               f"{b['period_code']} -> {a['period_code']}")
@@ -305,6 +313,9 @@ class Warehouse:
             cv.append("CV14")
         if operation == "growth" and ia["price_basis"] == "current":
             unit += " (nominal)"
+        if operation == "growth" and a["indicator_code"].startswith("federal_gov.vote.") \
+                and a["entity_id"] != self.entity_of_federal_gov():
+            cv.append("CV24")
         return {"operation": operation, "value": fmt(value, 6), "unit": unit, "basis": "derived",
                 "derivation_id": dv, "formula": self.derivations[dv]["formula"], "derived_from": [a_id, b_id],
                 "inputs": [self.cite(a), self.cite(b)],

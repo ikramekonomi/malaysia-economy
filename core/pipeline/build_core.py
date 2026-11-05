@@ -59,16 +59,20 @@ def rows(path):
 _BRIDGE = None
 
 
-def entity(system, code, year):
-    """The entity_id of a readable code in a year (core/bridge_entity_code.csv, built by build_entities.py).
-    Stops when the code resolves to no entity or to two: the spine is the only place identity is decided."""
+def entity(system, code, year, scope=""):
+    """The entity_id of a readable code in a year (core/bridge_entity_code.csv, built by build_entities.py); a
+    row scoped to the source (e.g. anggaran:2024) wins for that source. Stops when the code resolves to no
+    entity or to two: the spine is the only place identity is decided."""
     global _BRIDGE
     if _BRIDGE is None:
         _BRIDGE = rows(os.path.join(REPO, "core", "bridge_entity_code.csv"))
     y = int(str(year)[:4])
-    hit = sorted({c["entity_id"] for c in _BRIDGE if c["code_system"] == system and c["code"] == code
-                  and (not c["valid_from"] or int(c["valid_from"]) <= y)
-                  and (not c["valid_to"] or y <= int(c["valid_to"]))})
+
+    def hits(sc):
+        return sorted({c["entity_id"] for c in _BRIDGE if c["code_system"] == system and c["code"] == code
+                       and c.get("scope", "") == sc and (not c["valid_from"] or int(c["valid_from"]) <= y)
+                       and (not c["valid_to"] or y <= int(c["valid_to"]))})
+    hit = (hits(scope) if scope else []) or hits("")
     if len(hit) != 1:
         sys.exit(f"build_core: {system}:{code} in {year} resolves to {hit or 'no entity'} "
                  "(run core/pipeline/build_entities.py; a new code needs a person, rule D26)")
@@ -424,14 +428,14 @@ ANGGARAN = os.path.join(REPO, "sources", "anggaran", "data")
 OPEX_BASIS = {"sebenar_rm": "audited", "anggaran_asal_rm": "budget_estimate", "anggaran_dipinda_rm": "revised_estimate"}
 
 
-def _vote(code, year, heads):
+def _vote(code, year, heads, scope=""):
     """(entity_id, breakdown_key) of a printed vote code: its body (rule D26), or the federal government with
     the head as breakdown for Tanggungan (T.xx) and the contingency reserve (P.70)."""
     if code in heads:
         kind = "charged_head" if heads[code]["kind"] == "charged" else "reserve_head"
         return entity("federal_gov", "MY", year), f"{kind}={code}"
     system = {"B": "maksud_bekalan", "P": "maksud_pembangunan"}[code[0]]
-    return entity(system, code, year), "_total"
+    return entity(system, code, year, scope), "_total"
 
 
 def build_votes(obs):
@@ -494,19 +498,22 @@ def build_votes(obs):
         rel = os.path.relpath(path, REPO)
         book = int(os.path.basename(path)[-8:-4])
         rs = list(enumerate(rows(path), start=2))
-        totals = {(r["maksud_code"], r["measure"]) for _, r in rs if r["row_type"] == "total"
-                  and r["component"] in ("mengurus", "pembangunan")}
+        totals = {(r["maksud_code"], r["measure"], r["component"]) for _, r in rs if r["row_type"] == "total"}
         for i, r in rs:
             code, comp = r["maksud_code"], r["component"]
             want = "mengurus" if code[0] in "BT" else "pembangunan"
-            if comp != want or not (r["row_type"] == "total" or (code, r["measure"]) not in totals):
+            # the 2024 and 2025 books print a Tanggungan head with no mengurus line: its operating total is the
+            # head's JUMLAH (= emolumen + lain); the verifier found 112 rows missed without this
+            if code[0] in "BT" and comp == "jumlah" and (code, r["measure"], "mengurus") not in totals:
+                comp = want
+            if comp != want or not (r["row_type"] == "total" or (code, r["measure"], want) not in totals):
                 continue
             m = re.fullmatch(r"(anggaran|anggaran_asal|sebenar)_(\d{4})", r["measure"])
             basis = "actual" if m.group(1) == "sebenar" else "budget_estimate"
             v = dec(r["amount_rm"])
             if v is None:
                 continue
-            ent_id, bk = _vote(code, book, heads)
+            ent_id, bk = _vote(code, book, heads, scope=f"anggaran:{book}")
             obs.add(indicator_code="federal_gov.vote.opex" if want == "mengurus" else "federal_gov.vote.devex",
                     geo_code="MY", period_code=m.group(2), breakdown_key=bk, entity_id=ent_id, basis=basis,
                     edition_id=f"anggaran:{r['source_file']}", vintage=str(book), value=v,
@@ -747,6 +754,8 @@ def build_flags(obs):
             l1 = rows(os.path.join(REPO, path))[int(n) - 2]
             d = gaps.get((l1["maksud_code"], l1["year"]))
             if d:
+                if d["classification"] == "ours_suspected":
+                    r["reliability"] = "low"  # our extraction of the JUMLAH line is suspected (verifier M2)
                 out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "leaf_total_mismatch",
                             "note": f"printed JUMLAH {d['printed_rm']} vs project lines {d['computed_rm']} "
                                     f"({d['classification']}): {d['diagnosis'][:300]}",

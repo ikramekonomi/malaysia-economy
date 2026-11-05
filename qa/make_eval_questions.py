@@ -613,6 +613,29 @@ q("5", "Growth of Health's actuals 2021->2024 taken from two budget books (2024 
    "b": vote("opex", 2021, "B.42", basis="actual", publisher="anggaran")},
   "refused", "same book", kind="trap_incomparable")
 
+# regressions from the blind verifier of Phase 3.2 (2026-11-05)
+q("5", "Who spent B.33's 2021 operating actual as printed in the 2024 budget book (the lapsed KASA vote)?",
+  "get_series", vote("opex", 2021, "E000045", basis="actual", publisher="anggaran"), "value",
+  s(ag(2024, "B.33", "sebenar_2021", "mengurus")), kind="trap_identity")
+q("5", "Did any body hold B.64 in 2019 (Higher Education folded into Education)?", "get_entity", ent("B.64", 2019),
+  "not_held", kind="trap_identity")
+q("5", "Did any body hold B.32 in 2024 (the 2024 book only reprints the lapsed vote)?", "get_entity", ent("B.32", 2024),
+  "not_held", kind="trap_identity")
+q("5", "What was debt service (T.13) budgeted at in the 2025 budget book?", "get_series",
+  vote("opex", 2025, breakdown="charged_head=T.13", basis="budget_estimate", publisher="anggaran"), "value",
+  s(ag(2025, "T.13", "anggaran_2025", "jumlah")))
+q("5", "Does Health's FY2015 original estimate say the PKKP volume is not archived?", "get_series",
+  vote("opex", 2015, "B.42", basis="budget_estimate"), "caveat", "CV17")
+q("5", "Is P.47's FY2009 development total (our extraction suspected) marked low reliability?", "get_series",
+  vote("devex", 2009, "P.47"), "field:reliability", "low", kind="trap_source_defect")
+q("5", "Does growth of Education's spending 2014->2015 warn that its scope changed?", "derive_chain",
+  {"operation": "growth", "a": vote("opex", 2015, "E000048"), "b": vote("opex", 2014, "E000048")}, "caveat", "CV24")
+q("5", "Growth from Health's 2024 original estimate to its 2024 audited spending?", "derive_chain",
+  {"operation": "growth", "a": vote("opex", 2024, "B.42"), "b": vote("opex", 2024, "B.42", basis="budget_estimate")},
+  "refused", "one basis", kind="trap_incomparable")
+q("5", "Health's audited 2024 operating spending, asked with basis in capitals?", "get_series",
+  {**vote("opex", 2024, "B.42"), "basis": "AUDITED"}, "value", s(pk("fact_opex_maksud", "B.42", 2024, "sebenar_rm")))
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()

@@ -115,7 +115,7 @@ Q113,fact,get_distribution,share_bracket,99;99,99;99,PASS
 Q114,fact,get_distribution,share_bracket,99;100,99;100,PASS
 Q115,trap_incomparable,get_distribution,share_refused,,threshold -5 is not a positive amount in RM per month,PASS
 Q116,trap_small_area,compare_geos,refused_ranking,,"places below state level (district) are not compared, banded or ranked (decision D10): most of their figures are survey estimates without published sampling error, and the rest are modelled from them; use get_series for one area",PASS
-Q117,trap_incomparable,derive_chain,refused,publisher,growth compares one publisher's series with itself; got bnm (actual) -> pkkp (audited). Take both years from the same publisher (get_series publisher=...),PASS
+Q117,trap_incomparable,derive_chain,refused,publisher,growth compares one publisher's series with itself; got bnm -> pkkp. Take both years from the same publisher (get_series publisher=...),PASS
 Q118,trap_incomparable,derive_chain,refused,compensation_of_employees,"per_employed is declared for na.compensation_of_employees only (rule DV6): other amounts are not paid to employed persons, so dividing them by employment means nothing",PASS
 Q119,trap_missing,get_series,not_held,,"geo must be a code or a year, not list",PASS
 Q120,fact,get_series,row_count,3,3,PASS
@@ -172,3 +172,12 @@ Q170,fact,derive_chain,value,-1198483853,-1198483853,PASS
 Q171,trap_identity,get_series,not_held,,"T.13 is a spending head, not a body: ask for breakdown='charged_head=T.13' (its entity is the federal government)",PASS
 Q172,trap_identity,derive_chain,refused,one body with itself,growth compares one body with itself; got E000029 -> E000030 (a vote code can name different bodies in different years: see get_entity),PASS
 Q173,trap_incomparable,derive_chain,refused,same book,each Anggaran book restates past years to its own votes (caveat CV22): take both years from the same book,PASS
+Q174,trap_identity,get_series,value,546967589,546967589,PASS
+Q175,trap_identity,get_entity,not_held,,no body held B.64 in 2019 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
+Q176,trap_identity,get_entity,not_held,,no body held B.32 in 2024 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
+Q177,fact,get_series,value,54700000500,54700000500,PASS
+Q178,fact,get_series,caveat,CV17,"CV17,CV23,COVERAGE",PASS
+Q179,trap_source_defect,get_series,field:reliability,low,low,PASS
+Q180,fact,derive_chain,caveat,CV24,"CV17,CV23,CV24",PASS
+Q181,trap_incomparable,derive_chain,refused,one basis,growth compares one basis with itself; got budget_estimate -> audited. For budget against outcome in one year use derive('difference'),PASS
+Q182,fact,get_series,value,33951697947,33951697947,PASS

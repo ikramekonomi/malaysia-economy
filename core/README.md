@@ -10,7 +10,7 @@ hand (golden rule 1). CI rebuilds them on every PR and fails if the committed fi
 python3 core/pipeline/build_entities.py           # dim_entity + bridge_entity_code + entity_name (Phase 3)
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 173 questions against the agent tools
+python3 qa/run_eval.py                            # 182 questions against the agent tools
 python3 qa/reproduce_curated.py                   # curated tables rebuilt from core, digit for digit
 ```
 
@@ -23,9 +23,9 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_period.csv` | 618 | years, months (monthly from 1980-01 for national CPI) |
 | `dim_indicator.csv` | 65 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
 | `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
-| `fact_observation.csv` | 138,399 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
+| `fact_observation.csv` | 138,511 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
 | `dim_entity.csv` | 59 | who: the federal government, 13 state governments, 45 federal votes (Phase 3) |
-| `bridge_entity_code.csv` | 99 | readable code → entity, with validity years and proof |
+| `bridge_entity_code.csv` | 105 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 
@@ -206,8 +206,11 @@ The identity rule (decision D26), declared before any spending is loaded against
   `proposed`; the tools say so on every answer about them.
 * **Renumberings link only with a proof:** B.41→B.63 (Education) and B.49→B.64 (Higher Education),
   approved before the register (`curated/pipeline/build_ministry_fiscal.py`).
-* **Budget books do not extend a lineage:** the 2024 and 2025 books reprint B.32 (Federal
-  Territories, ended 2022) with zeros; the code resolves to the old ministry, nothing more.
+* **Budget books do not extend a lineage, and can name an older holder:** a book is tabled before its year,
+  so it can reprint a lapsed vote. The 2024 book prints B.33 as the lapsed KASA (`Kementerian Alam Sekitar
+  dan Air**`, zero estimates), not its successor; the 2024 and 2025 books reprint B.32 (Federal
+  Territories, ended 2022) with zeros. Such reprints are `scope`d rows of `meta/entity_code.csv`
+  (`anggaran:2024`): a scoped row wins for that source only, so `get_entity('B.32', 2024)` is not held.
 
 A code printed in a source with no entity for that year **stops the build** and is listed: an ID is
 issued only by a person. Checks E1-E8 are in `_validation_entity.csv`. Core's state and federal rows
@@ -217,7 +220,7 @@ code ever named when no year is given.
 
 ## Federal spending by who spends it (Phase 3, 2026-11-05)
 
-`federal_gov.vote.opex` and `federal_gov.vote.devex`: 3,787 observations, one per vote, year, basis and
+`federal_gov.vote.opex` and `federal_gov.vote.devex`: 3,899 observations, one per vote, year, basis and
 edition, with `entity_id` = the vote's body (46 bodies). The T heads (Tanggungan) and P.70 sit under the
 federal government with breakdown `charged_head=T.xx` / `reserve_head=P.70`. Each figure is the vote's
 printed total, cited to its volume and page:
@@ -226,7 +229,7 @@ printed total, cited to its volume and page:
 |---|---|---|
 | PKKP `fact_opex_maksud`, FY2009-2024 | audited (sebenar); budget_estimate (anggaran asal); revised_estimate (anggaran dipinda), all printed in the audited volume | 814 each |
 | PKKP `fact_devex_maksud` (Lampiran 2, the vote's JUMLAH line), FY2009-2024 | audited | 453 |
-| Anggaran Perbelanjaan books 2024-2026 (B/T: mengurus; P: pembangunan) | budget_estimate (the book's year and the year before); actual (MOF, the two years before) | 892 |
+| Anggaran Perbelanjaan books 2024-2026 (B/T: mengurus, or a head's JUMLAH where no mengurus line is printed; P: pembangunan) | budget_estimate (the book's year and the year before); actual (MOF, the two years before) | 1,004 |
 
 * **They add up** (check C16): every year's audited votes plus heads equal the printed operating total
   after the transfer to the Development Fund, and the development votes the printed grand total, within RM1,
@@ -237,6 +240,10 @@ printed total, cited to its volume and page:
   Pendidikan Tinggi); only the vote total is loaded, and the build checks it is the sum of the blocks.
 * **A budget book restates the past** (caveat CV22): the 2025 book's 2024 estimates differ from the 2024
   estimates as tabled on the 11 votes reorganised in December 2023; both are kept, each with its edition.
+* **Caveats:** CV23 on every vote figure (gross, not placed; B.12 carries the transfer to the Development
+  Fund, so operating plus development votes double count it); CV24 on growth of one body (scope changes
+  without a change of name); CV21 for the FY2009 mismatches (`ours_suspected` also `reliability=low`).
+  Blind verifier: `qa/audits/2026-11-05_phase3_vote_verifier.md`.
 * **Reproduces curated:** `qa/reproduce_curated.py` rebuilds every row of `curated/fact_ministry_fiscal.csv`
   (1,267) through the tools: 1,261 to the sen; 6 FY2009 development rows differ because curated sums the
   project lines and core takes the printed total, each EXPLAINED by curated's own register.
