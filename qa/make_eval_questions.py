@@ -153,7 +153,7 @@ q("6", "Which indicator counts doctors?", "find_indicator", {"text": "doctors pe
   "health.staff")
 q("6", "What is the obesity rate in each state (NHMS, not held)?", "find_indicator", {"text": "obesity prevalence"},
   "not_held", kind="trap_missing")
-q("5", "Show the budget-vs-actual gap view.", "get_gap_view", {"name": "gap_budget_vs_actual"}, "not_held",
+q("5", "Show the audit-recurrence gap view (not built yet).", "get_gap_view", {"name": "gap_audit_recurrence"}, "not_held",
   kind="trap_missing")
 q("5", "Which documents are still expected for theme 6?", "list_documents", {"theme": "6", "status": "expected"},
   "nonempty")
@@ -223,6 +223,94 @@ q("5", "Does the answer say MOF's per-state capitation figure is not the audited
 q("5", "Is MOF's split of the 2020 Concurrent List grant by state used, though it does not add up to the audited line?",
   "get_gap_view", {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2020", "transfer": "concurrent_list"},
   "field:by_state_status", "lampiran_e_unreconciled", kind="trap_missing")
+
+
+
+def pk_opex(year, code, col):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_opex_maksud.csv"), newline="") as fh:
+        return next(Decimal(r[col]) for r in csv.DictReader(fh) if r["maksud_code"] == code)
+
+
+_a, _rv = pk_opex("2022", "B.45", "sebenar_rm"), pk_opex("2022", "B.45", "anggaran_dipinda_rm")
+q("5", "What share of its revised 2022 operating estimate did the Youth and Sports ministry (B.45) spend?",
+  "get_gap_view", {"name": "gap_budget_vs_actual", "year": "2022", "entity": "B.45"},
+  "row_field:flow=opex:execution_rate", s((_a / _rv).quantize(Decimal("0.0001"))))
+q("5", "How much of its revised 2022 operating estimate did B.45 leave unspent?", "get_gap_view",
+  {"name": "gap_budget_vs_actual", "year": "2022", "entity": "B.45"}, "row_field:flow=opex:unspent_rm", s(_rv - _a))
+q("5", "Does the budget-vs-actual view say PETRA's 2024 vote had no original estimate in the accounts?",
+  "get_gap_view", {"name": "gap_budget_vs_actual", "year": "2024", "entity": "B.33"},
+  "row_field:flow=opex:estimate_original_pkkp", "0", kind="trap_identity")
+
+
+
+def pk_rev(year, item, col):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_revenue.csv"), newline="") as fh:
+        return next(Decimal(r[col]) for r in csv.DictReader(fh) if r["level"] in ("0", "1") and r["item_bm"].strip() == item)
+
+
+q("5", "What was federal tax revenue in 2024, audited?", "get_gap_view",
+  {"name": "gap_revenue_estimate_vs_collected", "year": "2024"}, "row_field:breakdown_key=hasil_kod=60000:actual_audited",
+  s(pk_rev("2024", "HASIL CUKAI", "sebenar_rm")))
+q("5", "Did federal tax revenue in 2022 come in on its original estimate?", "get_gap_view",
+  {"name": "gap_revenue_estimate_vs_collected", "year": "2022"},
+  "row_field:breakdown_key=hasil_kod=60000:collection_rate_original",
+  s((pk_rev("2022", "HASIL CUKAI", "sebenar_rm") / pk_rev("2022", "HASIL CUKAI", "anggaran_asal_rm")).quantize(Decimal("0.0001"))))
+q("5", "Does the revenue book's 2024 total agree with the audited accounts to the ringgit?", "get_gap_view",
+  {"name": "gap_revenue_estimate_vs_collected", "year": "2024"}, "row_field:breakdown_key=_total:book_vs_pkkp_actual_status",
+  "differ")
+
+def mof_line(edition, line, year):
+    path = os.path.join(REPO, "sources", "mof-fiscal-outlook", "data", f"{edition}_public_finance_stats", "fact_headline.csv")
+    with open(path, newline="") as fh:
+        return next(Decimal(r["amount_rm_juta"]) * 1000000 for r in csv.DictReader(fh)
+                    if r["line"] == line and r["target_year"] == str(year) and r["basis"] == "official_actual")
+
+
+_rev20 = pk_rev("2020", "HASIL", "sebenar_rm")
+q("5", "By how much does MOF's 2020 federal revenue differ from the audited figure?", "get_gap_view",
+  {"name": "gap_reported_vs_audited", "year": "2020"},
+  "row_field:indicator_code=federal_gov.revenue.total:mof_minus_pkkp_rm", s(mof_line(2022, "revenue", 2020) - _rev20))
+q("5", "What was audited federal revenue in 2020 in the reported-vs-audited view?", "get_gap_view",
+  {"name": "gap_reported_vs_audited", "year": "2020"}, "row_field:indicator_code=federal_gov.revenue.total:pkkp_audited",
+  s(_rev20))
+q("5", "Do MOF and the audited accounts agree on 2022 operating spending?", "get_gap_view",
+  {"name": "gap_reported_vs_audited", "year": "2022"},
+  "row_field:indicator_code=federal_gov.expenditure.opex:mof_vs_pkkp_status", "agree")
+
+
+def pk_memo(year, label):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_memorandum.csv"), newline="") as fh:
+        return next(Decimal(r["amount_rm"]) for r in csv.DictReader(fh)
+                    if r["year"] == year and r["line_item_bm"].strip() == label and "LIABILITI" in r["section"].upper())
+
+
+_d24, _p24 = pk_memo("2024", "Hutang Persekutuan"), pk_memo("2024", "Liabiliti Inisiatif Pembiayaan Swasta")
+q("5", "What was federal government debt at the end of 2024, audited?", "get_gap_view",
+  {"name": "gap_obligations_growth", "year": "2024"}, "row_field:instrument=debt:amount_rm", s(_d24))
+q("5", "What were PFI liabilities at end-2024 as a share of federal debt?", "get_gap_view",
+  {"name": "gap_obligations_growth", "year": "2024"}, "row_field:instrument=pfi:ratio_to_debt",
+  s((_p24 / _d24).quantize(Decimal("0.0001"))))
+q("5", "Did PFI liabilities grow faster than federal debt in 2024?", "get_gap_view",
+  {"name": "gap_obligations_growth", "year": "2024"}, "row_field:instrument=pfi:status", "grew_slower_than_debt")
+
+
+def rmk12(jadual, section, line, measure):
+    with open(os.path.join(REPO, "sources", "rmk", "data", "rmk12", "fact_rmk12_lampiran.csv"), newline="",
+              encoding="utf-8") as fh:
+        return next(Decimal(r["value"]) for r in csv.DictReader(fh) if r["jadual"] == jadual and
+                    r["section_bm"] == section and r["line_bm"] == line and r["measure"] == measure)
+
+
+q("5", "What was RMKe-12's 2025 target for Selangor's real GDP?", "get_gap_view",
+  {"name": "gap_target_vs_outcome", "geo": "MY-10", "year": "2025"}, "row_field:indicator_code=gdp.real:target",
+  s(rmk12("5", "Selangor", "KDNK", "sasaran_2025") * 1000000))
+q("5", "What average growth did RMKe-12 target for Sabah's real GDP over 2021-2025?", "get_gap_view",
+  {"name": "gap_target_vs_outcome", "geo": "MY-12", "year": "2021/2025"},
+  "row_field:indicator_code=gdp.real.avg_growth:target", s(rmk12("5", "Sabah", "KDNK", "sasaran_purata_rmk12_2021_2025")))
+q("5", "What federal revenue did RMKe-12 target for 2025?", "get_gap_view",
+  {"name": "gap_target_vs_outcome", "geo": "MY", "year": "2025"},
+  "row_field:indicator_code=federal_gov.revenue.total:target", s(rmk12("10", "", "Hasil", "sasaran_2025") * 1000000))
+
 
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",

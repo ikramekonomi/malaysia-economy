@@ -494,6 +494,16 @@ def build_votes(obs):
                     estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
                     pdf_page=r["pdf_page"], printed_page=r["printed_page"],
                     table_ref=f"{r['statement']} ({r['jumlah_label_bm']})", l1_ref=f"{rel}#row{i}")
+            # the same line's allocation column (Lampiran 2 'Anggaran'): the accounts' own year allocation, which
+            # is not the Budget book's original estimate (FY2024 RM85.2b against RM92.0b), so its own basis
+            a = dec(r["anggaran_jumlah_rm"])
+            if a is not None:
+                obs.add(indicator_code="federal_gov.vote.devex", geo_code="MY", period_code=year, breakdown_key=bk,
+                        entity_id=ent_id, basis="allocation", edition_id=f"pkkp:{r['source_file']}", vintage=year,
+                        value=a, value_printed=r["anggaran_jumlah_rm"], unit_printed="RM", precision_printed="0.01",
+                        estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                        pdf_page=r["pdf_page"], printed_page=r["printed_page"],
+                        table_ref=f"{r['statement']} ({r['jumlah_label_bm']}, Anggaran)", l1_ref=f"{rel}#row{i}")
     for path in sorted(glob.glob(os.path.join(ANGGARAN, "*", "fact_anggaran_maksud_*.csv"))):
         rel = os.path.relpath(path, REPO)
         book = int(os.path.basename(path)[-8:-4])
@@ -635,6 +645,222 @@ def build_federal_loans(obs, checks):
                            "PASS" if abs(d) <= Decimal("0.01") else "FAIL", f"states {detail} vs printed {total}"])
 
 
+# PKKP prints revenue categories by name; the Budget revenue book's section codes (D: gap_revenue method) name them
+REV_NAME_TO_KOD = {"HASIL CUKAI": "60000", "JUMLAH HASIL CUKAI": "60000",
+                   "HASIL BUKAN CUKAI": "70000", "JUMLAH HASIL BUKAN CUKAI": "70000",
+                   "TERIMAAN BUKAN HASIL": "80000", "JUMLAH TERIMAAN BUKAN HASIL": "80000",
+                   "HASIL WILAYAH PERSEKUTUAN": "90000", "JUMLAH HASIL WILAYAH PERSEKUTUAN": "90000",
+                   "JUMLAH HASIL WILAYAH-WILAYAH PERSEKUTUAN": "90000",
+                   "JUMLAH PELBAGAI TERIMAAN": "pelbagai_terimaan_2009", "HASIL": "_total", "JUMLAH HASIL": "_total"}
+REV_BASIS = {"anggaran_asal_rm": "budget_estimate", "anggaran_disemak_rm": "revised_estimate", "sebenar_rm": "audited"}
+
+
+OBLIGATION_LINES = {   # (file, printed label upper-cased) -> instrument; each year from its own volume
+    ("fact_memorandum.csv", "HUTANG AWAM"): "debt", ("fact_memorandum.csv", "HUTANG PERSEKUTUAN"): "debt",
+    ("fact_memorandum.csv", "LIABILITI INISIATIF PEMBIAYAAN SWASTA"): "pfi",
+    ("fact_memorandum.csv", "KOMITMEN KEWANGAN"): "commitments",
+    ("fact_guarantees.csv", "JUMLAH KOMITMEN JAMINAN"): "committed_guarantees",
+    ("fact_statutory_guarantees.csv", "JUMLAH JAMINAN PINJAMAN"): "loan_guarantees",
+    ("fact_statutory_guarantees.csv", "JUMLAH JAMINAN PENCARUM / PENDEPOSIT"): "deposit_guarantees",
+}
+
+
+def build_obligations(obs, checks):
+    """Federal obligations (Phase 5, gap_obligations_growth): stocks at 31 December from PKKP's memorandum accounts
+    and guarantee registers, FY2009-2024, each year from its own volume (method: core/pipeline/build_gap_obligations.py).
+    FY2009-2011 print no deposit-guarantee section: their register total is the loan guarantees. Check C19: one
+    figure per instrument and year."""
+    import glob
+    sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+    seen = defaultdict(list)
+    for d in sorted(glob.glob(os.path.join(PKKP, "*"))):
+        yr = os.path.basename(d)
+        if not yr.isdigit():
+            continue
+        for fname in ("fact_memorandum.csv", "fact_guarantees.csv", "fact_statutory_guarantees.csv"):
+            path = os.path.join(d, fname)
+            if not os.path.exists(path):
+                continue
+            rel = os.path.relpath(path, REPO)
+            for i, r in enumerate(rows(path), start=2):
+                if r["year"] != yr or not r["source_file"].startswith(yr):
+                    continue
+                if fname == "fact_memorandum.csv" and "LIABILITI" not in r["section"].upper():
+                    continue
+                label = (r.get("line_item_bm") or r.get("agensi_bm") or "").strip().upper()
+                inst = OBLIGATION_LINES.get((fname, label))
+                if fname == "fact_statutory_guarantees.csv" and int(yr) <= 2011 and label in (
+                        "JUMLAH JAMINAN", "JUMLAH JAMINAN BERKANUN") and r["row_type"] == "total":
+                    inst = "loan_guarantees"
+                if not inst:
+                    continue
+                col = "amount_rm" if fname == "fact_memorandum.csv" else "jumlah_rm"
+                v = dec(r[col])
+                if v is None:
+                    continue
+                seen[(inst, yr)].append(v)
+                obs.add(indicator_code=f"federal_gov.obligation.{inst}", geo_code="MY", period_code=yr,
+                        entity_id=entity("federal_gov", "MY", yr), basis="audited", edition_id=f"pkkp:{r['source_file']}",
+                        vintage=yr, value=v, value_printed=r[col], unit_printed="RM", precision_printed="0.01",
+                        estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                        pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"],
+                        l1_ref=f"{rel}#row{i}")
+    # contributor/depositor guarantees before the register printed them (FY2010-2011): Nota 10(b) 'Simpanan
+    # pendeposit di BSN, KWSG, KWSP dan LTH', the same concept (C21: where both are printed, note = register)
+    note_dep, agree = {}, []
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_other_notes.csv"))):
+        yr = os.path.basename(os.path.dirname(path))
+        rel = os.path.relpath(path, REPO)
+        for i, r in enumerate(rows(path), start=2):
+            if r["year"] == yr and r["source_file"].startswith(yr) and r["nota"].strip() == "10(b)" and \
+                    r["line_item_bm"].strip().lower().startswith("simpanan pendeposit") and dec(r["amount_rm"]) is not None:
+                note_dep[yr] = (i, rel, r)
+    for yr, (i, rel, r) in sorted(note_dep.items()):
+        v = dec(r["amount_rm"])
+        if ("deposit_guarantees", yr) in seen:
+            agree.append((yr, abs(seen[("deposit_guarantees", yr)][0] - v)))
+            continue
+        seen[("deposit_guarantees", yr)].append(v)
+        obs.add(indicator_code="federal_gov.obligation.deposit_guarantees", geo_code="MY", period_code=yr,
+                entity_id=entity("federal_gov", "MY", yr), basis="audited", edition_id=f"pkkp:{r['source_file']}",
+                vintage=yr, value=v, value_printed=r["amount_rm"], unit_printed="RM", precision_printed="1",
+                estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"] + " 10(b)",
+                l1_ref=f"{rel}#row{i}")
+    checks.append(["C21 deposit guarantees: Nota 10(b) equals the Jaminan Berkanun register where both are printed",
+                   "PKKP", "PASS" if agree and all(d <= 1 for _, d in agree) else "FAIL",
+                   ", ".join(f"FY{y} {d}" for y, d in agree) or "none compared"])
+    bad = {k: v for k, v in seen.items() if len(v) != 1}
+    checks.append(["C19 one printed figure per federal obligation and year (PKKP memorandum, own volume)", "PKKP",
+                   "PASS" if not bad else "FAIL", f"{len(seen)} instrument-years" + (f"; {bad}" if bad else "")])
+
+
+PLAN_STATE = {"Johor": "MY-01", "Kedah": "MY-02", "Kelantan": "MY-03", "Melaka": "MY-04", "Negeri Sembilan": "MY-05",
+              "Pahang": "MY-06", "Pulau Pinang": "MY-07", "Perak": "MY-08", "Perlis": "MY-09", "Selangor": "MY-10",
+              "Terengganu": "MY-11", "Sabah": "MY-12", "Sarawak": "MY-13", "WP Kuala Lumpur": "MY-14",
+              "WP Labuan": "MY-15"}
+PLAN_J10 = {"Hasil": "federal_gov.revenue.total", "Perbelanjaan Mengurus": "federal_gov.expenditure.opex",
+            "Perbelanjaan Pembangunan Kasar": "federal_gov.expenditure.devex",
+            "Tolak: Terimaan Balik Pinjaman": "federal_gov.expenditure.devex_loan_recovery",
+            "Perbelanjaan Pembangunan Bersih": "federal_gov.expenditure.devex_net",
+            "Baki Keseluruhan": "federal_gov.overall_balance", "Baki Semasa": "federal_gov.current_balance"}
+PLAN_J14 = {"Jumlah Guna Tenaga": ("lfs.employed", 1000), "Jumlah Tenaga Buruh": ("lfs.labour_force", 1000),
+            "Penganggur": ("lfs.unemployed", 1000), "Kadar Pengangguran, %": ("lfs.unemployment_rate", 1),
+            "Kadar Penyertaan Tenaga Buruh, %": ("lfs.participation_rate", 1)}
+
+
+def build_plan_targets(obs, checks):
+    """RMKe-12's 2025 targets (Phase 5, gap_target_vs_outcome; method in core/pipeline/build_gap_target.py), basis
+    target, from sources/rmk: GDP by state (level 2025 and the 2021/2025 average growth; the plan's KL row includes
+    Putrajaya, so it is MY-14 with breakdown geo_scope=MY-14+MY-16, never the KL total), federal finance and the
+    labour market (2025). Lines whose outcome core does not hold stay at L1."""
+    man = {r["file_name"]: r for r in rows(os.path.join(REPO, "sources", "rmk", "data", "_documents_manifest.csv"))}
+    path = os.path.join(REPO, "sources", "rmk", "data", "rmk12", "fact_rmk12_lampiran.csv")
+    rel = os.path.relpath(path, REPO)
+    n = 0
+    for i, r in enumerate(rows(path), start=2):
+        j, line, m = r["jadual"], r["line_bm"], r["measure"]
+        ind = per = None
+        geo, bk, v = "MY", "_total", dec(r["value"])
+        if j == "5" and line == "KDNK" and m in ("sasaran_2025", "sasaran_purata_rmk12_2021_2025"):
+            geo = PLAN_STATE[r["section_bm"]]
+            bk = "geo_scope=MY-14+MY-16" if geo == "MY-14" else "_total"
+            if m == "sasaran_2025":
+                ind, per, v = "gdp.real", "2025", v * 1000000
+            else:
+                ind, per = "gdp.real.avg_growth", "2021/2025"
+        elif j == "10" and line in PLAN_J10 and m == "sasaran_2025":
+            ind, per, v = PLAN_J10[line], "2025", v * 1000000
+        elif j == "10" and line == "% kepada KDNK" and m == "sasaran_2025":
+            # a range target: two observations, its lower and upper end as printed ('-3.5 ~ -3.0')
+            for b, x in (("bound=lower", r["value"]), ("bound=upper", r["value_hi"])):
+                n += 1
+                obs.add(indicator_code="federal_gov.overall_balance.pct_gdp", geo_code="MY", period_code="2025",
+                        breakdown_key=b, entity_id=entity("federal_gov", "MY", "2025"), basis="target",
+                        edition_id="rmk:rmk12.pdf", vintage="2021", value=dec(x), value_printed=r["value_printed"],
+                        unit_printed=r["unit_printed"], precision_printed="0.1", estimate_method="plan", reliability="ok",
+                        file_id=man["rmk12.pdf"]["sha256"], pdf_page=r["pdf_page"], printed_page=r["printed_page"],
+                        table_ref=f"RMKe-12 Lampiran Jadual {j}: {r['table_title_bm']}", l1_ref=f"{rel}#row{i}")
+            continue
+        elif j == "14" and line in PLAN_J14 and m == "sasaran_2025":
+            ind, mult = PLAN_J14[line]
+            per, v = "2025", v * mult
+        if not ind:
+            continue
+        n += 1
+        obs.add(indicator_code=ind, geo_code=geo, period_code=per, breakdown_key=bk, entity_id=entity(
+                    "federal_gov", "MY", per[-4:]) if ind.startswith("federal_gov.") else "_none",
+                basis="target", edition_id="rmk:rmk12.pdf", vintage="2021", value=v, value_printed=r["value_printed"],
+                unit_printed=r["unit_printed"], precision_printed={"RM juta": "1000000", "'000 orang": "100"}.get(
+                    r["unit_printed"], "0.1"),
+                estimate_method="plan", reliability="ok", file_id=man["rmk12.pdf"]["sha256"], pdf_page=r["pdf_page"],
+                printed_page=r["printed_page"], table_ref=f"RMKe-12 Lampiran Jadual {j}: {r['table_title_bm']}",
+                l1_ref=f"{rel}#row{i}")
+    checks.append(["C22 RMKe-12 targets loaded (15 state GDP levels and growth, 7 federal + the %-of-GDP range, 5 "
+                   "labour)", "rmk", "PASS" if n == 44 else "FAIL", f"{n} targets"])
+
+
+def build_revenue_by_type(obs, checks):
+    """Federal revenue by type (Phase 5, gap_revenue_estimate_vs_collected): PKKP Nota 5(a) levels 0 and 1, FY2009-
+    2024 own volume, original and revised estimates and actual; the Budget revenue books' (Anggaran Hasil 2025-
+    2026) section and total rows: actual, revised estimate, estimate. Breakdown hasil_kod = the book's section
+    code (REV_NAME_TO_KOD maps PKKP's printed names). Check C18: PKKP's level-1 rows add up to its level 0."""
+    import glob
+    sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_revenue.csv"))):
+        rel = os.path.relpath(path, REPO)
+        yr = os.path.basename(os.path.dirname(path))
+        sums = defaultdict(Decimal)
+        tot = {}
+        for i, r in enumerate(rows(path), start=2):
+            if r["level"] not in ("0", "1") or r["year"] != yr or not r["source_file"].startswith(yr):
+                continue
+            name = r["item_bm"].strip().upper()
+            kod = REV_NAME_TO_KOD.get(name)
+            if kod is None:
+                sys.exit(f"PKKP {yr} revenue: no hasil_kod for level-{r['level']} {name!r} (declare it)")
+            bk = "_total" if kod == "_total" else f"hasil_kod={kod}"
+            for col, basis in REV_BASIS.items():
+                v = dec(r[col])
+                if v is None:
+                    continue
+                if kod == "_total":
+                    tot[basis] = v
+                else:
+                    sums[basis] += v
+                obs.add(indicator_code="federal_gov.revenue.by_type", geo_code="MY", period_code=yr, breakdown_key=bk,
+                        entity_id=entity("federal_gov", "MY", yr), basis=basis, edition_id=f"pkkp:{r['source_file']}",
+                        vintage=yr, value=v, value_printed=r[col], unit_printed="RM", precision_printed="0.01",
+                        estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                        pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"],
+                        l1_ref=f"{rel}#row{i}")
+        for basis, t in tot.items():
+            d = sums[basis] - t
+            checks.append(["C18 PKKP revenue types add up to the printed total (Nota 5(a))", f"{yr} {basis}",
+                           "PASS" if abs(d) <= Decimal("2") else "FAIL", f"types {sums[basis]} vs total {t}"])
+    for path in sorted(glob.glob(os.path.join(REPO, "sources", "anggaran-hasil", "data", "*", "fact_hasil_ringkasan_*.csv"))):
+        rel = os.path.relpath(path, REPO)
+        book = os.path.basename(os.path.dirname(path))
+        for i, r in enumerate(rows(path), start=2):
+            if r["level"] not in ("section", "total"):
+                continue
+            m = re.fullmatch(r"(sebenar|anggaran_disemak|anggaran)_(\d{4})", r["measure"])
+            if not m:
+                continue
+            basis = {"sebenar": "actual", "anggaran_disemak": "revised_estimate", "anggaran": "budget_estimate"}[m.group(1)]
+            v = dec(r["amount_rm"])
+            if v is None:
+                continue
+            bk = "_total" if r["level"] == "total" else f"hasil_kod={r['kod']}"
+            obs.add(indicator_code="federal_gov.revenue.by_type", geo_code="MY", period_code=m.group(2), breakdown_key=bk,
+                    entity_id=entity("federal_gov", "MY", m.group(2)), basis=basis,
+                    edition_id=f"anggaran_hasil:{r['source_file']}", vintage=book, value=v,
+                    value_printed=r["amount_rm"], unit_printed="RM", precision_printed="1", estimate_method="accounting",
+                    reliability="ok", file_id=sha.get(r["source_file"], ""), pdf_page=r["pdf_page"],
+                    printed_page=r["printed_page"], table_ref=f"Anggaran Hasil Kerajaan Persekutuan {book}: Ringkasan",
+                    l1_ref=f"{rel}#row{i}")
+
+
 PERF_LINES = {"revenue": "federal_gov.revenue.total", "opex": "federal_gov.expenditure.opex",
               "devex": "federal_gov.expenditure.devex", "covid_fund_exp": "federal_gov.expenditure.covid_fund"}
 TRANSFER_LINE = "Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan"
@@ -695,12 +921,18 @@ def build_federal(obs):
 BNM_FED = {"cur_bud_rev": "federal_gov.revenue.total", "cur_bud_exp": "federal_gov.expenditure.opex",
            "dev_exp_gro_dev_exp": "federal_gov.expenditure.devex",
            "dev_exp_les_loa_rec": "federal_gov.expenditure.devex_loan_recovery",
-           "dev_exp_net_dev_exp": "federal_gov.expenditure.devex_net"}
+           "dev_exp_net_dev_exp": "federal_gov.expenditure.devex_net",
+           # BNM's API keys are shifted by one from ov_sur_def onward (sources/bnm/data/_source_anomalies.csv):
+           # ov_sur_def holds the COVID-19 Fund (blank before 2020) and sou_fin_dom_bor_gro_dom_bor the overall
+           # balance; proved every annual row by check C20 (current balance - net DE - Fund = overall balance)
+           "ov_sur_def": "federal_gov.expenditure.covid_fund",
+           "sou_fin_dom_bor_gro_dom_bor": "federal_gov.overall_balance"}
 MOF_FED = {"revenue": "federal_gov.revenue.total", "operating_expenditure": "federal_gov.expenditure.opex",
            "development_expenditure_gross": "federal_gov.expenditure.devex",
            "development_expenditure_loan_recovery": "federal_gov.expenditure.devex_loan_recovery",
            "development_expenditure_net": "federal_gov.expenditure.devex_net",
-           "covid19_fund": "federal_gov.expenditure.covid_fund", "overall_balance": "federal_gov.overall_balance"}
+           "covid19_fund": "federal_gov.expenditure.covid_fund", "overall_balance": "federal_gov.overall_balance",
+           "current_balance": "federal_gov.current_balance", "overall_balance_pct_gdp": "federal_gov.overall_balance.pct_gdp"}
 
 
 def build_federal_reported(obs):
@@ -717,9 +949,14 @@ def build_federal_reported(obs):
     bnm_dir = os.path.join(REPO, "sources", "bnm", "data")
     vin = {r["dataset"]: r for r in rows(os.path.join(bnm_dir, "_vintage_log.csv")) if r["state"] == "current"}["msb_3_1"]
     d = vin["data_as_of"][:10]
+    worst, n_id = Decimal(0), 0
     for i, r in enumerate(rows(os.path.join(bnm_dir, "msb_3_1.csv")), start=2):
         if r["period"].strip():
             continue  # quarterly rows
+        cur, net, ob = dec(r["cur_bud_sur_def"]), dec(r["dev_exp_net_dev_exp"]), dec(r["sou_fin_dom_bor_gro_dom_bor"])
+        if None not in (cur, net, ob):
+            n_id += 1
+            worst = max(worst, abs(cur - net - (dec(r["ov_sur_def"]) or 0) - ob))
         for col, ind in BNM_FED.items():
             v = dec(r[col])
             if v is None:
@@ -729,6 +966,10 @@ def build_federal_reported(obs):
                     unit_printed="RM million", precision_printed="0.000000000001", estimate_method="accounting",
                     reliability="ok", file_id=vin["sha256"], table_ref="BNM MSB 3.1 Federal Government Finance",
                     l1_ref=f"sources/bnm/data/msb_3_1.csv#row{i}")
+    obs.extra_checks.append(["C20 BNM MSB 3.1 shifted keys: current balance - net DE - COVID-19 Fund (ov_sur_def) = "
+                             "overall balance (sou_fin_dom_bor_gro_dom_bor), every annual row", "BNM",
+                             "PASS" if n_id and worst <= Decimal("1.5") else "FAIL",  # four figures, each rounded
+                             f"{n_id} annual rows; largest difference RM{worst} million (printed rounding)"])
     reg = {(r["edition"], r["file_name"]): r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))
            if r["series_id"] == "tinjauan_fiskal"}
     cand = []
@@ -739,7 +980,8 @@ def build_federal_reported(obs):
             r["line"] = mof_editions.LINE_CROSSWALK.get(r["line"], r["line"])
             cand.append(r)
     for (line, year), r in sorted(mof_editions.choose(cand).items()):
-        v = dec(r["amount_rm_juta"])
+        pct = line.endswith("_pct_gdp")
+        v = dec(r["pct_of_gdp"] if pct else r["amount_rm_juta"])
         if line not in MOF_FED or r["basis"] != "official_actual" or v is None:
             continue
         sha = reg.get((str(r["edition"]), r["source_file"]))
@@ -747,7 +989,8 @@ def build_federal_reported(obs):
             sys.exit(f"MOF {r['edition']} {r['source_file']}: no sha256 in meta/registry_file.csv")
         obs.add(indicator_code=MOF_FED[line], geo_code="MY", period_code=str(year), entity_id=entity("federal_gov", "MY", year),
                 basis="actual", edition_id=f"mof:tinjauan_fiskal@{r['edition']}", vintage=str(r["edition"]),
-                value=v * m, value_printed=r["amount_rm_juta"], unit_printed="RM million", precision_printed="1",
+                value=v if pct else v * m, value_printed=r["pct_of_gdp"] if pct else r["amount_rm_juta"],
+                unit_printed="% of GDP" if pct else "RM million", precision_printed="0.1" if pct else "1",
                 estimate_method="accounting", reliability="ok", file_id=sha, pdf_page=r["pdf_page"],
                 printed_page=r["printed_page"], table_ref=f"Tinjauan Fiskal {r['edition']}, Jadual {r['table_no']}",
                 l1_ref=r["_l1"])
@@ -802,6 +1045,23 @@ def build_flags(obs):
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "out_of_bounds",
                         "note": f"{r['indicator_code']} = {r['value_printed']} percent, outside 0-100",
                         "register": "core/pipeline/build_core.py build_flags (declared rule)"})
+    # scope change inside one series (found by the gap_target_vs_outcome verifier, 2026-11-06): DOSM prints WP
+    # Putrajaya's GDP separately only from its first year (2023 in gdp_state_real_supply); WP Kuala Lumpur's rows
+    # before that include Putrajaya. Proof: RMKe-12 Jadual 5 footnotes its KL row 'Termasuk WP Putrajaya', and
+    # DOSM's MY-14 for 2015-2018 equals it to rounding (core/_validation_gap_tvo.csv T7). The figure stays as
+    # published; the row carries the flag and CV15.
+    first16 = {}
+    for r in obs.rows:
+        if r["indicator_code"].startswith("gdp.") and r["geo_code"] == "MY-16" and r["edition_id"].startswith("dosm:"):
+            first16[r["indicator_code"]] = min(first16.get(r["indicator_code"], "9999"), r["period_code"][:4])
+    for r in obs.rows:
+        f = first16.get(r["indicator_code"])
+        if f and r["geo_code"] == "MY-14" and r["edition_id"].startswith("dosm:") and r["period_code"][:4] < f:
+            out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "scope_includes_putrajaya",
+                        "note": f"WP Kuala Lumpur before {f} includes WP Putrajaya, which DOSM prints separately only from "
+                                f"{f}: growth across {f} compares different areas (proof: RMKe-12 Jadual 5 footnote; "
+                                "DOSM MY-14 2015-2018 = the plan's KL including Putrajaya, gap_target_vs_outcome T7)",
+                        "register": "core/pipeline/build_core.py build_flags (declared rule, 2026-11-06)"})
     # our own known extraction defects that reach core (meta/extraction_defect_flag.csv, each pointing to its
     # state_config.KNOWN_EXTRACTION_DEFECTS entry): the figure is the wrong printed line, caveat CV18
     want = {(d["indicator_code"], d["geo_code"], d["period_code"]): d
@@ -876,7 +1136,11 @@ def dim_geo(obs):
 def dim_period(obs):
     out = []
     for p in sorted(obs.periods):
-        if re.fullmatch(r"\d{4}", p):
+        if re.fullmatch(r"\d{4}/\d{4}", p):  # a multi-year period, e.g. a plan's 2021/2025 average growth
+            a, b = p.split("/")
+            out.append({"period_code": p, "freq": "P", "period_start": f"{a}-01-01", "period_end": f"{b}-12-31",
+                        "year": b})
+        elif re.fullmatch(r"\d{4}", p):
             out.append({"period_code": p, "freq": "A", "period_start": f"{p}-01-01", "period_end": f"{p}-12-31",
                         "year": p})
         elif "-Q" in p:
@@ -1095,11 +1359,14 @@ def main():
     build_national_accounts(obs, ed)
     build_states(obs)
     build_federal(obs)
+    obs.extra_checks = []
     build_federal_reported(obs)
     build_national_series(obs, ed)
     build_votes(obs)
-    obs.extra_checks = []
     build_federal_loans(obs, obs.extra_checks)
+    build_revenue_by_type(obs, obs.extra_checks)
+    build_obligations(obs, obs.extra_checks)
+    build_plan_targets(obs, obs.extra_checks)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

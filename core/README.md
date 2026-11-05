@@ -33,6 +33,11 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 | `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
+| `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
+| `gap_reported_vs_audited.csv` | 89 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
+| `gap_obligations_growth.csv` | 68 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
+| `gap_target_vs_outcome.csv` | 43 | plan target × place: RMKe-12's 2025 targets (GDP by state, federal finance, labour) beside the outcome (Phase 5) |
+| `gap_revenue_estimate_vs_collected.csv` | 90 | federal revenue by type (tax, non-tax, non-revenue receipts, Federal Territories, total) × year: the accounts' original and revised estimates and actual beside the Budget revenue books'; collection rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -344,6 +349,184 @@ show it (D27). First slice: the federal grants and assignments to the states, Ta
   verifier: `qa/audits/2026-11-05_phase3_territories_verifier.md` (40 of 40 re-derived, 19 page-checked).
 * **Not yet:** what each state records receiving (state accounts) matched to these flows; development grants
   and federal projects in a state.
+
+## gap_budget_vs_actual (Phase 5, 2026-11-05)
+
+Was the money budgeted spent? One row per federal body (entity), year and flow (opex: B and T votes; devex: P
+votes), PKKP FY2009-2024 plus the Budget books' estimate years (2023-2026). Method declared and committed before
+any result (`core/pipeline/build_gap_budget_vs_actual.py`). Each column is one source as printed:
+
+* `estimate_original_pkkp`, `estimate_revised_pkkp`: the audited accounts' original and revised operating
+  estimates; for devex the accounts print one column, 'Anggaran' in Lampiran 2, loaded as basis `allocation`
+  because it is not the tabled estimate (FY2024: RM85.2b against the Budget book's RM92.0b).
+* `estimate_original_book`, `actual_book`: the Budget books' original estimate for the year and their reprint of
+  the actual, beside the audit (`book_vs_pkkp_*`: all 102 operating estimates the accounts and the book both
+  print agree, and so does every reprinted actual; PETRA and Digital, created during FY2024, have no original
+  estimate in the accounts).
+* `execution_rate` = audited actual / revised estimate (or allocation): `within_estimate` 0.90-1.00,
+  `underspent` below 0.90, `overspent` above 1.00, `not_held` where a side is missing. No ranking. For devex the
+  rate is against the accounts' allocation; `execution_rate_book` = audited actual / the Budget book's original
+  estimate is beside it (devex FY2023: allocation RM93.4b against the book's RM99.0b).
+* One Budget book per year for `estimate_original_book` (the book of that year; V7 proves the column adds up to
+  that book). A later book restates a year under its own, reorganised votes (the 2025 book prints FY2024 under
+  PETRA and Digital, money the 2024 book held under the old ministries); that figure is named in the row's note,
+  never added. A book's reprinted actual is shown only on the body that held the vote that year: the 2025 book
+  files KASA's FY2022 spending (RM3.43b) under PETRA's vote B.33, which is not PETRA's (V8 lists them).
+
+How to read the status words: `P.70` (the contingency reserve) is always underspent because it is drawn by
+transfers to other votes; B.12 (contributions to statutory funds, incl. the Development Fund) is always overspent
+because it is money moved to those funds; spending above the printed estimate may have been authorised later
+(supplementary supply), which this view does not show. FY2009 devex: the rows add up to the vote observations
+but not the printed grand total (P.26 and P.44 were transferred out during the year, RM224.3m, documented at L1;
+those rows carry CV21). FY2015 devex allocations are OCR-read from a scan (grand total off its lines by RM60,000).
+
+A body is its vote (D26, D28, D31): a lapsed vote's successor is another body, so rows are never joined across
+bodies. Tool: `get_gap_view('gap_budget_vs_actual', year=..., entity='B.45')`. Checks V1-V8 in
+`_validation_gap_bva.csv`; blind verifier: `qa/audits/2026-11-05_phase5_budget_vs_actual_verifier.md`.
+
+## gap_revenue_estimate_vs_collected (Phase 5, 2026-11-05)
+
+Did revenue come in as estimated? Core gains `federal_gov.revenue.by_type` (breakdown `hasil_kod`: the Budget
+revenue book's section codes 60000 tax, 70000 non-tax, 80000 non-revenue receipts, 90000 the Federal
+Territories, and `_total`), from PKKP Nota 5(a) (FY2009-2024: original and revised estimates, actual; PKKP prints
+names, mapped to the codes by a declared table, `REV_NAME_TO_KOD` in build_core) and the Anggaran Hasil books
+2025-2026. Check C18: the types add up to the printed total, every year and basis (48 PASS).
+
+The view (method declared before results, `core/pipeline/build_gap_revenue.py`): one row per type and year;
+`collection_rate_original` = actual / original estimate, status `on_estimate` (0.97-1.03), `above_estimate`,
+`below_estimate`, `not_held`; the book's revised estimate and actual beside the audit (agree within RM1: 5 of 5
+revised estimates and 8 of 10 actuals; FY2024's total and non-revenue receipts are RM144 below the audit in the
+book, kept as printed; whole ringgit on both sides, so not rounding). FY2009 (the C1 revenue statement) prints
+a fifth type, miscellaneous receipts, kept apart; the FY2010 volume reprints the same figure as non-revenue
+receipts, so read 80000 over time with that row (each row's note says so). Checks R2-R6 in
+`_validation_gap_rev.csv` (R1 is C18 in core); blind verifier:
+`qa/audits/2026-11-05_phase5_revenue_verifier.md`.
+
+How to read it: 80000 (refunds of expenditure and receipts from government agencies) is set by transfers, not
+collection, and is `above_estimate` in 13 of 15 years (FY2024: 4.78x the estimate); it is not revenue
+performance. PKKP's own printed percentage is against the revised estimate, which is set late in the year, so it
+reads closer to 100% than `collection_rate_original` (FY2015 tax: 0.90 of the original, 97.3% printed). The
+FY2023 estimate is Budget 2023 as re-tabled in February 2023. Book reprints carry CV29.
+
+## gap_reported_vs_audited (Phase 5, 2026-11-06)
+
+Do MOF, BNM and PKKP agree? One row per federal headline and year, where at least two of them print it:
+* revenue;
+* operating spending (before the transfer to the Development Fund);
+* gross development spending;
+* the COVID-19 Fund;
+* loan recoveries, net development spending and the overall balance (BNM and MOF only).
+
+The method was declared before the view was built (`core/pipeline/build_gap_reported_vs_audited.py`):
+* each publisher's figure is taken as core holds it: PKKP from that year's own volume; BNM's annual row (MSB
+  3.1); MOF's edition of year+2 (Jadual 1.1, 5.1 in the 2023 edition), with what later editions print
+  differently in `mof_restated_in`;
+* each pair (bnm-pkkp, mof-pkkp, mof-bnm) is signed and graded:
+  * `agree` within half the coarser printed unit (MOF: whole RM juta; PKKP: whole ringgit, sen in FY2009; BNM:
+    the decimals it serves, which vary by year from RM1m to the sen);
+  * `differ_minor` within 0.1%;
+  * `differ` beyond 0.1%.
+
+**The status grades print resolution, not size: always read the RM gap.** A finer printing can be
+`differ_minor` where a coarser one, further off in ringgit, is `agree`. For example, revenue 2019: BNM +RM41,124
+is `differ_minor`, while MOF +RM244,124 is `agree`.
+
+Result, 89 rows: no pair differs by more than 0.1% in any year.
+* **MOF against PKKP:** 32 of 35 pairs agree to the RM juta; 2 of them are 0 = 0 (the COVID-19 Fund after it
+  closed). Two of the three exceptions agree in MOF's later editions:
+  * revenue 2020 (+RM1.05m; the 2023 and 2024 editions print 225,075, which agrees);
+  * gross development spending 2023 (+RM1.26m; the 2027 edition prints 96,090, which agrees).
+  * The third, revenue 2018 (-RM0.56m), is MOF rounding its lines so that its table adds up.
+* **BNM against PKKP:** 41 of 53 pairs agree. The rest are RM2.5 to RM1.25m.
+* **MOF against BNM:** the 5 exceptions are RM0.53m to RM0.97m, rounding.
+
+Not compared:
+* PKKP's overall deficit is struck after gross development spending (MOF's and BNM's after net), so it is
+  another concept.
+* PKKP's 'Terimaan Balik Pinjaman dan Pelbagai Terimaan' is broader than the loan recoveries.
+
+BNM's API labels its COVID-19 Fund and overall balance under shifted keys. The proof is in
+`sources/bnm/data/_source_anomalies.csv` and core check C20.
+
+Which publisher is right is not decided here (a reported figure can be a later revision or another scope). Checks
+G1-G5 are in `_validation_gap_rva.csv`. Blind verifier: `qa/audits/2026-11-06_phase5_reported_vs_audited_verifier.md`.
+
+## gap_obligations_growth (Phase 5, 2026-11-06)
+
+Are off-budget obligations growing faster than debt? Core gains `federal_gov.obligation.*` (six stocks at 31
+December from PKKP's memorandum accounts and guarantee registers, each year from its own volume; check C19):
+* debt, FY2009-2024;
+* PFI liabilities, financial commitments and committed guarantees, FY2018+ (first printed then);
+* statutory loan guarantees, FY2009-2024 (FY2009-2011 print no deposit section, so the register total is the
+  loans; O2 proves it);
+* contributor and depositor guarantees, FY2010+ (FY2010-2011 from Nota 10(b); the FY2012 note equals the
+  register, C21).
+
+The view (method declared before results, `core/pipeline/build_gap_obligations.py`) gives each instrument's
+year-on-year growth against debt's, its ratio to debt, and an index (first year = 100) beside debt's.
+
+Over each instrument's span (check O5), debt grew 3.44x (2009-2024) and 1.68x over 2018-2024:
+* PFI liabilities: 0.90x (falling every year since 2020: repayment by the two vehicles PKKP's line covers;
+  MOF's PPP and PFI obligations, RM148.6b at 2024, are several times larger and not in this line);
+* commitments: 1.22x;
+* committed guarantees: 1.43x;
+* statutory loan guarantees: 3.95x, against debt's 3.44x over the same years;
+* deposit guarantees: 3.29x, against debt's 3.07x since 2010 (mostly EPF members' savings: not borrowing).
+
+So only the statutory guarantees outgrew debt over their span.
+
+Restatements are kept in the note and never applied (O3). Financial commitments are restated by every later
+volume, by up to RM7.2b (FY2021, in the FY2022 volume).
+
+Never add instruments (CV30):
+* commitments include the committed guarantees;
+* most committed guarantees (RM210.9b of RM236.2b in 2024) are loans also in the statutory loan-guarantee
+  register;
+* deposit guarantees are savings.
+
+The FY2018 volume's 2017 comparatives for PFI, commitments and committed guarantees are not used (each year from
+its own volume), so those series start in 2018. A blind verifier re-derived every number:
+`qa/audits/2026-11-06_phase5_obligations_verifier.md`. The Auditor-General's and MOF's figures stay in `curated/fact_obligations.csv`. Checks O1-O5 are
+in `_validation_gap_obl.csv`.
+
+## gap_target_vs_outcome (Phase 5, 2026-11-06)
+
+Was the plan target met? The targets come from a new source, `sources/rmk/`: the Twelfth Malaysia Plan
+(RMKe-12, 2021-2025) appendix as printed, 1,070 cells checked against the tables' own identities, with the
+footnotes kept as data. Core holds them as basis `target` (44 observations, check C22):
+* real GDP by state, the 2025 level and the 2021/2025 average growth (a multi-year period code);
+* federal finance, 2025, including the current balance and the overall balance as % of GDP (a range, held as
+  `bound=lower` / `bound=upper`);
+* the labour market, 2025.
+
+A target never comes back from `get_series` or `get()` unless it is asked for by basis.
+
+The view sets each target beside its outcome:
+* DOSM GDP by state (constant 2015 prices) and its 2020-2025 compound growth;
+* MOF's FY2025 actuals, with BNM beside them, until PKKP FY2025 is loaded;
+* the DOSM labour force survey, 2025.
+
+Status states the position only: `at_target` is within 1% of a level target or 0.1 point of a growth target,
+otherwise `above_target` or `below_target`; for a range target, `within_range`, `above_range` or `below_range`.
+These are the plan's original 2021 targets; the 2023 mid-term review is not held.
+
+Results (43 rows):
+* **GDP growth, all 15 places:** 4 grew faster than their target: Selangor (7.1% a year against 4.3%), Pulau
+  Pinang (7.1% against 5.4%), Johor (6.0% against 5.1%) and Kuala Lumpur with Putrajaya (5.2% against 4.2%).
+  The other 11 grew slower. The largest shortfalls are Sabah (2.7% against 6.5%), Kelantan (3.4% against 6.7%)
+  and Terengganu (3.6% against 6.6%).
+* **Kuala Lumpur's 2020 base:** DOSM's MY-14 alone. DOSM split Putrajaya out only from 2023, and its MY-14 for
+  2015-2018 equals the plan's footnoted "KL including Putrajaya" to rounding (check T7).
+* **Federal finance:** the overall deficit was 3.7% of GDP, below the plan's -3.5 to -3.0% range. In nominal
+  ringgit, revenue was 1.24x the target and operating spending 1.25x. The current balance was RM5.3b against
+  RM7.1b.
+* **Labour:** unemployment was 3.0% against a 4.0% target. The LFS was re-benchmarked to the 2020 Census from
+  2025 (CV10), and the plan's 2020 base is beside DOSM's revised one on each row. The plan's employment total is
+  footnoted as from the labour productivity publication, so it is read as a different concept.
+
+Extracted but not compared, because core holds no outcome (check T5): GDP per capita (at current prices, per the
+plan's note), sectors, and the labour growth targets. Checks T1-T7 are in `_validation_gap_tvo.csv`. Blind
+verifier: `qa/audits/2026-11-06_phase5_target_vs_outcome_verifier.md`.
 
 ## gap_federal_placement (Phase 3, 2026-11-05)
 

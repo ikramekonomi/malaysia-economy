@@ -100,7 +100,8 @@ class Tools:
         """publisher: 'pkkp', 'bnm', 'mof', 'dosm' or 'anggaran' (the edition's publisher). Without it, every
         publisher's figure for the same concept comes back, each cited: where they differ, the difference is the
         answer. entity: who spends (federal_gov.vote.*): a vote code (B.45, P.45; resolved year by year), a state
-        (MY-03) or an entity_id."""
+        (MY-03) or an entity_id. A plan's target (basis 'target') comes back only when asked for by basis; to set
+        targets beside outcomes use get_gap_view('gap_target_vs_outcome')."""
         bad = self._bad_input(indicator=indicator, geo=geo, start=start, end=end, breakdown=breakdown, basis=basis,
                               publisher=publisher, entity=entity)
         if bad:
@@ -132,7 +133,7 @@ class Tools:
         if ent is None:
             return {"held": False, "answer": why, "release_id": self.w.release_id}
         rs = [r for r in self.w.obs if r["indicator_code"] == indicator and r["geo_code"] == geo
-              and r["breakdown_key"] == breakdown and (not basis or r["basis"] == basis)
+              and r["breakdown_key"] == breakdown and (r["basis"] == basis if basis else r["basis"] != "target")
               and (not publisher or r["edition_id"].split(":")[0] == publisher)
               and self._period_in(r["period_code"], start, end) and ent(r)]
         vote = indicator.startswith("federal_gov.vote.")
@@ -576,6 +577,16 @@ class Tools:
                               "the HIES years 2014, 2016, 2019, 2022 and 2024"),
         "gap_federal_vs_state": ("core/pipeline/build_gap_federal_vs_state.py (declared 2026-11-05)",
                                  "FY2014-2024 (FY2015 has no federal side)"),
+        "gap_budget_vs_actual": ("core/pipeline/build_gap_budget_vs_actual.py (declared 2026-11-05)",
+                                 "PKKP FY2009-2024 and the Budget books' estimate years 2023-2026"),
+        "gap_revenue_estimate_vs_collected": ("core/pipeline/build_gap_revenue.py (declared 2026-11-05)",
+                                              "PKKP FY2009-2024 and the revenue books' years 2023-2026"),
+        "gap_reported_vs_audited": ("core/pipeline/build_gap_reported_vs_audited.py (declared 2026-11-06)",
+                                    "BNM 1996-2025, MOF 2015-2025 and PKKP FY2009-2024, where two of them print a year"),
+        "gap_obligations_growth": ("core/pipeline/build_gap_obligations.py (declared 2026-11-06)",
+                                   "PKKP FY2009-2024 (PFI, commitments and committed guarantees from FY2018)"),
+        "gap_target_vs_outcome": ("core/pipeline/build_gap_target.py (declared 2026-11-06)",
+                                  "RMKe-12's 2025 targets (GDP by state, federal finance, labour)"),
         "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
                                   "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
@@ -609,7 +620,7 @@ class Tools:
         "is lampiran_e_unreconciled: MOF prints the Concurrent List, libraries and museums grants separately and "
         "together they do not equal the audited line that carries all three, so none of them is used (CV28).")
 
-    def get_gap_view(self, name, geo=None, year=None, transfer=None):
+    def get_gap_view(self, name, geo=None, year=None, transfer=None, entity=None):
         import csv
         if name not in self.GAP_VIEWS:
             return {"held": False, "answer": f"view {name} is not built yet (built: {', '.join(self.GAP_VIEWS)})",
@@ -631,10 +642,24 @@ class Tools:
             return {"held": False, "answer": f"unknown place code {geo}" + (f"; did you mean {hint}?" if hint else
                                                                             "; use an ISO 3166-2:MY code, e.g. MY-01"),
                     "release_id": self.w.release_id}
+        want_ids = None
+        if entity is not None:
+            if name != "gap_budget_vs_actual":
+                return {"held": False, "answer": "entity applies to gap_budget_vs_actual only",
+                        "release_id": self.w.release_id}
+            e = str(entity).strip().upper()
+            if e in self.w.entity:
+                want_ids = {e}
+            else:
+                got = self.get_entity(e, year) if year else self.get_entity(e)
+                want_ids = {x["entity_id"] for x in got.get("entities", [])}
+                if not want_ids:
+                    return {**got, "release_id": self.w.release_id}
         path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "core", f"{name}.csv")
         with open(path, newline="") as f:
             rs = [r for r in csv.DictReader(f) if (not geo or r["geo_code"] == geo) and (not year or r["year"] == year)
-                  and (not transfer or r.get("transfer") == transfer)]
+                  and (not transfer or r.get("transfer") == transfer)
+                  and (want_ids is None or r.get("entity_id") in want_ids)]
         if not rs:
             return {"held": False, "answer": f"no row for {geo or 'any place'} in {year or 'any year'}"
                                              + (f" for {transfer}" if transfer else "")
@@ -649,6 +674,57 @@ class Tools:
         out = {"held": True, "view": name, "rows": rs, "method": method, "release_id": self.w.release_id}
         if name == "gap_federal_vs_state":
             out["how_to_read"] = self.FED_VS_STATE_NOTE
+        if name == "gap_budget_vs_actual":
+            out["how_to_read"] = (
+                "One row per federal body, year and flow (opex, devex), each column one source as printed: the audited "
+                "accounts' original and revised estimates (for devex, the accounts' own allocation column, not the "
+                "tabled estimate), the Budget book's original estimate, the audited actual and the book's reprint of "
+                "it. execution_rate = audited actual / revised estimate (or allocation); status: within_estimate "
+                "(0.90-1.00), underspent (< 0.90), overspent (> 1.00), not_held. For devex the rate is against an "
+                "allocation; execution_rate_book (actual / the Budget book's original estimate) is beside it. Read each "
+                "row's note: P.70 is a reserve drawn by transfers (always 'underspent'), B.12 moves money to statutory "
+                "funds (always 'overspent'), and spending above the estimate may have been authorised later. A body is "
+                "its vote: a lapsed vote's successor is another body (get_entity lineage), so do not join rows across "
+                "bodies. No ranking.")
+        if name == "gap_revenue_estimate_vs_collected":
+            out["how_to_read"] = (
+                "One row per revenue type (breakdown hasil_kod: 60000 tax, 70000 non-tax, 80000 non-revenue receipts, "
+                "90000 the Federal Territories; _total) and year: the audited accounts' original and revised estimates "
+                "and actual, beside the Budget revenue book's estimate, revised estimate and actual. "
+                "collection_rate_original = actual / original estimate; status on_estimate (0.97-1.03), above_estimate, "
+                "below_estimate, not_held. The accounts' own printed percentage is against the revised estimate, which is "
+                "set late in the year (in the next Budget), so it reads closer to 100% than collection_rate_original. "
+                "80000 (non-revenue receipts) is refunds and transfers from agencies, not collection: read its note. "
+                "Differences between the book and the audit are kept as printed.")
+        if name == "gap_reported_vs_audited":
+            out["how_to_read"] = (
+                "One row per federal headline (revenue, operating spending before the transfer to the Development Fund, "
+                "gross development spending, the COVID-19 Fund, loan recoveries, net development spending, the overall "
+                "balance) and year, as "
+                "printed by three institutions: PKKP (the Auditor-General's certified accounts), BNM (MSB 3.1) and MOF "
+                "(Tinjauan Fiskal, the edition of year+2). Each pair's difference is signed (first minus second): agree "
+                "within half the coarser printed unit (MOF prints whole RM million), differ_minor within 0.1%, differ "
+                "beyond. The status grades print resolution, not size: read the RM difference. A difference is kept as "
+                "published; the view does not decide who is right. mof_restated_in lists what later MOF editions print "
+                "differently.")
+        if name == "gap_obligations_growth":
+            out["how_to_read"] = (
+                "One row per obligation and year, positions at 31 December from PKKP's memorandum accounts (each year "
+                "from its own volume): debt, PFI liabilities, financial commitments, committed guarantees, statutory "
+                "loan guarantees, and contributor/depositor guarantees. growth is year on year; status compares it with "
+                "debt's growth the same year; ratio_to_debt and the indexes (first year held = 100) compare levels. "
+                "Never add instruments: commitments include the committed guarantees, and deposit guarantees overlap "
+                "deposit insurance (CV30). A later volume's restatement is in the note, not applied.")
+        if name == "gap_target_vs_outcome":
+            out["how_to_read"] = (
+                "One row per RMKe-12 (2021-2025) target and place: its 2025 target as printed in the plan's appendix, "
+                "beside the outcome from core (DOSM GDP by state at constant 2015 prices and its 2020-2025 compound "
+                "growth; MOF's FY2025 actuals, BNM beside them, until PKKP FY2025 is loaded; DOSM labour force). Status "
+                "is only the position (at_target within 1% of a level or 0.1 point of a growth rate, above_target, "
+                "below_target; within_range / above_range / below_range for the deficit's %-of-GDP range); whether "
+                "above is good depends on the line. Federal money targets are in nominal ringgit: the %-of-GDP row is "
+                "the scale-free one. The plan's Kuala Lumpur row includes Putrajaya. These are the plan's original "
+                "2021 targets; read each row's note (labour rows cross the 2025 LFS re-benchmarking).")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:

@@ -1,0 +1,91 @@
+check,scope,status,detail
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Johor,PASS,"residual 2015 1230, 2016 1717, 2017 1864, 2018 1672, 2019 1615, 2020 1323, 2025 1598"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Johor KDNK,PASS,"printed 3.1, from levels 3.08"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Johor KDNK,PASS,"printed 5.1, from levels 5.11"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Kedah,PASS,"residual 2015 289, 2016 322, 2017 307, 2018 281, 2019 223, 2020 245, 2025 293"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Kedah KDNK,PASS,"printed 3.1, from levels 3.09"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Kedah KDNK,PASS,"printed 6.2, from levels 6.19"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Kelantan,PASS,"residual 2015 30, 2016 26, 2017 26, 2018 27, 2019 30, 2020 24, 2025 24"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Kelantan KDNK,PASS,"printed 3.3, from levels 3.33"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Kelantan KDNK,PASS,"printed 6.7, from levels 6.66"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Melaka,PASS,"residual 2015 66, 2016 69, 2017 194, 2018 185, 2019 62, 2020 104, 2025 110"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Melaka KDNK,PASS,"printed 2.6, from levels 2.61"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Melaka KDNK,PASS,"printed 4.8, from levels 4.78"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Negeri Sembilan,PASS,"residual 2015 818, 2016 942, 2017 992, 2018 897, 2019 732, 2020 866, 2025 963"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Negeri Sembilan KDNK,PASS,"printed 2.9, from levels 2.88"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Negeri Sembilan KDNK,PASS,"printed 5.0, from levels 4.98"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Pahang,PASS,"residual 2015 67, 2016 84, 2017 146, 2018 119, 2019 55, 2020 76, 2025 87"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Pahang KDNK,PASS,"printed 2.1, from levels 2.14"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Pahang KDNK,PASS,"printed 6.3, from levels 6.35"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Pulau Pinang,PASS,"residual 2015 712, 2016 808, 2017 1017, 2018 911, 2019 611, 2020 664, 2025 759"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Pulau Pinang KDNK,PASS,"printed 3.5, from levels 3.46"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Pulau Pinang KDNK,PASS,"printed 5.4, from levels 5.38"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Perak,PASS,"residual 2015 74, 2016 93, 2017 125, 2018 106, 2019 32, 2020 51, 2025 72"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Perak KDNK,PASS,"printed 3.3, from levels 3.28"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Perak KDNK,PASS,"printed 5.6, from levels 5.59"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Perlis,PASS,"residual 2015 95, 2016 102, 2017 112, 2018 98, 2019 72, 2020 41, 2025 49"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Perlis Perlombongan dan Pengkuarian,WARN,"printed -0.8, from levels -1.28"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Perlis KDNK,PASS,"printed 1.5, from levels 1.54"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Perlis KDNK,PASS,"printed 5.8, from levels 5.79"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Selangor,PASS,"residual 2015 8072, 2016 8501, 2017 8613, 2018 7840, 2019 8527, 2020 7419, 2025 7959"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Selangor KDNK,PASS,"printed 4.0, from levels 3.99"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Selangor KDNK,PASS,"printed 4.3, from levels 4.33"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Terengganu,PASS,"residual 2015 48, 2016 50, 2017 106, 2018 64, 2019 17, 2020 30, 2025 45"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Terengganu KDNK,PASS,"printed 1.8, from levels 1.76"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Terengganu KDNK,PASS,"printed 6.6, from levels 6.55"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Sabah,PASS,"residual 2015 285, 2016 302, 2017 351, 2018 327, 2019 188, 2020 267, 2025 336"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Sabah KDNK,PASS,"printed 1.0, from levels 0.99"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Sabah KDNK,PASS,"printed 6.5, from levels 6.47"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 Sarawak,PASS,"residual 2015 404, 2016 446, 2017 520, 2018 476, 2019 321, 2020 388, 2025 458"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 Sarawak KDNK,PASS,"printed 0.9, from levels 0.89"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 Sarawak KDNK,PASS,"printed 5.3, from levels 5.27"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 WP Kuala Lumpur,PASS,"residual 2015 2438, 2016 2464, 2017 3554, 2018 3425, 2019 3724, 2020 3783, 2025 4822"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 WP Kuala Lumpur Perlombongan dan Pengkuarian,WARN,"printed 3.5, from levels 3.65"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 WP Kuala Lumpur KDNK,PASS,"printed 3.6, from levels 3.65"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 WP Kuala Lumpur KDNK,PASS,"printed 4.2, from levels 4.16"
+"V1 KDNK = sectors + unprinted import duties (residual positive, under 5%)",Jadual 5 WP Labuan,PASS,"residual 2015 75, 2016 77, 2017 146, 2018 117, 2019 31, 2020 41, 2025 57"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 WP Labuan Pembinaan,WARN,"printed 1.8, from levels 1.95"
+V2 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 5 WP Labuan KDNK,PASS,"printed 4.8, from levels 4.82"
+V2 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 5 WP Labuan KDNK,PASS,"printed 5.5, from levels 5.49"
+V3 Hasil - Perbelanjaan Mengurus = Baki Semasa,Jadual 10 sebenar_2015,PASS,difference 0
+V3 Kasar - Terimaan Balik Pinjaman = Bersih,Jadual 10 sebenar_2015,PASS,difference 0
+V3 Baki Semasa - Bersih - Kumpulan Wang COVID-19 = Baki Keseluruhan,Jadual 10 sebenar_2015,PASS,difference 0
+V3 Hasil - Perbelanjaan Mengurus = Baki Semasa,Jadual 10 sebenar_2016,PASS,difference 0
+V3 Kasar - Terimaan Balik Pinjaman = Bersih,Jadual 10 sebenar_2016,PASS,difference 0
+V3 Baki Semasa - Bersih - Kumpulan Wang COVID-19 = Baki Keseluruhan,Jadual 10 sebenar_2016,PASS,difference 0
+V3 Hasil - Perbelanjaan Mengurus = Baki Semasa,Jadual 10 sebenar_2017,PASS,difference 0
+V3 Kasar - Terimaan Balik Pinjaman = Bersih,Jadual 10 sebenar_2017,PASS,difference 0
+V3 Baki Semasa - Bersih - Kumpulan Wang COVID-19 = Baki Keseluruhan,Jadual 10 sebenar_2017,PASS,difference 0
+V3 Hasil - Perbelanjaan Mengurus = Baki Semasa,Jadual 10 sebenar_2018,PASS,difference 0
+V3 Kasar - Terimaan Balik Pinjaman = Bersih,Jadual 10 sebenar_2018,PASS,difference 0
+V3 Baki Semasa - Bersih - Kumpulan Wang COVID-19 = Baki Keseluruhan,Jadual 10 sebenar_2018,PASS,difference 0
+V3 Hasil - Perbelanjaan Mengurus = Baki Semasa,Jadual 10 sebenar_2019,PASS,difference 0
+V3 Kasar - Terimaan Balik Pinjaman = Bersih,Jadual 10 sebenar_2019,PASS,difference 0
+V3 Baki Semasa - Bersih - Kumpulan Wang COVID-19 = Baki Keseluruhan,Jadual 10 sebenar_2019,PASS,difference 1
+V3 Hasil - Perbelanjaan Mengurus = Baki Semasa,Jadual 10 sebenar_2020,PASS,difference 0
+V3 Kasar - Terimaan Balik Pinjaman = Bersih,Jadual 10 sebenar_2020,PASS,difference 0
+V3 Baki Semasa - Bersih - Kumpulan Wang COVID-19 = Baki Keseluruhan,Jadual 10 sebenar_2020,PASS,difference 0
+V3 Hasil - Perbelanjaan Mengurus = Baki Semasa,Jadual 10 sasaran_2025,PASS,difference 0
+V3 Kasar - Terimaan Balik Pinjaman = Bersih,Jadual 10 sasaran_2025,PASS,difference 0
+V3 Baki Semasa - Bersih - Kumpulan Wang COVID-19 = Baki Keseluruhan,Jadual 10 sasaran_2025,PASS,difference 0
+V4 sectors add up to Jumlah Guna Tenaga,Jadual 14 sebenar_2015,PASS,13992.0 vs 13992.0; shares 100.0
+V4 Penganggur / Tenaga Buruh = Kadar Pengangguran,Jadual 14 sebenar_2015,PASS,3.10 vs 3.1
+V4 sectors add up to Jumlah Guna Tenaga,Jadual 14 sebenar_2020,PASS,15096.0 vs 15096.0; shares 100.1
+V4 Penganggur / Tenaga Buruh = Kadar Pengangguran,Jadual 14 sebenar_2020,PASS,4.54 vs 4.5
+V4 sectors add up to Jumlah Guna Tenaga,Jadual 14 sasaran_2025,PASS,16150.8 vs 16150.8; shares 100.0
+V4 Penganggur / Tenaga Buruh = Kadar Pengangguran,Jadual 14 sasaran_2025,PASS,4.00 vs 4.0
+V6 Jadual 14 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 14 Jumlah Guna Tenaga,WARN,"printed 1.3, from levels 1.53"
+V6 Jadual 14 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 14 Jumlah Guna Tenaga,WARN,"printed 1.6, from levels 1.36"
+V6 Jadual 14 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 14 Pertanian,WARN,"printed -0.4, from levels -0.11"
+V6 Jadual 14 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 14 Pertanian,WARN,"printed 2.3, from levels 1.24"
+V6 Jadual 14 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 14 Perlombongan dan Pengkuarian,WARN,"printed -1.5, from levels -1.30"
+V6 Jadual 14 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 14 Perlombongan dan Pengkuarian,WARN,"printed 1.3, from levels 1.06"
+V6 Jadual 14 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 14 Pembuatan,WARN,"printed 1.1, from levels 1.41"
+V6 Jadual 14 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 14 Pembuatan,PASS,"printed 1.4, from levels 1.37"
+V6 Jadual 14 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 14 Pembinaan,WARN,"printed -2.2, from levels -1.61"
+V6 Jadual 14 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 14 Pembinaan,WARN,"printed 0.9, from levels 0.35"
+V6 Jadual 14 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 14 Perkhidmatan,WARN,"printed 2.3, from levels 2.49"
+V6 Jadual 14 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 14 Perkhidmatan,WARN,"printed 1.6, from levels 1.53"
+V6 Jadual 14 printed growth against printed levels (purata_rmk11_2016_2020),Jadual 14 Jumlah Tenaga Buruh,PASS,"printed 1.5, from levels 1.54"
+V6 Jadual 14 printed growth against printed levels (sasaran_purata_rmk12_2021_2025),Jadual 14 Jumlah Tenaga Buruh,PASS,"printed 1.4, from levels 1.43"
+V5 coverage: 15 state sections x 7 lines,Jadual 5,PASS,15 sections

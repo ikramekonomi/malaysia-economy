@@ -42,7 +42,7 @@ checks). No number is created here; every row carries its source provenance
 
 **Do-not-sum warnings.** (1) `contingent` overlaps `jaminan`: committed guarantees are a
 subset of the guarantee stock, and `berkanun_pencarum` (deposit/contributor guarantees,
-RM1.42 trillion at 2024) overlaps deposit-insurance cover — never add classes together.
+RM1.42 trillion at 2024) is savings guaranteed by statute (mostly EPF members'), not borrowing — never add classes together.
 (2) `komitmen` `component` rows sum to the `komitmen` headline `line`; don't add both.
 (3) FO Jun-30 positions are not comparable to Dec-31 rows.
 

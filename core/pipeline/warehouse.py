@@ -118,6 +118,8 @@ class Warehouse:
         rs = self.index.get((indicator, geo, period, breakdown), [])
         if basis:
             rs = [r for r in rs if r["basis"] == basis]
+        else:
+            rs = [r for r in rs if r["basis"] != "target"]  # a plan's target is never the outcome; ask for it by basis
         if len({r["edition_id"].split(":")[0] for r in rs}) > 1:
             return None  # two publishers for one concept: never choose between them silently
         return rs[0] if len(rs) == 1 else (sorted(rs, key=lambda r: r["vintage"])[-1] if rs else None)
@@ -152,7 +154,7 @@ class Warehouse:
             out.append("CV5")
             if self.flags.get((r["geo_code"], r["period_code"])):
                 out.append("CV6")
-        if ind == "gdp.real":
+        if ind == "gdp.real" and r["basis"] != "target":
             out.append("CV7")
         if "leaf_total_mismatch" in flags:
             out.append("CV21")
@@ -167,6 +169,8 @@ class Warehouse:
             out.append("CV23")
         if r["edition_id"].startswith("anggaran:") and r["period_code"][:4] < r["vintage"][:4]:
             out.append("CV22")
+        if r["edition_id"].startswith("anggaran_hasil:") and r["period_code"][:4] < r["vintage"][:4]:
+            out.append("CV29")
         if ind == "cpi.index":
             out.append("CV8")
         if ind.startswith("trade."):

@@ -95,6 +95,12 @@ def run(t, q):
     if check.startswith("field_nonempty:"):
         f = check.split(":", 1)[1]
         return bool(first.get(f)), str(first.get(f, ""))[:60]
+    if check.startswith("row_field:"):
+        _, cond, f = check.split(":", 2)
+        k, v = cond.split("=", 1)
+        hit = [r for r in res.get("rows", []) if str(r.get(k)) == v]
+        got = str(hit[0].get(f)) if len(hit) == 1 else f"{len(hit)} rows"
+        return got == exp, got
     if check == "row_count":
         return str(len(res.get("rows", []))) == exp, str(len(res.get("rows", [])))
     bands = res.get("bands", [])

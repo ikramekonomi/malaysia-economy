@@ -1,0 +1,10 @@
+check,scope,status,detail
+D1 % BELANJA = BELANJA / PERUNTUKAN,RP1,PASS,14 rows
+D1 % BELANJA = BELANJA / PERUNTUKAN,RP2,PASS,14 rows
+D1 % BELANJA = BELANJA / PERUNTUKAN,RP3,WARN,"Johor: printed 3,890.95, from amounts 100.00% (registered source anomaly); Kedah: printed 1,406.27, from amounts 100.00% (registered source anomaly); Kelantan: printed 2,124.04, from amounts 100.00% (registered source anomaly); Melaka: printed 592.74, from amounts 100.00% (registered source anomaly); Negeri Sembilan: printed 847.37, from amounts 100.00% (registered source anomaly); Pahang: printed 2,623.36, from amounts 100.00% (registered source anomaly); Perak: printed 1,376.69, from amounts 100.00% (registered source anomaly)"
+D1 % BELANJA = BELANJA / PERUNTUKAN,RP4,PASS,14 rows
+D2 coverage 14 rows x 4 rolling plans x 4 measures,JBL12122024 Q243,PASS,224 cells
+D3 the 14 rows' BELANJA against PKKP gross development spending (INFO),RP1 (2021),INFO,38097.27 vs PKKP 64256.67 RM juta (59.3%)
+D3 the 14 rows' BELANJA against PKKP gross development spending (INFO),RP2 (2022),INFO,41980.56 vs PKKP 71573.96 RM juta (58.7%)
+D3 the 14 rows' BELANJA against PKKP gross development spending (INFO),RP3 (2023),INFO,65027.21 vs PKKP 96089.74 RM juta (67.7%)
+D3 the 14 rows' BELANJA against PKKP gross development spending (INFO),RP4 (2024),INFO,38171.25 vs PKKP 84011.60 RM juta (45.4%)
