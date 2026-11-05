@@ -114,9 +114,15 @@ def body_line_ys(table: "RawTable") -> list[float | None]:
         words = _norm(s).split(" ")
         y = None
         if words and words[0]:
-            head = " ".join(words[:3])
+            # a figures-only line (`3.` + amounts) is matched on its first figure alone: the bbox prints each
+            # amount as a line of its own (Selangor CMD.30.2024 J7 row 3)
+            numeric = bool(re.fullmatch(r"[(\-]?[\d,]+(\.\d+)?\)?", words[0]))
+            head = words[0] if numeric else " ".join(words[:3])
             for py, pt in plines:
-                if py >= floor - 1 and (pt.startswith(head) or (len(pt) >= 6 and head.startswith(pt))):
+                if py < floor - 1:
+                    continue
+                if (pt == head or pt.startswith(head + " ")) if numeric else (
+                        pt.startswith(head) or (len(pt) >= 6 and head.startswith(pt))):
                     y = py
                     break
         ys.append(y)

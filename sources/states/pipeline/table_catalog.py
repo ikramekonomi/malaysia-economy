@@ -326,9 +326,20 @@ LINE_CODES: list[tuple[str, str, str]] = [
     ("hasil_", r"^cukai tanah", "revenue_item_land_tax"),
     ("hasil_", r"^permit tanah( dan galian)?", "revenue_item_land_mineral_permit"),
     ("hasil_", r"^pemberian .{0,10}(mengikut )?(bilangan |ramai )?penduduk|"
-     r"pemberian mengikut ramai penduduk|pemberian kepala",
+     r"pemberian mengikut ramai penduduk|pemberian kepala|"
+     # Selangor to 2019 `Pemberian Mengikut Bilangan Orang`, Melaka `Pemberian Hitung Kepala`
+     r"^pemberian mengikut bilangan orang$|^pemberian hitung kepala$",
      "revenue_item_federal_capitation_grant"),
-    ("hasil_", r"kos pengurusan jabatan negeri", "revenue_item_federal_dept_grant"),
+    # the federal grant towards the state departments under the Concurrent List (Senarai Bersama): Selangor and
+    # Johor print `Pemberian 50% Kos Pengurusan Jabatan Negeri`, Kedah `... Separuh Kos Perbelanjaan Pengurusan
+    # (50%) bagi Jabatan di bawah Senarai Bersama`, Terengganu `Pemberian 50% Perbelanjaan Mengurus Jabatan Di
+    # Bawah Senarai Bersama`, Selangor before 2019 `Pemberian Bagi Membiayai Perbelanjaan Mengurus Bagi
+    # Jabatan-Jabatan Di Bawah Senarai Bersama`
+    ("hasil_", r"kos pengurusan jabatan negeri|^(pemberian\b.{0,80})?(perbelanjaan )?(pengurusan|mengurus)\b.{0,30}"
+     r"jabatan(-jabatan)? di bawah senarai bersama$", "revenue_item_federal_dept_grant"),
+    # all federal grants as one line in the revenue-by-category table (Sabah, Sarawak): what the state records
+    # receiving from the federal government; Sarawak adds `dan Bayaran Balik` (and reimbursements)
+    ("hasil_", r"^pemberian kerajaan persekutuan( dan bayaran balik)?$", "revenue_item_federal_grants_total"),
     ("hasil_", r"^hasil hutan|^royalti (kayu|balak|hutan)", "revenue_item_forest_produce"),
     ("hasil_", r"royalti petroleum|^wang ihsan|petroleum", "revenue_item_petroleum_royalty"),
     ("hasil_", r"cukai jualan negeri|^cukai jualan", "revenue_item_state_sales_tax"),
