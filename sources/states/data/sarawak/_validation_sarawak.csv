@@ -4,8 +4,8 @@ V1_cra_closing,PASS,2023,opening + surplus = closing (Akaun Hasil Disatukan),202
 V1_cra_surplus,PASS,2024,revenue - opex = surplus/deficit (Akaun Hasil Disatukan),1474.87,1474.87,0.00,CMD.25.2025.pdf,38,30,7,
 V1_cra_closing,PASS,2024,opening + surplus - other printed flows = closing (Akaun Hasil Disatukan),13730.83,13730.83,-0.00,CMD.25.2025.pdf,38,30,7,
 V1_continuity_in_table,PASS,2024,closing 2023 = opening 2024 (same printed table),20255.96,20255.96,0.00,CMD.25.2025.pdf,38,30,7,
-V1_revenue_categories,FAIL,2023,the three printed categories = jumlah hasil,13311.36,12737.82,-573.54,CMD.25.2025.pdf,39,31,8,
-V1_revenue_categories,FAIL,2024,the three printed categories = jumlah hasil,14186.58,13616.47,-570.11,CMD.25.2025.pdf,39,31,8,
+V1_revenue_categories,PASS,2023,every printed revenue head = jumlah hasil,13311.36,13311.36,0.00,CMD.25.2025.pdf,39,31,8,
+V1_revenue_categories,PASS,2024,every printed revenue head = jumlah hasil,14186.58,14186.58,0.00,CMD.25.2025.pdf,39,31,8,
 V1_prestasi_expenditure_total,PASS,2022,opex + devex = expenditure_total,10458.74,10458.74,0.00,CMD.29.2024.pdf,59,51,1,
 V1_prestasi_surplus,PASS,2022,|revenue_total - expenditure_total| = |surplus_deficit|,1451.37,1451.37,0.00,CMD.29.2024.pdf,59,51,1,
 V1_prestasi_expenditure_total,PASS,2023,opex + devex = expenditure_total,11761.36,11761.36,0.00,CMD.29.2024.pdf,59,51,1,
@@ -31,8 +31,8 @@ V1_continuity_in_table,PASS,2020,closing 2019 = opening 2020 (same printed table
 V1_continuity_in_table,PASS,2021,closing 2020 = opening 2021 (same printed table),20909.76,20909.76,0.00,CMD.29.2024.pdf,65,57,8,
 V1_continuity_in_table,PASS,2022,closing 2021 = opening 2022 (same printed table),17200.58,17200.58,0.00,CMD.29.2024.pdf,65,57,8,
 V1_continuity_in_table,PASS,2023,closing 2022 = opening 2023 (same printed table),18314.46,18314.46,0.00,CMD.29.2024.pdf,65,57,8,
-V1_revenue_categories,FAIL,2022,the three printed categories = jumlah hasil,11910.11,11582.02,-328.09,CMD.29.2024.pdf,66,58,9,
-V1_revenue_categories,FAIL,2023,the three printed categories = jumlah hasil,13311.36,12737.83,-573.53,CMD.29.2024.pdf,66,58,9,
+V1_revenue_categories,PASS,2022,every printed revenue head = jumlah hasil,11910.11,11910.11,0.00,CMD.29.2024.pdf,66,58,9,
+V1_revenue_categories,PASS,2023,every printed revenue head = jumlah hasil,13311.36,13311.36,-0.00,CMD.29.2024.pdf,66,58,9,
 V1_trust_account_composition,PASS,2022,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],5423.91,5423.91,0.00,CMD.29.2024.pdf,72,64,14,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 5423.91, and JUMLAH 5,423.91 is printed for FY2022 (RM juta); printed hierarchy = nested"
 V1_trust_account_composition,PASS,2023,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],6649.00,6649.00,0.00,CMD.29.2024.pdf,72,64,14,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 6649.00, and JUMLAH 6,649.00 is printed for FY2023 (RM juta); printed hierarchy = nested"
 V1_prestasi_expenditure_total,PASS,2018,opex + devex = expenditure_total,10967.10,10967.10,-0.00,CMD.39.2020.pdf,30,4,1,
@@ -252,8 +252,8 @@ V1_continuity_in_table,PASS,2017,closing 2016 = opening 2017 (same printed table
 V1_continuity_in_table,PASS,2018,closing 2017 = opening 2018 (same printed table),22567.83,22567.83,0.00,CMD.49.2021.pdf,33,19,7,
 V1_continuity_in_table,PASS,2019,closing 2018 = opening 2019 (same printed table),22677.97,22677.97,0.00,CMD.49.2021.pdf,33,19,7,
 V1_continuity_in_table,PASS,2020,closing 2019 = opening 2020 (same printed table),20543.13,20543.13,0.00,CMD.49.2021.pdf,33,19,7,
-V1_revenue_categories,FAIL,2019,the three printed categories = jumlah hasil,7266.31,7011.85,-254.46,CMD.49.2021.pdf,34,20,9,
-V1_revenue_categories,FAIL,2020,the three printed categories = jumlah hasil,10646.69,10398.35,-248.34,CMD.49.2021.pdf,34,20,9,
+V1_revenue_categories,PASS,2019,every printed revenue head = jumlah hasil,7266.31,7266.31,-0.00,CMD.49.2021.pdf,34,20,9,
+V1_revenue_categories,PASS,2020,every printed revenue head = jumlah hasil,10646.69,10646.69,0.00,CMD.49.2021.pdf,34,20,9,
 V1_penyumbang_utama_total,PASS,2019,top-contributor lines = printed JUMLAH,5564.10,5564.10,0.00,CMD.49.2021.pdf,35,21,10,
 V1_penyumbang_utama_total,PASS,2020,top-contributor lines = printed JUMLAH,8684.01,8684.01,-0.00,CMD.49.2021.pdf,35,21,10,
 V1_trust_account_composition,PASS,2019,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit + every other printed sibling fund = Akaun Amanah Disatukan [nested+siblings presentation],3425.86,3425.86,-0.00,CMD.49.2021.pdf,47,33,24,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit + every other printed sibling fund = 3425.86, and JUMLAH 3,425.86 is printed for FY2019 (RM juta); printed hierarchy = nested+siblings"

@@ -475,7 +475,9 @@ def v1(fin, rev):
                     extra = [juta(r) for r in sub
                              if r["line_code"] not in named
                              and r.get("row_type") == "component"
-                             and r["line_code_conformed"] == "no"
+                             and (r["line_code_conformed"] == "no"
+                                  # conformed since 2026-11-05 as the federal grants the state records
+                                  or r["line_code"] == "revenue_item_federal_grants_total")
                              and r["unit_printed"].startswith("(RM")]
                     cands = [("the three printed categories", sum(parts))]
                     if extra:
