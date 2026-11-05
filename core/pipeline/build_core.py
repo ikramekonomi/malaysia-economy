@@ -705,6 +705,31 @@ def build_obligations(obs, checks):
                         estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
                         pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"],
                         l1_ref=f"{rel}#row{i}")
+    # contributor/depositor guarantees before the register printed them (FY2010-2011): Nota 10(b) 'Simpanan
+    # pendeposit di BSN, KWSG, KWSP dan LTH', the same concept (C21: where both are printed, note = register)
+    note_dep, agree = {}, []
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_other_notes.csv"))):
+        yr = os.path.basename(os.path.dirname(path))
+        rel = os.path.relpath(path, REPO)
+        for i, r in enumerate(rows(path), start=2):
+            if r["year"] == yr and r["source_file"].startswith(yr) and r["nota"].strip() == "10(b)" and \
+                    r["line_item_bm"].strip().lower().startswith("simpanan pendeposit") and dec(r["amount_rm"]) is not None:
+                note_dep[yr] = (i, rel, r)
+    for yr, (i, rel, r) in sorted(note_dep.items()):
+        v = dec(r["amount_rm"])
+        if ("deposit_guarantees", yr) in seen:
+            agree.append((yr, abs(seen[("deposit_guarantees", yr)][0] - v)))
+            continue
+        seen[("deposit_guarantees", yr)].append(v)
+        obs.add(indicator_code="federal_gov.obligation.deposit_guarantees", geo_code="MY", period_code=yr,
+                entity_id=entity("federal_gov", "MY", yr), basis="audited", edition_id=f"pkkp:{r['source_file']}",
+                vintage=yr, value=v, value_printed=r["amount_rm"], unit_printed="RM", precision_printed="1",
+                estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"] + " 10(b)",
+                l1_ref=f"{rel}#row{i}")
+    checks.append(["C21 deposit guarantees: Nota 10(b) equals the Jaminan Berkanun register where both are printed",
+                   "PKKP", "PASS" if agree and all(d <= 1 for _, d in agree) else "FAIL",
+                   ", ".join(f"FY{y} {d}" for y, d in agree) or "none compared"])
     bad = {k: v for k, v in seen.items() if len(v) != 1}
     checks.append(["C19 one printed figure per federal obligation and year (PKKP memorandum, own volume)", "PKKP",
                    "PASS" if not bad else "FAIL", f"{len(seen)} instrument-years" + (f"; {bad}" if bad else "")])

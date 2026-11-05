@@ -35,7 +35,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
 | `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
 | `gap_reported_vs_audited.csv` | 89 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
-| `gap_obligations_growth.csv` | 66 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
+| `gap_obligations_growth.csv` | 68 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
 | `gap_revenue_estimate_vs_collected.csv` | 90 | federal revenue by type (tax, non-tax, non-revenue receipts, Federal Territories, total) × year: the accounts' original and revised estimates and actual beside the Budget revenue books'; collection rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
@@ -458,25 +458,34 @@ December from PKKP's memorandum accounts and guarantee registers, each year from
 * PFI liabilities, financial commitments and committed guarantees, FY2018+ (first printed then);
 * statutory loan guarantees, FY2009-2024 (FY2009-2011 print no deposit section, so the register total is the
   loans; O2 proves it);
-* contributor and depositor guarantees, FY2012+.
+* contributor and depositor guarantees, FY2010+ (FY2010-2011 from Nota 10(b); the FY2012 note equals the
+  register, C21).
 
 The view (method declared before results, `core/pipeline/build_gap_obligations.py`) gives each instrument's
 year-on-year growth against debt's, its ratio to debt, and an index (first year = 100) beside debt's.
 
 Over each instrument's span (check O5), debt grew 3.44x (2009-2024) and 1.68x over 2018-2024:
-* PFI liabilities: 0.90x (falling every year since 2020);
+* PFI liabilities: 0.90x (falling every year since 2020: repayment by the two vehicles PKKP's line covers;
+  MOF's PPP and PFI obligations, RM148.6b at 2024, are several times larger and not in this line);
 * commitments: 1.22x;
 * committed guarantees: 1.43x;
 * statutory loan guarantees: 3.95x, against debt's 3.44x over the same years;
-* deposit guarantees: 2.59x, against debt's 2.49x since 2012.
+* deposit guarantees: 3.29x, against debt's 3.07x since 2010 (mostly EPF members' savings: not borrowing).
 
 So only the statutory guarantees outgrew debt over their span.
 
 Restatements are kept in the note and never applied (O3). Financial commitments are restated by every later
 volume, by up to RM7.2b (FY2021, in the FY2022 volume).
 
-Never add instruments: commitments include the committed guarantees, and deposit guarantees overlap deposit
-insurance (CV30). The Auditor-General's and MOF's figures stay in `curated/fact_obligations.csv`. Checks O1-O5 are
+Never add instruments (CV30):
+* commitments include the committed guarantees;
+* most committed guarantees (RM210.9b of RM236.2b in 2024) are loans also in the statutory loan-guarantee
+  register;
+* deposit guarantees are savings.
+
+The FY2018 volume's 2017 comparatives for PFI, commitments and committed guarantees are not used (each year from
+its own volume), so those series start in 2018. A blind verifier re-derived every number:
+`qa/audits/2026-11-06_phase5_obligations_verifier.md`. The Auditor-General's and MOF's figures stay in `curated/fact_obligations.csv`. Checks O1-O5 are
 in `_validation_gap_obl.csv`.
 
 ## gap_federal_placement (Phase 3, 2026-11-05)

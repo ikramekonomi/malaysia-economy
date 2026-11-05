@@ -1,6 +1,6 @@
 check,scope,status,detail
-O1 every value equals its observation,core/gap_obligations_growth.csv,PASS,66 rows
+O1 every value equals its observation,core/gap_obligations_growth.csv,PASS,68 rows
 O2 loan guarantees = Badan Berkanun + Syarikat as printed,core/gap_obligations_growth.csv,PASS,16 years
-O3 each volume's prior-year figure against the previous volume (INFO),core/gap_obligations_growth.csv,INFO,57 compared; deposit_guarantees FY2017 restated in the FY2018 volume by 2797018580; commitments FY2020 restated in the FY2021 volume by 82763118; commitments FY2021 restated in the FY2022 volume by 7230502983; commitments FY2022 restated in the FY2023 volume by 570621519; commitments FY2023 restated in the FY2024 volume by 81485
-O4 every instrument and year once,core/gap_obligations_growth.csv,PASS,66 rows
-O5 growth over each instrument's span against debt's (INFO),core/gap_obligations_growth.csv,INFO,debt 2009-2024: x3.443; pfi 2018-2024: x0.904 (debt x1.684); commitments 2018-2024: x1.223 (debt x1.684); committed_guarantees 2018-2024: x1.432 (debt x1.684); loan_guarantees 2009-2024: x3.947 (debt x3.443); deposit_guarantees 2012-2024: x2.587 (debt x2.487)
+O3 each volume's prior-year figure against the previous volume (INFO),core/gap_obligations_growth.csv,INFO,57 of 62 compared (the FY2010-2012 guarantee registers and the FY2010-2011 Nota 10(b) print no prior-year column); deposit_guarantees FY2017 restated in the FY2018 volume by 2797018580; commitments FY2020 restated in the FY2021 volume by 82763118; commitments FY2021 restated in the FY2022 volume by 7230502983; commitments FY2022 restated in the FY2023 volume by 570621519; commitments FY2023 restated in the FY2024 volume by 81485
+O4 every instrument and year once,core/gap_obligations_growth.csv,PASS,68 rows
+O5 growth over each instrument's span against debt's (INFO),core/gap_obligations_growth.csv,INFO,debt 2009-2024: x3.443; pfi 2018-2024: x0.904 (debt x1.684); commitments 2018-2024: x1.223 (debt x1.684); committed_guarantees 2018-2024: x1.432 (debt x1.684); loan_guarantees 2009-2024: x3.947 (debt x3.443); deposit_guarantees 2010-2024: x3.285 (debt x3.065)

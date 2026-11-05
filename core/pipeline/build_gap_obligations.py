@@ -22,8 +22,16 @@ were seen in curated/fact_obligations.csv while choosing the lines, no growth or
   - 1, debt's growth the same year, growth_minus_debt_pp, ratio_to_debt = amount / debt, and an index (first year
   held = 100) beside debt's index on the same base. Status: grew_faster_than_debt (growth > debt's growth),
   grew_slower_than_debt (<), grew_as_debt (equal to 4 decimal places), first_year (no prior year held), and for
-  debt itself 'the benchmark'. Ratios to 4 decimals, no rounding before the end. Never added across
+  debt itself the_benchmark. Ratios to 4 decimals, no rounding before the end. Never added across
   instruments: commitments include the committed guarantees, and deposit guarantees overlap deposit insurance.
+* Added after the blind verifier (2026-11-06; no threshold or status rule changed):
+    - deposit_guarantees FY2010-2011 from that year's Nota 10(b) 'Simpanan pendeposit di BSN, KWSG, KWSP dan
+      LTH' (the register has no deposit section then; the FY2012 note equals the register, core check C21)
+    - notes on scope: PKKP's PFI line is two vehicles (MOF's PPP+PFI obligations are several times larger);
+      committed guarantees are mostly loans also in the statutory loan-guarantee register; deposit guarantees
+      are mostly EPF members' savings; a restatement that is a change of scope is named
+    - each row carries the caveats of every observation it uses (the prior year's too); O3 names the years it
+      cannot test
 * Checks: O1 every value equals its observation; O2 FY2009-2011 loan guarantees = Badan Berkanun + Syarikat
   subtotals as printed, and FY2012+ the same identity; O3 each volume's prior-year column against the previous
   volume's own figure (a restatement is INFO, reported, never applied); O4 every instrument and year once; O5
@@ -45,9 +53,18 @@ LABEL = {"debt": "Federal government debt", "pfi": "PFI liabilities", "commitmen
          "committed_guarantees": "Committed guarantees", "loan_guarantees": "Statutory loan guarantees",
          "deposit_guarantees": "Statutory contributor and depositor guarantees"}
 NOTE = {"commitments": "includes the committed guarantees: never add the two",
-        "committed_guarantees": "part of the financial commitments: never add the two",
-        "deposit_guarantees": "balances of contributors and depositors guaranteed by statute; overlaps deposit "
-                              "insurance and is not borrowing: never add it to debt"}
+        "committed_guarantees": "part of the financial commitments, and most of it (RM210.9b of RM236.2b in 2024) is "
+                                "loans also in the statutory loan-guarantee register: never add it to either",
+        "loan_guarantees": "overlaps the committed guarantees (the same loans, where the government services them): "
+                           "never add the two",
+        "pfi": "PKKP's PFI line covers two financing vehicles (Pembinaan PFI and MKD Aman Makmur); MOF's PPP and PFI "
+               "obligations (Fiscal Outlook 'Liabiliti lain', curated/fact_obligations.csv) are several times larger "
+               "(RM148.6b at 2024), so a falling line here is not falling PPP exposure",
+        "deposit_guarantees": "savings guaranteed by statute (EPF members about 90% in 2024, Tabung Haji, BSN, "
+                              "SSPN-i): not borrowing, and its growth tracks savings; never add it to debt"}
+SCOPE = {("deposit_guarantees", "2018"): "the FY2018 volume adds SSPN-i (PTPTN), RM2,797,018,580 at 2017: a change "
+                                         "of scope, so part of this year's growth is the scheme joining (like for "
+                                         "like 9.03%)"}
 FIELDS = ["geo_code", "instrument", "indicator_code", "instrument_label", "year", "amount_rm", "prior_year_rm",
           "change_rm", "growth", "debt_growth", "growth_minus_debt_pp", "ratio_to_debt", "index_first_year",
           "debt_index_same_base", "status", "source_obs_ids", "note", "caveats", "release_id"]
@@ -105,7 +122,14 @@ def main():
                 notes.append(NOTE[inst])
             if inst == "loan_guarantees" and int(y) <= 2011:
                 notes.append("FY2009-2011 print no deposit section: the register total is the loan guarantees")
-            row["caveats"] = ";".join(sorted(set(w.caveats_for(r)) | {"CV30"}))
+            if (inst, y) in SCOPE:
+                notes.append(SCOPE[(inst, y)])
+            if inst == "deposit_guarantees" and int(y) <= 2011:
+                notes.append("from that year's Nota 10(b) (the register has no deposit section before FY2012)")
+            cv = {"CV30"}
+            for i in dict.fromkeys(ids):
+                cv |= set(w.caveats_for(w.by_id[i]))
+            row["caveats"] = ";".join(sorted(cv))
             row["source_obs_ids"] = ";".join(dict.fromkeys(ids))
             row["note"] = "; ".join(notes)
             out.append(row)
@@ -154,10 +178,13 @@ def main():
                             if row["instrument"] == inst and row["year"] == y:
                                 row["note"] = "; ".join(x for x in (row["note"], (
                                     f"this volume reprints FY{prev} as {fmt(Decimal(v))} ({fmt(d)} against the FY{prev} "
-                                    "volume); growth here is against the FY{prev} volume's own figure (golden rule 6)"
+                                    "volume: a restatement or a change of scope); growth here is against the FY{prev} "
+                                    "volume's own figure (golden rule 6)"
                                 ).replace("{prev}", prev)) if x)
+    held = sum(1 for (i, y) in val if (i, str(int(y) - 1)) in val)
     add("O3 each volume's prior-year figure against the previous volume (INFO)", "INFO",
-        f"{compared} compared; " + ("; ".join(restated) if restated else "no restatement beyond RM1"))
+        f"{compared} of {held} compared (the FY2010-2012 guarantee registers and the FY2010-2011 Nota 10(b) print no "
+        "prior-year column); " + ("; ".join(restated) if restated else "no restatement beyond RM1"))
     keys = [(r["instrument"], r["year"]) for r in out]
     add("O4 every instrument and year once", "PASS" if len(keys) == len(set(keys)) else "FAIL", f"{len(keys)} rows")
     summ = []
