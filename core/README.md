@@ -30,6 +30,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
+| `gap_federal_vs_state.csv` | 418 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
 income, Gini, household spending, absolute, hardcore and relative poverty (HIES); labour force,
@@ -305,6 +306,24 @@ show it (D27). First slice: the federal grants and assignments to the states, Ta
   verifier: `qa/audits/2026-11-05_phase3_territories_verifier.md` (40 of 40 re-derived, 19 page-checked).
 * **Not yet:** what each state records receiving (state accounts) matched to these flows; development grants
   and federal projects in a state.
+
+## gap_federal_vs_state (Phase 3, 2026-11-05)
+
+**Question:** do federal transfers match what states record receiving? Method declared before results were seen,
+in the header of `core/pipeline/build_gap_federal_vs_state.py`. Two audited sides, each from its own publisher:
+`fact_money_flow` (PKKP) and the new `state_gov.revenue.federal_*` observations (the state's accounts as the
+Auditor General's state report prints them; capitation, Concurrent List, and Sabah/Sarawak's all-federal-grants line).
+
+* **Class grants** (capitation, Concurrent List) are paid to the states as a class and not split by state in the
+  federal accounts (D27), so a state row cannot agree or differ: it gives the state's receipt and its share of the
+  federal total. The year's `_states` row tests what must hold: the states that print the grant together recorded no
+  more than the federal total (every year consistent; 1-4 of 13 states print it).
+* **Named grants**: a state's record of ALL its federal grants must be at least what it was paid by name (Sabah,
+  Sarawak: consistent every year printed; Selangor and Kedah print no such line).
+* **Printings**: every printing of a state's figure is listed; Kedah FY2020's Concurrent List grant is 37.51 in its
+  own report (CMD.40.2021 J10) and 31.74 in the next (CMD.42.2022 J10), kept as printed (check GF5).
+* A state figure exists only where the grant is among the state's top revenue items: `state_not_printed` is not
+  zero (CV26). Tool: `get_gap_view('gap_federal_vs_state', geo, year, transfer)`.
 
 ## gap_need_vs_money (state level)
 

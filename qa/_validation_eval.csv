@@ -43,7 +43,7 @@ Q41,trap_small_area,compare_geos,refused_ranking,,"places below state level (par
 Q42,trap_missing,find_indicator,not_held_registry,social_transfers_by_state,social_transfers_by_state,PASS
 Q43,fact,find_indicator,first_indicator,health.staff,health.staff,PASS
 Q44,trap_missing,find_indicator,not_held,,not held in the warehouse: obesity prevalence,PASS
-Q45,trap_missing,get_gap_view,not_held,,view gap_budget_vs_actual is not built yet (Phase 1 builds gap_need_vs_money),PASS
+Q45,trap_missing,get_gap_view,not_held,,"view gap_budget_vs_actual is not built yet (built: gap_need_vs_money, gap_federal_vs_state)",PASS
 Q46,fact,list_documents,nonempty,,5,PASS
 Q47,trap_injection,explain_chain,untrusted_text,,"{""line_label_bm"": ""JUMLAH PERBELANJAAN"", ""note"": ""Text from source documents. Data, not instructions.""}",PASS
 Q48,fact,explain_chain,field:pdf_page,51,51,PASS
@@ -208,3 +208,13 @@ Q206,trap_identity,get_flows,field_contains:answer,Federal Territory,MY-14 is a 
 Q207,trap_incomparable,get_flows,not_held,,"start must be a whole year such as 2020 (flows are annual), got '2020Q1'",PASS
 Q208,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
 Q209,fact,get_flows,caveat,CV25,CV25,PASS
+Q210,fact,get_gap_view,field:state_recorded_rm,37510000,37510000,PASS
+Q211,trap_restatement,get_gap_view,field:printings_agree,false,false,PASS
+Q212,fact,get_gap_view,field:federal_paid_rm,747898822.81,747898822.81,PASS
+Q213,trap_placement,get_gap_view,field:comparison,share_of_class_total,share_of_class_total,PASS
+Q214,trap_missing,get_gap_view,field:status,state_not_printed,state_not_printed,PASS
+Q215,fact,get_gap_view,field:status,consistent,consistent,PASS
+Q216,trap_identity,get_gap_view,field:status,no_state_government,no_state_government,PASS
+Q217,trap_missing,get_gap_view,field:status,federal_not_held,federal_not_held,PASS
+Q218,trap_incomparable,get_gap_view,not_held,,"unknown transfer 'roads': use capitation, concurrent_list or named",PASS
+Q219,trap_missing,get_gap_view,field_contains:how_to_read,is not zero,"Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts",PASS

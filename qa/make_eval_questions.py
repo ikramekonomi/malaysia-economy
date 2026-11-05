@@ -755,6 +755,53 @@ q("5", "Federal grants to the states in 2015 (the image-only volume)?", "get_flo
 q("5", "Does a flow say what it can and cannot place?", "get_flows", {"to": "MY-12", "start": "2024", "end": "2024"},
   "caveat", "CV25")
 
+def st_rev(state, year, pattern, own=True):
+    """A state's printed revenue line from L1 (its own-year volume unless own=False: every printing)."""
+    import re
+    slug = state.lower().replace(" ", "_")
+    hits = [r for r in csv.DictReader(open(os.path.join(REPO, "sources", "states", "data", slug,
+                                                         f"fact_state_revenue_{slug}.csv")))
+            if r["fiscal_year"] == year and r["measure"] == "actual" and re.search(pattern, r["line_label_bm"], re.I)
+            and (r["column_role"] == "own_year") == own]
+    vals = {Decimal(r["amount_rm_conformed"]) for r in hits}
+    assert vals and (len(vals) == 1 or not own), (state, year, pattern, vals)
+    return vals
+
+
+# J. gap_federal_vs_state: federal paid (PKKP) vs state recorded (state accounts)
+q("5", "What did Kedah record receiving as the Concurrent List grant in 2020 (its own report)?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-02", "year": "2020", "transfer": "concurrent_list"},
+  "field:state_recorded_rm", s(next(iter(st_rev("Kedah", "2020", r"senarai bersama")))))
+q("5", "Do Kedah's own reports agree on its 2020 Concurrent List grant?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-02", "year": "2020", "transfer": "concurrent_list"},
+  "field:printings_agree", "true" if len(st_rev("Kedah", "2020", r"senarai bersama", own=False)
+                                         | st_rev("Kedah", "2020", r"senarai bersama")) == 1 else "false",
+  kind="trap_restatement")
+q("5", "What does the view give as the federal Concurrent List grants to all states in 2020?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "_states", "year": "2020", "transfer": "concurrent_list"},
+  "field:federal_paid_rm", s(b11(2020, r"senarai bersama")))
+q("5", "Can a state's Concurrent List receipt 'agree' with the federal accounts?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2022", "transfer": "concurrent_list"},
+  "field:comparison", "share_of_class_total", kind="trap_placement")
+q("5", "Did Johor print its capitation grant in 2020 (or is it zero)?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-01", "year": "2020", "transfer": "capitation"},
+  "field:status", "state_not_printed", kind="trap_missing")
+q("5", "Is Sarawak's 2023 record of its federal grants at least its special grant?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-13", "year": "2023", "transfer": "named"}, "field:status",
+  "consistent" if next(iter(st_rev("Sarawak", "2023", r"^pemberian kerajaan persekutuan"))) >= t12(2023, "010500")
+  else "inconsistent")
+q("5", "Capitation grant to Kuala Lumpur in 2022, federal vs state?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-14", "year": "2022", "transfer": "capitation"},
+  "field:status", "no_state_government", kind="trap_identity")
+q("5", "Federal vs state Concurrent List grants in 2015?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "_states", "year": "2015", "transfer": "concurrent_list"},
+  "field:status", "federal_not_held", kind="trap_missing")
+q("5", "Federal vs state road grants?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "transfer": "roads"}, "not_held", kind="trap_incomparable")
+q("5", "Does the federal-vs-state view say a missing state figure is not zero?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-01", "year": "2020", "transfer": "capitation"},
+  "field_contains:how_to_read", "is not zero", kind="trap_missing")
+
 with open(os.path.join(REPO, "qa", "eval_questions.csv"), "w", newline="") as f:
     w = csv.DictWriter(f, fieldnames=list(Q[0]))
     w.writeheader()
