@@ -33,6 +33,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 | `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
+| `gap_budget_vs_actual.csv` | 1,452 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
 Indicators: population (state 1970–2026, district 2020–2026), households; median and mean household
@@ -344,6 +345,26 @@ show it (D27). First slice: the federal grants and assignments to the states, Ta
   verifier: `qa/audits/2026-11-05_phase3_territories_verifier.md` (40 of 40 re-derived, 19 page-checked).
 * **Not yet:** what each state records receiving (state accounts) matched to these flows; development grants
   and federal projects in a state.
+
+## gap_budget_vs_actual (Phase 5, 2026-11-05)
+
+Was the money budgeted spent? One row per federal body (entity), year and flow (opex: B and T votes; devex: P
+votes), PKKP FY2009-2024 plus the Budget books' estimate years (2023-2026). Method declared and committed before
+any result (`core/pipeline/build_gap_budget_vs_actual.py`). Each column is one source as printed:
+
+* `estimate_original_pkkp`, `estimate_revised_pkkp`: the audited accounts' original and revised operating
+  estimates; for devex the accounts print one column, 'Anggaran' in Lampiran 2, loaded as basis `allocation`
+  because it is not the tabled estimate (FY2024: RM85.2b against the Budget book's RM92.0b).
+* `estimate_original_book`, `actual_book`: the Budget books' original estimate for the year and their reprint of
+  the actual, beside the audit (`book_vs_pkkp_*`: 102 of 104 operating estimates agree, every reprinted actual
+  agrees; the two differences are votes created during FY2024, PETRA and Digital, which the accounts print with
+  no original estimate).
+* `execution_rate` = audited actual / revised estimate (or allocation): `within_estimate` 0.90-1.00,
+  `underspent` below 0.90, `overspent` above 1.00, `not_held` where a side is missing. No ranking.
+
+A body is its vote (D26, D28, D31): a lapsed vote's successor is another body, so rows are never joined across
+bodies. Tool: `get_gap_view('gap_budget_vs_actual', year=..., entity='B.45')`. Checks V1-V6 in
+`_validation_gap_bva.csv`.
 
 ## gap_federal_placement (Phase 3, 2026-11-05)
 

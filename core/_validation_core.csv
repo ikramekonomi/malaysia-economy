@@ -1,12 +1,12 @@
 check,scope,status,note
-C1 primary key unique,fact_observation,PASS,138819 rows
+C1 primary key unique,fact_observation,PASS,139272 rows
 C2 indicator_code resolves,fact_observation,PASS,all resolve
 C2 geo_code resolves,fact_observation,PASS,all resolve
 C2 period_code resolves,fact_observation,PASS,all resolve
 C2 breakdown_key resolves,fact_observation,PASS,all resolve
 C3 basis in meta/code_list.csv,fact_observation,PASS,ok
 C3 status in meta/code_list.csv,fact_observation,PASS,ok
-C4 every row has provenance (file sha256 + L1 row; D24 volumes: page + L1 row),fact_observation,PASS,"0 rows without; 402 rows from D24 volumes (no PDF held, caveat CV17)"
+C4 every row has provenance (file sha256 + L1 row; D24 volumes: page + L1 row),fact_observation,PASS,"0 rows without; 460 rows from D24 volumes (no PDF held, caveat CV17)"
 C5 a survey estimate without published uncertainty says so (reliability = unknown),fact_observation,PASS,0 rows claim reliability without uncertainty
 C9 percentile cut-offs rise with the percentile,hh_income.gross.pctile_group.max,PASS,51 place-years
 "C10 50th percentile cut-off vs the headline median (DOSM files, kept as published)",hh_income.gross.pctile_group.max,INFO,51 place-years; within RM1 except MY 2019: 6; MY-04 2019: 9; MY-09 2019: 2; MY-15 2019: 2; MY-16 2019: 3; MY-16 2022: -14
@@ -76,7 +76,7 @@ C13 banking-system loans = commercial + Islamic + investment banks (BNM MSB 1.18
 C14 the file read is the vintage logged as current (sha256; national series),fact_observation,PASS,"4 files, all match"
 C15 every entity_id is a registered entity (core/dim_entity.csv) or _none,fact_observation,PASS,61 entities used
 "C16 PKKP votes add up to the printed audited totals (opex + transfer, devex; within RM2: the statement prints whole ringgit)",federal_gov.vote.*,INFO,"32 year-totals; differ: ['devex 2009: votes 49291023062.69 vs printed 49515355570.54']; FY2009 devex: printed vote totals vs the printed grand total, diagnosed in curated/_known_extraction_defects_curated.csv (caveat CV21)"
-"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,138819 rows checked
+"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,139272 rows checked
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2010,PASS,states 18170277815.79 vs printed 18170277815.79
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2011,PASS,states 16820200196.15 vs printed 16820200196.15
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2012,PASS,states 15722068017.98 vs printed 15722068017.98

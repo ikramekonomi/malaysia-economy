@@ -576,6 +576,8 @@ class Tools:
                               "the HIES years 2014, 2016, 2019, 2022 and 2024"),
         "gap_federal_vs_state": ("core/pipeline/build_gap_federal_vs_state.py (declared 2026-11-05)",
                                  "FY2014-2024 (FY2015 has no federal side)"),
+        "gap_budget_vs_actual": ("core/pipeline/build_gap_budget_vs_actual.py (declared 2026-11-05)",
+                                 "PKKP FY2009-2024 and the Budget books' estimate years 2023-2026"),
         "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
                                   "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
@@ -609,7 +611,7 @@ class Tools:
         "is lampiran_e_unreconciled: MOF prints the Concurrent List, libraries and museums grants separately and "
         "together they do not equal the audited line that carries all three, so none of them is used (CV28).")
 
-    def get_gap_view(self, name, geo=None, year=None, transfer=None):
+    def get_gap_view(self, name, geo=None, year=None, transfer=None, entity=None):
         import csv
         if name not in self.GAP_VIEWS:
             return {"held": False, "answer": f"view {name} is not built yet (built: {', '.join(self.GAP_VIEWS)})",
@@ -631,10 +633,24 @@ class Tools:
             return {"held": False, "answer": f"unknown place code {geo}" + (f"; did you mean {hint}?" if hint else
                                                                             "; use an ISO 3166-2:MY code, e.g. MY-01"),
                     "release_id": self.w.release_id}
+        want_ids = None
+        if entity is not None:
+            if name != "gap_budget_vs_actual":
+                return {"held": False, "answer": "entity applies to gap_budget_vs_actual only",
+                        "release_id": self.w.release_id}
+            e = str(entity).strip().upper()
+            if e in self.w.entity:
+                want_ids = {e}
+            else:
+                got = self.get_entity(e, year) if year else self.get_entity(e)
+                want_ids = {x["entity_id"] for x in got.get("entities", [])}
+                if not want_ids:
+                    return {**got, "release_id": self.w.release_id}
         path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "core", f"{name}.csv")
         with open(path, newline="") as f:
             rs = [r for r in csv.DictReader(f) if (not geo or r["geo_code"] == geo) and (not year or r["year"] == year)
-                  and (not transfer or r.get("transfer") == transfer)]
+                  and (not transfer or r.get("transfer") == transfer)
+                  and (want_ids is None or r.get("entity_id") in want_ids)]
         if not rs:
             return {"held": False, "answer": f"no row for {geo or 'any place'} in {year or 'any year'}"
                                              + (f" for {transfer}" if transfer else "")
@@ -649,6 +665,14 @@ class Tools:
         out = {"held": True, "view": name, "rows": rs, "method": method, "release_id": self.w.release_id}
         if name == "gap_federal_vs_state":
             out["how_to_read"] = self.FED_VS_STATE_NOTE
+        if name == "gap_budget_vs_actual":
+            out["how_to_read"] = (
+                "One row per federal body, year and flow (opex, devex), each column one source as printed: the audited "
+                "accounts' original and revised estimates (for devex, the accounts' own allocation column, not the "
+                "tabled estimate), the Budget book's original estimate, the audited actual and the book's reprint of "
+                "it. execution_rate = audited actual / revised estimate (or allocation); status: within_estimate "
+                "(0.90-1.00), underspent (< 0.90), overspent (> 1.00), not_held. A body is its vote: a lapsed vote's "
+                "successor is another body (get_entity lineage), so do not join rows across bodies. No ranking.")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:

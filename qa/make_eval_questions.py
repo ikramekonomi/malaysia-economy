@@ -153,7 +153,7 @@ q("6", "Which indicator counts doctors?", "find_indicator", {"text": "doctors pe
   "health.staff")
 q("6", "What is the obesity rate in each state (NHMS, not held)?", "find_indicator", {"text": "obesity prevalence"},
   "not_held", kind="trap_missing")
-q("5", "Show the budget-vs-actual gap view.", "get_gap_view", {"name": "gap_budget_vs_actual"}, "not_held",
+q("5", "Show the audit-recurrence gap view (not built yet).", "get_gap_view", {"name": "gap_audit_recurrence"}, "not_held",
   kind="trap_missing")
 q("5", "Which documents are still expected for theme 6?", "list_documents", {"theme": "6", "status": "expected"},
   "nonempty")
@@ -223,6 +223,23 @@ q("5", "Does the answer say MOF's per-state capitation figure is not the audited
 q("5", "Is MOF's split of the 2020 Concurrent List grant by state used, though it does not add up to the audited line?",
   "get_gap_view", {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2020", "transfer": "concurrent_list"},
   "field:by_state_status", "lampiran_e_unreconciled", kind="trap_missing")
+
+
+
+def pk_opex(year, code, col):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_opex_maksud.csv"), newline="") as fh:
+        return next(Decimal(r[col]) for r in csv.DictReader(fh) if r["maksud_code"] == code)
+
+
+_a, _rv = pk_opex("2022", "B.45", "sebenar_rm"), pk_opex("2022", "B.45", "anggaran_dipinda_rm")
+q("5", "What share of its revised 2022 operating estimate did the Youth and Sports ministry (B.45) spend?",
+  "get_gap_view", {"name": "gap_budget_vs_actual", "year": "2022", "entity": "B.45"},
+  "row_field:flow=opex:execution_rate", s((_a / _rv).quantize(Decimal("0.0001"))))
+q("5", "How much of its revised 2022 operating estimate did B.45 leave unspent?", "get_gap_view",
+  {"name": "gap_budget_vs_actual", "year": "2022", "entity": "B.45"}, "row_field:flow=opex:unspent_rm", s(_rv - _a))
+q("5", "Does the budget-vs-actual view say PETRA's 2024 vote had no original estimate in the accounts?",
+  "get_gap_view", {"name": "gap_budget_vs_actual", "year": "2024", "entity": "B.33"},
+  "row_field:flow=opex:book_vs_pkkp_estimate_status", "differ", kind="trap_identity")
 
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",

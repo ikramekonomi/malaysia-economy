@@ -494,6 +494,16 @@ def build_votes(obs):
                     estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
                     pdf_page=r["pdf_page"], printed_page=r["printed_page"],
                     table_ref=f"{r['statement']} ({r['jumlah_label_bm']})", l1_ref=f"{rel}#row{i}")
+            # the same line's allocation column (Lampiran 2 'Anggaran'): the accounts' own year allocation, which
+            # is not the Budget book's original estimate (FY2024 RM85.2b against RM92.0b), so its own basis
+            a = dec(r["anggaran_jumlah_rm"])
+            if a is not None:
+                obs.add(indicator_code="federal_gov.vote.devex", geo_code="MY", period_code=year, breakdown_key=bk,
+                        entity_id=ent_id, basis="allocation", edition_id=f"pkkp:{r['source_file']}", vintage=year,
+                        value=a, value_printed=r["anggaran_jumlah_rm"], unit_printed="RM", precision_printed="0.01",
+                        estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                        pdf_page=r["pdf_page"], printed_page=r["printed_page"],
+                        table_ref=f"{r['statement']} ({r['jumlah_label_bm']}, Anggaran)", l1_ref=f"{rel}#row{i}")
     for path in sorted(glob.glob(os.path.join(ANGGARAN, "*", "fact_anggaran_maksud_*.csv"))):
         rel = os.path.relpath(path, REPO)
         book = int(os.path.basename(path)[-8:-4])
