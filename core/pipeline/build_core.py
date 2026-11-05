@@ -8,6 +8,8 @@ Reads L1 (never edits it):
                        hh_poverty, hh_inequality, lfs_year (national values),
                        hh_poverty_state, hh_inequality_state, hies_state, lfs_state_sex, cpi_state,
                        gdp_state_real_supply, hh_profile_state  (+ _vintage_log.csv for edition and sha256)
+                       cpi_headline, trade_headline (national, monthly)
+  sources/bnm/data/    msb_3_1 (federal finance), msb_1_3 (M1-M3), msb_1_18 (loans)  (+ _vintage_log.csv)
   sources/states/data/_national/fact_state_finance_all.csv  (13 states' audited accounts)
   meta/registry_file.csv (sha256 of each state volume), meta/indicator.csv (indicator definitions)
 Writes (derived, rebuilt every run, committed so a reviewer can diff them):
@@ -336,6 +338,66 @@ def build_national_accounts(obs, ed):
                 basis="statistic", edition_id=e, vintage=vint, value=v * m, value_printed=r["value"],
                 unit_printed="RM million", precision_printed="0.001", estimate_method="modelled", file_id=sha,
                 table_ref="gdp_annual_nominal_income", l1_ref=f"sources/dosm/data/gdp_annual_nominal_income.csv#row{i}")
+
+
+BNM = os.path.join(REPO, "sources", "bnm", "data")
+TRADE = {"exports": "trade.exports", "imports": "trade.imports", "balance": "trade.balance"}
+MONEY = {"m_one_tot": "money.m1", "m_two_tot": "money.m2", "m_thr_tot": "money.m3"}
+BANK_TYPE = {"Jumlah/Total": "_total", "Bank-bank Perdagangan / Commercial Banks": "bank_type=commercial",
+             "Bank-bank Islam / Islamic Banks": "bank_type=islamic",
+             "Bank-bank Pelaburan / Investment Banks": "bank_type=investment"}
+
+
+def bnm_editions():
+    """dataset -> the current row of sources/bnm/data/_vintage_log.csv (data_as_of, sha256)."""
+    return {r["dataset"]: r for r in rows(os.path.join(BNM, "_vintage_log.csv")) if r["state"] == "current"}
+
+
+def build_national_series(obs, ed):
+    """Phase 2: national monthly series, as published.
+
+      cpi_headline (DOSM)  CPI for Malaysia, headline and 13 COICOP divisions, 2010=100: the same indicator
+                           (cpi.index) and breakdown codes as cpi_state, which is the same DOSM product by state
+                           (storage.dosm.gov.my cpi_2d.csv vs cpi_2d_state.csv)
+      trade_headline (DOSM) exports, imports and the trade balance of goods, RM, series 'abs' only (DOSM's
+                           growth_mom / growth_yoy rows are its own derived transforms and are not loaded)
+      BNM MSB 1.3          M1, M2, M3 (RM million)
+      BNM MSB 1.18         loans/financing by type: the total of the banking system (the 'Jumlah/Total' row,
+                           equal to commercial + Islamic + investment banks, which are kept as a breakdown)
+    Blank cells stay blank (no row). Signs are as published (a trade deficit is negative)."""
+    one = Decimal(1)
+    dosm_simple(obs, ed, "cpi_headline", {"index": ("cpi.index", one, "index 2010=100", "0.1")}, "M", "direct_survey",
+                geo_col=None, breakdown=lambda r: "_total" if r["division"] == "overall" else f"coicop={r['division']}")
+    dosm_simple(obs, ed, "trade_headline", {c: (ind, one, "RM", "1") for c, ind in TRADE.items()}, "M",
+                "administrative", filt=lambda r: r["series"] == "abs", geo_col=None)
+    m, vin = Decimal(1000000), bnm_editions()
+
+    def load(dataset, cols, table, breakdown=lambda r: "_total"):
+        v = vin[dataset]
+        d = v["data_as_of"][:10]
+        for i, r in enumerate(rows(os.path.join(BNM, f"{dataset}.csv")), start=2):
+            if not r["month_dt"].strip():
+                obs.skipped[f"{dataset}: annual row (not loaded; monthly only)"] += 1
+                continue
+            bk = breakdown(r)
+            for col, ind in cols.items():
+                val = dec(r[col])
+                if val is None:
+                    continue
+                obs.add(indicator_code=ind, geo_code="MY", period_code=f"{r['year_dt']}-{int(r['month_dt']):02d}",
+                        breakdown_key=bk, basis="statistic", edition_id=f"bnm:{dataset}@{d}", vintage=d,
+                        value=val * m, value_printed=r[col], unit_printed="RM million",
+                        precision_printed="0.000000000001", estimate_method="administrative", file_id=v["sha256"],
+                        table_ref=table, l1_ref=f"sources/bnm/data/{dataset}.csv#row{i}")
+
+    def bank_type(r):
+        if r["type"] not in BANK_TYPE:
+            sys.exit(f"msb_1_18: unknown institution type {r['type']!r}")
+        return BANK_TYPE[r["type"]]
+
+    load("msb_1_3", MONEY, "BNM MSB 1.3 Monetary Aggregates M1, M2 and M3")
+    load("msb_1_18", {"tot_fin": "credit.loans.banking_system"}, "BNM MSB 1.18 Loans/Financing by Type",
+         breakdown=bank_type)
 
 
 PCTILE_STATS = {"mean": "mean", "median": "median", "minimum": "min", "maximum": "max"}
@@ -732,6 +794,33 @@ def checks(obs, geo, per, ind, brk, editions):
         if (abs(got) != abs(want)) or (not level and got != want):
             bad.append(f"{r['indicator_code']} {r['geo_code']} {r['period_code']}: value {r['value']} vs printed "
                        f"{r['value_printed']} {r['unit_printed']}")
+    # national series (Phase 2): the published identities, re-checked on the conformed rows
+    tr, loans = defaultdict(dict), defaultdict(dict)
+    for r in obs.rows:
+        if r["indicator_code"].startswith("trade."):
+            tr[r["period_code"]][r["indicator_code"]] = Decimal(r["value"])
+        elif r["indicator_code"] == "credit.loans.banking_system":
+            loans[r["period_code"]][r["breakdown_key"]] = Decimal(r["value"])
+    off = sorted(p for p, v in tr.items()
+                 if len(v) == 3 and v["trade.exports"] - v["trade.imports"] != v["trade.balance"])
+    add("C12 trade balance = exports - imports (DOSM trade_headline, to the ringgit)", "trade.balance",
+        "PASS" if not off else "INFO", f"{len(tr)} months" + (f"; differ in {off}" if off else ", all exact"))
+    tol = Decimal(10000)  # RM0.01 million: BNM serves RM million to 12 places, so parts may round apart
+    off = sorted(p for p, v in loans.items() if abs(v["_total"] - sum(x for k, x in v.items() if k != "_total")) > tol)
+    add("C13 banking-system loans = commercial + Islamic + investment banks (BNM MSB 1.18)",
+        "credit.loans.banking_system", "PASS" if not off else "INFO",
+        f"{len(loans)} months" + (f"; differ in {off}" if off else ", within RM0.01 million"))
+    import hashlib
+    stale, files = [], {(r["edition_id"], r["file_id"]) for r in obs.rows
+                      if r["indicator_code"].startswith(("trade.", "money.", "credit."))
+                      or (r["indicator_code"] == "cpi.index" and r["geo_code"] == "MY")}
+    for e_id, sha in sorted(files):
+        pub, ds = e_id.split(":", 1)[0], e_id.split(":", 1)[1].split("@")[0]
+        with open(os.path.join(DOSM if pub == "dosm" else BNM, f"{ds}.csv"), "rb") as f:
+            if hashlib.sha256(f.read()).hexdigest() != sha:
+                stale.append(ds)
+    add("C14 the file read is the vintage logged as current (sha256; national series)", "fact_observation",
+        "PASS" if not stale else "FAIL", f"{len(files)} files" + (f"; differ: {stale}" if stale else ", all match"))
     add("C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)", "fact_observation",
         "PASS" if not bad else "FAIL", f"{n} rows checked" + (f"; {len(bad)} differ, e.g. {bad[:3]}" if bad else ""))
     return out
@@ -752,6 +841,7 @@ def main():
     build_states(obs)
     build_federal(obs)
     build_federal_reported(obs)
+    build_national_series(obs, ed)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

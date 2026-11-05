@@ -167,9 +167,10 @@ _SLUG_LINE = re.compile(r"\.indd\s+\d")
 # them twice and `-layout` can drop them INSIDE a table block, where they would
 # otherwise be stitched onto the last row's label.
 _FOOTER_LINE = re.compile(
-    r"\b(LKAN|RAHSIA|VERSI KABINET)\b|"
+    # the doubled layer glues words (`LKANNegeri`, `AnalisisKewangan`), so no word boundary after LKAN / between
+    r"\b(LKAN|RAHSIA\b|VERSI KABINET\b)|"
     r"\b(Penyata|PENYATA)\s+Kewangan\s+(Kerajaan|Agensi)\b|"
-    r"\bAnalisis\s+Kewangan\b|\bKandungan\b|\bMuka\s+Surat\b", re.I)
+    r"\bAnalisis\s*Kewangan|\bKandungan\b|\bMuka\s+Surat\b", re.I)
 
 
 @dataclass
@@ -368,6 +369,9 @@ class Row:
     label: str
     cells: dict[int, tuple[str, float]]  # column index -> (printed, value)
     ordinal_fallback: bool = False
+    # every printed value token of the row, in printed (left-to-right) order, INCLUDING ones that
+    # collided into a column already taken (those are dropped from `cells`)
+    tokens: list = None
 
 
 _YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
@@ -382,7 +386,7 @@ _UNIT_TOK = re.compile(
 _TITLEY = re.compile(r"BERBANDING|HINGGA|Berbanding|Hingga|SETAKAT|Setakat")
 
 
-def _value_tokens(line: str) -> list[tuple[int, int, str]]:
+def _value_tokens(line: str, exact_flank: bool = False) -> list[tuple[int, int, str]]:
     """Value tokens with their character span.
 
     Guards: a token flanked by a digit or a dot is part of a date
@@ -393,6 +397,14 @@ def _value_tokens(line: str) -> list[tuple[int, int, str]]:
         ms, me, s = m.start(), m.end(), m.group(0).strip()
         if not s:
             continue
+        # `\s?` in _NUM_RE (for `- 5.00`) also lets a match start at the single space BEFORE a number;
+        # the flank test must look at the character before the number itself, or `1,886.80 100.0` loses
+        # its `100.0` (the character before the space is the 0 of 1,886.80). Selangor CMD.41.2019 J11.
+        # Used only as a row-level fallback (exact_flank=True): column building keeps the historical
+        # tokenisation, because the extra tokens it would now see (`(4.20) (0.8)` change columns) break the
+        # year-column geometry of tables that parse correctly today (Pahang CMD.37.2017 J4.6).
+        if exact_flank and not m.group(0)[0].strip() and not m.group(0).lstrip().startswith("-"):
+            ms += len(m.group(0)) - len(m.group(0).lstrip())
         before = line[ms - 1] if ms else " "
         after = line[me] if me < len(line) else " "
         if before.isdigit() or before == "." or after.isdigit() or after == ".":
@@ -695,13 +707,45 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
     bil_idx = [i for i, ln in enumerate(table.body) if _BIL_TOK.match(ln)]
     if len(bil_idx) < 2:
         return None
+    # Row 1's Bil. line can be cut into the TITLE block (no figures on it, so the table body starts at its
+    # value line): Pulau Pinang CMD.58.2015 J4.11 prints `1. Premium Tanah - Pemberian` / figures / `Hak
+    # Milik`, and the body began at the figures. Those lines then joined row 2 (`2. Cukai Tanah`), whose
+    # own figures collided and were dropped. A value line before the first Bil. line opens its own row,
+    # labelled from the stray title line when there is one.
+    lead_label = ""
+    first_money = next((i for i in range(bil_idx[0]) if _has_money(table.body[i])), None)
+    tail = table.title_lines[-1] if table.title_lines else ""
+    # only when row 1's Bil. line really was cut into the title: otherwise figures above the first Bil. line
+    # are row 1's own (the `Premium Bagi` / `1. 1,316.80 ...` / `Geran` layout, Selangor CMD.50.2021 J13)
+    if (first_money is not None and _has_money(table.body[bil_idx[0]])
+            and _BIL_TOK.match(tail) and not _value_tokens(tail)):
+        lead_label = re.sub(r"^\s*\d{1,3}[.)]\s*", "", tail).strip()
+        bil_idx = [first_money] + bil_idx
     tot_idx = [i for i, ln in enumerate(table.body)
                if i not in bil_idx and _TOTAL_LAB.match(ln) and _value_tokens(ln)]
     anchors = sorted(bil_idx + tot_idx)
 
+    # The running footer (`Analisis Kewangan Kerajaan Negeri Selangor 41`, printed twice by the doubled text
+    # layer) sits below the last row after a run of blank lines, and the nearest-anchor rule stitched it on to
+    # the JUMLAH label (`JUMLAH AnalisisKewangan Kerajaan Negeri NegeriSelangor Selangor 4141`, 22 rows in 7
+    # states). A label-only line below the last anchor and past a gap of 2+ blank lines is not part of the
+    # table, nor is any label-only line that reads as a running head or footer.
+    footer: set[int] = set()
+    blanks, last, cut = 0, anchors[-1], False
+    for i in range(len(table.body)):
+        ln = table.body[i]
+        if not ln.strip():
+            blanks += 1
+            continue
+        # the footer starts after 2+ blank lines, or at a line of bare page numbers (`22      22`, `2 -212`)
+        cut = cut or (i > last and (blanks >= 2 or (blanks >= 1 and re.fullmatch(r"[\d\s-]+", ln.strip()))))
+        if not _has_money(ln) and (cut or _FOOTER_LINE.search(ln)):
+            footer.add(i)
+        blanks = 0
+
     groups: dict[int, list[int]] = {a: [a] for a in anchors}
     for i in range(len(table.body)):
-        if i in groups:
+        if i in groups or i in footer:
             continue
         prev = max([a for a in anchors if a < i], default=None)
         nxt = min([a for a in anchors if a > i], default=None)
@@ -729,6 +773,14 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
         # a fragment never crosses a JUMLAH boundary
         if target in tot_idx and i < target and prev is not None:
             target = prev
+        # A label-only line printed DIRECTLY BELOW a row's figures continues that row's label
+        # (`3. Premium Tanah - Tukar` / figures / `Syarat`): the distance tie-break sent `Syarat` to the next
+        # Bil. line. Only when the figures line itself belongs to the previous row and that row's Bil. line
+        # carries no figures of its own (the label-above-and-below layout).
+        if (not _has_money(table.body[i]) and i > 0 and _has_money(table.body[i - 1])
+                and target != prev and prev is not None and (i - 1) in groups.get(prev, [])
+                and not _has_money(table.body[prev])):
+            target = prev
         groups[target].append(i)
 
     rows: list[Row] = []
@@ -748,7 +800,29 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
                 label_parts.append(lab)
             all_toks += toks
         all_toks.sort()
+        # row-level fallback: if the historical tokeniser lost values (single-space separated), but the exact
+        # one finds exactly one per column / per money-year column, use the exact tokens (Selangor J11 JUMLAH)
+        exact = sorted(t for i in idxs for t in _value_tokens(table.body[i], exact_flank=True)
+                       if _MONEY_RE.match(t[2].replace(" ", "")) or t[2] in NIL_CHARS)
+        _yc = [ci for ci, c in enumerate(cols) if c.year and c.unit.startswith("(RM")] or \
+              [ci for ci, c in enumerate(cols) if c.year]
+        if (len(exact) > len(all_toks) and len(all_toks) not in (len(cols), len(_yc))
+                and len(exact) in (len(cols), len(_yc))):
+            all_toks = exact
+        # an `(RM Juta) (%)` matrix row printed as amount, share, amount, share ...: when the exact tokens are
+        # exactly two per money-year column, the amounts are the 1st, 3rd, 5th ... (Selangor CMD.50.2021 J13
+        # `JUMLAH 1,946.54 100.0 2,246.29 100.0 ...`, where the historical tokeniser kept five of the ten and
+        # they happened to equal the five year columns, shifting every year after 2016)
+        pct = any(c.unit.startswith("(%") for c in cols)
+        paired = (pct and len(_yc) >= 2 and len(exact) == 2 * len(_yc) and len(exact) > len(all_toks)
+                  and all(_DECIMAL_RE.match(t[2]) or _MONEY_RE.match(t[2].replace(" ", "")) for t in exact))
         cells: dict[int, tuple[str, float]] = {}
+        if paired:
+            for ci, (s_, e_, t) in zip(_yc, exact[0::2]):
+                v = parse_amount(t)
+                if v is not None:
+                    cells[ci] = (t, v)
+            all_toks = []
         # A 5-year trend matrix prints one value per year column, but the
         # later rows and the JUMLAH row are typeset with their own spacing, so
         # overlap matching drifts them a whole year (Perlis J4.11 shipped the
@@ -766,8 +840,8 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
                      if c.year and c.unit.startswith("(RM")]
         if not year_cols:
             year_cols = [ci for ci, c in enumerate(cols) if c.year]
-        ordinal = len(all_toks) == len(cols)
-        ordinal_years = (not ordinal and len(year_cols) >= 3
+        ordinal = bool(all_toks) and len(all_toks) == len(cols)
+        ordinal_years = (bool(all_toks) and not ordinal and len(year_cols) >= 3
                          and len(all_toks) == len(year_cols))
         if ordinal_years:
             for ci, (s_, e_, t) in zip(year_cols, all_toks):
@@ -796,13 +870,36 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
                 v = parse_amount(t)
                 if v is not None and best not in cells:
                     cells[best] = (t, v)
+        if lead_label and a == anchors[0]:
+            label_parts.insert(0, lead_label)
         lab = re.sub(r"\s+", " ", " ".join(label_parts)).strip(" .:")
         # printed bullets: real ones, the Symbol-font private-use glyph and the
         # plain hyphen these volumes use to list sub-funds (`- Saham Biasa`)
         lab = re.sub(r"^[•●▪■·--]+\s*", "", lab)
         if lab or cells:
             rows.append(Row(label=lab, cells=cells,
-                            ordinal_fallback=ordinal or ordinal_years))
+                            ordinal_fallback=ordinal or ordinal_years, tokens=list(all_toks)))
+    # A JUMLAH row typeset to its own measure can sit left of the grid the item rows define, so its first
+    # amount lands in a year-less phantom column and every later figure shifts one column (Negeri Sembilan
+    # CMD.37.2018 J4.10: `JUMLAH 367.27 88.8 341.92 89.9` shipped FY2017 as 88.8, the percentage). When the
+    # item rows agree on one set of columns and the total carries exactly that many figures, the total's
+    # figures are assigned to those columns in printed order.
+    from collections import Counter
+    keysets = Counter(tuple(sorted(r.cells)) for r in rows
+                      if r.cells and not _TOTAL_LAB.match(r.label or ""))
+    if keysets:
+        modal, n_modal = keysets.most_common(1)[0]
+        if n_modal >= 2:
+            for r in rows:
+                if (_TOTAL_LAB.match(r.label or "") and r.tokens and len(r.tokens) == len(modal)
+                        and tuple(sorted(r.cells)) != modal):
+                    cells = {}
+                    for ci, (s_, e_, t) in zip(modal, r.tokens):
+                        v = parse_amount(t)
+                        if v is not None:
+                            cells[ci] = (t, v)
+                    if len(cells) == len(modal):
+                        r.cells, r.ordinal_fallback = cells, True
     return rows
 
 
@@ -949,6 +1046,8 @@ def parse_rows(table: RawTable, cols: list[Column],
         lab = re.sub(r"^[\u2022\u25cf\u25aa\u25a0\u00b7\ue000-\uf8ff\u2013\u2014-]+\s*", "", lab)
         lab = re.sub(r"\s+", " ", lab).strip(" .:")
         cells: dict[int, tuple[str, float]] = {}
+        all_vals = [(t, parse_amount(t)) for _, _, t in _value_tokens(table.body[li], exact_flank=True)
+                    if (_MONEY_RE.match(t.replace(" ", "")) or t in NIL_CHARS) and parse_amount(t) is not None]
         for s, e, t in toks:
             best, bestov = None, 0
             for ci, c in enumerate(cols):
@@ -961,7 +1060,7 @@ def parse_rows(table: RawTable, cols: list[Column],
             if v is not None and best not in cells:
                 cells[best] = (t, v)
         if lab or cells:
-            rows.append(Row(label=lab, cells=cells))
+            rows.append(Row(label=lab, cells=cells, tokens=all_vals))
             row_at.append(k)
 
     # Printed section headings are emitted as valueless rows in printed order,
@@ -1004,6 +1103,13 @@ def parse_rows(table: RawTable, cols: list[Column],
                 if key != modal and len(key) == len(modal):
                     vals = [r.cells[k] for k in key]
                     r.cells = dict(zip(modal, vals))
+                    r.ordinal_fallback = True
+                elif key != modal and r.tokens and len(r.tokens) == len(modal) and len(key) < len(modal):
+                    # Tokens COLLIDED: the row printed exactly as many values as the modal row has
+                    # columns, but tighter spacing put two of them in one column and one was dropped.
+                    # Selangor CMD.41.2019 J11 `JUMLAH 1,649.60 100.0 1,886.80 100.0 ...` shipped 2015's
+                    # total as 100.0 (its share). Map the printed values in order onto the modal columns.
+                    r.cells = dict(zip(modal, r.tokens))
                     r.ordinal_fallback = True
     return rows
 

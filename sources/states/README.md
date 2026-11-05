@@ -342,6 +342,13 @@ never emitted scrambled. `name_quality` records `clean` / `wrapped_joined` /
    of their labels are still two adjacent printed labels concatenated (e.g. Terengganu
    `Premium Tanah Biasa Pemberian 50% Perbelanjaan`). Those rows keep an unconformed
    code; the conformed `revenue_item_*` codes are unaffected.
+   The 2026-11-05 pass fixed the JUMLAH rows of these tables: a row whose figures are one space
+   apart (`1,886.80 100.0`) is re-tokenised exactly, a `(RM Juta)`/`(%)` pair row takes every
+   second figure, a JUMLAH set left of the grid is realigned to the item rows' columns, page
+   footers no longer join the last label, and where a table prints `JUMLAH PENYUMBANG ...` the
+   `JUMLAH HASIL RM...` banner (all revenue, Negeri Sembilan) keeps an unconformed code. Every
+   `V1_penyumbang_utama_total` check passes; the remaining label defects are listed in
+   `state_config.KNOWN_EXTRACTION_DEFECTS` (blind verifier: `qa/audits/2026-11-05_state_parser_verifier.md`).
 8. **`JUSTIFIKASI PENINGKATAN/PENURUNAN HASIL YANG KETARA` is not extracted** — a
    free-text *Punca* column that `pdftotext -layout` interleaves into the row label.
 9. **Spec scope.** Extraction is spec-driven: **~20 specs** matching roughly 2,900 of the

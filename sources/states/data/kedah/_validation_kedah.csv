@@ -60,6 +60,7 @@ V1_kwd_total,PASS,2014,hasil + pinjaman + amanah = Kumpulan Wang Disatukan,148.2
 V1_revenue_categories,PASS,2014,the three printed categories = jumlah hasil,506.48,506.48,0.00,CMD.34.2016.pdf,31,15,4.10,
 V1_revenue_categories,PASS,2015,the three printed categories = jumlah hasil,411.05,411.05,-0.00,CMD.34.2016.pdf,31,15,4.10,
 V1_penyumbang_utama_total,PASS,2014,top-contributor lines = printed JUMLAH,342.96,342.96,0.00,CMD.34.2016.pdf,35,19,4.13,
+V1_penyumbang_utama_total,PASS,2015,top-contributor lines = printed JUMLAH,281.84,281.84,-0.00,CMD.34.2016.pdf,35,19,4.13,
 V1_penyumbang_utama_total,PASS,2011,top-contributor lines = printed JUMLAH,355.07,355.07,0.00,CMD.34.2016.pdf,36,20,4.14,
 V1_penyumbang_utama_total,PASS,2012,top-contributor lines = printed JUMLAH,299.01,299.01,0.00,CMD.34.2016.pdf,36,20,4.14,
 V1_penyumbang_utama_total,PASS,2013,top-contributor lines = printed JUMLAH,384.48,384.48,0.00,CMD.34.2016.pdf,36,20,4.14,
@@ -173,6 +174,7 @@ V1_penyumbang_utama_total,PASS,2012,top-contributor lines = printed JUMLAH,301.6
 V1_penyumbang_utama_total,PASS,2013,top-contributor lines = printed JUMLAH,393.64,393.64,0.00,CMD.50.2015.pdf,34,18,4.14,
 V1_penyumbang_utama_total,PASS,2014,top-contributor lines = printed JUMLAH,342.64,342.64,0.00,CMD.50.2015.pdf,34,18,4.14,
 V1_trust_account_composition,PASS,2013,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],509.07,509.07,-0.00,CMD.50.2015.pdf,40,24,4.23,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 509.07, and Jumlah 509.07 is printed for FY2013 (RM juta); printed hierarchy = nested"
+V1_trust_account_composition,PASS,2014,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],515.15,515.15,0.00,CMD.50.2015.pdf,40,24,4.23,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 515.15, and Jumlah 515.15 is printed for FY2014 (RM juta); printed hierarchy = nested"
 V1_fund_flow,PASS,2013,opening + receipts - payments = closing (Kumpulan Wang Pembangunan),-866.28,-866.28,0.00,CMD.50.2015.pdf,41,25,4.25,Baki Pada 1 Januari -796.61 + Terimaan 223.35 - Bayaran 293.02 vs printed closing Baki Pada 31 Disember -866.28 for FY2013 (RM juta)
 V1_fund_flow,PASS,2014,opening + receipts - payments = closing (Kumpulan Wang Pembangunan),-932.26,-932.26,0.00,CMD.50.2015.pdf,41,25,4.25,Baki Pada 1 Januari -866.28 + Terimaan 112.29 - Bayaran 178.27 vs printed closing Baki Pada 31 Disember -932.26 for FY2014 (RM juta)
 V1_prestasi_financing_vs_surplus,PASS,2013,|financing_total| = |surplus_deficit|,297.04,297.04,0.00,CMD.50.2015.pdf,48,32,4.33,

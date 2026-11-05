@@ -1,5 +1,5 @@
 check,scope,status,note
-C1 primary key unique,fact_observation,PASS,126180 rows
+C1 primary key unique,fact_observation,PASS,134612 rows
 C2 indicator_code resolves,fact_observation,PASS,all resolve
 C2 geo_code resolves,fact_observation,PASS,all resolve
 C2 period_code resolves,fact_observation,PASS,all resolve
@@ -15,6 +15,7 @@ C6 state coverage,amenities.electricity.share,PASS,"12 of 16 states and territor
 C6 state coverage,amenities.piped_water.share,PASS,"12 of 16 states and territories (expected 12: DOSM publishes no All Districts row for Perlis, Kuala Lumpur, Labuan or Putrajaya (each is a single district); their figures are held under the district code, e.g. MY-09/dis:perlis@dosm_2020)"
 C6 state coverage,amenities.sanitation.share,PASS,"12 of 16 states and territories (expected 12: DOSM publishes no All Districts row for Perlis, Kuala Lumpur, Labuan or Putrajaya (each is a single district); their figures are held under the district code, e.g. MY-09/dis:perlis@dosm_2020)"
 C6 state coverage,cpi.index,PASS,16 of 16 states and territories
+C6 state coverage,credit.loans.banking_system,PASS,0 of 16 states and territories (expected 0: national only: BNM publishes no state split)
 C6 state coverage,crime.count,PASS,14 of 16 states and territories (expected 14: Labuan and Putrajaya have no separate police contingent in the file)
 C6 state coverage,deaths.crude_rate,PASS,16 of 16 states and territories
 C6 state coverage,deaths.total,PASS,16 of 16 states and territories
@@ -40,6 +41,9 @@ C6 state coverage,lfs.participation_rate,PASS,16 of 16 states and territories
 C6 state coverage,lfs.unemployed,PASS,16 of 16 states and territories
 C6 state coverage,lfs.unemployment_rate,PASS,16 of 16 states and territories
 C6 state coverage,life_expectancy,PASS,16 of 16 states and territories
+C6 state coverage,money.m1,PASS,0 of 16 states and territories (expected 0: national only: BNM publishes no state split)
+C6 state coverage,money.m2,PASS,0 of 16 states and territories (expected 0: national only: BNM publishes no state split)
+C6 state coverage,money.m3,PASS,0 of 16 states and territories (expected 0: national only: BNM publishes no state split)
 C6 state coverage,na.compensation_of_employees,PASS,0 of 16 states and territories (expected 0: national accounts: Malaysia only (state GDP is gdp.real at 2015 prices))
 C6 state coverage,na.gross_operating_surplus,PASS,0 of 16 states and territories (expected 0: national accounts: Malaysia only (state GDP is gdp.real at 2015 prices))
 C6 state coverage,na.subsidies_on_production,PASS,0 of 16 states and territories (expected 0: national accounts: Malaysia only (state GDP is gdp.real at 2015 prices))
@@ -59,6 +63,12 @@ C6 state coverage,state_gov.revenue.nontax,PASS,13 of 13 state governments
 C6 state coverage,state_gov.revenue.tax,PASS,13 of 13 state governments
 C6 state coverage,state_gov.revenue.total,PASS,13 of 13 state governments
 C6 state coverage,state_gov.surplus_deficit,PASS,13 of 13 state governments
+C6 state coverage,trade.balance,PASS,0 of 16 states and territories (expected 0: national only: DOSM publishes no trade by state)
+C6 state coverage,trade.exports,PASS,0 of 16 states and territories (expected 0: national only: DOSM publishes no trade by state)
+C6 state coverage,trade.imports,PASS,0 of 16 states and territories (expected 0: national only: DOSM publishes no trade by state)
 C6 state coverage,water.access.share,PASS,14 of 16 states and territories (expected 14: KL and Putrajaya are subsumed under Selangor (catalogue note))
 C7 states sum to Malaysia (pop.total),pop.total,PASS,largest gap 200 persons over 57 years (rounding allowance 16 x 50)
-"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,126180 rows checked
+"C12 trade balance = exports - imports (DOSM trade_headline, to the ringgit)",trade.balance,PASS,"441 months, all exact"
+C13 banking-system loans = commercial + Islamic + investment banks (BNM MSB 1.18),credit.loans.banking_system,PASS,"59 months, within RM0.01 million"
+C14 the file read is the vintage logged as current (sha256; national series),fact_observation,PASS,"4 files, all match"
+"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,134612 rows checked

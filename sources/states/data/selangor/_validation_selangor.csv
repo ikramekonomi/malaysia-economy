@@ -100,6 +100,11 @@ V1_revenue_categories,PASS,2018,the three printed categories = jumlah hasil,1998
 V1_revenue_categories,PASS,2019,the three printed categories = jumlah hasil,2320.17,2320.17,0.00,CMD.40.2020.pdf,38,10,9,
 V1_penyumbang_utama_total,PASS,2018,top-contributor lines = printed JUMLAH,1320.32,1320.32,0.00,CMD.40.2020.pdf,40,12,10,
 V1_penyumbang_utama_total,PASS,2019,top-contributor lines = printed JUMLAH,1725.82,1725.82,0.00,CMD.40.2020.pdf,40,12,10,
+V1_penyumbang_utama_total,PASS,2015,top-contributor lines = printed JUMLAH,1922.52,1922.52,0.00,CMD.40.2020.pdf,40,12,11,
+V1_penyumbang_utama_total,PASS,2016,top-contributor lines = printed JUMLAH,1946.54,1946.54,0.00,CMD.40.2020.pdf,40,12,11,
+V1_penyumbang_utama_total,PASS,2017,top-contributor lines = printed JUMLAH,2246.29,2246.29,0.00,CMD.40.2020.pdf,40,12,11,
+V1_penyumbang_utama_total,PASS,2018,top-contributor lines = printed JUMLAH,1320.32,1320.32,0.00,CMD.40.2020.pdf,40,12,11,
+V1_penyumbang_utama_total,PASS,2019,top-contributor lines = printed JUMLAH,1725.82,1725.82,0.00,CMD.40.2020.pdf,40,12,11,
 V1_fund_flow,PASS,2018,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.40.2020.pdf,52,24,25,Baki Pada 1 Januari 0.00 + Terimaan 17.68 - Bayaran/Pindahan 17.68 vs printed closing BAKI PADA 31 DISEMBER 8. AKAUN AMANAH DISATUKAN Akaun Amanah Disatukan mengakaun semua penerimaan dan pembayaran wang 0.00 for FY2018 (RM juta)
 V1_fund_flow,PASS,2019,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.40.2020.pdf,52,24,25,Baki Pada 1 Januari 0.00 + Terimaan 12.44 - Bayaran/Pindahan 12.44 vs printed closing BAKI PADA 31 DISEMBER 8. AKAUN AMANAH DISATUKAN Akaun Amanah Disatukan mengakaun semua penerimaan dan pembayaran wang 0.00 for FY2019 (RM juta)
 V1_trust_account_composition,PASS,2018,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],1672.28,1672.28,0.00,CMD.40.2020.pdf,53,25,26,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 1672.28, and JUMLAH 1,672.28 is printed for FY2018 (RM juta); printed hierarchy = nested"
@@ -163,10 +168,10 @@ V1_revenue_categories,PASS,2018,the three printed categories = jumlah hasil,1998
 V1_penyumbang_utama_total,PASS,2017,top-contributor lines = printed JUMLAH,2194.80,2194.80,0.00,CMD.41.2019.pdf,37,11,10,
 V1_penyumbang_utama_total,PASS,2018,top-contributor lines = printed JUMLAH,1343.67,1343.67,0.00,CMD.41.2019.pdf,37,11,10,
 V1_penyumbang_utama_total,PASS,2014,top-contributor lines = printed JUMLAH,1649.60,1649.60,0.00,CMD.41.2019.pdf,38,12,11,
-V1_penyumbang_utama_total,FAIL,2015,top-contributor lines = printed JUMLAH,100.00,1886.80,1786.80,CMD.41.2019.pdf,38,12,11,
-V1_penyumbang_utama_total,FAIL,2016,top-contributor lines = printed JUMLAH,1886.80,1912.34,25.54,CMD.41.2019.pdf,38,12,11,
-V1_penyumbang_utama_total,FAIL,2017,top-contributor lines = printed JUMLAH,1912.34,2194.80,282.46,CMD.41.2019.pdf,38,12,11,
-V1_penyumbang_utama_total,FAIL,2018,top-contributor lines = printed JUMLAH,100.00,1343.67,1243.67,CMD.41.2019.pdf,38,12,11,
+V1_penyumbang_utama_total,PASS,2015,top-contributor lines = printed JUMLAH,1886.80,1886.80,0.00,CMD.41.2019.pdf,38,12,11,
+V1_penyumbang_utama_total,PASS,2016,top-contributor lines = printed JUMLAH,1912.34,1912.34,0.00,CMD.41.2019.pdf,38,12,11,
+V1_penyumbang_utama_total,PASS,2017,top-contributor lines = printed JUMLAH,2194.80,2194.80,0.00,CMD.41.2019.pdf,38,12,11,
+V1_penyumbang_utama_total,PASS,2018,top-contributor lines = printed JUMLAH,1343.67,1343.67,0.00,CMD.41.2019.pdf,38,12,11,
 V1_fund_flow,PASS,2017,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.41.2019.pdf,50,24,23,Baki Pada 1 Januari 0.00 + Terimaan 52.08 - Bayaran/Pindahan 52.08 vs printed closing BAKI PADA 31 DISEMBER 8. AKAUN AMANAH DISATUKAN 0.00 for FY2017 (RM juta)
 V1_fund_flow,PASS,2018,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.41.2019.pdf,50,24,23,Baki Pada 1 Januari 0.00 + Terimaan 17.68 - Bayaran/Pindahan 17.68 vs printed closing BAKI PADA 31 DISEMBER 8. AKAUN AMANAH DISATUKAN 0.00 for FY2018 (RM juta)
 V1_trust_account_composition,PASS,2017,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],1756.45,1756.45,-0.00,CMD.41.2019.pdf,51,25,24,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 1756.45, and JUMLAH 1,756.45 is printed for FY2017 (RM juta); printed hierarchy = nested"
@@ -376,7 +381,13 @@ V1_revenue_categories,PASS,2019,the three printed categories = jumlah hasil,2320
 V1_revenue_categories,PASS,2020,the three printed categories = jumlah hasil,2257.65,2257.65,0.00,CMD.49.2023.pdf,47,39,11,
 V1_revenue_categories,PASS,2021,the three printed categories = jumlah hasil,2284.09,2284.09,0.00,CMD.49.2023.pdf,47,39,11,
 V1_revenue_categories,PASS,2022,the three printed categories = jumlah hasil,2533.83,2533.83,0.00,CMD.49.2023.pdf,47,39,11,
+V1_penyumbang_utama_total,PASS,2021,top-contributor lines = printed JUMLAH,1802.98,1802.98,0.00,CMD.49.2023.pdf,49,41,12,
+V1_penyumbang_utama_total,PASS,2022,top-contributor lines = printed JUMLAH,1911.07,1911.07,0.00,CMD.49.2023.pdf,49,41,12,
 V1_penyumbang_utama_total,PASS,2018,top-contributor lines = printed JUMLAH,1320.32,1320.32,0.00,CMD.49.2023.pdf,49,41,13,
+V1_penyumbang_utama_total,PASS,2019,top-contributor lines = printed JUMLAH,1725.82,1725.82,0.00,CMD.49.2023.pdf,49,41,13,
+V1_penyumbang_utama_total,PASS,2020,top-contributor lines = printed JUMLAH,1749.01,1749.01,0.00,CMD.49.2023.pdf,49,41,13,
+V1_penyumbang_utama_total,PASS,2021,top-contributor lines = printed JUMLAH,1802.98,1802.98,0.00,CMD.49.2023.pdf,49,41,13,
+V1_penyumbang_utama_total,PASS,2022,top-contributor lines = printed JUMLAH,1911.07,1911.07,0.00,CMD.49.2023.pdf,49,41,13,
 V1_trust_account_composition,PASS,2021,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],2170.05,2170.05,-0.00,CMD.49.2023.pdf,62,54,25,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 2170.05, and JUMLAH 2,170.05 is printed for FY2021 (RM juta); printed hierarchy = nested"
 V1_govt_trust_fund_composition,PASS,2021,KW Pembangunan + KW Pinjaman Perumahan + Pelbagai KWA + KW Pembangunan Hutan = KW Amanah Kerajaan,1230.62,1230.62,0.00,CMD.49.2023.pdf,62,54,25,"Kumpulan Wang Pembangunan 100.00 + Kumpulan Wang Pinjaman Perumahan 2.38 + Pelbagai Kumpulan Wang Amanah Kerajaan 1,099.31 + Kumpulan Wang Pembangunan Hutan 28.93 = 1230.62, but Kumpulan Wang Amanah Kerajaan 1,230.62 is printed for FY2021 (RM juta)"
 V1_trust_account_composition,PASS,2022,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],2310.85,2310.85,0.00,CMD.49.2023.pdf,62,54,25,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 2310.85, and JUMLAH 2,310.85 is printed for FY2022 (RM juta); printed hierarchy = nested"
@@ -441,10 +452,10 @@ V1_revenue_categories,PASS,2020,the three printed categories = jumlah hasil,2257
 V1_penyumbang_utama_total,PASS,2019,top-contributor lines = printed JUMLAH,1725.82,1725.82,0.00,CMD.50.2021.pdf,37,23,12,
 V1_penyumbang_utama_total,PASS,2020,top-contributor lines = printed JUMLAH,1749.01,1749.01,0.00,CMD.50.2021.pdf,37,23,12,
 V1_penyumbang_utama_total,PASS,2016,top-contributor lines = printed JUMLAH,1946.54,1946.54,0.00,CMD.50.2021.pdf,38,24,13,
-V1_penyumbang_utama_total,FAIL,2017,top-contributor lines = printed JUMLAH,1320.32,2246.29,925.97,CMD.50.2021.pdf,38,24,13,
-V1_penyumbang_utama_total,FAIL,2018,top-contributor lines = printed JUMLAH,100.00,1320.32,1220.32,CMD.50.2021.pdf,38,24,13,
-V1_penyumbang_utama_total,FAIL,2019,top-contributor lines = printed JUMLAH,1749.01,1725.82,-23.19,CMD.50.2021.pdf,38,24,13,
-V1_penyumbang_utama_total,FAIL,2020,top-contributor lines = printed JUMLAH,100.00,1749.01,1649.01,CMD.50.2021.pdf,38,24,13,
+V1_penyumbang_utama_total,PASS,2017,top-contributor lines = printed JUMLAH,2246.29,2246.29,0.00,CMD.50.2021.pdf,38,24,13,
+V1_penyumbang_utama_total,PASS,2018,top-contributor lines = printed JUMLAH,1320.32,1320.32,0.00,CMD.50.2021.pdf,38,24,13,
+V1_penyumbang_utama_total,PASS,2019,top-contributor lines = printed JUMLAH,1725.82,1725.82,0.00,CMD.50.2021.pdf,38,24,13,
+V1_penyumbang_utama_total,PASS,2020,top-contributor lines = printed JUMLAH,1749.01,1749.01,0.00,CMD.50.2021.pdf,38,24,13,
 V1_fund_flow,PASS,2019,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.50.2021.pdf,47,33,23,Baki Pada 1 Januari 0.00 + Terimaan * 12.44 - Bayaran/Pindahan 12.44 vs printed closing BAKI PADA 31 DISEMBER 0.00 for FY2019 (RM juta)
 V1_fund_flow,PASS,2020,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.50.2021.pdf,47,33,23,Baki Pada 1 Januari 0.00 + Terimaan * 0.00 - Bayaran/Pindahan 0.00 vs printed closing BAKI PADA 31 DISEMBER 0.00 for FY2020 (RM juta)
 V1_trust_account_composition,PASS,2019,KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = Akaun Amanah Disatukan [nested presentation],1874.47,1874.47,-0.00,CMD.50.2021.pdf,48,34,24,"KW Amanah Kerajaan + KW Amanah Awam + Akaun Deposit = 1874.47, and JUMLAH 1,874.47 is printed for FY2019 (RM juta); printed hierarchy = nested"
@@ -515,6 +526,9 @@ V1_revenue_categories,PASS,2021,the three printed categories = jumlah hasil,2284
 V1_penyumbang_utama_total,PASS,2020,top-contributor lines = printed JUMLAH,1749.01,1749.01,0.00,CMD.52.2022.pdf,44,36,12,
 V1_penyumbang_utama_total,PASS,2021,top-contributor lines = printed JUMLAH,1802.98,1802.98,0.00,CMD.52.2022.pdf,44,36,12,
 V1_penyumbang_utama_total,PASS,2017,top-contributor lines = printed JUMLAH,2246.29,2246.29,0.00,CMD.52.2022.pdf,44,36,13,
+V1_penyumbang_utama_total,PASS,2018,top-contributor lines = printed JUMLAH,1320.32,1320.32,0.00,CMD.52.2022.pdf,44,36,13,
+V1_penyumbang_utama_total,PASS,2019,top-contributor lines = printed JUMLAH,1725.82,1725.82,0.00,CMD.52.2022.pdf,44,36,13,
+V1_penyumbang_utama_total,PASS,2020,top-contributor lines = printed JUMLAH,1749.01,1749.01,0.00,CMD.52.2022.pdf,44,36,13,
 V1_penyumbang_utama_total,PASS,2021,top-contributor lines = printed JUMLAH,1802.98,1802.98,0.00,CMD.52.2022.pdf,44,36,13,
 V1_fund_flow,PASS,2020,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.52.2022.pdf,56,48,26,Baki Pada 1 Januari 0.00 + Terimaan 0.00 - Bayaran/Pindahan 0.00 vs printed closing BAKI PADA 31 DISEMBER 0.00 for FY2020 (RM juta)
 V1_fund_flow,PASS,2021,opening + receipts - payments = closing (Akaun Pinjaman Disatukan),0.00,0.00,0.00,CMD.52.2022.pdf,56,48,26,Baki Pada 1 Januari 0.00 + Terimaan 4.88 - Bayaran/Pindahan 4.88 vs printed closing BAKI PADA 31 DISEMBER 0.00 for FY2021 (RM juta)
