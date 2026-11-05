@@ -393,8 +393,17 @@ The view (method declared before results, `core/pipeline/build_gap_revenue.py`):
 `collection_rate_original` = actual / original estimate, status `on_estimate` (0.97-1.03), `above_estimate`,
 `below_estimate`, `not_held`; the book's revised estimate and actual beside the audit (agree within RM1: 5 of 5
 revised estimates and 8 of 10 actuals; FY2024's total and non-revenue receipts are RM144 below the audit in the
-book, kept as printed). FY2009 prints a fifth type, miscellaneous receipts, kept apart. Checks R2-R6 in
-`_validation_gap_rev.csv`.
+book, kept as printed; whole ringgit on both sides, so not rounding). FY2009 (the C1 revenue statement) prints
+a fifth type, miscellaneous receipts, kept apart; the FY2010 volume reprints the same figure as non-revenue
+receipts, so read 80000 over time with that row (each row's note says so). Checks R2-R6 in
+`_validation_gap_rev.csv` (R1 is C18 in core); blind verifier:
+`qa/audits/2026-11-05_phase5_revenue_verifier.md`.
+
+How to read it: 80000 (refunds of expenditure and receipts from government agencies) is set by transfers, not
+collection, and is `above_estimate` in 13 of 15 years (FY2024: 4.78x the estimate); it is not revenue
+performance. PKKP's own printed percentage is against the revised estimate, which is set late in the year, so it
+reads closer to 100% than `collection_rate_original` (FY2015 tax: 0.90 of the original, 97.3% printed). The
+FY2023 estimate is Budget 2023 as re-tabled in February 2023. Book reprints carry CV29.
 
 ## gap_federal_placement (Phase 3, 2026-11-05)
 

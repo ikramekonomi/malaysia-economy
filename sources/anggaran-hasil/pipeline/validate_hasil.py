@@ -100,7 +100,8 @@ for ed in (2025, 2026):
             # categories; compare TOTAL and 60000 strictly, others informally
             d = abs(seb.get(k, 0) - pk[k])
             strict = k in ("TOTAL", "60000")
-            note = "PASS" if d == 0 else ("ROUNDING" if d < 200 else ("FAIL" if strict else "INFO"))
+            # whole ringgit on both sides: a difference is not rounding; kept as printed (golden rule 2)
+            note = "PASS" if d == 0 else ("WARN" if d < 200 else ("FAIL" if strict else "INFO"))
             # 90000 (WP) sits inside PKKP nontax/nonrev; tolerate category drift
             if k in ("70000", "80000") and d >= 200:
                 note = "INFO"

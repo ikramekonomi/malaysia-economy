@@ -685,7 +685,10 @@ class Tools:
                 "90000 the Federal Territories; _total) and year: the audited accounts' original and revised estimates "
                 "and actual, beside the Budget revenue book's estimate, revised estimate and actual. "
                 "collection_rate_original = actual / original estimate; status on_estimate (0.97-1.03), above_estimate, "
-                "below_estimate, not_held. Differences between the book and the audit are kept as printed.")
+                "below_estimate, not_held. The accounts' own printed percentage is against the revised estimate, which is "
+                "set late in the year (in the next Budget), so it reads closer to 100% than collection_rate_original. "
+                "80000 (non-revenue receipts) is refunds and transfers from agencies, not collection: read its note. "
+                "Differences between the book and the audit are kept as printed.")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:

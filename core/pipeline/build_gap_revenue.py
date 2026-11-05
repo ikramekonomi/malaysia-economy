@@ -24,6 +24,12 @@ Method (declared 2026-11-05, committed before any result of this view was comput
 * Checks: R1 each year's PKKP level-1 categories add up to the level-0 total (each basis); R2 PKKP's level-0
   audited total equals federal_gov.revenue.total (PKKP, the performance statement) or the difference is reported;
   R3 every value traces to an observation; R4 the book's sections add up to its total.
+* Added after the blind verifier (2026-11-05; no value, threshold or status rule changed): notes on the 80000
+  rows (refunds and receipts from agencies, not collection), on FY2009's miscellaneous receipts (the FY2010
+  volume reprints the same figure as Terimaan Bukan Hasil: kept under its own key, never merged), on FY2023
+  (the estimate is Budget 2023 as re-tabled in February 2023), and on FY2009 (the C1 revenue statement, not
+  Nota 5(a)); caveat CV29 (a Budget revenue book's reprint of a past year) in place of CV22, which is about the
+  expenditure books; R1 is check C18 in core/_validation_core.csv.
 """
 import csv
 import os
@@ -86,7 +92,22 @@ def main():
                 dd = val[b] - val[p]
                 row[f"{k}_rm"] = fmt(dd)
                 row[f"{k}_status"] = "agree" if abs(dd) <= 1 else "differ"
-        row["caveats"] = "CV22" if any(k.startswith("book_") for k in val) else ""
+        cv = set()
+        for slot, lst in d.items():
+            cv |= set(w.caveats_for(min(lst, key=lambda x: x["vintage"])))
+        row["caveats"] = ";".join(sorted(cv))
+        if bk == "hasil_kod=80000":
+            notes.append("non-revenue receipts: refunds of expenditure and money received from government agencies, "
+                         "set by transfers rather than collection, so 'above_estimate' here is not revenue "
+                         "performance")
+        if bk == "hasil_kod=pelbagai_terimaan_2009":
+            notes.append("the FY2010 volume reprints this FY2009 figure as Terimaan Bukan Hasil (non-revenue receipts, "
+                         "1,067,563,070); kept under its own key as printed in the FY2009 volume, never merged")
+        if y == "2009":
+            notes.append("FY2009 is from the volume's revenue statement C1 (Penyata Hasil), the archaic presentation")
+        if y == "2023" and o is not None:
+            notes.append("the original estimate is Budget 2023 as re-tabled in February 2023 (the October 2022 budget "
+                         "lapsed when Parliament was dissolved)")
         row["source_obs_ids"] = ";".join(ids)
         row["note"] = "; ".join(notes)
         out.append(row)

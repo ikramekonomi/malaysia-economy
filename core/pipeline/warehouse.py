@@ -167,6 +167,8 @@ class Warehouse:
             out.append("CV23")
         if r["edition_id"].startswith("anggaran:") and r["period_code"][:4] < r["vintage"][:4]:
             out.append("CV22")
+        if r["edition_id"].startswith("anggaran_hasil:") and r["period_code"][:4] < r["vintage"][:4]:
+            out.append("CV29")
         if ind == "cpi.index":
             out.append("CV8")
         if ind.startswith("trade."):
