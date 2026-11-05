@@ -36,7 +36,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
 | `gap_reported_vs_audited.csv` | 89 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
 | `gap_obligations_growth.csv` | 68 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
-| `gap_target_vs_outcome.csv` | 41 | plan target × place: RMKe-12's 2025 targets (GDP by state, federal finance, labour) beside the outcome (Phase 5) |
+| `gap_target_vs_outcome.csv` | 43 | plan target × place: RMKe-12's 2025 targets (GDP by state, federal finance, labour) beside the outcome (Phase 5) |
 | `gap_revenue_estimate_vs_collected.csv` | 90 | federal revenue by type (tax, non-tax, non-revenue receipts, Federal Territories, total) × year: the accounts' original and revised estimates and actual beside the Budget revenue books'; collection rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
@@ -492,37 +492,41 @@ in `_validation_gap_obl.csv`.
 ## gap_target_vs_outcome (Phase 5, 2026-11-06)
 
 Was the plan target met? The targets come from a new source, `sources/rmk/`: the Twelfth Malaysia Plan
-(RMKe-12, 2021-2025) appendix as printed, 1,070 cells checked against the tables' own identities. Core holds them
-as basis `target` (41 observations, check C22):
-* real GDP by state, the 2025 level and the 2021/2025 average growth (a new multi-year period code);
-* federal finance, 2025;
+(RMKe-12, 2021-2025) appendix as printed, 1,070 cells checked against the tables' own identities, with the
+footnotes kept as data. Core holds them as basis `target` (44 observations, check C22):
+* real GDP by state, the 2025 level and the 2021/2025 average growth (a multi-year period code);
+* federal finance, 2025, including the current balance and the overall balance as % of GDP (a range, held as
+  `bound=lower` / `bound=upper`);
 * the labour market, 2025.
 
-The view sets each target beside its outcome from core:
-* DOSM GDP by state (constant 2015 prices), and its 2020-2025 compound growth from the same vintage;
+A target never comes back from `get_series` or `get()` unless it is asked for by basis.
+
+The view sets each target beside its outcome:
+* DOSM GDP by state (constant 2015 prices) and its 2020-2025 compound growth;
 * MOF's FY2025 actuals, with BNM beside them, until PKKP FY2025 is loaded;
 * the DOSM labour force survey, 2025.
 
-The method was declared before the targets were extracted (`core/pipeline/build_gap_target.py`). Status states
-the position only: `at_target` is within 1% of a level target or 0.1 point of a growth target; otherwise
-`above_target` or `below_target`. Whether above is good depends on the line.
+Status states the position only: `at_target` is within 1% of a level target or 0.1 point of a growth target,
+otherwise `above_target` or `below_target`; for a range target, `within_range`, `above_range` or `below_range`.
+These are the plan's original 2021 targets; the 2023 mid-term review is not held.
 
-Results:
-* **GDP growth:** 14 places are computed (13 states and Labuan). 3 grew faster than their target: Selangor
-  (7.1% a year against 4.3%), Pulau Pinang (7.1% against 5.4%) and Johor (6.0% against 5.1%). The other 11 grew
-  slower. The largest shortfalls are Sabah (2.7% against 6.5%), Kelantan (3.4% against 6.7%) and Terengganu (3.6%
-  against 6.6%).
-* **Kuala Lumpur:** not computed. The plan's KL row includes Putrajaya, and DOSM prints Putrajaya separately only
-  from 2023. The note gives the evidence that DOSM's earlier KL figure includes it, but this is not assumed.
-* **Federal finance**, in nominal ringgit:
-  * revenue: 1.24x the target;
-  * operating spending: 1.25x;
-  * gross development spending: 1.08x;
-  * overall deficit: RM75.3b against a planned RM68.5b.
-* **Labour:** unemployment came in at 3.0% against a 4.0% target.
+Results (43 rows):
+* **GDP growth, all 15 places:** 4 grew faster than their target: Selangor (7.1% a year against 4.3%), Pulau
+  Pinang (7.1% against 5.4%), Johor (6.0% against 5.1%) and Kuala Lumpur with Putrajaya (5.2% against 4.2%).
+  The other 11 grew slower. The largest shortfalls are Sabah (2.7% against 6.5%), Kelantan (3.4% against 6.7%)
+  and Terengganu (3.6% against 6.6%).
+* **Kuala Lumpur's 2020 base:** DOSM's MY-14 alone. DOSM split Putrajaya out only from 2023, and its MY-14 for
+  2015-2018 equals the plan's footnoted "KL including Putrajaya" to rounding (check T7).
+* **Federal finance:** the overall deficit was 3.7% of GDP, below the plan's -3.5 to -3.0% range. In nominal
+  ringgit, revenue was 1.24x the target and operating spending 1.25x. The current balance was RM5.3b against
+  RM7.1b.
+* **Labour:** unemployment was 3.0% against a 4.0% target. The LFS was re-benchmarked to the 2020 Census from
+  2025 (CV10), and the plan's 2020 base is beside DOSM's revised one on each row. The plan's employment total is
+  footnoted as from the labour productivity publication, so it is read as a different concept.
 
-Extracted but not compared, because core holds no outcome (check T5): GDP per capita, sectors, and Jadual 10's
-current balance and %-of-GDP range. Checks T1-T6 are in `_validation_gap_tvo.csv`.
+Extracted but not compared, because core holds no outcome (check T5): GDP per capita (at current prices, per the
+plan's note), sectors, and the labour growth targets. Checks T1-T7 are in `_validation_gap_tvo.csv`. Blind
+verifier: `qa/audits/2026-11-06_phase5_target_vs_outcome_verifier.md`.
 
 ## gap_federal_placement (Phase 3, 2026-11-05)
 

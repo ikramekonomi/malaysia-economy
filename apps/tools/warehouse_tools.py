@@ -721,8 +721,10 @@ class Tools:
                 "beside the outcome from core (DOSM GDP by state at constant 2015 prices and its 2020-2025 compound "
                 "growth; MOF's FY2025 actuals, BNM beside them, until PKKP FY2025 is loaded; DOSM labour force). Status "
                 "is only the position (at_target within 1% of a level or 0.1 point of a growth rate, above_target, "
-                "below_target); whether above is good depends on the line. Federal money targets are in nominal ringgit. "
-                "The plan's Kuala Lumpur row includes Putrajaya.")
+                "below_target; within_range / above_range / below_range for the deficit's %-of-GDP range); whether "
+                "above is good depends on the line. Federal money targets are in nominal ringgit: the %-of-GDP row is "
+                "the scale-free one. The plan's Kuala Lumpur row includes Putrajaya. These are the plan's original "
+                "2021 targets; read each row's note (labour rows cross the 2025 LFS re-benchmarking).")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:

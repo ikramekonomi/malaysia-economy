@@ -69,6 +69,15 @@ def main():
         u, lf, ur = v[("14", "", "Penganggur", c)], v[("14", "", "Jumlah Tenaga Buruh", c)], v[("14", "", "Kadar Pengangguran, %", c)]
         add("V4 Penganggur / Tenaga Buruh = Kadar Pengangguran", f"Jadual 14 {c}",
             "PASS" if abs(u / lf * 100 - ur) <= D("0.05") else "WARN", f"{u / lf * 100:.2f} vs {ur}")
+    # V6 (found by the blind verifier): Jadual 14's printed growth rates against its printed levels
+    for line in ["Jumlah Guna Tenaga"] + SECT + ["Jumlah Tenaga Buruh"]:
+        for g, a, b in (("purata_rmk11_2016_2020", "sebenar_2015", "sebenar_2020"),
+                        ("sasaran_purata_rmk12_2021_2025", "sebenar_2020", "sasaran_2025")):
+            x0, x1, pg = v[("14", "", line, a)], v[("14", "", line, b)], v[("14", "", line, g)]
+            calc = (float(x1) / float(x0)) ** 0.2 * 100 - 100
+            tol = 0.05 + 20 * (0.05 / float(min(x0, x1)))
+            add(f"V6 Jadual 14 printed growth against printed levels ({g})", f"Jadual 14 {line}",
+                "PASS" if abs(calc - float(pg)) <= tol else "WARN", f"printed {pg}, from levels {calc:.2f}")
     n = defaultdict(set)
     for r in rows:
         if r["jadual"] == "5":

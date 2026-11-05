@@ -23,7 +23,7 @@ PDF = os.path.join(SRC, "raw", "rmk12.pdf")
 OUT = os.path.join(SRC, "data", "rmk12", "fact_rmk12_lampiran.csv")
 NUM = re.compile(r"(?<![\w.\-])(-?\d[\d,]*(?:\.\d+)?(?:\s*~\s*-?\d[\d,]*(?:\.\d+)?)?|-)(?![\w.])")
 STATES = ["Johor", "Kedah", "Kelantan", "Melaka", "Negeri Sembilan", "Pahang", "Pulau Pinang", "Perak", "Perlis",
-          "Selangor", "Terengganu", "Sabah", "Sarawak", "WP Kuala Lumpur1", "WP Labuan"]
+          "Selangor", "Terengganu", "Sabah", "Sarawak", "WP Kuala Lumpur", "WP Labuan"]
 PRINTED = {486: "A-6", 487: "A-7", 488: "A-8", 489: "A-9", 490: "A-10", 495: "A-15", 499: "A-19"}
 J5_COLS = ["sebenar_2015", "sebenar_2016", "sebenar_2017", "sebenar_2018", "sebenar_2019", "sebenar_2020",
            "sasaran_2025", "purata_rmk11_2016_2020", "sasaran_purata_rmk12_2021_2025"]
@@ -33,7 +33,11 @@ J14_EMP = ["sebenar_2015", "pct_jumlah_2015", "sebenar_2020", "pct_jumlah_2020",
 J14_LF = ["sebenar_2015", "sebenar_2020", "sasaran_2025", "purata_rmk11_2016_2020", "sasaran_purata_rmk12_2021_2025"]
 J14_3 = ["sebenar_2015", "sebenar_2020", "sasaran_2025"]
 FIELDS = ["plan", "jadual", "table_title_bm", "section_bm", "line_bm", "row_type", "measure", "value_printed",
-          "value", "value_hi", "unit_printed", "source_file", "pdf_page", "printed_page"]
+          "value", "value_hi", "unit_printed", "footnote", "source_file", "pdf_page", "printed_page"]
+# footnotes as printed, kept as data on the rows they mark (found by the blind verifier, 2026-11-06)
+FOOT = {("5", "WP Kuala Lumpur"): "1: Termasuk WP Putrajaya.",
+        ("5", "KDNK Per Kapita"): "KDNK per kapita merujuk kepada nilai harga semasa (p. A-10)",
+        ("14", "Jumlah Guna Tenaga"): "1: Penerbitan Produktiviti Buruh menggunakan pendekatan pertubuhan dan isi rumah."}
 
 
 def page(p):
@@ -91,13 +95,16 @@ def rows_of(lines, start_pat, stop_pat):
 
 
 def emit(out, jadual, title, section, label, cols, nums, unit, p, row_type):
+    foot = "; ".join(x for x in (FOOT.get((jadual, section)), FOOT.get((jadual, label))) if x)
+    if (jadual, label) == ("5", "KDNK Per Kapita"):
+        unit = "RM (harga semasa)"
     if len(nums) != len(cols):
         sys.exit(f"Jadual {jadual} p{p} {section}/{label}: {len(nums)} numbers for {len(cols)} columns: {nums}")
     for c, t in zip(cols, nums):
         v, hi = value(t)
         u = "%" if c.startswith(("purata", "sasaran_purata", "pct", "pewujudan_rmk11_pct", "sasaran_pewujudan_rmk12_pct")) else unit
         out.append(dict(plan="RMKe-12", jadual=jadual, table_title_bm=title, section_bm=section, line_bm=label,
-                        row_type=row_type, measure=c, value_printed=t, value=v, value_hi=hi, unit_printed=u,
+                        row_type=row_type, measure=c, value_printed=t, value=v, value_hi=hi, unit_printed=u, footnote=foot,
                         source_file="rmk12.pdf", pdf_page=p, printed_page=PRINTED[p]))
 
 
@@ -108,6 +115,7 @@ def main():
         body, _ = rows_of(page(p), r"^\s*2015\s+2016", r"^\s*(Nota|Sumber)|Rancangan Malaysia Kedua Belas")
         section = None
         for label, nums in body:
+            label = label.replace("WP Kuala Lumpur1", "WP Kuala Lumpur")  # footnote marker 1
             if label in STATES and not nums:
                 section = label
                 continue

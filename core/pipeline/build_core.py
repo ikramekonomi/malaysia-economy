@@ -737,13 +737,13 @@ def build_obligations(obs, checks):
 
 PLAN_STATE = {"Johor": "MY-01", "Kedah": "MY-02", "Kelantan": "MY-03", "Melaka": "MY-04", "Negeri Sembilan": "MY-05",
               "Pahang": "MY-06", "Pulau Pinang": "MY-07", "Perak": "MY-08", "Perlis": "MY-09", "Selangor": "MY-10",
-              "Terengganu": "MY-11", "Sabah": "MY-12", "Sarawak": "MY-13", "WP Kuala Lumpur1": "MY-14",
+              "Terengganu": "MY-11", "Sabah": "MY-12", "Sarawak": "MY-13", "WP Kuala Lumpur": "MY-14",
               "WP Labuan": "MY-15"}
 PLAN_J10 = {"Hasil": "federal_gov.revenue.total", "Perbelanjaan Mengurus": "federal_gov.expenditure.opex",
             "Perbelanjaan Pembangunan Kasar": "federal_gov.expenditure.devex",
             "Tolak: Terimaan Balik Pinjaman": "federal_gov.expenditure.devex_loan_recovery",
             "Perbelanjaan Pembangunan Bersih": "federal_gov.expenditure.devex_net",
-            "Baki Keseluruhan": "federal_gov.overall_balance"}
+            "Baki Keseluruhan": "federal_gov.overall_balance", "Baki Semasa": "federal_gov.current_balance"}
 PLAN_J14 = {"Jumlah Guna Tenaga": ("lfs.employed", 1000), "Jumlah Tenaga Buruh": ("lfs.labour_force", 1000),
             "Penganggur": ("lfs.unemployed", 1000), "Kadar Pengangguran, %": ("lfs.unemployment_rate", 1),
             "Kadar Penyertaan Tenaga Buruh, %": ("lfs.participation_rate", 1)}
@@ -771,6 +771,17 @@ def build_plan_targets(obs, checks):
                 ind, per = "gdp.real.avg_growth", "2021/2025"
         elif j == "10" and line in PLAN_J10 and m == "sasaran_2025":
             ind, per, v = PLAN_J10[line], "2025", v * 1000000
+        elif j == "10" and line == "% kepada KDNK" and m == "sasaran_2025":
+            # a range target: two observations, its lower and upper end as printed ('-3.5 ~ -3.0')
+            for b, x in (("bound=lower", r["value"]), ("bound=upper", r["value_hi"])):
+                n += 1
+                obs.add(indicator_code="federal_gov.overall_balance.pct_gdp", geo_code="MY", period_code="2025",
+                        breakdown_key=b, entity_id=entity("federal_gov", "MY", "2025"), basis="target",
+                        edition_id="rmk:rmk12.pdf", vintage="2021", value=dec(x), value_printed=r["value_printed"],
+                        unit_printed=r["unit_printed"], precision_printed="0.1", estimate_method="plan", reliability="ok",
+                        file_id=man["rmk12.pdf"]["sha256"], pdf_page=r["pdf_page"], printed_page=r["printed_page"],
+                        table_ref=f"RMKe-12 Lampiran Jadual {j}: {r['table_title_bm']}", l1_ref=f"{rel}#row{i}")
+            continue
         elif j == "14" and line in PLAN_J14 and m == "sasaran_2025":
             ind, mult = PLAN_J14[line]
             per, v = "2025", v * mult
@@ -780,12 +791,13 @@ def build_plan_targets(obs, checks):
         obs.add(indicator_code=ind, geo_code=geo, period_code=per, breakdown_key=bk, entity_id=entity(
                     "federal_gov", "MY", per[-4:]) if ind.startswith("federal_gov.") else "_none",
                 basis="target", edition_id="rmk:rmk12.pdf", vintage="2021", value=v, value_printed=r["value_printed"],
-                unit_printed=r["unit_printed"], precision_printed="1" if r["unit_printed"] == "RM juta" else "0.1",
+                unit_printed=r["unit_printed"], precision_printed={"RM juta": "1000000", "'000 orang": "100"}.get(
+                    r["unit_printed"], "0.1"),
                 estimate_method="plan", reliability="ok", file_id=man["rmk12.pdf"]["sha256"], pdf_page=r["pdf_page"],
                 printed_page=r["printed_page"], table_ref=f"RMKe-12 Lampiran Jadual {j}: {r['table_title_bm']}",
                 l1_ref=f"{rel}#row{i}")
-    checks.append(["C22 RMKe-12 targets loaded (15 state GDP levels and growth, 6 federal, 5 labour)", "rmk",
-                   "PASS" if n == 41 else "FAIL", f"{n} targets"])
+    checks.append(["C22 RMKe-12 targets loaded (15 state GDP levels and growth, 7 federal + the %-of-GDP range, 5 "
+                   "labour)", "rmk", "PASS" if n == 44 else "FAIL", f"{n} targets"])
 
 
 def build_revenue_by_type(obs, checks):
@@ -919,7 +931,8 @@ MOF_FED = {"revenue": "federal_gov.revenue.total", "operating_expenditure": "fed
            "development_expenditure_gross": "federal_gov.expenditure.devex",
            "development_expenditure_loan_recovery": "federal_gov.expenditure.devex_loan_recovery",
            "development_expenditure_net": "federal_gov.expenditure.devex_net",
-           "covid19_fund": "federal_gov.expenditure.covid_fund", "overall_balance": "federal_gov.overall_balance"}
+           "covid19_fund": "federal_gov.expenditure.covid_fund", "overall_balance": "federal_gov.overall_balance",
+           "current_balance": "federal_gov.current_balance", "overall_balance_pct_gdp": "federal_gov.overall_balance.pct_gdp"}
 
 
 def build_federal_reported(obs):
@@ -967,7 +980,8 @@ def build_federal_reported(obs):
             r["line"] = mof_editions.LINE_CROSSWALK.get(r["line"], r["line"])
             cand.append(r)
     for (line, year), r in sorted(mof_editions.choose(cand).items()):
-        v = dec(r["amount_rm_juta"])
+        pct = line.endswith("_pct_gdp")
+        v = dec(r["pct_of_gdp"] if pct else r["amount_rm_juta"])
         if line not in MOF_FED or r["basis"] != "official_actual" or v is None:
             continue
         sha = reg.get((str(r["edition"]), r["source_file"]))
@@ -975,7 +989,8 @@ def build_federal_reported(obs):
             sys.exit(f"MOF {r['edition']} {r['source_file']}: no sha256 in meta/registry_file.csv")
         obs.add(indicator_code=MOF_FED[line], geo_code="MY", period_code=str(year), entity_id=entity("federal_gov", "MY", year),
                 basis="actual", edition_id=f"mof:tinjauan_fiskal@{r['edition']}", vintage=str(r["edition"]),
-                value=v * m, value_printed=r["amount_rm_juta"], unit_printed="RM million", precision_printed="1",
+                value=v if pct else v * m, value_printed=r["pct_of_gdp"] if pct else r["amount_rm_juta"],
+                unit_printed="% of GDP" if pct else "RM million", precision_printed="0.1" if pct else "1",
                 estimate_method="accounting", reliability="ok", file_id=sha, pdf_page=r["pdf_page"],
                 printed_page=r["printed_page"], table_ref=f"Tinjauan Fiskal {r['edition']}, Jadual {r['table_no']}",
                 l1_ref=r["_l1"])

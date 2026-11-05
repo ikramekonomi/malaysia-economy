@@ -154,7 +154,7 @@ class Warehouse:
             out.append("CV5")
             if self.flags.get((r["geo_code"], r["period_code"])):
                 out.append("CV6")
-        if ind == "gdp.real":
+        if ind == "gdp.real" and r["basis"] != "target":
             out.append("CV7")
         if "leaf_total_mismatch" in flags:
             out.append("CV21")
