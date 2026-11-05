@@ -372,13 +372,17 @@ class Tools:
                     nxt = min((c for c in other_runs(prev["entity_id"]) if int(c["valid_from"]) > y),
                               key=lambda c: int(c["valid_from"]), default=None)
                 # the moves out of the body before (from its last printed year) and into the body after
-                links = [r for r in self.w.entity_lineage if prev and nxt and (
-                    r["from_entity_id"] == prev["entity_id"] and int(prev["valid_to"]) <= int(r["first_year"]) <= y
-                    or r["to_entity_id"] == nxt["entity_id"] and y < int(r["first_year"]) <= int(nxt["valid_from"]))]
+                # the moves out of the body before (from its last printed year) and into the body after; a year
+                # before a code's first body (B.64 in 2014) has only the second kind
+                links = [r for r in self.w.entity_lineage if
+                         prev and r["from_entity_id"] == prev["entity_id"] and int(prev["valid_to"]) <= int(r["first_year"]) <= y
+                         or nxt and r["to_entity_id"] == nxt["entity_id"] and y < int(r["first_year"]) <= int(nxt["valid_from"])]
                 if links:
-                    a, b = prev["entity_id"], nxt["entity_id"]
+                    a, b = (prev or {}).get("entity_id"), (nxt or {}).get("entity_id")
                     res["answer"] += ("; the code is in a lapse " + (f"of {a}'s vote" if a == b else f"between {a} and {b}")
-                                      + ": 'lineage' says where the work was printed in the meantime")
+                                      if a and b else f"; {b} held this code from {nxt['valid_from']}" if b
+                                      else f"; {a} held this code until {prev['valid_to']}") + \
+                        ": 'lineage' says where the work was printed in the meantime"
                     res["lineage"] = {"links": [{k: r[k] for k in ("lineage_id", "from_entity_id", "from_name_bm",
                                                                    "to_entity_id", "to_name_bm", "first_year",
                                                                    "moved_mid_year", "what_moved", "evidence")}

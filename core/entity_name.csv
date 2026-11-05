@@ -222,13 +222,6 @@ E000056,B.49,Kementerian Pengajian Tinggi,Ministry of Higher Education,2010,2011
 E000056,P.49,Kementerian Pengajian Tinggi,Ministry of Higher Education,2010,2013,PKKP dim_maksud
 E000056,B.49,Kementerian Pengajian Tinggi,,2012,2012,PKKP dim_maksud
 E000056,B.49,Kementerian Pengajian Tinggi,Ministry of Higher Education,2013,2013,PKKP dim_maksud
-E000056,B.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2015,2018,PKKP dim_maksud
-E000056,P.64,Kementerian Pengajian Tinggi,Ministry of Higher Education,2015,2016,PKKP dim_maksud
-E000056,P.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2017,2018,PKKP dim_maksud
-E000056,B.64,Kementerian Pengajian Tinggi,Ministry of Higher Education,2020,2022,PKKP dim_maksud
-E000056,P.64,Kementerian Pengajian Tinggi,Ministry of Higher Education,2020,2023,PKKP dim_maksud
-E000056,B.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2023,2024,PKKP dim_maksud
-E000056,P.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2024,2024,PKKP dim_maksud
 E000057,B.50,Kementerian Digital,Ministry of Digital,2024,2024,PKKP dim_maksud
 E000057,P.50,Kementerian Digital,Ministry of Digital,2024,2024,PKKP dim_maksud
 E000058,B.60,KEMENTERIAN PERTAHANAN,,2009,2009,PKKP dim_maksud
@@ -239,3 +232,10 @@ E000059,B.62,KEMENTERIAN DALAM NEGERI,,2009,2009,PKKP dim_maksud
 E000059,P.62,KEMENTERIAN DALAM NEGERI,,2009,2009,PKKP dim_maksud
 E000059,B.62,Kementerian Dalam Negeri,Ministry of Home Affairs,2010,2024,PKKP dim_maksud
 E000059,P.62,Kementerian Dalam Negeri,Ministry of Home Affairs,2010,2024,PKKP dim_maksud
+E000067,B.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2015,2018,PKKP dim_maksud
+E000067,P.64,Kementerian Pengajian Tinggi,Ministry of Higher Education,2015,2016,PKKP dim_maksud
+E000067,P.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2017,2018,PKKP dim_maksud
+E000068,B.64,Kementerian Pengajian Tinggi,Ministry of Higher Education,2020,2022,PKKP dim_maksud
+E000068,P.64,Kementerian Pengajian Tinggi,Ministry of Higher Education,2020,2023,PKKP dim_maksud
+E000068,B.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2023,2024,PKKP dim_maksud
+E000068,P.64,Kementerian Pendidikan Tinggi,Ministry of Higher Education,2024,2024,PKKP dim_maksud
