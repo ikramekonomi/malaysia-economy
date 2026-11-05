@@ -1,0 +1,6 @@
+check,scope,status,detail
+F1 lines add up to Jumlah,peruntukan_dipinda_2016_2017,PASS,88320 vs 88320 (15 lines)
+F1 lines add up to Jumlah,perbelanjaan_2016_2017,PASS,86879 vs 86879 (15 lines)
+F2 printed percentages against the amounts,Jadual F-3,WARN,"Kelantan % Jumlah: printed 2.6, from amounts 2.55"
+F3 Jumlah Perbelanjaan against PKKP gross development spending FY2016 + FY2017,PKKP,PASS,F-3 86879 vs PKKP 86878.88 (RM juta); difference 0.12
+F4 share named to one state or the Federal Territories (INFO),Jadual F-3,INFO,48635 of 86879 RM juta = 56.0%; Pelbagai Negeri 38244

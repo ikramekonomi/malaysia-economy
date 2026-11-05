@@ -118,13 +118,14 @@ def manifest_files():
     # sources whose PDFs were re-downloaded and proved by meta/l0_identity.py
     manifested = {}
     for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil"),
-                     ("rmk", "rmk_targets")):
+                     ("rmk", "rmk_targets"), ("parliament", "dewan_rakyat_hansard")):
         p = os.path.join(REPO, "sources", src, "data", "_documents_manifest.csv")
         if not os.path.exists(p):
             continue
         for r in rows(p):
             manifested.setdefault(src, set()).add(r["file_name"])
-            out.append({"series_id": sid, "edition": r["edition"], "file_name": r["file_name"],
+            out.append({"series_id": "federal_devex_by_state" if r["file_name"].startswith("ksp_") else sid,
+                        "edition": r["edition"], "file_name": r["file_name"],
                         "source_url": r["source_url"], "sha256": r["sha256"], "size_bytes": r["size_bytes"],
                         "pages": r["pages"], "retrieved_date": r["retrieved_date"], "manifest": rel(p)})
     # Lampiran E (actual grants to the states) is its own series, printed in the Budget books: the files its rows
@@ -142,7 +143,7 @@ def manifest_files():
                     "manifest": "sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)"})
     # the documents their rows cite that no manifest covers yet, without a sha256
     for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil"),
-                     ("rmk", "rmk_targets")):
+                     ("rmk", "rmk_targets"), ("parliament", "dewan_rakyat_hansard")):
         seen = set()
         for p in sorted(glob.glob(os.path.join(REPO, "sources", src, "data", "**", "*.csv"), recursive=True)):
             if os.path.basename(p).startswith("_"):

@@ -51,6 +51,7 @@ cpi,2018,mcoicop.csv,,b917d0e3446628251e465e55989e5631011d1e422f0483bd8e82f93e32
 cpi,2026-09,cpi_headline.csv,,37c54ca1499e32a94f8253ac9b3d33893f9ada06f49266e1fcd6e8cad692705c,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 cpi,2026-09,cpi_state.csv,,fd15b662b1a4a60cf034b2a7eeb8954a5d08de28441e61a5f897d876bbdb98ea,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 crime_stats,2023-12-31 23:59,crime_district.csv,,800d488b426cd02f068179c626f7b4d2c5ba024f5b4b838fb0986fb7001c31be,,,,sources/dosm/data/_vintage_log.csv
+dewan_rakyat_hansard,2024-12-12,JBL12122024.pdf,https://www.parlimen.gov.my/files/jindex/pdf/JBL12122024.pdf,b12a7e6bf9026392212779985755527d5df6a0fb3182f11b762a134392bd5b60,45490970,2147,2026-11-05,sources/parliament/data/_documents_manifest.csv
 dosm_gfs,2022,state_finance_expenditure.csv,,d47f672ebb5dd0dc556554e2a94d1ed37656811b41ab1539c9f2bec7f8430b3f,,,2026-07-31,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2022,state_finance_revenue.csv,,5d573ca68f5f6a9de48bf8f94280049399d29a0a60cbbe52cde10c2d39125e4c,,,2026-07-31,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2024-01,lookup_federal_finance.csv,,de5fd5dad592856f7ff2048e4caa19fc414b8d674b516a5e4578c05f4cdbba41,,,2026-07-31,sources/dosm/data/_vintage_log.csv
@@ -68,6 +69,7 @@ dosm_population,2026,population_malaysia.csv,,ed287ef3277e96e74d27fd65f2dc4ab88b
 education_stats,2025,enrolment_school_district.csv,,341380e1f77d6da81a47638c09bf3414905958b91faacc7f2de03050bc9e72c6,,,,sources/dosm/data/_vintage_log.csv
 education_stats,2025,schools_district.csv,,22a8ac4b1fa4d5c52bb864f0228bd93aa37577640d7ebad32970b0f6131d7069,,,,sources/dosm/data/_vintage_log.csv
 education_stats,2025,teachers_district.csv,,0608c35c0e89fff4bc651647bd653ec5321eb8d3a1378cead0f320ff270948fc,,,,sources/dosm/data/_vintage_log.csv
+federal_devex_by_state,2018,ksp_rmk11_lampiran_f.pdf,https://www.ekonomi.gov.my/sites/default/files/2020-08/12.%20Peruntukan%20dan%20perbelanjaan%20pembangunan%20kerajaan%20persekutuan%2C%202016-2017.pdf,b99e3e41af3d48d6e5a9e22f6ca1b5a776c17058f675b017500ffcdb46a2504e,620135,8,2026-11-05,sources/rmk/data/_documents_manifest.csv
 federal_grants_to_states_actual,2021,lampiran_e_2021.pdf,https://belanjawan.mof.gov.my/pdf/2021/perbelanjaan/lampiran_e.pdf,67e959d75e327f89ab3991c85752119e6d3e80a177b94f059ba01de817d29c52,253777,1,2026-11-05,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
 federal_grants_to_states_actual,2022,lampiran_e_2022.pdf,https://belanjawan.mof.gov.my/pdf/2022/perbelanjaan/lampiran_e.pdf,417405ca26a0f66cd32594fe54fe54971ed7d2d5d81841c657293ec9370a7bd4,192843,1,2026-11-05,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
 federal_grants_to_states_actual,2023,lampiran_e_2023.pdf,https://belanjawan.mof.gov.my/pdf/2023/perbelanjaan/lampiran_e.pdf,2ec7748baf17b551989c0c5cd912f46ded38f58894e3088a6e972073e7a32ae0,194385,1,2026-11-05,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
