@@ -49,7 +49,7 @@ the same defects across the state tables.
 | 7 | Sabah CMD.43.2016 J4.31 `Corporation Sdn. Bhd. Jumlah` typed a leaf | known defect |
 | 8-9 | label-only issues; integer-printed `0`/`5` cells missing | left (labels; absent, not wrong) |
 
-A second blind pass covers changes 2-3 (`2026-11-05_state_column_shift_verifier2.md`).
+A second blind pass covered changes 2-3; it and the fixes that followed are below.
 
 ## Blind verifier (second pass, on changes 2-3) and what was done
 
