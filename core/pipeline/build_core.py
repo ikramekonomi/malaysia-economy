@@ -831,7 +831,12 @@ def build_federal(obs):
 BNM_FED = {"cur_bud_rev": "federal_gov.revenue.total", "cur_bud_exp": "federal_gov.expenditure.opex",
            "dev_exp_gro_dev_exp": "federal_gov.expenditure.devex",
            "dev_exp_les_loa_rec": "federal_gov.expenditure.devex_loan_recovery",
-           "dev_exp_net_dev_exp": "federal_gov.expenditure.devex_net"}
+           "dev_exp_net_dev_exp": "federal_gov.expenditure.devex_net",
+           # BNM's API keys are shifted by one from ov_sur_def onward (sources/bnm/data/_source_anomalies.csv):
+           # ov_sur_def holds the COVID-19 Fund (blank before 2020) and sou_fin_dom_bor_gro_dom_bor the overall
+           # balance; proved every annual row by check C20 (current balance - net DE - Fund = overall balance)
+           "ov_sur_def": "federal_gov.expenditure.covid_fund",
+           "sou_fin_dom_bor_gro_dom_bor": "federal_gov.overall_balance"}
 MOF_FED = {"revenue": "federal_gov.revenue.total", "operating_expenditure": "federal_gov.expenditure.opex",
            "development_expenditure_gross": "federal_gov.expenditure.devex",
            "development_expenditure_loan_recovery": "federal_gov.expenditure.devex_loan_recovery",
@@ -853,9 +858,14 @@ def build_federal_reported(obs):
     bnm_dir = os.path.join(REPO, "sources", "bnm", "data")
     vin = {r["dataset"]: r for r in rows(os.path.join(bnm_dir, "_vintage_log.csv")) if r["state"] == "current"}["msb_3_1"]
     d = vin["data_as_of"][:10]
+    worst, n_id = Decimal(0), 0
     for i, r in enumerate(rows(os.path.join(bnm_dir, "msb_3_1.csv")), start=2):
         if r["period"].strip():
             continue  # quarterly rows
+        cur, net, ob = dec(r["cur_bud_sur_def"]), dec(r["dev_exp_net_dev_exp"]), dec(r["sou_fin_dom_bor_gro_dom_bor"])
+        if None not in (cur, net, ob):
+            n_id += 1
+            worst = max(worst, abs(cur - net - (dec(r["ov_sur_def"]) or 0) - ob))
         for col, ind in BNM_FED.items():
             v = dec(r[col])
             if v is None:
@@ -865,6 +875,10 @@ def build_federal_reported(obs):
                     unit_printed="RM million", precision_printed="0.000000000001", estimate_method="accounting",
                     reliability="ok", file_id=vin["sha256"], table_ref="BNM MSB 3.1 Federal Government Finance",
                     l1_ref=f"sources/bnm/data/msb_3_1.csv#row{i}")
+    obs.extra_checks.append(["C20 BNM MSB 3.1 shifted keys: current balance - net DE - COVID-19 Fund (ov_sur_def) = "
+                             "overall balance (sou_fin_dom_bor_gro_dom_bor), every annual row", "BNM",
+                             "PASS" if n_id and worst <= Decimal("1.5") else "FAIL",  # four figures, each rounded
+                             f"{n_id} annual rows; largest difference RM{worst} million (printed rounding)"])
     reg = {(r["edition"], r["file_name"]): r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))
            if r["series_id"] == "tinjauan_fiskal"}
     cand = []
@@ -1231,10 +1245,10 @@ def main():
     build_national_accounts(obs, ed)
     build_states(obs)
     build_federal(obs)
+    obs.extra_checks = []
     build_federal_reported(obs)
     build_national_series(obs, ed)
     build_votes(obs)
-    obs.extra_checks = []
     build_federal_loans(obs, obs.extra_checks)
     build_revenue_by_type(obs, obs.extra_checks)
     build_obligations(obs, obs.extra_checks)

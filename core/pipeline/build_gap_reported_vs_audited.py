@@ -24,6 +24,14 @@ three printings of federal operating expenditure for 2019, 2022 and 2024, and no
   Thresholds declared here, before results. A difference is reported, never resolved: which publisher is right
   is not decided by this view (PKKP is the anchor of last resort, CLAUDE.md, but a reported figure may use another
   scope or a later revision).
+* Added after the blind verifier (2026-11-06; thresholds and status words unchanged):
+    - the printed unit is read from each observation (precision_printed) rather than assumed: PKKP prints whole
+      ringgit FY2010-2024 (sen only FY2009), so half its unit is RM0.50; 12 BNM-PKKP pairs move to agree
+    - BNM's API keys are shifted from ov_sur_def onward (sources/bnm/data/_source_anomalies.csv): core now loads
+      BNM's COVID-19 Fund and overall balance (check C20), so federal_gov.overall_balance (MOF and BNM) is a row
+    - notes say what PKKP prints instead where it is not compared: its overall deficit ('Kurangan Keseluruhan')
+      uses gross development spending, and its 'Terimaan Balik Pinjaman dan Pelbagai Terimaan' is broader than
+      the loan recoveries
 * Checks: G1 every value equals its observation; G2 every row traces to observation ids; G3 every indicator and
   year present once; G4 coverage (INFO): years per publisher and the indicators left out; G5 status counts (INFO).
 """
@@ -43,7 +51,7 @@ import mof_editions  # noqa: E402
 
 INDICATORS = ["federal_gov.revenue.total", "federal_gov.expenditure.opex", "federal_gov.expenditure.devex",
               "federal_gov.expenditure.covid_fund", "federal_gov.expenditure.devex_loan_recovery",
-              "federal_gov.expenditure.devex_net"]
+              "federal_gov.expenditure.devex_net", "federal_gov.overall_balance"]
 PUB = {"pkkp": "pkkp_audited", "bnm": "bnm_actual", "mof": "mof_actual"}
 BASIS = {"pkkp": "audited", "bnm": "actual", "mof": "actual"}
 PAIRS = [("bnm", "pkkp"), ("mof", "pkkp"), ("mof", "bnm")]
@@ -55,10 +63,9 @@ FIELDS = ["geo_code", "indicator_code", "indicator", "year", "pkkp_audited", "bn
 
 def half_unit(pub, r):
     """Half the printed unit of one printing, in RM."""
-    if pub == "pkkp":
-        return Decimal("0.005")
-    if pub == "mof":
-        return Decimal("500000")
+    if pub in ("pkkp", "mof"):
+        mult = Decimal(1000000) if pub == "mof" else Decimal(1)
+        return Decimal(r.get("precision_printed") or ("1" if pub == "mof" else "0.01")) * mult / 2
     p = (r.get("value_printed") or "").strip()
     dp = len(p.split(".")[1].rstrip("0")) if "." in p else 0
     return Decimal(1000000) * Decimal(5) / Decimal(10) ** (dp + 1)
@@ -109,8 +116,16 @@ def main():
                 row[f"{a}_vs_{b}_status"] = "not_held"
         row["mof_restated_in"] = restated.get((ind, y), "")
         if "pkkp" not in val:
-            notes.append("no audited figure: PKKP does not print this line" if ind.endswith(("loan_recovery", "net"))
-                         else "no audited figure held for this year (PKKP is held for FY2009-2024)")
+            notes.append(
+                "not compared with PKKP: its 'Terimaan Balik Pinjaman dan Pelbagai Terimaan' is broader (it adds "
+                "miscellaneous receipts)" if ind.endswith(("loan_recovery", "net")) else
+                "not compared with PKKP: its overall deficit ('Kurangan Keseluruhan') is struck after gross "
+                "development spending, MOF's and BNM's after net (the gap is the loan recoveries)"
+                if ind == "federal_gov.overall_balance" else
+                "no audited figure held for this year (PKKP is held for FY2009-2024)")
+        if row["mof_restated_in"] and any(row[f"mof_vs_{b}_status"] not in ("agree", "not_held") for b in ("pkkp", "bnm")):
+            notes.append("a later MOF edition prints a different figure (mof_restated_in): compare it before reading "
+                         "the difference as MOF's")
         row["source_obs_ids"] = ";".join(d[p]["obs_id"] for p in ("pkkp", "bnm", "mof") if p in d)
         row["caveats"] = ";".join(sorted(cv))
         row["note"] = "; ".join(notes)
@@ -134,7 +149,7 @@ def main():
     add("G4 coverage (INFO)", "INFO", "; ".join(f"{i.split('.')[-1]}/{p} {min(v)}-{max(v)}" for (i, p), v in
                                                sorted(yrs.items())) + "; left out (one publisher only): " +
         (", ".join(f"{i} ({p}, {n} years)" for (i, p), n in sorted(single.items())) or "none")
-        + "; federal_gov.overall_balance: MOF only in core")
+        + "; PKKP's overall deficit is not loaded (another concept: after gross development spending)")
     for a, b in PAIRS:
         c = Counter((r["indicator_code"].split(".")[-1], r[f"{a}_vs_{b}_status"]) for r in out
                     if r[f"{a}_vs_{b}_status"] != "not_held")

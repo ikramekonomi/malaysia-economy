@@ -34,7 +34,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
 | `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
-| `gap_reported_vs_audited.csv` | 78 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
+| `gap_reported_vs_audited.csv` | 89 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
 | `gap_obligations_growth.csv` | 66 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
 | `gap_revenue_estimate_vs_collected.csv` | 90 | federal revenue by type (tax, non-tax, non-revenue receipts, Federal Territories, total) × year: the accounts' original and revised estimates and actual beside the Budget revenue books'; collection rate and status (Phase 5) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
@@ -410,26 +410,45 @@ FY2023 estimate is Budget 2023 as re-tabled in February 2023. Book reprints carr
 ## gap_reported_vs_audited (Phase 5, 2026-11-06)
 
 Do MOF, BNM and PKKP agree? One row per federal headline and year, where at least two of them print it:
-revenue, operating spending (before the transfer to the Development Fund), gross development spending, the
-COVID-19 Fund, loan recoveries and net development spending (the last two: BNM and MOF only). The method was
-declared before the view was built (`core/pipeline/build_gap_reported_vs_audited.py`):
-* each publisher's figure is taken as core holds it: PKKP from that year's own volume; BNM's annual row; MOF's
-  edition of year+2, with what later editions print differently in `mof_restated_in`;
+* revenue;
+* operating spending (before the transfer to the Development Fund);
+* gross development spending;
+* the COVID-19 Fund;
+* loan recoveries, net development spending and the overall balance (BNM and MOF only).
+
+The method was declared before the view was built (`core/pipeline/build_gap_reported_vs_audited.py`):
+* each publisher's figure is taken as core holds it: PKKP from that year's own volume; BNM's annual row (MSB
+  3.1); MOF's edition of year+2 (Jadual 1.1, 5.1 in the 2023 edition), with what later editions print
+  differently in `mof_restated_in`;
 * each pair (bnm-pkkp, mof-pkkp, mof-bnm) is signed and graded:
-  * `agree` within half the coarser printed unit (MOF: whole RM juta; BNM: sen);
+  * `agree` within half the coarser printed unit (MOF: whole RM juta; PKKP: whole ringgit, sen in FY2009; BNM:
+    the decimals it serves, which vary by year from RM1m to the sen);
   * `differ_minor` within 0.1%;
   * `differ` beyond 0.1%.
 
-Result, 78 rows: no pair differs by more than 0.1% in any year.
-* **MOF against PKKP:** 32 of 35 pairs agree to the RM juta. The three exceptions:
-  * revenue 2018: MOF RM0.56m below the audit;
-  * revenue 2020: MOF and BNM both RM1.05m above;
-  * gross development spending 2023: MOF RM1.26m and BNM RM1.25m above.
-* **BNM against PKKP:** BNM prints to the sen, so most `differ_minor` rows are sen to a few thousand ringgit.
-  The largest are the 2020 and 2023 cases above.
+**The status grades print resolution, not size: always read the RM gap.** A finer printing can be
+`differ_minor` where a coarser one, further off in ringgit, is `agree`. For example, revenue 2019: BNM +RM41,124
+is `differ_minor`, while MOF +RM244,124 is `agree`.
+
+Result, 89 rows: no pair differs by more than 0.1% in any year.
+* **MOF against PKKP:** 32 of 35 pairs agree to the RM juta; 2 of them are 0 = 0 (the COVID-19 Fund after it
+  closed). Two of the three exceptions agree in MOF's later editions:
+  * revenue 2020 (+RM1.05m; the 2023 and 2024 editions print 225,075, which agrees);
+  * gross development spending 2023 (+RM1.26m; the 2027 edition prints 96,090, which agrees).
+  * The third, revenue 2018 (-RM0.56m), is MOF rounding its lines so that its table adds up.
+* **BNM against PKKP:** 41 of 53 pairs agree. The rest are RM2.5 to RM1.25m.
+* **MOF against BNM:** the 5 exceptions are RM0.53m to RM0.97m, rounding.
+
+Not compared:
+* PKKP's overall deficit is struck after gross development spending (MOF's and BNM's after net), so it is
+  another concept.
+* PKKP's 'Terimaan Balik Pinjaman dan Pelbagai Terimaan' is broader than the loan recoveries.
+
+BNM's API labels its COVID-19 Fund and overall balance under shifted keys. The proof is in
+`sources/bnm/data/_source_anomalies.csv` and core check C20.
 
 Which publisher is right is not decided here (a reported figure can be a later revision or another scope). Checks
-G1-G5 are in `_validation_gap_rva.csv`.
+G1-G5 are in `_validation_gap_rva.csv`. Blind verifier: `qa/audits/2026-11-06_phase5_reported_vs_audited_verifier.md`.
 
 ## gap_obligations_growth (Phase 5, 2026-11-06)
 

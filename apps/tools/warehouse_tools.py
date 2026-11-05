@@ -696,12 +696,14 @@ class Tools:
         if name == "gap_reported_vs_audited":
             out["how_to_read"] = (
                 "One row per federal headline (revenue, operating spending before the transfer to the Development Fund, "
-                "gross development spending, the COVID-19 Fund, loan recoveries, net development spending) and year, as "
+                "gross development spending, the COVID-19 Fund, loan recoveries, net development spending, the overall "
+                "balance) and year, as "
                 "printed by three institutions: PKKP (the Auditor-General's certified accounts), BNM (MSB 3.1) and MOF "
                 "(Tinjauan Fiskal, the edition of year+2). Each pair's difference is signed (first minus second): agree "
                 "within half the coarser printed unit (MOF prints whole RM million), differ_minor within 0.1%, differ "
-                "beyond. A difference is kept as published; the view does not decide who is right. mof_restated_in lists "
-                "what later MOF editions print differently.")
+                "beyond. The status grades print resolution, not size: read the RM difference. A difference is kept as "
+                "published; the view does not decide who is right. mof_restated_in lists what later MOF editions print "
+                "differently.")
         if name == "gap_obligations_growth":
             out["how_to_read"] = (
                 "One row per obligation and year, positions at 31 December from PKKP's memorandum accounts (each year "
