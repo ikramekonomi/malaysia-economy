@@ -1,5 +1,8 @@
 breakdown_key,label,axis,member_code
 _total,no split,,
+bank_type=commercial,bank_type=commercial,bank_type,commercial
+bank_type=investment,bank_type=investment,bank_type,investment
+bank_type=islamic,bank_type=islamic,bank_type,islamic
 coicop=01,coicop=01,coicop,01
 coicop=02,coicop=02,coicop,02
 coicop=03,coicop=03,coicop,03

@@ -122,3 +122,26 @@ Q120,fact,get_series,row_count,3,3,PASS
 Q121,fact,get_series,caveat,CV16,"CV16,COVERAGE",PASS
 Q122,trap_missing,get_series,caveat,CV17,"CV16,CV17,COVERAGE",PASS
 Q123,fact,get_series,value,3069890000,3069890000,PASS
+Q124,fact,get_series,value,137.6,137.6,PASS
+Q125,fact,get_series,value,161.4,161.4,PASS
+Q126,fact,get_series,value,40.2,40.2,PASS
+Q127,fact,derive_chain,value,0.017751,0.017751,PASS
+Q128,trap_missing,get_series,not_held,,not held in the warehouse: cpi.index for MY 2005-06-2005-06,PASS
+Q129,fact,get_series,caveat,CV8,"CV1,CV8",PASS
+Q130,fact,get_series,value,215112665290,215112665290,PASS
+Q131,fact,get_series,value,181388948021,181388948021,PASS
+Q132,fact,get_series,value,-1799499923,-1799499923,PASS
+Q133,fact,get_series,caveat,CV19,"CV19,COVERAGE",PASS
+Q134,fact,get_series,value,738502324542.45,738502324542.45,PASS
+Q135,fact,get_series,value,1950567931151.21,1950567931151.21,PASS
+Q136,fact,get_series,value,1375858010085.56,1375858010085.56,PASS
+Q137,fact,derive_chain,value,0.057836,0.057836,PASS
+Q138,fact,get_series,value,2411921617904.4,2411921617904.4,PASS
+Q139,fact,get_series,value,1013377287186.5,1013377287186.5,PASS
+Q140,fact,get_series,caveat,CV20,"CV20,COVERAGE",PASS
+Q141,trap_missing,find_indicator,not_held,,not held in the warehouse: overnight policy rate,PASS
+Q142,trap_incomparable,derive_chain,refused,do not compare places,"index levels do not compare places (caveat CV8): each place's index is set to 100 in its own base year, so a level measures change since then, not how dear one place is against another. Compare each place's growth over the same period instead (derive('growth'))",PASS
+Q143,trap_incomparable,derive_chain,refused,do not compare places,"index levels do not compare places (caveat CV8): each place's index is set to 100 in its own base year, so a level measures change since then, not how dear one place is against another. Compare each place's growth over the same period instead (derive('growth'))",PASS
+Q144,trap_incomparable,derive_chain,refused,"same indicator, place","growth compares one series with itself: same indicator, place and breakdown",PASS
+Q145,trap_incomparable,derive_chain,refused,different periods,different periods: 2025-12 vs 2025,PASS
+Q146,trap_incomparable,derive_chain,refused,earlier period,growth is from the earlier period (second input) to the later (first input); got 2026-05 -> 2025-05,PASS

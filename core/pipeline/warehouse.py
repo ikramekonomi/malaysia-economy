@@ -150,6 +150,10 @@ class Warehouse:
                 out.append("CV17")
         if ind == "cpi.index":
             out.append("CV8")
+        if ind.startswith("trade."):
+            out.append("CV19")
+        if ind == "credit.loans.banking_system":
+            out.append("CV20")
         return out
 
     def cite(self, r):
@@ -197,6 +201,11 @@ class Warehouse:
             raise Refused(f"unknown observation id: {a_id if not a else b_id}")
         ia, ib = self.all_ind[a["indicator_code"]], self.all_ind[b["indicator_code"]]
         va, vb = Decimal(a["value"]), Decimal(b["value"])
+        if (operation in ("ratio", "difference", "gap_pp") and "index" in (ia["unit"], ib["unit"])
+                and a["geo_code"] != b["geo_code"]):
+            raise Refused("index levels do not compare places (caveat CV8): each place's index is set to 100 in its "
+                          "own base year, so a level measures change since then, not how dear one place is against "
+                          "another. Compare each place's growth over the same period instead (derive('growth'))")
         if operation == "per_capita":
             if vb == 0:
                 raise Refused("population is zero")
