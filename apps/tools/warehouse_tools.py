@@ -572,7 +572,17 @@ class Tools:
                               "the HIES years 2014, 2016, 2019, 2022 and 2024"),
         "gap_federal_vs_state": ("core/pipeline/build_gap_federal_vs_state.py (declared 2026-11-05)",
                                  "FY2014-2024 (FY2015 has no federal side)"),
+        "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
+                                  "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
+    PLACEMENT_NOTE = (
+        "How much federal spending (PKKP audited) can be placed in a state from the federal accounts themselves: "
+        "development projects whose name names one state (stated_state) or one district (parsed_district), and "
+        "grants to a named state government or territory administration. placed_share is that money in all states "
+        "over the year's federal total; it is under 4% in every year held, so the amounts by state are withheld (the "
+        "60% guard: a map must not look more complete than the accounts). The MY row gives the national amounts by "
+        "method, the _unallocated row what could not be placed (projects naming several states, naming none, and "
+        "FY2009's printed total not itemised). Nothing is split by population or any other formula.")
     FED_VS_STATE_NOTE = (
         "Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts "
         "record received. The capitation and Concurrent List grants are paid to the states as a class and not split "
@@ -626,4 +636,12 @@ class Tools:
         out = {"held": True, "view": name, "rows": rs, "method": method, "release_id": self.w.release_id}
         if name == "gap_federal_vs_state":
             out["how_to_read"] = self.FED_VS_STATE_NOTE
+        if name == "gap_federal_placement":
+            out["how_to_read"] = self.PLACEMENT_NOTE
+            for r in rs:
+                # the 60% guard (DATA_MODEL 10): a state's amounts are withheld while the year's placed_share is low
+                if r["geo_code"].startswith("MY-") and r["publishable"] != "true":
+                    for k in ("projects_stated_rm", "projects_parsed_rm", "grants_by_name_rm", "placed_rm"):
+                        r[k] = None
+                    r["withheld"] = "amounts by state withheld below the 60% placed_share guard; see note"
         return out

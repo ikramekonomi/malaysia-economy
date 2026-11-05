@@ -182,6 +182,28 @@ v = l1("hh_poverty_state", "Kelantan", "2022", "poverty_absolute")
 q("1", "What poverty rate does the view show for Kelantan in 2022?", "get_gap_view",
   {"name": "gap_need_vs_money", "geo": "MY-03", "year": "2022"}, "field:poverty_absolute_rate", s(v))
 
+# G2. federal spending placed by state (Phase 3.11): the expected development total comes from L1's printed grand total
+
+
+def pk_devex_total(year):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_devex_project.csv"), newline="") as fh:
+        return next(Decimal(r["sebenar_jumlah_rm"]) for r in csv.DictReader(fh) if r["row_type"] == "grand_total")
+
+
+q("5", "Are federal amounts placed in Kelantan published for 2024?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY-03", "year": "2024"}, "field:publishable", "false")
+q("5", "How much federal money was placed in Kelantan in 2024 (the guard withholds it)?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY-03", "year": "2024"}, "field:placed_rm", "None", kind="trap_missing")
+q("5", "Does the placement view carry the caveat that a project's place is where it is, not who benefits?",
+  "get_gap_view", {"name": "gap_federal_placement", "geo": "MY", "year": "2024"}, "caveat", "CV27")
+q("5", "What did federal development projects total in 2024 (the placement view's MY row)?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY", "year": "2024"}, "field:devex_projects_total_rm",
+  s(pk_devex_total("2024")))
+q("5", "Is federal spending placed by state for FY2015 (an OCR-provisional scan)?", "get_gap_view",
+  {"name": "gap_federal_placement", "geo": "MY", "year": "2015"}, "not_held", kind="trap_missing")
+q("5", "Does the placement view cover all 16 states and territories plus the national and not-placed rows in 2020?",
+  "get_gap_view", {"name": "gap_federal_placement", "year": "2020"}, "row_count", "18")
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")
