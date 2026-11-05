@@ -51,6 +51,10 @@ class Warehouse:
         self.ind = {r["indicator_code"]: r for r in _rows(os.path.join(CORE, "dim_indicator.csv"))}
         self.all_ind = {r["indicator_code"]: r for r in _rows(os.path.join(META, "indicator.csv"))}
         self.geo = {r["geo_code"]: r for r in _rows(os.path.join(CORE, "dim_geo.csv"))}
+        self.entity = {r["entity_id"]: r for r in _rows(os.path.join(CORE, "dim_entity.csv"))}
+        self.entity_codes = _rows(os.path.join(CORE, "bridge_entity_code.csv"))
+        self.entity_names = _rows(os.path.join(CORE, "entity_name.csv"))
+        self.spending_heads = {r["code"]: r for r in _rows(os.path.join(META, "spending_head.csv"))}
         self.caveats = {r["caveat_id"]: r for r in _rows(os.path.join(META, "caveat.csv"))}
         self.derivations = {r["derivation_id"]: r for r in _rows(os.path.join(META, "derivation.csv"))}
         self.registry = _rows(os.path.join(REPO, "docs", "registry", "series_seed.csv"))
@@ -161,7 +165,9 @@ class Warehouse:
         cv = self.caveats_for(r)
         out = {"obs_id": r["obs_id"], "indicator_code": r["indicator_code"], "geo_code": r["geo_code"],
                "geo_name": self.geo.get(r["geo_code"], {}).get("name_bm", ""), "period_code": r["period_code"],
-               "breakdown_key": r["breakdown_key"], "basis": r["basis"], "value": r["value"],
+               "breakdown_key": r["breakdown_key"], "entity_id": r["entity_id"],
+               "entity_name": self.entity.get(r["entity_id"], {}).get("name_bm", ""),
+               "basis": r["basis"], "value": r["value"],
                "unit": self.all_ind[r["indicator_code"]]["unit"], "value_printed": r["value_printed"],
                "unit_printed": r["unit_printed"], "status": r["status"],
                "uncertainty": {"se": r["se"] or None, "ci_low": r["ci_low"] or None, "ci_high": r["ci_high"] or None,

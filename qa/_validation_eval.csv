@@ -70,7 +70,7 @@ Q68,trap_incomparable,derive_chain,refused,zero base,growth from a zero base is 
 Q69,trap_incomparable,compare_geos,not_ranked,,"cpi.index is an index of change within each place over time; its level does not compare places (caveat CV8). Compare each place's growth over the same period instead, through derive('growth').",PASS
 Q70,fact,get_series,value,4.6,4.6,PASS
 Q71,trap_missing,get_gap_view,not_held,,unknown place code Johor; did you mean MY-01?,PASS
-Q72,fact,get_gap_view,field_nonempty:federal_source_obs_ids,,oc415bdb5688e;ob7e2850bd297;o87835cbb7836,PASS
+Q72,fact,get_gap_view,field_nonempty:federal_source_obs_ids,,o5bf2e5ddd510;o74da8a2786d4;o86e38902a978,PASS
 Q73,fact,get_series,value,2987,2987,PASS
 Q74,fact,get_series,value,4193,4193,PASS
 Q75,fact,get_series,value,554108,554108,PASS
@@ -145,3 +145,16 @@ Q143,trap_incomparable,derive_chain,refused,do not compare places,"index levels 
 Q144,trap_incomparable,derive_chain,refused,"same indicator, place","growth compares one series with itself: same indicator, place and breakdown",PASS
 Q145,trap_incomparable,derive_chain,refused,different periods,different periods: 2025-12 vs 2025,PASS
 Q146,trap_incomparable,derive_chain,refused,earlier period,growth is from the earlier period (second input) to the later (first input); got 2026-05 -> 2025-05,PASS
+Q147,fact,get_entity,printed_name,Kementerian Belia dan Sukan,Kementerian Belia dan Sukan,PASS
+Q148,fact,get_entity,printed_name,"Kementerian Air, Tanah dan Sumber Asli","Kementerian Air, Tanah dan Sumber Asli",PASS
+Q149,fact,entity_same,same_entity,same,"same ['E000048', 'E000048']",PASS
+Q150,fact,entity_same,same_entity,same,"same ['E000056', 'E000056']",PASS
+Q151,fact,entity_same,same_entity,same,"same ['E000041', 'E000041']",PASS
+Q152,trap_identity,entity_same,same_entity,different,"different ['E000029', 'E000030']",PASS
+Q153,trap_identity,entity_same,entity_caveat,rule D26,identity proposed by rule D26 and not yet confirmed by a person: this vote lapsed and was printed ag,PASS
+Q154,trap_identity,entity_same,same_entity,different,"different ['E000037', 'E000038']",PASS
+Q155,trap_identity,get_entity,entity_count,2,2,PASS
+Q156,trap_identity,get_entity,not_held,,"T.13 is a spending head, not a body: Tanggungan (charged expenditure under the Federal Constitution, not voted by Parliament): a spending head, not a body; observations carry entity = the federal government and breakdown charged_head=T.13",PASS
+Q157,trap_missing,get_entity,not_held,,no body held B.99 in 2020 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
+Q158,fact,get_entity,entity_field:gfs_sector,state_gov,state_gov,PASS
+Q159,fact,get_series,field_contains:entity_name,Kelantan,Kerajaan Negeri Kelantan,PASS

@@ -1,0 +1,9 @@
+check,scope,status,detail
+"E1 entity IDs well formed, unique and contiguous (none deleted, none reused)",meta/entity_register.csv,PASS,59 IDs
+"E2 every code belongs to a registered entity, every entity has a code",meta/entity_code.csv,PASS,99 codes
+E3 a code points to one entity on any date,meta/entity_code.csv,PASS,92 codes
+E4 every vote printed in PKKP FY2009-2024 resolves to exactly one entity,sources/pkkp dim_maksud,PASS,1027 code-years
+E5 every vote printed in an Anggaran book resolves at the book's year,sources/anggaran,PASS,206 code-books
+E6 every code link carries a proof (a renumbering cites its evidence),meta/entity_code.csv,PASS,99 links
+"E7 entity_type, gfs_sector and code_system in their vocabularies; parents registered",meta,PASS,ok
+E8 identity decisions awaiting a person (decision_status=proposed),meta/entity_register.csv,INFO,"6: ['E000029 Kementerian Hal Ehwal Ekonomi', 'E000030 Kementerian Ekonomi', 'E000037 Kementerian Pembangunan Usahawan dan Koperasi', 'E000038 Kementerian Pembangunan Usahawan dan Koperasi', 'E000045 Kementerian Alam Sekitar dan Air', 'E000046 Kementerian Peralihan Tenaga dan Transformasi Air']"

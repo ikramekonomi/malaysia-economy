@@ -1,0 +1,60 @@
+entity_id,entity_type,name_bm,name_en,parent_entity_id,gfs_sector,decision_status,issued_on,reason
+E000001,government,Kerajaan Persekutuan,Federal Government of Malaysia,,central_gov,confirmed,2026-11-05,the federal government (seed)
+E000002,government,Kerajaan Negeri Johor,Johor State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-01)"
+E000003,government,Kerajaan Negeri Kedah,Kedah State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-02)"
+E000004,government,Kerajaan Negeri Kelantan,Kelantan State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-03)"
+E000005,government,Kerajaan Negeri Melaka,Melaka State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-04)"
+E000006,government,Kerajaan Negeri Negeri Sembilan,Negeri Sembilan State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-05)"
+E000007,government,Kerajaan Negeri Pahang,Pahang State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-06)"
+E000008,government,Kerajaan Negeri Pulau Pinang,Pulau Pinang State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-07)"
+E000009,government,Kerajaan Negeri Perak,Perak State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-08)"
+E000010,government,Kerajaan Negeri Perlis,Perlis State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-09)"
+E000011,government,Kerajaan Negeri Selangor,Selangor State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-10)"
+E000012,government,Kerajaan Negeri Terengganu,Terengganu State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-11)"
+E000013,government,Kerajaan Negeri Sabah,Sabah State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-12)"
+E000014,government,Kerajaan Negeri Sarawak,Sarawak State Government,,state_gov,confirmed,2026-11-05,"a state government (seed); the government, not the place (geo MY-13)"
+E000015,department,Parlimen,Parliament,E000001,central_gov,confirmed,2026-11-05,supply vote B.01 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000016,department,Pejabat Penyimpan Mohor Besar Raja-Raja,Office of the Keeper of the Rulers' Seal,E000001,central_gov,confirmed,2026-11-05,supply vote B.02 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000017,auditor,Jabatan Audit Negara,National Audit Department,E000001,central_gov,confirmed,2026-11-05,supply vote B.03 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000018,department,Suruhanjaya Pilihan Raya,Election Commission,E000001,central_gov,confirmed,2026-11-05,supply vote B.04 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000019,department,Suruhanjaya Perkhidmatan Awam,Public Service Commission,E000001,central_gov,confirmed,2026-11-05,supply vote B.05 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000020,ministry,Jabatan Perdana Menteri,Prime Minister's Department,E000001,central_gov,confirmed,2026-11-05,supply vote B.06 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000021,department,Jabatan Perkhidmatan Awam,Public Service Department,E000001,central_gov,confirmed,2026-11-05,supply vote B.07 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000022,department,Jabatan Peguam Negara,Attorney General's Chambers,E000001,central_gov,confirmed,2026-11-05,supply vote B.08 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000023,department,Suruhanjaya Pencegahan Rasuah Malaysia,Malaysian Anti-Corruption Commission,E000001,central_gov,confirmed,2026-11-05,supply vote B.09 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000024,ministry,Perbendaharaan,Treasury,E000001,central_gov,confirmed,2026-11-05,supply vote B.10 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000025,vote,Perkhidmatan Am Perbendaharaan,Treasury General Services,E000024,central_gov,confirmed,2026-11-05,"supply vote B.11 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026); a vote administered by the Treasury (B.10), not a body of its own"
+E000026,vote,Peruntukan kepada Kumpulan Wang Terkanun,Contributions to Statutory Funds,E000024,central_gov,confirmed,2026-11-05,"supply vote B.12 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026); a vote administered by the Treasury (B.10), not a body of its own"
+E000027,ministry,Kementerian Luar Negeri,Ministry of Foreign Affairs,E000001,central_gov,confirmed,2026-11-05,supply vote B.13 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000028,ministry,Kementerian Perpaduan Negara,Ministry of National Unity,E000001,central_gov,confirmed,2026-11-05,supply vote B.14 2020-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000029,ministry,Kementerian Hal Ehwal Ekonomi,Ministry of Economic Affairs,E000001,central_gov,proposed,2026-11-05,supply vote B.15 2018-2020 (seed from PKKP FY2009-2024 and Anggaran 2024-2026); B.15 lapses after 2020 and is printed again later: kept separate by rule D26
+E000030,ministry,Kementerian Ekonomi,Ministry of Economy,E000001,central_gov,proposed,2026-11-05,B.15 printed again from 2023 after a lapse: a NEW body by rule D26 unless a person links it to the earlier B.15
+E000031,ministry,Kementerian Perladangan dan Komoditi,Ministry of Plantation and Commodities,E000001,central_gov,confirmed,2026-11-05,supply vote B.20 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000032,ministry,Kementerian Pertanian dan Keterjaminan Makanan,Ministry of Agriculture and Food Security,E000001,central_gov,confirmed,2026-11-05,supply vote B.21 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000033,ministry,Kementerian Kemajuan Desa dan Wilayah,Ministry of Rural and Regional Development,E000001,central_gov,confirmed,2026-11-05,supply vote B.22 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000034,ministry,Kementerian Sumber Asli dan Kelestarian Alam,Ministry of Natural Resources and Environmental Sustainability,E000001,central_gov,confirmed,2026-11-05,supply vote B.23 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000035,ministry,"Kementerian Pelaburan, Perdagangan dan Industri","Ministry of Investment, Trade and Industry",E000001,central_gov,confirmed,2026-11-05,supply vote B.24 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000036,ministry,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,Ministry of Domestic Trade and Cost of Living,E000001,central_gov,confirmed,2026-11-05,supply vote B.25 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000037,ministry,Kementerian Pembangunan Usahawan dan Koperasi,,E000001,central_gov,proposed,2026-11-05,supply vote B.26 2009-2009 (seed from PKKP FY2009-2024 and Anggaran 2024-2026); B.26 lapses after 2009 and is printed again later: kept separate by rule D26
+E000038,ministry,Kementerian Pembangunan Usahawan dan Koperasi,Ministry of Entrepreneur and Cooperatives Development,E000001,central_gov,proposed,2026-11-05,B.26 printed again from 2018 after a lapse: a NEW body by rule D26 unless a person links it to the earlier B.26
+E000039,ministry,Kementerian Kerja Raya,Ministry of Works,E000001,central_gov,confirmed,2026-11-05,supply vote B.27 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000040,ministry,Kementerian Pengangkutan,Ministry of Transport,E000001,central_gov,confirmed,2026-11-05,supply vote B.28 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000041,ministry,"Kementerian Tenaga, Teknologi Hijau dan Air","Ministry of Energy, Green Technology and Water",E000001,central_gov,confirmed,2026-11-05,supply vote B.29 2009-2018 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000042,ministry,"Kementerian Sains, Teknologi dan Inovasi","Ministry of Science, Technology and Innovation",E000001,central_gov,confirmed,2026-11-05,supply vote B.30 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000043,ministry,"Kementerian Pelancongan, Seni dan Budaya","Ministry of Tourism, Arts and Culture",E000001,central_gov,confirmed,2026-11-05,supply vote B.31 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000044,ministry,Kementerian Wilayah Persekutuan,Ministry of Federal Territories,E000001,central_gov,confirmed,2026-11-05,supply vote B.32 2009-2022 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000045,ministry,Kementerian Alam Sekitar dan Air,Ministry of Environment and Water,E000001,central_gov,proposed,2026-11-05,supply vote B.33 2020-2022 (seed from PKKP FY2009-2024 and Anggaran 2024-2026); B.33 lapses after 2022 and is printed again later: kept separate by rule D26
+E000046,ministry,Kementerian Peralihan Tenaga dan Transformasi Air,Ministry of Energy Transition and Water Transformation,E000001,central_gov,proposed,2026-11-05,B.33 printed again from 2024 after a lapse: a NEW body by rule D26 unless a person links it to the earlier B.33
+E000047,department,Suruhanjaya Perkhidmatan Pendidikan,Education Service Commission,E000001,central_gov,confirmed,2026-11-05,supply vote B.40 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000048,ministry,Kementerian Pendidikan,Ministry of Education,E000001,central_gov,confirmed,2026-11-05,"supply vote B.41 2009-2014, renumbered B.63 from 2015 (lineage approved before the register; see the code proofs)"
+E000049,ministry,Kementerian Kesihatan,Ministry of Health,E000001,central_gov,confirmed,2026-11-05,supply vote B.42 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000050,ministry,Kementerian Perumahan dan Kerajaan Tempatan,Ministry of Housing and Local Government,E000001,central_gov,confirmed,2026-11-05,supply vote B.43 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000051,ministry,"Kementerian Perpaduan, Kebudayaan, Kesenian dan Warisan",,E000001,central_gov,confirmed,2026-11-05,supply vote B.44 2009-2009 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000052,ministry,Kementerian Belia dan Sukan,Ministry of Youth and Sports,E000001,central_gov,confirmed,2026-11-05,supply vote B.45 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000053,ministry,Kementerian Sumber Manusia,Ministry of Human Resources,E000001,central_gov,confirmed,2026-11-05,supply vote B.46 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000054,ministry,Kementerian Komunikasi,Ministry of Communications,E000001,central_gov,confirmed,2026-11-05,supply vote B.47 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000055,ministry,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat","Ministry of Women, Family and Community Development",E000001,central_gov,confirmed,2026-11-05,supply vote B.48 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000056,ministry,Kementerian Pendidikan Tinggi,Ministry of Higher Education,E000001,central_gov,confirmed,2026-11-05,"supply vote B.49 2009-2013, renumbered B.64 from 2015 (lineage approved before the register; see the code proofs)"
+E000057,ministry,Kementerian Digital,Ministry of Digital,E000001,central_gov,confirmed,2026-11-05,supply vote B.50 2024-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000058,ministry,Kementerian Pertahanan,Ministry of Defence,E000001,central_gov,confirmed,2026-11-05,supply vote B.60 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)
+E000059,ministry,Kementerian Dalam Negeri,Ministry of Home Affairs,E000001,central_gov,confirmed,2026-11-05,supply vote B.62 2009-2024 (seed from PKKP FY2009-2024 and Anggaran 2024-2026)

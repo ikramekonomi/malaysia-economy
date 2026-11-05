@@ -34,6 +34,11 @@ def run(t, q):
         res = t.derive(a["operation"], one(t, a["a"])["obs_id"], one(t, a["b"])["obs_id"])
     elif tool == "explain_chain":
         res = t.explain(one(t, a)["obs_id"])
+    elif tool == "entity_same":
+        x, y = t.get_entity(**a["a"]), t.get_entity(**a["b"])
+        ids = [r["entities"][0]["entity_id"] if r.get("held") and len(r["entities"]) == 1 else None for r in (x, y)]
+        same = "same" if None not in ids and ids[0] == ids[1] else "different" if None not in ids else "unresolved"
+        res = {"same": same, "ids": ids, "caveats": [e.get("caveat", "") for r in (x, y) for e in r.get("entities", [])]}
     elif tool == "compare_geos":
         res = t.compare_geos(a["indicator"], a["period"], a.get("geo_level", "state"),
                              a.get("breakdown", "_total"))
@@ -107,6 +112,21 @@ def run(t, q):
     if check == "first_indicator":
         ids = [i["indicator_code"] for i in res.get("indicators", [])]
         return bool(ids) and ids[0] == exp, ",".join(ids[:3])
+    if check == "same_entity":
+        return res["same"] == exp, f"{res['same']} {res['ids']}"
+    if check == "entity_caveat":
+        return any(exp in c for c in res.get("caveats", [])), ";".join(res.get("caveats", []))[:100]
+    if check == "printed_name":
+        code, year = a["code"].upper(), int(a["year"])
+        names = [n for e in res.get("entities", []) for n in e["source_text"]["printed_names"]
+                 if n["code"] == code and int(n["valid_from"]) <= year <= int(n["valid_to"])]
+        return any(n["name_bm"] == exp for n in names), ";".join(n["name_bm"] for n in names)
+    if check == "entity_count":
+        return str(len(res.get("entities", []))) == exp, str(len(res.get("entities", [])))
+    if check.startswith("entity_field:"):
+        f = check.split(":", 1)[1]
+        got = str((res.get("entities") or [{}])[0].get(f))
+        return got == exp, got
     raise ValueError(f"unknown check {check}")
 
 

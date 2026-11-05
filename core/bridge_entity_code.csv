@@ -1,0 +1,100 @@
+entity_id,code_system,code,valid_from,valid_to,proof
+E000001,federal_gov,MY,,,seed
+E000002,state_gov,MY-01,,,seed
+E000003,state_gov,MY-02,,,seed
+E000004,state_gov,MY-03,,,seed
+E000005,state_gov,MY-04,,,seed
+E000006,state_gov,MY-05,,,seed
+E000007,state_gov,MY-06,,,seed
+E000008,state_gov,MY-07,,,seed
+E000009,state_gov,MY-08,,,seed
+E000010,state_gov,MY-09,,,seed
+E000011,state_gov,MY-10,,,seed
+E000012,state_gov,MY-11,,,seed
+E000013,state_gov,MY-12,,,seed
+E000014,state_gov,MY-13,,,seed
+E000015,maksud_bekalan,B.01,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000016,maksud_bekalan,B.02,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000017,maksud_bekalan,B.03,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000018,maksud_bekalan,B.04,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000019,maksud_bekalan,B.05,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000020,maksud_bekalan,B.06,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000020,maksud_pembangunan,P.06,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000021,maksud_bekalan,B.07,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000021,maksud_pembangunan,P.07,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000022,maksud_bekalan,B.08,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000023,maksud_bekalan,B.09,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000024,maksud_bekalan,B.10,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000024,maksud_pembangunan,P.10,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000025,maksud_bekalan,B.11,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000026,maksud_bekalan,B.12,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000027,maksud_bekalan,B.13,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000027,maksud_pembangunan,P.13,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000028,maksud_bekalan,B.14,2020,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000028,maksud_pembangunan,P.14,2020,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000029,maksud_bekalan,B.15,2018,2020,first appearance
+E000029,maksud_pembangunan,P.15,2018,2021,"development vote of the same body; 2021-2021 printed after the body's B vote ended: its residual development vote (projects still being paid), rule D26"
+E000030,maksud_bekalan,B.15,2023,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000030,maksud_pembangunan,P.15,2023,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000031,maksud_bekalan,B.20,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000031,maksud_pembangunan,P.20,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000032,maksud_bekalan,B.21,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000032,maksud_pembangunan,P.21,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000033,maksud_bekalan,B.22,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000033,maksud_pembangunan,P.22,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000034,maksud_bekalan,B.23,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000034,maksud_pembangunan,P.23,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000035,maksud_bekalan,B.24,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000035,maksud_pembangunan,P.24,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000036,maksud_bekalan,B.25,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000036,maksud_pembangunan,P.25,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000037,maksud_bekalan,B.26,2009,2009,first appearance
+E000037,maksud_pembangunan,P.26,2009,2009,development vote of the same body
+E000038,maksud_bekalan,B.26,2018,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000038,maksud_pembangunan,P.26,2018,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000039,maksud_bekalan,B.27,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000039,maksud_pembangunan,P.27,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000040,maksud_bekalan,B.28,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000040,maksud_pembangunan,P.28,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000041,maksud_bekalan,B.29,2009,2018,first appearance
+E000041,maksud_pembangunan,P.29,2009,2021,"development vote of the same body; 2019-2021 printed after the body's B vote ended: its residual development vote (projects still being paid), rule D26"
+E000042,maksud_bekalan,B.30,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000042,maksud_pembangunan,P.30,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000043,maksud_bekalan,B.31,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000043,maksud_pembangunan,P.31,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000044,maksud_bekalan,B.32,2009,2025,first appearance; printed in Anggaran 2024-2025 budget books
+E000044,maksud_pembangunan,P.32,2009,2025,"development vote of the same body; 2023-2024 printed after the body's B vote ended: its residual development vote (projects still being paid), rule D26; printed in Anggaran 2025-2025 budget books"
+E000045,maksud_bekalan,B.33,2020,2022,first appearance
+E000045,maksud_pembangunan,P.33,2020,2023,"development vote of the same body; 2023-2023 printed after the body's B vote ended: its residual development vote (projects still being paid), rule D26"
+E000046,maksud_bekalan,B.33,2024,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000046,maksud_pembangunan,P.33,2024,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000047,maksud_bekalan,B.40,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000048,maksud_bekalan,B.41,2009,2014,first appearance
+E000048,maksud_bekalan,B.63,2015,2026,"analyst-approved renumbering (curated/pipeline/build_ministry_fiscal.py, MAPPING RULE): continuity of function; B.41 ends 2014, B.63 starts 2015; printed in Anggaran 2025-2026 budget books"
+E000048,maksud_pembangunan,P.41,2009,2014,development vote of the same body
+E000048,maksud_pembangunan,P.63,2015,2026,"development vote of the same body; analyst-approved renumbering (curated/pipeline/build_ministry_fiscal.py, MAPPING RULE): continuity of function; P.41 ends 2014, P.63 starts 2015; printed in Anggaran 2025-2026 budget books"
+E000049,maksud_bekalan,B.42,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000049,maksud_pembangunan,P.42,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000050,maksud_bekalan,B.43,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000050,maksud_pembangunan,P.43,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000051,maksud_bekalan,B.44,2009,2009,first appearance
+E000051,maksud_pembangunan,P.44,2009,2009,development vote of the same body
+E000052,maksud_bekalan,B.45,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000052,maksud_pembangunan,P.45,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000053,maksud_bekalan,B.46,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000053,maksud_pembangunan,P.46,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000054,maksud_bekalan,B.47,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000054,maksud_pembangunan,P.47,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000055,maksud_bekalan,B.48,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000055,maksud_pembangunan,P.48,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000056,maksud_bekalan,B.49,2009,2013,first appearance
+E000056,maksud_bekalan,B.64,2015,2026,"analyst-approved renumbering (curated/pipeline/build_ministry_fiscal.py, MAPPING RULE): continuity of function; B.49 ends 2013, B.64 starts 2015; printed in Anggaran 2025-2026 budget books"
+E000056,maksud_pembangunan,P.49,2009,2013,development vote of the same body
+E000056,maksud_pembangunan,P.64,2015,2018,"development vote of the same body; analyst-approved renumbering (curated/pipeline/build_ministry_fiscal.py, MAPPING RULE): continuity of function; P.49 ends 2013, P.64 starts 2015"
+E000056,maksud_pembangunan,P.64,2020,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000057,maksud_bekalan,B.50,2024,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000057,maksud_pembangunan,P.50,2024,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000058,maksud_bekalan,B.60,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000058,maksud_pembangunan,P.60,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books
+E000059,maksud_bekalan,B.62,2009,2026,first appearance; printed in Anggaran 2025-2026 budget books
+E000059,maksud_pembangunan,P.62,2009,2026,development vote of the same body; printed in Anggaran 2025-2026 budget books

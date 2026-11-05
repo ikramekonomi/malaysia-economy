@@ -258,6 +258,60 @@ class Tools:
                 "verification_tier": "machine_checked",
                 "source_text": {"line_label_bm": label, "note": UNTRUSTED}}
 
+    def get_entity(self, code, year=None):
+        """Who a code names: a vote code (`B.45`, `P.45`) with the year it was printed, a state government
+        (`MY-03`), the federal government (`MY`) or an entity_id (`E000052`). A vote code can name different
+        bodies in different years, so without a year every body it ever named is listed."""
+        bad = self._bad_input(code=code, year=year)
+        if bad:
+            return {**bad, "release_id": self.w.release_id}
+        code = str(code).strip().upper().replace(" ", "")
+        y = None if year is None else int(str(year)[:4])
+        if code in self.w.spending_heads:
+            h = self.w.spending_heads[code]
+            return {"held": False, "answer": f"{code} is a spending head, not a body: {h['note']}",
+                    "source_text": {"name_bm": h["name_bm"], "note": UNTRUSTED}, "release_id": self.w.release_id}
+        m = re.fullmatch(r"([BP])\.?0*(\d{1,2})", code)
+        if m:
+            code = f"{m.group(1)}.{int(m.group(2)):02d}"
+        system = ("maksud_bekalan" if code.startswith("B.") else "maksud_pembangunan" if code.startswith("P.")
+                  else "federal_gov" if code == "MY" else "state_gov" if re.fullmatch(r"MY-\d{2}", code) else None)
+        if code in self.w.entity:
+            ids = [code]
+        elif system:
+            ids = sorted({c["entity_id"] for c in self.w.entity_codes if c["code_system"] == system
+                          and c["code"] == code and (y is None or (
+                              (not c["valid_from"] or int(c["valid_from"]) <= y)
+                              and (not c["valid_to"] or y <= int(c["valid_to"]))))})
+        else:
+            return {"held": False, "answer": f"{code} is not a code the entity register knows: use a vote code "
+                    "(B.45, P.45), a state (MY-03), MY for the federal government, or an entity_id (E000052)",
+                    "release_id": self.w.release_id}
+        if not ids:
+            return {"held": False, "answer": f"no body held {code}" + (f" in {y}" if y else "")
+                    + " (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books)",
+                    "release_id": self.w.release_id}
+        out = []
+        for eid in ids:
+            e = self.w.entity[eid]
+            codes = [{k: c[k] for k in ("code_system", "code", "valid_from", "valid_to", "proof")}
+                     for c in self.w.entity_codes if c["entity_id"] == eid]
+            names = [{k: n[k] for k in ("code", "name_bm", "name_en", "valid_from", "valid_to")}
+                     for n in self.w.entity_names if n["entity_id"] == eid]
+            d = {"entity_id": eid, "entity_type": e["entity_type"], "gfs_sector": e["gfs_sector"],
+                 "parent_entity_id": e["parent_entity_id"], "decision_status": e["decision_status"],
+                 "codes": codes, "source_text": {"name_bm": e["name_bm"], "name_en": e["name_en"],
+                                                 "printed_names": names, "note": UNTRUSTED}}
+            if e["decision_status"] == "proposed":
+                d["caveat"] = ("identity proposed by rule D26 and not yet confirmed by a person: this vote lapsed "
+                               "and was printed again, and the two runs are kept as separate bodies until someone "
+                               "decides otherwise")
+            out.append(d)
+        res = {"held": True, "entities": out, "release_id": self.w.release_id}
+        if len(out) > 1:
+            res["answer"] = (f"{code} named {len(out)} different bodies over time; give the year to pick one")
+        return res
+
     def list_documents(self, theme=None, status=None):
         rs = [r for r in self.w.registry if (not theme or str(theme) in r["theme"].split(";"))
               and (not status or r["status"] == status)]
