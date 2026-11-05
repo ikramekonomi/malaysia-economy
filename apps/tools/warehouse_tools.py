@@ -580,6 +580,8 @@ class Tools:
                                  "PKKP FY2009-2024 and the Budget books' estimate years 2023-2026"),
         "gap_revenue_estimate_vs_collected": ("core/pipeline/build_gap_revenue.py (declared 2026-11-05)",
                                               "PKKP FY2009-2024 and the revenue books' years 2023-2026"),
+        "gap_reported_vs_audited": ("core/pipeline/build_gap_reported_vs_audited.py (declared 2026-11-06)",
+                                    "BNM 1996-2025, MOF 2015-2025 and PKKP FY2009-2024, where two of them print a year"),
         "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
                                   "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
@@ -689,6 +691,15 @@ class Tools:
                 "set late in the year (in the next Budget), so it reads closer to 100% than collection_rate_original. "
                 "80000 (non-revenue receipts) is refunds and transfers from agencies, not collection: read its note. "
                 "Differences between the book and the audit are kept as printed.")
+        if name == "gap_reported_vs_audited":
+            out["how_to_read"] = (
+                "One row per federal headline (revenue, operating spending before the transfer to the Development Fund, "
+                "gross development spending, the COVID-19 Fund, loan recoveries, net development spending) and year, as "
+                "printed by three institutions: PKKP (the Auditor-General's certified accounts), BNM (MSB 3.1) and MOF "
+                "(Tinjauan Fiskal, the edition of year+2). Each pair's difference is signed (first minus second): agree "
+                "within half the coarser printed unit (MOF prints whole RM million), differ_minor within 0.1%, differ "
+                "beyond. A difference is kept as published; the view does not decide who is right. mof_restated_in lists "
+                "what later MOF editions print differently.")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:

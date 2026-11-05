@@ -259,6 +259,25 @@ q("5", "Does the revenue book's 2024 total agree with the audited accounts to th
   {"name": "gap_revenue_estimate_vs_collected", "year": "2024"}, "row_field:breakdown_key=_total:book_vs_pkkp_actual_status",
   "differ")
 
+def mof_line(edition, line, year):
+    path = os.path.join(REPO, "sources", "mof-fiscal-outlook", "data", f"{edition}_public_finance_stats", "fact_headline.csv")
+    with open(path, newline="") as fh:
+        return next(Decimal(r["amount_rm_juta"]) * 1000000 for r in csv.DictReader(fh)
+                    if r["line"] == line and r["target_year"] == str(year) and r["basis"] == "official_actual")
+
+
+_rev20 = pk_rev("2020", "HASIL", "sebenar_rm")
+q("5", "By how much does MOF's 2020 federal revenue differ from the audited figure?", "get_gap_view",
+  {"name": "gap_reported_vs_audited", "year": "2020"},
+  "row_field:indicator_code=federal_gov.revenue.total:mof_minus_pkkp_rm", s(mof_line(2022, "revenue", 2020) - _rev20))
+q("5", "What was audited federal revenue in 2020 in the reported-vs-audited view?", "get_gap_view",
+  {"name": "gap_reported_vs_audited", "year": "2020"}, "row_field:indicator_code=federal_gov.revenue.total:pkkp_audited",
+  s(_rev20))
+q("5", "Do MOF and the audited accounts agree on 2022 operating spending?", "get_gap_view",
+  {"name": "gap_reported_vs_audited", "year": "2022"},
+  "row_field:indicator_code=federal_gov.expenditure.opex:mof_vs_pkkp_status", "agree")
+
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")
