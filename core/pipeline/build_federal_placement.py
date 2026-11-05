@@ -16,15 +16,24 @@ while scoping: 3-15%):
 * What is placed, and how (geo_method), in this order; nothing else:
   1. `stated_state`: a development project (PKKP Penyata Perbelanjaan Pembangunan, project leaf rows, its actual
      spending `sebenar_jumlah_rm`) whose printed name names exactly one state or Federal Territory.
-  2. `parsed_district`: a project whose name names no state but exactly one district of one state (DOSM 2020
-     districts in core/dim_geo.csv), matched as whole words; district names that are also common words or
+  2. `parsed_district`: a project whose name names no state but one or more districts, all of one state (DOSM
+     2020 districts in core/dim_geo.csv), matched as whole words; district names that are also common words or
      compass phrases are not used (STOP_DISTRICTS, declared below), nor a district inside a regional name
-     (Lembah Klang).
+     (Lembah Klang). [Amended 2026-11-05: "exactly one district" read "districts of one state", as the code
+     always did; verifier finding 7.]
+  2a. `parsed_place` [added 2026-11-05 after the blind verifier, finding 1-4]: no state named, but a town,
+     region, island or street, or an abbreviation of a state, listed with its proof in meta/place_gazetteer.csv
+     (Iskandar, Cyberjaya, Ipoh, Kangar, P.Pinang, ...). Place names that only describe where something is NOT
+     (`di luar Kuala Lumpur`, outside KL) are removed before matching.
   3. `grant_by_name`: a federal grant whose recipient is a named state government or territory administration
      (core/fact_money_flow.csv, geo_method `stated`); the class grants (all states, all local authorities)
      are never split (D27).
-  A project naming two or more states (or a state and another state's district) is `multiple_states` and is not
-  placed; a project naming none is `none`. Both stay `_unallocated` with their totals shown.
+  A project naming two or more states (or a state and another state's district or place) is `multiple_states`
+  and is not placed; a project naming the Peninsula and no state (`Semenanjung`: PKKP splits some programmes
+  into Peninsula / Sabah / Sarawak lines) is `peninsula` [added 2026-11-05, finding 5] and is not placed, so the
+  view reports it beside the Sabah and Sarawak lines that are; a project naming none is `none`. All stay
+  `_unallocated` with their totals shown. A year with no flows held (FY2009) reports grants by name as not held,
+  not zero [finding 6].
 * Not used, by design: an agency's seat (it would put ministries' headquarters spending in Putrajaya), any
   allocation key (population, staff counts, need): placing money by formula makes a map look more complete than
   the accounts are (D27, DATA_MODEL §13). Operating spending (salaries in schools and clinics, subsidies, cash
@@ -57,8 +66,11 @@ from warehouse import CORE, REPO, Warehouse, fmt  # noqa: E402
 META = os.path.join(REPO, "meta")
 YEARS = [str(y) for y in range(2009, 2025) if y != 2015]
 PLACED_MIN = Decimal("0.60")
+PLACED = ("stated_state", "parsed_district", "parsed_place")
 # declared with the method, before the first run: names of a place that do not say the project is there
-EXCLUDE_PHRASES = ["selat melaka", "lembah klang", "antarabangsa kuala lumpur", "klia"]
+EXCLUDE_PHRASES = ["selat melaka", "lembah klang", "antarabangsa kuala lumpur", "klia",
+                   # added 2026-11-05 (verifier finding 4): "outside Kuala Lumpur" names where a project is not
+                   "di luar kuala lumpur", "di luar kl"]
 # district names that are also common words or compass phrases (DOSM 2020 districts)
 STOP_DISTRICTS = {"pekan", "bau", "song", "sik", "yan", "pakan", "pusa", "gedong", "selama", "matu", "daro", "dalat",
                   "lingga", "betong", "bera", "barat daya", "timur laut", "kabong", "pantu", "bandar baharu"}
@@ -69,7 +81,7 @@ FIELDS_FACT = ["placement_id", "period_code", "entity_id", "maksud_code", "proje
                "geo_code", "geo_method", "geo_confidence", "geo_evidence", "basis", "edition_id", "file_id",
                "pdf_page", "printed_page", "l1_ref"]
 FIELDS_GAP = ["geo_code", "name", "year", "projects_stated_rm", "projects_parsed_rm", "grants_by_name_rm",
-              "placed_rm", "projects_multiple_states_rm", "projects_none_rm", "not_itemised_rm",
+              "placed_rm", "projects_multiple_states_rm", "projects_peninsula_rm", "projects_none_rm", "not_itemised_rm",
               "federal_total_rm", "devex_projects_total_rm", "placed_share", "publishable", "note",
               "caveats", "federal_source_obs_ids", "release_id"]
 
@@ -101,6 +113,8 @@ def matcher(w):
             n = norm(re.sub(r"^W\.P\. ", "", g["name_bm"]))
             if n not in STOP_DISTRICTS:
                 out.append((g["parent_geo_code"], n, "district"))
+    for r in rows(os.path.join(META, "place_gazetteer.csv")):
+        out.append((r["geo_code"], norm(r["phrase"]), "state" if r["kind"] == "alias" else "place"))
     return sorted(out, key=lambda t: -len(t[1]))
 
 
@@ -119,13 +133,18 @@ def place(name, pats):
             text = re.sub(rx, " ", text)
     states = {c for c, _, k in hits if k == "state"}
     dists = {c for c, _, k in hits if k == "district"}
+    places = {c for c, _, k in hits if k == "place"}
     ev = "; ".join(sorted(f"{k} '{p}'={c}" for c, p, k in hits))
-    if len(states | dists) > 1:
+    if len(states | dists | places) > 1:
         return "_unallocated", "multiple_states", ev
     if states:
         return states.pop(), "stated_state", ev
     if dists:
         return dists.pop(), "parsed_district", ev
+    if places:
+        return places.pop(), "parsed_place", ev
+    if re.search(r"(?<!\w)semenanjung(?!\w)", text):
+        return "_unallocated", "peninsula", "region 'semenanjung'"
     return "_unallocated", "none", ""
 
 
@@ -160,7 +179,8 @@ def main():
                              entity_id=entity(r["maksud_code"], int(y)), maksud_code=r["maksud_code"],
                              projek_code=r["projek_code"], name_bm=r["name_bm"], amount=r["sebenar_jumlah_rm"] or "0",
                              geo_code=geo, geo_method=method,
-                             geo_confidence={"stated_state": "medium", "parsed_district": "low"}.get(method, "none"),
+                             geo_confidence={"stated_state": "medium", "parsed_district": "low",
+                                             "parsed_place": "low"}.get(method, "none"),
                              geo_evidence=ev, basis="audited", edition_id=f"pkkp:{r['source_file']}",
                              file_id=sha.get(r["source_file"], ""), pdf_page=r["pdf_page"],
                              printed_page=r["printed_page"], l1_ref=ref))
@@ -174,9 +194,9 @@ def main():
                                  "1412 project rows in its own validation; the difference is not itemised and not placed)"
                                  if bad1 else ""))
     # P2/P3
-    methods = {"stated_state", "parsed_district", "multiple_states", "none"}
+    methods = {"stated_state", "parsed_district", "parsed_place", "multiple_states", "peninsula", "none"}
     bad2 = [f["l1_ref"] for f in fact if f["geo_method"] not in methods or
-            (f["geo_method"] in ("stated_state", "parsed_district")) != f["geo_code"].startswith("MY-")]
+            (f["geo_method"] in PLACED) != f["geo_code"].startswith("MY-")]
     add("P2 every project row is placed by exactly one method", "core/fact_placement.csv",
         "PASS" if not bad2 else "FAIL", f"{len(fact)} rows" + (f"; {bad2[:5]}" if bad2 else ""))
     bad3 = [f["l1_ref"] for f in fact if f["geo_method"] != "none" and not f["geo_evidence"]]
@@ -189,6 +209,7 @@ def main():
         if f["geo_method"] == "stated" and f["geo_code"].startswith("MY-") and f["period_code"] in YEARS:
             grants[(f["geo_code"], f["period_code"])] += Decimal(f["amount"])
     n_stated = sum(1 for f in flows if f["geo_method"] == "stated" and f["period_code"] in YEARS)
+    flow_years = {f["period_code"] for f in flows}
 
     states = sorted(c for c, g in w.geo.items() if g["geo_level"] == "state")
     fed = {}
@@ -205,45 +226,50 @@ def main():
         for f in fy:
             by[f["geo_code"]][f["geo_method"]] += Decimal(f["amount"])
         total, ids = fed.get(y, (None, ""))
-        placed_all = sum(by[g]["stated_state"] + by[g]["parsed_district"] + grants[(g, y)] for g in states)
+        placed_all = sum(sum(by[g][m] for m in PLACED) + grants[(g, y)] for g in states)
         share = (placed_all / total) if total else None
         pub = share is not None and share >= PLACED_MIN
-        note = "" if pub else (f"amounts by state not published: only {float(share):.1%} of federal spending in {y} can be "
-                               "placed by state (projects whose name names one place, and grants to a named state "
-                               "government or territory administration); salaries, subsidies, cash transfers and "
-                               f"most projects have no place in the federal accounts. Guard: 60%." if share is not None
+        note = "" if pub else (f"amounts by state are kept here for verification and withheld by the tools and from "
+                               f"publication: only {float(share):.1%} of federal spending in {y} can be placed by state "
+                               "(projects whose name names one place, and grants to a named state government or "
+                               "territory administration), so a state's amount is a floor of what the federal accounts "
+                               "place there, not what it received; salaries, subsidies, cash transfers and most projects "
+                               "have no place in the federal accounts. Guard: 60%." if share is not None
                                else "federal total not held")
+        if y not in flow_years:
+            note += f" Grants by name: no flows held for FY{y} (not zero)."
         nonitem = printed_total[y] - leaf_total[y] if y in bad1 else Decimal(0)
         yr_rows = []
         for g in states + ["_unallocated", "MY"]:
             if g in states:
-                st, pa, gr = by[g]["stated_state"], by[g]["parsed_district"], grants[(g, y)]
-                multi = none = ni = Decimal(0)
+                st, pa, gr = by[g]["stated_state"], by[g]["parsed_district"] + by[g]["parsed_place"], grants[(g, y)]
+                multi = pen = none = ni = Decimal(0)
             elif g == "_unallocated":
                 st = pa = gr = Decimal(0)
-                multi, none, ni = by[g]["multiple_states"], by[g]["none"], nonitem
+                multi, pen, none, ni = by[g]["multiple_states"], by[g]["peninsula"], by[g]["none"], nonitem
             else:
                 st = sum(by[s]["stated_state"] for s in states)
-                pa = sum(by[s]["parsed_district"] for s in states)
+                pa = sum(by[s]["parsed_district"] + by[s]["parsed_place"] for s in states)
                 gr = sum(grants[(s, y)] for s in states)
-                multi, none, ni = by["_unallocated"]["multiple_states"], by["_unallocated"]["none"], nonitem
+                u = by["_unallocated"]
+                multi, pen, none, ni = u["multiple_states"], u["peninsula"], u["none"], nonitem
             yr_rows.append(dict(geo_code=g, name=w.geo.get(g, {}).get("name_bm", "") if g != "_unallocated" else
                                 "not placed", year=y, projects_stated_rm=fmt(st), projects_parsed_rm=fmt(pa),
-                                grants_by_name_rm=fmt(gr), placed_rm=fmt(st + pa + gr),
-                                projects_multiple_states_rm=fmt(multi), projects_none_rm=fmt(none),
+                                grants_by_name_rm=fmt(gr) if y in flow_years else "", placed_rm=fmt(st + pa + gr),
+                                projects_multiple_states_rm=fmt(multi), projects_peninsula_rm=fmt(pen),
+                                projects_none_rm=fmt(none),
                                 not_itemised_rm=fmt(ni), federal_total_rm=fmt(total) if total else "",
                                 devex_projects_total_rm=fmt(leaf_total[y]),
                                 placed_share=fmt(share, 4) if share is not None else "", publishable=str(pub).lower(),
                                 note=note, caveats="CV27", federal_source_obs_ids=ids, release_id=w.release_id))
         # P5: 16 places + not placed (projects) = the MY row's project total
-        s_proj = sum(by[g]["stated_state"] + by[g]["parsed_district"] for g in states) + \
-            by["_unallocated"]["multiple_states"] + by["_unallocated"]["none"]
+        s_proj = sum(sum(by[g][m] for m in PLACED) for g in states) + sum(by["_unallocated"].values())
         if abs(s_proj - leaf_total[y]) > Decimal("0.01"):
             bad5.append(y)
         if share is not None and not (0 <= share <= 1):
             bad6.append(y)
         gap += yr_rows
-    g_sum = sum(Decimal(r["grants_by_name_rm"]) for r in gap if r["geo_code"] in states)
+    g_sum = sum(Decimal(r["grants_by_name_rm"] or "0") for r in gap if r["geo_code"] in states)
     g_ref = sum(Decimal(f["amount"]) for f in flows if f["geo_method"] == "stated" and f["period_code"] in YEARS)
     add("P4 grants by name equal fact_money_flow's stated flows", "core/fact_money_flow.csv",
         "PASS" if g_sum == g_ref else "FAIL", f"{n_stated} flows, {fmt(g_ref)}" + ("" if g_sum == g_ref else f" vs {fmt(g_sum)}"))

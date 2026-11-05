@@ -577,12 +577,14 @@ class Tools:
     }
     PLACEMENT_NOTE = (
         "How much federal spending (PKKP audited) can be placed in a state from the federal accounts themselves: "
-        "development projects whose name names one state (stated_state) or one district (parsed_district), and "
+        "development projects whose name names one state (stated_state), districts of one state (parsed_district) or "
+        "a listed town or region (parsed_place), and "
         "grants to a named state government or territory administration. placed_share is that money in all states "
         "over the year's federal total; it is under 4% in every year held, so the amounts by state are withheld (the "
         "60% guard: a map must not look more complete than the accounts). The MY row gives the national amounts by "
-        "method, the _unallocated row what could not be placed (projects naming several states, naming none, and "
-        "FY2009's printed total not itemised). Nothing is split by population or any other formula.")
+        "method, the _unallocated row what could not be placed (projects naming several states, only the Peninsula, "
+        "or none, and FY2009's printed total not itemised). Sabah and Sarawak lines are printed separately while "
+        "the Peninsula's cannot be placed, which favours them in any comparison (CV27). Nothing is split by population or any other formula.")
     FED_VS_STATE_NOTE = (
         "Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts "
         "record received. The capitation and Concurrent List grants are paid to the states as a class and not split "
