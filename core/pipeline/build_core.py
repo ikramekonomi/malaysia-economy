@@ -592,32 +592,61 @@ def build_states(obs):
                 l1_ref=f"sources/states/data/_national/fact_state_finance_all.csv#row{i}")
 
 
-FEDERAL = {"revenue_rm": ("federal_gov.revenue.total", "revenue_source_file", None, None),
-           "opex_net_rm": ("federal_gov.expenditure.opex", "opex_source_file", "opex_pdf_page", "opex_printed_page"),
-           "devex_gross_rm": ("federal_gov.expenditure.devex", None, None, None),
-           "covid_fund_rm": ("federal_gov.expenditure.covid_fund", "covid_fund_source_file", "covid_fund_pdf_page",
-                             "covid_fund_printed_page")}
+PERF_LINES = {"revenue": "federal_gov.revenue.total", "opex": "federal_gov.expenditure.opex",
+              "devex": "federal_gov.expenditure.devex", "covid_fund_exp": "federal_gov.expenditure.covid_fund"}
+TRANSFER_LINE = "Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan"
 
 
 def build_federal(obs):
-    """Federal spending totals, audited (PKKP). Phase 1 reads them from curated/fact_fiscal_headline.csv, which
-    cites the PKKP volume and page; Phase 3 moves them to PKKP entity observations."""
-    import hashlib
-    path = os.path.join(REPO, "curated", "fact_fiscal_headline.csv")
-    sha = hashlib.sha256(open(path, "rb").read()).hexdigest()
-    for i, r in enumerate(rows(path), start=2):
-        for col, (ind, f_col, p_col, pp_col) in FEDERAL.items():
-            v = dec(r.get(col))
-            if v is None:
+    """Federal totals, audited, straight from each year's own PKKP volume (Phase 3; until 2026-11-05 they were
+    read through curated/fact_fiscal_headline.csv, caveat CV16).
+
+      FY2010-2024  Penyata Prestasi Kewangan (fact_financial_performance, basis sebenar, own volume): revenue,
+                   operating expenditure (Belanja Mengurus, before the transfer to the Development Fund),
+                   development expenditure (gross) and the COVID-19 Fund; printed in whole ringgit
+      FY2009       the older presentation: Akaun Hasil Disatukan (fact_revenue_account_statement) 'Jumlah
+                   Hasil' and 'Perbelanjaan Mengurus (Tanpa Pindahan)', and the development grand total
+                   (fact_devex_maksud, JUMLAH PERBELANJAAN PEMBANGUNAN)
+      every year   the transfer to the Development Fund (Akaun Hasil Disatukan, 'Pindahan Lebihan Hasil ke
+                   Kumpulan Wang Pembangunan'), paid under a supply vote, so that votes = opex + transfer (C16)
+    Only the own volume's figure for its own year (golden rule 6); comparatives printed in later volumes stay
+    in L1."""
+    import glob
+    sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+
+    def put(ind, r, col, rel, i, unit_printed, prec, table):
+        v = dec(r[col])
+        if v is None:
+            return
+        obs.add(indicator_code=ind, geo_code="MY", period_code=r["year"], entity_id=entity("federal_gov", "MY", r["year"]),
+                basis="audited", edition_id=f"pkkp:{r['source_file']}", vintage=r["year"], value=v,
+                value_printed=r[col], unit_printed=unit_printed, precision_printed=prec, estimate_method="accounting",
+                reliability="ok", file_id=sha.get(r["source_file"], ""), pdf_page=r["pdf_page"],
+                printed_page=r["printed_page"], table_ref=table, l1_ref=f"{rel}#row{i}")
+
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_financial_performance.csv"))):
+        rel = os.path.relpath(path, REPO)
+        for i, r in enumerate(rows(path), start=2):
+            if r["basis"] == "sebenar" and r["line_code"] in PERF_LINES and r["source_file"].startswith(r["year"]):
+                put(PERF_LINES[r["line_code"]], r, "amount_rm", rel, i, "RM", "1",
+                    f"{r['statement']} ({r['line_item_bm']})")
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_revenue_account_statement.csv"))):
+        rel = os.path.relpath(path, REPO)
+        for i, r in enumerate(rows(path), start=2):
+            if not r["source_file"].startswith(r["year"]):
                 continue
-            src = r.get(f_col, "") if f_col else ""
-            obs.add(indicator_code=ind, geo_code="MY", period_code=r["year"], entity_id=entity("federal_gov", "MY", r["year"]),
-                    basis="audited", edition_id=f"pkkp:{src or 'FY' + r['year']}", vintage=r["year"], value=v,
-                    value_printed=r[col], unit_printed="RM", estimate_method="accounting", reliability="ok",
-                    file_id=sha, pdf_page=r.get(p_col, "") if p_col else "",
-                    printed_page=r.get(pp_col, "") if pp_col else "",
-                    table_ref=(src + (f" ({r.get(col.replace('_rm', '_basis'), '')})" if not f_col else "")),
-                    l1_ref=f"curated/fact_fiscal_headline.csv#row{i}")
+            if r["line_item_bm"] == TRANSFER_LINE:
+                put("federal_gov.expenditure.transfer_development_fund", r, "sebenar_rm", rel, i, "RM", "0.01",
+                    f"{r['statement']} ({r['line_item_bm']})")
+            elif r["year"] == "2009" and r["row_type"] == "subtotal" and r["line_item_bm"] in (
+                    "Jumlah Hasil", "Perbelanjaan Mengurus (Tanpa Pindahan)"):
+                ind = "federal_gov.revenue.total" if r["line_item_bm"] == "Jumlah Hasil" else "federal_gov.expenditure.opex"
+                put(ind, r, "sebenar_rm", rel, i, "RM", "0.01", f"{r['statement']} ({r['line_item_bm']})")
+    path = os.path.join(PKKP, "2009", "fact_devex_maksud.csv")
+    for i, r in enumerate(rows(path), start=2):
+        if r["maksud_code"] == "TOTAL" and r["year"] == "2009":
+            put("federal_gov.expenditure.devex", r, "sebenar_jumlah_rm", os.path.relpath(path, REPO), i, "RM", "0.01",
+                f"{r['statement']} ({r['jumlah_label_bm']})")
 
 
 BNM_FED = {"cur_bud_rev": "federal_gov.revenue.total", "cur_bud_exp": "federal_gov.expenditure.opex",
@@ -978,23 +1007,28 @@ def checks(obs, geo, per, ind, brk, editions):
         + (f"; unregistered {stray}" if stray else ""))
     # C16 the votes add up to the audited totals printed in the same PKKP volume (operating: supply votes plus
     # charged heads; development: development votes plus the reserve)
-    # the printed lines: operating 'Jumlah Perbelanjaan Mengurus (selepas pindahan)' - after the transfer to the
-    # Development Fund, which is itself paid under a vote - and the development grand total
+    # the printed lines, all in core: operating votes = opex (before the transfer) + the transfer to the
+    # Development Fund (itself paid under a vote); development votes = the development total
+    aud = {(r["indicator_code"], r["period_code"]): Decimal(r["value"]) for r in obs.rows
+           if r["basis"] == "audited" and r["edition_id"].startswith("pkkp:") and r["indicator_code"] in (
+               "federal_gov.expenditure.opex", "federal_gov.expenditure.devex",
+               "federal_gov.expenditure.transfer_development_fund")}
     tot = {}
-    for r in rows(os.path.join(REPO, "curated", "fact_fiscal_headline.csv")):
-        for col, ind in (("opex_gross_rm", "federal_gov.expenditure.opex"), ("devex_gross_rm", "federal_gov.expenditure.devex")):
-            if dec(r[col]) is not None:
-                tot[(ind, r["year"])] = dec(r[col])
+    for (ind, y), v in aud.items():
+        if ind == "federal_gov.expenditure.opex" and ("federal_gov.expenditure.transfer_development_fund", y) in aud:
+            tot[(ind, y)] = v + aud[("federal_gov.expenditure.transfer_development_fund", y)]
+        elif ind == "federal_gov.expenditure.devex":
+            tot[(ind, y)] = v
     vs = defaultdict(Decimal)
     for r in obs.rows:
         if r["indicator_code"].startswith("federal_gov.vote.") and r["basis"] == "audited":
             vs[(r["indicator_code"].replace(".vote.", ".expenditure."), r["period_code"])] += Decimal(r["value"])
     off = sorted(f"{k[0].split('.')[-1]} {k[1]}: votes {fmt(vs[k])} vs printed {fmt(tot[k])}"
-                 for k in vs if k in tot and abs(vs[k] - tot[k]) > 1)
+                 for k in vs if k in tot and abs(vs[k] - tot[k]) > 2)
     known = [o for o in off if o.startswith("devex 2009")]
-    add("C16 PKKP votes add up to the printed audited totals (opex, devex; within RM1)", "federal_gov.vote.*",
+    add("C16 PKKP votes add up to the printed audited totals (opex + transfer, devex; within RM2: the statement prints whole ringgit)", "federal_gov.vote.*",
         "PASS" if not off else "INFO" if off == known else "FAIL",
-        f"{len(vs)} year-totals" + (f"; differ: {off}" if off else ", all within RM1")
+        f"{len(vs)} year-totals" + (f"; differ: {off}" if off else ", all within RM2")
         + ("; FY2009 devex: printed vote totals vs the printed grand total, diagnosed in "
            "curated/_known_extraction_defects_curated.csv (caveat CV21)" if known else ""))
     add("C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)", "fact_observation",

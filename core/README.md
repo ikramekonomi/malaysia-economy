@@ -111,10 +111,12 @@ employers' EPF and SOCSO contributions.
 
 **Phase 2's finish line** is that core reproduces today's curated tables to the last printed digit.
 `qa/reproduce_curated.py` (in CI) rebuilds each curated cell through the agent tools, never from the
-curated file, and writes `qa/_validation_reproduce.csv`. So far, 230 of 230 cells:
-`curated/fact_labour_indicators.csv` (32) and the BNM and MOF columns of `curated/fact_fiscal_headline.csv`
-(198, to the sen). The PKKP columns of that table are not claimed: core still reads them from it (Phase 3
-moves them to PKKP observations), so that comparison would be circular.
+curated file, and writes `qa/_validation_reproduce.csv`. Now 1,574 cells reproduced and 8
+explained, 0 FAIL: `curated/fact_labour_indicators.csv` (32), the BNM and MOF columns of
+`curated/fact_fiscal_headline.csv` (198, to the sen), its PKKP columns (80; since Phase 3.3 core reads them
+from each year's own volume, independently of curated: equal within the printed whole ringgit, FY2009 opex
+and transfer equal to the ringgit because curated reads them from the FY2010 volume's whole-ringgit
+comparative column, EXPLAINED) and `curated/fact_ministry_fiscal.csv` (1,267; 6 FY2009 rows EXPLAINED).
 
 **Federal totals from three publishers.** Revenue, operating spending, gross and net development
 spending, loan recoveries, the COVID-19 Fund and the overall balance are held as each institution
@@ -124,10 +126,11 @@ same indicator, told apart by `basis` and edition. `get_series` returns all of t
 (`publisher='pkkp' | 'bnm' | 'mof'`), and `Warehouse.get` never chooses between publishers silently;
 `derive('growth')` refuses to mix two publishers. FY2015–2024 operating and development spending agree to
 within RM0.5 million, except 2023 development spending (BNM RM1.25 million and MOF RM1.26 million above the
-audited figure, in `qa/known_fails.csv`). PKKP's figures still come through `curated/fact_fiscal_headline.csv`
-and carry caveat CV16: their citation is that table, development spending has no page yet, and operating
-spending FY2009–2023 is the comparative printed in the following year's volume (the same amount to the
-ringgit). Phase 3 cites each year's own volume and page. MOF's COVID-19 Fund for 2018–2019 is not loaded
+audited figure, in `qa/known_fails.csv`). Since Phase 3.3 (2026-11-05) PKKP's figures are read from each
+year's own volume: Penyata Prestasi Kewangan (`fact_financial_performance`, FY2010-2024, whole ringgit) and,
+for FY2009, Akaun Hasil Disatukan and the development grand total, each cited to its page; caveat CV16 is
+retired. The transfer to the Development Fund is its own indicator
+(`federal_gov.expenditure.transfer_development_fund`), so operating votes = opex + transfer (check C16). MOF's COVID-19 Fund for 2018–2019 is not loaded
 because the own-volume edition for those years prints no such line.
 
 ## National monthly series: CPI, trade, money and credit (Phase 2, 2026-11-05)

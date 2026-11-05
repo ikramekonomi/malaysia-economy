@@ -433,8 +433,23 @@ q("1", "Johor's population, asked with a list for the place?", "get_series",
   {"indicator": "pop.total", "geo": ["MY-01"], "start": "2022", "end": "2022"}, "not_held", kind="trap_missing")
 q("5", "How many publishers report federal revenue for 2022?", "get_series",
   series("federal_gov.revenue.total", "MY", "2022"), "row_count", "3")
-q("5", "Does PKKP's audited 2022 operating spending say where its citation comes from?", "get_series",
-  fed("federal_gov.expenditure.opex", "2022", "pkkp"), "caveat", "CV16")
+def perf(year, line, col):
+    for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", str(year),
+                                              "fact_financial_performance.csv"))):
+        if r["line_code"] == line and r["basis"] == "sebenar" and r["source_file"].startswith(str(year)):
+            return r[col]
+    raise LookupError(f"fact_financial_performance {year} {line}")
+
+
+q("5", "On which PDF page of its own volume is PKKP's audited 2022 operating spending printed?", "get_series",
+  fed("federal_gov.expenditure.opex", "2022", "pkkp"), "field:pdf_page", perf(2022, "opex", "pdf_page"))
+q("5", "What was PKKP's audited 2022 operating spending (Penyata Prestasi Kewangan, own volume)?", "get_series",
+  fed("federal_gov.expenditure.opex", "2022", "pkkp"), "value", s(Decimal(perf(2022, "opex", "amount_rm"))))
+q("5", "How much revenue surplus was transferred to the Development Fund in 2024?", "get_series",
+  {**series("federal_gov.expenditure.transfer_development_fund", "MY", "2024"), "publisher": "pkkp"}, "value",
+  s(Decimal(next(r["sebenar_rm"] for r in csv.DictReader(open(os.path.join(REPO, "sources", "pkkp", "data", "2024",
+     "fact_revenue_account_statement.csv"))) if r["line_item_bm"] == "Pindahan Lebihan Hasil ke Kumpulan Wang Pembangunan"
+     and r["source_file"].startswith("2024")))))
 
 q("5", "Does PKKP's 2020 revenue say its PDF is not archived (decision D24)?", "get_series",
   fed("federal_gov.revenue.total", "2020", "pkkp"), "caveat", "CV17", kind="trap_missing")

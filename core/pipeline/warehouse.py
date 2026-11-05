@@ -149,8 +149,6 @@ class Warehouse:
         if "leaf_total_mismatch" in flags:
             out.append("CV21")
         if r["edition_id"].startswith("pkkp:") and ind.startswith("federal_gov."):
-            if r["l1_ref"].startswith("curated/") and r["basis"] == "audited":
-                out.append("CV16")
             src = r["edition_id"].split(":", 1)[1]
             if not src.lower().endswith(".pdf"):  # no volume cited: the year's own volume
                 src = next((f for f in self.l0_status if f.startswith(f"{r['period_code']}_") and
