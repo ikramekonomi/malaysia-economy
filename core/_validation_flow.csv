@@ -1,8 +1,12 @@
 check,scope,status,detail
-F1 every T.12 programme 010000 activity has a recipient rule (meta/flow_rule.csv),fact_money_flow,PASS,140 flows
+F1 every T.12 programme 010000 activity has a recipient rule (meta/flow_rule.csv),fact_money_flow,PASS,140 T.12 flows
 F2 the printed activity name matches its rule (the code has not moved),fact_money_flow,PASS,ok
 "F3 a year's flows equal T.12 programme 010000's printed JUMLAH, to the sen",fact_money_flow,PASS,14 years
 F4 every flow's entities are registered (core/dim_entity.csv),fact_money_flow,PASS,ok
 F5 the grants stay inside the T.12 head's audited total in core,fact_money_flow,PASS,"14 years, grants <= T.12 head every year"
 "F7 each activity prints one object line, equal to its JUMLAH (so the JUMLAH is the leaf)",fact_money_flow,PASS,"140 activities, all single-leaf"
+"F8 a name rule (B.11, B.06) matches at most one activity a year, and an activity at most one rule",fact_money_flow,PASS,96 B.11 flows
+"F9 each name-matched grant prints exactly one 40000 (Pemberian dan Kenaan Bayaran Tetap) line, the flow's amount",fact_money_flow,PASS,"96 activities; other object lines left out: [""FY2017 B.11 020700 [('20000', '1023900.0')] (not paid to the recipient; not in the flow)"", ""FY2017 B.11 020800 [('20000', '871808.37')] (not paid to the recipient; not in the flow)""]"
+"F10 years in which a name-matched grant is not found under its rules' votes (INFO: it may be printed under another vote, see F11)",fact_money_flow,INFO,special grant to the Federal Territories: ['2018']; road maintenance grant to the Federal Territories: ['2018']
+F11 grants to governments seen in L1 and NOT loaded (declared),fact_money_flow,INFO,"interest subsidy on Syarikat Kemajuan Perumahan Borneo (Sabah) loans (paid on a company's loans, not to a government); the World Bank Group / IsDB offices in Kuala Lumpur (not a state); FY2018: the Federal Territories' grants are not found in B.11 or B.06 - B.32 040400 'Penyelenggaraan dan Kemudahan Awam' prints RM65,000,000.00 that year only, about their combined size, but its name does not say so (not loaded until a page or budget book proves it); grants by name to Perbadanan Putrajaya, Perbadanan Labuan and Dewan Bandaraya Kuala Lumpur (B.32, later B.06) and B.43's local-government lines: not loaded yet (they need those bodies as entities)"
 F6 years not loaded (declared),fact_money_flow,INFO,"FY2009: no activity tier in the FY2009 presentation; FY2015: image-only scan: activity codes misaligned, leaf amounts OCR-provisional"
