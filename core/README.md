@@ -11,7 +11,7 @@ python3 core/pipeline/build_entities.py           # dim_entity + bridge_entity_c
 python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
 python3 core/pipeline/build_flows.py              # fact_money_flow.csv + _validation_flow.csv (Phase 3)
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
-python3 qa/run_eval.py                            # 193 questions against the agent tools
+python3 qa/run_eval.py                            # 197 questions against the agent tools
 python3 qa/reproduce_curated.py                   # curated tables rebuilt from core, digit for digit
 ```
 
@@ -275,8 +275,13 @@ show it (D27). First slice: the federal grants and assignments to the states, Ta
 * **Tool** `get_flows(to, frm, start, end)`: `to='MY-12'` returns Sabah's named grants and, beside them, the
   class grants of those years (`not_split_by_state`); a state with no named grant gets the class grants and
   an answer saying so. Caveat CV25.
-* **Not yet:** what each state records receiving (state accounts) matched to these flows; B.11 grants and
-  development grants to the states.
+* **A floor, not the whole:** the grants under supply vote B.11 (RM240 million a year of petroleum duty payments
+  to Sabah and Sarawak, the Concurrent List grants, street lighting and slope maintenance, the grants to the
+  Federal Territories) and development grants are not loaded yet; every `get_flows` answer says so (`coverage`),
+  lists the years in range that are not held, and tells the agent not to add up a state's named grants as what
+  it received. Blind verifier: `qa/audits/2026-11-05_phase3_flows_verifier.md` (140 of 140 re-derived).
+* **Not yet:** what each state records receiving (state accounts) matched to these flows; the B.11 grants
+  (year-aware rules: their activity codes renumber) and development grants.
 
 ## gap_need_vs_money (state level)
 

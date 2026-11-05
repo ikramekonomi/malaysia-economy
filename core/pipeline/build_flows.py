@@ -63,6 +63,7 @@ def main():
     sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
     out, checks, stop = [], [], []
     printed_total, unknown, badname = {}, [], []
+    leaves = defaultdict(list)
 
     for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_opex_detail.csv"))):
         rel = os.path.relpath(path, REPO)
@@ -74,6 +75,9 @@ def main():
                 continue
             if r["row_type"] == "jumlah_program":
                 printed_total[y] = (Decimal(r["sebenar_rm"]), f"{rel}#row{i}")
+                continue
+            if r["row_type"] == "object_aktiviti":
+                leaves[(y, r["aktiviti_code"])].append(Decimal(r["sebenar_rm"] or "0"))
                 continue
             if r["row_type"] != "jumlah_aktiviti":
                 continue
@@ -91,7 +95,7 @@ def main():
                 flow_type="grant", period_code=y, amount=str(Decimal(r["sebenar_rm"])),
                 amount_printed=r["sebenar_rm"], unit_printed="RM",
                 economic_class="40000 Pemberian dan Kenaan Bayaran Tetap",
-                purpose=f"{r['maksud_code']} {r['aktiviti_code']}: {rule['purpose_en']}",
+                purpose=f"{r['maksud_code']} {r['aktiviti_code']}: {rule['purpose_en']}; printed: {r['aktiviti_name_bm'].strip()}",
                 geo_code=rule["geo_code"] or "_unallocated", geo_method=rule["geo_method"],
                 geo_confidence="high" if rule["geo_method"] == "stated" else "none", is_leaf="true",
                 basis="audited", status="final", edition_id=f"pkkp:{r['source_file']}",
@@ -125,6 +129,11 @@ def main():
     add("F5 the grants stay inside the T.12 head's audited total in core", "fact_money_flow",
         "PASS" if not over else "FAIL",
         f"{len(by_year)} years" + (f"; above the head: {over}" if over else ", grants <= T.12 head every year"))
+    jumlah = {(f["period_code"], f["purpose"].split()[1].rstrip(":")): Decimal(f["amount"]) for f in out}
+    notleaf = [f"FY{y} {a}: {len(leaves[(y, a)])} leaf rows sum {sum(leaves[(y, a)])} vs JUMLAH {v}"
+               for (y, a), v in sorted(jumlah.items()) if len(leaves[(y, a)]) != 1 or leaves[(y, a)][0] != v]
+    add("F7 each activity prints one object line, equal to its JUMLAH (so the JUMLAH is the leaf)", "fact_money_flow",
+        "PASS" if not notleaf else "FAIL", f"{len(jumlah)} activities" + (f"; {notleaf}" if notleaf else ", all single-leaf"))
     add("F6 years not loaded (declared)", "fact_money_flow", "INFO",
         "; ".join(f"FY{y}: {why}" for y, why in SKIP_YEARS.items()))
 

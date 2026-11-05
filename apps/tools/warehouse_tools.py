@@ -375,16 +375,31 @@ class Tools:
             res["answer"] = (f"{code} named {len(out)} different bodies over time; give the year to pick one")
         return res
 
+    FLOW_COVERAGE = ("held: the federal grants and assignments to the states paid under Tanggungan T.12 (PKKP, audited), "
+                     "FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail). NOT yet loaded: the "
+                     "grants paid under supply vote B.11 (among them RM240 million a year of petroleum duty payments to "
+                     "Sabah and Sarawak, the Concurrent List grants of RM349-859 million a year, street-lighting grants "
+                     "to local authorities, slope maintenance, and grants to the Federal Territories) and development "
+                     "grants. So the flows here are a floor, not what a state received.")
+
     def get_flows(self, to=None, frm=None, start=None, end=None):
-        """Money the payer's accounts show moving to a recipient (fact_money_flow): so far the federal grants to the
-        states and local authorities (PKKP T.12, audited, FY2010-2024 except FY2015). to / frm: a state (MY-12),
-        MY (the federal government), an entity_id, or 'state_governments' / 'local_authorities' (the class
-        recipients). Asking for one state also returns the class grants of those years, which the federal
-        accounts do not split by state (they are part of what every state receives but cannot be placed)."""
-        bad = self._bad_input(to=to, frm=frm, start=start, end=end)
-        if bad:
-            return {**bad, "release_id": self.w.release_id}
-        start, end = (None if start is None else str(start)), (None if end is None else str(end))
+        """Money the payer's accounts show moving to a recipient (fact_money_flow). to / frm: a state (MY-12), MY
+        (the federal government), an entity_id, or 'state_governments' / 'local_authorities' (class recipients);
+        start / end: whole years (2020). 'flows' are the grants to the recipient BY NAME; for a state,
+        'not_split_by_state' lists the class grants of those years, which every state shares in but the federal
+        accounts do not divide. Read 'coverage' before adding anything up: the slice held is a floor."""
+        for k, v in (("to", to), ("frm", frm)):
+            if v is not None and not isinstance(v, str):
+                return {"held": False, "answer": f"{k} must be a code string (MY-12, MY, E000013, state_governments, "
+                        f"local_authorities), not {type(v).__name__}", "release_id": self.w.release_id}
+        for k, v in (("start", start), ("end", end)):
+            if v is not None and not (isinstance(v, int) and not isinstance(v, bool) or
+                                      isinstance(v, str) and re.fullmatch(r"\d{4}", v.strip())):
+                return {"held": False, "answer": f"{k} must be a whole year such as 2020 (flows are annual), got {v!r}",
+                        "release_id": self.w.release_id}
+        start, end = (None if start is None else str(start).strip()), (None if end is None else str(end).strip())
+        if start and end and start > end:
+            return {"held": False, "answer": f"start {start} is after end {end}", "release_id": self.w.release_id}
 
         def ids(x):
             if x is None:
@@ -394,42 +409,59 @@ class Tools:
                 return {c["entity_id"] for c in self.w.entity_codes if c["code_system"] == "group" and c["code"] == x.lower()}
             r = self.get_entity(x)
             return {e["entity_id"] for e in r["entities"]} if r.get("held") else set()
+        for k, v in (("to", to), ("frm", frm)):
+            if v is not None and re.fullmatch(r"MY-1[456]", str(v).strip().upper()):
+                return {"held": False, "answer": f"{str(v).strip().upper()} is a Federal Territory: it has no state "
+                        "government and receives no T.12 grant; the federal grants to the Federal Territories are paid "
+                        "under B.11, which is not loaded yet", "coverage": self.FLOW_COVERAGE,
+                        "release_id": self.w.release_id}
         to_ids, frm_ids = ids(to), ids(frm)
         if (to is not None and not to_ids) or (frm is not None and not frm_ids):
-            return {"held": False, "answer": f"unknown recipient or payer: {to if to is not None and not to_ids else frm}",
+            return {"held": False, "answer": f"unknown recipient or payer: {to if to is not None and not to_ids else frm} "
+                    "(use MY-01 ... MY-13, MY, an entity_id, state_governments or local_authorities)",
                     "release_id": self.w.release_id}
-        rs = [f for f in self.w.flows if (to_ids is None or f["to_entity_id"] in to_ids)
-              and (frm_ids is None or f["from_entity_id"] in frm_ids) and self._period_in(f["period_code"], start, end)]
+
+        def keep(f, want_to=True):
+            return ((not want_to or to_ids is None or f["to_entity_id"] in to_ids)
+                    and (frm_ids is None or f["from_entity_id"] in frm_ids) and self._period_in(f["period_code"], start, end))
+        rs = [f for f in self.w.flows if keep(f)]
+        loaded = sorted({f["period_code"] for f in self.w.flows})
+        lo, hi = start or loaded[0], end or loaded[-1]
+        missing = [str(y) for y in range(int(lo), int(hi) + 1) if str(y) not in loaded]
 
         def cite(f):
+            cv = ["CV25"] + (["CV17"] if not f["file_id"] else [])
             return {"flow_id": f["flow_id"], "from": f["from_entity_id"],
                     "from_name": self.w.entity.get(f["from_entity_id"], {}).get("name_bm", ""),
                     "to": f["to_entity_id"], "to_name": self.w.entity.get(f["to_entity_id"], {}).get("name_bm", ""),
                     "flow_type": f["flow_type"], "period_code": f["period_code"], "amount": f["amount"], "unit": "RM",
                     "amount_printed": f["amount_printed"], "basis": f["basis"], "geo_code": f["geo_code"],
-                    "geo_method": f["geo_method"], "purpose": f["purpose"],
+                    "geo_method": f["geo_method"], "purpose": f["purpose"], "caveat_ids": cv,
                     "citation": {"edition_id": f["edition_id"], "file_sha256": f["file_id"],
                                  "pdf_page": f["pdf_page"] or None, "printed_page": f["printed_page"] or None,
                                  "table": f["table_ref"], "l1_row": f["l1_ref"]}}
         states = {e for e in (to_ids or set()) if self.w.entity.get(e, {}).get("gfs_sector") == "state_gov"
                   and self.w.entity[e]["entity_type"] == "government"}
-        held_years = sorted({f["period_code"] for f in self.w.flows if self._period_in(f["period_code"], start, end)})
-        if not rs and not (states and held_years):
-            return {"held": False, "answer": "no flow held for that recipient/payer and period (held: federal grants "
-                    "to the states and local authorities, T.12, FY2010-2024 except FY2015)", "release_id": self.w.release_id}
+        years = [y for y in loaded if self._period_in(y, start, end)]
+        cls = [f for f in self.w.flows if f["period_code"] in years and keep(f, want_to=False)
+               and self.w.entity.get(f["to_entity_id"], {}).get("entity_type") == "group"] if states else []
+        if not rs and not cls:
+            return {"held": False, "answer": "no flow held for that recipient/payer and period", "coverage":
+                    self.FLOW_COVERAGE, "years_not_held": missing, "release_id": self.w.release_id}
         rs.sort(key=lambda f: (f["period_code"], f["purpose"]))
-        out = {"held": True, "flows": [cite(f) for f in rs], "release_id": self.w.release_id,
-               "caveats": [{"id": c, "text": self.w.caveats[c]["text_en"]} for c in ("CV25",)]}
-        if states and not rs:
-            out["answer"] = ("no grant to this state by name in the federal accounts for these years; it shares in the "
-                             "class grants below, which are not split by state")
+        used = sorted({c for f in rs + cls for c in (["CV25"] + (["CV17"] if not f["file_id"] else []))})
+        out = {"held": True, "flows": [cite(f) for f in rs], "coverage": self.FLOW_COVERAGE,
+               "years_not_held": missing, "release_id": self.w.release_id,
+               "caveats": [{"id": c, "text": self.w.caveats[c]["text_en"]} for c in used]}
         if states:
-            years = sorted({f["period_code"] for f in rs}) or held_years
-            cls = [f for f in self.w.flows if f["period_code"] in years and self.w.entity.get(f["to_entity_id"], {}).get(
-                "entity_type") == "group" and self.w.entity[f["to_entity_id"]]["gfs_sector"] == "state_gov"]
-            out["not_split_by_state"] = {"note": "grants paid to the state governments as a class in these years; "
-                                                 "this state's share is not in the federal accounts",
-                                         "flows": [cite(f) for f in cls]}
+            out["answer"] = (("these are the grants paid to this state by name; " if rs else
+                              "no grant to this state by name in these years; ")
+                             + "it also shares in the class grants under not_split_by_state (state governments and "
+                               "local authorities), which the federal accounts do not divide, and in B.11 grants not "
+                               "loaded yet: do not add up 'flows' as what the state received")
+            out["not_split_by_state"] = {"note": "grants paid to the state governments or the local authorities as a "
+                                                 "class in these years; this state's share is not in the federal accounts",
+                                         "flows": [cite(f) for f in sorted(cls, key=lambda f: (f["period_code"], f["purpose"]))]}
         return out
 
     def list_documents(self, theme=None, status=None):

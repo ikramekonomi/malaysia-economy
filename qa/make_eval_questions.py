@@ -671,9 +671,17 @@ q("5", "Is the local-authority grant placed in any state?", "get_flows",
 q("5", "How much capitation grant did Johor receive in 2020, by the federal accounts?", "get_flows",
   {"to": "MY-01", "start": "2020", "end": "2020"}, "flow_count", "0", kind="trap_placement")
 q("5", "Does Johor's answer show the class grants the federal accounts do not split by state?", "get_flows",
-  {"to": "MY-01", "start": "2020", "end": "2020"}, "class_flow_count", "5", kind="trap_placement")
-q("5", "Federal grants to Kuala Lumpur's state government?", "get_flows", {"to": "MY-14"}, "not_held",
-  kind="trap_identity")
+  {"to": "MY-01", "start": "2020", "end": "2020"}, "class_flow_count", "6", kind="trap_placement")
+q("5", "Sabah's federal grants 2014-2016: does the answer say FY2015 is not held?", "get_flows",
+  {"to": "MY-12", "start": "2014", "end": "2016"}, "field_contains:years_not_held", "2015", kind="trap_missing")
+q("5", "Does Sabah's answer warn not to add up its named grants as what it received?", "get_flows",
+  {"to": "MY-12", "start": "2024", "end": "2024"}, "field_contains:answer", "do not add up", kind="trap_placement")
+q("5", "Does the flow answer say the B.11 grants are not loaded?", "get_flows",
+  {"to": "MY-13", "start": "2024", "end": "2024"}, "field_contains:coverage", "B.11", kind="trap_missing")
+q("5", "Federal grants to Kuala Lumpur in 2024 (a Federal Territory)?", "get_flows",
+  {"to": "MY-14", "start": "2024", "end": "2024"}, "field_contains:answer", "Federal Territory", kind="trap_identity")
+q("5", "Sabah's grants from the first quarter of 2020?", "get_flows", {"to": "MY-12", "start": "2020Q1"},
+  "not_held", kind="trap_incomparable")
 q("5", "Federal grants to the states in 2015 (the image-only volume)?", "get_flows",
   {"to": "state_governments", "start": "2015", "end": "2015"}, "not_held", kind="trap_missing")
 q("5", "Does a flow say what it can and cannot place?", "get_flows", {"to": "MY-12", "start": "2024", "end": "2024"},
