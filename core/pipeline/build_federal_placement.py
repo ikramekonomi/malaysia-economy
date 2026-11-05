@@ -35,6 +35,14 @@ while scoping: 3-15%):
   view reports it beside the Sabah and Sarawak lines that are; a project naming none is `none`. All stay
   `_unallocated` with their totals shown. A year with no flows held (FY2009) reports grants by name as not held,
   not zero [finding 6].
+  4. `grant_split_by_payer` [added 2026-11-05, D30, declared before any Lampiran E result was computed here]: for
+     FY2019-2024, a class grant (paid to the states as a class in PKKP, so `_unallocated` in fact_money_flow) is
+     placed in each state at the amount MOF's own Lampiran E prints for that state, only where that grant's
+     national total equals PKKP's audited line within RM2 that year (_validation_lampiran_e.csv L5; the
+     Concurrent List with libraries and museums through L7); a grant already placed by name (method 3: the
+     special annual grants) is not placed twice; the two B.12 grants are paid out of the State Reserve Fund trust
+     account and the grants PKKP does not print as a line (tourism, the biodiversity EFT) cannot be reconciled,
+     so neither is placed. The unreconciled remainder of a class grant stays `_unallocated`.
 * Not used, by design: an agency's seat (it would put ministries' headquarters spending in Putrajaya), any
   allocation key (population, staff counts, need): placing money by formula makes a map look more complete than
   the accounts are (D27, DATA_MODEL §13). Operating spending (salaries in schools and clinics, subsidies, cash

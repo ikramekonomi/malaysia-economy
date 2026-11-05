@@ -49,6 +49,18 @@ Method (declared 2026-11-05, before any result of this view was looked at):
   agree_after_other_lenders; a year whose state report is not held is own_volume_not_held; an unparsed own table
   takes precedence over later printings (state_table_not_extracted); meta/gap_note.csv notes can cover a year
   range and, where a page proves the state figure is printed but not extracted, set that status.
+* Added 2026-11-05 (D30), declared before any Lampiran E result was computed in this view: for FY2019-2024 the
+  Budget books' Lampiran E (sources/anggaran, MOF's own record of the actual grant paid to EACH state, the payer's
+  split, not a formula) gives a third side for the class grants. On capitation and concurrent_list rows of a
+  state:
+    federal_by_state_rm   Lampiran E's figure for that state and grant, used only where that grant's national
+                          total equals PKKP's audited line within RM2 that year (_validation_lampiran_e.csv L5, or
+                          L7 for the Concurrent List with libraries and museums, which PKKP prints in one line);
+                          otherwise blank with the reason. For the Concurrent List the comparison uses the
+                          Concurrent List column alone (what the state accounts print under that name).
+    by_state_status       agree when |state minus Lampiran E| <= RM10,000 (the state report prints RM juta to 2
+                          decimals), else differ; state_not_printed / own_volume_not_held as for the rest.
+  The existing share columns and statuses are unchanged; the new columns sit beside them.
 """
 import csv
 import glob
