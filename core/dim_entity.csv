@@ -58,3 +58,5 @@ E000056,ministry,Kementerian Pendidikan Tinggi,Ministry of Higher Education,E000
 E000057,ministry,Kementerian Digital,Ministry of Digital,E000001,central_gov,,12,confirmed
 E000058,ministry,Kementerian Pertahanan,Ministry of Defence,E000001,central_gov,,12,confirmed
 E000059,ministry,Kementerian Dalam Negeri,Ministry of Home Affairs,E000001,central_gov,,12,confirmed
+E000060,group,Kerajaan-kerajaan Negeri,"State governments (all 13, as a class)",,state_gov,,12,confirmed
+E000061,group,Pihak Berkuasa Tempatan,Local authorities (as a class),,local_gov,,12,confirmed

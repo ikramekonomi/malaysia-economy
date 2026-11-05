@@ -80,6 +80,7 @@ SUITE = [
     "meta/build_registry.py",
     "core/pipeline/build_entities.py",
     "core/pipeline/build_core.py",
+    "core/pipeline/build_flows.py",
     "core/pipeline/build_gap_need_vs_money.py",
     "qa/run_eval.py",
     "qa/reproduce_curated.py",

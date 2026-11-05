@@ -29,10 +29,10 @@ REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 META = os.path.join(REPO, "meta")
 CORE = os.path.join(REPO, "core")
 
-ENTITY_TYPES = {"government", "ministry", "department", "vote", "programme", "activity", "project",
+ENTITY_TYPES = {"government", "ministry", "department", "vote", "group", "programme", "activity", "project",
                 "statutory_body", "glc", "company", "auditor", "natural_person"}
 GFS = {"central_gov", "state_gov", "local_gov", "public_corp", "private"}
-SYSTEMS = {"federal_gov", "state_gov", "maksud_bekalan", "maksud_pembangunan"}
+SYSTEMS = {"federal_gov", "state_gov", "maksud_bekalan", "maksud_pembangunan", "group"}
 
 
 def rows(path):

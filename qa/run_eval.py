@@ -53,7 +53,8 @@ def run(t, q):
         c = first["citation"]
         return bool(c["file_sha256"] and c["l1_row"] and c["pdf_page"] and res["release_id"]), json.dumps(c)[:120]
     if check == "caveat":
-        ids = [c["id"] for c in first.get("caveats", res.get("caveats", []))]
+        ids = [c["id"] for c in first.get("caveats", res.get("caveats", []))] if "flows" not in res \
+            else [c["id"] for c in res.get("caveats", [])]
         return exp in ids, ",".join(ids)
     if check == "refused":
         return res.get("ok") is False and exp in res.get("refused", ""), res.get("refused", "computed: " + str(res.get("value")))
@@ -89,7 +90,8 @@ def run(t, q):
         return str(src.get(f)) == exp, str(src.get(f))
     if check.startswith("field_contains:"):
         f = check.split(":", 1)[1]
-        return exp in str(first.get(f, "")), str(first.get(f, ""))[:100]
+        got = first.get(f, res.get(f, "")) if isinstance(first, dict) else res.get(f, "")
+        return exp in str(got), str(got)[:100]
     if check.startswith("field_nonempty:"):
         f = check.split(":", 1)[1]
         return bool(first.get(f)), str(first.get(f, ""))[:60]
@@ -112,6 +114,17 @@ def run(t, q):
     if check == "first_indicator":
         ids = [i["indicator_code"] for i in res.get("indicators", [])]
         return bool(ids) and ids[0] == exp, ",".join(ids[:3])
+    if check == "flow_value":
+        fl = res.get("flows", [])
+        return len(fl) == 1 and Decimal(fl[0]["amount"]) == Decimal(exp), ";".join(f["amount"] for f in fl)
+    if check == "flow_count":
+        return str(len(res.get("flows", []))) == exp, str(len(res.get("flows", [])))
+    if check == "class_flow_count":
+        n = len(res.get("not_split_by_state", {}).get("flows", []))
+        return str(n) == exp, str(n)
+    if check == "flow_geo":
+        fl = res.get("flows", [])
+        return bool(fl) and all(f["geo_code"] == exp for f in fl), ",".join(sorted({f["geo_code"] for f in fl}))
     if check == "same_entity":
         return res["same"] == exp, f"{res['same']} {res['ids']}"
     if check == "entity_caveat":
