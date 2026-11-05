@@ -7,10 +7,12 @@ Writes qa/_validation_reproduce.csv (one row per curated cell; FAIL blocks the P
 
     python3 qa/reproduce_curated.py
 
-Covered so far: curated/fact_labour_indicators.csv (labour share of GDP, implied average wage), and the
-BNM and MOF columns of curated/fact_fiscal_headline.csv (compared to the sen). Its PKKP columns are not
-covered: core still reads them from that same table (Phase 3 moves them to PKKP observations), so a
-comparison would be circular, and it is not claimed.
+Covered so far: curated/fact_labour_indicators.csv (labour share of GDP, implied average wage), the
+BNM and MOF columns of curated/fact_fiscal_headline.csv (compared to the sen), and (Phase 3) every row of
+curated/fact_ministry_fiscal.csv from core's PKKP vote observations (to the sen; a documented
+leaf-vs-printed-total difference is EXPLAINED, anything else FAILs). The headline's PKKP columns are not
+covered: core still reads them from that same table, so a comparison would be circular, and it is not
+claimed.
 """
 import csv
 import os
@@ -100,18 +102,64 @@ def fiscal(t, out):
                         f"core {got[0]['citation']['edition_id']}, to the sen"])
 
 
+def ministry(t, out):
+    """curated/fact_ministry_fiscal.csv: every vote-year, audited, from core's PKKP vote observations (Phase 3).
+
+    The curated table keys a vote by its canonical code; core keys it by entity and resolves each printed code
+    in its own year, so the curated row's raw code(s) are asked for, year by year. Curated's development figure
+    is the sum of the vote's project lines (FY2015: the printed vote total); core's is the printed vote total
+    (its JUMLAH line). Where curated's own register (curated/_known_extraction_defects_curated.csv) documents
+    that the two differ, the row is EXPLAINED with that diagnosis; any other difference is a FAIL."""
+    known = {}
+    for d in csv.DictReader(open(os.path.join(REPO, "curated", "_known_extraction_defects_curated.csv"), newline="")):
+        if d["table"] == "fact_ministry_fiscal":
+            known[d["key"].strip()] = d
+    heads = {r["code"]: r for r in csv.DictReader(open(os.path.join(REPO, "meta", "spending_head.csv"), newline=""))}
+    for r in csv.DictReader(open(os.path.join(REPO, "curated", "fact_ministry_fiscal.csv"), newline="")):
+        y, jenis, want = r["year"], r["jenis"], Decimal(r["amount_rm"])
+        ind = f"federal_gov.vote.{jenis}"
+        total, why = Decimal(0), ""
+        for code in r["raw_codes"].split(","):
+            if code in heads:
+                kind = "charged_head" if heads[code]["kind"] == "charged" else "reserve_head"
+                res = t.get_series(ind, "MY", y, y, breakdown=f"{kind}={code}", basis="audited", publisher="pkkp")
+            else:
+                res = t.get_series(ind, "MY", y, y, basis="audited", publisher="pkkp", entity=code)
+            if not res.get("held") or len(res["rows"]) != 1:
+                why = f"{code}: {res.get('answer') or str(len(res.get('rows', []))) + ' rows'}"
+                break
+            total += Decimal(res["rows"][0]["value"])
+        key = f"{r['canonical_code']} {jenis} {y}"
+        if why:
+            out.append(["fact_ministry_fiscal", key, r["amount_rm"], "", "FAIL", why])
+            continue
+        got, _ = at(total, r["amount_rm"])
+        d = known.get(f"{r['raw_codes']} {jenis} {y}")
+        if got == want:
+            out.append(["fact_ministry_fiscal", key, r["amount_rm"], str(got), "PASS", ""])
+        elif d:
+            out.append(["fact_ministry_fiscal", key, r["amount_rm"], str(got), "EXPLAINED",
+                        f"core = printed vote total, curated = sum of project lines; {d['classification']}: "
+                        f"{d['diagnosis'][:160]}"])
+        else:
+            out.append(["fact_ministry_fiscal", key, r["amount_rm"], str(got), "FAIL",
+                        f"core {got} vs curated {want} (diff {got - want})"])
+
+
 def main():
     t = Tools()
     out = []
     labour(t, out)
     fiscal(t, out)
+    ministry(t, out)
     with open(os.path.join(REPO, "qa", "_validation_reproduce.csv"), "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["table", "cell", "curated", "core", "status", "note"])
         w.writerows(out)
-    bad = [r for r in out if r[4] != "PASS"]
-    print(f"reproduce: {len(out) - len(bad)} of {len(out)} curated cells reproduced from core "
-          f"(release {t.w.release_id})")
+    bad = [r for r in out if r[4] == "FAIL"]
+    expl = [r for r in out if r[4] == "EXPLAINED"]
+    print(f"reproduce: {len(out) - len(bad) - len(expl)} of {len(out)} curated cells reproduced from core, "
+          f"{len(expl)} explained by a documented difference, {len(bad)} FAIL (release {t.w.release_id})")
     for r in bad[:10]:
         print("  FAIL", r)
 

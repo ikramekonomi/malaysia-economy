@@ -59,16 +59,20 @@ def rows(path):
 _BRIDGE = None
 
 
-def entity(system, code, year):
-    """The entity_id of a readable code in a year (core/bridge_entity_code.csv, built by build_entities.py).
-    Stops when the code resolves to no entity or to two: the spine is the only place identity is decided."""
+def entity(system, code, year, scope=""):
+    """The entity_id of a readable code in a year (core/bridge_entity_code.csv, built by build_entities.py); a
+    row scoped to the source (e.g. anggaran:2024) wins for that source. Stops when the code resolves to no
+    entity or to two: the spine is the only place identity is decided."""
     global _BRIDGE
     if _BRIDGE is None:
         _BRIDGE = rows(os.path.join(REPO, "core", "bridge_entity_code.csv"))
     y = int(str(year)[:4])
-    hit = sorted({c["entity_id"] for c in _BRIDGE if c["code_system"] == system and c["code"] == code
-                  and (not c["valid_from"] or int(c["valid_from"]) <= y)
-                  and (not c["valid_to"] or y <= int(c["valid_to"]))})
+
+    def hits(sc):
+        return sorted({c["entity_id"] for c in _BRIDGE if c["code_system"] == system and c["code"] == code
+                       and c.get("scope", "") == sc and (not c["valid_from"] or int(c["valid_from"]) <= y)
+                       and (not c["valid_to"] or y <= int(c["valid_to"]))})
+    hit = (hits(scope) if scope else []) or hits("")
     if len(hit) != 1:
         sys.exit(f"build_core: {system}:{code} in {year} resolves to {hit or 'no entity'} "
                  "(run core/pipeline/build_entities.py; a new code needs a person, rule D26)")
@@ -419,6 +423,106 @@ def build_national_series(obs, ed):
          breakdown=bank_type)
 
 
+PKKP = os.path.join(REPO, "sources", "pkkp", "data")
+ANGGARAN = os.path.join(REPO, "sources", "anggaran", "data")
+OPEX_BASIS = {"sebenar_rm": "audited", "anggaran_asal_rm": "budget_estimate", "anggaran_dipinda_rm": "revised_estimate"}
+
+
+def _vote(code, year, heads, scope=""):
+    """(entity_id, breakdown_key) of a printed vote code: its body (rule D26), or the federal government with
+    the head as breakdown for Tanggungan (T.xx) and the contingency reserve (P.70)."""
+    if code in heads:
+        kind = "charged_head" if heads[code]["kind"] == "charged" else "reserve_head"
+        return entity("federal_gov", "MY", year), f"{kind}={code}"
+    system = {"B": "maksud_bekalan", "P": "maksud_pembangunan"}[code[0]]
+    return entity(system, code, year, scope), "_total"
+
+
+def build_votes(obs):
+    """Phase 3: federal spending BY WHO SPENDS IT - each vote's printed total as an entity observation.
+
+      PKKP fact_opex_maksud     every B/T vote's operating total, FY2009-2024: audited (sebenar), and the
+                                original and revised estimates printed in the same volume
+      PKKP fact_devex_maksud    every P vote's development JUMLAH line, FY2009-2024, audited. Where a vote is
+                                printed in blocks (P.63 FY2019-2020: Pendidikan + Pendidikan Tinggi), the vote
+                                total is the row equal to the sum of the others (checked; the blocks are not
+                                loaded). The grand-total row is not a vote.
+      Anggaran Perbelanjaan     each book's vote totals (B/T: mengurus; P: pembangunan): the book year's estimate
+                                and the previous year's original estimate (basis budget_estimate), and MOF's
+                                actuals for the two years before (basis actual, restated to the book's votes)
+    Each year from its own PKKP volume (golden rule 6). Codes resolve through the entity spine at the year of
+    the source: the PKKP year, or the book's year (a book prints past years under its own votes)."""
+    heads = {r["code"]: r for r in rows(os.path.join(META, "spending_head.csv"))}
+    sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+    import glob
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_opex_maksud.csv"))):
+        rel = os.path.relpath(path, REPO)
+        for i, r in enumerate(rows(path), start=2):
+            ent_id, bk = _vote(r["maksud_code"], r["year"], heads)
+            for col, basis in OPEX_BASIS.items():
+                v = dec(r[col])
+                if v is None:
+                    continue
+                obs.add(indicator_code="federal_gov.vote.opex", geo_code="MY", period_code=r["year"],
+                        breakdown_key=bk, entity_id=ent_id, basis=basis, edition_id=f"pkkp:{r['source_file']}",
+                        vintage=r["year"], value=v, value_printed=r[col], unit_printed="RM", precision_printed="0.01",
+                        estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                        pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"],
+                        l1_ref=f"{rel}#row{i}")
+    for path in sorted(glob.glob(os.path.join(PKKP, "*", "fact_devex_maksud.csv"))):
+        rel = os.path.relpath(path, REPO)
+        by = defaultdict(list)
+        for i, r in enumerate(rows(path), start=2):
+            if r["maksud_code"].startswith("P."):
+                by[(r["maksud_code"], r["year"])].append((i, r))
+        for (code, year), lst in by.items():
+            if len(lst) > 1:
+                vals = [(dec(r["sebenar_jumlah_rm"]) or Decimal(0), i, r) for i, r in lst]
+                top = max(vals, key=lambda x: x[0])
+                if top[0] != sum(x[0] for x in vals if x is not top):
+                    sys.exit(f"build_core: {code} FY{year} printed in {len(lst)} blocks and no row is their total")
+                obs.skipped[f"PKKP devex: block rows of a vote printed in blocks ({code} FY{year})"] += len(lst) - 1
+                lst = [(top[1], top[2])]
+            i, r = lst[0]
+            v = dec(r["sebenar_jumlah_rm"])
+            if v is None:
+                continue
+            ent_id, bk = _vote(code, year, heads)
+            obs.add(indicator_code="federal_gov.vote.devex", geo_code="MY", period_code=year, breakdown_key=bk,
+                    entity_id=ent_id, basis="audited", edition_id=f"pkkp:{r['source_file']}", vintage=year,
+                    value=v, value_printed=r["sebenar_jumlah_rm"], unit_printed="RM", precision_printed="0.01",
+                    estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                    pdf_page=r["pdf_page"], printed_page=r["printed_page"],
+                    table_ref=f"{r['statement']} ({r['jumlah_label_bm']})", l1_ref=f"{rel}#row{i}")
+    for path in sorted(glob.glob(os.path.join(ANGGARAN, "*", "fact_anggaran_maksud_*.csv"))):
+        rel = os.path.relpath(path, REPO)
+        book = int(os.path.basename(path)[-8:-4])
+        rs = list(enumerate(rows(path), start=2))
+        totals = {(r["maksud_code"], r["measure"], r["component"]) for _, r in rs if r["row_type"] == "total"}
+        for i, r in rs:
+            code, comp = r["maksud_code"], r["component"]
+            want = "mengurus" if code[0] in "BT" else "pembangunan"
+            # the 2024 and 2025 books print a Tanggungan head with no mengurus line: its operating total is the
+            # head's JUMLAH (= emolumen + lain); the verifier found 112 rows missed without this
+            if code[0] in "BT" and comp == "jumlah" and (code, r["measure"], "mengurus") not in totals:
+                comp = want
+            if comp != want or not (r["row_type"] == "total" or (code, r["measure"], want) not in totals):
+                continue
+            m = re.fullmatch(r"(anggaran|anggaran_asal|sebenar)_(\d{4})", r["measure"])
+            basis = "actual" if m.group(1) == "sebenar" else "budget_estimate"
+            v = dec(r["amount_rm"])
+            if v is None:
+                continue
+            ent_id, bk = _vote(code, book, heads, scope=f"anggaran:{book}")
+            obs.add(indicator_code="federal_gov.vote.opex" if want == "mengurus" else "federal_gov.vote.devex",
+                    geo_code="MY", period_code=m.group(2), breakdown_key=bk, entity_id=ent_id, basis=basis,
+                    edition_id=f"anggaran:{r['source_file']}", vintage=str(book), value=v,
+                    value_printed=r["amount_rm"], unit_printed="RM", precision_printed="1",
+                    estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                    pdf_page=r["pdf_page"], printed_page=r["printed_page"],
+                    table_ref=f"Anggaran Perbelanjaan Persekutuan {book}, {r['measure']}", l1_ref=f"{rel}#row{i}")
+
+
 PCTILE_STATS = {"mean": "mean", "median": "median", "minimum": "min", "maximum": "max"}
 
 
@@ -635,6 +739,27 @@ def build_flags(obs):
         if d:
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "our_extraction_defect",
                         "note": d["note"], "register": d["register"]})
+    # FY2009 development votes whose printed JUMLAH differs from the sum of their printed project lines,
+    # diagnosed in curated/_known_extraction_defects_curated.csv. Flagged on the vote total (caveat CV21)
+    # except where the diagnosis proves the gap is a leaf WE failed to capture (the printed total is then right)
+    reg = os.path.join(REPO, "curated", "_known_extraction_defects_curated.csv")
+    gaps = {}
+    for d in rows(reg):
+        m = re.fullmatch(r"(P\.\d{2}) devex (\d{4})", d["key"].strip())
+        if d["table"] == "fact_ministry_fiscal" and m and d["classification"] != "ours_proven":
+            gaps[(m.group(1), m.group(2))] = d
+    for r in obs.rows:
+        if r["indicator_code"] == "federal_gov.vote.devex" and r["edition_id"].startswith("pkkp:"):
+            path, n = r["l1_ref"].split("#row")
+            l1 = rows(os.path.join(REPO, path))[int(n) - 2]
+            d = gaps.get((l1["maksud_code"], l1["year"]))
+            if d:
+                if d["classification"] == "ours_suspected":
+                    r["reliability"] = "low"  # our extraction of the JUMLAH line is suspected (verifier M2)
+                out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "leaf_total_mismatch",
+                            "note": f"printed JUMLAH {d['printed_rm']} vs project lines {d['computed_rm']} "
+                                    f"({d['classification']}): {d['diagnosis'][:300]}",
+                            "register": "curated/_known_extraction_defects_curated.csv"})
     seen, uniq = set(), []
     for f in out:
         k = (f["l1_ref"], f["indicator_code"], f["flag"], f["note"])
@@ -735,9 +860,15 @@ def checks(obs, geo, per, ind, brk, editions):
         bad = Counter(r[col] for r in obs.rows if r[col] not in codes[lst])
         add(f"C3 {col} in meta/code_list.csv", "fact_observation", "PASS" if not bad else "FAIL",
             "ok" if not bad else str(bad.most_common(3)))
-    noprov = sum(1 for r in obs.rows if not r["file_id"] or not r["l1_ref"])
-    add("C4 every row has provenance (file sha256 + L1 row)", "fact_observation", "PASS" if not noprov else "FAIL",
-        f"{noprov} rows without")
+    # a document registered with no sha256 is one D24 keeps as 'PDF not archived' (CV17): its rows keep their
+    # page and L1 row; any other row without a file sha256 is a provenance failure
+    unarchived = {r["file_name"] for r in rows(os.path.join(META, "registry_file.csv")) if not r["sha256"]}
+    d24 = sum(1 for r in obs.rows if not r["file_id"] and r["edition_id"].split(":", 1)[-1] in unarchived)
+    noprov = sum(1 for r in obs.rows if not r["l1_ref"] or (not r["file_id"] and
+                                                            r["edition_id"].split(":", 1)[-1] not in unarchived))
+    add("C4 every row has provenance (file sha256 + L1 row; D24 volumes: page + L1 row)", "fact_observation",
+        "PASS" if not noprov else "FAIL",
+        f"{noprov} rows without" + (f"; {d24} rows from D24 volumes (no PDF held, caveat CV17)" if d24 else ""))
     nounc = sum(1 for r in obs.rows if r["basis"] == "statistic" and not r["se"]
                 and r["reliability"] not in ("unknown", "low"))
     add("C5 a survey estimate without published uncertainty says so (reliability = unknown)", "fact_observation",
@@ -845,6 +976,27 @@ def checks(obs, geo, per, ind, brk, editions):
     add("C15 every entity_id is a registered entity (core/dim_entity.csv) or _none", "fact_observation",
         "PASS" if not stray else "FAIL", f"{len({r['entity_id'] for r in obs.rows}) - 1} entities used"
         + (f"; unregistered {stray}" if stray else ""))
+    # C16 the votes add up to the audited totals printed in the same PKKP volume (operating: supply votes plus
+    # charged heads; development: development votes plus the reserve)
+    # the printed lines: operating 'Jumlah Perbelanjaan Mengurus (selepas pindahan)' - after the transfer to the
+    # Development Fund, which is itself paid under a vote - and the development grand total
+    tot = {}
+    for r in rows(os.path.join(REPO, "curated", "fact_fiscal_headline.csv")):
+        for col, ind in (("opex_gross_rm", "federal_gov.expenditure.opex"), ("devex_gross_rm", "federal_gov.expenditure.devex")):
+            if dec(r[col]) is not None:
+                tot[(ind, r["year"])] = dec(r[col])
+    vs = defaultdict(Decimal)
+    for r in obs.rows:
+        if r["indicator_code"].startswith("federal_gov.vote.") and r["basis"] == "audited":
+            vs[(r["indicator_code"].replace(".vote.", ".expenditure."), r["period_code"])] += Decimal(r["value"])
+    off = sorted(f"{k[0].split('.')[-1]} {k[1]}: votes {fmt(vs[k])} vs printed {fmt(tot[k])}"
+                 for k in vs if k in tot and abs(vs[k] - tot[k]) > 1)
+    known = [o for o in off if o.startswith("devex 2009")]
+    add("C16 PKKP votes add up to the printed audited totals (opex, devex; within RM1)", "federal_gov.vote.*",
+        "PASS" if not off else "INFO" if off == known else "FAIL",
+        f"{len(vs)} year-totals" + (f"; differ: {off}" if off else ", all within RM1")
+        + ("; FY2009 devex: printed vote totals vs the printed grand total, diagnosed in "
+           "curated/_known_extraction_defects_curated.csv (caveat CV21)" if known else ""))
     add("C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)", "fact_observation",
         "PASS" if not bad else "FAIL", f"{n} rows checked" + (f"; {len(bad)} differ, e.g. {bad[:3]}" if bad else ""))
     return out
@@ -866,6 +1018,7 @@ def main():
     build_federal(obs)
     build_federal_reported(obs)
     build_national_series(obs, ed)
+    build_votes(obs)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

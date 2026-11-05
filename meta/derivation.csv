@@ -1,7 +1,7 @@
 derivation_id,operation,formula,inputs,compatibility_rules,declared_on
 DV1,per_capita,value(numerator) / value(population),numerator: an observation with additive_geo=true; population: pop.total,same geo_code; same annual period_code; population breakdown _total; numerator unit RM or persons,2026-11-04
 DV2,ratio,value(a) / value(b),two observations,same unit; same geo_code or b is the national value (an index: same geo_code only; added 2026-11-05 with national CPI); same period_code; same price_basis,2026-11-04
-DV3,growth,"value(a, t1) / value(a, t0) - 1",the same indicator at two periods,"same indicator, geo, breakdown, publisher, basis and price_basis; same frequency; a nominal RM growth is labelled nominal",2026-11-04
+DV3,growth,"value(a, t1) / value(a, t0) - 1",the same indicator at two periods,"same indicator, geo, breakdown, entity, publisher, basis and price_basis; same frequency; one Anggaran book (it restates past years to its own votes); a nominal RM growth is labelled nominal",2026-11-04
 DV4,gap_pp,value(a) - value(b),two rates or shares,both unit percent; same indicator; same period_code,2026-11-04
 DV5,difference,value(a) - value(b),two observations,"same indicator, unit, period_code and price_basis; an index: same geo_code (added 2026-11-05)",2026-11-04
 BAND1,band_unknown_uncertainty,sort by value; start a new band when the step to the previous value exceeds the threshold,compare_geos rows whose uncertainty is not published,"threshold: 1.0 percentage point for unit percent; 5% of the lower value otherwise. A presentation rule declared before results were seen, not a test of statistical significance.",2026-11-04

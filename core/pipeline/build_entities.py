@@ -59,11 +59,14 @@ class Bridge:
         for c in codes:
             self.by[(c["code_system"], c["code"])].append(c)
 
-    def resolve(self, system, code, year=None):
-        hits = [c for c in self.by.get((system, code), [])
-                if year is None or yr(c["valid_from"], -10**9) <= year <= yr(c["valid_to"], 10**9)]
-        ids = sorted({c["entity_id"] for c in hits})
-        return ids
+    def resolve(self, system, code, year=None, scope=""):
+        """A row scoped to one source (scope=anggaran:2024) wins for that source: a budget book is tabled before
+        its year and can reprint a code under the body that held it then (D26, verifier H1). Unscoped rows
+        answer every other question."""
+        def hits(sc):
+            return sorted({c["entity_id"] for c in self.by.get((system, code), []) if c.get("scope", "") == sc
+                           and (year is None or yr(c["valid_from"], -10**9) <= year <= yr(c["valid_to"], 10**9))})
+        return (hits(scope) if scope else []) or hits("")
 
 
 def system_of(code):
@@ -103,7 +106,7 @@ def main():
     for (s, c), lst in br.by.items():
         for i, a in enumerate(lst):
             for b in lst[i + 1:]:
-                if a["entity_id"] != b["entity_id"] and not (
+                if a["entity_id"] != b["entity_id"] and a.get("scope", "") == b.get("scope", "") and not (
                         yr(a["valid_to"], 10**9) < yr(b["valid_from"], -10**9)
                         or yr(b["valid_to"], 10**9) < yr(a["valid_from"], -10**9)):
                     clash.append(f"{s}:{c} {a['entity_id']}/{b['entity_id']}")
@@ -137,7 +140,7 @@ def main():
             if code in heads:
                 continue
             n5 += 1
-            hit = br.resolve(system_of(code) or "?", code, y)
+            hit = br.resolve(system_of(code) or "?", code, y, scope=f"anggaran:{y}")
             if len(hit) != 1:
                 s5.append(f"Anggaran {y} {code} {nm!r}: {hit or 'no entity'}")
     stop += s5
@@ -201,7 +204,7 @@ def main():
                         seat_geo_code="", fy_end_month="12", decision_status=r["decision_status"]))
     write(os.path.join(CORE, "dim_entity.csv"), list(dim[0]), dim)
     write(os.path.join(CORE, "bridge_entity_code.csv"), ["entity_id", "code_system", "code", "valid_from",
-                                                         "valid_to", "proof"],
+                                                         "valid_to", "scope", "proof"],
           sorted(codes, key=lambda c: (c["entity_id"], c["code_system"], yr(c["valid_from"], -10**9))))
     write(os.path.join(CORE, "entity_name.csv"), list(hist[0]), hist)
     st = defaultdict(int)

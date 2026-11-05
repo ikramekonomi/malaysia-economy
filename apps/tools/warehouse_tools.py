@@ -31,7 +31,10 @@ class Tools:
         """Codes, periods and names are plain strings (or ints for years); anything else is refused."""
         for k, v in kw.items():
             if v is not None and not isinstance(v, (str, int)) or isinstance(v, bool):
-                return {"held": False, "answer": f"{k} must be a code or a year, not {type(v).__name__}"}
+                what = "a whole year (e.g. 2024) or a period string" if isinstance(v, float) else "a code or a year"
+                return {"held": False, "answer": f"{k} must be {what}, not {type(v).__name__}"}
+            if isinstance(v, int) and not 1900 <= v <= 2100:
+                return {"held": False, "answer": f"{k}={v} is not a year"}
         return None
 
     def _not_held(self, what, hint=""):
@@ -71,30 +74,87 @@ class Tools:
             return self._not_held(text)
         return {"held": True, "indicators": [h[1] for h in hits[:8]], "release_id": self.w.release_id}
 
-    def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None, publisher=None):
-        """publisher: 'pkkp', 'bnm', 'mof' or 'dosm' (the edition's publisher). Without it, every publisher's
-        figure for the same concept comes back, each cited: where they differ, the difference is the answer."""
+    def _entity_filter(self, entity):
+        """entity -> a test on an observation row: an entity_id matches itself; a readable code (B.45, P.45,
+        MY-03, MY) matches the body that held the code IN THE ROW'S YEAR (a code can name different bodies)."""
+        if entity is None:
+            return lambda r: True, None
+        e = str(entity).strip().upper().replace(" ", "")
+        if e in self.w.entity:
+            return lambda r: r["entity_id"] == e, None
+        if e in self.w.spending_heads:
+            kind = "charged_head" if self.w.spending_heads[e]["kind"] == "charged" else "reserve_head"
+            return None, (f"{e} is a spending head, not a body: ask for breakdown='{kind}={e}' "
+                          "(its entity is the federal government)")
+        probe = self.get_entity(e)
+        if not probe.get("held"):
+            return None, probe["answer"]
+
+        def match(r):
+            hit = self.get_entity(e, int(r["period_code"][:4]))
+            return hit.get("held") and len(hit["entities"]) == 1 and hit["entities"][0]["entity_id"] == r["entity_id"]
+        return match, None
+
+    def get_series(self, indicator, geo, start=None, end=None, breakdown="_total", basis=None, publisher=None,
+                   entity=None):
+        """publisher: 'pkkp', 'bnm', 'mof', 'dosm' or 'anggaran' (the edition's publisher). Without it, every
+        publisher's figure for the same concept comes back, each cited: where they differ, the difference is the
+        answer. entity: who spends (federal_gov.vote.*): a vote code (B.45, P.45; resolved year by year), a state
+        (MY-03) or an entity_id."""
         bad = self._bad_input(indicator=indicator, geo=geo, start=start, end=end, breakdown=breakdown, basis=basis,
-                              publisher=publisher)
+                              publisher=publisher, entity=entity)
         if bad:
             return {**bad, "release_id": self.w.release_id}
         start, end = (None if start is None else str(start)), (None if end is None else str(end))
         publisher = publisher.lower() if publisher else None
+        indicator, geo = indicator.strip().lower(), geo.strip()
+        if geo not in self.w.geo:
+            geo = next((g for g in self.w.geo if g.lower() == geo.lower()), geo)
+        breakdown = (breakdown or "_total").strip()
+        if "=" in breakdown:
+            k, v = breakdown.split("=", 1)
+            breakdown = f"{k.lower()}={v.upper()}" if k.lower() in ("charged_head", "reserve_head") else f"{k.lower()}={v}"
+        if basis is not None:
+            basis = basis.strip().lower()
+            if basis not in self.w.bases:
+                return {"held": False, "answer": f"unknown basis {basis!r}: one of {sorted(self.w.bases)}",
+                        "release_id": self.w.release_id}
+        if breakdown not in self.w.breakdowns and not breakdown.startswith("percentile="):
+            return {"held": False, "answer": f"unknown breakdown {breakdown!r} (see core/dim_breakdown.csv; e.g. "
+                                             "_total, sex=female, charged_head=T.13)", "release_id": self.w.release_id}
         if breakdown.startswith("percentile=") and breakdown[11:].isdigit():
             breakdown = f"percentile={int(breakdown[11:]):03d}"
         if indicator not in self.w.ind:
             return self._not_held(indicator)
         if geo not in self.w.geo:
             return {"held": False, "answer": f"unknown place code {geo}", "release_id": self.w.release_id}
+        ent, why = self._entity_filter(entity)
+        if ent is None:
+            return {"held": False, "answer": why, "release_id": self.w.release_id}
         rs = [r for r in self.w.obs if r["indicator_code"] == indicator and r["geo_code"] == geo
               and r["breakdown_key"] == breakdown and (not basis or r["basis"] == basis)
               and (not publisher or r["edition_id"].split(":")[0] == publisher)
-              and self._period_in(r["period_code"], start, end)]
+              and self._period_in(r["period_code"], start, end) and ent(r)]
+        vote = indicator.startswith("federal_gov.vote.")
         if not rs:
+            if vote and publisher == "mof":
+                return {"held": False, "answer": "vote figures from MOF's budget books are under publisher='anggaran' "
+                        "(Anggaran Perbelanjaan Persekutuan); publisher='mof' is the Tinjauan Fiskal",
+                        "release_id": self.w.release_id}
+            if vote and str(entity or "").strip().upper() in ("MY", self.w.entity_of_federal_gov()) \
+                    and breakdown == "_total":
+                return {"held": False, "answer": "the federal government itself holds no vote: its figures here are the "
+                        "charged heads (breakdown charged_head=T.01 ... T.14) and the reserve (reserve_head=P.70); for "
+                        "the federal total use federal_gov.expenditure.opex / .devex", "release_id": self.w.release_id}
             return self._not_held(f"{indicator} for {geo} {start or ''}-{end or ''}", self.w.ind[indicator]["name_en"])
         rs.sort(key=lambda r: (r["period_code"], r["edition_id"]))
-        return {"held": True, "indicator_code": indicator, "unit": self.w.ind[indicator]["unit"],
-                "rows": [self.w.cite(r) for r in rs], "release_id": self.w.release_id}
+        out = {"held": True, "indicator_code": indicator, "unit": self.w.ind[indicator]["unit"],
+               "rows": [self.w.cite(r) for r in rs], "release_id": self.w.release_id}
+        if vote and entity is None and breakdown == "_total":
+            out["note"] = ("supply and development votes only: the charged heads (Tanggungan, breakdown charged_head=T.xx) "
+                           "and the reserve (reserve_head=P.70) are not in these rows, so they do not add up to the "
+                           "federal total (caveat CV23)")
+        return out
 
     def compare_geos(self, indicator, period, geo_level="state", breakdown="_total"):
         bad = self._bad_input(indicator=indicator, period=period, geo_level=geo_level, breakdown=breakdown)
@@ -280,7 +340,7 @@ class Tools:
             ids = [code]
         elif system:
             ids = sorted({c["entity_id"] for c in self.w.entity_codes if c["code_system"] == system
-                          and c["code"] == code and (y is None or (
+                          and c["code"] == code and not c.get("scope") and (y is None or (
                               (not c["valid_from"] or int(c["valid_from"]) <= y)
                               and (not c["valid_to"] or y <= int(c["valid_to"]))))})
         else:
@@ -288,13 +348,16 @@ class Tools:
                     "(B.45, P.45), a state (MY-03), MY for the federal government, or an entity_id (E000052)",
                     "release_id": self.w.release_id}
         if not ids:
+            if system == "state_gov":
+                return {"held": False, "answer": f"{code} has no state government in the register (the Federal "
+                        "Territories MY-14, MY-15 and MY-16 are governed federally)", "release_id": self.w.release_id}
             return {"held": False, "answer": f"no body held {code}" + (f" in {y}" if y else "")
                     + " (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books)",
                     "release_id": self.w.release_id}
         out = []
         for eid in ids:
             e = self.w.entity[eid]
-            codes = [{k: c[k] for k in ("code_system", "code", "valid_from", "valid_to", "proof")}
+            codes = [{k: c.get(k, "") for k in ("code_system", "code", "valid_from", "valid_to", "scope", "proof")}
                      for c in self.w.entity_codes if c["entity_id"] == eid]
             names = [{k: n[k] for k in ("code", "name_bm", "name_en", "valid_from", "valid_to")}
                      for n in self.w.entity_names if n["entity_id"] == eid]

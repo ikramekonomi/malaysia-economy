@@ -18,7 +18,7 @@ from apps.tools.warehouse_tools import UNTRUSTED, Tools  # noqa: E402
 
 def one(t, s):
     r = t.get_series(s["indicator"], s["geo"], s.get("start"), s.get("end"), s.get("breakdown", "_total"),
-                     s.get("basis"), s.get("publisher"))
+                     s.get("basis"), s.get("publisher"), s.get("entity"))
     if not r.get("held") or len(r["rows"]) != 1:
         raise LookupError(f"expected one row for {s}, got {r.get('answer') or len(r.get('rows', []))}")
     return r["rows"][0]
@@ -29,7 +29,7 @@ def run(t, q):
     tool, check, exp = q["tool"], q["check"], q["expected"]
     if tool == "get_series":
         res = t.get_series(a["indicator"], a["geo"], a.get("start"), a.get("end"), a.get("breakdown", "_total"),
-                           a.get("basis"), a.get("publisher"))
+                           a.get("basis"), a.get("publisher"), a.get("entity"))
     elif tool == "derive_chain":
         res = t.derive(a["operation"], one(t, a["a"])["obs_id"], one(t, a["b"])["obs_id"])
     elif tool == "explain_chain":
