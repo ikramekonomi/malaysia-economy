@@ -380,17 +380,20 @@ class Tools:
                      "governments under supply vote B.11 programme 020000 (petroleum duty compensation and the "
                      "transfer-money refund to Sabah and Sarawak jointly, the Concurrent List grants and state road "
                      "slope maintenance to the state governments, street lighting to the local authorities, the "
-                     "special and road grants to the Federal Territories' administrations, under B.06 from FY2024). "
-                     "NOT loaded: the Federal Territories' grants in FY2018 (not found under B.11 or B.06), the "
-                     "payments by name to Perbadanan Putrajaya, Perbadanan Labuan and Dewan Bandaraya Kuala Lumpur "
-                     "(B.32, later B.06) and the housing and local government ministry's local-government lines, "
+                     "special and road grants to the Federal Territories' administrations, under B.06 from FY2024), and "
+                     "the grants by name to Perbadanan Putrajaya, Perbadanan Labuan and Dewan Bandaraya Kuala Lumpur "
+                     "(B.32, from FY2023 B.06). NOT loaded: the Federal Territories' class grants in FY2018 (not "
+                     "found under B.11 or B.06), the territories ministry's lines tagged with an administration "
+                     "(DBKL, PL) or naming a territory but not stated as a grant to it, the housing and local government ministry's local-government lines "
+                     "(recipient not stated), "
                      "development grants and federal projects in a state, and money paid by ministries to state "
                      "agencies. So the flows here are a floor, not what a place received.")
 
     def get_flows(self, to=None, frm=None, start=None, end=None):
         """Money the payer's accounts show moving to a recipient (fact_money_flow). to / frm: a state (MY-12), a
         Federal Territory (MY-14), MY (the federal government), an entity_id, or a group recipient
-        ('state_governments', 'local_authorities', 'sabah_sarawak', 'federal_territories');
+        ('state_governments', 'local_authorities', 'sabah_sarawak', 'federal_territories') or a territory
+        administration ('perbadanan_putrajaya', 'perbadanan_labuan', 'dbkl');
         start / end: whole years (2020). 'flows' are the grants to the recipient BY NAME; for a state,
         'not_split_by_state' lists the class grants of those years, which every state shares in but the federal
         accounts do not divide. Read 'coverage' before adding anything up: the slice held is a floor."""
@@ -411,7 +414,8 @@ class Tools:
             if x is None:
                 return None
             x = str(x).strip()
-            grp = {c["entity_id"] for c in self.w.entity_codes if c["code_system"] == "group" and c["code"] == x.lower()}
+            grp = {c["entity_id"] for c in self.w.entity_codes
+                   if c["code_system"] in ("group", "local_authority") and c["code"] == x.lower()}
             if grp:
                 return grp
             r = self.get_entity(x)
@@ -423,11 +427,11 @@ class Tools:
         if to is not None and re.fullmatch(r"MY-1[456]", str(to).strip().upper()):
             ft, to = str(to).strip().upper(), None
         to_ids, frm_ids = ids(to), ids(frm)
-        if ft:
-            to_ids = set()
+        if ft:  # the territory's own administration, paid by name (Perbadanan Putrajaya, Perbadanan Labuan, DBKL)
+            to_ids = {f["to_entity_id"] for f in self.w.flows if f["geo_code"] == ft and f["geo_method"] == "stated"}
         if (to is not None and not to_ids) or (frm is not None and not frm_ids):
             return {"held": False, "answer": f"unknown recipient or payer: {to if to is not None and not to_ids else frm} "
-                    "(use MY-01 ... MY-16, MY, an entity_id, or a group: state_governments, local_authorities, sabah_sarawak, federal_territories)",
+                    "(use MY-01 ... MY-16, MY, an entity_id, a group (state_governments, local_authorities, sabah_sarawak, federal_territories) or a territory administration (perbadanan_putrajaya, perbadanan_labuan, dbkl))",
                     "release_id": self.w.release_id}
 
         def keep(f, want_to=True):
@@ -471,12 +475,11 @@ class Tools:
             out["answer"] = ("these are paid to a class or to several bodies together: the federal accounts do not say "
                              "how much each member received, so no amount here is one body's money")
         if ft:
-            out["answer"] = (f"{ft} is a Federal Territory: it has no state government, so no grant is paid to it by "
-                             "name here; the grants under not_split_by_state are paid to the Federal Territories' "
+            out["answer"] = (f"{ft} is a Federal Territory: it has no state government; 'flows' are the grants paid by "
+                             "name to its administration; the grants under not_split_by_state are paid to the Federal Territories' "
                              "administrations as a class, not divided by territory (the local-authority grants are "
-                             "not counted for the territories: nothing in the accounts shows them receiving them), and "
-                             "the payments by name to its administration are not loaded yet (see coverage): do not add "
-                             "them up as what this territory received")
+                             "not counted for the territories: nothing in the accounts shows them receiving them): do "
+                             "not add the two up as what this territory received (see coverage)")
             out["not_split_by_state"] = {"note": "grants to a class this territory belongs to; its share is not in the "
                                                  "federal accounts",
                                          "flows": [cite(f) for f in sorted(cls, key=lambda f: (f["period_code"], f["purpose"]))]}

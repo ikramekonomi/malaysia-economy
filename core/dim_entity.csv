@@ -62,3 +62,6 @@ E000060,group,Kerajaan-kerajaan Negeri,"State governments (all 13, as a class)",
 E000061,group,Pihak Berkuasa Tempatan,Local authorities (as a class),,local_gov,,12,confirmed
 E000062,group,Kerajaan Negeri Sabah dan Sarawak,Sabah and Sarawak state governments (jointly),,state_gov,,12,confirmed
 E000063,group,Pentadbiran Wilayah Persekutuan,Federal Territory administrations (as a class),,local_gov,,12,confirmed
+E000064,local_authority,Perbadanan Putrajaya,Putrajaya Corporation,E000063,local_gov,,12,confirmed
+E000065,local_authority,Perbadanan Labuan,Labuan Corporation,E000063,local_gov,,12,confirmed
+E000066,local_authority,Dewan Bandaraya Kuala Lumpur,Kuala Lumpur City Hall,E000063,local_gov,,12,confirmed

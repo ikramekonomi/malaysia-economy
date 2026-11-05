@@ -196,12 +196,15 @@ Q194,trap_placement,get_flows,class_excludes,Kerajaan Negeri Sabah dan Sarawak,K
 Q195,trap_placement,get_flows,class_includes,Kerajaan Negeri Sabah dan Sarawak,Kerajaan Negeri Sabah dan Sarawak;Kerajaan-kerajaan Negeri;Pihak Berkuasa Tempatan,PASS
 Q196,fact,get_flows,flow_purpose_value:special grant to the Federal Territories,27535230.94,27535230.94,PASS
 Q197,fact,get_flows,flow_purpose_value:special grant to the Federal Territories,28899441.61,28899441.61,PASS
-Q198,trap_placement,get_flows,class_excludes,Pihak Berkuasa Tempatan,Pentadbiran Wilayah Persekutuan,PASS
-Q199,trap_placement,get_flows,field_contains:answer,no amount here is one body,these are paid to a class or to several bodies together: the federal accounts do not say how much ea,PASS
-Q200,trap_missing,get_flows,field_contains:years_not_held,2015,['2015'],PASS
-Q201,trap_placement,get_flows,field_contains:answer,do not add up,these are the grants paid to this state by name; it also shares in the class grants under not_split_,PASS
-Q202,trap_missing,get_flows,field_contains:coverage,B.11,"held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): t",PASS
-Q203,trap_identity,get_flows,field_contains:answer,Federal Territory,"MY-14 is a Federal Territory: it has no state government, so no grant is paid to it by name here; th",PASS
-Q204,trap_incomparable,get_flows,not_held,,"start must be a whole year such as 2020 (flows are annual), got '2020Q1'",PASS
-Q205,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
-Q206,fact,get_flows,caveat,CV25,CV25,PASS
+Q198,fact,get_flows,flow_value,100000000,100000000.0,PASS
+Q199,fact,get_flows,flow_value,43000000,43000000.0,PASS
+Q200,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
+Q201,trap_placement,get_flows,class_excludes,Pihak Berkuasa Tempatan,Pentadbiran Wilayah Persekutuan,PASS
+Q202,trap_placement,get_flows,field_contains:answer,no amount here is one body,these are paid to a class or to several bodies together: the federal accounts do not say how much ea,PASS
+Q203,trap_missing,get_flows,field_contains:years_not_held,2015,['2015'],PASS
+Q204,trap_placement,get_flows,field_contains:answer,do not add up,these are the grants paid to this state by name; it also shares in the class grants under not_split_,PASS
+Q205,trap_missing,get_flows,field_contains:coverage,B.11,"held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): t",PASS
+Q206,trap_identity,get_flows,field_contains:answer,Federal Territory,MY-14 is a Federal Territory: it has no state government; 'flows' are the grants paid by name to its,PASS
+Q207,trap_incomparable,get_flows,not_held,,"start must be a whole year such as 2020 (flows are annual), got '2020Q1'",PASS
+Q208,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
+Q209,fact,get_flows,caveat,CV25,CV25,PASS
