@@ -148,7 +148,7 @@ R7 every file is in the L0 archive,industry_trade,PASS,22 of 22 archived (releas
 R6 licence recorded,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,anggaran_perbelanjaan,PASS,6 file(s)
 R5 every file has a sha256,anggaran_perbelanjaan,PASS,6 files
-R7 every file is in the L0 archive,anggaran_perbelanjaan,OPEN,3 of 6 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,anggaran_perbelanjaan,PASS,6 of 6 archived (release l0-archive or git history)
 R6 licence recorded,anggaran_perbelanjaan,OPEN,licence to_confirm
 R4 held series has files,bnm_msb,PASS,32 file(s)
 R5 every file has a sha256,bnm_msb,PASS,32 files
@@ -212,5 +212,5 @@ R7 every file is in the L0 archive,crime_stats,PASS,1 of 1 archived (release l0-
 R6 licence recorded,crime_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
 R4 held series has files,federal_grants_to_states_actual,PASS,6 file(s)
 R5 every file has a sha256,federal_grants_to_states_actual,PASS,6 files
-R7 every file is in the L0 archive,federal_grants_to_states_actual,OPEN,3 of 6 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,federal_grants_to_states_actual,PASS,6 of 6 archived (release l0-archive or git history)
 R6 licence recorded,federal_grants_to_states_actual,OPEN,licence to_confirm
