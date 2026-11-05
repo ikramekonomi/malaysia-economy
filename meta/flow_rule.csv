@@ -1,11 +1,18 @@
-maksud_code,program_code,aktiviti_code,name_must_contain,to_entity_id,geo_code,geo_method,purpose_en
-T.12,010000,010100,bilangan orang,E000060,,none,capitation grant to the state governments
-T.12,010000,010200,mutu minimum,E000060,,none,"state road maintenance grant, roads at the minimum standard"
-T.12,010000,010300,substandard,E000060,,none,"state road maintenance grant, substandard roads"
-T.12,010000,010400,sehala,E000060,,none,"state road maintenance, one-way roads on tourist islands (the name gives no state; likely concentrated in a few island states, not split)"
-T.12,010000,010500,sarawak,E000014,MY-13,stated,special annual grant to Sarawak
-T.12,010000,010600,sabah,E000013,MY-12,stated,special annual grant to Sabah
-T.12,010000,010700,pertambahan hasil,E000060,,none,revenue growth grant to the state governments
-T.12,010000,010800,berkuasa tempatan,E000061,,none,"annual grant to local authorities, balancing method"
-T.12,010000,010900,selangor,E000011,MY-10,stated,annual payment to Selangor
-T.12,010000,011000,kedah,E000003,MY-02,stated,annual payment to Kedah (RM10.01 million a year from FY2019; renamed with 'dan Sumbangan Khas' from FY2020)
+maksud_code,program_code,aktiviti_code,name_must_contain,name_pattern,to_entity_id,geo_code,geo_method,purpose_en
+T.12,010000,010100,bilangan orang,,E000060,,none,capitation grant to the state governments
+T.12,010000,010200,mutu minimum,,E000060,,none,"state road maintenance grant, roads at the minimum standard"
+T.12,010000,010300,substandard,,E000060,,none,"state road maintenance grant, substandard roads"
+T.12,010000,010400,sehala,,E000060,,none,"state road maintenance, one-way roads on tourist islands (the name gives no state; likely concentrated in a few island states, not split)"
+T.12,010000,010500,sarawak,,E000014,MY-13,stated,special annual grant to Sarawak
+T.12,010000,010600,sabah,,E000013,MY-12,stated,special annual grant to Sabah
+T.12,010000,010700,pertambahan hasil,,E000060,,none,revenue growth grant to the state governments
+T.12,010000,010800,berkuasa tempatan,,E000061,,none,"annual grant to local authorities, balancing method"
+T.12,010000,010900,selangor,,E000011,MY-10,stated,annual payment to Selangor
+T.12,010000,011000,kedah,,E000003,MY-02,stated,annual payment to Kedah (RM10.01 million a year from FY2019; renamed with 'dan Sumbangan Khas' from FY2020)
+B.11,020000,,,petroleum.*sabah dan sarawak,E000062,,none,compensation to Sabah and Sarawak for the abolition of import and excise duties on petroleum products (paid to the two states together)
+B.11,020000,,,bayaran balik kepada sarawak dan sabah,E000062,,none,refund to Sarawak and Sabah on transfer money and financial obligations (paid to the two states together)
+B.11,020000,,,senarai bersama,E000060,,none,"grants under the Concurrent List (federal-state shared responsibilities; recorded as received by state governments, e.g. Kedah's 'Pemberian ... Jabatan di Bawah Senarai Bersama')"
+B.11,020000,,,cerun jalan raya negeri,E000060,,none,state road slope maintenance grant
+B.11,020000,,,bil lampu kepada pbt,E000061,,none,street-lighting bill assistance to local authorities
+B.11,020000,,,pemberian khas kepada wilayah persekutuan,E000063,,none,special grant to the Federal Territories
+B.11,020000,,,penyelenggaraan jalan ?raya kepada wilayah persekutuan,E000063,,none,road maintenance grant to the Federal Territories

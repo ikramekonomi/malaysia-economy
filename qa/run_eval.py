@@ -117,6 +117,13 @@ def run(t, q):
     if check == "flow_value":
         fl = res.get("flows", [])
         return len(fl) == 1 and Decimal(fl[0]["amount"]) == Decimal(exp), ";".join(f["amount"] for f in fl)
+    if check.startswith("flow_purpose_value:"):
+        want = check.split(":", 1)[1]
+        fl = [f for f in res.get("flows", []) if want in f["purpose"]]
+        return len(fl) == 1 and Decimal(fl[0]["amount"]) == Decimal(exp), ";".join(f["amount"] for f in fl)
+    if check in ("class_includes", "class_excludes"):
+        names = {f["to_name"] for f in res.get("not_split_by_state", {}).get("flows", [])}
+        return (exp in names) == (check == "class_includes"), ";".join(sorted(names))
     if check == "flow_count":
         return str(len(res.get("flows", []))) == exp, str(len(res.get("flows", [])))
     if check == "class_flow_count":

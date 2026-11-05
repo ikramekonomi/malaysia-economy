@@ -1,8 +1,12 @@
 check,scope,status,detail
-F1 every T.12 programme 010000 activity has a recipient rule (meta/flow_rule.csv),fact_money_flow,PASS,140 flows
+F1 every T.12 programme 010000 activity has a recipient rule (meta/flow_rule.csv),fact_money_flow,PASS,140 T.12 flows
 F2 the printed activity name matches its rule (the code has not moved),fact_money_flow,PASS,ok
 "F3 a year's flows equal T.12 programme 010000's printed JUMLAH, to the sen",fact_money_flow,PASS,14 years
 F4 every flow's entities are registered (core/dim_entity.csv),fact_money_flow,PASS,ok
 F5 the grants stay inside the T.12 head's audited total in core,fact_money_flow,PASS,"14 years, grants <= T.12 head every year"
 "F7 each activity prints one object line, equal to its JUMLAH (so the JUMLAH is the leaf)",fact_money_flow,PASS,"140 activities, all single-leaf"
+"F8 a B.11 name rule matches at most one activity a year, and an activity at most one rule",fact_money_flow,PASS,94 B.11 flows
+"F9 each B.11 grant prints exactly one 40000 (Pemberian dan Kenaan Bayaran Tetap) line, the flow's amount",fact_money_flow,PASS,"94 activities; other object lines left out: [""FY2017 020700 [('20000', '1023900.0')] (not paid to the recipient; not in the flow)"", ""FY2017 020800 [('20000', '871808.37')] (not paid to the recipient; not in the flow)""]"
+"F10 years in which a B.11 grant is not printed (INFO: grants start, stop or are renamed)",fact_money_flow,INFO,"special grant to the Federal Territories: ['2018', '2024']; road maintenance grant to the Federal Territories: ['2018', '2024']"
+F11 B.11 activities naming a state or territory that are NOT loaded (declared),fact_money_flow,INFO,"interest subsidy on Syarikat Kemajuan Perumahan Borneo (Sabah) loans (paid on a company's loans, not to a government); the World Bank Group / IsDB offices in Kuala Lumpur (not a state)"
 F6 years not loaded (declared),fact_money_flow,INFO,"FY2009: no activity tier in the FY2009 presentation; FY2015: image-only scan: activity codes misaligned, leaf amounts OCR-provisional"

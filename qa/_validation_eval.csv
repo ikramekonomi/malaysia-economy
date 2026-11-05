@@ -185,14 +185,20 @@ Q183,trap_incomparable,derive_chain,refused,one basis,growth compares one basis 
 Q184,fact,get_series,value,33951697947,33951697947,PASS
 Q185,fact,get_flows,flow_value,306000000,306000000.0,PASS
 Q186,fact,get_flows,flow_value,16000000,16000000.0,PASS
-Q187,fact,get_flows,flow_value,308412080.22,308412080.22,PASS
+Q187,fact,get_flows,flow_purpose_value:annual grant to local authorities,308412080.22,308412080.22,PASS
 Q188,trap_placement,get_flows,flow_geo,_unallocated,_unallocated,PASS
 Q189,trap_placement,get_flows,flow_count,0,0,PASS
-Q190,trap_placement,get_flows,class_flow_count,6,6,PASS
-Q191,trap_missing,get_flows,field_contains:years_not_held,2015,['2015'],PASS
-Q192,trap_placement,get_flows,field_contains:answer,do not add up,these are the grants paid to this state by name; it also shares in the class grants under not_split_,PASS
-Q193,trap_missing,get_flows,field_contains:coverage,B.11,"held: the federal grants and assignments to the states paid under Tanggungan T.12 (PKKP, audited), F",PASS
-Q194,trap_identity,get_flows,field_contains:answer,Federal Territory,MY-14 is a Federal Territory: it has no state government and receives no T.12 grant; the federal gra,PASS
-Q195,trap_incomparable,get_flows,not_held,,"start must be a whole year such as 2020 (flows are annual), got '2020Q1'",PASS
-Q196,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
-Q197,fact,get_flows,caveat,CV25,CV25,PASS
+Q190,trap_placement,get_flows,class_flow_count,9,9,PASS
+Q191,fact,get_flows,flow_purpose_value:compensation to Sabah and Sarawak,240000000,240000000.0,PASS
+Q192,fact,get_flows,flow_purpose_value:grants under the Concurrent List,858610105.88,858610105.88,PASS
+Q193,fact,get_flows,flow_purpose_value:grants under the Concurrent List,723707264.89,723707264.89,PASS
+Q194,trap_placement,get_flows,class_excludes,Kerajaan Negeri Sabah dan Sarawak,Kerajaan-kerajaan Negeri;Pihak Berkuasa Tempatan,PASS
+Q195,trap_placement,get_flows,class_includes,Kerajaan Negeri Sabah dan Sarawak,Kerajaan Negeri Sabah dan Sarawak;Kerajaan-kerajaan Negeri;Pihak Berkuasa Tempatan,PASS
+Q196,fact,get_flows,flow_purpose_value:special grant to the Federal Territories,27535230.94,27535230.94,PASS
+Q197,trap_missing,get_flows,field_contains:years_not_held,2015,['2015'],PASS
+Q198,trap_placement,get_flows,field_contains:answer,do not add up,these are the grants paid to this state by name; it also shares in the class grants under not_split_,PASS
+Q199,trap_missing,get_flows,field_contains:coverage,B.11,"held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): t",PASS
+Q200,trap_identity,get_flows,field_contains:answer,Federal Territory,"MY-14 is a Federal Territory: it has no state government, so no grant is paid to it by name; the gra",PASS
+Q201,trap_incomparable,get_flows,not_held,,"start must be a whole year such as 2020 (flows are annual), got '2020Q1'",PASS
+Q202,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
+Q203,fact,get_flows,caveat,CV25,CV25,PASS
