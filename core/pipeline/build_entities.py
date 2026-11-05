@@ -200,11 +200,23 @@ def main():
         if y not in printed:
             first, spent = {}, defaultdict(float)
             p = os.path.join(REPO, "sources", "pkkp", "data", str(y), "fact_opex_detail.csv")
-            for r in (rows(p) if os.path.exists(p) else []):
+            det = rows(p) if os.path.exists(p) else []
+            # leaf rows: an activity's object lines; a programme's own object lines only where it has no
+            # activities (FY2009). From FY2010 a programme with activities also prints object_program rows
+            # that repeat its activities' lines, so summing both counts it twice (verifier, second pass)
+            with_act = {(r["maksud_code"], r["program_code"]) for r in det if r["row_type"] == "object_aktiviti"}
+            for r in det:
+                leaf = r["row_type"] == "object_aktiviti" or (
+                    r["row_type"] == "object_program" and (r["maksud_code"], r["program_code"]) not in with_act)
                 for n in {key(r["program_name_bm"]), key(r["aktiviti_name_bm"])} - {""}:
                     first.setdefault((r["maksud_code"], n), r)
-                    if r["row_type"] in ("object_aktiviti", "object_program") and r["sebenar_rm"].strip():
+                    if leaf and r["sebenar_rm"].strip():
                         spent[(r["maksud_code"], n)] += float(r["sebenar_rm"])
+            # level=vote evidence: the vote itself as printed in the ministry-level table (used only where the
+            # volume's activity names are OCR-provisional, FY2015)
+            p = os.path.join(REPO, "sources", "pkkp", "data", str(y), "fact_opex_maksud.csv")
+            for r in (rows(p) if os.path.exists(p) else []):
+                first.setdefault(("vote", r["maksud_code"], key(r["maksud_name_bm"])), r)
             printed[y] = (first, spent)
         return printed[y]
 
@@ -233,8 +245,11 @@ def main():
             e9.append(f"{tag}: side/year (want {sorted(ok_y)})")
         if br.resolve("maksud_bekalan", e["maksud_code"], y) != [want_e]:
             e9.append(f"{tag}: code names {br.resolve('maksud_bekalan', e['maksud_code'], y)} not {want_e}")
+        level = e.get("level") or "activity"
+        if level not in ("activity", "vote") or level == "vote" and (e["side"] != "to" or not L["note"].strip()):
+            e9.append(f"{tag}: level {level!r} (vote level only for a 'to' line, explained in the note)")
         k = (e["maksud_code"], key(e["printed_name"]))
-        hit = vol(y)[0].get(k)
+        hit = vol(y)[0].get(("vote",) + k if level == "vote" else k)
         if not hit:
             e9.append(f"{tag}: not printed")
             continue
@@ -244,7 +259,7 @@ def main():
             old_fy = "" if v is None else f"{v:.2f}"
             if v and L["moved_mid_year"] != "yes":
                 e9.append(f"{tag}: old vote still spent {v:,.2f} on it in {fy} (not declared moved_mid_year)")
-        if e["side"] == "to" and fy - 1 in held:
+        if e["side"] == "to" and fy - 1 in held and level == "activity":
             v = vol(fy - 1)[1].get(k)
             new_prev = "" if v is None else f"{v:.2f}"
             back = any(x["from_entity_id"] == L["to_entity_id"] and x["to_entity_id"] == L["from_entity_id"]
@@ -252,7 +267,7 @@ def main():
             if v and not back:
                 e9.append(f"{tag}: new vote already spent {v:,.2f} on it in {fy - 1} (the move began earlier)")
         ev_out.append(dict(lineage_id=e["lineage_id"], side=e["side"], year=y, maksud_code=e["maksud_code"],
-                           entity_id=want_e, printed_name=e["printed_name"], source_file=hit["source_file"],
+                           entity_id=want_e, level=level, printed_name=e["printed_name"], source_file=hit["source_file"],
                            pdf_page=hit["pdf_page"], printed_page=hit["printed_page"],
                            old_vote_actual_rm_in_first_year=old_fy, new_vote_actual_rm_year_before=new_prev))
     for r in lin:

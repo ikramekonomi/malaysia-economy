@@ -360,6 +360,17 @@ class Tools:
                         and not c.get("scope") and c["valid_from"] and c["valid_to"]]
                 prev = max((c for c in runs if int(c["valid_to"]) < y), key=lambda c: int(c["valid_to"]), default=None)
                 nxt = min((c for c in runs if int(c["valid_from"]) > y), key=lambda c: int(c["valid_from"]), default=None)
+
+                def other_runs(eid):
+                    return [c for c in self.w.entity_codes if c["entity_id"] == eid and c["code_system"] == system
+                            and not c.get("scope") and c["valid_from"] and c["valid_to"]]
+                # a body renumbered across the lapse (B.49 to 2013, B.64 from 2015): its run under its other code
+                if nxt and not prev:
+                    prev = max((c for c in other_runs(nxt["entity_id"]) if int(c["valid_to"]) < y),
+                               key=lambda c: int(c["valid_to"]), default=None)
+                if prev and not nxt:
+                    nxt = min((c for c in other_runs(prev["entity_id"]) if int(c["valid_from"]) > y),
+                              key=lambda c: int(c["valid_from"]), default=None)
                 # the moves out of the body before (from its last printed year) and into the body after
                 links = [r for r in self.w.entity_lineage if prev and nxt and (
                     r["from_entity_id"] == prev["entity_id"] and int(prev["valid_to"]) <= int(r["first_year"]) <= y
@@ -419,14 +430,14 @@ class Tools:
             res["answer"] = (f"{code} named {len(out)} different bodies over time; give the year to pick one")
         return res
 
-    LINEAGE_NOTE = ("a lineage link (decision D28) says that named work printed under one body's vote in one year is "
-                    "printed under another body's vote the next year; the evidence names the printed programme or "
-                    "activity and its PDF page. It is a link between two bodies, never one body: the two bodies' "
+    LINEAGE_NOTE = ("a lineage link (decision D28) says that named work printed under one body's vote is printed under "
+                    "another body's vote from 'first_year' (in the same year for a move made during the year); the "
+                    "evidence names the printed programme or activity and its PDF page (level 'vote': the vote itself, "
+                    "used only where the volume's activity names are OCR-provisional). It is a link between two bodies, never one body: the two bodies' "
                     "spending covers different work, so a series joined across a link changes scope (compare the "
                     "named activities, not the vote totals). A move made during the year (moved_mid_year) splits that "
                     "year's spending between both votes. Links are recorded only at the vote lapses and the moves "
-                    "that led to them; not every move between ministries is listed. 'first_year' is the first year the new body's vote "
-                    "prints the work.")
+                    "that led to them; not every move between ministries is listed.")
 
     FLOW_COVERAGE = ("held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): "
                      "the federal grants and assignments to the states under Tanggungan T.12, and the grants to "

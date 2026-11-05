@@ -227,12 +227,13 @@ state governments, 45 federal votes), `meta/entity_code.csv` (99 dated codes wit
 `core/bridge_entity_code.csv`, `core/entity_name.csv` (`core/pipeline/build_entities.py`, checks E1-E10).
 B.15, B.26 and B.33 each name two bodies, split at a lapse; a person confirmed them as six separate bodies
 (D28, 2026-11-05). Where their work went in the lapse years is **lineage**, a link between bodies, never one
-ID: `meta/entity_lineage.csv` (14 links) with `meta/entity_lineage_evidence.csv` (63 printed programme or
+ID: `meta/entity_lineage.csv` (15 links) with `meta/entity_lineage_evidence.csv` (66 printed programme or
 activity lines, re-found in PKKP L1 on every build; the move year tested on both votes' actual spending, so a
 move made during a year is declared `moved_mid_year`, E9) -> `core/entity_lineage.csv`; every reused vote code
 is reachable through lineage (E10), and `get_entity` returns it, also for a year inside a lapse.
 Higher Education (one entity under B.49 and B.64, linked by an earlier analyst rule) has lineage for its
-FY2013 and FY2019 moves into Education; its identity across those gaps was not re-decided under D28.
+moves into Education (FY2013, FY2019) and back (FY2015, FY2020); its identity across those gaps was not
+re-decided under D28.
 
 A state *as a place* (`dim_geo MY-03`) and a state *as a government* (an entity with code `MY-03`
 in `code_system = state_gov`) are different rows. Spending by Kelantan's government is not

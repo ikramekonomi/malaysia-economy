@@ -28,5 +28,25 @@ Confirmed correct: L03, L06, L07, L08 as described; environment stays under B.23
 "P.15 printed to 2021", "P.33 to 2023"; every answer about B.15, B.26 and B.33 warns that the code was also held
 by a different body.
 
-After the fixes: 14 links, 63 evidence lines, E1-E10 PASS, 234 eval questions pass, offline suite 22 known
+## Second pass (14 links, 63 evidence lines)
+
+All 14 links re-derived from L1 leaf rows; 28 printed pages checked (FY2009, 2013, 2017, 2018, 2019, 2022,
+2023, 2024; the 2013 and 2019 volumes fetched from the archive, sha256 matched; FY2020 on L1 only). Every
+evidence line is printed under its code, year and body; every first_year and moved_mid_year matches both votes'
+actual spending; every amount in the notes matches the page; each link points to the main destination. No wrong
+link or wrong year.
+
+| # | Finding | Severity | Done |
+|---|---|---|---|
+| 1 | `old_vote_actual_rm_in_first_year` for L06 'Pembangunan Koperasi' was 91,217,918.92, twice the printed programme total 45,608,959.46: from FY2010 a programme with activities also prints object_program rows that repeat its activities | high (derived amount) | spending sums an activity's object lines, and a programme's own object lines only where it has no activities; now 45,608,959.46 (p143-144) |
+| 2 | Higher Education's FY2015 return to B.64 has no link, so Education reads as holding the universities 2013-2019; `get_entity('B.64', 2014)` gave no pointer | medium | L15 (B.41 to B.64, 2015): the new vote's side is the vote itself (`level=vote`, ministry-level table p68, RM12.23bn), because FY2015 activity names are OCR-provisional; a lapse across two codes of one body (B.49, B.64) now returns its links |
+| 3 | B.26's other FY2009 lines (RM265m, mostly DASAR BARU) are not traced | low | the L04 note already says so |
+| 4 | the tool's reading note said "the next year", wrong for mid-year links | medium | reworded: from first_year, the same year for a mid-year move |
+| 5 | D28 stated the year-before rule with no exception, which L10 (MARA returning) breaks as written | low | the exception is written into D28 |
+| 6 | D28's rationale said B.23 held "water, energy and environment" from B.33; energy was B.23's own | low | corrected |
+| 7 | smaller FY2018 moves into B.15 (Malaysia-Japan programme, LADA, TERAJU, MPRC) not linked; L01 and L09 cover about 91% | low | stated in the L09 note |
+| 8 | L04/L05 cannot be tested against FY2008 (not held) | low | stated in their notes |
+| 9 | the brief named object_program as a leaf | medium (method) | the root of #1, fixed there |
+
+After the fixes: 15 links, 66 evidence lines, E1-E10 PASS, 235 eval questions pass, offline suite 22 known
 FAILs (no new).

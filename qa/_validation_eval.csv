@@ -161,75 +161,76 @@ Q159,trap_identity,get_entity,lineage_went_to,E000036,"E000036,E000033",PASS
 Q160,trap_identity,get_entity,lineage_went_to,E000034,E000034,PASS
 Q161,trap_identity,get_entity,lineage_came_from,E000034,E000034,PASS
 Q162,trap_identity,get_entity,lapse_link,L02,"L02,L03,L11",PASS
-Q163,trap_identity,get_entity,lineage_first_year:L02,2020,2020,PASS
-Q164,trap_identity,get_entity,lineage_mid_year,True,True,PASS
-Q165,trap_identity,entity_same,same_entity,different,"different ['E000037', 'E000038']",PASS
-Q166,trap_identity,get_entity,entity_count,2,2,PASS
-Q167,trap_identity,get_entity,not_held,,"T.13 is a spending head, not a body: Tanggungan (charged expenditure under the Federal Constitution, not voted by Parliament): a spending head, not a body; observations carry entity = the federal government and breakdown charged_head=T.13",PASS
-Q168,trap_missing,get_entity,not_held,,no body held B.99 in 2020 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
-Q169,fact,get_entity,entity_field:gfs_sector,state_gov,state_gov,PASS
-Q170,fact,get_series,field_contains:entity_name,Kelantan,Kerajaan Negeri Kelantan,PASS
-Q171,fact,get_series,value,33951697947,33951697947,PASS
-Q172,fact,get_series,value,35150181800,35150181800,PASS
-Q173,fact,get_series,value,42765244711,42765244711,PASS
-Q174,fact,get_series,value,50481359234,50481359234,PASS
-Q175,fact,get_series,value,4682466910.01,4682466910.01,PASS
-Q176,fact,get_series,value,39775712300,39775712300,PASS
-Q177,fact,get_series,caveat,CV22,"CV23,CV22,COVERAGE",PASS
-Q178,fact,get_series,caveat,CV23,"CV23,COVERAGE",PASS
-Q179,fact,get_series,caveat,CV21,"CV21,CV23,COVERAGE",PASS
-Q180,fact,get_series,caveat,CV17,"CV17,CV23,COVERAGE",PASS
-Q181,fact,derive_chain,value,-1198483853,-1198483853,PASS
-Q182,trap_identity,get_series,not_held,,"T.13 is a spending head, not a body: ask for breakdown='charged_head=T.13' (its entity is the federal government)",PASS
-Q183,trap_identity,derive_chain,refused,one body with itself,growth compares one body with itself; got E000029 -> E000030 (a vote code can name different bodies in different years: see get_entity),PASS
-Q184,trap_incomparable,derive_chain,refused,same book,each Anggaran book restates past years to its own votes (caveat CV22): take both years from the same book,PASS
-Q185,trap_identity,get_series,value,546967589,546967589,PASS
-Q186,trap_identity,get_entity,not_held,,no body held B.64 in 2019 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books); the code is in a lapse of E000056's vote: 'lineage' says where the work was printed in the meantime,PASS
-Q187,trap_identity,get_entity,not_held,,no body held B.32 in 2024 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
-Q188,fact,get_series,value,54700000500,54700000500,PASS
-Q189,fact,get_series,caveat,CV17,"CV17,CV23,COVERAGE",PASS
-Q190,trap_source_defect,get_series,field:reliability,low,low,PASS
-Q191,fact,derive_chain,caveat,CV24,"CV17,CV23,CV24",PASS
-Q192,trap_incomparable,derive_chain,refused,one basis,growth compares one basis with itself; got budget_estimate -> audited. For budget against outcome in one year use derive('difference'),PASS
-Q193,fact,get_series,value,33951697947,33951697947,PASS
-Q194,fact,get_flows,flow_value,306000000,306000000.0,PASS
-Q195,fact,get_flows,flow_value,16000000,16000000.0,PASS
-Q196,fact,get_flows,flow_purpose_value:annual grant to local authorities,308412080.22,308412080.22,PASS
-Q197,trap_placement,get_flows,flow_geo,_unallocated,_unallocated,PASS
-Q198,trap_placement,get_flows,flow_count,0,0,PASS
-Q199,trap_placement,get_flows,class_flow_count,9,9,PASS
-Q200,fact,get_flows,flow_purpose_value:compensation to Sabah and Sarawak,240000000,240000000.0,PASS
-Q201,fact,get_flows,flow_purpose_value:grants under the Concurrent List,858610105.88,858610105.88,PASS
-Q202,fact,get_flows,flow_purpose_value:grants under the Concurrent List,723707264.89,723707264.89,PASS
-Q203,trap_placement,get_flows,class_excludes,Kerajaan Negeri Sabah dan Sarawak,Kerajaan-kerajaan Negeri;Pihak Berkuasa Tempatan,PASS
-Q204,trap_placement,get_flows,class_includes,Kerajaan Negeri Sabah dan Sarawak,Kerajaan Negeri Sabah dan Sarawak;Kerajaan-kerajaan Negeri;Pihak Berkuasa Tempatan,PASS
-Q205,fact,get_flows,flow_purpose_value:special grant to the Federal Territories,27535230.94,27535230.94,PASS
-Q206,fact,get_flows,flow_purpose_value:special grant to the Federal Territories,28899441.61,28899441.61,PASS
-Q207,fact,get_flows,flow_value,100000000,100000000.0,PASS
-Q208,fact,get_flows,flow_value,43000000,43000000.0,PASS
-Q209,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
-Q210,trap_placement,get_flows,class_excludes,Pihak Berkuasa Tempatan,Pentadbiran Wilayah Persekutuan,PASS
-Q211,trap_placement,get_flows,field_contains:answer,no amount here is one body,these are paid to a class or to several bodies together: the federal accounts do not say how much ea,PASS
-Q212,trap_missing,get_flows,field_contains:years_not_held,2015,['2015'],PASS
-Q213,trap_placement,get_flows,field_contains:answer,do not add up,these are the grants paid to this state by name; it also shares in the class grants under not_split_,PASS
-Q214,trap_missing,get_flows,field_contains:coverage,B.11,"held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): t",PASS
-Q215,trap_identity,get_flows,field_contains:answer,Federal Territory,MY-14 is a Federal Territory: it has no state government; 'flows' are the grants paid by name to its,PASS
-Q216,trap_incomparable,get_flows,not_held,,"start must be a whole year such as 2020 (flows are annual), got '2020Q1'",PASS
-Q217,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
-Q218,fact,get_flows,caveat,CV25,CV25,PASS
-Q219,fact,get_gap_view,field:state_recorded_rm,37510000,37510000,PASS
-Q220,trap_restatement,get_gap_view,field:printings_agree,false,false,PASS
-Q221,fact,get_gap_view,field:federal_paid_rm,747898822.81,747898822.81,PASS
-Q222,trap_placement,get_gap_view,field:comparison,share_of_class_total,share_of_class_total,PASS
-Q223,trap_missing,get_gap_view,field:status,state_not_printed,state_not_printed,PASS
-Q224,fact,get_gap_view,field:status,consistent,consistent,PASS
-Q225,trap_identity,get_gap_view,field:status,no_state_government,no_state_government,PASS
-Q226,trap_missing,get_gap_view,field:status,federal_not_held,federal_not_held,PASS
-Q227,trap_incomparable,get_gap_view,not_held,,"unknown transfer 'roads': use capitation, concurrent_list, named or loans",PASS
-Q228,trap_missing,get_gap_view,field_contains:how_to_read,is not zero,"Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts",PASS
-Q229,fact,get_gap_view,field:federal_paid_rm,926834078.11,926834078.11,PASS
-Q230,fact,get_gap_view,field:status,agree,agree,PASS
-Q231,trap_placement,get_gap_view,field_contains:note,lenders other than the federal government,"the state's debt table also prints lenders other than the federal government (Bon Terbitan 1,000.00)",PASS
-Q232,trap_identity,get_gap_view,field:status,no_state_government,no_state_government,PASS
-Q233,fact,get_gap_view,field:status,agree_after_other_lenders,agree_after_other_lenders,PASS
-Q234,trap_restatement,get_gap_view,field_contains:note,conversion of RM162.72 juta of loans into grants,Melaka's report explains its debt fell because the Ministry of Finance approved a write-off of RM10.,PASS
+Q163,trap_identity,get_entity,lapse_link,L15,"L12,L15",PASS
+Q164,trap_identity,get_entity,lineage_first_year:L02,2020,2020,PASS
+Q165,trap_identity,get_entity,lineage_mid_year,True,True,PASS
+Q166,trap_identity,entity_same,same_entity,different,"different ['E000037', 'E000038']",PASS
+Q167,trap_identity,get_entity,entity_count,2,2,PASS
+Q168,trap_identity,get_entity,not_held,,"T.13 is a spending head, not a body: Tanggungan (charged expenditure under the Federal Constitution, not voted by Parliament): a spending head, not a body; observations carry entity = the federal government and breakdown charged_head=T.13",PASS
+Q169,trap_missing,get_entity,not_held,,no body held B.99 in 2020 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
+Q170,fact,get_entity,entity_field:gfs_sector,state_gov,state_gov,PASS
+Q171,fact,get_series,field_contains:entity_name,Kelantan,Kerajaan Negeri Kelantan,PASS
+Q172,fact,get_series,value,33951697947,33951697947,PASS
+Q173,fact,get_series,value,35150181800,35150181800,PASS
+Q174,fact,get_series,value,42765244711,42765244711,PASS
+Q175,fact,get_series,value,50481359234,50481359234,PASS
+Q176,fact,get_series,value,4682466910.01,4682466910.01,PASS
+Q177,fact,get_series,value,39775712300,39775712300,PASS
+Q178,fact,get_series,caveat,CV22,"CV23,CV22,COVERAGE",PASS
+Q179,fact,get_series,caveat,CV23,"CV23,COVERAGE",PASS
+Q180,fact,get_series,caveat,CV21,"CV21,CV23,COVERAGE",PASS
+Q181,fact,get_series,caveat,CV17,"CV17,CV23,COVERAGE",PASS
+Q182,fact,derive_chain,value,-1198483853,-1198483853,PASS
+Q183,trap_identity,get_series,not_held,,"T.13 is a spending head, not a body: ask for breakdown='charged_head=T.13' (its entity is the federal government)",PASS
+Q184,trap_identity,derive_chain,refused,one body with itself,growth compares one body with itself; got E000029 -> E000030 (a vote code can name different bodies in different years: see get_entity),PASS
+Q185,trap_incomparable,derive_chain,refused,same book,each Anggaran book restates past years to its own votes (caveat CV22): take both years from the same book,PASS
+Q186,trap_identity,get_series,value,546967589,546967589,PASS
+Q187,trap_identity,get_entity,not_held,,no body held B.64 in 2019 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books); the code is in a lapse of E000056's vote: 'lineage' says where the work was printed in the meantime,PASS
+Q188,trap_identity,get_entity,not_held,,no body held B.32 in 2024 (votes are held for PKKP FY2009-2024 and the Anggaran 2024-2026 books),PASS
+Q189,fact,get_series,value,54700000500,54700000500,PASS
+Q190,fact,get_series,caveat,CV17,"CV17,CV23,COVERAGE",PASS
+Q191,trap_source_defect,get_series,field:reliability,low,low,PASS
+Q192,fact,derive_chain,caveat,CV24,"CV17,CV23,CV24",PASS
+Q193,trap_incomparable,derive_chain,refused,one basis,growth compares one basis with itself; got budget_estimate -> audited. For budget against outcome in one year use derive('difference'),PASS
+Q194,fact,get_series,value,33951697947,33951697947,PASS
+Q195,fact,get_flows,flow_value,306000000,306000000.0,PASS
+Q196,fact,get_flows,flow_value,16000000,16000000.0,PASS
+Q197,fact,get_flows,flow_purpose_value:annual grant to local authorities,308412080.22,308412080.22,PASS
+Q198,trap_placement,get_flows,flow_geo,_unallocated,_unallocated,PASS
+Q199,trap_placement,get_flows,flow_count,0,0,PASS
+Q200,trap_placement,get_flows,class_flow_count,9,9,PASS
+Q201,fact,get_flows,flow_purpose_value:compensation to Sabah and Sarawak,240000000,240000000.0,PASS
+Q202,fact,get_flows,flow_purpose_value:grants under the Concurrent List,858610105.88,858610105.88,PASS
+Q203,fact,get_flows,flow_purpose_value:grants under the Concurrent List,723707264.89,723707264.89,PASS
+Q204,trap_placement,get_flows,class_excludes,Kerajaan Negeri Sabah dan Sarawak,Kerajaan-kerajaan Negeri;Pihak Berkuasa Tempatan,PASS
+Q205,trap_placement,get_flows,class_includes,Kerajaan Negeri Sabah dan Sarawak,Kerajaan Negeri Sabah dan Sarawak;Kerajaan-kerajaan Negeri;Pihak Berkuasa Tempatan,PASS
+Q206,fact,get_flows,flow_purpose_value:special grant to the Federal Territories,27535230.94,27535230.94,PASS
+Q207,fact,get_flows,flow_purpose_value:special grant to the Federal Territories,28899441.61,28899441.61,PASS
+Q208,fact,get_flows,flow_value,100000000,100000000.0,PASS
+Q209,fact,get_flows,flow_value,43000000,43000000.0,PASS
+Q210,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
+Q211,trap_placement,get_flows,class_excludes,Pihak Berkuasa Tempatan,Pentadbiran Wilayah Persekutuan,PASS
+Q212,trap_placement,get_flows,field_contains:answer,no amount here is one body,these are paid to a class or to several bodies together: the federal accounts do not say how much ea,PASS
+Q213,trap_missing,get_flows,field_contains:years_not_held,2015,['2015'],PASS
+Q214,trap_placement,get_flows,field_contains:answer,do not add up,these are the grants paid to this state by name; it also shares in the class grants under not_split_,PASS
+Q215,trap_missing,get_flows,field_contains:coverage,B.11,"held (PKKP, audited, FY2010-2024 except FY2015 (image-only scan) and FY2009 (no activity detail)): t",PASS
+Q216,trap_identity,get_flows,field_contains:answer,Federal Territory,MY-14 is a Federal Territory: it has no state government; 'flows' are the grants paid by name to its,PASS
+Q217,trap_incomparable,get_flows,not_held,,"start must be a whole year such as 2020 (flows are annual), got '2020Q1'",PASS
+Q218,trap_missing,get_flows,not_held,,no flow held for that recipient/payer and period,PASS
+Q219,fact,get_flows,caveat,CV25,CV25,PASS
+Q220,fact,get_gap_view,field:state_recorded_rm,37510000,37510000,PASS
+Q221,trap_restatement,get_gap_view,field:printings_agree,false,false,PASS
+Q222,fact,get_gap_view,field:federal_paid_rm,747898822.81,747898822.81,PASS
+Q223,trap_placement,get_gap_view,field:comparison,share_of_class_total,share_of_class_total,PASS
+Q224,trap_missing,get_gap_view,field:status,state_not_printed,state_not_printed,PASS
+Q225,fact,get_gap_view,field:status,consistent,consistent,PASS
+Q226,trap_identity,get_gap_view,field:status,no_state_government,no_state_government,PASS
+Q227,trap_missing,get_gap_view,field:status,federal_not_held,federal_not_held,PASS
+Q228,trap_incomparable,get_gap_view,not_held,,"unknown transfer 'roads': use capitation, concurrent_list, named or loans",PASS
+Q229,trap_missing,get_gap_view,field_contains:how_to_read,is not zero,"Two audited sides: what the federal accounts (PKKP) show paid, and what the state's audited accounts",PASS
+Q230,fact,get_gap_view,field:federal_paid_rm,926834078.11,926834078.11,PASS
+Q231,fact,get_gap_view,field:status,agree,agree,PASS
+Q232,trap_placement,get_gap_view,field_contains:note,lenders other than the federal government,"the state's debt table also prints lenders other than the federal government (Bon Terbitan 1,000.00)",PASS
+Q233,trap_identity,get_gap_view,field:status,no_state_government,no_state_government,PASS
+Q234,fact,get_gap_view,field:status,agree_after_other_lenders,agree_after_other_lenders,PASS
+Q235,trap_restatement,get_gap_view,field_contains:note,conversion of RM162.72 juta of loans into grants,Melaka's report explains its debt fell because the Ministry of Finance approved a write-off of RM10.,PASS

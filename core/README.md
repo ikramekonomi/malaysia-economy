@@ -29,7 +29,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
-| `entity_lineage.csv` | 14 | where a body's work went when its vote lapsed (D28): a link between two bodies, with printed evidence (`entity_lineage_evidence.csv`, 63 lines with PDF pages and both votes' spending in the move year) |
+| `entity_lineage.csv` | 15 | where a body's work went when its vote lapsed (D28): a link between two bodies, with printed evidence (`entity_lineage_evidence.csv`, 66 lines with PDF pages and both votes' spending in the move year) |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
 | `gap_federal_vs_state.csv` | 594 | federal paid (PKKP flows) vs state recorded (state accounts): capitation and Concurrent List grants × 16 places × FY2014-2024, plus each year's all-states row; named grants for Kedah, Selangor, Sabah, Sarawak; federal loans vs state debt × 16 × FY2014-2024 |
 
@@ -233,10 +233,12 @@ The identity rule (decision D26), declared before any spending is loaded against
   | L12 | B.49 Higher Education → B.41 Education | 2013 | yes | universities, polytechnics |
   | L13 | B.64 Higher Education → B.63 Education | 2019 | no | universities, qualifications agency |
   | L14 | B.63 → B.64 | 2020 | yes | universities, qualifications agency |
+  | L15 | B.41 Education → B.64 Higher Education | 2015 | no | universities, qualifications agency (new vote's side evidenced at vote level: FY2015 activity names are OCR-provisional) |
 
   `first_year` is the first year the new body's vote prints the work; a mid-year move splits that year's
-  spending between both votes. The build tests both votes' actual spending in the move year (E9).
-  Higher Education's return as B.64 in 2015 is not linked (FY2015 is an OCR-provisional scan).
+  spending between both votes. The build tests both votes' actual spending (leaf rows) in the move year and
+  the year before (E9). A year inside a lapse (`get_entity('B.15', 2021)`, `('B.64', 2014)`) returns the
+  links out of the body before and into the body after.
   A series joined across a link changes scope: compare the named activities, not the vote totals. Links are
   recorded at the lapses and the moves that led to them, not for every move between ministries.
 * **Renumberings link only with a proof:** B.41→B.63 (Education) and B.49→B.64 (Higher Education),

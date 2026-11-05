@@ -576,6 +576,8 @@ q("5", "Where did the 2024 B.33 body's water and energy work come from?", "get_e
   "lineage_came_from", "E000034", kind="trap_identity")
 q("5", "B.15 is not printed in 2021: does the answer say where the economic planning work was printed (link L02)?",
   "get_entity", ent("B.15", 2021), "lapse_link", "L02", kind="trap_identity")
+q("5", "Neither B.49 nor B.64 is printed in 2014: does the answer say Higher Education came back from Education in 2015 (L15)?",
+  "get_entity", ent("B.64", 2014), "lapse_link", "L15", kind="trap_identity")
 q("5", "Did B.06 already pay for economic planning in 2020, before B.15 ended (L02 first year)?", "get_entity",
   ent("B.06", 2020), "lineage_first_year:L02", "2020", kind="trap_identity")
 q("5", "Was the 2018 move of cooperatives to B.26 made during the year (spending split between two votes)?",
