@@ -20,7 +20,7 @@ build code. It re-extracted the cited RMKe-12 pages (text and page images) and r
 | 2 | The plan footnotes its employment total as from the labour productivity publication, not the LFS | medium | footnote kept as data at L1; a note says it is read as a different concept |
 | 3 | Jadual 14's printed growth rates do not reconcile with its levels | medium | new check V6 (11 WARN, kept as printed) |
 | 4 | The scale-free fiscal target (-3.5 to -3.0% of GDP) and the current balance were not compared | medium | MOF's pct-of-GDP and current balance loaded into core; the range is held as two bounds; outcome -3.7%, below the range |
-| 5 | KL's growth was left uncomputed, but DOSM's MY-14 for 2015-2018 equals the plan's "KL including Putrajaya" | medium | computed on that proof, which is re-checked every run (T7): 5.15% a year against 4.2%. That DOSM's MY-14 before 2023 includes Putrajaya is noted for core (not yet flagged on DOSM's rows) |
+| 5 | KL's growth was left uncomputed, but DOSM's MY-14 for 2015-2018 equals the plan's "KL including Putrajaya" | medium | computed on that proof, which is re-checked every run (T7): 5.15% a year against 4.2%. DOSM's MY-14 rows before 2023 are now flagged in core |
 | 6 | The federal nominal rows lacked the %-of-GDP context | low-medium | a note on each row; the %-of-GDP row added |
 | 7 | The 2023 mid-term review targets are not mentioned | low-medium | a note on every row |
 | 8 | precision_printed was in printed units | low | base units (RM juta 1000000, '000 100) |
@@ -30,4 +30,5 @@ build code. It re-extracted the cited RMKe-12 pages (text and page images) and r
 | 12 | T5 omitted the growth targets that are not compared | low | T5 lists them |
 
 Noticed outside this piece: DOSM's `gdp.real` MY-14 rows for 2015-2022 include Putrajaya while those from 2023 do
-not. This is a scope change inside one series and should become a flag on the DOSM rows (open).
+not. Fixed: core flags these 8 rows `scope_includes_putrajaya` (core/obs_flag.csv, caveat CV15), a declared rule
+in build_flags with the T7 proof.

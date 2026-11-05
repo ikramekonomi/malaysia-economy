@@ -1045,6 +1045,23 @@ def build_flags(obs):
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "out_of_bounds",
                         "note": f"{r['indicator_code']} = {r['value_printed']} percent, outside 0-100",
                         "register": "core/pipeline/build_core.py build_flags (declared rule)"})
+    # scope change inside one series (found by the gap_target_vs_outcome verifier, 2026-11-06): DOSM prints WP
+    # Putrajaya's GDP separately only from its first year (2023 in gdp_state_real_supply); WP Kuala Lumpur's rows
+    # before that include Putrajaya. Proof: RMKe-12 Jadual 5 footnotes its KL row 'Termasuk WP Putrajaya', and
+    # DOSM's MY-14 for 2015-2018 equals it to rounding (core/_validation_gap_tvo.csv T7). The figure stays as
+    # published; the row carries the flag and CV15.
+    first16 = {}
+    for r in obs.rows:
+        if r["indicator_code"].startswith("gdp.") and r["geo_code"] == "MY-16" and r["edition_id"].startswith("dosm:"):
+            first16[r["indicator_code"]] = min(first16.get(r["indicator_code"], "9999"), r["period_code"][:4])
+    for r in obs.rows:
+        f = first16.get(r["indicator_code"])
+        if f and r["geo_code"] == "MY-14" and r["edition_id"].startswith("dosm:") and r["period_code"][:4] < f:
+            out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "scope_includes_putrajaya",
+                        "note": f"WP Kuala Lumpur before {f} includes WP Putrajaya, which DOSM prints separately only from "
+                                f"{f}: growth across {f} compares different areas (proof: RMKe-12 Jadual 5 footnote; "
+                                "DOSM MY-14 2015-2018 = the plan's KL including Putrajaya, gap_target_vs_outcome T7)",
+                        "register": "core/pipeline/build_core.py build_flags (declared rule, 2026-11-06)"})
     # our own known extraction defects that reach core (meta/extraction_defect_flag.csv, each pointing to its
     # state_config.KNOWN_EXTRACTION_DEFECTS entry): the figure is the wrong printed line, caveat CV18
     want = {(d["indicator_code"], d["geo_code"], d["period_code"]): d
