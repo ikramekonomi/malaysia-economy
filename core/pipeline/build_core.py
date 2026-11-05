@@ -655,6 +655,61 @@ REV_NAME_TO_KOD = {"HASIL CUKAI": "60000", "JUMLAH HASIL CUKAI": "60000",
 REV_BASIS = {"anggaran_asal_rm": "budget_estimate", "anggaran_disemak_rm": "revised_estimate", "sebenar_rm": "audited"}
 
 
+OBLIGATION_LINES = {   # (file, printed label upper-cased) -> instrument; each year from its own volume
+    ("fact_memorandum.csv", "HUTANG AWAM"): "debt", ("fact_memorandum.csv", "HUTANG PERSEKUTUAN"): "debt",
+    ("fact_memorandum.csv", "LIABILITI INISIATIF PEMBIAYAAN SWASTA"): "pfi",
+    ("fact_memorandum.csv", "KOMITMEN KEWANGAN"): "commitments",
+    ("fact_guarantees.csv", "JUMLAH KOMITMEN JAMINAN"): "committed_guarantees",
+    ("fact_statutory_guarantees.csv", "JUMLAH JAMINAN PINJAMAN"): "loan_guarantees",
+    ("fact_statutory_guarantees.csv", "JUMLAH JAMINAN PENCARUM / PENDEPOSIT"): "deposit_guarantees",
+}
+
+
+def build_obligations(obs, checks):
+    """Federal obligations (Phase 5, gap_obligations_growth): stocks at 31 December from PKKP's memorandum accounts
+    and guarantee registers, FY2009-2024, each year from its own volume (method: core/pipeline/build_gap_obligations.py).
+    FY2009-2011 print no deposit-guarantee section: their register total is the loan guarantees. Check C19: one
+    figure per instrument and year."""
+    import glob
+    sha = {r["file_name"]: r["sha256"] for r in rows(os.path.join(META, "registry_file.csv"))}
+    seen = defaultdict(list)
+    for d in sorted(glob.glob(os.path.join(PKKP, "*"))):
+        yr = os.path.basename(d)
+        if not yr.isdigit():
+            continue
+        for fname in ("fact_memorandum.csv", "fact_guarantees.csv", "fact_statutory_guarantees.csv"):
+            path = os.path.join(d, fname)
+            if not os.path.exists(path):
+                continue
+            rel = os.path.relpath(path, REPO)
+            for i, r in enumerate(rows(path), start=2):
+                if r["year"] != yr or not r["source_file"].startswith(yr):
+                    continue
+                if fname == "fact_memorandum.csv" and "LIABILITI" not in r["section"].upper():
+                    continue
+                label = (r.get("line_item_bm") or r.get("agensi_bm") or "").strip().upper()
+                inst = OBLIGATION_LINES.get((fname, label))
+                if fname == "fact_statutory_guarantees.csv" and int(yr) <= 2011 and label in (
+                        "JUMLAH JAMINAN", "JUMLAH JAMINAN BERKANUN") and r["row_type"] == "total":
+                    inst = "loan_guarantees"
+                if not inst:
+                    continue
+                col = "amount_rm" if fname == "fact_memorandum.csv" else "jumlah_rm"
+                v = dec(r[col])
+                if v is None:
+                    continue
+                seen[(inst, yr)].append(v)
+                obs.add(indicator_code=f"federal_gov.obligation.{inst}", geo_code="MY", period_code=yr,
+                        entity_id=entity("federal_gov", "MY", yr), basis="audited", edition_id=f"pkkp:{r['source_file']}",
+                        vintage=yr, value=v, value_printed=r[col], unit_printed="RM", precision_printed="0.01",
+                        estimate_method="accounting", reliability="ok", file_id=sha.get(r["source_file"], ""),
+                        pdf_page=r["pdf_page"], printed_page=r["printed_page"], table_ref=r["statement"],
+                        l1_ref=f"{rel}#row{i}")
+    bad = {k: v for k, v in seen.items() if len(v) != 1}
+    checks.append(["C19 one printed figure per federal obligation and year (PKKP memorandum, own volume)", "PKKP",
+                   "PASS" if not bad else "FAIL", f"{len(seen)} instrument-years" + (f"; {bad}" if bad else "")])
+
+
 def build_revenue_by_type(obs, checks):
     """Federal revenue by type (Phase 5, gap_revenue_estimate_vs_collected): PKKP Nota 5(a) levels 0 and 1, FY2009-
     2024 own volume, original and revised estimates and actual; the Budget revenue books' (Anggaran Hasil 2025-
@@ -1182,6 +1237,7 @@ def main():
     obs.extra_checks = []
     build_federal_loans(obs, obs.extra_checks)
     build_revenue_by_type(obs, obs.extra_checks)
+    build_obligations(obs, obs.extra_checks)
     ind = rows(os.path.join(META, "indicator.csv"))
     used = {r["indicator_code"] for r in obs.rows}
     missing = sorted(used - {r["indicator_code"] for r in ind})

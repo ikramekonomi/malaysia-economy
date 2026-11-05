@@ -278,6 +278,22 @@ q("5", "Do MOF and the audited accounts agree on 2022 operating spending?", "get
   "row_field:indicator_code=federal_gov.expenditure.opex:mof_vs_pkkp_status", "agree")
 
 
+def pk_memo(year, label):
+    with open(os.path.join(REPO, "sources", "pkkp", "data", year, "fact_memorandum.csv"), newline="") as fh:
+        return next(Decimal(r["amount_rm"]) for r in csv.DictReader(fh)
+                    if r["year"] == year and r["line_item_bm"].strip() == label and "LIABILITI" in r["section"].upper())
+
+
+_d24, _p24 = pk_memo("2024", "Hutang Persekutuan"), pk_memo("2024", "Liabiliti Inisiatif Pembiayaan Swasta")
+q("5", "What was federal government debt at the end of 2024, audited?", "get_gap_view",
+  {"name": "gap_obligations_growth", "year": "2024"}, "row_field:instrument=debt:amount_rm", s(_d24))
+q("5", "What were PFI liabilities at end-2024 as a share of federal debt?", "get_gap_view",
+  {"name": "gap_obligations_growth", "year": "2024"}, "row_field:instrument=pfi:ratio_to_debt",
+  s((_p24 / _d24).quantize(Decimal("0.0001"))))
+q("5", "Did PFI liabilities grow faster than federal debt in 2024?", "get_gap_view",
+  {"name": "gap_obligations_growth", "year": "2024"}, "row_field:instrument=pfi:status", "grew_slower_than_debt")
+
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")

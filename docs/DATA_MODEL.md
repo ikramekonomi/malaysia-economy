@@ -454,7 +454,7 @@ its own coverage.
 | `gap_federal_placement` | How much federal spending can be placed by state from the federal accounts? | state × year (built 2026-11-05, D29: placed_share 0.6-3.9%, amounts by state withheld) |
 | `gap_federal_vs_state` | Do federal transfers match what states record receiving? | state × year (built 2026-11-05: class grants as shares, named grants as a floor test, `core/README.md`) |
 | `gap_audit_recurrence` | Do the same bodies keep getting the same findings? | entity × finding type × year |
-| `gap_obligations_growth` | Are off-budget obligations growing faster than debt? | instrument × year |
+| `gap_obligations_growth` | Are off-budget obligations growing faster than debt? | instrument × year (built 2026-11-06: six PKKP memorandum stocks FY2009-2024 against debt) |
 
 **`gap_need_vs_money` guards.** Most federal money that reaches people is operating spending:
 salaries in schools and clinics, subsidies, cash transfers. In FY2025 operating spending was

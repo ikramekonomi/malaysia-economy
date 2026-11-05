@@ -582,6 +582,8 @@ class Tools:
                                               "PKKP FY2009-2024 and the revenue books' years 2023-2026"),
         "gap_reported_vs_audited": ("core/pipeline/build_gap_reported_vs_audited.py (declared 2026-11-06)",
                                     "BNM 1996-2025, MOF 2015-2025 and PKKP FY2009-2024, where two of them print a year"),
+        "gap_obligations_growth": ("core/pipeline/build_gap_obligations.py (declared 2026-11-06)",
+                                   "PKKP FY2009-2024 (PFI, commitments and committed guarantees from FY2018)"),
         "gap_federal_placement": ("core/pipeline/build_federal_placement.py (declared 2026-11-05)",
                                   "FY2009-2024 except FY2015 (OCR-provisional project rows)"),
     }
@@ -700,6 +702,14 @@ class Tools:
                 "within half the coarser printed unit (MOF prints whole RM million), differ_minor within 0.1%, differ "
                 "beyond. A difference is kept as published; the view does not decide who is right. mof_restated_in lists "
                 "what later MOF editions print differently.")
+        if name == "gap_obligations_growth":
+            out["how_to_read"] = (
+                "One row per obligation and year, positions at 31 December from PKKP's memorandum accounts (each year "
+                "from its own volume): debt, PFI liabilities, financial commitments, committed guarantees, statutory "
+                "loan guarantees, and contributor/depositor guarantees. growth is year on year; status compares it with "
+                "debt's growth the same year; ratio_to_debt and the indexes (first year held = 100) compare levels. "
+                "Never add instruments: commitments include the committed guarantees, and deposit guarantees overlap "
+                "deposit insurance (CV30). A later volume's restatement is in the note, not applied.")
         if name == "gap_federal_placement":
             out["how_to_read"] = self.PLACEMENT_NOTE
             for r in rs:
