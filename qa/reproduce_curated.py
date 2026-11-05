@@ -10,9 +10,8 @@ Writes qa/_validation_reproduce.csv (one row per curated cell; FAIL blocks the P
 Covered so far: curated/fact_labour_indicators.csv (labour share of GDP, implied average wage), the
 BNM and MOF columns of curated/fact_fiscal_headline.csv (compared to the sen), and (Phase 3) every row of
 curated/fact_ministry_fiscal.csv from core's PKKP vote observations (to the sen; a documented
-leaf-vs-printed-total difference is EXPLAINED, anything else FAILs). The headline's PKKP columns are not
-covered: core still reads them from that same table, so a comparison would be circular, and it is not
-claimed.
+leaf-vs-printed-total difference is EXPLAINED, anything else FAILs). Since Phase 3.3 the headline's PKKP
+columns too: core reads them from each year's own volume, independently of curated's construction.
 """
 import csv
 import os
@@ -102,6 +101,45 @@ def fiscal(t, out):
                         f"core {got[0]['citation']['edition_id']}, to the sen"])
 
 
+PKKP_HEADLINE = {"revenue_rm": "federal_gov.revenue.total", "opex_net_rm": "federal_gov.expenditure.opex",
+                 "devex_gross_rm": "federal_gov.expenditure.devex", "covid_fund_rm": "federal_gov.expenditure.covid_fund",
+                 "transfer_to_dev_fund_rm": "federal_gov.expenditure.transfer_development_fund"}
+
+
+def headline_pkkp(t, out):
+    """The PKKP columns of curated/fact_fiscal_headline.csv (Phase 3.3): core now reads each from the year's own
+    volume (Penyata Prestasi Kewangan; FY2009 Akaun Hasil Disatukan), curated from other tables (sums of leaves,
+    next year's comparative column), so the comparison is no longer circular. Equal within the core figure's
+    printed precision (the statement prints whole ringgit) is a PASS."""
+    path = os.path.join(REPO, "curated", "fact_fiscal_headline.csv")
+    for r in csv.DictReader(open(path, newline="")):
+        y = r["year"]
+        for col, ind in PKKP_HEADLINE.items():
+            cell = f"{y} {col}"
+            res = t.get_series(ind, "MY", y, y, basis="audited", publisher="pkkp")
+            got = res["rows"] if res.get("held") else []
+            if not r[col] or Decimal(r[col]) == 0 and not got:
+                out.append(["fact_fiscal_headline", cell, r[col], got[0]["value"] if got else "",
+                            "PASS" if not got else "FAIL",
+                            "nil or empty in curated, none in core" if not got else "core holds a value curated lacks"])
+                continue
+            if len(got) != 1:
+                out.append(["fact_fiscal_headline", cell, r[col], "", "FAIL", f"{len(got)} core rows for pkkp"])
+                continue
+            a, b = Decimal(r[col]), Decimal(got[0]["value"])
+            step = Decimal("1") if got[0]["unit_printed"] == "RM" and "." not in got[0]["value_printed"].rstrip("0").rstrip(".") else SEN
+            ok = abs(a - b) < step if step > SEN else a.quantize(SEN) == b.quantize(SEN)
+            nxt = r.get("opex_source_file", "").startswith(str(int(y) + 1))
+            if not ok and nxt and col in ("opex_net_rm", "transfer_to_dev_fund_rm") and abs(a - b) < 1 and a == a.to_integral():
+                out.append(["fact_fiscal_headline", cell, str(a), str(b), "EXPLAINED",
+                            f"curated reads FY{y} from the FY{int(y) + 1} volume's comparative column, printed in whole "
+                            f"ringgit; core reads FY{y}'s own volume, printed to the sen (golden rule 6): equal to the ringgit"])
+                continue
+            out.append(["fact_fiscal_headline", cell, str(a), str(b), "PASS" if ok else "FAIL",
+                        f"core {got[0]['citation']['edition_id']} p.{got[0]['citation']['pdf_page']}, "
+                        + ("within the printed whole ringgit" if step > SEN else "to the sen")])
+
+
 def ministry(t, out):
     """curated/fact_ministry_fiscal.csv: every vote-year, audited, from core's PKKP vote observations (Phase 3).
 
@@ -151,6 +189,7 @@ def main():
     out = []
     labour(t, out)
     fiscal(t, out)
+    headline_pkkp(t, out)
     ministry(t, out)
     with open(os.path.join(REPO, "qa", "_validation_reproduce.csv"), "w", newline="") as f:
         w = csv.writer(f)
