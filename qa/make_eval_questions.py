@@ -594,8 +594,12 @@ q("5", "Which ministry held vote B.23 in 2019 (portfolio reshuffled since 2009)?
   "printed_name", pkkp_name("B.23", 2019))
 q("5", "Is vote B.41 in 2013 the same body as vote B.63 in 2020 (Education renumbered)?", "entity_same",
   {"a": ent("B.41", 2013), "b": ent("B.63", 2020)}, "same_entity", "same")
-q("5", "Is vote B.49 in 2012 the same body as B.64 in 2021 (Higher Education renumbered)?", "entity_same",
-  {"a": ent("B.49", 2012), "b": ent("B.64", 2021)}, "same_entity", "same")
+q("5", "Is vote B.49 in 2012 the same body as B.64 in 2021 (Higher Education, split at its lapses: D31)?", "entity_same",
+  {"a": ent("B.49", 2012), "b": ent("B.64", 2021)}, "same_entity", "different", kind="trap_identity")
+q("5", "Is B.64 in 2017 the same body as B.64 in 2021 (the vote lapsed in 2019)?", "entity_same",
+  {"a": ent("B.64", 2017), "b": ent("B.64", 2021)}, "same_entity", "different", kind="trap_identity")
+q("5", "Where did the 2015-2018 Higher Education body's work go in 2019?", "get_entity", ent("B.64", 2017),
+  "lineage_went_to", "E000048", kind="trap_identity")
 q("5", "Is development vote P.29 in 2020 (after B.29 ended in 2018) the same body as B.29 in 2017?", "entity_same",
   {"a": ent("P.29", 2020), "b": ent("B.29", 2017)}, "same_entity", "same")
 q("5", "Is B.15 in 2019 the same body as B.15 in 2024?", "entity_same",

@@ -25,7 +25,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_indicator.csv` | 65 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
 | `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
 | `fact_observation.csv` | 138,511 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
-| `dim_entity.csv` | 66 | who: the federal government, 13 state governments, 45 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
+| `dim_entity.csv` | 68 | who: the federal government, 13 state governments, 47 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
@@ -243,8 +243,13 @@ The identity rule (decision D26), declared before any spending is loaded against
   links out of the body before and into the body after.
   A series joined across a link changes scope: compare the named activities, not the vote totals. Links are
   recorded at the lapses and the moves that led to them, not for every move between ministries.
-* **Renumberings link only with a proof:** B.41→B.63 (Education) and B.49→B.64 (Higher Education),
-  approved before the register (`curated/pipeline/build_ministry_fiscal.py`).
+* **Renumberings link only with a proof:** B.41→B.63 (Education, printed every year), approved before the
+  register (`curated/pipeline/build_ministry_fiscal.py`).
+* **Higher Education is three bodies (D31, decided by a person 2026-11-05):** B.49 (2009-2013, E000056), B.64
+  2015-2018 (E000067) and B.64 from 2020 (E000068). Each time its vote lapsed, its work was printed under
+  Education's vote (FY2013-2014, FY2019), so like B.15, B.26 and B.33 the runs are separate bodies joined by
+  lineage (L12-L15). The earlier analyst rule, and `curated/fact_ministry_fiscal`, still treat it as one
+  ministry; core no longer does.
 * **Budget books do not extend a lineage, and can name an older holder:** a book is tabled before its year,
   so it can reprint a lapsed vote. The 2024 book prints B.33 as the lapsed KASA (`Kementerian Alam Sekitar
   dan Air**`, zero estimates), not its successor; the 2024 and 2025 books reprint B.32 (Federal
