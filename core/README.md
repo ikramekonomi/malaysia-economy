@@ -26,7 +26,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
 | `fact_observation.csv` | 138,511 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
 | `dim_entity.csv` | 66 | who: the federal government, 13 state governments, 45 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
-| `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12 and B.11), FY2010-2024 except FY2015 |
+| `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
 | `entity_name.csv` | 240 | every name an entity was printed under, by code and years |
 | `gap_need_vs_money.csv` | 80 | 16 states and FTs × 5 HIES years (2014, 2016, 2019, 2022, 2024) |
@@ -300,6 +300,9 @@ show it (D27). First slice: the federal grants and assignments to the states, Ta
   FY2023 under B.06; FY2010-2013 print each as a whole programme with no activity tier, which the name rules
   match. They are local-authority entities (E000064-E000066), geo stated, members of the class E000063; a
   territory's `get_flows` answer lists its administration's grants by name and the class grants beside them.
+  Declared and not loaded (F11): lines only tagged `(DBKL)`/`(PL)` or naming a territory (ITIS-DBKL, the Bukit
+  Tagar tipping fee, ferry fare discounts, PICC, Putrajaya buses) and FY2009's programme-level grants. Blind
+  verifier: `qa/audits/2026-11-05_phase3_territories_verifier.md` (40 of 40 re-derived, 19 page-checked).
 * **Not yet:** what each state records receiving (state accounts) matched to these flows; development grants
   and federal projects in a state.
 

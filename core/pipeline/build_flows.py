@@ -230,8 +230,14 @@ def main():
         "Territories' grants are not found in B.11 or B.06 - B.32 040400 'Penyelenggaraan dan Kemudahan Awam' prints "
         "RM65,000,000.00 that year only, about their combined size, but its name does not say so (not loaded until a "
         "page or budget book proves it); the Federal Territories ministry's (B.32, later B.06) other "
-        "lines for the territories (PICC upkeep, the Putrajaya bus service, Labuan water supply, the DBKL landfill fee "
-        "and duty collection): services the ministry buys, not grants to an administration; B.43's 'Kerajaan "
+        "lines for the territories (PICC upkeep, the Putrajaya bus service and infrastructure upkeep, Labuan water "
+        "supply and ferry fare discount, Tasik Putrajaya desilting): services the ministry buys, recipient not stated; "
+        "lines TAGGED with an administration but not a grant to it by name (FY2010 B.32 070500 ITIS-DBKL operating "
+        "cost RM38m and 070600 upkeep of property not owned by DBKL RM10m; FY2014 080200 duty and licence collection "
+        "(DBKL) RM2m, 080400 Bukit Tagar tipping fee (DBKL) RM18.43m, 090600 BIMP-EAGA games (PL) RM2.28m, 091000 "
+        "ferry fare discount (PL) RM11m; FY2013 090400 Borneo Games (PL) RM1.5m): possibly paid through the "
+        "administration, not loaded until a page says so; FY2009 programme-level grants to Perbadanan Putrajaya "
+        "(B.32 050000, RM101m) and Perbadanan Labuan (040000, RM36.36m): FY2009 is not loaded (F6); B.43's 'Kerajaan "
         "Tempatan' and solid-waste lines: the recipient is not stated")
     add("F6 years not loaded (declared)", "fact_money_flow", "INFO",
         "; ".join(f"FY{y}: {why}" for y, why in SKIP_YEARS.items()))

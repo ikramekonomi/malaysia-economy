@@ -383,7 +383,8 @@ class Tools:
                      "special and road grants to the Federal Territories' administrations, under B.06 from FY2024), and "
                      "the grants by name to Perbadanan Putrajaya, Perbadanan Labuan and Dewan Bandaraya Kuala Lumpur "
                      "(B.32, from FY2023 B.06). NOT loaded: the Federal Territories' class grants in FY2018 (not "
-                     "found under B.11 or B.06), the housing and local government ministry's local-government lines "
+                     "found under B.11 or B.06), the territories ministry's lines tagged with an administration "
+                     "(DBKL, PL) or naming a territory but not stated as a grant to it, the housing and local government ministry's local-government lines "
                      "(recipient not stated), "
                      "development grants and federal projects in a state, and money paid by ministries to state "
                      "agencies. So the flows here are a floor, not what a place received.")
