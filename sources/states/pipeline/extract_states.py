@@ -499,7 +499,15 @@ def extract_volume(state: str, v: dict, rev_rules) -> tuple[list, list, list, li
 _SENTENCE = re.compile(r"\.\s+[a-z]")
 _PROSE = re.compile(r"\bialah\b|\bdisebabkan\b|\bmenyebabkan\b|\bseperti di\b|"
                     r"\bseperti dalam\b|\badalah seperti\b|\bmanakala\b|"
-                    r"\bBagaimanapun\b|\bAnalisis Audit\b", re.I)
+                    r"\bBagaimanapun\b|\bAnalisis Audit\b|"
+                    # an amount quoted in words (`RM184 juta berbanding`): a justification column, never a row label
+                    r"\bRM\s?\d[\d,.]*\s+(?:juta|bilion)\b|\bberbanding\s+RM|"
+                    # the audit's own sentences under a table (verifier 2026-11-05: Johor CMD.39.2021 J23/J24,
+                    # Pahang CMD.55.2015 J4.19, Terengganu CMD.42.2019 J29 / CMD.46.2016 J4.18, Sarawak CMD.39.2020 J6)
+                    r"^\s*Pada tahun (?:19|20)\d\d\b|\bPihak Audit\b|\bmencatatkan\b|\bmemaklumkan\b|"
+                    # (not `sebanyak RM` / `sejumlah RM`: those are welded onto REAL labels whose code is conformed,
+                    # e.g. Perak CMD.25.2024 J7 `JUMLAH KESELURUHAN HASIL adalah sebanyak RM`, and would drop them)
+                    r"\bmembelanjakan\b|\bdi Jadual\b", re.I)
 _STRAY_BIL = re.compile(r"(?<=[A-Za-z%)])\s\d{1,2}\.?\s(?=[A-Z])")
 
 
@@ -512,7 +520,7 @@ def label_quality(label: str) -> tuple[str, str]:
     whose identity cannot be defended is not a row).
     """
     n = len(label.split())
-    if (_PROSE.search(label) or _SENTENCE.search(label)) and n >= 8:
+    if (_PROSE.search(label) or _SENTENCE.search(label)) and n >= 6:
         return "reject", "label reads as narrative prose, not a table row label"
     if n > 25:
         return "reject", f"label is {n} words - column interleaving suspected"

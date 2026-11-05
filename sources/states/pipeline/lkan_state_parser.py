@@ -28,6 +28,7 @@ from __future__ import annotations
 import hashlib
 import os
 import re
+from collections import Counter
 import subprocess
 from dataclasses import dataclass, field
 
@@ -61,7 +62,67 @@ def load_pages(pdf_path: str, cache_dir: str | None = None) -> list[str]:
     if pages and not pages[-1].strip():
         pages.pop()
     _CACHE[key] = pages
+    _PDF_PATH[os.path.basename(pdf_path)] = (pdf_path, cache_dir)
     return pages
+
+
+_PDF_PATH: dict[str, tuple[str, str | None]] = {}
+_YCACHE: dict[tuple[str, int], list[tuple[float, str]]] = {}
+
+
+def page_lines_y(source_file: str, pno: int) -> list[tuple[float, str]]:
+    """(yMin, text) of every printed text line on one page, from `pdftotext -bbox-layout`.
+
+    The -layout text keeps x but loses the vertical gaps, so a label line printed exactly between two rows
+    cannot be placed from the text alone; the glyph positions can (a line inside a cell sits closer to its
+    own row than to the next).  Cached on disk beside the text cache.  Empty when the PDF is not at hand."""
+    key = (source_file, pno)
+    if key in _YCACHE:
+        return _YCACHE[key]
+    path, cache_dir = _PDF_PATH.get(source_file, (None, None))
+    out: list[tuple[float, str]] = []
+    cf = os.path.join(cache_dir, f"{source_file[:-4]}.p{pno}.y.tsv") if cache_dir else None
+    if cf and os.path.exists(cf):
+        for ln in open(cf, encoding="utf-8"):
+            y, _, t = ln.rstrip("\n").partition("\t")
+            out.append((float(y), t))
+    elif path and os.path.exists(path):
+        html = subprocess.run(["pdftotext", "-bbox-layout", "-f", str(pno), "-l", str(pno), path, "-"],
+                              capture_output=True, text=True, errors="replace").stdout
+        for m in re.finditer(r'<line xMin="[\d.]+" yMin="([\d.]+)"[^>]*>(.*?)</line>', html, re.S):
+            words = re.findall(r">([^<]+)</word>", m.group(2))
+            out.append((float(m.group(1)), " ".join(w.strip() for w in words)))
+        out.sort()
+        if cf:
+            with open(cf, "w", encoding="utf-8") as f:
+                f.writelines(f"{y}\t{t}\n" for y, t in out)
+    _YCACHE[key] = out
+    return out
+
+
+def _norm(t: str) -> str:
+    return re.sub(r"\s+", " ", t).strip()
+
+
+def body_line_ys(table: "RawTable") -> list[float | None]:
+    """The printed y of each body line, matched in order by its leading text (None where unmatched)."""
+    plines = page_lines_y(table.source_file, table.pdf_page)
+    ys: list[float | None] = []
+    floor = -1.0
+    for ln in table.body:
+        s = re.sub(r"^\s*\d{1,3}[.)]?\s+", "", ln)          # the Bil., printed with or without a dot
+        words = _norm(s).split(" ")
+        y = None
+        if words and words[0]:
+            head = " ".join(words[:3])
+            for py, pt in plines:
+                if py >= floor - 1 and (pt.startswith(head) or (len(pt) >= 6 and head.startswith(pt))):
+                    y = py
+                    break
+        ys.append(y)
+        if y is not None:
+            floor = y
+    return ys
 
 
 def sha256(path: str) -> str:
@@ -744,6 +805,7 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
         blanks = 0
 
     groups: dict[int, list[int]] = {a: [a] for a in anchors}
+    ys: list[float | None] | None = None
     for i in range(len(table.body)):
         if i in groups or i in footer:
             continue
@@ -755,6 +817,17 @@ def parse_rows_by_bil(table: RawTable, cols: list[Column]) -> list[Row] | None:
             target = nxt
         elif nxt is None:
             target = prev
+        elif (i - prev) == (nxt - i) and not _has_money(table.body[i]) and not re.search(r"\d", table.body[i]):
+            # A label-only line exactly between two rows: the text cannot tell a continuation of the row above
+            # from the first line of a label centred on the row below.  The glyph positions can: a line inside
+            # a cell sits closer to its own row.  Kedah CMD.42.2022 J10 printed `Pemberian Bayaran Bagi
+            # Membiayai Separuh Kos` 12.2pt below `Lain-Lain Levi` and 9.6pt above its own row, and the old
+            # tie-break (to the row above) shipped `Lain-Lain Levi Pemberian Bayaran ...`.  Without positions
+            # the tie still goes to the row above.
+            if ys is None:
+                ys = body_line_ys(table)
+            yi, yp, yn = ys[i], ys[prev], ys[nxt]
+            target = nxt if (None not in (yi, yp, yn) and yp < yi < yn and (yn - yi) < (yi - yp) - 1.0) else prev
         else:
             target = prev if (i - prev) <= (nxt - i) else nxt
         # A printed row carries ONE set of figures.  When a value-bearing line
@@ -955,6 +1028,7 @@ def parse_rows(table: RawTable, cols: list[Column],
     # state's surplus line entirely).
     frag_for: dict[int, list[tuple[int, str]]] = {k: [] for k in value_idx}
     headings: list[tuple[int, str]] = []
+    ys: list[float | None] | None = None
     for k, (li, txt, toks) in enumerate(entries):
         if toks or not txt.strip():
             continue
@@ -1028,6 +1102,21 @@ def parse_rows(table: RawTable, cols: list[Column],
             # below the figures line)
             pe, ne = _base(prev) == "", _base(nxt) == ""
             target = prev if (pe and not ne) else (nxt if ne else nxt)
+            # ...unless the glyph positions say otherwise: a line inside a cell sits closer to its own row.
+            # Johor CMD.51.2015 J4.4 `Pelaburan Kumpulan` / `Wang Amanah` / `Jumlah` shipped the total as
+            # `Wang Amanah Jumlah`, a leaf component.
+            # Never onto a complete total/balance line, never a line that opens a new numbered item or carries
+            # digits: those are section heads or prose under the table (`JUMLAH` + `ii. Tunggakan ...`).
+            closed = re.match(r"\s*(?:jumlah|baki pada|lebihan|kurangan|\(kurangan\)|surplus|defisit|"
+                              r"perbelanjaan sebenar)\b", _base(prev), re.I)
+            opens = (re.match(r"\s*(?:[a-z]|[ivx]+|\d{1,2}(?:\.\d+)*)[.)]\s", txt) or re.search(r"\d", txt)
+                     or re.match(r"\s*[\u2022\u25cf\u25aa\u25a0\u00b7\ue000-\uf8ff]", txt))
+            if not (pe or ne or closed or opens):
+                if ys is None:
+                    ys = body_line_ys(table)
+                yi, yp, yn = ys[entries[k][0]], ys[entries[prev][0]], ys[entries[nxt][0]]
+                if None not in (yi, yp, yn) and yp < yi < yn and abs((yi - yp) - (yn - yi)) > 1.0:
+                    target = prev if (yi - yp) < (yn - yi) else nxt
         frag_for[target].append((k, txt))
 
     # a BIL. column exists if the printed header block names one - reading it
@@ -1094,19 +1183,26 @@ def parse_rows(table: RawTable, cols: list[Column],
     # Selangor CMD.61.2015 J4.11: row 1 is set ~10 characters left of rows 2-5, which shipped the 2013
     # column (386.30, 62.97, 63.86, 45.37) as FY2014 and dropped the 2014 figures.
     unit_cols = [ci for ci, c in enumerate(cols) if c.unit]
-    counts = {len(r.tokens or []) for r in rows if r.cells}
     stray = any(not cols[ci].unit for r in rows for ci in r.cells)
-    if stray and len(counts) == 1 and len(unit_cols) == next(iter(counts)) >= 2:
+    # The columns to map onto are the widest set used by a row that sits ON the strip (its every figure under a
+    # unit), not every unit column: a misplaced row can itself create a spurious unit cluster (Melaka
+    # CMD.53.2015 J4.22, whose `Baki Pada 31 Disember` would otherwise be pushed one year left).
+    on_strip = Counter(tuple(sorted(r.cells)) for r in rows
+                       if r.cells and all(cols[ci].unit for ci in r.cells))
+    ref = max(on_strip, key=lambda t: (len(t), on_strip[t]), default=())
+    if stray and len(ref) >= 2:
         for r in rows:
-            if any(not cols[ci].unit for ci in r.cells):      # only the rows that landed off the strip
-                r.cells = dict(zip(unit_cols, r.tokens))
+            # only a row that landed off the strip AND printed exactly one figure per reference column: Melaka
+            # CMD.37.2016 J4.43 sets only its `Jumlah` line further right (the 2014 total 861.71 shipped as FY2015)
+            if (any(not cols[ci].unit for ci in r.cells) and r.tokens
+                    and len(r.tokens) == len(ref)):
+                r.cells = dict(zip(ref, r.tokens))
                 r.ordinal_fallback = True
 
     # Ordinal fallback: a few rows (typically the JUMLAH row) are printed with
     # their own spacing, so their tokens cluster into neighbouring columns.
     # Rows with the modal cell-count but a different index tuple are remapped
     # ordinally onto the modal tuple.
-    from collections import Counter
     tuples = Counter(tuple(sorted(r.cells)) for r in rows if r.cells)
     if tuples:
         # The modal tuple is chosen for covering the most YEAR columns, but in

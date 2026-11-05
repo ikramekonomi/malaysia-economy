@@ -739,6 +739,56 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
     # Johor CMD.35.2016 J4.20 (FY2015 trust total read as 2014's) and Selangor CMD.61.2015 J4.21 (FY2014 loan-account
     # receipts/payments read as 2013's) were registered here 2026-11-04 and are FIXED by the parser's shifted-block rule
     # (lkan_state_parser.parse_rows, 2026-11-05); see qa/audits/2026-11-05_state_column_shift.md.
+    # Located by the blind verifier of 2026-11-05 (qa/audits/2026-11-05_state_column_shift.md); all pre-date it.
+    dict(
+        state="Sarawak",
+        source_file="CMD.44.2016.pdf", pdf_page="48", printed_page="", jadual="4.30",
+        match=dict(target="finance", jadual="4.30", checks=()),
+        affected_rows="CMD.44.2016 J4.30 (Akaun Deposit by type), every row",
+        defect="The table prints a block of depositor COUNTS (Bilangan Pendeposit 2015 / 2014) then the amounts "
+               "(RM Juta 2015 / 2014) under a two-tier header; the columns are read off by one block, so the counts "
+               "ship as RM Juta for FY2015 (11,988 / 3,106 / 15,094) and FY2014 takes the 2015 amounts.",
+        diagnosis="Page-proved (CMD.44.2016.pdf p48): printed 2015 RM 73.49 / 539.59 / 613.08, 2014 RM 64.88 / "
+                  "396.15 / 461.03. Not an AG misprint.",
+        why_unfixed="A two-tier header with a non-money block needs the header tiers read as such; one table.",
+        impact_on_data="Unconformed codes, not in the national panel or core. Do not use this table's rows.",
+    ),
+    dict(
+        state="Kedah",
+        source_file="CMD.34.2018.pdf", pdf_page="", printed_page="", jadual="",
+        match=dict(target="finance", fiscal_year=("2016",), checks=()),
+        affected_rows="CMD.34.2018 J4.8 and J4.9, the FY2016 comparatives",
+        defect="FY2016 is printed twice, as originally reported and 'Dinyatakan Semula' (restated); the extractor "
+               "reads the restated column, where '-' means 'not restated', and ships 0.00 (e.g. Baki 1 Januari "
+               "-497.93 -> 0; Perbelanjaan 545.91 / 660.91 -> 0).",
+        diagnosis="Page-proved by the verifier (CMD.34.2018.pdf p30-31).",
+        why_unfixed="Needs the 'Dinyatakan Semula' column recognised as a restatement basis, not the year column.",
+        impact_on_data="The national panel takes Kedah FY2016 from its own volume (CMD.34.2017), so core is "
+                       "unaffected; do not use these comparatives.",
+    ),
+    dict(
+        state="Melaka",
+        source_file="CMD.35.2017.pdf", pdf_page="64", printed_page="", jadual="4.49",
+        match=dict(target="finance", jadual="4.49", checks=()),
+        affected_rows="CMD.35.2017 J4.49 (Pelaburan), the rows read as FY2015",
+        defect="The column header is misprinted '2015 2015' (the title says 2016 berbanding 2015); the 2016 column "
+               "is read as FY2015 (Hartanah 69.93, JUMLAH 143.37) and the real FY2015 dropped.",
+        diagnosis="The FY2015 volume prints 69.05 / 142.49. The header misprint is the source's; reading the column "
+                  "as FY2015 is ours.",
+        why_unfixed="One table; a header-year override needs its own page-proved rule.",
+        impact_on_data="Unconformed / non-canonical rows. Do not use this table's FY2015 figures.",
+    ),
+    dict(
+        state="Sabah",
+        source_file="CMD.43.2016.pdf", pdf_page="48", printed_page="", jadual="4.31",
+        match=dict(target="finance", jadual="4.31", checks=()),
+        affected_rows="CMD.43.2016 J4.31, the row labelled 'Corporation Sdn. Bhd. Jumlah'",
+        defect="The last item's wrapped name is welded to the Jumlah line, which is then typed a leaf component "
+               "(358.03): summing leaf rows counts the total twice.",
+        diagnosis="Verifier 2026-11-05 (CMD.43.2016.pdf p48).",
+        why_unfixed="Label-join case not resolved by the glyph-position tie-break (not an exact tie).",
+        impact_on_data="Unconformed code. Do not sum this table's leaf rows.",
+    ),
     dict(
         state="Sarawak",
         source_file="CMD.49.2021.pdf", pdf_page="", printed_page="",
@@ -859,8 +909,11 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                "Kerajaan`), `Awam b. Deposit`; Johor CMD.35.2016 J4.2 `Amanah Kerajaan b) Kumpulan Wang Amanah "
                "Awam`; the by-Bil. parser does the same in Sarawak CMD.44.2016 J4.13 (`Kewangan Pampasan Gantian "
                "Hak Ke Atas` = printed `Pampasan Gantian Hak Ke Atas Minyak`; `Minyak Royalti Hutan` = `Royalti "
-               "Hutan`). (b) A label line exactly between two Bil. lines goes to the row above: Selangor CMD.49.2023 "
-               "J13 `Permit Tanah dan Galian Pemberian 50% Kos` / `Pengurusan Jabatan Negeri`. (c) The running "
+               "Hutan`). (b) FIXED 2026-11-05: a label line exactly between two rows is now placed by its glyph "
+               "position (pdftotext -bbox-layout) in both parsers, never onto a closed total/balance line - 158 labels "
+               "in 13 states moved to their own row (Selangor CMD.49.2023 J13, Kedah CMD.42.2022 J10 `Lain-Lain "
+               "Levi` / the Concurrent List grant, the many `<name tail> Jumlah` totals; "
+               "qa/audits/2026-11-05_state_column_shift.md). (c) The running "
                "footer `Penyata Kewangan` survives on some JUMLAH labels (Melaka CMD.33.2019 J15, Perlis "
                "CMD.37.2019 J5, Kedah, Perak, Pahang `JUMLAH Pahang Tahun`). (d) Five label-only footer lines "
                "become nil (`-`) phantom rows: Melaka CMD.33.2019 p39 J15, Perak CMD.36.2019 p29 J3, Sarawak "
@@ -871,9 +924,9 @@ KNOWN_EXTRACTION_DEFECTS: list[dict] = [
                   "J10 and stitched prose into two new Sabah CMD.41.2017 J4.9 rows, so it was reverted: the text "
                   "layer alone does not say whether a wrapped line continues the row above or opens the row "
                   "below.",
-        why_unfixed="Telling continuation from lead-in needs the glyph positions (pdftotext -bbox: a "
-                    "continuation sits closer to the line above), a change to every state's tables that needs "
-                    "its own verified pass; the phantoms and footer residue need the footer filter to recognise "
+        why_unfixed="(a) is the line-at-a-time parser and a by-Bil. case that is not an exact tie; the glyph "
+                    "positions now used for (b) could place them too, a further change to every state's tables "
+                    "that needs its own verified pass; the phantoms and footer residue need the footer filter to recognise "
                     "single footer words without eating real labels.",
         impact_on_data="No amount is wrong. The affected rows carry unconformed codes (not read by core or the "
                        "gap view) except Johor J4.2 `public_trust_funds`, whose code is right. Do not quote "
