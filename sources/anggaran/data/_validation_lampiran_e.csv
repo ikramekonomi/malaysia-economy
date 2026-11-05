@@ -1,0 +1,142 @@
+check,scope,status,detail
+L1 each state's grants add up to its JUMLAH,book 2021 (FY2019),PASS,14 rows
+L2 each grant's 13 states add up to the Jumlah row,book 2021 (FY2019),PASS,18 columns
+L3 the Jumlah row adds up to its JUMLAH,book 2021 (FY2019),PASS,7589668800 vs 7589668800
+L4 road-maintenance sub-columns add up to their JUMLAH,book 2021 (FY2019),PASS,ok
+L5 capitation against PKKP,book 2021 (FY2019),PASS,Lampiran E 410070480 vs PKKP 410070480.0 (1 line(s))
+L5 road_maintenance against PKKP,book 2021 (FY2019),PASS,Lampiran E 4577760828 vs PKKP 4577760828.0 (3 line(s))
+L5 special_annual against PKKP,book 2021 (FY2019),PASS,Lampiran E 78515638 vs PKKP 78515638.0 (4 line(s))
+L5 revenue_growth against PKKP,book 2021 (FY2019),PASS,Lampiran E 250000000 vs PKKP 250000000.0 (1 line(s))
+L5 gtbkk against PKKP,book 2021 (FY2019),PASS,Lampiran E 302797453 vs PKKP 302797452.27 (1 line(s))
+L5 state_services against PKKP,book 2021 (FY2019),PASS,Lampiran E 387956982 vs PKKP B.11 'Bayaran Perkhidmatan' 387956982.0
+L5 concurrent_list against PKKP,book 2021 (FY2019),INFO,"Lampiran E 625457233 vs PKKP 738353297.41: PKKP's line also carries the libraries and museums grants, so it is tested with them in L7"
+L5 libraries against PKKP,book 2021 (FY2019),INFO,Lampiran E 70369935; not a line of its own in PKKP
+L5 museums against PKKP,book 2021 (FY2019),INFO,Lampiran E 41296064; not a line of its own in PKKP
+L5 petroleum_duty_compensation against PKKP,book 2021 (FY2019),PASS,Lampiran E 240000000 vs PKKP 240000000.0 (1 line(s))
+L5 street_lighting against PKKP,book 2021 (FY2019),PASS,Lampiran E 153034842 vs PKKP 153034841.17 (1 line(s))
+L5 development_level against PKKP,book 2021 (FY2019),INFO,"Lampiran E 337844598; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L5 opex_deficit against PKKP,book 2021 (FY2019),INFO,"Lampiran E 46816917; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L5 tourism against PKKP,book 2021 (FY2019),WARN,Lampiran E 67747830 vs PKKP B.11 'Lain-lain Bayaran Balik' (40000) 59763870.19; difference 7983959.81
+"L8 road_maintenance_part1 against PKKP 'state road maintenance grant, roads at the minimum standard'",book 2021 (FY2019),PASS,Lampiran E 3290537047 vs PKKP 3290537047.0
+"L8 road_maintenance_part2 against PKKP 'state road maintenance grant, substandard roads'",book 2021 (FY2019),PASS,Lampiran E 1286686184 vs PKKP 1286686184.0
+"L8 road_maintenance_part3 against PKKP 'state road maintenance, one-way roads'",book 2021 (FY2019),PASS,Lampiran E 537597 vs PKKP 537597.0
+L6 special_annual MY-12 against PKKP's grant by name,book 2021 (FY2019),PASS,Lampiran E 26700000 vs PKKP 26700000.0
+L6 special_annual MY-13 against PKKP's grant by name,book 2021 (FY2019),PASS,Lampiran E 16000000 vs PKKP 16000000.0
+L6 special_annual MY-10 against PKKP's grant by name,book 2021 (FY2019),PASS,Lampiran E 25805638 vs PKKP 25805638.0
+L6 special_annual MY-02 against PKKP's grant by name,book 2021 (FY2019),PASS,Lampiran E 10010000 vs PKKP 10010000.0
+L7 Concurrent List + libraries + museums against PKKP's Concurrent List line,book 2021 (FY2019),WARN,Lampiran E 737123232 vs PKKP 738353297.41; difference -1230065.41
+L1 each state's grants add up to its JUMLAH,book 2022 (FY2020),PASS,14 rows
+L2 each grant's 13 states add up to the Jumlah row,book 2022 (FY2020),PASS,18 columns
+L3 the Jumlah row adds up to its JUMLAH,book 2022 (FY2020),PASS,7703144311 vs 7703144311
+L4 road-maintenance sub-columns add up to their JUMLAH,book 2022 (FY2020),PASS,ok
+L5 capitation against PKKP,book 2022 (FY2020),PASS,Lampiran E 414301080 vs PKKP 414301080.0 (1 line(s))
+L5 road_maintenance against PKKP,book 2022 (FY2020),PASS,Lampiran E 4693878646 vs PKKP 4693878646.0 (3 line(s))
+L5 special_annual against PKKP,book 2022 (FY2020),PASS,Lampiran E 78515638 vs PKKP 78515638.0 (4 line(s))
+L5 revenue_growth against PKKP,book 2022 (FY2020),PASS,Lampiran E 250000000 vs PKKP 250000000.0 (1 line(s))
+L5 gtbkk against PKKP,book 2022 (FY2020),PASS,Lampiran E 302797453 vs PKKP 302797452.22 (1 line(s))
+L5 state_services against PKKP,book 2022 (FY2020),PASS,Lampiran E 385959492 vs PKKP B.11 'Bayaran Perkhidmatan' 385959491.68
+L5 concurrent_list against PKKP,book 2022 (FY2020),INFO,"Lampiran E 633628822 vs PKKP 747898822.81: PKKP's line also carries the libraries and museums grants, so it is tested with them in L7"
+L5 libraries against PKKP,book 2022 (FY2020),INFO,Lampiran E 71267632; not a line of its own in PKKP
+L5 museums against PKKP,book 2022 (FY2020),INFO,Lampiran E 40500000; not a line of its own in PKKP
+L5 petroleum_duty_compensation against PKKP,book 2022 (FY2020),PASS,Lampiran E 240000000 vs PKKP 240000000.0 (1 line(s))
+L5 street_lighting against PKKP,book 2022 (FY2020),PASS,Lampiran E 157159722 vs PKKP 157159722.29 (1 line(s))
+L5 tourism against PKKP,book 2022 (FY2020),PASS,Lampiran E 67471002 vs PKKP B.11 'Lain-lain Bayaran Balik' (40000) 67471001.51
+L5 development_level against PKKP,book 2022 (FY2020),INFO,"Lampiran E 336802258; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L5 opex_deficit against PKKP,book 2022 (FY2020),INFO,"Lampiran E 30862566; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+"L8 road_maintenance_part1 against PKKP 'state road maintenance grant, roads at the minimum standard'",book 2022 (FY2020),PASS,Lampiran E 3289728167 vs PKKP 3289728167.0
+"L8 road_maintenance_part2 against PKKP 'state road maintenance grant, substandard roads'",book 2022 (FY2020),PASS,Lampiran E 1403794022 vs PKKP 1403794022.0
+"L8 road_maintenance_part3 against PKKP 'state road maintenance, one-way roads'",book 2022 (FY2020),PASS,Lampiran E 356457 vs PKKP 356457.0
+L6 special_annual MY-12 against PKKP's grant by name,book 2022 (FY2020),PASS,Lampiran E 26700000 vs PKKP 26700000.0
+L6 special_annual MY-13 against PKKP's grant by name,book 2022 (FY2020),PASS,Lampiran E 16000000 vs PKKP 16000000.0
+L6 special_annual MY-10 against PKKP's grant by name,book 2022 (FY2020),PASS,Lampiran E 25805638 vs PKKP 25805638.0
+L6 special_annual MY-02 against PKKP's grant by name,book 2022 (FY2020),PASS,Lampiran E 10010000 vs PKKP 10010000.0
+L7 Concurrent List + libraries + museums against PKKP's Concurrent List line,book 2022 (FY2020),WARN,Lampiran E 745396454 vs PKKP 747898822.81; difference -2502368.81
+L1 each state's grants add up to its JUMLAH,book 2023 (FY2021),PASS,14 rows
+L2 each grant's 13 states add up to the Jumlah row,book 2023 (FY2021),PASS,15 columns
+L3 the Jumlah row adds up to its JUMLAH,book 2023 (FY2021),PASS,7638077325 vs 7638077325
+L5 capitation against PKKP,book 2023 (FY2021),PASS,Lampiran E 418453860 vs PKKP 418453860.0 (1 line(s))
+L5 road_maintenance against PKKP,book 2023 (FY2021),PASS,Lampiran E 4896015000 vs PKKP 4896015000.0 (3 line(s))
+L5 special_annual against PKKP,book 2023 (FY2021),PASS,Lampiran E 78515638 vs PKKP 78515638.0 (4 line(s))
+L5 revenue_growth against PKKP,book 2023 (FY2021),PASS,Lampiran E 0 vs PKKP 0.0 (1 line(s))
+L5 gtbkk against PKKP,book 2023 (FY2021),PASS,Lampiran E 303467596 vs PKKP 303467595.55 (1 line(s))
+L5 state_services against PKKP,book 2023 (FY2021),PASS,Lampiran E 324740554 vs PKKP B.11 'Bayaran Perkhidmatan' 324740553.88
+L5 concurrent_list against PKKP,book 2023 (FY2021),INFO,"Lampiran E 660580003 vs PKKP 775523725.08: PKKP's line also carries the libraries and museums grants, so it is tested with them in L7"
+L5 libraries against PKKP,book 2023 (FY2021),INFO,Lampiran E 74500000; not a line of its own in PKKP
+L5 museums against PKKP,book 2023 (FY2021),INFO,Lampiran E 40500000; not a line of its own in PKKP
+L5 petroleum_duty_compensation against PKKP,book 2023 (FY2021),PASS,Lampiran E 240000000 vs PKKP 240000000.0 (1 line(s))
+L5 street_lighting against PKKP,book 2023 (FY2021),PASS,Lampiran E 148252634 vs PKKP 148252633.21 (1 line(s))
+L5 tourism_tax against PKKP,book 2023 (FY2021),PASS,Lampiran E 18950248 vs PKKP B.11 'Lain-lain Bayaran Balik' (40000) 18950246.65
+L5 development_level against PKKP,book 2023 (FY2021),INFO,"Lampiran E 400000000; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L5 opex_deficit against PKKP,book 2023 (FY2021),INFO,"Lampiran E 34101792; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L6 special_annual MY-12 against PKKP's grant by name,book 2023 (FY2021),PASS,Lampiran E 26700000 vs PKKP 26700000.0
+L6 special_annual MY-13 against PKKP's grant by name,book 2023 (FY2021),PASS,Lampiran E 16000000 vs PKKP 16000000.0
+L6 special_annual MY-10 against PKKP's grant by name,book 2023 (FY2021),PASS,Lampiran E 25805638 vs PKKP 25805638.0
+L6 special_annual MY-02 against PKKP's grant by name,book 2023 (FY2021),PASS,Lampiran E 10010000 vs PKKP 10010000.0
+L7 Concurrent List + libraries + museums against PKKP's Concurrent List line,book 2023 (FY2021),WARN,Lampiran E 775580003 vs PKKP 775523725.08; difference 56277.92
+L1 each state's grants add up to its JUMLAH,book 2024 (FY2022),PASS,14 rows
+L2 each grant's 13 states add up to the Jumlah row,book 2024 (FY2022),PASS,15 columns
+L3 the Jumlah row adds up to its JUMLAH,book 2024 (FY2022),PASS,8118939616 vs 8118939616
+L5 capitation against PKKP,book 2024 (FY2022),PASS,Lampiran E 422575680 vs PKKP 422575680.0 (1 line(s))
+L5 road_maintenance against PKKP,book 2024 (FY2022),PASS,Lampiran E 5046014997 vs PKKP 5046014997.0 (3 line(s))
+L5 special_annual against PKKP,book 2024 (FY2022),PASS,Lampiran E 177415700 vs PKKP 177415700.0 (4 line(s))
+L5 revenue_growth against PKKP,book 2024 (FY2022),PASS,Lampiran E 250000000 vs PKKP 250000000.0 (1 line(s))
+L5 gtbkk against PKKP,book 2024 (FY2022),PASS,Lampiran E 308189538 vs PKKP 308189537.44 (1 line(s))
+L5 state_services against PKKP,book 2024 (FY2022),PASS,Lampiran E 384210471 vs PKKP B.11 'Bayaran Perkhidmatan' 384210472.69
+L5 concurrent_list against PKKP,book 2024 (FY2022),INFO,"Lampiran E 670091076 vs PKKP 785036435.7: PKKP's line also carries the libraries and museums grants, so it is tested with them in L7"
+L5 libraries against PKKP,book 2024 (FY2022),INFO,Lampiran E 74500000; not a line of its own in PKKP
+L5 museums against PKKP,book 2024 (FY2022),INFO,Lampiran E 40500000; not a line of its own in PKKP
+L5 petroleum_duty_compensation against PKKP,book 2024 (FY2022),PASS,Lampiran E 240000000 vs PKKP 240000000.0 (1 line(s))
+L5 street_lighting against PKKP,book 2024 (FY2022),PASS,Lampiran E 134924420 vs PKKP 134924419.82 (1 line(s))
+L5 tourism_tax against PKKP,book 2024 (FY2022),PASS,Lampiran E 263811 vs PKKP B.11 'Lain-lain Bayaran Balik' (40000) 263809.0
+L5 development_level against PKKP,book 2024 (FY2022),INFO,"Lampiran E 330000000; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L5 opex_deficit against PKKP,book 2024 (FY2022),INFO,"Lampiran E 40253923; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L6 special_annual MY-12 against PKKP's grant by name,book 2024 (FY2022),PASS,Lampiran E 125600000 vs PKKP 125600000.0
+L6 special_annual MY-13 against PKKP's grant by name,book 2024 (FY2022),PASS,Lampiran E 16000000 vs PKKP 16000000.0
+L6 special_annual MY-10 against PKKP's grant by name,book 2024 (FY2022),PASS,Lampiran E 25805700 vs PKKP 25805700.0
+L6 special_annual MY-02 against PKKP's grant by name,book 2024 (FY2022),PASS,Lampiran E 10010000 vs PKKP 10010000.0
+L7 Concurrent List + libraries + museums against PKKP's Concurrent List line,book 2024 (FY2022),WARN,Lampiran E 785091076 vs PKKP 785036435.7; difference 54640.3
+L1 each state's grants add up to its JUMLAH,book 2025 (FY2023),PASS,14 rows
+L2 each grant's 13 states add up to the Jumlah row,book 2025 (FY2023),PASS,15 columns
+L3 the Jumlah row adds up to its JUMLAH,book 2025 (FY2023),PASS,8811554691 vs 8811554691
+L5 capitation against PKKP,book 2025 (FY2023),PASS,Lampiran E 426640380 vs PKKP 426640380.0 (1 line(s))
+L5 road_maintenance against PKKP,book 2025 (FY2023),PASS,Lampiran E 5200000000 vs PKKP 5200000000.0 (3 line(s))
+L5 special_annual against PKKP,book 2025 (FY2023),PASS,Lampiran E 635815638 vs PKKP 635815638.0 (4 line(s))
+L5 revenue_growth against PKKP,book 2025 (FY2023),PASS,Lampiran E 250000000 vs PKKP 250000000.0 (1 line(s))
+L5 gtbkk against PKKP,book 2025 (FY2023),WARN,Lampiran E 307004001 vs PKKP 308412080.22 (1 line(s)); difference -1408079.22
+L5 state_services against PKKP,book 2025 (FY2023),PASS,Lampiran E 329487139 vs PKKP B.11 'Bayaran Perkhidmatan' 329487139.54
+L5 concurrent_list against PKKP,book 2025 (FY2023),INFO,"Lampiran E 711347986 vs PKKP 826347985.5: PKKP's line also carries the libraries and museums grants, so it is tested with them in L7"
+L5 libraries against PKKP,book 2025 (FY2023),INFO,Lampiran E 74500000; not a line of its own in PKKP
+L5 museums against PKKP,book 2025 (FY2023),INFO,Lampiran E 40500000; not a line of its own in PKKP
+L5 petroleum_duty_compensation against PKKP,book 2025 (FY2023),PASS,Lampiran E 240000000 vs PKKP 240000000.0 (1 line(s))
+L5 street_lighting against PKKP,book 2025 (FY2023),PASS,Lampiran E 150510280 vs PKKP 150510280.43 (1 line(s))
+L5 tourism_tax against PKKP,book 2025 (FY2023),PASS,Lampiran E 474508 vs PKKP B.11 'Lain-lain Bayaran Balik' (40000) 474507.73
+L5 development_level against PKKP,book 2025 (FY2023),INFO,"Lampiran E 400000000; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L5 opex_deficit against PKKP,book 2025 (FY2023),INFO,"Lampiran E 45274759; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L6 special_annual MY-12 against PKKP's grant by name,book 2025 (FY2023),PASS,Lampiran E 300000000 vs PKKP 300000000.0
+L6 special_annual MY-13 against PKKP's grant by name,book 2025 (FY2023),PASS,Lampiran E 300000000 vs PKKP 300000000.0
+L6 special_annual MY-10 against PKKP's grant by name,book 2025 (FY2023),PASS,Lampiran E 25805638 vs PKKP 25805638.0
+L6 special_annual MY-02 against PKKP's grant by name,book 2025 (FY2023),PASS,Lampiran E 10010000 vs PKKP 10010000.0
+L7 Concurrent List + libraries + museums against PKKP's Concurrent List line,book 2025 (FY2023),PASS,Lampiran E 826347986 vs PKKP 826347985.5
+L1 each state's grants add up to its JUMLAH,book 2026 (FY2024),PASS,14 rows
+L2 each grant's 13 states add up to the Jumlah row,book 2026 (FY2024),PASS,16 columns
+L3 the Jumlah row adds up to its JUMLAH,book 2026 (FY2024),PASS,9415020112 vs 9415020112
+L5 capitation against PKKP,book 2026 (FY2024),PASS,Lampiran E 430642500 vs PKKP 430642500.0 (1 line(s))
+L5 road_maintenance against PKKP,book 2026 (FY2024),PASS,Lampiran E 5356000000 vs PKKP 5356000000.0 (3 line(s))
+L5 special_annual against PKKP,book 2026 (FY2024),PASS,Lampiran E 647815638 vs PKKP 647815638.0 (4 line(s))
+L5 revenue_growth against PKKP,book 2026 (FY2024),PASS,Lampiran E 250000000 vs PKKP 250000000.0 (1 line(s))
+L5 gtbkk against PKKP,book 2026 (FY2024),WARN,Lampiran E 309642202 vs PKKP 308456665.83 (1 line(s)); difference 1185536.17
+L5 state_services against PKKP,book 2026 (FY2024),PASS,Lampiran E 382618283 vs PKKP B.11 'Bayaran Perkhidmatan' 382618282.78
+L5 concurrent_list against PKKP,book 2026 (FY2024),INFO,"Lampiran E 732110106 vs PKKP 858610105.88: PKKP's line also carries the libraries and museums grants, so it is tested with them in L7"
+L5 libraries against PKKP,book 2026 (FY2024),INFO,Lampiran E 81950000; not a line of its own in PKKP
+L5 museums against PKKP,book 2026 (FY2024),INFO,Lampiran E 44550000; not a line of its own in PKKP
+L5 petroleum_duty_compensation against PKKP,book 2026 (FY2024),PASS,Lampiran E 240000000 vs PKKP 240000000.0 (1 line(s))
+L5 street_lighting against PKKP,book 2026 (FY2024),PASS,Lampiran E 207488141 vs PKKP 207488141.28 (1 line(s))
+L5 tourism_tax against PKKP,book 2026 (FY2024),PASS,Lampiran E 37263610 vs PKKP B.11 'Lain-lain Bayaran Balik' (40000) 37263611.0
+L5 biodiversity_eft against PKKP,book 2026 (FY2024),INFO,Lampiran E 190000000; not a line of its own in PKKP
+L5 development_level against PKKP,book 2026 (FY2024),INFO,"Lampiran E 400000000; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L5 opex_deficit against PKKP,book 2026 (FY2024),INFO,"Lampiran E 104939632; not a line of its own in PKKP (B.12: paid out of the State Reserve Fund, Kumpulan Wang Rizab Negeri)"
+L6 special_annual MY-12 against PKKP's grant by name,book 2026 (FY2024),PASS,Lampiran E 306000000 vs PKKP 306000000.0
+L6 special_annual MY-13 against PKKP's grant by name,book 2026 (FY2024),PASS,Lampiran E 306000000 vs PKKP 306000000.0
+L6 special_annual MY-10 against PKKP's grant by name,book 2026 (FY2024),PASS,Lampiran E 25805638 vs PKKP 25805638.0
+L6 special_annual MY-02 against PKKP's grant by name,book 2026 (FY2024),PASS,Lampiran E 10010000 vs PKKP 10010000.0
+L7 Concurrent List + libraries + museums against PKKP's Concurrent List line,book 2026 (FY2024),PASS,Lampiran E 858610106 vs PKKP 858610105.88

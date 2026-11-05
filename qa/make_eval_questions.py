@@ -204,6 +204,26 @@ q("5", "Is federal spending placed by state for FY2015 (an OCR-provisional scan)
 q("5", "Does the placement view cover all 16 states and territories plus the national and not-placed rows in 2020?",
   "get_gap_view", {"name": "gap_federal_placement", "year": "2020"}, "row_count", "18")
 
+
+
+def le_cell(book, geo, grant):
+    with open(os.path.join(REPO, "sources", "anggaran", "data", book, f"fact_anggaran_lampiran_e_{book}.csv"),
+              newline="") as fh:
+        return next(r["amount_rm"] for r in csv.DictReader(fh) if r["geo_code"] == geo and r["grant_id"] == grant)
+
+
+q("5", "What did MOF record paying Selangor in capitation grant in 2022 (Lampiran E)?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2022", "transfer": "capitation"},
+  "field:federal_by_state_rm", le_cell("2024", "MY-10", "capitation"))
+q("5", "Does Selangor's own record of its 2022 capitation grant agree with what MOF says it paid?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2022", "transfer": "capitation"},
+  "field:by_state_status", "agree")
+q("5", "Does the answer say MOF's per-state capitation figure is not the audited accounts?", "get_gap_view",
+  {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2022", "transfer": "capitation"}, "caveat", "CV28")
+q("5", "Is MOF's split of the 2020 Concurrent List grant by state used, though it does not add up to the audited line?",
+  "get_gap_view", {"name": "gap_federal_vs_state", "geo": "MY-10", "year": "2020", "transfer": "concurrent_list"},
+  "field:by_state_status", "lampiran_e_unreconciled", kind="trap_missing")
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")

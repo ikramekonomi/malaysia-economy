@@ -49,6 +49,18 @@ Method (declared 2026-11-05, before any result of this view was looked at):
   agree_after_other_lenders; a year whose state report is not held is own_volume_not_held; an unparsed own table
   takes precedence over later printings (state_table_not_extracted); meta/gap_note.csv notes can cover a year
   range and, where a page proves the state figure is printed but not extracted, set that status.
+* Added 2026-11-05 (D30), declared before any Lampiran E result was computed in this view: for FY2019-2024 the
+  Budget books' Lampiran E (sources/anggaran, MOF's own record of the actual grant paid to EACH state, the payer's
+  split, not a formula) gives a third side for the class grants. On capitation and concurrent_list rows of a
+  state:
+    federal_by_state_rm   Lampiran E's figure for that state and grant, used only where that grant's national
+                          total equals PKKP's audited line within RM2 that year (_validation_lampiran_e.csv L5, or
+                          L7 for the Concurrent List with libraries and museums, which PKKP prints in one line);
+                          otherwise blank with the reason. For the Concurrent List the comparison uses the
+                          Concurrent List column alone (what the state accounts print under that name).
+    by_state_status       agree when |state minus Lampiran E| <= RM10,000 (the state report prints RM juta to 2
+                          decimals), else differ; state_not_printed / own_volume_not_held as for the rest.
+  The existing share columns and statuses are unchanged; the new columns sit beside them.
 """
 import csv
 import glob
@@ -61,6 +73,7 @@ from decimal import Decimal
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from warehouse import CORE, REPO, Warehouse, fmt  # noqa: E402
+import lampiran_e  # noqa: E402
 
 YEARS = [str(y) for y in range(2014, 2025)]
 STATES_DIR = os.path.join(REPO, "sources", "states", "data")
@@ -83,6 +96,7 @@ TOL_STOCK = Decimal(10000)
 OTHER_LENDER = re.compile(r"institusi kewangan|\bbank\b|sukuk|\bbon\b|pasaran modal|pinjaman pasaran", re.I)
 FIELDS = ["transfer", "geo_code", "place", "year", "comparison", "status", "federal_paid_rm", "federal_recipient",
           "federal_flow_ids", "state_recorded_rm", "state_obs_id", "state_share_of_federal", "difference_rm",
+          "federal_by_state_rm", "federal_by_state_ref", "by_state_status", "by_state_difference_rm",
           "state_printings",
           "printings_agree", "states_printing", "note", "caveats", "release_id"]
 
@@ -226,6 +240,7 @@ def main():
     fed_years = {f["period_code"] for f in w.flows}
     named_states = {g for g, _ in named_by}
     out, checks = [], []
+    le_ok, le_cells = lampiran_e.reconciled(), lampiran_e.cells()
     for t, spec in TRANSFERS.items():
         prints = printings(spec["code"])
         for y in YEARS:
@@ -285,6 +300,24 @@ def main():
                         agg_sum += Decimal(obs["value"])
                         agg_n += 1
                         agg_ids.append(obs["obs_id"])
+                    # D30: the payer's own split by state (Lampiran E), where it reconciles to PKKP that year
+                    cell = le_cells.get((y, g, t))
+                    if cell:
+                        if t not in le_ok.get(y, {}):
+                            row["by_state_status"] = "lampiran_e_unreconciled"
+                            v5 = "; ".join(x["detail"] for x in lampiran_e.validation_status(y, t) if x["status"] == "WARN")
+                            notes.append(f"Lampiran E prints {cell['printed']} for this state, not used: its national "
+                                         f"total does not equal PKKP's line this year ({v5})")
+                        elif cell["amount_rm"]:
+                            cv.add("CV28")
+                            row["federal_by_state_rm"] = cell["amount_rm"]
+                            row["federal_by_state_ref"] = cell["l1_ref"]
+                            if obs:
+                                d = Decimal(obs["value"]) - Decimal(cell["amount_rm"])
+                                row["by_state_difference_rm"] = fmt(d)
+                                row["by_state_status"] = "agree" if abs(d) <= TOL_STOCK else "differ"
+                            else:
+                                row["by_state_status"] = row["status"]
                 elif spec["kind"] == "stock":
                     row["comparison"] = "equal_expected"
                     row["federal_recipient"] = f"the {state_name[g]} state government ({gov.get(g, '')}), borrower"
@@ -384,6 +417,10 @@ def main():
     bad = [f"{r['transfer']} {r['geo_code']} {r['year']}" for r in out if r["status"] == "inconsistent"]
     checks.append(["GF4 rows where the two sides cannot both be right (status inconsistent)", "all", "INFO",
                    f"{len(bad)}" + (f": {bad}" if bad else "")])
+    from collections import Counter as _C
+    bs = _C((r["transfer"], r["by_state_status"]) for r in out if r["by_state_status"])
+    checks.append(["GF7 class grants against the payer's split by state (Lampiran E, D30)", "FY2019-2024", "INFO",
+                   ", ".join(f"{t}/{s} {n}" for (t, s), n in sorted(bs.items()))])
     dis = [f"{r['transfer']} {r['geo_code']} {r['year']}" for r in out if r["printings_agree"] == "false"]
     checks.append(["GF5 state figures printed differently in two of the state's own reports", "all", "INFO",
                    f"{len(dis)}" + (f": {dis}" if dis else "")])

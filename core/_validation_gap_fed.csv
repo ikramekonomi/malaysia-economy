@@ -25,5 +25,6 @@ GF1 capitation: every state and territory present,all,PASS,"{'2014': 16, '2015':
 GF1 concurrent_list: every state and territory present,all,PASS,"{'2014': 16, '2015': 16, '2016': 16, '2017': 16, '2018': 16, '2019': 16, '2020': 16, '2021': 16, '2022': 16, '2023': 16, '2024': 16}"
 GF3 every figure traces to an observation or a flow,all,PASS,0 untraced
 GF4 rows where the two sides cannot both be right (status inconsistent),all,INFO,0
+"GF7 class grants against the payer's split by state (Lampiran E, D30)",FY2019-2024,INFO,"capitation/agree 14, capitation/printed_in_later_volume_only 1, capitation/state_not_printed 51, capitation/state_table_not_extracted 12, concurrent_list/agree 4, concurrent_list/lampiran_e_unreconciled 52, concurrent_list/state_not_printed 21, concurrent_list/state_table_not_extracted 1"
 GF5 state figures printed differently in two of the state's own reports,all,INFO,"2: ['concurrent_list MY-02 2020', 'loans MY-09 2015']"
 GF6 no state-government figure for a Federal Territory,all,PASS,0
