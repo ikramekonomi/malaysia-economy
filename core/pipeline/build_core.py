@@ -811,16 +811,16 @@ def checks(obs, geo, per, ind, brk, editions):
         "credit.loans.banking_system", "PASS" if not off else "INFO",
         f"{len(loans)} months" + (f"; differ in {off}" if off else ", within RM0.01 million"))
     import hashlib
-    bad, files = [], {(r["edition_id"], r["file_id"]) for r in obs.rows
+    stale, files = [], {(r["edition_id"], r["file_id"]) for r in obs.rows
                       if r["indicator_code"].startswith(("trade.", "money.", "credit."))
                       or (r["indicator_code"] == "cpi.index" and r["geo_code"] == "MY")}
     for e_id, sha in sorted(files):
         pub, ds = e_id.split(":", 1)[0], e_id.split(":", 1)[1].split("@")[0]
         with open(os.path.join(DOSM if pub == "dosm" else BNM, f"{ds}.csv"), "rb") as f:
             if hashlib.sha256(f.read()).hexdigest() != sha:
-                bad.append(ds)
+                stale.append(ds)
     add("C14 the file read is the vintage logged as current (sha256; national series)", "fact_observation",
-        "PASS" if not bad else "FAIL", f"{len(files)} files" + (f"; differ: {bad}" if bad else ", all match"))
+        "PASS" if not stale else "FAIL", f"{len(files)} files" + (f"; differ: {stale}" if stale else ", all match"))
     add("C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)", "fact_observation",
         "PASS" if not bad else "FAIL", f"{n} rows checked" + (f"; {len(bad)} differ, e.g. {bad[:3]}" if bad else ""))
     return out
