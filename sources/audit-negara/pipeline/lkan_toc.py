@@ -10,8 +10,8 @@ so that the inventory parser can be written and checked against them without the
 L0 archive (meta/l0_fetch.py; .github/workflows/lkan-extract.yml runs this there).
 
 A volume is in scope when its cover-verified title (data/lkan_reports.csv, data/lkan_reports_backfill.csv) names
-activities (AKTIVITI), companies (SYARIKAT) or statutory bodies (BADAN BERKANUN). Contents pages: those of the
-first 30 whose text has 'KANDUNGAN' (or 'CONTENTS'), and the pages straight after them that carry on the list
+activities (AKTIVITI), companies (SYARIKAT) or statutory bodies (BADAN BERKANUN). Contents pages: from the first of the
+first 30 with a line that is 'KANDUNGAN' (or 'CONTENTS') alone and three entries, and the pages straight after them that carry on the list
 (a line ending in, or in older volumes starting with, a page number), up to 8 pages.
 """
 import csv
@@ -53,8 +53,9 @@ def toc(pdf):
     pages, started = [], False
     for n in range(1, 31):
         t = page(pdf, n)
-        has = re.search(r"\bKANDUNGAN\b|\bCONTENTS\b", t, re.I)
-        entries = sum(1 for ln in t.splitlines() if ENTRY.match(ln.strip()))
+        # the contents page proper: a line that is the word alone (the cover and the imprint page mention it too)
+        has = re.search(r"^\s*(KANDUNGAN|CONTENTS)\s*$", t, re.I | re.M)
+        entries = sum(1 for ln in t.splitlines() if ENTRY.match(ln.strip()) and re.search(r"[A-Za-z]{3}", ln))
         if has and entries >= 3:
             started = True
         if started:
