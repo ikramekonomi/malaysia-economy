@@ -9,7 +9,7 @@ A static site over the warehouse, with no server, no database and no build step 
   - a state map with a play button;
   - tables you can sort and filter.
 - **Policy gaps**: the nine L3 views. Each has a live headline, a rule-based reading, a chart, a drilldown, its rows and its caveats.
-- **Bubbles**: any two state indicators, animated through the years, with trails.
+- **Compare** (`#/compare`): states, ministries or development projects. Any two measures, sized by population or money and coloured by status, animated through the years, with trails. Axes are fitted to the bulk of the data, and outliers are named. Districts and constituencies are left out (D10).
 - **States**, **Sources & caveats** and **Method & trust**.
 
 ```bash

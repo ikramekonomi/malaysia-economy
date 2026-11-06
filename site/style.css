@@ -258,3 +258,6 @@ th:hover { color: var(--text); }
 .stats.big b small { font-size: 15px; color: var(--text-3); font-weight: 600; }
 @media (max-width: 1100px) { .pipe { grid-template-columns: 1fr 1fr; } .pstep + .pstep::before { display: none; } }
 @media (max-width: 900px) { .hero2, .sec { grid-template-columns: 1fr; gap: 16px; } .findings, .rules { grid-template-columns: 1fr; } .sec { padding: 28px 0; } }
+@media (max-width: 900px) { .hero2, .sec { grid-template-columns: minmax(0, 1fr); } }
+.sec-r, .hero2 > * { min-width: 0; } .tablewrap { max-width: 100%; }
+.an-v, .an-v a { overflow-wrap: anywhere; }

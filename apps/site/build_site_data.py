@@ -160,6 +160,16 @@ def main():
         write(f"gap/{name}.json", {"name": name, "title": title, "question": q, "cols": cols, "rows": data})
         gaps.append({"name": name, "title": title, "question": q, "n": len(data)})
     write("gaps.json", gaps)
+    # development votes (P.xx) -> the body that holds them, by its latest name (for the projects comparison)
+    names = defaultdict(list)
+    for r in rows(os.path.join(REPO, "core", "entity_name.csv")):
+        names[r["entity_id"]].append(r)
+    votes = {}
+    for r in rows(os.path.join(REPO, "core", "bridge_entity_code.csv")):
+        if r["code_system"] == "maksud_pembangunan":
+            ns = sorted(names.get(r["entity_id"], []), key=lambda x: x["valid_to"] or "9999")
+            votes[r["code"]] = {"entity_id": r["entity_id"], "name": (ns[-1]["name_en"] or ns[-1]["name_bm"]) if ns else ""}
+    write("votes.json", votes)
     scale = warehouse_scale(cat, w)
     lv = defaultdict(int)
     for r in w.obs:

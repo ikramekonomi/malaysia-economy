@@ -235,7 +235,7 @@ async function viewAbout(v) {
       <h1 class="display">From data to policy change.</h1>
       <p class="lede big">Malaysia publishes what it plans, collects, spends and audits. But it is spread across hundreds of documents, a dozen websites and many formats. This warehouse puts it in one place, checks every number against its source, and shows where the institutions agree and where they don't.</p>
       <p class="lede big" style="margin-top:10px">So a policy case can rest on evidence that anyone can verify.</p>
-      <div class="row" style="margin:22px 0 8px;gap:10px"><a class="btn primary lg" href="#/gaps">Start with a question →</a><a class="btn lg" href="#/explore">Explore the data</a><a class="btn lg" href="#/compare">Compare the states</a></div>
+      <div class="row" style="margin:22px 0 8px;gap:10px"><a class="btn primary lg" href="#/gaps">Start with a question →</a><a class="btn lg" href="#/explore">Explore the data</a><a class="btn lg" href="#/compare">Compare over time</a></div>
       <div class="muted small">Tip: press <kbd>⌘K</kbd> (or Ctrl K) anywhere to search.</div>
     </div>
     ${anat}
@@ -323,7 +323,7 @@ async function viewAbout(v) {
     <tr><td><b>Data analyst</b></td><td>Pull any series by place, group and year, as published, with every citation; download it as CSV.</td><td><a href="#/explore">Explore data</a></td></tr>
     <tr><td><b>Journalist</b></td><td>Check a claim in seconds: what was budgeted, what was spent, and where it is printed.</td><td><a href="#/gaps/gap_budget_vs_actual">Budget vs actual</a></td></tr>
     <tr><td><b>Elected representative</b></td><td>See your state beside Malaysia on poverty, income, jobs and the state's own accounts.</td><td><a href="#/states">States</a></td></tr>
-    <tr><td><b>Researcher</b></td><td>Set two measures against each other across states and years, and rebuild any figure from the repository.</td><td><a href="#/compare">Compare states</a></td></tr>
+    <tr><td><b>Researcher</b></td><td>Set two measures against each other for states, ministries or projects, across years, and rebuild any figure from the repository.</td><td><a href="#/compare">Compare</a></td></tr>
     </tbody></table></div>`)}
 
   ${sec("Rules it never breaks", "These hold for every number, in every view.", `<div class="rules">
@@ -742,23 +742,96 @@ async function stateYears(code) {
   return out;
 }
 let bubbleTimer = null;
+/* COMPARE: two measures, any kind of unit (states, ministries, development projects), through time.
+   Each unit kind declares its measures and how to load one point per unit per year. */
+const PROJ_OK = (r) => r.status !== "reserve" && r.maksud_code !== "P.70";
+const UNITS = {
+  state: {
+    label: "States", noun: "states", one: "state", sizeLabel: "population",
+    measures: () => D.cat.filter((c) => c.levels.includes("state") && /^\d{4}$/.test(c.first) && /^\d{4}$/.test(c.last)).sort((a, b) => a.name.localeCompare(b.name)).map((c) => ({ key: c.code, name: c.name, unit: c.unit, survey: /HIES|LFS|survey/i.test(c.definition) })),
+    defaults: { x: "hh_income.gross.median", y: "poverty.absolute.rate", s: "pop.total" },
+    sizes: [["pop.total", "Population"], ["", "Same size"]],
+    groups: ["Peninsular states", "Sabah & Sarawak", "Federal Territories"],
+    traceList: () => STATES.map(([g]) => [g, geoName(g)]).sort((a, b) => a[1].localeCompare(b[1])),
+    async load(st) {
+      const [X, Y, S] = await Promise.all([stateYears(st.x), stateYears(st.y), st.s ? stateYears(st.s) : Promise.resolve({})]);
+      const sizeOf = (g, y) => { if (!st.s) return 1; for (let k = 0; k <= 3; k++) for (const yy of [String(+y - k), String(+y + k)]) if (S[yy]?.[g]) return S[yy][g].value; return null; };
+      const years = Object.keys(X).filter((y) => Y[y]).sort();
+      const pts = years.flatMap((y) => STATES.map(([g, ab]) => [g, ab]).filter(([g]) => X[y][g] && Y[y][g]).map(([g, ab]) => ({ id: g, y, x: X[y][g].value, yv: Y[y][g].value, s: sizeOf(g, y), name: geoName(g), ab, group: REGION(g), src: `${X[y][g].ed.id}\n${Y[y][g].ed.id}` })));
+      const nat = years.map((y) => (X[y].MY && Y[y].MY ? { y, x: X[y].MY.value, yv: Y[y].MY.value } : null)).filter(Boolean);
+      return { pts, nat, natLabel: "Malaysia" };
+    },
+  },
+  ministry: {
+    label: "Ministries", noun: "ministries and bodies", one: "ministry or body", sizeLabel: "allocation",
+    measures: () => [
+      { key: "estimate_revised_pkkp", name: "Allocation (accounts)", unit: "RM" }, { key: "actual_audited", name: "Spent (audited)", unit: "RM" },
+      { key: "execution_rate", name: "Share of allocation spent", unit: "percent", pct: true }, { key: "unspent_rm", name: "Left unspent", unit: "RM" },
+      { key: "estimate_original_pkkp", name: "Original estimate", unit: "RM" }],
+    defaults: { x: "estimate_revised_pkkp", y: "execution_rate", s: "estimate_revised_pkkp", logx: "1", flow: "devex" },
+    sizes: [["estimate_revised_pkkp", "Allocation"], ["", "Same size"]],
+    groups: ["Within allocation", "Underspent", "Overspent"],
+    filters: [["flow", "Money", [["devex", "Development"], ["opex", "Operating"]]]],
+    async rows() { return objs(await J("gap/gap_budget_vs_actual.json")).filter((r) => r.breakdown_key === "_total" && r.entity_id !== "E000001" && r.actual_audited != null); },
+    traceList: async (st) => [...new Map((await UNITS.ministry.rows()).filter((r) => r.flow === st.flow).map((r) => [r.entity_id, r.body])).entries()].sort((a, b) => a[1].localeCompare(b[1])),
+    async load(st) {
+      const rs = (await this.rows()).filter((r) => r.flow === (st.flow || "devex"));
+      const val = (r, k) => (k === "execution_rate" ? (r[k] != null ? r[k] * 100 : null) : r[k]);
+      const grp = (r) => ({ underspent: "Underspent", overspent: "Overspent" }[r.status] || "Within allocation");
+      const pts = rs.map((r) => ({ id: r.entity_id, y: String(r.year), x: val(r, st.x), yv: val(r, st.y), s: st.s ? val(r, st.s) : 1, name: r.body, ab: "", group: grp(r), src: "PKKP (audited accounts), gap_budget_vs_actual" })).filter((p) => typeof p.x === "number" && typeof p.yv === "number");
+      return { pts, nat: [], note: "Ministries and other bodies with a vote, as the audited accounts (PKKP) report them. Bodies change over time: a ministry that was split or renamed appears under each name in its own years." };
+    },
+  },
+  project: {
+    label: "Development projects", noun: "projects", one: "project", sizeLabel: "allocation",
+    measures: () => [
+      { key: "allocation_pkkp_rm", name: "Allocation (accounts)", unit: "RM" }, { key: "actual_pkkp_rm", name: "Spent (audited)", unit: "RM" },
+      { key: "execution_rate", name: "Share of allocation spent", unit: "percent", pct: true }, { key: "unspent_rm", name: "Left unspent", unit: "RM" },
+      { key: "tabled_rm", name: "Tabled in Parliament", unit: "RM" }, { key: "total_cost_book_rm", name: "Total project cost (budget book)", unit: "RM" }],
+    defaults: { x: "allocation_pkkp_rm", y: "execution_rate", s: "allocation_pkkp_rm", logx: "1", vote: "" },
+    sizes: [["allocation_pkkp_rm", "Allocation"], ["", "Same size"]],
+    groups: ["Within allocation", "Underspent", "Overspent"],
+    async rows() { return objs(await J("gap/gap_project_budget_vs_actual.json")).filter(PROJ_OK); },
+    filterOpts: async () => { const rs = await UNITS.project.rows(); return [["vote", "Vote (ministry)", [["", "All votes"], ...[...new Set(rs.map((r) => r.maksud_code))].sort((a, b) => a.localeCompare(b, "en", { numeric: true })).map((m) => [m, `${m} · ${D.voteName?.[m] || ""}`])]]]; },
+    traceList: async (st) => (await UNITS.project.rows()).filter((r) => !st.vote || r.maksud_code === st.vote).reduce((m, r) => (m.set(`${r.maksud_code}/${r.projek_code}`, `${r.maksud_code}/${r.projek_code} ${r.name_pkkp || r.name_book || ""}`.slice(0, 70)), m), new Map()),
+    async load(st) {
+      const rs = (await this.rows()).filter((r) => !st.vote || r.maksud_code === st.vote);
+      const val = (r, k) => (k === "execution_rate" ? (r[k] != null ? r[k] * 100 : null) : r[k]);
+      const grp = (r) => ({ underspent: "Underspent", overspent: "Overspent" }[r.status] || "Within allocation");
+      const pts = rs.map((r) => ({ id: `${r.maksud_code}/${r.projek_code}`, y: String(r.year), x: val(r, st.x), yv: val(r, st.y), s: st.s ? val(r, st.s) : 1, name: `${r.maksud_code}/${r.projek_code} ${r.name_pkkp || r.name_book || ""}`, ab: "", group: grp(r), src: r.pkkp_ref || r.tabled_ref || "" })).filter((p) => typeof p.x === "number" && typeof p.yv === "number");
+      return { pts, nat: [], note: "Development projects (B-vote projects) of FY2023–2025, joined on their vote and project codes. The contingency reserve (P.70) is left out. FY2025 has budget-book figures only, so measures from the audited accounts start in FY2023 and end in FY2024." };
+    },
+  },
+};
+
 async function viewBubbles(v) {
-  crumbs([["Compare states", "#/compare"]]);
-  clearInterval(bubbleTimer);
+  crumbs([["Compare", "#/compare"]]);
+  clearInterval(bubbleTimer); bubbleTimer = null;
   const [, P] = hashParams();
-  const opts = D.cat.filter((c) => c.levels.includes("state") && /^\d{4}$/.test(c.first) && /^\d{4}$/.test(c.last)).sort((a, b) => a.name.localeCompare(b.name));
-  const has = (k) => opts.some((c) => c.code === k);
-  const st = { x: has(P.get("x")) ? P.get("x") : "hh_income.gross.median", y: has(P.get("y")) ? P.get("y") : "poverty.absolute.rate",
-    s: P.get("s") || "pop.total", logx: P.get("logx") === "1", trace: (P.get("trace") || "").split(",").filter(Boolean), year: P.get("year") || "" };
-  v.innerHTML = `<div class="row">${chip("Compare states", "accent")}${chip("all 16 states and FTs")}</div>
-    <h1>Compare the states, year by year.</h1>
-    <p class="lede">Pick any two measures. Each circle is a state, sized by its population. Press play to watch the years go by. Trace a state to see the path it took.</p>
-    <div class="card" style="padding:12px 14px;margin:16px 0 12px"><div class="row" style="gap:14px" id="bc">
-      <div style="flex:1;min-width:220px"><div class="small muted">Across (x)</div><select id="bx" style="width:100%">${opts.map((c) => `<option value="${c.code}" ${c.code === st.x ? "selected" : ""}>${esc(c.name)}</option>`).join("")}</select></div>
-      <div style="flex:1;min-width:220px"><div class="small muted">Up (y)</div><select id="by" style="width:100%">${opts.map((c) => `<option value="${c.code}" ${c.code === st.y ? "selected" : ""}>${esc(c.name)}</option>`).join("")}</select></div>
-      <div><div class="small muted">Bubble size</div><select id="bs"><option value="pop.total" ${st.s === "pop.total" ? "selected" : ""}>Population</option><option value="" ${!st.s ? "selected" : ""}>Same size</option></select></div>
-      <div><div class="small muted">Scale</div><label class="small" style="display:inline-flex;gap:5px;align-items:center;height:30px"><input type="checkbox" id="blog" ${st.logx ? "checked" : ""}> log across</label></div>
-      <div><div class="small muted">Trace a state</div><select id="bt"><option value="">+ add</option>${STATES.map(([g]) => g).sort((a, b) => geoName(a).localeCompare(geoName(b))).map((g) => `<option value="${g}">${esc(geoName(g))}</option>`).join("")}</select></div>
+  const kind = UNITS[P.get("u")] ? P.get("u") : "state";
+  const U = UNITS[kind];
+  if (kind === "project" && !D.voteName) { D.voteName = {}; try { for (const [k, x] of Object.entries(await J("votes.json"))) D.voteName[k] = x.name; } catch {} }
+  const ms = U.measures();
+  const has = (k) => ms.some((x) => x.key === k);
+  const st = { u: kind, ...U.defaults };
+  for (const k of ["x", "y"]) if (has(P.get(k))) st[k] = P.get(k);
+  if (P.has("s")) st.s = U.sizes.some(([k]) => k === P.get("s")) ? P.get("s") : st.s;
+  if (P.has("logx")) st.logx = P.get("logx"); if (P.has("logy")) st.logy = P.get("logy");
+  st.trace = (P.get("trace") || "").split(",").filter(Boolean); st.year = P.get("year") || "";
+  const filters = U.filters || (U.filterOpts ? await U.filterOpts() : []);
+  for (const [k, , opts] of filters) if (opts.some(([o]) => o === P.get(k))) st[k] = P.get(k);
+  const sel = (id, list, cur) => `<select id="${id}" style="width:100%">${list.map(([k, l]) => `<option value="${esc(k)}" ${k === cur ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>`;
+  v.innerHTML = `<div class="row">${chip("Compare", "accent")}</div>
+    <h1>Compare anything, year by year.</h1>
+    <p class="lede">Pick what to compare: states, ministries or development projects. Choose two measures. Each circle is one ${esc(U.one)}; its size is its ${esc(U.sizeLabel)}. Press play to watch the years go by, and trace one to see the path it took.</p>
+    <div class="seg" id="bu" style="margin:14px 0 4px">${Object.entries(UNITS).map(([k, u]) => `<button type="button" data-v="${k}" class="${k === kind ? "on" : ""}">${u.label}</button>`).join("")}</div>
+    <div class="card" style="padding:12px 14px;margin:10px 0 12px"><div class="row" style="gap:14px" id="bc">
+      <div style="flex:1;min-width:200px"><div class="small muted">Across (x)</div>${sel("bx", ms.map((x) => [x.key, x.name]), st.x)}</div>
+      <div style="flex:1;min-width:200px"><div class="small muted">Up (y)</div>${sel("by", ms.map((x) => [x.key, x.name]), st.y)}</div>
+      <div><div class="small muted">Circle size</div>${sel("bs", U.sizes, st.s)}</div>
+      ${filters.map(([k, l, opts]) => `<div style="min-width:160px"><div class="small muted">${esc(l)}</div>${sel("bf_" + k, opts, st[k] || "")}</div>`).join("")}
+      <div><div class="small muted">Scale</div><label class="small" style="display:inline-flex;gap:5px;align-items:center;height:30px"><input type="checkbox" id="blog" ${st.logx === "1" ? "checked" : ""}> log across</label> <label class="small" style="display:inline-flex;gap:5px;align-items:center;height:30px"><input type="checkbox" id="blogy" ${st.logy === "1" ? "checked" : ""}> log up</label></div>
+      <div style="min-width:200px"><div class="small muted">Trace</div><select id="bt" style="width:100%"><option value="">+ add one</option></select></div>
       <div id="btchips" class="row" style="gap:5px;align-self:flex-end"></div>
     </div></div>
     <div class="card"><div class="row" style="justify-content:space-between"><div class="legend" id="blegend" style="margin:0"></div><button class="btn" id="bswap" type="button" title="Swap the axes">⇄ Swap</button></div>
@@ -766,52 +839,73 @@ async function viewBubbles(v) {
       <div class="player"><button class="btn primary" id="bplay" type="button">▶ Play</button><input type="range" id="byr" min="0" max="0" step="1"><b id="byl" class="mono"></b></div>
       <p class="small muted" id="bnote" style="margin:10px 0 0"></p></div>
     <div id="bstory" class="answer" style="margin-top:14px"></div>`;
-  const go = () => { const p = new URLSearchParams({ x: st.x, y: st.y, s: st.s }); if (st.logx) p.set("logx", "1"); if (st.trace.length) p.set("trace", st.trace.join(",")); if (st.year) p.set("year", st.year); setParams("/compare", p); };
+  const go = () => { const p = new URLSearchParams({ u: st.u, x: st.x, y: st.y, s: st.s }); for (const k of ["logx", "logy"]) if (st[k] === "1") p.set(k, "1"); for (const [k] of filters) if (st[k]) p.set(k, st[k]); if (st.trace.length) p.set("trace", st.trace.join(",")); if (st.year) p.set("year", st.year); setParams("/compare", p); };
+  const mx = (k) => ms.find((x) => x.key === k) || { name: k, unit: "" };
+  async function fillTrace() { const list = await U.traceList(st); $("#bt").innerHTML = `<option value="">+ add one</option>` + [...list].map(([k, l]) => `<option value="${esc(k)}">${esc(l)}</option>`).join(""); }
   async function load() {
+    clearInterval(bubbleTimer); bubbleTimer = null; $("#bplay").textContent = "▶ Play";
     $("#bchart").innerHTML = `<div class="skel">Loading…</div>`;
-    const [X, Y, S] = await Promise.all([stateYears(st.x), stateYears(st.y), st.s ? stateYears(st.s) : Promise.resolve({})]);
-    const cx = D.catIx[st.x], cy = D.catIx[st.y];
-    const years = Object.keys(X).filter((y) => Y[y] && Object.keys(X[y]).filter((g) => g !== "MY" && Y[y][g]).length >= 5).sort();
-    if (!years.length) { $("#bchart").innerHTML = `<div class="skel">These two measures share no year with five or more states. Pick another pair.</div>`; $("#bstory").innerHTML = ""; $(".player").style.display = "none"; return; }
-    $(".player").style.display = "";
-    const sizeOf = (g, y) => { if (!st.s) return 1; for (let k = 0; k <= 3; k++) for (const yy of [String(+y - k), String(+y + k)]) if (S[yy]?.[g]) return S[yy][g].value; return null; };
-    const pts = years.flatMap((y) => STATES.map(([g]) => g).filter((g) => X[y][g] && Y[y][g]).map((g) => ({ g, y, x: X[y][g].value, yv: Y[y][g].value, s: sizeOf(g, y), rx: X[y][g], ry: Y[y][g], name: geoName(g), ab: STATES.find((s) => s[0] === g)[1], region: REGION(g) })));
-    const nat = years.map((y) => (X[y].MY && Y[y].MY ? { y, x: X[y].MY.value, yv: Y[y].MY.value } : null)).filter(Boolean);
-    const xd = d3.extent([...pts.map((p) => p.x), ...nat.map((p) => p.x)]), yd = d3.extent([...pts.map((p) => p.yv), ...nat.map((p) => p.yv)]);
-    const pad = (e, z) => { const w = (e[1] - e[0]) || Math.abs(e[1]) || 1; return [z && e[0] >= 0 ? 0 : e[0] - w * 0.06, e[1] + w * 0.08]; };
+    const cx = mx(st.x), cy = mx(st.y);
+    const data = await U.load(st);
+    const logx = st.logx === "1", logy = st.logy === "1";
+    let pts = data.pts, dropped = 0;
+    if (logx || logy) { const keep = pts.filter((p) => (!logx || p.x > 0) && (!logy || p.yv > 0)); dropped = pts.length - keep.length; pts = keep; }
+    const nat = data.nat.filter((p) => (!logx || p.x > 0) && (!logy || p.yv > 0));
+    const counts = d3.rollup(pts, (a) => a.length, (p) => p.y);
+    const years = [...counts.keys()].filter((y) => counts.get(y) >= 3).sort();
+    if (!years.length) { $("#bchart").innerHTML = `<div class="skel">These two measures share no year with enough ${esc(U.noun)}. Pick another pair.</div>`; $("#bstory").innerHTML = ""; $(".player").style.display = "none"; $("#bnote").innerHTML = ""; return; }
+    $(".player").style.display = years.length > 1 ? "" : "none";
+    const ext = (a) => d3.extent(a);
+    const xd = ext([...pts.map((p) => p.x), ...nat.map((p) => p.x)]), yd = ext([...pts.map((p) => p.yv), ...nat.map((p) => p.yv)]);
+    const pad = (e, z, lg) => { if (lg) return [e[0] * 0.85, e[1] * 1.15]; const w = (e[1] - e[0]) || Math.abs(e[1]) || 1; return [z && e[0] >= 0 ? 0 : e[0] - w * 0.06, e[1] + w * 0.08]; };
     const zx = cx.unit === "percent" || /^RM/.test(cx.unit), zy = cy.unit === "percent" || /^RM/.test(cy.unit);
-    const xDom = st.logx && xd[0] > 0 ? [xd[0] * 0.9, xd[1] * 1.1] : pad(xd, zx), yDom = pad(yd, zy);
+    // fit the axes to the bulk of the data (1st-99th percentile over all years), so a few extreme values do not flatten the rest
+    const robust = (vals, lg) => { const q = vals.filter((x) => typeof x === "number" && (!lg || x > 0)).sort((a, b) => a - b); if (q.length < 20) return d3.extent(q);
+      const lo = d3.quantileSorted(q, 0.01), hi = d3.quantileSorted(q, 0.99), mn = q[0], mx2 = q[q.length - 1], w = hi - lo || Math.abs(hi) || 1;
+      // trim only genuine outliers: values far beyond the bulk, not the largest real cases
+      const top = lg ? (mx2 > hi * 5 ? hi : mx2) : (mx2 - hi > 2 * w ? hi : mx2), bot = lg ? (mn < lo / 5 ? lo : mn) : (lo - mn > 2 * w ? lo : mn);
+      return [bot, top]; };
+    const xr = robust(pts.map((p) => p.x).concat(nat.map((p) => p.x)), logx), yr2 = robust(pts.map((p) => p.yv).concat(nat.map((p) => p.yv)), logy);
+    const xDom = pad(xr[1] < xd[1] || xr[0] > xd[0] ? xr : xd, zx, logx), yDom = pad(yr2[1] < yd[1] || yr2[0] > yd[0] ? yr2 : yd, zy, logy);
+    const outside = (p) => p.x < xDom[0] || p.x > xDom[1] || p.yv < yDom[0] || p.yv > yDom[1];
     const sMax = d3.max(pts, (p) => p.s) || 1;
-    const regions = ["Peninsular states", "Sabah & Sarawak", "Federal Territories"], rc = [css("--s1"), css("--s2"), css("--s3")];
-    $("#blegend").innerHTML = regions.map((r, i) => `<span><i style="background:${rc[i]};height:10px;width:10px;border-radius:50%"></i>${r}</span>`).join("") + (nat.length ? `<span><i style="border:2px solid var(--text);height:10px;width:10px;border-radius:50%;background:none"></i>Malaysia</span>` : "");
+    const rc = [css("--s1"), css("--s2"), css("--s3")];
+    $("#blegend").innerHTML = U.groups.map((r, i) => `<span><i style="background:${rc[i]};height:10px;width:10px;border-radius:50%"></i>${r}</span>`).join("") + (nat.length ? `<span><i style="border:2px solid var(--text);height:10px;width:10px;border-radius:50%;background:none"></i>${esc(data.natLabel)}</span>` : "");
     const slider = $("#byr"); slider.max = years.length - 1;
     let yi = years.includes(st.year) ? years.indexOf(st.year) : years.length - 1;
+    const many = d3.max([...counts.values()]) > 60;
+    const fmt = (v, c) => (c.pct ? NF(1).format(v) + "%" : compact(v, c.unit));
     const draw = () => {
       const yr = years[yi]; st.year = yr; slider.value = yi; $("#byl").textContent = yr; go();
       const now = pts.filter((p) => p.y === yr), natNow = nat.find((p) => p.y === yr);
-      const trails = pts.filter((p) => st.trace.includes(p.g) && p.y <= yr);
+      const trails = pts.filter((p) => st.trace.includes(p.id) && p.y <= yr);
+      const traced = now.filter((p) => st.trace.includes(p.id));
       const el = $("#bchart"); el.innerHTML = "";
       const W = el.clientWidth || 900;
-      el.append(Plot.plot({ width: W, height: Math.min(560, Math.max(380, W * 0.55)), marginLeft: 66, marginBottom: 44, style: { background: "transparent", fontSize: "12px", color: css("--text-2") },
-        x: { domain: xDom, type: st.logx && xd[0] > 0 ? "log" : "linear", label: `${cx.name} (${unitShort(cx.unit)}) →`, grid: true, tickFormat: (x) => compact(x, cx.unit) },
-        y: { domain: yDom, label: `↑ ${cy.name} (${unitShort(cy.unit)})`, grid: true, tickFormat: (x) => compact(x, cy.unit) },
-        r: { domain: [0, sMax], range: [0, st.s ? 34 : 9] },
+      const off = now.filter(outside);
+      el.append(Plot.plot({ width: W, height: Math.min(580, Math.max(380, W * 0.56)), marginLeft: 70, marginBottom: 44, clip: true, style: { background: "transparent", fontSize: "12px", color: css("--text-2") },
+        x: { domain: xDom, type: logx ? "log" : "linear", label: `${cx.name} →`, grid: true, tickFormat: (x) => fmt(x, cx), ticks: logx ? 5 : undefined },
+        y: { domain: yDom, type: logy ? "log" : "linear", label: `↑ ${cy.name}`, grid: true, tickFormat: (x) => fmt(x, cy), ticks: logy ? 5 : undefined },
+        r: { domain: [0, sMax], range: [0, st.s ? (many ? 16 : 32) : (many ? 3.5 : 8)] },
         marks: [
           Plot.text([yr], { frameAnchor: "middle", text: (t) => t, fontSize: Math.min(170, W / 5), fill: css("--line"), fontWeight: 700 }),
-          Plot.line(trails, { x: "x", y: "yv", z: "g", stroke: css("--text-3"), strokeWidth: 1.3, marker: "dot" }),
+          ...(cy.pct ? [Plot.ruleY([100], { stroke: css("--text-3"), strokeDasharray: "3,3" })] : []), ...(cx.pct ? [Plot.ruleX([100], { stroke: css("--text-3"), strokeDasharray: "3,3" })] : []),
+          Plot.line(trails, { x: "x", y: "yv", z: "id", stroke: css("--text-3"), strokeWidth: 1.3, marker: "dot" }),
           Plot.dot(natNow ? [natNow] : [], { x: "x", y: "yv", r: 9, stroke: css("--text"), strokeWidth: 2.2, fill: "none" }),
-          Plot.dot(now, { x: "x", y: "yv", r: (p) => (st.s ? p.s ?? sMax * 0.02 : 1), fill: (p) => rc[regions.indexOf(p.region)], fillOpacity: 0.72, stroke: css("--panel"), strokeWidth: 1, sort: { channel: "r", order: "descending" } }),
-          Plot.text(now, { x: "x", y: "yv", text: "ab", fontSize: 10, fontWeight: 600, fill: css("--text"), dy: 0 }),
-          Plot.tip(now, Plot.pointer({ x: "x", y: "yv", title: (p) => `${p.name} · ${yr}\n${cx.name}: ${exact(p.x)} ${cx.unit}\n${cy.name}: ${exact(p.yv)} ${cy.unit}${st.s ? `\npopulation ${p.s != null ? exact(p.s) : "not published"}` : ""}\n${p.rx.ed.id}\n${p.ry.ed.id}` })),
+          Plot.dot(now, { x: "x", y: "yv", r: (p) => (st.s ? p.s ?? sMax * 0.02 : 1), fill: (p) => rc[Math.max(0, U.groups.indexOf(p.group))], fillOpacity: many ? 0.55 : 0.72, stroke: css("--panel"), strokeWidth: many ? 0.5 : 1, sort: { channel: "r", order: "descending" } }),
+          Plot.text(now.filter((p) => p.ab), { x: "x", y: "yv", text: "ab", fontSize: 10, fontWeight: 600, fill: css("--text") }),
+          Plot.text(traced, { x: "x", y: "yv", text: (p) => p.name.slice(0, 40), dy: -14, fontSize: 11, fontWeight: 600, fill: css("--text") }),
+          Plot.tip(now, Plot.pointer({ x: "x", y: "yv", title: (p) => `${p.name} · ${yr}\n${cx.name}: ${cx.pct ? NF(2).format(p.x) + "%" : exact(p.x) + " " + cx.unit}\n${cy.name}: ${cy.pct ? NF(2).format(p.yv) + "%" : exact(p.yv) + " " + cy.unit}${st.s && kind === "state" ? `\npopulation ${p.s != null ? exact(p.s) : "not published"}` : ""}\n${p.src}` })),
         ] }));
-      // the reading: plain facts only, no ranking
-      const hi = (k) => { const s = [...now].sort((a, b) => b[k] - a[k]); return s; };
       const n = now.length;
-      const xs = hi("x"), ys = hi("yv");
+      const xs = [...now].sort((a, b) => b.x - a.x), ys = [...now].sort((a, b) => b.yv - a.yv);
       const r = n > 2 ? pearson(now.map((p) => p.x), now.map((p) => p.yv)) : null;
-      $("#bstory").innerHTML = `<div class="small muted" style="margin-bottom:6px">What the chart shows in ${yr}</div><div class="finding">${n} states have both figures in ${yr}.${natNow ? ` Malaysia as a whole: <b>${compact(natNow.x, cx.unit)}</b> and <b>${compact(natNow.yv, cy.unit)}</b>.` : ""} ${cx.name} runs from <b>${compact(xs[n - 1].x, cx.unit)}</b> to <b>${compact(xs[0].x, cx.unit)}</b>; ${cy.name.toLowerCase()} from <b>${compact(ys[n - 1].yv, cy.unit)}</b> to <b>${compact(ys[0].yv, cy.unit)}</b>.${r != null ? ` Across states the two ${Math.abs(r) < 0.3 ? "barely move together" : r > 0 ? "tend to rise together" : "tend to move in opposite directions"} (correlation ${NF(2).format(r)}). That is a pattern, not a cause.` : ""}</div>`;
-      const surveys = [cx, cy].filter((c) => /HIES|LFS|survey/i.test(c.definition));
-      $("#bnote").innerHTML = `Each year uses only figures published for that year; a state with no figure is left out, not guessed. Axes are fixed across years so movement is real.${surveys.length ? ` ${surveys.map((c) => esc(c.name)).join(" and ")} ${surveys.length > 1 ? "are survey estimates" : "is a survey estimate"} without a published error margin here: small gaps between states may not be real.` : ""}${st.s ? " Bubble size: population in the same year (or the nearest year within 3)." : ""}`;
+      const byG = d3.rollup(now, (a) => a.length, (p) => p.group);
+      $("#bstory").innerHTML = `<div class="small muted" style="margin-bottom:6px">What the chart shows in ${yr}</div><div class="finding">${n} ${esc(U.noun)} have both figures.${natNow ? ` ${esc(data.natLabel)} as a whole: <b>${fmt(natNow.x, cx)}</b> and <b>${fmt(natNow.yv, cy)}</b>.` : ""} ${esc(cx.name)} runs from <b>${fmt(xs[n - 1].x, cx)}</b> to <b>${fmt(xs[0].x, cx)}</b>; ${esc(lc(cy.name))} from <b>${fmt(ys[n - 1].yv, cy)}</b> to <b>${fmt(ys[0].yv, cy)}</b>.${kind !== "state" ? ` ${U.groups.map((g) => `${byG.get(g) || 0} ${g.toLowerCase()}`).join(", ")}.` : ""}${r != null ? ` The two ${Math.abs(r) < 0.3 ? "barely move together" : r > 0 ? "tend to rise together" : "tend to move in opposite directions"} (correlation ${NF(2).format(r)}). A pattern, not a cause.` : ""}</div>`;
+      const surveys = [cx, cy].filter((c) => c.survey);
+      $("#bnote").innerHTML = [off.length ? `<b>${off.length}</b> extreme value${off.length > 1 ? "s are" : " is"} off the chart in ${yr} (${off.slice(0, 3).map((p) => esc(p.name.slice(0, 50))).join("; ")}${off.length > 3 ? "; …" : ""}); the axes are fitted to the bulk of the data, and the full rows are in the policy-gap tables.` : "", `Each year uses only figures published for that year; anything without a figure is left out, not guessed. Axes stay fixed across years, so movement is real.`,
+        surveys.length ? `${surveys.map((c) => esc(c.name)).join(" and ")} ${surveys.length > 1 ? "are survey estimates" : "is a survey estimate"} without a published error margin: small gaps between states may not be real.` : "",
+        dropped ? `${dropped} points with zero or negative values are hidden on a log scale.` : "", data.note || "", st.s && kind === "state" ? "Circle size: population in the same year (or the nearest year within 3)." : ""].filter(Boolean).join(" ");
     };
     slider.oninput = () => { yi = +slider.value; draw(); };
     $("#bplay").onclick = () => {
@@ -822,15 +916,23 @@ async function viewBubbles(v) {
     };
     draw();
   }
-  const chips = () => { $("#btchips").innerHTML = st.trace.map((g) => `<span class="chip">${esc(geoName(g))} <a href="#" data-rm="${g}" style="color:var(--text-3)">×</a></span>`).join(""); $$("#btchips [data-rm]").forEach((a) => (a.onclick = (e) => { e.preventDefault(); st.trace = st.trace.filter((x) => x !== a.dataset.rm); chips(); load(); })); };
+  const chips = async () => {
+    const list = new Map(await U.traceList(st));
+    $("#btchips").innerHTML = st.trace.map((g) => `<span class="chip">${esc((list.get(g) || g).slice(0, 40))} <a href="#" data-rm="${esc(g)}" style="color:var(--text-3)">×</a></span>`).join("");
+    $$("#btchips [data-rm]").forEach((a) => (a.onclick = (e) => { e.preventDefault(); st.trace = st.trace.filter((x) => x !== a.dataset.rm); chips(); load(); }));
+  };
+  $$("#bu button").forEach((b) => (b.onclick = () => { location.hash = "#/compare?u=" + b.dataset.v; }));
   $("#bx").onchange = (e) => { st.x = e.target.value; st.year = ""; load(); };
   $("#by").onchange = (e) => { st.y = e.target.value; st.year = ""; load(); };
   $("#bs").onchange = (e) => { st.s = e.target.value; load(); };
-  $("#blog").onchange = (e) => { st.logx = e.target.checked; load(); };
+  $("#blog").onchange = (e) => { st.logx = e.target.checked ? "1" : ""; load(); };
+  $("#blogy").onchange = (e) => { st.logy = e.target.checked ? "1" : ""; load(); };
+  for (const [k] of filters) $("#bf_" + k).onchange = async (e) => { st[k] = e.target.value; st.trace = []; await fillTrace(); chips(); load(); };
   $("#bt").onchange = (e) => { if (e.target.value && !st.trace.includes(e.target.value)) st.trace.push(e.target.value); e.target.value = ""; chips(); load(); };
-  $("#bswap").onclick = () => { [st.x, st.y] = [st.y, st.x]; $("#bx").value = st.x; $("#by").value = st.y; load(); };
-  chips(); await load();
+  $("#bswap").onclick = () => { [st.x, st.y] = [st.y, st.x]; [st.logx, st.logy] = [st.logy, st.logx]; $("#bx").value = st.x; $("#by").value = st.y; $("#blog").checked = st.logx === "1"; $("#blogy").checked = st.logy === "1"; load(); };
+  await fillTrace(); chips(); await load();
 }
+
 function pearson(a, b) {
   const n = a.length, ma = d3.mean(a), mb = d3.mean(b);
   let num = 0, da = 0, db = 0;
@@ -1437,7 +1539,7 @@ function initPalette() {
 }
 function palRender(q) {
   const base = [
-    ...[["About", "#/about"], ["Explore data", "#/explore"], ["Policy gaps", "#/gaps"], ["Compare states: two measures over time", "#/compare"], ["States", "#/states"], ["Sources & caveats", "#/sources"], ["Method & trust", "#/method"]].map(([t, h]) => ["Page", h, t, ""]),
+    ...[["About", "#/about"], ["Explore data", "#/explore"], ["Policy gaps", "#/gaps"], ["Compare: states, ministries or projects, over time", "#/compare"], ["States", "#/states"], ["Sources & caveats", "#/sources"], ["Method & trust", "#/method"]].map(([t, h]) => ["Page", h, t, ""]),
     ...QUESTIONS.map(([t, n]) => ["Gap", "#/gaps/" + n, t, D.gaps.find((g) => g.name === n)?.title || ""]),
     ...STATES.map(([g]) => ["State", "#/state/" + g, geoName(g), g]),
     ...D.cat.map((c) => ["Data", "#/explore/" + encodeURIComponent(c.code), c.name, `${c.first}–${c.last}`, c.definition + " " + c.code + " " + themeName(c.theme)]),
