@@ -13,26 +13,30 @@ entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,projects,2018,1,1,false,r6955ca8
 entity,MY,E000030,Kementerian Ekonomi,land_resources,2023,1,1,false,r51fb7f887dfb
 entity,MY,E000030,Kementerian Ekonomi,projects,2023,1,1,false,r51fb7f887dfb
 entity,MY,E000031,Kementerian Perladangan dan Komoditi,assistance,2018,1,1,false,r7691c16043d8
-entity,MY,E000031,Kementerian Perladangan dan Komoditi,companies,2017;2018,2,2,true,rb975f8174bf3;r7691c16043d8
-entity,MY,E000031,Kementerian Perladangan dan Komoditi,projects,2017,1,1,false,rb975f8174bf3
+entity,MY,E000031,Kementerian Perladangan dan Komoditi,companies,2017;2018;2022,3,3,true,rb975f8174bf3;r7691c16043d8;rb85160d42a3d
+entity,MY,E000031,Kementerian Perladangan dan Komoditi,projects,2017;2022,2,2,true,rb975f8174bf3;rb85160d42a3d
 entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,assistance,2014;2018,2,2,true,r54473b4936c4;r73b7d390a73c
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,companies,2016;2021,2,2,true,r3471c36d58ec;rff00388e3cb8
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,companies,2016;2019;2021,3,4,true,r3471c36d58ec;r64ff650cd9d7;r801a271faa99;rff00388e3cb8
 entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,health_education,2017,1,1,false,r38646b8a4a93
 entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,loans_investment,2021,1,1,false,rff00388e3cb8
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,projects,2014;2018,2,2,true,r428ef36bda15;rbdd06b7ce001
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,unclassified,2018,1,1,false,re128a96eee83
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,companies,2016;2020;2021;2023,4,4,true,r8e7332ff50f2;r751f03729dcb;re593a93ee475;r42a5fbadbdd9
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,land_resources,2023,1,1,false,r10b031024a83
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,projects,2014;2016;2023,3,4,true,r4bb15a3ccb90;r8bb3538da5be;r9ae347fb3614;r10b031024a83
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,projects,2014;2018;2019,3,3,true,r428ef36bda15;rbdd06b7ce001;r801a271faa99
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,unclassified,2018;2022,2,3,true,re128a96eee83;r5f5e9d6f4d5f;rb1d319bd4599
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,assistance,2022,1,1,false,r50b94e553fc0
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,companies,2016;2017;2020;2021;2023,5,5,true,r8e7332ff50f2;rc7134fe27271;r751f03729dcb;re593a93ee475;r42a5fbadbdd9
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,land_resources,2017;2022;2023,3,3,true,r4d62674aefd5;rad612f9dba93;r10b031024a83
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,projects,2014;2016;2017;2022;2023,5,7,true,r4bb15a3ccb90;r8bb3538da5be;r9ae347fb3614;r4d62674aefd5;r50b94e553fc0;rad612f9dba93;r10b031024a83
 entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,unclassified,2014,1,1,false,r86960c200973
-entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,land_resources,2018,1,1,false,r71e38b0e7f79
+entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,land_resources,2017;2018;2019,3,3,true,r8195be2999ab;r71e38b0e7f79;rb653ad736363
 entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,procurement,2014,1,1,false,r7ec802069e12
-entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,projects,2014;2018;2020,3,3,true,r53ed4f2d2beb;r71e38b0e7f79;rb1a25bb5a4e1
-entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,unclassified,2021,1,1,false,r458556659ae5
+entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,projects,2014;2017;2018;2020,4,4,true,r53ed4f2d2beb;r8195be2999ab;r71e38b0e7f79;rb1a25bb5a4e1
+entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,unclassified,2017;2021;2022,3,3,true,r5713c9293540;r458556659ae5;reae0f79fb6b3
 entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",assets,2019,1,1,false,r76a3fbd5566b
+entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",companies,2022,1,1,false,r2cef4b84220c
+entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",loans_investment,2022,1,1,false,r2cef4b84220c
+entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",projects,2022,1,1,false,r2cef4b84220c
 entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,assistance,2024,1,1,false,r6b204f7d26f3
 entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,financial_management,2024,1,1,false,r6b204f7d26f3
-entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,loans_investment,2016,1,1,false,r1e39589aaf61
+entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,loans_investment,2016;2017,2,2,true,r1e39589aaf61;r67a07a4a605c
 entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,projects,2016,1,1,false,r1e39589aaf61
 entity,MY,E000038,Kementerian Pembangunan Usahawan dan Koperasi,companies,2018,1,1,false,r6ca4a4e76711
 entity,MY,E000038,Kementerian Pembangunan Usahawan dan Koperasi,loans_investment,2022,1,1,false,r6e223842e5ed
@@ -50,10 +54,13 @@ entity,MY,E000040,Kementerian Pengangkutan,projects,2016;2017;2020;2021,4,5,true
 entity,MY,E000040,Kementerian Pengangkutan,revenue,2017,1,1,false,r8d34fe1577ec
 entity,MY,E000040,Kementerian Pengangkutan,unclassified,2014;2017,2,2,true,r784918b06ab9;r1a8aeb874502
 entity,MY,E000041,"Kementerian Tenaga, Teknologi Hijau dan Air",unclassified,2016,1,1,false,r5178bb3422ac
+entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",companies,2017;2019,2,2,true,re4a8929beeaf;rd9e6d8d98746
 entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",loans_investment,2018,1,1,false,r351b0cb1e4b8
 entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",projects,2018,1,1,false,r351b0cb1e4b8
-entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",unclassified,2018,1,1,false,r5e741b20f50c
-entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",unclassified,2019;2021,2,2,true,rf50bbfb1910b;rbeb405d54a6a
+entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",unclassified,2018;2019,2,3,true,r5e741b20f50c;re30ade69fd8e;rfd5e3b77c8ab
+entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",companies,2014,1,1,false,r41c5fbb1a86f
+entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",loans_investment,2014,1,1,false,r41c5fbb1a86f
+entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",unclassified,2018;2019;2021,3,3,true,r996d46c36e49;rf50bbfb1910b;rbeb405d54a6a
 entity,MY,E000044,Kementerian Wilayah Persekutuan,companies,2017;2021,2,4,true,r0edd8587347e;r8d9778a5661b;rbe1303488743;rf6d4daa67c3e
 entity,MY,E000044,Kementerian Wilayah Persekutuan,financial_management,2017,1,1,false,rb41b3fd1dd63
 entity,MY,E000044,Kementerian Wilayah Persekutuan,land_resources,2015;2017,2,2,true,rf221af52726e;rb41b3fd1dd63
@@ -63,11 +70,20 @@ entity,MY,E000044,Kementerian Wilayah Persekutuan,unclassified,2016,1,1,false,rf
 entity,MY,E000045,Kementerian Alam Sekitar dan Air,companies,2020,1,1,false,rc0cb774f1813
 entity,MY,E000045,Kementerian Alam Sekitar dan Air,land_resources,2020,1,1,false,rc0cb774f1813
 entity,MY,E000045,Kementerian Alam Sekitar dan Air,unclassified,2020,1,1,false,r63678905053e
-entity,MY,E000048,Kementerian Pendidikan,health_education,2021;2022,2,2,true,r663061b76360;r2099f2668ac1
-entity,MY,E000048,Kementerian Pendidikan,projects,2021;2022,2,2,true,r663061b76360;r2099f2668ac1
-entity,MY,E000048,Kementerian Pendidikan,unclassified,2015,1,1,false,ra848db9d2571
+entity,MY,E000048,Kementerian Pendidikan,assets,2014,1,1,false,r2e38cac81058
+entity,MY,E000048,Kementerian Pendidikan,assistance,2018,1,1,false,re355861b2f16
+entity,MY,E000048,Kementerian Pendidikan,companies,2018,1,1,false,rd198a19e47a8
+entity,MY,E000048,Kementerian Pendidikan,health_education,2014;2017;2018;2019;2021;2022,6,18,true,r2e38cac81058;rb9a7e641ccbe;r37c80d8e79e5;r7729fbeb5730;r35fb44d36c75;r43247b209ca8;rd215ce4c9f31;r32dbb6668ba4;rd198a19e47a8;r1a0b3adda32e;r24c487ce80a8;r93d3a92f645d;rd927b47c7887;reabc5f1d64e4;r1dbfc7f1b060;r08582bffe6a4;r663061b76360;r2099f2668ac1
+entity,MY,E000048,Kementerian Pendidikan,ict,2014;2019,2,2,true,rdb86087d338f;r08582bffe6a4
+entity,MY,E000048,Kementerian Pendidikan,loans_investment,2018,1,1,false,re355861b2f16
+entity,MY,E000048,Kementerian Pendidikan,procurement,2014;2017,2,4,true,rb9a7e641ccbe;rdb86087d338f;rf77b616f0fed;r35fb44d36c75
+entity,MY,E000048,Kementerian Pendidikan,projects,2014;2017;2018;2019;2021;2022,6,11,true,r2e38cac81058;rf19dc7ec5401;r37c80d8e79e5;r7729fbeb5730;rd215ce4c9f31;r24c487ce80a8;r93d3a92f645d;rd927b47c7887;r08582bffe6a4;r663061b76360;r2099f2668ac1
+entity,MY,E000048,Kementerian Pendidikan,unclassified,2014;2015;2018,3,5,true,rcf42e0c32700;ra848db9d2571;rc213c0d89d96;r6ae288066f15;r4efa24912472
+entity,MY,E000049,Kementerian Kesihatan,assistance,2017,1,1,false,r7464f351da59
 entity,MY,E000049,Kementerian Kesihatan,financial_management,2022,1,1,false,re6798fa84054
-entity,MY,E000049,Kementerian Kesihatan,health_education,2019,1,1,false,r3e609544ea4d
+entity,MY,E000049,Kementerian Kesihatan,health_education,2014;2018;2019,3,3,true,rfb3ed22e2aed;rbf54bbdfa29c;r3e609544ea4d
+entity,MY,E000049,Kementerian Kesihatan,revenue,2014,1,1,false,rfb3ed22e2aed
+entity,MY,E000049,Kementerian Kesihatan,unclassified,2015;2017;2018,3,3,true,r80f66fd607ad;r1df1e928c876;r32b909716d9d
 entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,assistance,2018,1,1,false,r86414cf1cbb3
 entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,companies,2019,1,2,false,r072e21ea89e1;r822543a89bea
 entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,local_government,2014,1,1,false,r761b50384444
@@ -82,12 +98,15 @@ entity,MY,E000053,Kementerian Sumber Manusia,companies,2019;2023,2,2,true,re38a2
 entity,MY,E000053,Kementerian Sumber Manusia,health_education,2017,1,2,false,rb839c49035c4;rc01f892a33a2
 entity,MY,E000053,Kementerian Sumber Manusia,procurement,2017,1,1,false,rb839c49035c4
 entity,MY,E000053,Kementerian Sumber Manusia,projects,2023,1,1,false,rc75615881297
-entity,MY,E000054,Kementerian Komunikasi,assistance,2017,1,1,false,rbad9bc03f90f
-entity,MY,E000054,Kementerian Komunikasi,projects,2017;2021,2,2,true,rbad9bc03f90f;r2288a57216ae
+entity,MY,E000054,Kementerian Komunikasi,assistance,2017;2018,2,2,true,rbad9bc03f90f;r865d86b06b6f
+entity,MY,E000054,Kementerian Komunikasi,companies,2014;2017;2018,3,4,true,rd1df7096167a;rf9ae252fdfc0;r49b3dd53d710;r865d86b06b6f
+entity,MY,E000054,Kementerian Komunikasi,loans_investment,2014;2018,2,2,true,rf9ae252fdfc0;rd0fa178b0637
+entity,MY,E000054,Kementerian Komunikasi,projects,2014;2017;2021;2023,4,4,true,rf9ae252fdfc0;rbad9bc03f90f;r2288a57216ae;r7ede50099583
 entity,MY,E000055,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",assistance,2016,1,2,false,re58b55fe12b0;re987cc1932ee
 entity,MY,E000055,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",projects,2016,1,1,false,re58b55fe12b0
-entity,MY,E000058,Kementerian Pertahanan,assets,2024,1,1,false,rb40ff7b4d3db
-entity,MY,E000058,Kementerian Pertahanan,projects,2014;2018,2,3,true,r18e1460bab2f;r85a00599dd5d;r51da08716066
+entity,MY,E000058,Kementerian Pertahanan,assets,2019;2024,2,3,true,r6691cce46487;r85b380829568;rb40ff7b4d3db
+entity,MY,E000058,Kementerian Pertahanan,procurement,2019,1,1,false,r85b380829568
+entity,MY,E000058,Kementerian Pertahanan,projects,2014;2018;2019,3,4,true,r18e1460bab2f;r85a00599dd5d;r51da08716066;r1b4a0937f3fe
 entity,MY,E000058,Kementerian Pertahanan,unclassified,2018;2020;2023,3,3,true,rcb2123f03d72;r8dd0ff4b59d6;rb658306ee505
 entity,MY,E000059,Kementerian Dalam Negeri,financial_management,2019,1,1,false,rf591a67c7f43
 entity,MY,E000059,Kementerian Dalam Negeri,ict,2015,1,1,false,r8b4f8109a9b0

@@ -18,7 +18,9 @@ Method (declared 2026-11-06, with the taxonomy meta/audit_topic_taxonomy.csv com
   link is made here: a fuzzy, translated or abbreviated name, a statutory body or a company would be
   'name_matched_reviewed' and needs the owner's signature (D33), so it is left unlinked. A person is never linked.
   The obvious candidates (the same name without 'MALAYSIA', or the body's name in another year) are listed in
-  core/link_candidates.csv, publishable=false, for the owner to sign; a signed row becomes a human_signed link.
+  core/link_candidates.csv, publishable=false, for the owner to sign. A signature is kept in meta/link_signoff.csv,
+  keyed to the printed entry (volume, printed page, printed body): that audit is then linked 'human_signed',
+  publishable. A held row (signed_off_by empty) stays a candidate.
 * gap_audit_recurrence: for each linked body and topic family, the years it was audited and how many audits; a body
   audited in a family in two or more distinct years 'recurs'. Beside it, for every state and the federal level, the
   number of audits by family and year, which names no body. An audit can carry several families, so family counts
@@ -81,6 +83,9 @@ def main():
         names[norm(r["name_bm"])].append((r["entity_id"], int(r["valid_from"] or 0), int(r["valid_to"] or 9999),
                                           r["name_bm"]))
     recs, links, checks, cands = [], [], [], []
+    # the owner's signatures (D33): keyed to the printed entry, so a signature never moves to another audit
+    signed = {(r["source_file"], r["printed_page"], r["printed_body"]): r
+              for r in rows(os.path.join(REPO, "meta", "link_signoff.csv")) if r["signed_off_by"]}
     for i, a in enumerate(rows(os.path.join(AN, "fact_lkan_audit_inventory.csv")), start=2):
         vol = vols.get(a["file_name"], {})
         scope = a["scope"]
@@ -108,6 +113,15 @@ def main():
                                             f"{printed!r} (core/entity_name.csv)", publishable="true",
                                       signed_off_by="", signed_off_on=""))
                     break
+        sk = (a["file_name"], a["printed_page"], a["body_bm"])
+        if not rec["entity_id"] and sk in signed:
+            so = signed[sk]
+            rec["entity_id"] = so["entity_id"]
+            links.append(dict(from_kind="record", from_id=rid, to_kind="entity", to_id=so["entity_id"],
+                              link_type="audit_of", link_method="human_signed", confidence="1",
+                              proof=f"contents page prints {a['body_bm']!r}; the owner signed it as "
+                                    f"{so['entity_name']!r} (meta/link_signoff.csv)", publishable="true",
+                              signed_off_by=so["signed_off_by"], signed_off_on=so["signed_off_on"]))
         if scope == "federal" and a["body_bm"] and year and not rec["entity_id"]:
             # a candidate for the owner's review (D33): the same name without 'MALAYSIA', or a name the body had in
             # another year; never published until signed
@@ -152,8 +166,9 @@ def main():
     bad = [r for r in recs if not (r["source_file"] and r["pdf_page"])]
     checks.append(dict(check="V1 every record traces to a contents page", scope="all",
                        status="PASS" if not bad else "FAIL", note=f"{len(recs)} records, {len(bad)} untraced"))
-    checks.append(dict(check="V2 links by exact official name", scope="all", status="PASS",
-                       note=f"{len(links)} links (name_exact_official, publishable); "
+    n_h = sum(1 for x in links if x["link_method"] == "human_signed")
+    checks.append(dict(check="V2 links by exact official name or the owner's signature", scope="all", status="PASS",
+                       note=f"{len(links) - n_h} name_exact_official, {n_h} human_signed (publishable); "
                             f"{sum(1 for r in recs if not r['entity_id'])} records unlinked"))
     ok = all(int(g["n_audits"]) == len(g["record_ids"].split(";")) for g in gap if g["level"] == "entity")
     checks.append(dict(check="V3 recurrence rows add up to their records", scope="entity",
