@@ -91,6 +91,7 @@ SUITE = [
     "core/pipeline/build_gap_budget_vs_actual.py",
     "core/pipeline/build_gap_project_budget.py",
     "core/pipeline/build_records.py",
+    "apps/site/build_site_data.py",
     "core/pipeline/build_gap_revenue.py",
     "core/pipeline/build_gap_reported_vs_audited.py",
     "core/pipeline/build_gap_obligations.py",

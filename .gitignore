@@ -12,3 +12,7 @@ sources/*/raw/
 # State-source text extraction cache (rebuildable)
 sources/*/.textcache/
 sources/*/pipeline/__pycache__/
+
+# The site's data: rebuilt from core/ (python3 apps/site/build_site_data.py), never committed
+site/data/
+site/assets/*.tmp

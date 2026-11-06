@@ -41,7 +41,7 @@ guarantees sit in memorandum accounts), and **place** (most federal spending has
 in the accounts; see `docs/DATA_MODEL.md` §10 and §13).
 
 ## Sources
-What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (107 series:
+What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (115 series:
 status, route, access, licence, priority). The plan behind it, theme by theme:
 **`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
 `sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9
@@ -86,7 +86,7 @@ core/               the conformed layer (L2: dims + fact_observation) and gap vi
 curated/            the older consolidated layer, moving into core/ view by view
 apps/tools/         typed agent tools over core/ (no SQL; every number cited; arithmetic only via derive)
 apps/models/        model projections: an application, never warehouse data
-site/               the public site + chatbot (reads curated views; its own CLAUDE.md)
+site/               the public site: static, reads site/data built from core/ by apps/site/build_site_data.py (site/README.md)
 pipeline/           build_duckdb.py (PKKP DB)
 docs/               DATA_MODEL.md · SOURCES.md · DOCUMENT_REGISTRY.md · registry/ · ANALYST_GUIDE.md
 meta/               code lists, decisions, the file registry (build_registry.py) -> warehouse meta.*
@@ -134,6 +134,7 @@ original (`docs/DATA_MODEL.md` §7.4). Report discrepancies; never correct silen
 - See each source's README for its own caveats and anomaly registers.
 
 ## Next work
+**`HANDOVER.md` lists what is open, in priority order** (the audit-inventory fixes first). Then:
 Follow the build order in `docs/DATA_MODEL.md` §15. Phase 0 (foundation: registry as data, CI,
 archive, governance) then Phase 1 (a state-level, end-to-end slice: population, HIES, LFS, state
 finances → `gap_need_vs_money` with agent tools).

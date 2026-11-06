@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malaysia Economy Data Warehouse · IKRAM</title>
+<meta name="description" content="Malaysia's economy, national to state and below, every figure traced to its printed page: explore 125 indicators and nine policy-gap views.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230f8fb0'/%3E%3Ccircle cx='16' cy='9' r='4' fill='%231f9d4f'/%3E%3Crect x='13' y='15' width='6' height='11' rx='2' fill='white'/%3E%3C/svg%3E">
+<script src="vendor/d3-7.9.0.min.js"></script>
+<script src="vendor/plot-0.6.16.umd.min.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <a class="brand" href="#/about" aria-label="Home">
+      <span id="logo"></span>
+      <span><b>Malaysia Economy</b><span>Data Warehouse · IKRAM</span></span>
+    </a>
+    <button class="search-btn" id="openPalette" type="button">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      Search everything <kbd>⌘K</kbd>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="#/about" data-r="about"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg>About</a>
+      <a href="#/explore" data-r="explore"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V5M4 19h16M8 15l4-5 3 3 5-7"/></svg>Explore data</a>
+      <a href="#/gaps" data-r="gaps"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h5l2-6 2 12 2-6h5"/></svg>Policy gaps</a>
+      <div class="group">Reference</div>
+      <a href="#/states" data-r="states"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>States</a>
+      <a href="#/sources" data-r="sources"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h10l4 4v12H5z"/><path d="M15 4v4h4M8 13h8M8 17h6"/></svg>Sources &amp; caveats</a>
+      <a href="#/method" data-r="method"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3 4 7v6c0 4 3.5 7 8 8 4.5-1 8-4 8-8V7z"/><path d="m9 12 2 2 4-4"/></svg>Method &amp; trust</a>
+    </nav>
+    <div class="foot">
+      <div id="release" class="mono"></div>
+      <div class="row" style="margin-top:8px">
+        <button type="button" id="themeBtn" title="Switch light / dark">◐ Theme</button>
+        <a href="https://github.com/ammarroslizar/malaysia-economy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </aside>
+  <div class="main">
+    <header class="top">
+      <button class="btn burger" id="burger" type="button" aria-label="Menu">☰</button>
+      <div class="crumbs" id="crumbs"></div>
+      <div class="right">
+        <button class="btn hide-sm" id="copyLink" type="button" title="Copy a link to exactly this view">Copy link</button>
+      </div>
+    </header>
+    <main class="page" id="view"><div class="skel">Loading the warehouse…</div></main>
+  </div>
+</div>
+<div class="palette-back" id="palette"><div class="palette" role="dialog" aria-label="Search">
+  <input id="pq" placeholder="Search indicators, states, gap views, pages…" autocomplete="off">
+  <div class="res" id="pres"></div>
+</div></div>
+<div class="toast" id="toast"></div>
+<script src="app.js"></script>
+</body>
+</html>

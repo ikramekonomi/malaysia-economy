@@ -14,6 +14,15 @@ tools. The public site (`site/`) is one application on top of it.
 > **Every number must survive a hostile reader.** If a figure cannot be traced to its source page
 > and its checks, it does not leave the warehouse.
 
+### Start here
+
+| You are | Go to |
+|---|---|
+| **a policy advocate or analyst** | the site: *About*, *Explore data*, *Policy gaps* (`site/`, published by `.github/workflows/site.yml`; run it locally with the two commands in [`site/README.md`](site/README.md)) |
+| **taking over the warehouse** | [`HANDOVER.md`](HANDOVER.md): what is built, what is open, how to keep it running |
+| **adding or fixing data** | [`CLAUDE.md`](CLAUDE.md) (the rules), then [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) |
+| **querying it** | [`docs/ANALYST_GUIDE.md`](docs/ANALYST_GUIDE.md), then the *Quick start* below |
+
 ---
 
 ## What is inside
@@ -34,7 +43,7 @@ anomalies:** places where a publisher's own figures do not add up, kept exactly 
 proof.
 
 **What we hold and what we still need** is one checklist,
-[`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 107 series, 25 held. Each has
+[`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 115 series, 46 held. Each has
 its route, licence and priority. The plan, theme by theme, is [`docs/SOURCES.md`](docs/SOURCES.md).
 
 ### Nine themes
@@ -152,11 +161,12 @@ t.get_gap_view("gap_need_vs_money", year="2022")    # need vs state-government m
 
 | Phase | What | State |
 |---|---|---|
-| 0 Foundation | registry as data, CI, archive, vintage logs, governance | built; archive filling (PDFs by sha256) |
-| 1 First slice | state-level need vs money, end to end, with agent tools and evals | **built** (`core/README.md`); awaiting a human spot-check before publication |
-| 2 Broaden statistics | all DOSM/BNM/MOF series, survey report tables, health data | **in progress**: health, education and services by state; districts, parlimen and DUN (never ranked); income distributions |
-| 3 Money trail | entities, transfers, placing federal spending by state | planned |
-| 4 Records and links | audit findings, PAC, procurement | planned |
+| 0 Foundation | registry as data, CI, archive, vintage logs, governance | **built** |
+| 1 First slice | state-level need vs money, end to end, with agent tools and evals | **built**; awaiting a human spot-check before publication |
+| 2 Broaden statistics | DOSM, BNM and MOF series, survey report tables, health, education and services, small areas | **built** (125 indicators, 223,090 observations) |
+| 3 Money trail | entities, federal→state transfers, placing federal spending by state, development projects | **built**; federal spending by state withheld (under 4% placeable) |
+| 4 Records and links | audit findings inventory, audit-to-ministry links, recurrence | **draft**: failed blind verification 2026-11-06; fix list in `HANDOVER.md` |
+| 5 Complete | gap views, the site | 9 gap views built and blind-verified; new site 2026-11-06 |
 
 **Known caveats:**
 - PKKP FY2015 is an image-only scan, so its leaf amounts are OCR-provisional.
