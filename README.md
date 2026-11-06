@@ -18,7 +18,7 @@ tools. The public site (`site/`) is one application on top of it.
 
 | You are | Go to |
 |---|---|
-| **a policy advocate or analyst** | the site: *About*, *Explore data*, *Policy gaps* (`site/`, published by `.github/workflows/site.yml`; run it locally with the two commands in [`site/README.md`](site/README.md)) |
+| **a policy advocate or analyst** | the site, **https://ikramekonomi.github.io/malaysia-economy/**: *About*, *Explore data*, *Policy gaps*, *Compare* (`site/`, published by `.github/workflows/site.yml`; run it locally with the two commands in [`site/README.md`](site/README.md)) |
 | **taking over the warehouse** | [`HANDOVER.md`](HANDOVER.md): what is built, what is open, how to keep it running |
 | **adding or fixing data** | [`CLAUDE.md`](CLAUDE.md) (the rules), then [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) |
 | **querying it** | [`docs/ANALYST_GUIDE.md`](docs/ANALYST_GUIDE.md), then the *Quick start* below |

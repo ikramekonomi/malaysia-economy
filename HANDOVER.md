@@ -8,26 +8,38 @@ says what the warehouse is, and [`CLAUDE.md`](CLAUDE.md), which gives the rules 
 
 ## 1. On day one
 
-1. **Accept the repository transfer** to the GitHub account **`ikramekonomi`** (ammar.roslizar@ikram.org.my): the
-   current owner starts it from Settings → Danger Zone → Transfer, and `ikramekonomi` accepts it from the email.
-   The repository becomes `github.com/ikramekonomi/malaysia-economy`; the old URLs redirect. The private L0 archive release (`l0-archive`, raw
-   PDFs by sha256) and all workflows move with the repository. Nothing depends on the previous owner's account.
-   One exception is the old Claude scheduled task that refreshed DOSM. It lived on that person's own account and stops
-   with it. The GitHub workflow `dosm-refresh.yml` does the same job and moves with the repository.
-2. **Turn on the site.** Settings → Pages → Source: **GitHub Actions**. Then Actions → *Site* → *Run workflow*. The
-   site goes to `https://ikramekonomi.github.io/malaysia-economy/`. If the repository is private, GitHub Pages needs a paid plan.
-3. **Add the logo.** Put IKRAM's logo at `site/assets/ikram-logo.png` (square, transparent background). The site
-   picks it up by itself.
-4. **Check the daily refresh.** Actions → *DOSM refresh* runs every day at 14:17 MYT. It opens a PR, which merges
+The repository was **copied**, not transferred: `ikramekonomi/malaysia-economy` (the account of
+ammar.roslizar@ikram.org.my) is IKRAM's own, and the original `ammarroslizar/malaysia-economy` is archived as a
+read-only record. Old links to the original do not redirect here.
+
+1. **Check the copy is whole.**
+   - **Code:** the code and its full history are here.
+   - **Archive:** the `l0-archive` release (the raw PDFs, by sha256) holds
+     470 files. Check with `gh release view l0-archive --json assets --jq '.assets | length'`.
+     The index is `meta/l0_archive.csv`.
+2. **Allow the workflows to write.** Settings → Actions → General → Workflow permissions:
+   - choose *Read and write permissions*;
+   - tick *Allow GitHub Actions to create and approve pull requests*.
+
+   The daily DOSM refresh and the archive workflows need both. Enable workflows in the Actions tab if GitHub paused
+   them.
+3. **Turn on the site.** Settings → Pages → Source: **GitHub Actions**, then Actions → *Site* → *Run workflow*. The site
+   goes to **https://ikramekonomi.github.io/malaysia-economy/** and redeploys on every push to `main`.
+   - **Private repo:** Pages needs a paid plan (GitHub Pro or Team). This is the recommended setup, because it keeps
+     the raw archive private.
+   - **Public repo:** the `l0-archive` release becomes public too.
+4. **Check the checks.** Actions → *Validate* → *Run workflow*. It must be green.
+5. **Check the daily refresh.** Actions → *DOSM refresh* runs every day at 14:17 MYT. It opens a PR, which merges
    itself only when every verifier is clean. If it has failed several days running, open its log.
-5. **Review PR #34** (if it is still open). It adds the owner's sign-off on 60 audit links, the draft safeguards on
-   the audit inventory, the new site and this page. CI must be green before merging.
+6. **Nothing else depends on the previous owner.** No secrets are used; the workflows use GitHub's built-in token.
+   The old Claude scheduled task that refreshed DOSM lived on the previous owner's account and stopped with it;
+   `dosm-refresh.yml` does the same job here.
 
 ## 2. What is built
 
 | Layer | What | Where | State |
 |---|---|---|---|
-| L0 | raw PDFs and files, by sha256 | private release `l0-archive`; index `meta/l0_archive.csv` | 448+ files |
+| L0 | raw PDFs and files, by sha256 | release `l0-archive`; index `meta/l0_archive.csv` | 470 files (13.4 GB) |
 | L1 | source tables as printed: pkkp, anggaran, anggaran-hasil, mof-fiscal-outlook, bnm, dosm, dosm_reports, audit-negara, states, rmk, parliament, state-budgets | `sources/<name>/` | verified per source (each has `_validation*.csv`) |
 | L2 | conformed core: 6 dimensions, `fact_observation` (223,090 rows, 125 indicators), money flows, records | `core/` | built; machine-checked; blind-verified source by source |
 | L3 | 9 gap views (below) | `core/gap_*.csv` | built and blind-verified, except `gap_audit_recurrence` (draft) |
