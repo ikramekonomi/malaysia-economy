@@ -317,12 +317,15 @@ def dosm_cell(ds, col, **where):
         return next(r[col] for r in csv.DictReader(fh) if all(r[k] == v for k, v in where.items()))
 
 
-q("2", "What was the median monthly wage in Sabah in 2025 (Salaries & Wages Survey)?", "get_series",
-  series("wages.median", "MY-12", "2025"), "value",
+q("2", "What was the median monthly wage of citizens in Sabah in 2025 (Salaries & Wages Survey)?", "get_series",
+  {**series("wages.median", "MY-12", "2025"), "breakdown": "citizenship=citizen"}, "value",
   s(Decimal(dosm_cell("wages_state", "wages_median", state="Sabah", date="2025-01-01", sex="both"))))
-q("2", "What was the median monthly wage of women in Malaysia in 2025?", "get_series",
-  {**series("wages.median", "MY", "2025"), "breakdown": "sex=female"}, "value",
+q("2", "What was the median monthly wage of women citizens in Malaysia in 2025?", "get_series",
+  {**series("wages.median", "MY", "2025"), "breakdown": "citizenship=citizen|sex=female"}, "value",
   s(Decimal(dosm_cell("wages_state", "wages_median", state="Malaysia", date="2025-01-01", sex="female"))))
+q("2", "What was the median monthly wage of all employees, citizens and non-citizens, in Malaysia in 2025?",
+  "get_series", series("wages.median", "MY", "2025"), "value",
+  s(Decimal(dosm_cell("wages_ethnicity", "wages_median", ethnicity="overall", date="2025-01-01", sex="both"))))
 q("9", "What were Malaysia's greenhouse-gas emissions in 2023, excluding LULUCF?", "get_series",
   series("environment.ghg_emissions", "MY", "2023"),
   "value", s(Decimal(dosm_cell("ghg_emissions", "emissions", date="2023-01-01", source="total"))))

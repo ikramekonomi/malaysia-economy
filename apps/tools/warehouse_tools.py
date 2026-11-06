@@ -147,6 +147,15 @@ class Tools:
                 return {"held": False, "answer": "the federal government itself holds no vote: its figures here are the "
                         "charged heads (breakdown charged_head=T.01 ... T.14) and the reserve (reserve_head=P.70); for "
                         "the federal total use federal_gov.expenditure.opex / .devex", "release_id": self.w.release_id}
+            other = sorted({r["breakdown_key"] for r in self.w.obs if r["indicator_code"] == indicator and
+                            r["geo_code"] == geo and r["basis"] != "target" and self._period_in(r["period_code"], start, end)
+                            and r["breakdown_key"] != breakdown})
+            if other:
+                return {"held": False, "answer": f"{indicator} for {geo} is not held with breakdown {breakdown!r} in that "
+                        "period, but is held with: " + ", ".join(other[:12]) + (" ..." if len(other) > 12 else "")
+                        + (" (the Salaries & Wages Survey's state tables cover citizens only)"
+                           if indicator.startswith("wages.") and "citizenship=citizen" in other else ""),
+                        "breakdowns_held": other, "release_id": self.w.release_id}
             return self._not_held(f"{indicator} for {geo} {start or ''}-{end or ''}", self.w.ind[indicator]["name_en"])
         rs.sort(key=lambda r: (r["period_code"], r["edition_id"]))
         out = {"held": True, "indicator_code": indicator, "unit": self.w.ind[indicator]["unit"],

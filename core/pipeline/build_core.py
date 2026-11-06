@@ -325,20 +325,36 @@ def build_wave3(obs, ed):
     sex = ("sex", "sex", ("both",))
     W = {"recipients": ("wages.recipients", k, "'000 persons", "100"),
          "wages_median": ("wages.median", one, "RM per month", "1"), "wages_mean": ("wages.mean", one, "RM per month", "1")}
-    wave3(obs, ed, "wages_state", W, "A", "direct_survey", axes=(sex,))
-    for ds, col, ax in (("wages_strata", "strata", "strata"), ("wages_sector", "sector", "sector"),
-                        ("wages_industry", "section", "msic_section"), ("wages_education", "education", "education"),
-                        ("wages_age", "age", "age"), ("wages_ethnicity", "ethnicity", "ethnicity"),
-                        ("wages_occupation", "occupation", "occupation"), ("wages_skill", "skill", "skill"),
-                        ("wages_certificate", "certificate", "certificate")):
-        wave3(obs, ed, ds, W, "A", "direct_survey", geo_col=None, axes=(sex, (col, ax, ("overall",))))
     def tag(col, val):  # an axis the file does not print because the whole file is one value of it
         return lambda r: r.__setitem__(col, val) or True
     cit = ("_cit", "citizenship", ())
+    # The Salaries & Wages Survey tables are CITIZENS only, except wages_ethnicity (all employees) and
+    # wages_real_state (all employees): their 'overall' rows equal wages_ethnicity's 'citizen' row (the wave-3
+    # verifier, 2026-11-06). So every citizens-only row carries citizenship=citizen; the all-employee total is
+    # _total and comes only from wages_ethnicity; the national citizen total comes once (wages_ethnicity
+    # 'citizen'), so the other tables' national 'overall' rows are not loaded twice.
+    wave3(obs, ed, "wages_state", W, "A", "direct_survey", axes=(sex, cit),
+          filt=lambda r: r["state"] != "Malaysia" and tag("_cit", "citizen")(r))
+    for ds, col, ax in (("wages_strata", "strata", "strata"), ("wages_sector", "sector", "sector"),
+                        ("wages_industry", "section", "msic_section"), ("wages_education", "education", "education"),
+                        ("wages_age", "age", "age"), ("wages_occupation", "occupation", "occupation"),
+                        ("wages_skill", "skill", "skill"), ("wages_certificate", "certificate", "certificate")):
+        wave3(obs, ed, ds, W, "A", "direct_survey", geo_col=None, axes=(sex, (col, ax, ("overall",)), cit),
+              filt=lambda r, c=col: r[c] != "overall" and tag("_cit", "citizen")(r))
+
+    def eth(r):  # wages_ethnicity: overall = all employees; citizen / noncitizen = citizenship; groups = citizens
+        e = r["ethnicity"]
+        r["_cit"] = "" if e == "overall" else e if e in ("citizen", "noncitizen") else "citizen"
+        r["_eth"] = e if e not in ("overall", "citizen", "noncitizen") else "overall"
+        return True
+    wave3(obs, ed, "wages_ethnicity", W, "A", "direct_survey", geo_col=None,
+          axes=(sex, ("_eth", "ethnicity", ("overall",)), ("_cit", "citizenship", ("",))), filt=eth)
     wave3(obs, ed, "wages_noncitizen", W, "A", "direct_survey", geo_col=None,
-          axes=(sex, ("strata", "strata", ("overall",)), cit), filt=tag("_cit", "noncitizen"))
+          axes=(sex, ("strata", "strata", ("overall",)), cit),
+          filt=lambda r: r["strata"] != "overall" and tag("_cit", "noncitizen")(r))
     wave3(obs, ed, "wages_noncitizen_education", W, "A", "direct_survey", geo_col=None,
-          axes=(("education", "education", ("overall",)), cit), filt=tag("_cit", "noncitizen"))
+          axes=(("education", "education", ("overall",)), cit),
+          filt=lambda r: r["education"] != "overall" and tag("_cit", "noncitizen")(r))
     WR = {"wages_median_real": ("wages.median.real", one, "RM per month, 2010 prices", "1"),
           "wages_mean_real": ("wages.mean.real", one, "RM per month, 2010 prices", "1")}
     wave3(obs, ed, "wages_real_state", WR, "A", "direct_survey")
@@ -347,9 +363,11 @@ def build_wave3(obs, ed):
          "wages_median": ("wages.formal.median", one, "RM per month", "1")}
     wave3(obs, ed, "formal_wages", F, "M", "administrative", geo_col=None,
           axes=(sex, ("ethnicity", "ethnicity", ("overall",)), ("age", "age", ("overall",))))
-    wave3(obs, ed, "formal_wages_state", F, "M", "administrative")
+    # the national total comes once, from formal_wages (formal_wages_state's and _msic's own totals repeat it)
+    wave3(obs, ed, "formal_wages_state", F, "M", "administrative", filt=lambda r: r["state"] != "Malaysia")
     wave3(obs, ed, "formal_wages_msic", F, "M", "administrative", geo_col=None,
-          axes=(("sector", "sector", ("overall",)), ("industry", "industry", ("overall",))))
+          axes=(("sector", "sector", ("overall",)), ("industry", "industry", ("overall",))),
+          filt=lambda r: not (r["sector"] == "overall" and r["industry"] == "overall"))
     wave3(obs, ed, "formal_wages_msic_age", F, "M", "administrative", geo_col=None,
           axes=(("sector", "sector", ()), ("age", "age", ())))
     wave3(obs, ed, "formal_wages_band", {"employees": ("wages.formal.employees", one, "persons", "1")}, "M",
@@ -373,7 +391,7 @@ def build_wave3(obs, ed):
     wave3(obs, ed, "cpi_headline_inflation", INF, "M", "direct_survey", geo_col=None, axes=(div,))
     wave3(obs, ed, "cpi_core_inflation", INF, "M", "direct_survey", geo_col=None, axes=(div, ("_b", "basket", ())),
           filt=tag("_b", "core"))
-    wave3(obs, ed, "cpi_annual", {"index": ("cpi.index", one, "index 2010=100, annual average", "0.1")}, "A",
+    wave3(obs, ed, "cpi_annual", {"index": ("cpi.index_annual", one, "index 2010=100, annual average", "0.1")}, "A",
           "direct_survey", geo_col=None, axes=(div,))
     wave3(obs, ed, "cpi_annual_inflation", {"inflation": ("cpi.inflation_annual", one, "percent", "0.1")}, "A",
           "direct_survey", geo_col=None, axes=(div,))
@@ -431,7 +449,7 @@ def build_wave3(obs, ed):
           "administrative", axes=(("sector", "sector", ()),))
     wave3(obs, ed, "water_production", {"value": ("water.production", one, "MLD", "1")}, "A",
           "administrative")
-    wave3(obs, ed, "mineral_extraction", {"production": ("output.mineral_production", one, "tonnes", "1")}, "M",
+    wave3(obs, ed, "mineral_extraction", {"production": ("output.mineral_production", one, "tonnes", "1")}, "A",
           "administrative", axes=(("commodity", "commodity", ()),),
           unit=lambda r: "grammes" if r["commodity"] in ("gold", "silver") else "tonnes")
     wave3(obs, ed, "timber_production", {"production": ("output.timber_production", one, "cubic metres", "1")}, "A",
@@ -1212,7 +1230,7 @@ def build_flags(obs):
                                         f"(employed {sig[0]}, unemployed {sig[1]}, rates {sig[3]}/{sig[4]})",
                                 "register": "core/pipeline/build_core.py build_flags (declared rule)"})
     for r in obs.rows:
-        if (r["unit_printed"] == "percent" and r["value"] and
+        if (r["unit_printed"] == "percent" and r["value"] and "inflation" not in r["indicator_code"] and
                 not (Decimal(0) <= Decimal(r["value"]) <= Decimal(100))):
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "out_of_bounds",
                         "note": f"{r['indicator_code']} = {r['value_printed']} percent, outside 0-100",
@@ -1228,7 +1246,8 @@ def build_flags(obs):
             first16[r["indicator_code"]] = min(first16.get(r["indicator_code"], "9999"), r["period_code"][:4])
     for r in obs.rows:
         f = first16.get(r["indicator_code"])
-        if f and r["geo_code"] == "MY-14" and r["edition_id"].startswith("dosm:") and r["period_code"][:4] < f:
+        if f and (r["geo_code"] == "MY-14" or r["geo_code"].startswith("MY-14/dis:")) and \
+                r["edition_id"].startswith("dosm:") and r["period_code"][:4] < f:
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "scope_includes_putrajaya",
                         "note": f"WP Kuala Lumpur before {f} includes WP Putrajaya, which DOSM prints separately only from "
                                 f"{f}: growth across {f} compares different areas (proof: RMKe-12 Jadual 5 footnote; "

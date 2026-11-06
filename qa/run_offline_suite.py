@@ -89,6 +89,7 @@ SUITE = [
     "core/pipeline/build_gap_revenue.py",
     "core/pipeline/build_gap_reported_vs_audited.py",
     "core/pipeline/build_gap_obligations.py",
+    "sources/dosm/pipeline/verify_wave3_identities.py",
     "sources/rmk/pipeline/validate_rmk12.py",
     "sources/rmk/pipeline/validate_ksp_rmk11_f3.py",
     "sources/parliament/pipeline/validate_dr_devex_by_state.py",

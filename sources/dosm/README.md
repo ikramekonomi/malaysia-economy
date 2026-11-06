@@ -364,8 +364,31 @@ same publication, cell by cell (`data/_validation_wave3.csv`: 165 checks, all PA
 
 Left out on purpose: `cpi_3d`/`4d`/`5d`, and `population_dun`/`parlimen` (age × ethnicity grain).
 
+**The Salaries & Wages Survey tables cover citizens only, except `wages_ethnicity` and `wages_real_state`,
+which cover all employees.** The other tables' 'overall' row equals `wages_ethnicity`'s 'citizen' row in all 48
+year × sex cells. In core, the citizens-only rows carry `citizenship=citizen`, and `_total` is all employees.
+
+The files' own identities are checked offline by `pipeline/verify_wave3_identities.py`. Breaches beyond the
+printed rounding are registered in `data/_identity_breaches_wave3.csv` and kept as published. There are 16:
+* timber national totals that are not the sum of the states (e.g. 2001 plywood: 4,317,193 printed against
+  4,217,193 summed);
+* water production in 2010;
+* fish landings in two months;
+* one wage-recipients year.
+
+Other notes:
+* District GDP: in Sabah and Sarawak the state's own Supra is not a district, so their districts do not add up to
+  the state.
+* Kuala Lumpur's district row includes Putrajaya (flagged).
+* 6 districts of the 2020 set print no GDP (the file likely uses earlier boundaries).
+* Selangor's water figures likely include KL and Putrajaya.
+* Fish landings are printed for each state only by coast.
+
 Held at L1 only:
 * `completion_school_district`: MOE's education districts, not DOSM's administrative districts;
+* the `growth_yoy` series of `productivity_state` and `gdp_district_real_supply` (derivable from the levels);
+* the national 'overall' rows of the citizens-only wage tables, and the national totals of `formal_wages_state`
+  and `formal_wages_msic`: each repeats a total loaded once from another file;
 * the states' CPI inflation and every month-on-month rate: derivable from the indexes core holds;
 * the 'Supra' rows of district GDP;
 * the 'Semenanjung Malaysia' forest subtotal.

@@ -416,12 +416,14 @@ publication (`verify_wave3.py`: 165 checks PASS). Core gains 37 indicators (`bui
 
 * **Wages:**
   * the Salaries & Wages Survey 2010-2025 (`wages.median`, `.mean`, `.recipients`), by state, sex, strata,
-    sector, MSIC section, education, age, ethnicity, occupation, skill, certificate and citizenship;
+    sector, MSIC section, education, age, ethnicity, occupation, skill, certificate and citizenship. **Most of
+    its tables cover citizens only (`citizenship=citizen`); `_total` is all employees** (from the ethnicity
+    table). A state figure is therefore held as citizens only, and `get_series` says so when `_total` is asked;
   * real wages by state (2010 prices);
   * formal-sector administrative wages, monthly 2022-2026 (`wages.formal.*`, with percentiles and wage bands).
 * **Productivity** by state and sector.
 * **CPI:**
-  * the core, low-income and urban/rural indexes, and the annual index from 1960;
+  * the core, low-income and urban/rural indexes, and the annual average index from 1960 (`cpi.index_annual`);
   * DOSM's printed year-on-year inflation, national headline and core. The states' and the month-on-month rates
     stay at L1 (they can be derived from `cpi.index`, D34).
 * **GDP by district,** constant 2015 prices, by sector, 2015-2020 (the 'Supra' rows stay at L1).

@@ -1,0 +1,17 @@
+dataset,column,key,published_total,sum_of_parts,difference
+fish_landings,landings,2016-02-01,104217,104219,2
+fish_landings,landings,2022-10-01,108030,108028,-2
+timber_production,production,2001-01-01|plywood,4317193,4217193,-100000
+timber_production,production,2005-01-01|plywood,5114685,5116685,2000
+timber_production,production,2009-01-01|sawn_timber,3888305,3890215,1910
+timber_production,production,2019-01-01|sawn_timber,3371450,3420150,48700
+timber_production,production,2020-01-01|logs,5320403,5320359,-44
+timber_production,production,2020-01-01|plywood,1668319,1676355,8036
+timber_production,production,2020-01-01|sawn_timber,2274047,2318092,44045
+timber_production,production,2021-01-01|sawn_timber,1935202,1962765,27563
+timber_production,production,2022-01-01|plywood,1461640,1459640,-2000
+timber_production,production,2022-01-01|sawn_timber,2786837,2821536,34699
+timber_production,production,2023-01-01|plywood,1213420,1214137,717
+timber_production,production,2023-01-01|sawn_timber,2145585,2166859,21274
+wages_state,recipients,2011-01-01|female,2953.9,2954.8,0.9
+water_production,value,2010-01-01,14110,14088,-22
