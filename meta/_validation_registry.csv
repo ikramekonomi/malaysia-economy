@@ -194,7 +194,7 @@ R7 every file is in the L0 archive,bnm_msb,PASS,32 of 32 archived (release l0-ar
 R6 licence recorded,bnm_msb,OPEN,licence to_confirm
 R4 held series has files,federal_devex_by_state,PASS,1 file(s)
 R5 every file has a sha256,federal_devex_by_state,PASS,1 files
-R7 every file is in the L0 archive,federal_devex_by_state,OPEN,0 of 1 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,federal_devex_by_state,PASS,1 of 1 archived (release l0-archive or git history)
 R6 licence recorded,federal_devex_by_state,OPEN,licence to_confirm
 R4 held series has files,pkkp,PASS,16 file(s)
 R5 every file has a sha256,pkkp,OPEN,2 of 16 without sha256 (needs the L0 archive)
@@ -246,7 +246,7 @@ R7 every file is in the L0 archive,ag_sijil_eselfaudit,PASS,4 of 4 archived (rel
 R6 licence recorded,ag_sijil_eselfaudit,OPEN,licence to_confirm
 R4 held series has files,dewan_rakyat_hansard,PASS,1 file(s)
 R5 every file has a sha256,dewan_rakyat_hansard,PASS,1 files
-R7 every file is in the L0 archive,dewan_rakyat_hansard,OPEN,0 of 1 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,dewan_rakyat_hansard,PASS,1 of 1 archived (release l0-archive or git history)
 R6 licence recorded,dewan_rakyat_hansard,OPEN,licence to_confirm
 R4 held series has files,lkan_state,PASS,353 file(s)
 R5 every file has a sha256,lkan_state,PASS,353 files
@@ -258,7 +258,7 @@ R7 every file is in the L0 archive,emissions_inventory,PASS,1 of 1 archived (rel
 R6 licence recorded,emissions_inventory,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
 R4 held series has files,rmk_targets,PASS,1 file(s)
 R5 every file has a sha256,rmk_targets,PASS,1 files
-R7 every file is in the L0 archive,rmk_targets,OPEN,0 of 1 archived (release l0-archive or git history)
+R7 every file is in the L0 archive,rmk_targets,PASS,1 of 1 archived (release l0-archive or git history)
 R6 licence recorded,rmk_targets,OPEN,licence to_confirm
 R4 held series has files,vital_statistics,PASS,9 file(s)
 R5 every file has a sha256,vital_statistics,PASS,9 files
