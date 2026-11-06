@@ -151,6 +151,15 @@ def manifest_files():
                     "size_bytes": m.get("size_bytes", ""), "pages": m.get("pages", ""),
                     "retrieved_date": m.get("retrieved_date", ""),
                     "manifest": "sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)"})
+    # the development project lists are printed inside the Budget books: link those books to anggaran_pembangunan
+    books = {f["file_name"]: f for f in out if f["series_id"] == "anggaran_perbelanjaan"}
+    for p in sorted(glob.glob(os.path.join(REPO, "sources", "anggaran", "data", "*", "fact_anggaran_projek_*.csv"))):
+        for fn in sorted({r["source_file"] for r in rows(p)}):
+            m = books.get(fn, {})
+            out.append({**{k: m.get(k, "") for k in ("edition", "source_url", "sha256", "size_bytes", "pages",
+                                                       "retrieved_date")},
+                        "series_id": "anggaran_pembangunan", "file_name": fn,
+                        "manifest": m.get("manifest", "") + " (via source_file of the project lists)"})
     # DOSM survey reports (the Excel twin of each publication; sources/dosm_reports, re-downloaded and sha-checked)
     report_series = {"household_income_2024": "hies_report_tables", "poverty_2024": "hies_report_tables",
                      "income_inequality_2024": "hies_report_tables", "household_expenditure_2024": "hes_report_tables",

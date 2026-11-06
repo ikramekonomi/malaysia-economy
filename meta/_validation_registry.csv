@@ -180,6 +180,10 @@ R4 held series has files,industry_trade,PASS,22 file(s)
 R5 every file has a sha256,industry_trade,PASS,22 files
 R7 every file is in the L0 archive,industry_trade,PASS,22 of 22 archived (release l0-archive or git history)
 R6 licence recorded,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,anggaran_pembangunan,PASS,3 file(s)
+R5 every file has a sha256,anggaran_pembangunan,PASS,3 files
+R7 every file is in the L0 archive,anggaran_pembangunan,PASS,3 of 3 archived (release l0-archive or git history)
+R6 licence recorded,anggaran_pembangunan,OPEN,licence to_confirm
 R4 held series has files,anggaran_perbelanjaan,PASS,6 file(s)
 R5 every file has a sha256,anggaran_perbelanjaan,PASS,6 files
 R7 every file is in the L0 archive,anggaran_perbelanjaan,PASS,6 of 6 archived (release l0-archive or git history)

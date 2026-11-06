@@ -34,6 +34,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
 | `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
+| `gap_project_budget_vs_actual.csv` | 2,560 | development project (vote, project code) × year, FY2023-2025: the Budget book's tabled and revised allocations, PKKP's allocation and actual, execution rate and status |
 | `gap_reported_vs_audited.csv` | 89 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
 | `gap_obligations_growth.csv` | 68 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
 | `gap_target_vs_outcome.csv` | 43 | plan target × place: RMKe-12's 2025 targets (GDP by state, federal finance, labour) beside the outcome (Phase 5) |
@@ -466,6 +467,30 @@ reader chooses between them:
 * `compare_geos` lists Terengganu under `not_banded`, with both figures cited. A
 household head's attributes are their own axes (`hoh_ethnicity`, `hoh_sex`, `hoh_age`), never the person
 axes.
+
+## gap_project_budget_vs_actual (2026-11-06)
+
+Was each development project's money spent? The grain is development project (vote, project code) × year,
+FY2023-2025 (`build_gap_project_budget.py`; method declared in its docstring before any result). The view sets
+side by side:
+* the Budget book's tabled allocation (columns 6 + 7 of that year's book);
+* the next book's revised allocation (column 5);
+* the total project cost;
+* PKKP's audited allocation and actual for the project.
+
+Rows are joined on code, with a name check, because codes are reused. Where the book and the accounts print one
+code for two different projects, each is its own row and they are never joined (8 pairs). Derived columns:
+* the execution rate on PKKP's allocation and on the tabled amount;
+* the unspent amount;
+* the money moved in or out during the year (`allocation_change_rm`).
+
+Status words use `gap_budget_vs_actual`'s thresholds. Checks (`_validation_gap_pbva.csv`, 182 PASS):
+* every vote-year's tabled column adds up to the book's printed vote total;
+* its actual and allocation columns add up to core's audited vote observations.
+
+FY2024 (698 projects in both sources): RM91.99b tabled. PKKP records RM80.03b allocated to those projects and
+RM79.37b spent. 78 projects with a tabled allocation spent nothing. FY2023 has no tabled column, since the 2023
+book is not held. FY2025 has no PKKP yet.
 
 ## gap_reported_vs_audited (Phase 5, 2026-11-06)
 

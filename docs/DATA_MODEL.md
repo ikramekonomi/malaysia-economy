@@ -447,6 +447,7 @@ its own coverage.
 | View | Question | Grain |
 |---|---|---|
 | `gap_budget_vs_actual` | Was the money budgeted spent? | entity (ministry→programme→project) × year (built 2026-11-05 at vote level: PKKP estimates and actuals FY2009-2024 beside the Budget books' estimates and reprints) |
+| `gap_project_budget_vs_actual` | Was each development project's money spent? | development project (vote, project code) × year, FY2023-2025: the Budget book's tabled and revised allocations beside PKKP's allocation and actual (built 2026-11-06) |
 | `gap_revenue_estimate_vs_collected` | Did revenue come in as estimated? | revenue code × year (built 2026-11-05 at revenue-type level: PKKP FY2009-2024 beside the Anggaran Hasil books) |
 | `gap_reported_vs_audited` | Do MOF, BNM and PKKP agree? | indicator × year (built 2026-11-06: seven federal headlines, PKKP FY2009-2024 beside BNM MSB 3.1 and MOF Tinjauan Fiskal; no pair differs by more than 0.1%) |
 | `gap_target_vs_outcome` | Was the plan target met? | target × indicator × geo × year (built 2026-11-06: RMKe-12's 2025 targets for GDP by state, federal finance and labour, `sources/rmk`) |

@@ -127,6 +127,45 @@ grain left for a later pass.
   budget-vs-actual gap; P-vote (pembangunan) project lists as a separate grain.
 
 
+## Development project lists (P votes), Budget 2024-2026 (2026-11-06)
+
+Each development vote (Maksud Pembangunan P.n) prints its projects in one table, under optional programme
+headings with their subtotals, and closes with the vote's JUMLAH. Each table has five columns:
+* (3) the project's total estimated cost;
+* (4) the actual two years before;
+* (5) the revised estimate for the year before;
+* (6) the year's allocation, direct (cara langsung);
+* (7) the year's allocation by loan (pinjaman).
+
+* `pipeline/extract_projek.py` -> `data/<year>/fact_anggaran_projek_<year>.csv`. Each row is one printed project
+  line, programme subtotal (`jumlah_program`) or vote total (`jumlah_maksud`), with the five columns in whole RM
+  as printed, the programme it sits under, and its pdf and printed pages. A title printed over several lines is
+  joined. The 2026 book prints `Jumlah` alone on a subtotal and the vote code on the left of even pages, and the
+  parser reads both. The books hold:
+  * 2024: 699 projects, 28 votes;
+  * 2025: 683 projects, 30 votes;
+  * 2026: 640 projects, 30 votes.
+
+  Every line of every project page is read; the extractor logs any unread line, and logs none.
+* `pipeline/validate_projek.py` (in the suite) -> `data/_validation_projek.csv`. The checks were declared before
+  the results:
+  * J1, J2: programme subtotals and vote totals equal the sum of their rows, every column. Twelve differ, all in
+    column (4) and all by RM1-2, within the sen rounding of the rows summed. They are registered with their
+    pages in `data/_source_anomalies_projek.csv` (SOURCE_ANOMALY) and kept as printed. The rule was amended once,
+    from RM1 to RM0.50 a row, when P.43 (2025) came out RM2 off its 33 rows.
+  * J3: every vote's allocation equals the book's own summary (`fact_anggaran_maksud_<year>`, direct and loan):
+    176 PASS.
+  * J4: every allocated vote has a project table, except P.70, the contingency reserve. It prints a one-line
+    table.
+  * J5, J6 (INFO): comparisons with PKKP's audited project figures.
+* **Column (4) is not a project's actual spending.** The list carries only projects continuing into the budget
+  year, and of each only the part carried forward. The 2024 book's column (4) totals RM3.1b for P.06, while the
+  vote spent RM6.2b in 2022. Project by project, only 242 of 699 equal PKKP FY2022's audited actual. Use PKKP
+  for actuals; `gap_project_budget_vs_actual` does.
+* Project codes are reused for different projects across books: P.15 00700 is GREEN FUND in 2024 and another
+  programme in 2025. Joins across books or with PKKP therefore carry a name check (`core/README.md`).
+
+
 ## Lampiran E: actual federal grants to each state government (FY2019-2024, 2026-11-05)
 
 Each Budget book prints, as Lampiran E, the federal grants actually paid to each of the 13 state governments in
