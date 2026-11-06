@@ -65,7 +65,7 @@ editions), bnm, dosm (121 datasets incl. data.gov.my health, education and servi
    DOSM refresh also goes through a PR; it merges itself only when every verifier is clean.)
 8. **Keep every vintage.** A refresh never destroys the previous release: log it (sha256, as-of
    date) so it can be recovered exactly (`sources/dosm/pipeline/vintage_get.py`). Raw PDFs live in
-   the private `l0-archive` release, by sha256 (`meta/l0_archive.py`; index `meta/l0_archive.csv`).
+   the public `l0-archive` release, by sha256 (`meta/l0_archive.py`; index `meta/l0_archive.csv`).
 9. **A survey estimate carries its uncertainty**, or says it is unknown. Never rank small areas
    as if their estimates were exact.
 10. **Licence and personal data are checked before anything leaves the warehouse.** Every series
