@@ -8,30 +8,26 @@ says what the warehouse is, and [`CLAUDE.md`](CLAUDE.md), which gives the rules 
 
 ## 1. On day one
 
-The repository was **copied**, not transferred: `ikramekonomi/malaysia-economy` (the account of
-ammar.roslizar@ikram.org.my) is IKRAM's own, and the original `ammarroslizar/malaysia-economy` is archived as a
-read-only record. Old links to the original do not redirect here.
+The repository was **transferred** to `ikramekonomi` (the account of ammar.roslizar@ikram.org.my) on 2026-11-06.
+With it came the code and its full history, the `l0-archive` release (the raw PDFs, by sha256), the workflows and
+the settings. Links to the old address (`ammarroslizar/malaysia-economy`) redirect here. The previous owner kept a
+personal copy for reference.
 
-1. **Check the copy is whole.**
-   - **Code:** the code and its full history are here.
-   - **Archive:** the `l0-archive` release (the raw PDFs, by sha256) holds
-     470 files. Check with `gh release view l0-archive --json assets --jq '.assets | length'`.
-     The index is `meta/l0_archive.csv`.
-2. **Allow the workflows to write.** Settings → Actions → General → Workflow permissions:
-   - choose *Read and write permissions*;
-   - tick *Allow GitHub Actions to create and approve pull requests*.
-
-   The daily DOSM refresh and the archive workflows need both. Enable workflows in the Actions tab if GitHub paused
-   them.
-3. **Turn on the site.** Settings → Pages → Source: **GitHub Actions**, then Actions → *Site* → *Run workflow*. The site
+1. **Turn on the site.** Settings → Pages → Source: **GitHub Actions**, then Actions → *Site* → *Run workflow*. The site
    goes to **https://ikramekonomi.github.io/malaysia-economy/** and redeploys on every push to `main`.
    - **Private repo:** Pages needs a paid plan (GitHub Pro or Team). This is the recommended setup, because it keeps
      the raw archive private.
    - **Public repo:** the `l0-archive` release becomes public too.
-4. **Check the checks.** Actions → *Validate* → *Run workflow*. It must be green.
-5. **Check the daily refresh.** Actions → *DOSM refresh* runs every day at 14:17 MYT. It opens a PR, which merges
+2. **Check that workflows may write.** Settings → Actions → General → Workflow permissions:
+   - *Read and write permissions* is chosen;
+   - *Allow GitHub Actions to create and approve pull requests* is ticked.
+
+   The daily DOSM refresh and the archive workflows need both. If GitHub paused the workflows, enable them in the
+   Actions tab.
+3. **Check the checks.** Actions → *Validate* → *Run workflow*. It must be green.
+4. **Check the daily refresh.** Actions → *DOSM refresh* runs every day at 14:17 MYT. It opens a PR, which merges
    itself only when every verifier is clean. If it has failed several days running, open its log.
-6. **Nothing else depends on the previous owner.** No secrets are used; the workflows use GitHub's built-in token.
+5. **Nothing else depends on the previous owner.** No secrets are used; the workflows use GitHub's built-in token.
    The old Claude scheduled task that refreshed DOSM lived on the previous owner's account and stopped with it;
    `dosm-refresh.yml` does the same job here.
 
