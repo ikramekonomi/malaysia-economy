@@ -15,9 +15,8 @@ personal copy for reference.
 
 1. **Turn on the site.** Settings → Pages → Source: **GitHub Actions**, then Actions → *Site* → *Run workflow*. The site
    goes to **https://ikramekonomi.github.io/malaysia-economy/** and redeploys on every push to `main`.
-   - **Private repo:** Pages needs a paid plan (GitHub Pro or Team). This is the recommended setup, because it keeps
-     the raw archive private.
-   - **Public repo:** the `l0-archive` release becomes public too.
+     - The repository is public (chosen on 2026-11-06, so Pages is free). Its `l0-archive` release of raw PDFs is
+     public too: official documents already published by their publishers. A takedown request is honoured.
 2. **Check that workflows may write.** Settings → Actions → General → Workflow permissions:
    - *Read and write permissions* is chosen;
    - *Allow GitHub Actions to create and approve pull requests* is ticked.
