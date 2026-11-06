@@ -1,6 +1,3 @@
 # LKAN 2021 Siri 1 | state:Sarawak | LAPORAN KETUA AUDIT NEGARA SIRI 1 AKTIVITI KEMENTERIAN/JABATAN/AGENSI DAN PENGURUSAN SYARIKAT KERAJAAN NEGERI
-# no contents page found
-# text characters by pdf page: 1:182 2:0 3:488 4:1549 5:69 6:53 7:320 8:53 9:73 10:53 11:4433 12:3205 13:223 14:53 15:11015 16:54 17:3905 18:3811 19:4139 20:3448
-# p5: KANDUNGAN
-# p7: Kandungan
-# p12: dengan cepat dan efektif tanpa perlu meneliti keseluruhan isi kandungan laporan. Kaedah
+=== pdf page 5 (ocr) ===
+5 KANDUNGAN
