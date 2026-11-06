@@ -98,12 +98,22 @@ def main():
     for r in w.obs:
         by_ind[r["indicator_code"]].append(r)
     cat = []
+    # indicators whose rows are told apart by the body (entity) as well as place and breakdown, e.g. spending by vote:
+    # the body becomes part of the breakdown (body=<entity_id>), so no two bodies collapse onto one line
+    keyed = defaultdict(set)
+    for r in w.obs:
+        keyed[(r["indicator_code"], r["geo_code"], r["period_code"], r["breakdown_key"], r["edition_id"], r["basis"])].add(r["entity_id"])
+    by_body = {k[0] for k, v in keyed.items() if len(v) > 1}
+    used_bodies = set()
     for code, rs in sorted(by_ind.items()):
         meta = w.ind.get(code) or w.all_ind.get(code, {})
         if meta.get("source_dataset", "").split(":")[-1] in blocked:
             continue
         eds, cites, out = {}, {}, []
         for r in rs:
+            if code in by_body and r["entity_id"] and r["entity_id"] != "E000001":
+                used_bodies.add(r["entity_id"])
+                r = dict(r, breakdown_key=f"body={r['entity_id']}" + ("" if r["breakdown_key"] == "_total" else "|" + r["breakdown_key"]))
             e = eds.setdefault(r["edition_id"], len(eds))
             ck = (r["table_ref"], r["pdf_page"], r["printed_page"], r["file_id"])
             c = cites.setdefault(ck, len(cites))
@@ -114,7 +124,7 @@ def main():
         geos = sorted({r["geo_code"] for r in rs})
         levels = sorted({w.geo.get(g, {}).get("geo_level", "") for g in geos})
         periods = sorted({r["period_code"] for r in rs})
-        brk = sorted({r["breakdown_key"] for r in rs})
+        brk = sorted({row[2] for row in out})
         write(f"ind/{code}.json", {
             "code": code, "cols": ["geo", "period", "breakdown", "value", "edition", "basis", "status", "ci_low",
                                    "ci_high", "reliability", "cite", "l1_ref", "caveats"],
@@ -132,6 +142,7 @@ def main():
                     "n_geo": len(geos), "breakdowns": brk[:400], "n_breakdowns": len(brk),
                     "publishers": sorted({k.split(":")[0] for k in eds})})
     write("catalogue.json", cat)
+    write("entities.json", {e: (w.entity.get(e, {}).get("name_en") or w.entity.get(e, {}).get("name_bm") or e) for e in sorted(used_bodies)})
     write("geo.json", [{"code": g, "level": v["geo_level"], "name": v["name_en"] or v["name_bm"], "name_bm": v["name_bm"],
                         "parent": v["parent_geo_code"]} for g, v in w.geo.items()])
     write("themes.json", themes)

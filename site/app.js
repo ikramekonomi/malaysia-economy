@@ -69,7 +69,25 @@ const AXIS = { sex: "Sex", hh_head_sex: "Head of household: sex", hh_head_ethnic
   pli_component: "PLI component", percentile_group: "Percentile group", reserve_head: "Reserve" };
 function brkLabel(b) {
   if (!b || b === "_total") return "Total";
-  return b.split("|").map((kv) => { const [k, v] = kv.split("="); return `${AXIS[k] || k.replace(/_/g, " ")}: ${(v || "").replace(/_/g, " ")}`; }).join(" · ");
+  return b.split("|").map((kv) => { const [k, v] = kv.split("="); if (k === "body") return D.entities?.[v] || v; return `${AXIS[k] || k.replace(/_/g, " ")}: ${(v || "").replace(/_/g, " ")}`; }).join(" · ");
+}
+
+/* ---------- readable names for editions and publishers ---------- */
+const PUB = { dosm: "DOSM", bnm: "Bank Negara", mof: "Ministry of Finance", pkkp: "Accountant General (PKKP)", anggaran: "Budget books (MOF)",
+  anggaran_hasil: "Revenue estimates (MOF)", rmk: "Malaysia Plan (EPU)", states: "State governments", audit: "Auditor-General", parliament: "Parliament" };
+const pubName = (p) => PUB[String(p).toLowerCase()] || String(p).toUpperCase();
+function edLabel(id) {
+  id = String(id || ""); let m;
+  if ((m = /^pkkp:(\d{4})_/.exec(id))) return `PKKP FY${m[1]}, audited accounts`;
+  if ((m = /^anggaran:.*?(\d{4})\.pdf$/i.exec(id))) return `Budget book ${m[1]} (expenditure estimates)`;
+  if ((m = /^anggaran_hasil:.*?(\d{4})/i.exec(id))) return `Revenue estimates ${m[1]}`;
+  if ((m = /^mof:tinjauan_fiskal@(\d{4})/.exec(id))) return `MOF Fiscal Outlook ${m[1]}`;
+  if ((m = /^bnm:([^@]+)@(.+)$/.exec(id))) return `Bank Negara ${m[1].replace(/_/g, " ").toUpperCase()}, as of ${m[2]}`;
+  if ((m = /^dosm:report\.([^@]+)@(.+)$/.exec(id))) return `DOSM report: ${m[1].replace(/_/g, " ")} (${m[2]})`;
+  if ((m = /^dosm:([^@]+)@(.+)$/.exec(id))) return `DOSM ${m[1].replace(/_/g, " ")}, as of ${m[2]}`;
+  if (/^rmk:rmk12/.test(id)) return "Twelfth Malaysia Plan (2021–2025)";
+  if ((m = /^states:(.+)$/.exec(id))) return `State accounts: ${m[1].replace(/_/g, " ").replace(/\.pdf$/i, "")}`;
+  return id;
 }
 
 /* ---------- small UI helpers ---------- */
@@ -122,9 +140,9 @@ const statusText = (s) => (STATUS[s] || [String(s || "").replace(/_/g, " ")])[0]
 async function boot() {
   initTheme();
   logo();
-  const [meta, cat, geo, themes, caveats, breaks, gaps, registry] = await Promise.all(
-    ["meta.json", "catalogue.json", "geo.json", "themes.json", "caveats.json", "breaks.json", "gaps.json", "registry.json"].map(J));
-  Object.assign(D, { meta, cat, geo, themes, caveats, breaks, gaps, registry });
+  const [meta, cat, geo, themes, caveats, breaks, gaps, registry, entities] = await Promise.all(
+    ["meta.json", "catalogue.json", "geo.json", "themes.json", "caveats.json", "breaks.json", "gaps.json", "registry.json", "entities.json"].map((f) => J(f).catch(() => ({}))));
+  Object.assign(D, { meta, cat, geo, themes, caveats, breaks, gaps, registry, entities });
   D.geoIx = Object.fromEntries(geo.map((g) => [g.code, g]));
   D.catIx = Object.fromEntries(cat.map((c) => [c.code, c]));
   $("#release").textContent = "release " + meta.release_id.replace("core-", "");
@@ -369,58 +387,67 @@ function cmpRow(k, ...cells) { return `<tr><td>${k}</td>${cells.map((c) => { con
    ===================================================================================================== */
 function viewExplore(v) {
   crumbs([["Explore data", "#/explore"]]);
-  const [path, P] = hashParams();
-  const st = { q: P.get("q") || "", theme: P.get("theme") || "", lvl: P.get("lvl") || "", pub: P.get("pub") || "" };
+  const [, P] = hashParams();
+  const st = { q: P.get("q") || "", theme: P.get("theme") || "", lvl: P.get("lvl") || "", pub: P.get("pub") || "", sort: P.get("sort") || "theme" };
   const themes = [...new Set(D.cat.map((c) => c.theme))].sort((a, b) => (a === "cross") - (b === "cross") || a.localeCompare(b, "en", { numeric: true }));
   const pubs = [...new Set(D.cat.flatMap((c) => c.publishers))].sort();
+  const y0 = D.meta.scale?.first_year || 1957, y1 = D.meta.scale?.last_year || 2026;
+  const LV = { country: ["MY", "Malaysia"], state: ["ST", "States"], district: ["DT", "Districts"], parlimen: ["PAR", "Parlimen"], dun: ["DUN", "DUN"] };
+  const SORTS = { theme: "Theme", name: "Name", latest: "Most recent", longest: "Longest history", places: "Most places", data: "Most data" };
   v.innerHTML = `
-    <h1>Explore data</h1>
-    <p class="lede">${D.cat.length} indicators. ${NF(0).format(D.meta.observations)} numbers. Pick one and see it as published: by place, by year, by group. Every value cites its page.</p>
-    <div class="layout-2" style="margin-top:18px">
-      <aside class="facets">
-        <input type="search" id="eq" placeholder="Filter indicators…" value="${esc(st.q)}" style="width:100%;margin-bottom:12px">
-        <div class="small muted" style="padding:0 9px 4px">Theme</div>
-        <div id="fTheme"></div>
-        <div class="small muted" style="padding:14px 9px 4px">Lowest level</div>
-        <div id="fLvl"></div>
-        <div class="small muted" style="padding:14px 9px 4px">Publisher</div>
-        <div id="fPub"></div>
-      </aside>
-      <section><div class="row" style="justify-content:space-between;margin-bottom:8px"><span class="muted small" id="eCount"></span>
-        <button class="btn" id="eCsv" type="button">Download catalogue (CSV)</button></div>
-        <div class="card" style="padding:0"><div class="list" id="eList"></div></div></section>
-    </div>`;
-  const facet = (el, key, items, label) => {
-    $(el).innerHTML = [["", "All"], ...items.map((x) => [x, label(x)])].map(([k, l]) =>
-      `<a href="#" data-k="${esc(k)}" class="${st[key] === k ? "on" : ""}"><span>${esc(l)}</span><span class="muted small">${k ? count({ ...st, [key]: k }) : ""}</span></a>`).join("");
-    $$("a", $(el)).forEach((a) => (a.onclick = (e) => { e.preventDefault(); st[key] = a.dataset.k; draw(); }));
-  };
-  const match = (c, s) => {
-    if (s.theme && c.theme !== s.theme) return false;
-    if (s.lvl && !c.levels.includes(s.lvl)) return false;
-    if (s.pub && !c.publishers.includes(s.pub)) return false;
-    if (s.q) { const t = (c.name + " " + c.code + " " + c.definition + " " + c.name_bm + " " + c.source).toLowerCase(); return s.q.toLowerCase().split(/\s+/).every((w) => t.includes(w)); }
+    <div class="phead"><div><h1>Explore data</h1><p class="lede">${D.cat.length} indicators, ${NF(0).format(D.meta.observations)} numbers. Pick one and see it as published, by place, year and group, with every value cited.</p></div>
+      <div class="pactions"><button class="btn" id="eCsv" type="button">Download catalogue</button></div></div>
+    <label class="searchbar"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input type="search" id="eq" placeholder="Search indicators: poverty, wages, hospital beds, inflation…" value="${esc(st.q)}" autocomplete="off"><span class="muted small" id="eCount"></span></label>
+    <div class="pills" id="fTheme"></div>
+    <div class="toolbar slim">
+      <div><span class="tl-lab">Level</span><select id="fLvl"><option value="">Any</option>${Object.entries(LV).map(([k, [, l]]) => `<option value="${k}" ${st.lvl === k ? "selected" : ""}>${l}</option>`).join("")}</select></div>
+      <div><span class="tl-lab">Publisher</span><select id="fPub"><option value="">Any</option>${pubs.map((p) => `<option value="${esc(p)}" ${st.pub === p ? "selected" : ""}>${esc(pubName(p))}</option>`).join("")}</select></div>
+      <div><span class="tl-lab">Sort</span><select id="fSort">${Object.entries(SORTS).map(([k, l]) => `<option value="${k}" ${st.sort === k ? "selected" : ""}>${l}</option>`).join("")}</select></div>
+      <button class="btn ghost" id="fClear" type="button">Clear filters</button>
+    </div>
+    <div class="ilist"><div class="irow ihead"><span>Indicator</span><span class="hide-sm">Levels</span><span class="hide-sm">Coverage, ${y0}–${y1}</span><span class="n hide-sm">Numbers</span></div><div id="eList"></div></div>`;
+  const match = (c, s2) => {
+    if (s2.theme && c.theme !== s2.theme) return false;
+    if (s2.lvl && !c.levels.includes(s2.lvl)) return false;
+    if (s2.pub && !c.publishers.includes(s2.pub)) return false;
+    if (s2.q) { const t = (c.name + " " + c.code + " " + c.definition + " " + c.name_bm + " " + c.source + " " + themeName(c.theme)).toLowerCase(); return s2.q.toLowerCase().split(/\s+/).every((w) => t.includes(w)); }
     return true;
   };
-  const count = (s) => D.cat.filter((c) => match(c, s)).length;
+  const yr = (p) => +String(p).slice(0, 4);
+  const row = (c) => {
+    const a = yr(c.first), b = yr(c.last), L = ((a - y0) / (y1 - y0 + 1)) * 100, W = Math.max(1.2, ((b - a + 1) / (y1 - y0 + 1)) * 100);
+    return `<a class="irow" href="#/explore/${encodeURIComponent(c.code)}${st.lvl ? "?lvl=" + st.lvl : ""}">
+      <span class="iname"><b>${esc(c.name)}</b><small>${esc(c.definition || "")}</small><span class="imeta"><i class="tdot t${esc(c.theme)}"></i>${esc(themeName(c.theme))} · ${esc(c.unit || "–")}${c.n_breakdowns > 1 ? ` · ${c.n_breakdowns} breakdowns` : ""} · ${c.publishers.map((p) => esc(pubName(p))).join(", ")}</span></span>
+      <span class="ilv hide-sm">${Object.entries(LV).map(([k, [ab, l]]) => `<i class="${c.levels.includes(k) ? "on" : ""}" title="${l}">${ab}</i>`).join("")}</span>
+      <span class="itl hide-sm" title="${esc(c.first)} to ${esc(c.last)}"><span class="track"><span class="bar" style="left:${L.toFixed(1)}%;width:${W.toFixed(1)}%"></span></span><small class="mono">${esc(c.first)}${c.last !== c.first ? "–" + esc(c.last) : ""}</small></span>
+      <span class="n mono small hide-sm">${NF(0).format(c.n)}</span></a>`;
+  };
   function draw() {
-    const P2 = new URLSearchParams(); Object.entries(st).forEach(([k, x]) => x && P2.set(k, x)); setParams("/explore", P2);
-    facet("#fTheme", "theme", themes, themeName);
-    facet("#fLvl", "lvl", ["country", "state", "district", "parlimen", "dun"], (l) => LEVELS[l]);
-    facet("#fPub", "pub", pubs, (p) => p.toUpperCase());
-    const rows = D.cat.filter((c) => match(c, st));
-    $("#eCount").textContent = `${rows.length} indicator${rows.length === 1 ? "" : "s"}`;
-    $("#eList").innerHTML = rows.map((c) => `
-      <a class="item" href="#/explore/${encodeURIComponent(c.code)}${st.lvl ? "?lvl=" + st.lvl : ""}">
-        <b>${esc(c.name)}</b><span class="muted small mono">${esc(c.first)}${c.last !== c.first ? "–" + esc(c.last) : ""}</span>
-        <div class="meta">${esc(c.definition || "")}</div>
-        <div class="meta row" style="gap:6px">${chip(esc(themeName(c.theme)))}${chip(esc(c.unit || "–"))}${c.levels.filter((l) => l !== "unallocated").map((l) => chip(LEVELS[l] || l)).join("")}${c.n_breakdowns > 1 ? chip(c.n_breakdowns + " breakdowns") : ""}${c.publishers.map((p) => chip(p.toUpperCase(), "accent")).join("")}</div>
-      </a>`).join("") || `<div class="skel">Nothing matches. Try fewer words, or clear a filter.</div>`;
+    const P2 = new URLSearchParams(); Object.entries(st).forEach(([k, x]) => x && !(k === "sort" && x === "theme") && P2.set(k, x)); setParams("/explore", P2);
+    $("#fTheme").innerHTML = [["", "All"], ...themes.map((t) => [t, themeName(t)])].map(([k, l]) => {
+      const n = D.cat.filter((c) => match(c, { ...st, theme: k })).length;
+      return `<button type="button" data-k="${esc(k)}" class="pill ${st.theme === k ? "on" : ""}" ${n ? "" : "disabled"}>${k ? `<i class="tdot t${esc(k)}"></i>` : ""}${esc(l)} <span>${n}</span></button>`; }).join("");
+    $$("#fTheme button").forEach((b) => (b.onclick = () => { st.theme = b.dataset.k; draw(); }));
+    let rs = D.cat.filter((c) => match(c, st));
+    const by = { name: (a, b) => a.name.localeCompare(b.name), latest: (a, b) => yr(b.last) - yr(a.last) || a.name.localeCompare(b.name), longest: (a, b) => (yr(b.last) - yr(b.first)) - (yr(a.last) - yr(a.first)),
+      places: (a, b) => b.n_geo - a.n_geo, data: (a, b) => b.n - a.n, theme: (a, b) => a.theme.localeCompare(b.theme, "en", { numeric: true }) || a.name.localeCompare(b.name) };
+    rs.sort(by[st.sort] || by.theme);
+    $("#eCount").textContent = `${rs.length} of ${D.cat.length}`;
+    let html = "";
+    if (st.sort === "theme" && !st.theme) { let cur = null; for (const c of rs) { if (c.theme !== cur) { cur = c.theme; const n = rs.filter((x) => x.theme === cur).length; html += `<div class="igroup"><i class="tdot t${esc(cur)}"></i>${esc(themeName(cur))} <span>${n}</span></div>`; } html += row(c); } }
+    else html = rs.map(row).join("");
+    $("#eList").innerHTML = html || `<div class="skel">Nothing matches. Try fewer words, or <a href="#/explore">clear the filters</a>.</div>`;
   }
   $("#eq").oninput = (e) => { st.q = e.target.value; draw(); };
+  $("#fLvl").onchange = (e) => { st.lvl = e.target.value; draw(); };
+  $("#fPub").onchange = (e) => { st.pub = e.target.value; draw(); };
+  $("#fSort").onchange = (e) => { st.sort = e.target.value; draw(); };
+  $("#fClear").onclick = () => { Object.assign(st, { q: "", theme: "", lvl: "", pub: "", sort: "theme" }); $("#eq").value = ""; $("#fLvl").value = ""; $("#fPub").value = ""; $("#fSort").value = "theme"; draw(); };
   $("#eCsv").onclick = () => download("catalogue.csv", toCSV(["code", "name", "theme", "unit", "statistic", "first", "last", "levels", "publishers", "observations", "definition"],
     D.cat.map((c) => [c.code, c.name, themeName(c.theme), c.unit, c.statistic, c.first, c.last, c.levels.join(";"), c.publishers.join(";"), c.n, c.definition])));
   draw();
+  setTimeout(() => $("#eq")?.focus(), 30);
 }
 
 /* =====================================================================================================
@@ -439,7 +466,7 @@ async function viewIndicator(code, v = $("#view")) {
   const rows = d.rows.map((r) => Object.fromEntries(COLS.map((k, i) => [k, r[i]])));
   const [, P] = hashParams();
   const levels = c.levels.filter((l) => l !== "unallocated");
-  const brks = [...new Set(rows.map((r) => r.breakdown))].sort((a, b) => (a !== "_total") - (b !== "_total") || a.localeCompare(b, "en", { numeric: true }));
+  const brks = [...new Set(rows.map((r) => r.breakdown))].sort((a, b) => (a !== "_total") - (b !== "_total") || (a.startsWith("body=") - b.startsWith("body=")) || brkLabel(a).localeCompare(brkLabel(b), "en", { numeric: true }));
   const bases = [...new Set(rows.map((r) => r.basis))];
   const st = {
     b: brks.includes(P.get("b")) ? P.get("b") : brks[0],
@@ -452,25 +479,33 @@ async function viewIndicator(code, v = $("#view")) {
   const reg = D.registry.find((r) => r.series_id === (c.source || "").split(":").pop());
   const breaks = D.breaks.filter((b) => code.startsWith(b.indicator_prefix));
   v.innerHTML = `
-    <div class="row" style="gap:6px">${chip(esc(themeName(c.theme)))}${c.publishers.map((p) => chip(p.toUpperCase(), "accent")).join("")}${chip(esc(c.unit))}${c.statistic ? chip(esc(c.statistic)) : ""}${c.price_basis ? chip(esc(c.price_basis)) : ""}</div>
-    <h1>${esc(c.name)}</h1>
-    <p class="lede">${esc(c.definition)}</p>
-    <div class="row" style="margin:10px 0 18px">
-      <button class="btn" id="dl" type="button">Download CSV</button>
-      <button class="btn" id="cite" type="button">Copy citation</button>
-      <span class="muted small mono">${esc(code)} · ${NF(0).format(rows.length)} observations · ${esc(c.first)}–${esc(c.last)}</span>
-    </div>
-    <div class="answer" id="headline" style="margin-bottom:12px"></div>
-    <div class="card" style="padding:12px 14px;margin-bottom:12px"><div class="row" id="ctl" style="gap:14px"></div></div>
-    <div class="card"><div id="chartHead" class="row" style="justify-content:space-between;margin-bottom:4px"></div><div class="legend" id="legend"></div><div class="chart" id="chart"></div><div id="chartNotes" class="small muted" style="margin-top:8px"></div></div>
-    <div id="tilesBox"></div>
-    <h2>The values and where each comes from</h2>
-    <div class="row" style="justify-content:space-between;margin-bottom:8px"><span class="small muted" id="tCount"></span><input type="search" id="tq" placeholder="Filter these rows…" style="width:240px"></div>
-    <div class="tablewrap" id="tbl"></div>
-    <div class="grid g2" style="margin-top:18px">
-      <div class="card"><h3>About this indicator</h3><table class="small">${kv("Code", `<span class="mono">${esc(code)}</span>`)}${kv("Unit", esc(c.unit))}${kv("Statistic", esc(c.statistic))}${kv("Universe", esc(c.universe))}${kv("Price basis", esc(c.price_basis))}${kv("Adds up across places", c.additive_geo === "true" ? "Yes" : c.additive_geo === "false" ? "No: do not sum places" : "")}${kv("Source dataset", `<span class="mono">${esc(c.source)}</span>`)}${kv("Malay name", esc(c.name_bm))}${kv("Coverage", esc(c.coverage_note))}${reg ? kv("Licence", esc(reg.licence) + (reg.redistribution ? ` · ${esc(reg.redistribution)}` : "")) : ""}</table></div>
-      <div class="card"><h3>Caveats that apply</h3><div id="cavs" class="small"></div>${breaks.map((b) => `<div class="note" style="margin-top:8px"><b>Series break from ${esc(b.first_period_new_basis)}.</b> ${esc(b.what_changed)}</div>`).join("")}</div>
+    <div class="phead"><div style="min-width:0">
+        <div class="row" style="gap:6px">${chip(esc(themeName(c.theme)))}${c.publishers.map((p) => chip(esc(pubName(p)), "accent")).join("")}</div>
+        <h1>${esc(c.name)}</h1><p class="lede clamp3" id="defn" title="Click to expand">${esc(c.definition)}</p></div>
+      <div class="pactions"><button class="btn" id="dl" type="button">Download CSV</button><button class="btn" id="cite" type="button">Cite</button><button class="btn" id="share" type="button">Share</button></div></div>
+    <div class="split">
+      <div class="main-col">
+        <div class="answer" id="headline"></div>
+        <div class="toolbar" id="ctl"></div>
+        <div class="card"><div id="chartHead" class="row" style="justify-content:space-between;margin-bottom:4px"></div><div class="legend" id="legend"></div><div class="chart" id="chart"></div><div id="chartNotes" class="small muted" style="margin-top:8px"></div></div>
+        <div id="tilesBox"></div>
+        <div class="sechead"><h2>Values and sources</h2><span class="small muted" id="tCount"></span><input type="search" id="tq" placeholder="Filter rows…"></div>
+        <div class="tablewrap" id="tbl"></div>
+      </div>
+      <aside class="insp">
+        <div class="insp-sec"><h4>At a glance</h4><div class="kvs">
+          <div><span>Coverage</span><b>${esc(c.first)}–${esc(c.last)}</b></div><div><span>Numbers</span><b>${NF(0).format(rows.length)}</b></div>
+          <div><span>Places</span><b>${NF(0).format(c.n_geo)}</b></div><div><span>Breakdowns</span><b>${NF(0).format(c.n_breakdowns)}</b></div>
+          <div><span>Unit</span><b>${esc(c.unit)}</b></div><div><span>Statistic</span><b>${esc(c.statistic || "–")}</b></div></div></div>
+        <div class="insp-sec"><h4>Caveats</h4><div id="cavs" class="small"></div>${breaks.map((b) => `<div class="note" style="margin-top:8px"><b>Method changed in ${esc(b.first_period_new_basis)}.</b> ${esc(b.what_changed)}</div>`).join("")}</div>
+        <div class="insp-sec"><h4>About this indicator</h4><table class="small">${kv("Universe", esc(c.universe))}${kv("Price basis", esc(c.price_basis))}${kv("Adds up across places", c.additive_geo === "true" ? "Yes" : c.additive_geo === "false" ? "No: do not sum places" : "")}${kv("Malay name", esc(c.name_bm))}${kv("Coverage", esc(c.coverage_note))}${reg ? kv("Licence", esc(reg.licence) + (reg.redistribution ? ` · ${esc(reg.redistribution)}` : "")) : ""}${kv("Source", `<span class="mono">${esc(c.source)}</span>`)}${kv("Code", `<span class="mono">${esc(code)}</span>`)}</table></div>
+        <div class="insp-sec"><h4>Next steps</h4><div class="links">
+          ${c.levels.includes("state") ? `<a href="#/compare?x=${encodeURIComponent(code)}">Compare against another measure →</a>` : ""}
+          <a href="#/explore?theme=${esc(c.theme)}">More in ${esc(themeName(c.theme))} →</a><a href="#/method">How the charts are drawn →</a></div></div>
+      </aside>
     </div>`;
+  $("#defn").onclick = (e) => e.currentTarget.classList.toggle("open");
+  $("#share").onclick = () => copy(location.href, "Link to this exact view copied");
 
   const P2 = () => { const p = new URLSearchParams(); if (st.b !== brks[0]) p.set("b", st.b); p.set("lvl", st.lvl); if (st.geo.length) p.set("geo", st.geo.join(",")); if (st.view !== "chart") p.set("view", st.view); if (st.show !== "value") p.set("show", st.show); if (st.basis) p.set("basis", st.basis); if (st.ctx) p.set("ctx", st.ctx); return p; };
   const atLevel = (r) => (D.geoIx[r.geo]?.level || "") === st.lvl;
@@ -576,12 +611,12 @@ function runs(pts, breaks) {
 
 function tipText(c, d, p) {
   const ci = d.cites[p.cite] || {}, ed = d.editions[p.edition] || {};
-  const lines = [`${geoLabel(p.geo)} · ${p.period}`, p.orig != null ? `${exact(p.orig)} ${c.unit} (shown as ${NF(2).format(p.value)})` : `${exact(p.value)} ${c.unit}`, `${BASIS[p.basis] || p.basis} · ${ed.id || ""}`,
+  const lines = [`${geoLabel(p.geo)} · ${p.period}`, p.orig != null ? `${exact(p.orig)} ${c.unit} (shown as ${NF(2).format(p.value)})` : `${exact(p.value)} ${c.unit}`, `${BASIS[p.basis] || p.basis} · ${edLabel(ed.id)}`,
     `${ci.table || ""}${ci.pdf_page ? " · pdf p" + ci.pdf_page : ""}${ci.printed_page ? " (printed " + ci.printed_page + ")" : ""}`];
   if (p.ci_low != null) lines.push(`95% interval ${exact(p.ci_low)} – ${exact(p.ci_high)}`);
   if (p.reliability && p.reliability !== "unknown") lines.push(`Reliability: ${p.reliability}`);
-  if (p.others?.length) lines.push(`Also printed: ${p.others.map((o) => exact(o.value) + " (" + (d.editions[o.edition]?.id || "") + ")").join("; ")}`);
-  if (p.main) lines.push(`Main line uses ${exact(p.main.value)} (${d.editions[p.main.edition]?.id || ""})`);
+  if (p.others?.length) lines.push(`Also printed: ${p.others.map((o) => exact(o.value) + " (" + edLabel(d.editions[o.edition]?.id) + ")").join("; ")}`);
+  if (p.main) lines.push(`Main line uses ${exact(p.main.value)} (${edLabel(d.editions[p.main.edition]?.id)})`);
   return lines.filter(Boolean).join("\n");
 }
 
@@ -648,7 +683,7 @@ function chart(c, d, sel, st, breaks, nat = []) {
   el.append(Plot.plot({
     width: W, height: Math.min(440, Math.max(300, W * 0.42)), marginLeft: 64, marginRight: 18, marginTop: 22,
     style: { background: "transparent", fontSize: "12px", color: css("--text-2") },
-    x: { type: "utc", label: null, grid: false }, y: { grid: true, zero, label: unitShort(yUnit), tickFormat: (x) => (st.show === "value" ? compact(x, c.unit) : NF(1).format(x)) }, marks,
+    x: { type: "utc", label: null, grid: false, ...(monthly ? {} : { tickFormat: (d) => String(d.getUTCFullYear()), ticks: d3.utcYear.every(Math.max(1, Math.ceil((d3.max(allPts, (p) => pdate(p.period)) - d3.min(allPts, (p) => pdate(p.period))) / (365.25 * 864e5) / (W < 640 ? 5 : 10)))) }) }, y: { grid: true, zero, label: unitShort(yUnit), tickFormat: (x) => (st.show === "value" ? compact(x, c.unit) : NF(1).format(x)) }, marks,
   }));
   const notes = [];
   const altN = series.reduce((a, s) => a + s.alt.length, 0);
@@ -711,7 +746,7 @@ function table(c, d, sel) {
   const lim = 400;
   $("#tCount").textContent = `${NF(0).format(rs.length)} rows${rs.length > lim ? `, first ${lim} shown (download for all)` : ""}`;
   $("#tbl").innerHTML = `<table><thead><tr><th>Place</th><th>Period</th><th class="n">Value (as printed)</th><th>Basis</th><th>Edition</th><th>Table · page</th><th>Source row (L1)</th><th>Caveats</th></tr></thead><tbody>
-    ${rs.slice(0, lim).map((r) => { const ci = d.cites[r.cite] || {}; return `<tr><td>${esc(geoLabel(r.geo))}</td><td class="mono">${esc(r.period)}</td><td class="n">${exact(r.value)}${r.ci_low != null ? `<div class="small muted">${exact(r.ci_low)}–${exact(r.ci_high)}</div>` : ""}${r.reliability === "low" ? `<div>${chip("low reliability", "warn")}</div>` : ""}</td><td class="small">${esc(BASIS[r.basis] || r.basis)}</td><td class="small mono">${esc(d.editions[r.edition]?.id || "")}</td><td class="small">${esc(ci.table || "")}${ci.pdf_page ? ` · p${esc(ci.pdf_page)}` : ""}${ci.printed_page ? ` <span class="muted">(${esc(ci.printed_page)})</span>` : ""}<div class="mono muted" title="file sha256">${esc((ci.sha256 || "").slice(0, 12))}</div></td><td class="small mono">${l1link(r.l1_ref)}</td><td>${(r.caveats || "").split(";").filter(Boolean).map((k) => `<span class="chip warn" title="${esc(D.caveats[k] || "")}">${esc(k)}</span>`).join(" ")}</td></tr>`; }).join("")}
+    ${rs.slice(0, lim).map((r) => { const ci = d.cites[r.cite] || {}; return `<tr><td>${esc(geoLabel(r.geo))}</td><td class="mono">${esc(r.period)}</td><td class="n">${exact(r.value)}${r.ci_low != null ? `<div class="small muted">${exact(r.ci_low)}–${exact(r.ci_high)}</div>` : ""}${r.reliability === "low" ? `<div>${chip("low reliability", "warn")}</div>` : ""}</td><td class="small">${esc(BASIS[r.basis] || r.basis)}</td><td class="small" title="${esc(d.editions[r.edition]?.id || "")}">${esc(edLabel(d.editions[r.edition]?.id))}</td><td class="small">${esc(ci.table || "")}${ci.pdf_page ? ` · p${esc(ci.pdf_page)}` : ""}${ci.printed_page ? ` <span class="muted">(${esc(ci.printed_page)})</span>` : ""}<div class="mono muted" title="file sha256">${esc((ci.sha256 || "").slice(0, 12))}</div></td><td class="small mono">${l1link(r.l1_ref)}</td><td>${(r.caveats || "").split(";").filter(Boolean).map((k) => `<span class="chip warn" title="${esc(D.caveats[k] || "")}">${esc(k)}</span>`).join(" ")}</td></tr>`; }).join("")}
   </tbody></table>`;
 }
 function l1link(ref) {
@@ -821,24 +856,30 @@ async function viewBubbles(v) {
   const filters = U.filters || (U.filterOpts ? await U.filterOpts() : []);
   for (const [k, , opts] of filters) if (opts.some(([o]) => o === P.get(k))) st[k] = P.get(k);
   const sel = (id, list, cur) => `<select id="${id}" style="width:100%">${list.map(([k, l]) => `<option value="${esc(k)}" ${k === cur ? "selected" : ""}>${esc(l)}</option>`).join("")}</select>`;
-  v.innerHTML = `<div class="row">${chip("Compare", "accent")}</div>
-    <h1>Compare anything, year by year.</h1>
-    <p class="lede">Pick what to compare: states, ministries or development projects. Choose two measures. Each circle is one ${esc(U.one)}; its size is its ${esc(U.sizeLabel)}. Press play to watch the years go by, and trace one to see the path it took.</p>
-    <div class="seg" id="bu" style="margin:14px 0 4px">${Object.entries(UNITS).map(([k, u]) => `<button type="button" data-v="${k}" class="${k === kind ? "on" : ""}">${u.label}</button>`).join("")}</div>
-    <div class="card" style="padding:12px 14px;margin:10px 0 12px"><div class="row" style="gap:14px" id="bc">
-      <div style="flex:1;min-width:200px"><div class="small muted">Across (x)</div>${sel("bx", ms.map((x) => [x.key, x.name]), st.x)}</div>
-      <div style="flex:1;min-width:200px"><div class="small muted">Up (y)</div>${sel("by", ms.map((x) => [x.key, x.name]), st.y)}</div>
-      <div><div class="small muted">Circle size</div>${sel("bs", U.sizes, st.s)}</div>
-      ${filters.map(([k, l, opts]) => `<div style="min-width:160px"><div class="small muted">${esc(l)}</div>${sel("bf_" + k, opts, st[k] || "")}</div>`).join("")}
-      <div><div class="small muted">Scale</div><label class="small" style="display:inline-flex;gap:5px;align-items:center;height:30px"><input type="checkbox" id="blog" ${st.logx === "1" ? "checked" : ""}> log across</label> <label class="small" style="display:inline-flex;gap:5px;align-items:center;height:30px"><input type="checkbox" id="blogy" ${st.logy === "1" ? "checked" : ""}> log up</label></div>
-      <div style="min-width:200px"><div class="small muted">Trace</div><select id="bt" style="width:100%"><option value="">+ add one</option></select></div>
-      <div id="btchips" class="row" style="gap:5px;align-self:flex-end"></div>
-    </div></div>
-    <div class="card"><div class="row" style="justify-content:space-between"><div class="legend" id="blegend" style="margin:0"></div><button class="btn" id="bswap" type="button" title="Swap the axes">⇄ Swap</button></div>
-      <div class="chart" id="bchart" style="margin-top:6px"></div>
-      <div class="player"><button class="btn primary" id="bplay" type="button">▶ Play</button><input type="range" id="byr" min="0" max="0" step="1"><b id="byl" class="mono"></b></div>
-      <p class="small muted" id="bnote" style="margin:10px 0 0"></p></div>
-    <div id="bstory" class="answer" style="margin-top:14px"></div>`;
+  v.innerHTML = `
+    <div class="phead"><div><h1>Compare</h1><p class="lede">Two measures, one circle per ${esc(U.one)}, sized by ${esc(U.sizeLabel)}. Press play to watch the years go by; trace one to follow its path.</p></div>
+      <div class="pactions"><button class="btn" id="cshare" type="button">Share</button></div></div>
+    <div class="tabs" id="bu">${Object.entries(UNITS).map(([k, u]) => `<button type="button" data-v="${k}" class="${k === kind ? "on" : ""}">${u.label}</button>`).join("")}</div>
+    <div class="toolbar" id="bc">
+      <div style="flex:1;min-width:190px"><span class="tl-lab">Across (x)</span>${sel("bx", ms.map((x) => [x.key, x.name]), st.x)}</div>
+      <div style="flex:1;min-width:190px"><span class="tl-lab">Up (y)</span>${sel("by", ms.map((x) => [x.key, x.name]), st.y)}</div>
+      <div><span class="tl-lab">Size</span>${sel("bs", U.sizes, st.s)}</div>
+      ${filters.map(([k, l, opts]) => `<div style="min-width:160px"><span class="tl-lab">${esc(l)}</span>${sel("bf_" + k, opts, st[k] || "")}</div>`).join("")}
+      <div><span class="tl-lab">Scale</span><span class="row" style="gap:10px;height:30px"><label class="small"><input type="checkbox" id="blog" ${st.logx === "1" ? "checked" : ""}> log x</label><label class="small"><input type="checkbox" id="blogy" ${st.logy === "1" ? "checked" : ""}> log y</label></span></div>
+      <div style="min-width:180px"><span class="tl-lab">Trace</span><select id="bt" style="width:100%"><option value="">+ add one</option></select></div>
+      <button class="btn ghost" id="bswap" type="button" title="Swap the axes" style="align-self:flex-end">⇄ Swap</button>
+    </div>
+    <div class="split">
+      <div class="main-col"><div class="card"><div class="row" style="justify-content:space-between"><div class="legend" id="blegend" style="margin:0"></div><div id="btchips" class="row" style="gap:5px"></div></div>
+        <div class="chart" id="bchart" style="margin-top:6px"></div>
+        <div class="player"><button class="btn primary" id="bplay" type="button">▶ Play</button><input type="range" id="byr" min="0" max="0" step="1"><b id="byl" class="mono"></b></div></div></div>
+      <aside class="insp">
+        <div class="insp-sec"><h4>What the chart shows</h4><div id="bstory" class="small"></div></div>
+        <div class="insp-sec"><h4>Read it carefully</h4><p class="small" id="bnote" style="margin:0;color:var(--text-2)"></p></div>
+        <div class="insp-sec"><h4>How to read it</h4><ul class="small tight"><li>Each circle is one ${esc(U.one)} in the year shown.</li><li>Up and to the right means more of both measures.</li><li>The axes never change while it plays, so movement is real.</li><li>Hover a circle for its exact figures and source.</li></ul></div>
+      </aside>
+    </div>`;
+  $("#cshare").onclick = () => copy(location.href, "Link to this exact view copied");
   const go = () => { const p = new URLSearchParams({ u: st.u, x: st.x, y: st.y, s: st.s }); for (const k of ["logx", "logy"]) if (st[k] === "1") p.set(k, "1"); for (const [k] of filters) if (st[k]) p.set(k, st[k]); if (st.trace.length) p.set("trace", st.trace.join(",")); if (st.year) p.set("year", st.year); setParams("/compare", p); };
   const mx = (k) => ms.find((x) => x.key === k) || { name: k, unit: "" };
   async function fillTrace() { const list = await U.traceList(st); $("#bt").innerHTML = `<option value="">+ add one</option>` + [...list].map(([k, l]) => `<option value="${esc(k)}">${esc(l)}</option>`).join(""); }
@@ -901,7 +942,7 @@ async function viewBubbles(v) {
       const xs = [...now].sort((a, b) => b.x - a.x), ys = [...now].sort((a, b) => b.yv - a.yv);
       const r = n > 2 ? pearson(now.map((p) => p.x), now.map((p) => p.yv)) : null;
       const byG = d3.rollup(now, (a) => a.length, (p) => p.group);
-      $("#bstory").innerHTML = `<div class="small muted" style="margin-bottom:6px">What the chart shows in ${yr}</div><div class="finding">${n} ${esc(U.noun)} have both figures.${natNow ? ` ${esc(data.natLabel)} as a whole: <b>${fmt(natNow.x, cx)}</b> and <b>${fmt(natNow.yv, cy)}</b>.` : ""} ${esc(cx.name)} runs from <b>${fmt(xs[n - 1].x, cx)}</b> to <b>${fmt(xs[0].x, cx)}</b>; ${esc(lc(cy.name))} from <b>${fmt(ys[n - 1].yv, cy)}</b> to <b>${fmt(ys[0].yv, cy)}</b>.${kind !== "state" ? ` ${U.groups.map((g) => `${byG.get(g) || 0} ${g.toLowerCase()}`).join(", ")}.` : ""}${r != null ? ` The two ${Math.abs(r) < 0.3 ? "barely move together" : r > 0 ? "tend to rise together" : "tend to move in opposite directions"} (correlation ${NF(2).format(r)}). A pattern, not a cause.` : ""}</div>`;
+      $("#bstory").innerHTML = `<div class="muted" style="margin-bottom:4px">In ${yr}</div><div style="color:var(--text);line-height:1.55">${n} ${esc(U.noun)} have both figures.${natNow ? ` ${esc(data.natLabel)} as a whole: <b>${fmt(natNow.x, cx)}</b> and <b>${fmt(natNow.yv, cy)}</b>.` : ""} ${esc(cx.name)} runs from <b>${fmt(xs[n - 1].x, cx)}</b> to <b>${fmt(xs[0].x, cx)}</b>; ${esc(lc(cy.name))} from <b>${fmt(ys[n - 1].yv, cy)}</b> to <b>${fmt(ys[0].yv, cy)}</b>.${kind !== "state" ? ` ${U.groups.map((g) => `${byG.get(g) || 0} ${g.toLowerCase()}`).join(", ")}.` : ""}${r != null ? ` The two ${Math.abs(r) < 0.3 ? "barely move together" : r > 0 ? "tend to rise together" : "tend to move in opposite directions"} (correlation ${NF(2).format(r)}). A pattern, not a cause.` : ""}</div>`;
       const surveys = [cx, cy].filter((c) => c.survey);
       $("#bnote").innerHTML = [off.length ? `<b>${off.length}</b> extreme value${off.length > 1 ? "s are" : " is"} off the chart in ${yr} (${off.slice(0, 3).map((p) => esc(p.name.slice(0, 50))).join("; ")}${off.length > 3 ? "; …" : ""}); the axes are fitted to the bulk of the data, and the full rows are in the policy-gap tables.` : "", `Each year uses only figures published for that year; anything without a figure is left out, not guessed. Axes stay fixed across years, so movement is real.`,
         surveys.length ? `${surveys.map((c) => esc(c.name)).join(" and ")} ${surveys.length > 1 ? "are survey estimates" : "is a survey estimate"} without a published error margin: small gaps between states may not be real.` : "",
@@ -1211,8 +1252,8 @@ G.gap_budget_vs_actual = {
   chart(rs) {
     const h = rs.filter((r) => r.execution_rate != null).sort((a, b) => a.execution_rate - b.execution_rate);
     if (!h.length) return null;
-    return Plot.plot({ height: Math.max(240, h.length * 17 + 40), marginLeft: 260, x: { label: "Share of allocation spent (audited)", tickFormat: (x) => pct(x, 0), grid: true },
-      y: { label: null, domain: h.map((r) => r.body) },
+    return Plot.plot({ height: Math.max(240, h.length * 17 + 40), marginLeft: 230, x: { label: "Share of allocation spent (audited)", tickFormat: (x) => pct(x, 0), grid: true },
+      y: { label: null, domain: h.map((r) => r.body), tickFormat: (d) => (d.length > 36 ? d.slice(0, 35) + "…" : d) },
       marks: [Plot.ruleX([1], { stroke: css("--text-3"), strokeDasharray: "3,3" }), Plot.barX(h, { x: "execution_rate", y: "body", fill: (r) => (r.status === "underspent" ? css("--s2") : r.status === "overspent" ? css("--s3") : css("--s1")), title: (r) => `${r.body}\nallocation ${exact(r.estimate_revised_pkkp)}\naudited actual ${exact(r.actual_audited)}\n${pct(r.execution_rate)} spent · ${statusText(r.status)}` }), Plot.tip(h, Plot.pointerY({ x: "execution_rate", y: "body", title: (r) => `${r.body}\nallocation RM ${exact(r.estimate_revised_pkkp)}\naudited actual RM ${exact(r.actual_audited)}\n${pct(r.execution_rate)} spent · ${statusText(r.status)}` }))] });
   },
   legend: [["--s1", "within the allocation"], ["--s2", "underspent"], ["--s3", "overspent"]],
@@ -1317,7 +1358,7 @@ G.gap_target_vs_outcome = {
   },
   chart(rs) {
     const h = rs.filter((r) => typeof r.ratio === "number").map((r) => ({ ...r, lab: `${D.catIx[r.indicator_code]?.name || r.indicator_code}${r.geo_code && r.geo_code !== "MY" ? ", " + geoName(r.geo_code) : ""}${r.breakdown_key !== "_total" ? " (" + brkLabel(r.breakdown_key) + ")" : ""} · ${r.target_line.replace("RMKe-12 Lampiran ", "")}` }));
-    return Plot.plot({ height: 40 + h.length * 17, marginLeft: 330, x: { label: "Outcome ÷ target", grid: true, type: "log", tickFormat: (x) => NF(2).format(x) }, y: { label: null, domain: h.map((r) => r.lab) },
+    return Plot.plot({ height: 40 + h.length * 17, marginLeft: 270, x: { label: "Outcome ÷ target", grid: true, type: "log", tickFormat: (x) => NF(2).format(x) }, y: { label: null, domain: h.map((r) => r.lab), tickFormat: (d) => (d.length > 44 ? d.slice(0, 43) + "…" : d) },
       marks: [Plot.ruleX([1], { stroke: css("--text-3"), strokeDasharray: "3,3" }), Plot.ruleY(h, { x1: 1, x2: "ratio", y: "lab", stroke: css("--line-2") }), Plot.dot(h, { x: "ratio", y: "lab", fill: (r) => (r.ratio >= 1 ? css("--s1") : css("--s2")), r: 4 }),
         Plot.tip(h, Plot.pointerY({ x: "ratio", y: "lab", title: (r) => `${r.lab}\ntarget ${exact(r.target)}\noutcome ${exact(r.outcome)}\n${r.outcome_source}` }))] });
   },
@@ -1389,10 +1430,26 @@ function cellFmt(k, v) {
   if (k === "status" || /_status$/.test(k)) return statusChip(v);
   if (/(rate|share|growth|ratio)$/.test(k) && typeof v === "number" && !/poverty|unemployment|pp$/.test(k) && Math.abs(v) < 20 && k !== "ratio_to_debt") return pct(v, 2);
   if (/_ref$/.test(k)) return `<span class="mono small">${l1link(v)}</span>`;
+  if (k === "indicator_code") return esc(D.catIx[v]?.name || v);
+  if (k === "geo_code") return esc(geoName(v));
+  if (typeof v === "string" && v.length > 90) return `<div class="clamp2" title="${esc(v)}">${esc(v)}</div>`;
   if (typeof v === "number") return NF(2).format(v);
   return esc(v);
 }
-const colLabel = (k) => k.replace(/_rm$/, " (RM)").replace(/_/g, " ").replace(/\bpkkp\b/g, "PKKP").replace(/\bbnm\b/g, "BNM").replace(/\bmof\b/g, "MOF").replace(/^./, (x) => x.toUpperCase());
+const COLNAME = { body: "Ministry or body", estimate_original_pkkp: "Original estimate (RM)", estimate_revised_pkkp: "Allocation (RM)", actual_audited: "Spent, audited (RM)",
+  execution_rate: "Share spent", unspent_rm: "Unspent (RM)", maksud_code: "Vote", projek_code: "Project", name_pkkp: "Project name", tabled_rm: "Tabled (RM)",
+  allocation_pkkp_rm: "Allocation (RM)", actual_pkkp_rm: "Spent, audited (RM)", name_check: "Name check", pkkp_ref: "Source row", revenue_type: "Revenue type",
+  estimate_original: "Original estimate (RM)", estimate_revised: "Revised estimate (RM)", collection_rate_original: "Collected vs original", collection_rate_revised: "Collected vs revised",
+  pkkp_audited: "Audited, PKKP (RM)", bnm_actual: "Bank Negara (RM)", mof_actual: "MOF (RM)", mof_edition: "MOF edition", bnm_minus_pkkp_rm: "BNM − audited (RM)", mof_minus_pkkp_rm: "MOF − audited (RM)",
+  bnm_vs_pkkp_status: "BNM vs audited", mof_vs_pkkp_status: "MOF vs audited", instrument_label: "Obligation", amount_rm: "Amount (RM)", growth: "Growth", debt_growth: "Debt growth",
+  growth_minus_debt_pp: "Growth − debt growth (pp)", ratio_to_debt: "Ratio to debt", indicator_code: "Indicator", geo_code: "Area", breakdown_key: "Breakdown", target_line: "Plan table",
+  target: "Target", outcome: "Outcome", outcome_source: "Outcome source", difference: "Difference", ratio: "Outcome ÷ target", state: "State", population: "Population",
+  poverty_absolute_rate: "Poverty (%)", income_median_rm: "Median income (RM)", gini: "Gini", unemployment_rate: "Unemployment (%)", state_gov_expenditure_rm: "State spending (RM)",
+  state_gov_expenditure_basis: "Basis", state_gov_expenditure_per_capita_rm: "State spending per person (RM)", state_gov_receipts_per_capita_rm: "State receipts per person (RM)",
+  verification_tier: "Checked to", coverage_note: "Coverage", place: "State", comparison: "Comparison", federal_paid_rm: "Federal paid (RM)", federal_recipient: "Paid to",
+  state_recorded_rm: "State recorded (RM)", difference_rm: "Difference (RM)", state_share_of_federal: "State share", year: "Year", federal_total_rm: "Federal spending (RM)",
+  placed_rm: "Placeable (RM)", placed_share: "Share placeable", projects_none_rm: "Projects with no place (RM)", status: "Status", note: "Note" };
+const colLabel = (k) => COLNAME[k] || k.replace(/_rm$/, " (RM)").replace(/_/g, " ").replace(/\bpkkp\b/g, "PKKP").replace(/\bbnm\b/g, "BNM").replace(/\bmof\b/g, "MOF").replace(/^./, (x) => x.toUpperCase());
 
 async function viewGap(name, v = $("#view")) {
   const g = D.gaps.find((x) => x.name === name);
@@ -1410,20 +1467,44 @@ async function viewGap(name, v = $("#view")) {
   for (const [k, dv] of Object.entries(cfg.defaults || {})) if (!opts[k].includes(P.get(k))) f[k] = dv;
   const qs = QUESTIONS.find((q) => q[1] === name);
   const cavs = [...new Set(all.flatMap((r) => String(r.caveats || "").split(";").filter(Boolean)))].sort();
-  v.innerHTML = `<div class="row">${chip("Gap view", "accent")}${chip(`<span class="mono">${esc(name)}</span>`)}</div>
-    <h1>${esc(qs ? qs[0] : g.question)}</h1><p class="lede">${esc(g.title)}: ${esc(g.question)}</p>
-    <div class="card" style="padding:12px 14px;margin:16px 0 12px"><div class="row" id="gf" style="gap:14px"></div></div>
-    <div class="answer"><div class="small muted" style="margin-bottom:6px">The answer, from the rows below</div><div class="finding" id="read"></div>
-      <div class="row" style="margin-top:12px"><button class="btn" id="brief" type="button">Copy as brief</button><button class="btn" id="gcsv" type="button">Download rows (CSV)</button><a class="btn" href="${REPO}/blob/main/core/${name}.csv" target="_blank" rel="noopener">Source table on GitHub</a></div></div>
-    <div class="card" style="margin-top:14px"><div class="legend" id="glegend"></div><div class="chart" id="gchart"></div></div>
-    ${cfg.drill ? `<h2>${esc(cfg.drill.title)}</h2><div class="card"><div class="row" style="justify-content:space-between"><select id="gdsel" style="min-width:300px"></select><span class="small muted">${esc(cfg.drill.hint)}</span></div><div class="legend" id="gdleg"></div><div class="chart" id="gdchart"></div><div class="finding small" id="gdread" style="margin-top:8px"></div></div>` : ""}
-    <h2>The rows</h2><div class="row" style="justify-content:space-between;margin-bottom:8px"><span class="small muted" id="gcount"></span><input type="search" id="gq2" placeholder="Filter these rows…" style="width:260px"></div><div class="tablewrap" id="gtbl"></div>
-    ${cavs.length ? `<h2>Caveats</h2><div class="grid g2">${cavs.map((k) => `<div class="note"><b>${esc(k)}</b> ${esc(D.caveats[k] || "")}</div>`).join("")}</div>` : ""}`;
+  const METHOD = {
+    gap_budget_vs_actual: "One row per body, year and kind of money (operating or development). The allocation is the revised estimate printed in the audited accounts (PKKP); spending is the audited actual from the same volume. Share spent = spent ÷ allocation. Budget-book figures sit in their own columns and are never mixed with the audited ones.",
+    gap_project_budget_vs_actual: "One row per development project and year, joined on its vote and project codes. Tabled amounts come from the Development Estimates book; allocation and spending come from the audited accounts. The contingency reserve (P.70) is left out of every total, because it is drawn by transfers to other votes.",
+    gap_revenue_estimate_vs_collected: "Federal revenue by type and year: the original and revised estimates against the audited collection. Collection rate = collected ÷ estimate.",
+    gap_reported_vs_audited: "The same headline figure (revenue, spending, balance) as printed by the audited accounts, by Bank Negara and by MOF's Fiscal Outlook. Differences are shown to the ringgit; small rounding differences are marked minor.",
+    gap_obligations_growth: "Each obligation outside federal debt (commitments, PFI, guarantees) by year, its growth, and its growth set against the growth of debt. They can overlap, so they are never added together.",
+    gap_target_vs_outcome: "Each numeric target in the Twelfth Malaysia Plan's appendix tables, beside the outcome later published by DOSM or MOF for the same year and area. Above or below is a fact, not a verdict.",
+    gap_need_vs_money: "By state and survey year: measures of need (poverty, income, unemployment, inequality) beside the state government's own spending and receipts per person. Federal spending by state is withheld below the 60% placement guard.",
+    gap_federal_vs_state: "By transfer, state and year: what the federal accounts say was paid, beside what the state's own audited statement records receiving. Each row says how they compare, or why they cannot be compared yet.",
+    gap_federal_placement: "For each year: how much federal spending can be given a state from the federal accounts (projects named for one place, grants to a named state government, and from FY2019 MOF's split by state). The rest has no place.",
+  };
+  v.innerHTML = `
+    <div class="phead"><div style="min-width:0"><div class="row" style="gap:6px">${chip("Policy gap", "accent")}${chip(esc(g.title))}</div>
+        <h1>${esc(qs ? qs[0] : g.question)}</h1></div>
+      <div class="pactions"><button class="btn primary" id="brief" type="button">Copy as brief</button><button class="btn" id="gcsv" type="button">Download CSV</button><button class="btn" id="gshare" type="button">Share</button></div></div>
+    <div class="toolbar" id="gf"></div>
+    <div class="split">
+      <div class="main-col">
+        <div class="answer"><div class="small muted" style="margin-bottom:6px">The answer, from the rows below</div><div class="finding" id="read"></div></div>
+        <div class="card" style="margin-top:12px"><div class="legend" id="glegend"></div><div class="chart" id="gchart"></div></div>
+        ${cfg.drill ? `<div class="sechead"><h2>${esc(cfg.drill.title)}</h2><span class="small muted">${esc(cfg.drill.hint)}</span></div><div class="card"><select id="gdsel" style="min-width:300px;margin-bottom:6px"></select><div class="legend" id="gdleg"></div><div class="chart" id="gdchart"></div><div class="finding small" id="gdread" style="margin-top:8px"></div></div>` : ""}
+        <div class="sechead"><h2>The rows</h2><span class="small muted" id="gcount"></span><input type="search" id="gq2" placeholder="Filter rows…"></div>
+        <div class="tablewrap" id="gtbl"></div>
+      </div>
+      <aside class="insp">
+        <div class="insp-sec"><h4>How this is worked out</h4><p class="small" style="margin:0;color:var(--text-2)">${esc(METHOD[name] || g.question)}</p><p class="small" style="margin:8px 0 0"><a href="${REPO}/blob/main/core/README.md" target="_blank" rel="noopener">Full method (core/README.md) →</a></p></div>
+        <div class="insp-sec"><h4>Data</h4><div class="kvs"><div><span>Rows</span><b>${NF(0).format(all.length)}</b></div><div><span>Caveats</span><b>${cavs.length}</b></div></div>
+          <p class="small" style="margin:8px 0 0"><a href="${REPO}/blob/main/core/${name}.csv" target="_blank" rel="noopener">Source table on GitHub →</a></p></div>
+        ${cavs.length ? `<div class="insp-sec"><h4>Caveats</h4>${cavs.map((k) => `<details class="cav"><summary><span class="chip warn">${esc(k)}</span> ${esc((D.caveats[k] || "").split(/[.:]/)[0])}</summary><p>${esc(D.caveats[k] || "")}</p></details>`).join("")}</div>` : ""}
+        <div class="insp-sec"><h4>Next steps</h4><div class="links">${name === "gap_budget_vs_actual" ? `<a href="#/compare?u=ministry">Compare ministries over time →</a>` : name === "gap_project_budget_vs_actual" ? `<a href="#/compare?u=project">Compare projects over time →</a>` : name === "gap_need_vs_money" ? `<a href="#/compare">Compare states over time →</a>` : ""}<a href="#/gaps">All policy questions →</a></div></div>
+      </aside>
+    </div>`;
+  $("#gshare").onclick = () => copy(location.href, "Link to this exact view copied");
   const label = (k, x) => (cfg.labels?.[k]?.[x] || (k === "flow" ? cfg.flowLabel[x] : k === "transfer" ? cfg.transferLabel[x] : k === "status" ? (x ? statusText(x) : "All") : x));
   function draw() {
     const p = new URLSearchParams(Object.entries(f).filter(([, x]) => x)); setParams("/gaps/" + name, p);
     $("#gf").innerHTML = Object.entries(opts).map(([k, list]) => list.length <= 4 ? `<div><div class="small muted">${colLabel(k)}</div><div class="seg">${list.map((x) => `<button type="button" data-k="${k}" data-v="${esc(x)}" class="${f[k] === x ? "on" : ""}">${esc(label(k, x))}</button>`).join("")}</div></div>`
-      : `<div><div class="small muted">${colLabel(k)}</div><select data-k="${k}">${list.map((x) => `<option value="${esc(x)}" ${f[k] === x ? "selected" : ""}>${esc(label(k, x))}</option>`).join("")}</select></div>`).join("") || `<span class="small muted">All years and series are shown.</span>`;
+      : `<div><div class="small muted">${colLabel(k)}</div><select data-k="${k}">${list.map((x) => `<option value="${esc(x)}" ${f[k] === x ? "selected" : ""}>${esc(label(k, x))}</option>`).join("")}</select></div>`).join("") || `<span class="small muted" style="padding:4px 2px">No filters: every year and series is shown.</span>`;
     $$("#gf button").forEach((b) => (b.onclick = () => { f[b.dataset.k] = b.dataset.v; draw(); }));
     $$("#gf select").forEach((s) => (s.onchange = () => { f[s.dataset.k] = s.value; draw(); }));
     const rs = cfg.rows(all, f);
@@ -1438,8 +1519,8 @@ async function viewGap(name, v = $("#view")) {
     }
     const tc = (cfg.table || d.cols).filter((k) => d.cols.includes(k));
     const sorted = cfg.sort ? [...rs].sort(cfg.sort) : rs;
-    $("#gcount").textContent = `${NF(0).format(rs.length)} rows${rs.length > 500 ? ", first 500 shown (download for all)" : ""} · all ${NF(0).format(all.length)} rows are in the CSV`;
-    $("#gtbl").innerHTML = `<table><thead><tr>${tc.map((k) => `<th class="${typeof rs[0]?.[k] === "number" ? "n" : ""}">${esc(colLabel(k))}</th>`).join("")}</tr></thead><tbody>${sorted.slice(0, 500).map((r) => `<tr>${tc.map((k) => `<td class="${typeof r[k] === "number" ? "n" : ""} ${k === "note" ? "small muted" : ""}" ${k === "note" ? 'style="min-width:280px"' : ""}>${cellFmt(k, r[k])}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
+    $("#gcount").textContent = `${NF(0).format(rs.length)} rows${rs.length > 500 ? " · first 500 shown" : ""}`;
+    $("#gtbl").innerHTML = `<table><thead><tr>${tc.map((k) => `<th class="${typeof rs[0]?.[k] === "number" ? "n" : ""}">${esc(colLabel(k))}</th>`).join("")}</tr></thead><tbody>${sorted.slice(0, 500).map((r) => `<tr>${tc.map((k) => `<td class="${typeof r[k] === "number" ? "n" : ""} ${k === "note" ? "small muted" : ""}" ${k === "note" || k === "federal_recipient" || k === "outcome_source" ? 'style="min-width:240px;max-width:360px"' : ""}>${cellFmt(k, r[k])}</td>`).join("")}</tr>`).join("")}</tbody></table>`;
     $("#brief").onclick = () => {
       const txt = $("#read").innerText;
       copy(`${qs ? qs[0] : g.question}\n\n${txt}\n\nSource: Malaysia Economy Data Warehouse (IKRAM), gap view ${name}, release ${D.meta.release_id}${Object.keys(f).length ? " (" + Object.entries(f).filter(([, x]) => x).map(([k, x]) => `${k} ${x}`).join(", ") + ")" : ""}. Rows and citations: ${location.href}\n${cavs.length ? "Caveats: " + cavs.map((k) => `${k} ${D.caveats[k] || ""}`).join(" ") : ""}`, "Brief copied, with its source");
