@@ -41,6 +41,11 @@ sys.path.insert(0, HERE)
 from warehouse import CORE, REPO  # noqa: E402
 
 AN = os.path.join(REPO, "sources", "audit-negara", "data")
+# The blind verifier of 2026-11-06 failed the audit inventory (qa/audits/2026-11-06_lkan_inventory_verifier.md): ~8% of
+# rows are not audits, ~54% have body, topic and page all right, and one link pointed an audit at the wrong ministry.
+# Until a re-verification passes, no link or recurrence row built from it is publishable.
+PUBLISHABLE = "false"
+DRAFT_NOTE = "draft: the audit inventory failed its blind verification (2026-11-06); not for publication"
 STATE_ISO = {"Johor": "MY-01", "Kedah": "MY-02", "Kelantan": "MY-03", "Melaka": "MY-04", "Negeri Sembilan": "MY-05",
              "Pahang": "MY-06", "Pulau Pinang": "MY-07", "Perak": "MY-08", "Perlis": "MY-09", "Selangor": "MY-10",
              "Terengganu": "MY-11", "Sabah": "MY-12", "Sarawak": "MY-13"}
@@ -49,7 +54,7 @@ REC_FIELDS = ["record_id", "record_type", "entity_id", "geo_code", "period_code"
 LINK_FIELDS = ["from_kind", "from_id", "to_kind", "to_id", "link_type", "link_method", "confidence", "proof",
                "publishable", "signed_off_by", "signed_off_on"]
 GAP_FIELDS = ["level", "geo_code", "entity_id", "entity_name_bm", "topic_family", "years", "n_years", "n_audits",
-              "recurs", "record_ids"]
+              "recurs", "record_ids", "verification"]
 
 
 def rows(p):
@@ -110,7 +115,7 @@ def main():
                     links.append(dict(from_kind="record", from_id=rid, to_kind="entity", to_id=eid,
                                       link_type="audit_of", link_method="name_exact_official", confidence="1",
                                       proof=f"contents page prints {a['body_bm']!r}; the entity's name in {year} is "
-                                            f"{printed!r} (core/entity_name.csv)", publishable="true",
+                                            f"{printed!r} (core/entity_name.csv)", publishable=PUBLISHABLE,
                                       signed_off_by="", signed_off_on=""))
                     break
         sk = (a["file_name"], a["printed_page"], a["body_bm"])
@@ -120,7 +125,7 @@ def main():
             links.append(dict(from_kind="record", from_id=rid, to_kind="entity", to_id=so["entity_id"],
                               link_type="audit_of", link_method="human_signed", confidence="1",
                               proof=f"contents page prints {a['body_bm']!r}; the owner signed it as "
-                                    f"{so['entity_name']!r} (meta/link_signoff.csv)", publishable="true",
+                                    f"{so['entity_name']!r} (meta/link_signoff.csv)", publishable=PUBLISHABLE,
                               signed_off_by=so["signed_off_by"], signed_off_on=so["signed_off_on"]))
         if scope == "federal" and a["body_bm"] and year and not rec["entity_id"]:
             # a candidate for the owner's review (D33): the same name without 'MALAYSIA', or a name the body had in
@@ -151,7 +156,7 @@ def main():
         gap.append(dict(level="entity", geo_code="MY", entity_id=eid, entity_name_bm=ename.get(eid, ""),
                         topic_family=f, years=";".join(years), n_years=len(years), n_audits=len(rs),
                         recurs="true" if len(years) >= 2 else "false",
-                        record_ids=";".join(r["record_id"] for r in rs)))
+                        record_ids=";".join(r["record_id"] for r in rs), verification=DRAFT_NOTE))
     by_geo = defaultdict(list)
     for r in recs:
         for f in json.loads(r["attributes"])["topic_families"] or ["unclassified"]:
@@ -161,7 +166,7 @@ def main():
         gap.append(dict(level="state" if g != "MY" else "federal", geo_code=g, entity_id="", entity_name_bm="",
                         topic_family=f, years=";".join(f"{y}:{sum(1 for r in rs if r['period_code'] == y)}"
                                                        for y in years),
-                        n_years=len(years), n_audits=len(rs), recurs="", record_ids=""))
+                        n_years=len(years), n_audits=len(rs), recurs="", record_ids="", verification=DRAFT_NOTE))
     # checks
     bad = [r for r in recs if not (r["source_file"] and r["pdf_page"])]
     checks.append(dict(check="V1 every record traces to a contents page", scope="all",
