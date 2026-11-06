@@ -160,6 +160,14 @@ def manifest_files():
                                                        "retrieved_date")},
                         "series_id": "anggaran_pembangunan", "file_name": fn,
                         "manifest": m.get("manifest", "") + " (via source_file of the project lists)"})
+    # state budget documents (sources/state-budgets): estimates books and budget speeches, by document type
+    p = os.path.join(REPO, "sources", "state-budgets", "data", "_documents_manifest.csv")
+    if os.path.exists(p):
+        for r in rows(p):
+            out.append({"series_id": "state_budget_estimates" if r["doc_type"] == "estimates_book" else
+                        "state_budget_speech", "edition": f"{r['state']} {r['budget_year']}", "file_name": r["file_name"],
+                        "source_url": r["source_url"], "sha256": r["sha256"], "size_bytes": r["size_bytes"],
+                        "pages": r["pages"], "retrieved_date": r["retrieved_date"], "manifest": rel(p)})
     # DOSM survey reports (the Excel twin of each publication; sources/dosm_reports, re-downloaded and sha-checked)
     report_series = {"household_income_2024": "hies_report_tables", "poverty_2024": "hies_report_tables",
                      "income_inequality_2024": "hies_report_tables", "household_expenditure_2024": "hes_report_tables",
