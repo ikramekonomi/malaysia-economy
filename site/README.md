@@ -1,8 +1,16 @@
 # The public site
 
-A static site over the warehouse: **About**, **Explore data** (125 indicators by place, period and breakdown),
-**Policy gaps** (the nine L3 views with a rule-based reading, chart, rows and caveats), **States**, **Sources &
-caveats** and **Method & trust**. No server, no database, no build step for the code.
+A static site over the warehouse, with no server, no database and no build step for the code. Its pages:
+- **About**: the pitch. Every fact on it is computed from the data on load.
+- **Explore data**: 125 indicators by place, period and breakdown. Each indicator page has:
+  - a one-sentence headline;
+  - value / change / index views;
+  - an every-state grid of small charts;
+  - a state map with a play button;
+  - tables you can sort and filter.
+- **Policy gaps**: the nine L3 views. Each has a live headline, a rule-based reading, a chart, a drilldown, its rows and its caveats.
+- **Bubbles**: any two state indicators, animated through the years, with trails.
+- **States**, **Sources & caveats** and **Method & trust**.
 
 ```bash
 python3 apps/site/build_site_data.py      # core/ -> site/data/*.json (about 33 MB, 5 s; not committed)

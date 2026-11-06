@@ -8,12 +8,14 @@ says what the warehouse is, and [`CLAUDE.md`](CLAUDE.md), which gives the rules 
 
 ## 1. On day one
 
-1. **Accept the repository transfer.** GitHub → Settings → Transfer. The private L0 archive release (`l0-archive`, raw
+1. **Accept the repository transfer** to the GitHub account **`ikramekonomi`** (ammar.roslizar@ikram.org.my): the
+   current owner starts it from Settings → Danger Zone → Transfer, and `ikramekonomi` accepts it from the email.
+   The repository becomes `github.com/ikramekonomi/malaysia-economy`; the old URLs redirect. The private L0 archive release (`l0-archive`, raw
    PDFs by sha256) and all workflows move with the repository. Nothing depends on the previous owner's account.
    One exception is the old Claude scheduled task that refreshed DOSM. It lived on that person's own account and stops
    with it. The GitHub workflow `dosm-refresh.yml` does the same job and moves with the repository.
 2. **Turn on the site.** Settings → Pages → Source: **GitHub Actions**. Then Actions → *Site* → *Run workflow*. The
-   site goes to `https://<owner>.github.io/<repo>/`. If the repository is private, GitHub Pages needs a paid plan.
+   site goes to `https://ikramekonomi.github.io/malaysia-economy/`. If the repository is private, GitHub Pages needs a paid plan.
 3. **Add the logo.** Put IKRAM's logo at `site/assets/ikram-logo.png` (square, transparent background). The site
    picks it up by itself.
 4. **Check the daily refresh.** Actions → *DOSM refresh* runs every day at 14:17 MYT. It opens a PR, which merges

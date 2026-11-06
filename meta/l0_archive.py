@@ -49,7 +49,7 @@ TAG = "l0-archive"
 FIELDS = ["sha256", "file_name", "series_id", "source_url", "size_bytes", "release_tag", "asset_name",
           "status", "check", "archived_on"]
 SHA = re.compile(r"^[0-9a-f]{64}$")
-UA = "malaysia-economy-l0-archiver/1.0 (+https://github.com/ammarroslizar/malaysia-economy)"
+UA = "malaysia-economy-l0-archiver/1.0 (+https://github.com/ikramekonomi/malaysia-economy)"
 
 
 def rows(path):

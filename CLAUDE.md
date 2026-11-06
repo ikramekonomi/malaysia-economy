@@ -1,7 +1,7 @@
 # CLAUDE.md — Malaysia Economy Data Warehouse
 
 Operating manual for anyone (human or AI) working in this repo. Read this first.
-(The GitHub repo is `ammarroslizar/malaysia-economy`; the old name `malaysiafinance` redirects.)
+(The GitHub repo is `ikramekonomi/malaysia-economy`, owned by IKRAM since 2026-11-06; the old names `ammarroslizar/malaysia-economy` and `ammarroslizar/malaysiafinance` redirect.)
 
 ## Mission
 Build a consolidated, fully verifiable data warehouse of **the Malaysian economy**, national and
