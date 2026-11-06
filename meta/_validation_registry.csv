@@ -109,6 +109,12 @@ R2 vocabulary and required fields,water_access,PASS,
 R2 vocabulary and required fields,crime_stats,PASS,
 R2 vocabulary and required fields,mnha_state,PASS,
 R2 vocabulary and required fields,federal_grants_to_states_actual,PASS,
+R2 vocabulary and required fields,air_quality,PASS,
+R2 vocabulary and required fields,river_water_quality,PASS,
+R2 vocabulary and required fields,forest_reserves,PASS,
+R2 vocabulary and required fields,water_supply,PASS,
+R2 vocabulary and required fields,primary_production,PASS,
+R2 vocabulary and required fields,ict_households,PASS,
 R3 every file belongs to a registered series,all,PASS,
 R4 held series has files,dosm_population,PASS,3 file(s)
 R5 every file has a sha256,dosm_population,PASS,3 files
@@ -126,14 +132,22 @@ R4 held series has files,lfs,PASS,18 file(s)
 R5 every file has a sha256,lfs,PASS,18 files
 R7 every file is in the L0 archive,lfs,PASS,18 of 18 archived (release l0-archive or git history)
 R6 licence recorded,lfs,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,productivity,PASS,4 file(s)
-R5 every file has a sha256,productivity,PASS,4 files
-R7 every file is in the L0 archive,productivity,PASS,4 of 4 archived (release l0-archive or git history)
+R4 held series has files,salaries_wages,PASS,20 file(s)
+R5 every file has a sha256,salaries_wages,PASS,20 files
+R7 every file is in the L0 archive,salaries_wages,PASS,20 of 20 archived (release l0-archive or git history)
+R6 licence recorded,salaries_wages,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,productivity,PASS,5 file(s)
+R5 every file has a sha256,productivity,PASS,5 files
+R7 every file is in the L0 archive,productivity,PASS,5 of 5 archived (release l0-archive or git history)
 R6 licence recorded,productivity,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,cpi,PASS,3 file(s)
-R5 every file has a sha256,cpi,PASS,3 files
-R7 every file is in the L0 archive,cpi,PASS,3 of 3 archived (release l0-archive or git history)
+R4 held series has files,cpi,PASS,7 file(s)
+R5 every file has a sha256,cpi,PASS,7 files
+R7 every file is in the L0 archive,cpi,PASS,7 of 7 archived (release l0-archive or git history)
 R6 licence recorded,cpi,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,cpi_detail,PASS,4 file(s)
+R5 every file has a sha256,cpi_detail,PASS,4 files
+R7 every file is in the L0 archive,cpi_detail,PASS,4 of 4 archived (release l0-archive or git history)
+R6 licence recorded,cpi_detail,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,national_accounts,PASS,26 file(s)
 R5 every file has a sha256,national_accounts,PASS,26 files
 R7 every file is in the L0 archive,national_accounts,PASS,26 of 26 archived (release l0-archive or git history)
@@ -142,6 +156,14 @@ R4 held series has files,state_gdp,PASS,1 file(s)
 R5 every file has a sha256,state_gdp,PASS,1 files
 R7 every file is in the L0 archive,state_gdp,PASS,1 of 1 archived (release l0-archive or git history)
 R6 licence recorded,state_gdp,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,district_gdp,PASS,1 file(s)
+R5 every file has a sha256,district_gdp,PASS,1 files
+R7 every file is in the L0 archive,district_gdp,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,district_gdp,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,energy_stats,PASS,4 file(s)
+R5 every file has a sha256,energy_stats,PASS,4 files
+R7 every file is in the L0 archive,energy_stats,PASS,4 of 4 archived (release l0-archive or git history)
+R6 licence recorded,energy_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
 R4 held series has files,industry_trade,PASS,22 file(s)
 R5 every file has a sha256,industry_trade,PASS,22 files
 R7 every file is in the L0 archive,industry_trade,PASS,22 of 22 archived (release l0-archive or git history)
@@ -178,9 +200,9 @@ R4 held series has files,dosm_gfs,PASS,11 file(s)
 R5 every file has a sha256,dosm_gfs,PASS,11 files
 R7 every file is in the L0 archive,dosm_gfs,PASS,11 of 11 archived (release l0-archive or git history)
 R6 licence recorded,dosm_gfs,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,education_stats,PASS,3 file(s)
-R5 every file has a sha256,education_stats,PASS,3 files
-R7 every file is in the L0 archive,education_stats,PASS,3 of 3 archived (release l0-archive or git history)
+R4 held series has files,education_stats,PASS,5 file(s)
+R5 every file has a sha256,education_stats,PASS,5 files
+R7 every file is in the L0 archive,education_stats,PASS,5 of 5 archived (release l0-archive or git history)
 R6 licence recorded,education_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
 R4 held series has files,health_facts,PASS,2 file(s)
 R5 every file has a sha256,health_facts,PASS,2 files
@@ -206,13 +228,17 @@ R4 held series has files,lkan_state,PASS,353 file(s)
 R5 every file has a sha256,lkan_state,PASS,353 files
 R7 every file is in the L0 archive,lkan_state,PASS,353 of 353 archived (release l0-archive or git history)
 R6 licence recorded,lkan_state,OPEN,licence to_confirm
+R4 held series has files,emissions_inventory,PASS,1 file(s)
+R5 every file has a sha256,emissions_inventory,PASS,1 files
+R7 every file is in the L0 archive,emissions_inventory,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,emissions_inventory,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
 R4 held series has files,rmk_targets,PASS,1 file(s)
 R5 every file has a sha256,rmk_targets,PASS,1 files
 R7 every file is in the L0 archive,rmk_targets,OPEN,0 of 1 archived (release l0-archive or git history)
 R6 licence recorded,rmk_targets,OPEN,licence to_confirm
-R4 held series has files,vital_statistics,PASS,2 file(s)
-R5 every file has a sha256,vital_statistics,PASS,2 files
-R7 every file is in the L0 archive,vital_statistics,PASS,2 of 2 archived (release l0-archive or git history)
+R4 held series has files,vital_statistics,PASS,9 file(s)
+R5 every file has a sha256,vital_statistics,PASS,9 files
+R7 every file is in the L0 archive,vital_statistics,PASS,9 of 9 archived (release l0-archive or git history)
 R6 licence recorded,vital_statistics,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
 R4 held series has files,water_access,PASS,1 file(s)
 R5 every file has a sha256,water_access,PASS,1 files
@@ -226,3 +252,27 @@ R4 held series has files,federal_grants_to_states_actual,PASS,6 file(s)
 R5 every file has a sha256,federal_grants_to_states_actual,PASS,6 files
 R7 every file is in the L0 archive,federal_grants_to_states_actual,PASS,6 of 6 archived (release l0-archive or git history)
 R6 licence recorded,federal_grants_to_states_actual,OPEN,licence to_confirm
+R4 held series has files,air_quality,PASS,1 file(s)
+R5 every file has a sha256,air_quality,PASS,1 files
+R7 every file is in the L0 archive,air_quality,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,air_quality,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,river_water_quality,PASS,1 file(s)
+R5 every file has a sha256,river_water_quality,PASS,1 files
+R7 every file is in the L0 archive,river_water_quality,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,river_water_quality,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,forest_reserves,PASS,2 file(s)
+R5 every file has a sha256,forest_reserves,PASS,2 files
+R7 every file is in the L0 archive,forest_reserves,PASS,2 of 2 archived (release l0-archive or git history)
+R6 licence recorded,forest_reserves,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,water_supply,PASS,2 file(s)
+R5 every file has a sha256,water_supply,PASS,2 files
+R7 every file is in the L0 archive,water_supply,PASS,2 of 2 archived (release l0-archive or git history)
+R6 licence recorded,water_supply,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,primary_production,PASS,4 file(s)
+R5 every file has a sha256,primary_production,PASS,4 files
+R7 every file is in the L0 archive,primary_production,PASS,4 of 4 archived (release l0-archive or git history)
+R6 licence recorded,primary_production,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
+R4 held series has files,ict_households,PASS,1 file(s)
+R5 every file has a sha256,ict_households,PASS,1 files
+R7 every file is in the L0 archive,ict_households,PASS,1 of 1 archived (release l0-archive or git history)
+R6 licence recorded,ict_households,PASS,CC BY 4.0 (DOSM catalogue pages)

@@ -8,7 +8,7 @@ hand (golden rule 1). CI rebuilds them on every PR and fails if the committed fi
 
 ```
 python3 core/pipeline/build_entities.py           # dim_entity + bridge_entity_code + entity_name (Phase 3)
-python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
+python3 core/pipeline/build_core.py               # dims + fact_observation/ + _validation_core.csv
 python3 core/pipeline/build_flows.py              # fact_money_flow.csv + _validation_flow.csv (Phase 3)
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
 python3 qa/run_eval.py                            # 209 questions against the agent tools
@@ -21,10 +21,10 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 |---|---|---|
 | `dim_geo.csv` | 1,006 | Malaysia, `_unallocated`, 16 states and FTs (ISO 3166-2:MY), 166 districts (boundary set `dosm_2020`), 222 parliamentary seats and 600 state seats (boundary set `ge15`) |
 | `geo_hierarchy.csv` | 1,020 | child → parent, one row per hierarchy (`administrative`: district → state; `electoral`: DUN → parlimen → state) |
-| `dim_period.csv` | 618 | years, months (monthly from 1980-01 for national CPI) |
-| `dim_indicator.csv` | 65 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
-| `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
-| `fact_observation.csv` | 138,511 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
+| `dim_period.csv` | 630 | years, months (monthly from 1980-01 for national CPI) |
+| `dim_indicator.csv` | 117 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
+| `dim_breakdown.csv` | 951 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
+| `fact_observation/<family>.csv` | 223,735 | indicator × geo × period × breakdown × entity × basis × edition × vintage, one file per indicator family (D34; read through `warehouse.observation_files()`): state 117,853; national 62,025; district 19,164; DUN 18,000; parlimen 6,660; unallocated 33 |
 | `dim_entity.csv` | 68 | who: the federal government, 13 state governments, 47 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
@@ -407,6 +407,36 @@ collection, and is `above_estimate` in 13 of 15 years (FY2024: 4.78x the estimat
 performance. PKKP's own printed percentage is against the revised estimate, which is set late in the year, so it
 reads closer to 100% than `collection_rate_original` (FY2015 tax: 0.90 of the original, 97.3% printed). The
 FY2023 estimate is Budget 2023 as re-tabled in February 2023. Book reprints carry CV29.
+
+## Wave 3 DOSM and data.gov.my datasets (2026-11-06)
+
+55 datasets the catalogue publishes that the warehouse did not hold
+(`sources/dosm/pipeline/ingest_wave3.py`). Each was checked cell by cell against DOSM's parquet copy of the same
+publication (`verify_wave3.py`: 165 checks PASS). Core gains 37 indicators (`build_wave3` in build_core):
+
+* **Wages:**
+  * the Salaries & Wages Survey 2010-2025 (`wages.median`, `.mean`, `.recipients`), by state, sex, strata,
+    sector, MSIC section, education, age, ethnicity, occupation, skill, certificate and citizenship;
+  * real wages by state (2010 prices);
+  * formal-sector administrative wages, monthly 2022-2026 (`wages.formal.*`, with percentiles and wage bands).
+* **Productivity** by state and sector.
+* **CPI:**
+  * the core, low-income and urban/rural indexes, and the annual index from 1960;
+  * DOSM's printed year-on-year inflation, national headline and core. The states' and the month-on-month rates
+    stay at L1 (they can be derived from `cpi.index`, D34).
+* **GDP by district,** constant 2015 prices, by sector, 2015-2020 (the 'Supra' rows stay at L1).
+* **People and services:**
+  * life expectancy, national (by sex and ethnicity), by state × ethnicity, and by district;
+  * live births, fertility (age-specific rates and total fertility), maternal and early-childhood deaths by state;
+  * school completion by state (the district file uses MOE's own education districts, so it stays at L1);
+  * household Internet access.
+* **Environment, energy, water, agriculture:**
+  * air pollutants, greenhouse-gas emissions, river-basin water quality, forest reserves;
+  * electricity, final and primary energy;
+  * water consumption and production;
+  * minerals, timber, crops and fish landings.
+
+Sources that do not print every state declare their real coverage in `meta/indicator.csv`.
 
 ## gap_reported_vs_audited (Phase 5, 2026-11-06)
 

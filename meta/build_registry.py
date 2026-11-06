@@ -44,6 +44,15 @@ FIELDS = ["series_id", "edition", "file_name", "source_url", "sha256", "size_byt
 
 # DOSM dataset id -> registry series (first matching prefix wins)
 DOSM_SERIES = [
+    # wave 3 (2026-11-06): specific prefixes before the general ones below
+    ("wages_", "salaries_wages"), ("formal_wages", "salaries_wages"), ("cpi_core", "cpi_detail"),
+    ("cpi_lowincome", "cpi_detail"), ("cpi_strata", "cpi_detail"), ("gdp_district", "district_gdp"),
+    ("life_expectancy", "vital_statistics"), ("births_", "vital_statistics"), ("fertility_", "vital_statistics"),
+    ("deaths_", "vital_statistics"), ("completion_school", "education_stats"), ("hh_access_internet", "ict_households"),
+    ("air_pollution", "air_quality"), ("ghg_emissions", "emissions_inventory"), ("water_pollution", "river_water_quality"),
+    ("forest_reserve", "forest_reserves"), ("electricity_", "energy_stats"), ("energy_", "energy_stats"),
+    ("water_consumption", "water_supply"), ("water_production", "water_supply"), ("mineral_", "primary_production"),
+    ("timber_", "primary_production"), ("crops_", "primary_production"), ("fish_", "primary_production"),
     ("hospital_beds", "health_facts"), ("healthcare_staff", "health_facts"), ("schools_district", "education_stats"),
     ("enrolment_school_district", "education_stats"), ("teachers_district", "education_stats"),
     ("death_state", "vital_statistics"), ("deaths_state", "vital_statistics"), ("life_expectancy_state", "vital_statistics"),

@@ -1,0 +1,919 @@
+state,date,employees,wages_median,retrieved_from,retrieved_date
+Malaysia,2022-01-01,6325700,2582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-02-01,6346800,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-03-01,6395400,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-04-01,6426900,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-05-01,6434100,2445,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-06-01,6495500,2478,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-07-01,6535400,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-08-01,6580000,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-09-01,6591000,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-10-01,6581100,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-11-01,6561300,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2022-12-01,6555100,2764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-01-01,6502500,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-02-01,6432800,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-03-01,6450600,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-04-01,6602500,2664,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-05-01,6582800,2582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-06-01,6599800,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-07-01,6661400,2582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-08-01,6665000,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-09-01,6678000,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-10-01,6704100,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-11-01,6678300,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2023-12-01,6674900,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-01-01,6622700,2945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-02-01,6538100,2782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-03-01,6547900,2844,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-04-01,6728000,2764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-05-01,6717000,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-06-01,6731000,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-07-01,6801000,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-08-01,6808800,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-09-01,6817000,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-10-01,6842100,2764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-11-01,6829100,2764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2024-12-01,6831400,3045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-01-01,6825500,3064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-02-01,6763500,2875,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-03-01,6786800,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-04-01,6946800,2864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-05-01,6952900,2845,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-06-01,6969700,2864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-07-01,7035900,2864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-08-01,7045800,2864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-09-01,7056400,2864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-10-01,7065200,2882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-11-01,7070300,2882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2025-12-01,7080500,3167,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2026-01-01,7074779,3073,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2026-02-01,7023906,3027,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2026-03-01,7048071,3027,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2026-04-01,7158718,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2026-05-01,7185802,2964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Malaysia,2026-06-01,7196639,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-01-01,680400,2344,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-02-01,681100,2089,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-03-01,686200,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-04-01,689400,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-05-01,687600,2182,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-06-01,693300,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-07-01,697100,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-08-01,702500,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-09-01,703500,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-10-01,700400,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-11-01,698500,2245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2022-12-01,697100,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-01-01,690100,2527,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-02-01,681300,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-03-01,686300,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-04-01,701700,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-05-01,699400,2364,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-06-01,702100,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-07-01,706400,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-08-01,707400,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-09-01,708800,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-10-01,708100,2427,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-11-01,709900,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2023-12-01,710800,2673,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-01-01,705600,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-02-01,697200,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-03-01,699100,2582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-04-01,719300,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-05-01,718900,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-06-01,721000,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-07-01,728400,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-08-01,730500,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-09-01,730200,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-10-01,730600,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-11-01,730200,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2024-12-01,730800,2827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-01-01,729500,2927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-02-01,724100,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-03-01,726900,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-04-01,744500,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-05-01,746500,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-06-01,749100,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-07-01,756000,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-08-01,759100,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-09-01,760200,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-10-01,759700,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-11-01,760900,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2025-12-01,763200,2982,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2026-01-01,762607,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2026-02-01,757418,2882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2026-03-01,760622,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2026-04-01,770759,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2026-05-01,774242,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Johor,2026-06-01,776158,2727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-01-01,232100,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-02-01,233100,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-03-01,234600,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-04-01,236900,1633,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-05-01,238200,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-06-01,241500,1744,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-07-01,242400,1745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-08-01,244900,1727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-09-01,244900,1727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-10-01,243700,1745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-11-01,241600,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2022-12-01,240600,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-01-01,235400,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-02-01,232000,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-03-01,230800,1827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-04-01,237600,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-05-01,235500,1809,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-06-01,235800,1845,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-07-01,239800,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-08-01,239200,1827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-09-01,239000,1845,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-10-01,241000,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-11-01,240700,1827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2023-12-01,240500,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-01-01,237800,1982,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-02-01,234200,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-03-01,234900,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-04-01,244800,1927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-05-01,243000,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-06-01,242800,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-07-01,246400,1945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-08-01,245200,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-09-01,244800,1927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-10-01,246400,1930,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-11-01,245400,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2024-12-01,244700,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-01-01,244400,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-02-01,241000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-03-01,240900,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-04-01,248100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-05-01,247700,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-06-01,248000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-07-01,252000,2027,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-08-01,252100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-09-01,251700,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-10-01,252800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-11-01,253300,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2025-12-01,253300,2164,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2026-01-01,251651,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2026-02-01,249559,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2026-03-01,250268,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2026-04-01,254828,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2026-05-01,256224,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kedah,2026-06-01,257276,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-01-01,90500,1422,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-02-01,91000,1389,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-03-01,90900,1400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-04-01,91900,1444,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-05-01,92400,1500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-06-01,93200,1544,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-07-01,93600,1500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-08-01,93600,1545,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-09-01,93200,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-10-01,93100,1555,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-11-01,92100,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2022-12-01,91800,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-01-01,89400,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-02-01,87900,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-03-01,88300,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-04-01,92700,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-05-01,90700,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-06-01,91100,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-07-01,93800,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-08-01,93000,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-09-01,92800,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-10-01,93400,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-11-01,92600,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2023-12-01,92300,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-01-01,91000,1645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-02-01,88400,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-03-01,88600,1645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-04-01,94100,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-05-01,92600,1645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-06-01,92400,1645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-07-01,94600,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-08-01,93100,1645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-09-01,92100,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-10-01,93700,1664,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-11-01,92700,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2024-12-01,92600,1664,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-01-01,93100,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-02-01,91200,1727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-03-01,91300,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-04-01,95800,1745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-05-01,95200,1782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-06-01,95100,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-07-01,97100,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-08-01,96400,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-09-01,95900,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-10-01,96200,1782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-11-01,96100,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2025-12-01,96600,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2026-01-01,96272,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2026-02-01,94288,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2026-03-01,95213,1827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2026-04-01,97741,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2026-05-01,98380,1815,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Kelantan,2026-06-01,98027,1827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-01-01,169600,2267,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-02-01,170100,2044,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-03-01,171300,2027,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-04-01,171700,2122,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-05-01,172300,2167,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-06-01,174100,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-07-01,174800,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-08-01,175800,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-09-01,176100,2109,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-10-01,176000,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-11-01,175300,2245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2022-12-01,174600,2527,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-01-01,172500,2491,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-02-01,171300,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-03-01,171900,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-04-01,175000,2375,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-05-01,174000,2282,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-06-01,174600,2364,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-07-01,176500,2282,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-08-01,175900,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-09-01,176000,2282,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-10-01,178300,2455,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-11-01,177600,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2023-12-01,177400,2682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-01-01,174600,2522,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-02-01,171400,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-03-01,172000,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-04-01,176100,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-05-01,175100,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-06-01,175600,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-07-01,177400,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-08-01,177300,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-09-01,177800,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-10-01,178800,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-11-01,178300,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2024-12-01,178300,2727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-01-01,177900,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-02-01,176100,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-03-01,176100,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-04-01,179800,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-05-01,179500,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-06-01,179600,2545,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-07-01,180900,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-08-01,181400,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-09-01,181700,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-10-01,182200,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-11-01,183100,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2025-12-01,183300,2864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2026-01-01,182994,2682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2026-02-01,181343,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2026-03-01,180591,2664,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2026-04-01,183858,2664,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2026-05-01,184166,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Melaka,2026-06-01,184181,2645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-01-01,167700,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-02-01,168300,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-03-01,169400,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-04-01,169600,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-05-01,169900,2067,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-06-01,172200,2133,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-07-01,172900,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-08-01,173900,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-09-01,173500,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-10-01,172800,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-11-01,171700,2145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2022-12-01,170500,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-01-01,169000,2345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-02-01,164800,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-03-01,165600,2345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-04-01,170700,2282,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-05-01,169000,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-06-01,169700,2282,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-07-01,172000,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-08-01,171500,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-09-01,171600,2245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-10-01,172200,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-11-01,170600,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2023-12-01,170700,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-01-01,169000,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-02-01,165500,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-03-01,165700,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-04-01,171600,2345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-05-01,170700,2345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-06-01,170600,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-07-01,172300,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-08-01,171600,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-09-01,172100,2364,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-10-01,172500,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-11-01,173600,2345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2024-12-01,173400,2545,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-01-01,172600,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-02-01,170100,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-03-01,170200,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-04-01,173500,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-05-01,173000,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-06-01,172900,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-07-01,173700,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-08-01,173900,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-09-01,174100,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-10-01,174300,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-11-01,175400,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2025-12-01,175900,2664,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2026-01-01,174631,2645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2026-02-01,173054,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2026-03-01,173745,2645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2026-04-01,176513,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2026-05-01,177457,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Negeri Sembilan,2026-06-01,177878,2545,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-01-01,159800,1811,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-02-01,160100,1745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-03-01,161300,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-04-01,162800,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-05-01,163900,1867,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-06-01,166000,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-07-01,166300,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-08-01,167100,1927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-09-01,166900,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-10-01,166600,1909,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-11-01,166200,1927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2022-12-01,165300,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-01-01,163000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-02-01,160900,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-03-01,162200,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-04-01,166900,2027,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-05-01,165800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-06-01,166500,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-07-01,168200,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-08-01,167000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-09-01,167000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-10-01,169100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-11-01,168200,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2023-12-01,168200,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-01-01,166400,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-02-01,163500,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-03-01,163500,2145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-04-01,168300,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-05-01,168100,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-06-01,168600,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-07-01,171000,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-08-01,170500,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-09-01,171200,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-10-01,171600,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-11-01,170900,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2024-12-01,170600,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-01-01,169300,2291,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-02-01,167400,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-03-01,167900,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-04-01,172300,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-05-01,171700,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-06-01,171800,2245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-07-01,173600,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-08-01,173600,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-09-01,173100,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-10-01,173900,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-11-01,174100,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2025-12-01,174100,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2026-01-01,172863,2345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2026-02-01,171068,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2026-03-01,171558,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2026-04-01,175465,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2026-05-01,175022,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pahang,2026-06-01,175646,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-01-01,513000,2678,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-02-01,515100,2344,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-03-01,520200,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-04-01,522900,2467,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-05-01,523600,2427,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-06-01,531300,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-07-01,534400,2445,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-08-01,539100,2427,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-09-01,541900,2478,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-10-01,541600,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-11-01,540400,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2022-12-01,538700,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-01-01,532500,2964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-02-01,527200,2575,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-03-01,530800,2627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-04-01,533400,2682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-05-01,531000,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-06-01,530800,2645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-07-01,533500,2627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-08-01,534000,2627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-09-01,535000,2645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-10-01,535000,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-11-01,528900,2682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2023-12-01,529100,3245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-01-01,524300,3033,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-02-01,518900,2864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-03-01,518900,2827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-04-01,529800,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-05-01,529500,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-06-01,531100,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-07-01,536100,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-08-01,538900,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-09-01,539500,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-10-01,539800,2827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-11-01,539600,2882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2024-12-01,540200,3382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-01-01,541700,3300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-02-01,538700,2909,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-03-01,540000,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-04-01,551200,2945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-05-01,553900,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-06-01,557000,2927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-07-01,562100,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-08-01,562600,2927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-09-01,564600,2927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-10-01,565200,2945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-11-01,567600,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2025-12-01,568800,3500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2026-01-01,569186,3182,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2026-02-01,567507,3145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2026-03-01,567706,3064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2026-04-01,577384,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2026-05-01,582135,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Pulau Pinang,2026-06-01,585196,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-01-01,305500,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-02-01,305900,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-03-01,308000,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-04-01,309100,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-05-01,310600,1845,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-06-01,313700,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-07-01,314800,1845,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-08-01,316000,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-09-01,315800,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-10-01,311800,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-11-01,310200,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2022-12-01,310000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-01-01,306800,2145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-02-01,302100,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-03-01,303800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-04-01,311000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-05-01,308400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-06-01,309700,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-07-01,312100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-08-01,310600,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-09-01,311600,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-10-01,312500,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-11-01,310200,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2023-12-01,310500,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-01-01,307200,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-02-01,302700,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-03-01,304000,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-04-01,311900,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-05-01,311500,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-06-01,311600,2027,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-07-01,314300,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-08-01,313400,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-09-01,313200,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-10-01,313900,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-11-01,312300,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2024-12-01,312000,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-01-01,312300,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-02-01,306000,2182,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-03-01,309500,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-04-01,317800,2164,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-05-01,317600,2182,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-06-01,318000,2175,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-07-01,319100,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-08-01,319500,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-09-01,320400,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-10-01,320700,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-11-01,321400,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2025-12-01,321900,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2026-01-01,320880,2427,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2026-02-01,318100,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2026-03-01,318387,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2026-04-01,324107,2245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2026-05-01,325373,2282,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perak,2026-06-01,324681,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-01-01,18800,1467,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-02-01,18900,1400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-03-01,18900,1400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-04-01,18900,1422,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-05-01,19000,1522,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-06-01,19300,1556,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-07-01,19300,1545,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-08-01,19400,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-09-01,19300,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-10-01,19000,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-11-01,18900,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2022-12-01,18800,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-01-01,18500,1645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-02-01,17700,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-03-01,17400,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-04-01,18900,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-05-01,18500,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-06-01,18500,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-07-01,18800,1600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-08-01,18600,1664,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-09-01,18600,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-10-01,18700,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-11-01,18300,1627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2023-12-01,18400,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-01-01,18100,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-02-01,17200,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-03-01,17100,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-04-01,18700,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-05-01,17900,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-06-01,17900,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-07-01,18400,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-08-01,18200,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-09-01,18300,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-10-01,18700,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-11-01,18400,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2024-12-01,18400,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-01-01,18500,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-02-01,18000,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-03-01,18100,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-04-01,19100,1782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-05-01,18700,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-06-01,18700,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-07-01,18900,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-08-01,18900,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-09-01,18900,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-10-01,19100,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-11-01,18900,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2025-12-01,18800,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2026-01-01,18730,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2026-02-01,18392,1855,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2026-03-01,18462,1855,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2026-04-01,19545,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2026-05-01,19096,1855,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Perlis,2026-06-01,19085,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-01-01,1768000,2944,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-02-01,1773100,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-03-01,1784700,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-04-01,1788600,2827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-05-01,1784600,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-06-01,1802500,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-07-01,1815000,2727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-08-01,1827900,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-09-01,1829500,2764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-10-01,1829300,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-11-01,1818600,2800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2022-12-01,1823500,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-01-01,1812500,3067,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-02-01,1796800,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-03-01,1820100,2964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-04-01,1872700,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-05-01,1871000,2882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-06-01,1873400,2945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-07-01,1891000,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-08-01,1890000,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-09-01,1892600,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-10-01,1895000,2945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-11-01,1884500,2964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2023-12-01,1881800,3164,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-01-01,1865200,3245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-02-01,1840200,3027,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-03-01,1842200,3164,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-04-01,1891300,3064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-05-01,1891300,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-06-01,1896400,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-07-01,1914200,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-08-01,1915500,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-09-01,1918700,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-10-01,1923700,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-11-01,1922800,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2024-12-01,1925600,3300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-01-01,1922700,3445,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-02-01,1905600,3145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-03-01,1911400,3300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-04-01,1958700,3178,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-05-01,1961900,3100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-06-01,1967300,3145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-07-01,1982300,3127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-08-01,1986600,3100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-09-01,1991200,3127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-10-01,1991500,3145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-11-01,1992700,3145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2025-12-01,1996300,3400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2026-01-01,1996523,3427,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2026-02-01,1982677,3382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2026-03-01,1989560,3445,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2026-04-01,2020739,3282,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2026-05-01,2030287,3200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Selangor,2026-06-01,2033500,3245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-01-01,134300,1682,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-02-01,134800,1645,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-03-01,136100,1667,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-04-01,136500,1733,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-05-01,137600,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-06-01,139400,1789,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-07-01,140800,1782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-08-01,141300,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-09-01,141000,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-10-01,140200,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-11-01,139000,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2022-12-01,137300,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-01-01,135600,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-02-01,131900,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-03-01,133000,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-04-01,140100,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-05-01,138500,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-06-01,139100,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-07-01,142400,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-08-01,141400,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-09-01,141700,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-10-01,143700,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-11-01,142700,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2023-12-01,143200,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-01-01,141300,1982,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-02-01,137700,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-03-01,138200,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-04-01,144800,1982,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-05-01,143700,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-06-01,143900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-07-01,147400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-08-01,146900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-09-01,147100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-10-01,148100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-11-01,144900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2024-12-01,144800,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-01-01,144800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-02-01,142300,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-03-01,143000,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-04-01,147800,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-05-01,146800,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-06-01,147000,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-07-01,149900,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-08-01,149400,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-09-01,149900,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-10-01,149700,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-11-01,148200,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2025-12-01,147500,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2026-01-01,147262,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2026-02-01,144351,2164,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2026-03-01,145107,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2026-04-01,149637,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2026-05-01,150067,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Terengganu,2026-06-01,149872,2164,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-01-01,316000,1667,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-02-01,316200,1564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-03-01,319100,1567,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-04-01,322200,1622,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-05-01,323700,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-06-01,325700,1744,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-07-01,327900,1727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-08-01,329300,1700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-09-01,330700,1727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-10-01,331600,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-11-01,335300,1727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2022-12-01,335100,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-01-01,335200,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-02-01,333500,1782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-03-01,333900,1782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-04-01,330700,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-05-01,331900,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-06-01,333400,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-07-01,334500,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-08-01,335000,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-09-01,335000,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-10-01,336100,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-11-01,337200,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2023-12-01,337000,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-01-01,336600,1945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-02-01,335100,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-03-01,334600,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-04-01,338100,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-05-01,337900,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-06-01,339100,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-07-01,342800,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-08-01,343300,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-09-01,344500,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-10-01,344600,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-11-01,343100,1882,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2024-12-01,342700,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-01-01,342900,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-02-01,341000,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-03-01,342800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-04-01,349700,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-05-01,349900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-06-01,350400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-07-01,355900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-08-01,355500,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-09-01,355100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-10-01,356400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-11-01,356800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2025-12-01,356500,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2026-01-01,355127,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2026-02-01,353539,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2026-03-01,356989,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2026-04-01,364516,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2026-05-01,364673,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sabah,2026-06-01,365840,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-01-01,458000,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-02-01,460600,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-03-01,465500,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-04-01,470100,1845,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-05-01,470600,1922,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-06-01,473000,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-07-01,477000,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-08-01,480400,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-09-01,481700,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-10-01,481400,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-11-01,479800,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2022-12-01,477600,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-01-01,472200,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-02-01,467800,1982,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-03-01,471400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-04-01,485600,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-05-01,484100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-06-01,485400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-07-01,490100,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-08-01,490500,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-09-01,490900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-10-01,493800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-11-01,492400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2023-12-01,492000,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-01-01,486900,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-02-01,480800,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-03-01,484800,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-04-01,499300,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-05-01,498400,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-06-01,498200,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-07-01,502900,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-08-01,502500,2045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-09-01,502800,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-10-01,505400,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-11-01,503500,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2024-12-01,501400,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-01-01,498600,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-02-01,493700,2182,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-03-01,496700,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-04-01,509100,2182,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-05-01,509700,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-06-01,511000,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-07-01,516600,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-08-01,517200,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-09-01,518600,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-10-01,518900,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-11-01,519400,2182,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2025-12-01,520000,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2026-01-01,518572,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2026-02-01,514670,2345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2026-03-01,518458,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2026-04-01,524979,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2026-05-01,526667,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+Sarawak,2026-06-01,527146,2264,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-01-01,1268200,3822,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-02-01,1274200,3600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-03-01,1284400,3700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-04-01,1291300,3867,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-05-01,1294100,3600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-06-01,1304000,3600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-07-01,1312800,3600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-08-01,1322100,3582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-09-01,1326000,3582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-10-01,1326600,3627,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-11-01,1327300,3622,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-12-01,1328400,3945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-01-01,1324600,4000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-02-01,1313300,3827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-03-01,1290900,3927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-04-01,1319400,4064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-05-01,1318800,3800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-06-01,1323800,3822,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-07-01,1335300,3800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-08-01,1343400,3800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-09-01,1350500,3800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-10-01,1359800,3800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-11-01,1356800,3800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-12-01,1355300,4045,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-01-01,1352300,4145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-02-01,1339200,4000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-03-01,1337400,4256,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-04-01,1372000,4073,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-05-01,1370400,3964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-06-01,1373600,3982,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-07-01,1386500,4000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-08-01,1392800,3964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-09-01,1396000,3964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-10-01,1404800,4000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-11-01,1403700,3967,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-12-01,1406600,4200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-01-01,1407500,4400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-02-01,1398900,4145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-03-01,1402200,4445,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-04-01,1428400,4200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-05-01,1429800,4064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-06-01,1432700,4064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-07-01,1446600,4100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-08-01,1448000,4064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-09-01,1449500,4064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-10-01,1453200,4082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-11-01,1451000,4100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-12-01,1453300,4391,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2026-01-01,1457254,4364,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2026-02-01,1447536,4500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2026-03-01,1450424,4527,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2026-04-01,1467025,4345,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2026-05-01,1470499,4233,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2026-06-01,1470589,4245,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-01-01,16300,1827,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-02-01,16400,1764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-03-01,16500,1789,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-04-01,16400,1800,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-05-01,16400,1822,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-06-01,16500,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-07-01,16600,1867,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-08-01,16600,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-09-01,16700,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-10-01,16800,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-11-01,16700,1864,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2022-12-01,16700,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-01-01,16600,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-02-01,16000,1927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-03-01,16000,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-04-01,16900,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-05-01,16600,1927,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-06-01,16600,1900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-07-01,16900,1945,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-08-01,16900,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-09-01,16500,1964,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-10-01,16900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-11-01,16800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2023-12-01,16800,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-01-01,16700,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-02-01,16400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-03-01,16400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-04-01,17200,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-05-01,17300,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-06-01,17300,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-07-01,17400,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-08-01,17500,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-09-01,17300,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-10-01,17800,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-11-01,17900,2000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2024-12-01,17800,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-01-01,17700,2164,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-02-01,17600,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-03-01,17700,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-04-01,18200,2064,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-05-01,18200,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-06-01,18300,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-07-01,18400,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-08-01,18500,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-09-01,18500,2082,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-10-01,18600,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-11-01,18700,2100,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2025-12-01,18700,2382,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2026-01-01,18286,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2026-02-01,18139,2227,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2026-03-01,18308,2200,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2026-04-01,18605,2145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2026-05-01,18698,2127,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Labuan,2026-06-01,18777,2145,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-01-01,27400,2322,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-02-01,27900,2289,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-03-01,28300,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-04-01,28700,2344,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-05-01,29400,2322,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-06-01,29500,2300,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-07-01,29900,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-08-01,30100,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-09-01,30200,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-10-01,30100,2327,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-11-01,29800,2364,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-12-01,29400,2400,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-01-01,28500,2527,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-02-01,28300,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-03-01,28300,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-04-01,29200,2782,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-05-01,29400,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-06-01,29400,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-07-01,30000,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-08-01,30500,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-09-01,30400,2464,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-10-01,30400,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-11-01,30800,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-12-01,30800,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-01-01,29700,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-02-01,29900,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-03-01,30200,2727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-04-01,30800,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-05-01,30700,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-06-01,30800,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-07-01,31100,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-08-01,31700,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-09-01,31400,2500,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-10-01,31500,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-11-01,31900,2482,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-12-01,31800,2527,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-01-01,31900,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-02-01,31900,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-03-01,32000,2900,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-04-01,32700,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-05-01,32800,2545,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-06-01,32700,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-07-01,33000,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-08-01,33100,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-09-01,33100,2564,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-10-01,32900,2600,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-11-01,32600,2582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-12-01,32300,2582,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2026-01-01,31941,2745,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2026-02-01,32265,2727,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2026-03-01,32673,3000,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2026-04-01,33017,2764,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2026-05-01,32816,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05
+W.P. Putrajaya,2026-06-01,32787,2700,https://storage.dosm.gov.my/labour/formal_wages_state.csv,2026-11-05

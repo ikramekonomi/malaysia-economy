@@ -63,8 +63,9 @@ from ingest_expansion import EXPANSION, download_with_provenance  # noqa: E402
 # series-break register (data/_series_breaks_dosm.csv) depends on knowing which vintage
 # a number came from.
 from ingest_realeconomy import REALECONOMY  # noqa: E402
+from ingest_wave3 import WAVE3  # noqa: E402  (wave 3, 2026-11-06: wages, CPI detail, demography, environment)
 
-for _ds, (_url, _route) in list(EXPANSION.items()) + list(REALECONOMY.items()):
+for _ds, (_url, _route) in list(EXPANSION.items()) + list(REALECONOMY.items()) + list(WAVE3.items()):
     DATASETS[_ds] = (f"{_ds}.csv", _url)
 
 # datasets served by the data-catalogue route of the static API rather than opendosm
@@ -77,7 +78,7 @@ CATALOGUE_META = ("https://raw.githubusercontent.com/data-gov-my/datagovmy-meta/
 
 
 def api_meta(ds):
-    route = (EXPANSION.get(ds) or REALECONOMY.get(ds) or (None, DATACATALOGUE.get(ds, "opendosm")))[1]
+    route = (EXPANSION.get(ds) or REALECONOMY.get(ds) or WAVE3.get(ds) or (None, DATACATALOGUE.get(ds, "opendosm")))[1]
     if route == "meta":
         # exclude_openapi in the catalogue: the static API does not serve this dataset,
         # so its vintage fields come from the catalogue repo instead. The storage ETag
@@ -112,6 +113,10 @@ def current_state():
             out[ds]["api_route"] = REALECONOMY[ds][1]
             out[ds]["provenance_columns"] = True
             out[ds]["block"] = "realeconomy"
+        elif ds in WAVE3:
+            out[ds]["api_route"] = WAVE3[ds][1]
+            out[ds]["provenance_columns"] = True
+            out[ds]["block"] = "wave3"
     return out
 
 
@@ -196,7 +201,7 @@ def main():
         fname, url = DATASETS[ds]
         dest = os.path.join(DATA, fname)
         tmp = dest + ".new"
-        if ds in EXPANSION or ds in REALECONOMY:  # appended provenance columns
+        if ds in EXPANSION or ds in REALECONOMY or ds in WAVE3:  # appended provenance columns
             download_with_provenance(url, tmp, retrieved_date=date.today().isoformat())
         else:  # original denominator files stay byte-for-byte as downloaded
             urllib.request.urlretrieve(url, tmp)
@@ -215,6 +220,8 @@ def main():
     if any(ds in REALECONOMY for ds in stale):
         subprocess.run([sys.executable, os.path.join(HERE, "verify_realeconomy.py")], check=True)
         subprocess.run([sys.executable, os.path.join(HERE, "series_breaks.py")], check=True)
+    if any(ds in WAVE3 for ds in stale):
+        subprocess.run([sys.executable, os.path.join(HERE, "verify_wave3.py")], check=True)
     print("REMEMBER: update the vintage table in sources/dosm/README.md and commit the "
           "new vintage as its own change (never silently).")
     if any(ds in REALECONOMY for ds in stale):

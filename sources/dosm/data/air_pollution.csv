@@ -1,0 +1,577 @@
+date,pollutant,concentration,retrieved_from,retrieved_date
+2017-01-01,CO,0.561,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-02-01,CO,0.53,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-03-01,CO,0.589,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-04-01,CO,0.662,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-05-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-06-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-07-01,CO,0.716,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-08-01,CO,0.661,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-09-01,CO,0.682,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-10-01,CO,0.68,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-11-01,CO,0.699,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-12-01,CO,0.679,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-01-01,CO,0.671,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-02-01,CO,0.677,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-03-01,CO,0.654,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-04-01,CO,0.682,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-05-01,CO,0.671,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-06-01,CO,0.648,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-07-01,CO,0.653,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-08-01,CO,0.655,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-09-01,CO,0.615,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-10-01,CO,0.632,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-11-01,CO,0.636,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-12-01,CO,0.626,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-01-01,CO,0.636,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-02-01,CO,0.588,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-03-01,CO,0.669,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-04-01,CO,0.644,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-05-01,CO,0.627,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-06-01,CO,0.585,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-07-01,CO,0.629,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-08-01,CO,0.708,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-09-01,CO,0.888,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-10-01,CO,0.629,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-11-01,CO,0.633,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-12-01,CO,0.565,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-01-01,CO,0.553,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-02-01,CO,0.544,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-03-01,CO,0.542,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-04-01,CO,0.473,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-05-01,CO,0.496,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-06-01,CO,0.529,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-07-01,CO,0.545,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-08-01,CO,0.585,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-09-01,CO,0.555,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-10-01,CO,0.548,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-11-01,CO,0.549,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-12-01,CO,0.62,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-01-01,CO,0.549,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-02-01,CO,0.533,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-03-01,CO,0.538,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-04-01,CO,0.563,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-05-01,CO,0.526,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-06-01,CO,0.488,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-07-01,CO,0.518,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-08-01,CO,0.494,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-09-01,CO,0.531,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-10-01,CO,0.564,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-11-01,CO,0.539,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-12-01,CO,0.562,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-01-01,CO,0.572,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-02-01,CO,0.515,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-03-01,CO,0.535,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-04-01,CO,0.575,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-05-01,CO,0.537,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-06-01,CO,0.513,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-07-01,CO,0.534,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-08-01,CO,0.508,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-09-01,CO,0.523,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-10-01,CO,0.501,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-11-01,CO,0.515,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-12-01,CO,0.503,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-01-01,CO,0.558,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-02-01,CO,0.524,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-03-01,CO,0.522,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-04-01,CO,0.592,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-05-01,CO,0.544,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-06-01,CO,0.54,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-07-01,CO,0.543,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-08-01,CO,0.547,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-09-01,CO,0.601,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-10-01,CO,0.621,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-11-01,CO,0.533,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-12-01,CO,0.536,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-01-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-02-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-03-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-04-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-05-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-06-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-07-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-08-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-09-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-10-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-11-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-12-01,CO,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-01-01,NO2,0.0076,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-02-01,NO2,0.0071,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-03-01,NO2,0.0082,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-04-01,NO2,0.0087,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-05-01,NO2,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-06-01,NO2,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-07-01,NO2,0.0082,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-08-01,NO2,0.0078,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-09-01,NO2,0.0076,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-10-01,NO2,0.0082,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-11-01,NO2,0.008,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-12-01,NO2,0.0074,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-01-01,NO2,0.0078,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-02-01,NO2,0.0069,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-03-01,NO2,0.0074,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-04-01,NO2,0.0075,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-05-01,NO2,0.0076,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-06-01,NO2,0.0074,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-07-01,NO2,0.0096,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-08-01,NO2,0.0077,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-09-01,NO2,0.0079,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-10-01,NO2,0.0076,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-11-01,NO2,0.0074,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-12-01,NO2,0.007,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-01-01,NO2,0.0066,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-02-01,NO2,0.0063,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-03-01,NO2,0.0074,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-04-01,NO2,0.0077,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-05-01,NO2,0.0074,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-06-01,NO2,0.0069,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-07-01,NO2,0.0075,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-08-01,NO2,0.0076,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-09-01,NO2,0.0081,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-10-01,NO2,0.0074,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-11-01,NO2,0.0073,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-12-01,NO2,0.0061,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-01-01,NO2,0.0059,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-02-01,NO2,0.0057,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-03-01,NO2,0.0051,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-04-01,NO2,0.0032,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-05-01,NO2,0.0047,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-06-01,NO2,0.0061,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-07-01,NO2,0.0065,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-08-01,NO2,0.0064,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-09-01,NO2,0.0064,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-10-01,NO2,0.0066,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-11-01,NO2,0.0061,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-12-01,NO2,0.0065,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-01-01,NO2,0.0054,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-02-01,NO2,0.0052,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-03-01,NO2,0.0062,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-04-01,NO2,0.0069,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-05-01,NO2,0.0059,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-06-01,NO2,0.0046,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-07-01,NO2,0.0048,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-08-01,NO2,0.0049,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-09-01,NO2,0.0058,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-10-01,NO2,0.0063,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-11-01,NO2,0.0063,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-12-01,NO2,0.006,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-01-01,NO2,0.0061,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-02-01,NO2,0.0052,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-03-01,NO2,0.0058,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-04-01,NO2,0.0068,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-05-01,NO2,0.0065,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-06-01,NO2,0.0064,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-07-01,NO2,0.0065,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-08-01,NO2,0.0067,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-09-01,NO2,0.0067,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-10-01,NO2,0.0063,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-11-01,NO2,0.0066,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-12-01,NO2,0.0062,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-01-01,NO2,0.006,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-02-01,NO2,0.0057,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-03-01,NO2,0.006,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-04-01,NO2,0.0068,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-05-01,NO2,0.0068,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-06-01,NO2,0.0068,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-07-01,NO2,0.0067,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-08-01,NO2,0.0068,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-09-01,NO2,0.0068,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-10-01,NO2,0.0071,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-11-01,NO2,0.0067,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-12-01,NO2,0.0059,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-01-01,NO2,0.0058,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-02-01,NO2,0.006,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-03-01,NO2,0.0063,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-04-01,NO2,0.006,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-05-01,NO2,0.0065,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-06-01,NO2,0.0065,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-07-01,NO2,0.0058,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-08-01,NO2,0.006,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-09-01,NO2,0.0058,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-10-01,NO2,0.0062,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-11-01,NO2,0.0067,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-12-01,NO2,0.0067,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-01-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-02-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-03-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-04-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-05-01,O3,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-06-01,O3,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-07-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-08-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-09-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-10-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-11-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-12-01,O3,0.02,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-01-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-02-01,O3,0.024,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-03-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-04-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-05-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-06-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-07-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-08-01,O3,0.02,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-09-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-10-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-11-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-12-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-01-01,O3,0.02,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-02-01,O3,0.02,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-03-01,O3,0.023,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-04-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-05-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-06-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-07-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-08-01,O3,0.02,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-09-01,O3,0.022,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-10-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-11-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-12-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-01-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-02-01,O3,0.02,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-03-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-04-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-05-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-06-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-07-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-08-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-09-01,O3,0.013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-10-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-11-01,O3,0.013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-12-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-01-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-02-01,O3,0.023,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-03-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-04-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-05-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-06-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-07-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-08-01,O3,0.013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-09-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-10-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-11-01,O3,0.013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-12-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-01-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-02-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-03-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-04-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-05-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-06-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-07-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-08-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-09-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-10-01,O3,0.013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-11-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-12-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-01-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-02-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-03-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-04-01,O3,0.019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-05-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-06-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-07-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-08-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-09-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-10-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-11-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-12-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-01-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-02-01,O3,0.014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-03-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-04-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-05-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-06-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-07-01,O3,0.018,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-08-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-09-01,O3,0.017,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-10-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-11-01,O3,0.016,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-12-01,O3,0.015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-01-01,PM 10,38.0,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-02-01,PM 10,40.89,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-03-01,PM 10,42.31,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-04-01,PM 10,37.76,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-05-01,PM 10,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-06-01,PM 10,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-07-01,PM 10,29.31,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-08-01,PM 10,24.96,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-09-01,PM 10,23.41,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-10-01,PM 10,24.32,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-11-01,PM 10,17.91,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-12-01,PM 10,21.6,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-01-01,PM 10,19.14,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-02-01,PM 10,26.06,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-03-01,PM 10,24.84,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-04-01,PM 10,25.64,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-05-01,PM 10,22.6,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-06-01,PM 10,25.88,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-07-01,PM 10,30.29,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-08-01,PM 10,36.47,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-09-01,PM 10,26.97,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-10-01,PM 10,22.22,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-11-01,PM 10,20.03,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-12-01,PM 10,18.89,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-01-01,PM 10,22.26,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-02-01,PM 10,23.59,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-03-01,PM 10,31.92,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-04-01,PM 10,26.95,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-05-01,PM 10,23.74,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-06-01,PM 10,22.16,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-07-01,PM 10,29.98,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-08-01,PM 10,42.2,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-09-01,PM 10,64.11,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-10-01,PM 10,22.39,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-11-01,PM 10,21.52,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-12-01,PM 10,19.09,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-01-01,PM 10,21.37,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-02-01,PM 10,23.18,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-03-01,PM 10,22.96,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-04-01,PM 10,17.7,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-05-01,PM 10,17.58,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-06-01,PM 10,19.48,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-07-01,PM 10,18.55,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-08-01,PM 10,22.81,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-09-01,PM 10,18.23,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-10-01,PM 10,19.19,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-11-01,PM 10,17.11,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-12-01,PM 10,18.55,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-01-01,PM 10,19.65,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-02-01,PM 10,25.74,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-03-01,PM 10,22.54,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-04-01,PM 10,22.55,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-05-01,PM 10,20.28,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-06-01,PM 10,19.65,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-07-01,PM 10,22.76,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-08-01,PM 10,18.16,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-09-01,PM 10,18.6,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-10-01,PM 10,20.53,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-11-01,PM 10,16.84,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-12-01,PM 10,18.86,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-01-01,PM 10,21.98,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-02-01,PM 10,18.09,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-03-01,PM 10,19.76,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-04-01,PM 10,20.59,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-05-01,PM 10,21.16,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-06-01,PM 10,18.67,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-07-01,PM 10,23.55,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-08-01,PM 10,20.64,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-09-01,PM 10,19.41,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-10-01,PM 10,17.35,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-11-01,PM 10,17.4,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-12-01,PM 10,18.44,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-01-01,PM 10,19.64,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-02-01,PM 10,20.17,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-03-01,PM 10,23.12,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-04-01,PM 10,28.58,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-05-01,PM 10,23.23,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-06-01,PM 10,24.82,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-07-01,PM 10,25.77,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-08-01,PM 10,25.26,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-09-01,PM 10,28.71,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-10-01,PM 10,28.68,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-11-01,PM 10,17.88,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-12-01,PM 10,17.48,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-01-01,PM 10,19.14,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-02-01,PM 10,21.06,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-03-01,PM 10,23.14,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-04-01,PM 10,24.34,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-05-01,PM 10,22.6,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-06-01,PM 10,22.68,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-07-01,PM 10,23.29,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-08-01,PM 10,23.57,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-09-01,PM 10,24.67,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-10-01,PM 10,22.22,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-11-01,PM 10,20.03,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-12-01,PM 10,18.89,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-01-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-02-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-03-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-04-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-05-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-06-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-07-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-08-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-09-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-10-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-11-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-12-01,PM 2.5,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-01-01,PM 2.5,11.43,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-02-01,PM 2.5,16.75,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-03-01,PM 2.5,15.61,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-04-01,PM 2.5,16.34,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-05-01,PM 2.5,14.54,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-06-01,PM 2.5,17.28,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-07-01,PM 2.5,20.63,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-08-01,PM 2.5,25.84,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-09-01,PM 2.5,18.21,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-10-01,PM 2.5,14.5,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-11-01,PM 2.5,12.33,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-12-01,PM 2.5,11.54,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-01-01,PM 2.5,12.96,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-02-01,PM 2.5,15.23,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-03-01,PM 2.5,23.17,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-04-01,PM 2.5,18.69,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-05-01,PM 2.5,15.52,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-06-01,PM 2.5,14.57,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-07-01,PM 2.5,20.79,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-08-01,PM 2.5,31.74,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-09-01,PM 2.5,52.86,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-10-01,PM 2.5,15.46,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-11-01,PM 2.5,13.92,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-12-01,PM 2.5,10.95,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-01-01,PM 2.5,12.62,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-02-01,PM 2.5,12.93,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-03-01,PM 2.5,15.01,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-04-01,PM 2.5,11.81,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-05-01,PM 2.5,11.14,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-06-01,PM 2.5,12.21,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-07-01,PM 2.5,11.74,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-08-01,PM 2.5,15.15,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-09-01,PM 2.5,11.52,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-10-01,PM 2.5,12.36,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-11-01,PM 2.5,10.1,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-12-01,PM 2.5,10.92,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-01-01,PM 2.5,11.36,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-02-01,PM 2.5,15.94,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-03-01,PM 2.5,14.3,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-04-01,PM 2.5,14.07,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-05-01,PM 2.5,12.62,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-06-01,PM 2.5,13.3,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-07-01,PM 2.5,15.27,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-08-01,PM 2.5,11.76,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-09-01,PM 2.5,12.06,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-10-01,PM 2.5,13.14,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-11-01,PM 2.5,10.02,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-12-01,PM 2.5,11.43,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-01-01,PM 2.5,13.6,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-02-01,PM 2.5,10.87,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-03-01,PM 2.5,12.2,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-04-01,PM 2.5,13.25,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-05-01,PM 2.5,13.29,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-06-01,PM 2.5,11.63,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-07-01,PM 2.5,14.86,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-08-01,PM 2.5,13.4,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-09-01,PM 2.5,12.42,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-10-01,PM 2.5,10.48,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-11-01,PM 2.5,10.38,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-12-01,PM 2.5,10.75,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-01-01,PM 2.5,12.22,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-02-01,PM 2.5,11.8,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-03-01,PM 2.5,13.93,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-04-01,PM 2.5,19.85,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-05-01,PM 2.5,14.63,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-06-01,PM 2.5,16.11,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-07-01,PM 2.5,15.57,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-08-01,PM 2.5,16.35,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-09-01,PM 2.5,19.92,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-10-01,PM 2.5,20.86,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-11-01,PM 2.5,10.72,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-12-01,PM 2.5,9.79,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-01-01,PM 2.5,10.43,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-02-01,PM 2.5,12.75,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-03-01,PM 2.5,14.63,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-04-01,PM 2.5,14.74,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-05-01,PM 2.5,14.54,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-06-01,PM 2.5,15.27,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-07-01,PM 2.5,15.63,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-08-01,PM 2.5,17.74,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-09-01,PM 2.5,15.21,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-10-01,PM 2.5,14.4,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-11-01,PM 2.5,12.33,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-12-01,PM 2.5,11.54,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-01-01,SO2,0.0023,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-02-01,SO2,0.0025,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-03-01,SO2,0.0028,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-04-01,SO2,0.0027,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-05-01,SO2,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-06-01,SO2,,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-07-01,SO2,0.0014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-08-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-09-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-10-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-11-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2017-12-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-01-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-02-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-03-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-04-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-05-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-06-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-07-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-08-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-09-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-10-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-11-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2018-12-01,SO2,0.0009,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-01-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-02-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-03-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-04-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-05-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-06-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-07-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-08-01,SO2,0.0013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-09-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-10-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-11-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2019-12-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-01-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-02-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-03-01,SO2,0.0009,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-04-01,SO2,0.0009,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-05-01,SO2,0.0009,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-06-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-07-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-08-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-09-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-10-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-11-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2020-12-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-01-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-02-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-03-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-04-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-05-01,SO2,0.001,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-06-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-07-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-08-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-09-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-10-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-11-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2021-12-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-01-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-02-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-03-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-04-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-05-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-06-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-07-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-08-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-09-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-10-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-11-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2022-12-01,SO2,0.0013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-01-01,SO2,0.0015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-02-01,SO2,0.0014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-03-01,SO2,0.0013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-04-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-05-01,SO2,0.0013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-06-01,SO2,0.0014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-07-01,SO2,0.0013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-08-01,SO2,0.0013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-09-01,SO2,0.0015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-10-01,SO2,0.0014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-11-01,SO2,0.0014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2023-12-01,SO2,0.0014,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-01-01,SO2,0.0013,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-02-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-03-01,SO2,0.0015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-04-01,SO2,0.0015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-05-01,SO2,0.0015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-06-01,SO2,0.0019,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-07-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-08-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-09-01,SO2,0.0015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-10-01,SO2,0.0012,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-11-01,SO2,0.0011,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05
+2024-12-01,SO2,0.0015,https://storage.data.gov.my/environment/air_pollution.csv,2026-11-05

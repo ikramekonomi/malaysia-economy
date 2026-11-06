@@ -199,7 +199,7 @@ dataset.
 | `lfs_parlimen` / `lfs_dun` | 666 / 1,800 | 2021–2023 | × constituency |
 | `employment_sector` | 198 | 2001–2022 | share of employment by MSIC sector × sex |
 
-**There is no salaries & wages dataset in the catalogue.** DOSM publishes formal-sector
+**There is no salaries & wages dataset in the catalogue** (as of 2026-08-03; superseded: the catalogue now publishes `wages_*` and `formal_wages_*`, ingested in wave 3, 2026-11-06). DOSM publishes formal-sector
 wages as a dashboard only, and the Salaries & Wages Survey has no catalogue entry. The
 nearest available wage aggregate is `gdp_annual_nominal_income`'s *compensation of
 employees* (component `i1`), which gives the labour share of GDP from 2010. Getting
@@ -348,6 +348,27 @@ at one full unit so "agrees to the last printed digit" counts as agreement.
 The INFO rows are source-side, not pipeline-side: every value was verified verbatim
 against the parquet arbiter first, so an identity that fails is a property of the
 publication. All of them are recorded row-by-row and none is corrected.
+
+## Wave 3 (2026-11-06)
+
+`pipeline/ingest_wave3.py` pulls 55 datasets that the catalogue added or that earlier passes deferred, with the
+same writer (values verbatim plus `retrieved_from`/`retrieved_date`), `_vintage.json` and `_vintage_log.csv`
+entries. `refresh.py` watches them. `pipeline/verify_wave3.py` compares every file with the parquet mirror of the
+same publication, cell by cell (`data/_validation_wave3.csv`: 165 checks, all PASS).
+
+| block | datasets |
+|---|---|
+| wages and productivity | `wages_state`, `wages_strata`, `wages_sector`, `wages_industry`, `wages_education`, `wages_age`, `wages_ethnicity`, `wages_occupation`, `wages_skill`, `wages_certificate`, `wages_noncitizen`, `wages_noncitizen_education`, `wages_real_state`, `wages_real_state_citizen`, `formal_wages`, `formal_wages_state`, `formal_wages_msic`, `formal_wages_band`, `formal_wages_percentile`, `formal_wages_msic_age`, `productivity_state` |
+| prices, output, people, services | `cpi_core`, `cpi_core_inflation`, `cpi_lowincome`, `cpi_strata`, `cpi_state_inflation`, `cpi_headline_inflation`, `cpi_annual`, `cpi_annual_inflation`, `gdp_district_real_supply`, `life_expectancy`, `life_expectancy_state_ethnic`, `life_expectancy_district`, `births_annual_state`, `fertility_state`, `deaths_maternal_state`, `deaths_early_childhood_state`, `completion_school_state`, `completion_school_district`, `hh_access_internet` |
+| environment, energy, water, agriculture | `air_pollution`, `ghg_emissions`, `water_pollution_basin`, `forest_reserve`, `forest_reserve_state`, `electricity_consumption`, `electricity_supply`, `energy_consumption_sector`, `energy_supply_commodity`, `water_consumption`, `water_production`, `mineral_extraction`, `timber_production`, `crops_state`, `fish_landings` |
+
+Left out on purpose: `cpi_3d`/`4d`/`5d`, and `population_dun`/`parlimen` (age × ethnicity grain).
+
+Held at L1 only:
+* `completion_school_district`: MOE's education districts, not DOSM's administrative districts;
+* the states' CPI inflation and every month-on-month rate: derivable from the indexes core holds;
+* the 'Supra' rows of district GDP;
+* the 'Semenanjung Malaysia' forest subtotal.
 
 ## Provenance
 

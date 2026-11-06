@@ -36,14 +36,28 @@ class Refused(Exception):
     """A derivation whose inputs do not match. The message says why; nothing is computed."""
 
 
+def observation_files():
+    """The fact_observation table: one CSV per indicator family under core/fact_observation/ (decision D34)."""
+    import glob
+    return sorted(glob.glob(os.path.join(CORE, "fact_observation", "*.csv")))
+
+
+def read_observations():
+    out = []
+    for p in observation_files():
+        out.extend(_rows(p))
+    return out
+
+
 class Warehouse:
     def __init__(self):
-        fact = os.path.join(CORE, "fact_observation.csv")
-        self.obs = _rows(fact)
+        self.obs = read_observations()
         h = hashlib.sha256()
-        with open(fact, "rb") as f:
-            for chunk in iter(lambda: f.read(1 << 20), b""):
-                h.update(chunk)
+        for fact in observation_files():  # the release id covers every shard, in name order
+            h.update(os.path.basename(fact).encode())
+            with open(fact, "rb") as f:
+                for chunk in iter(lambda: f.read(1 << 20), b""):
+                    h.update(chunk)
         self.release_id = "core-" + h.hexdigest()[:12]
         for r in self.obs:
             r["obs_id"] = "o" + hashlib.sha1("|".join(r[k] for k in PK).encode()).hexdigest()[:12]

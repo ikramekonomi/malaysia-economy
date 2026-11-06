@@ -1,0 +1,1531 @@
+state,stage,sex,date,completion,retrieved_from,retrieved_date
+Malaysia,primary,both,2016-01-01,98.37,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2017-01-01,98.07,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2018-01-01,97.67,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2019-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2020-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2021-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2022-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2023-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2024-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,both,2025-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2016-01-01,99.14,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2017-01-01,98.83,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2018-01-01,98.52,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2019-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2020-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2021-01-01,100.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2022-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2023-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2024-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,female,2025-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2016-01-01,97.64,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2017-01-01,97.34,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2018-01-01,96.86,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2019-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2020-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2021-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2022-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2023-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2024-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,primary,male,2025-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2016-01-01,95.582,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2017-01-01,97.7251,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2018-01-01,96.6377,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2019-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2020-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2021-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2022-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2023-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2024-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,both,2025-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2016-01-01,97.0444,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2017-01-01,98.6532,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2018-01-01,97.6811,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2019-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2020-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2021-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2022-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2023-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2024-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,female,2025-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2016-01-01,94.1613,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2017-01-01,96.813,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2018-01-01,95.6254,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2019-01-01,95.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2020-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2021-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2022-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2023-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2024-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_lower,male,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2016-01-01,99.2484,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2017-01-01,96.3806,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2018-01-01,95.6307,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2019-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2020-01-01,92.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2021-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2022-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2023-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2024-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,both,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2016-01-01,99.4922,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2017-01-01,97.492,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2018-01-01,96.5132,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2019-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2020-01-01,93.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2021-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2022-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2023-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2024-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,female,2025-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2016-01-01,98.9922,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2017-01-01,95.2126,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2018-01-01,94.7178,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2019-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2020-01-01,92.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2021-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2022-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2023-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2024-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Malaysia,secondary_upper,male,2025-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2016-01-01,99.06,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2017-01-01,99.14,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2018-01-01,97.56,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2019-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2020-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2021-01-01,95.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2022-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2023-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2024-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,both,2025-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2016-01-01,99.48,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2017-01-01,99.71,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2018-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2019-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2020-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2021-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2022-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2023-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,female,2025-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2016-01-01,98.67,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2017-01-01,98.59,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2018-01-01,96.97,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2019-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2020-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2021-01-01,91.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2022-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2023-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2024-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,primary,male,2025-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2016-01-01,94.7645,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2017-01-01,99.5251,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2018-01-01,99.6891,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2019-01-01,95.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2020-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2021-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2022-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2023-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2024-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,both,2025-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2016-01-01,96.7463,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2017-01-01,100.5709,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2018-01-01,99.4141,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2019-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2020-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2021-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2022-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2023-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2024-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,female,2025-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2016-01-01,92.884,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2017-01-01,98.5141,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2018-01-01,99.9562,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2019-01-01,93.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2020-01-01,95.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2021-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2022-01-01,102.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2023-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_lower,male,2025-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2016-01-01,99.5156,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2017-01-01,99.2906,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2018-01-01,93.7421,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2019-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2020-01-01,89.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2021-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2022-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2023-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2024-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,both,2025-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2016-01-01,99.9629,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2017-01-01,100.545,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2018-01-01,94.899,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2019-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2020-01-01,90.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2021-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2022-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2023-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2024-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,female,2025-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2016-01-01,99.0459,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2017-01-01,97.966,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2018-01-01,92.5617,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2019-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2020-01-01,88.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2021-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2022-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2023-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2024-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Johor,secondary_upper,male,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2016-01-01,99.97,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2017-01-01,100.12,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2018-01-01,100.34,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2019-01-01,100.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2020-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2021-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2022-01-01,101.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2023-01-01,100.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2024-01-01,101.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,both,2025-01-01,101.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2016-01-01,100.85,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2017-01-01,100.84,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2018-01-01,101.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2019-01-01,100.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2020-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2021-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2022-01-01,102.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2023-01-01,101.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2024-01-01,102.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,female,2025-01-01,102.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2016-01-01,99.11,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2017-01-01,99.43,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2018-01-01,99.33,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2019-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2020-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2021-01-01,95.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2022-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2023-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2024-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,primary,male,2025-01-01,100.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2016-01-01,95.9472,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2017-01-01,97.3087,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2018-01-01,96.3721,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2019-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2020-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2021-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2022-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2023-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2024-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,both,2025-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2016-01-01,97.6341,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2017-01-01,97.6467,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2018-01-01,97.7081,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2019-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2020-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2021-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2022-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2023-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2024-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,female,2025-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2016-01-01,94.3062,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2017-01-01,96.9697,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2018-01-01,95.0751,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2019-01-01,94.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2020-01-01,95.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2021-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2022-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2023-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2024-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_lower,male,2025-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2016-01-01,99.0933,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2017-01-01,97.451,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2018-01-01,95.7661,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2019-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2020-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2021-01-01,100.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2022-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2023-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2024-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,both,2025-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2016-01-01,98.8679,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2017-01-01,98.573,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2018-01-01,97.5336,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2019-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2020-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2021-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2022-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2023-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2024-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,female,2025-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2016-01-01,99.3418,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2017-01-01,96.2206,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2018-01-01,93.9202,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2019-01-01,95.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2020-01-01,95.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2021-01-01,101.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2022-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2023-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2024-01-01,94.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kedah,secondary_upper,male,2025-01-01,95.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2016-01-01,100.32,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2017-01-01,100.17,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2018-01-01,99.32,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2019-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2020-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2021-01-01,100.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2022-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2023-01-01,101.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2024-01-01,101.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,both,2025-01-01,102.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2016-01-01,101.49,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2017-01-01,101.41,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2018-01-01,100.59,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2019-01-01,101.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2020-01-01,101.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2021-01-01,101.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2022-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2023-01-01,102.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2024-01-01,102.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,female,2025-01-01,104.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2016-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2017-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2018-01-01,98.12,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2019-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2020-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2021-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2022-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2023-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2024-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,primary,male,2025-01-01,100.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2016-01-01,96.242,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2017-01-01,94.65,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2018-01-01,85.9723,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2019-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2020-01-01,109.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2021-01-01,111.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2022-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2023-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2024-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,both,2025-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2016-01-01,96.6945,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2017-01-01,96.9235,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2018-01-01,86.3164,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2019-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2020-01-01,112.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2021-01-01,112.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2022-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2023-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2024-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,female,2025-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2016-01-01,95.7847,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2017-01-01,92.3972,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2018-01-01,85.6336,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2019-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2020-01-01,107.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2021-01-01,110.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2022-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2023-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2024-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_lower,male,2025-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2016-01-01,98.4254,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2017-01-01,96.8805,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2018-01-01,88.4185,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2019-01-01,109.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2020-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2021-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2022-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2023-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2024-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,both,2025-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2016-01-01,97.9233,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2017-01-01,98.8592,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2018-01-01,87.4555,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2019-01-01,111.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2020-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2021-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2022-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2023-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2024-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,female,2025-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2016-01-01,98.9638,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2017-01-01,94.7214,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2018-01-01,89.4737,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2019-01-01,106.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2020-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2021-01-01,101.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2022-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2023-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Kelantan,secondary_upper,male,2025-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2016-01-01,98.92,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2017-01-01,98.87,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2018-01-01,98.92,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2019-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2020-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2021-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2022-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2023-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,both,2025-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2016-01-01,100.17,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2017-01-01,99.92,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2018-01-01,99.17,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2019-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2020-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2021-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2022-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2023-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2024-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,female,2025-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2016-01-01,97.73,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2017-01-01,97.87,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2018-01-01,98.67,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2019-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2020-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2021-01-01,93.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2022-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2023-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2024-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,primary,male,2025-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2016-01-01,99.0276,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2017-01-01,98.5646,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2018-01-01,99.9172,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2019-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2020-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2021-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2022-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2023-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2024-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,both,2025-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2016-01-01,99.9568,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2017-01-01,99.2662,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2018-01-01,100.0305,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2019-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2020-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2021-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2022-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2023-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2024-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,female,2025-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2016-01-01,98.1113,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2017-01-01,97.8447,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2018-01-01,99.8065,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2019-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2020-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2021-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2022-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2023-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2024-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_lower,male,2025-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2016-01-01,99.2746,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2017-01-01,97.8254,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2018-01-01,98.245,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2019-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2020-01-01,94.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2021-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2022-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2023-01-01,101.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2024-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,both,2025-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2016-01-01,99.762,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2017-01-01,98.7135,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2018-01-01,98.5104,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2019-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2020-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2021-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2022-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2023-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2024-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,female,2025-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2016-01-01,98.7998,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2017-01-01,96.8979,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2018-01-01,97.9713,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2019-01-01,95.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2020-01-01,93.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2021-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2022-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2023-01-01,103.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Melaka,secondary_upper,male,2025-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2016-01-01,98.29,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2017-01-01,98.95,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2018-01-01,99.24,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2019-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2020-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2021-01-01,102.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2022-01-01,101.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2023-01-01,101.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2024-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,both,2025-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2016-01-01,99.96,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2017-01-01,99.49,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2018-01-01,100.67,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2019-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2020-01-01,100.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2021-01-01,102.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2022-01-01,102.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2023-01-01,101.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2024-01-01,100.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,female,2025-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2016-01-01,96.74,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2017-01-01,98.44,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2018-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2019-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2020-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2021-01-01,102.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2022-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2023-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2024-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,primary,male,2025-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2016-01-01,97.3067,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2017-01-01,99.5664,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2018-01-01,97.1165,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2019-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2020-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2021-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2022-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2023-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2024-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,both,2025-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2016-01-01,98.235,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2017-01-01,100.411,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2018-01-01,98.2037,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2019-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2020-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2021-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2022-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2023-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2024-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,female,2025-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2016-01-01,96.4068,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2017-01-01,98.7444,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2018-01-01,96.0503,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2019-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2020-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2021-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2022-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2023-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2024-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_lower,male,2025-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2016-01-01,100.1393,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2017-01-01,96.707,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2018-01-01,96.7493,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2019-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2020-01-01,93.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2021-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2022-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2023-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2024-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,both,2025-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2016-01-01,100.3412,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2017-01-01,97.8202,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2018-01-01,97.5787,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2019-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2020-01-01,93.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2021-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2022-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2023-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2024-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,female,2025-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2016-01-01,99.9323,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2017-01-01,95.5919,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2018-01-01,95.9152,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2019-01-01,95.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2020-01-01,93.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2021-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2022-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2023-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2024-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Negeri Sembilan,secondary_upper,male,2025-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2016-01-01,97.72,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2017-01-01,97.57,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2018-01-01,97.13,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2019-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2020-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2021-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2022-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2023-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,both,2025-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2016-01-01,98.72,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2017-01-01,98.85,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2018-01-01,97.65,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2019-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2020-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2021-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2022-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2023-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2024-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,female,2025-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2016-01-01,96.81,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2017-01-01,96.34,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2018-01-01,96.63,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2019-01-01,95.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2020-01-01,96.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2021-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2022-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2023-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2024-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,primary,male,2025-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2016-01-01,96.3753,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2017-01-01,97.636,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2018-01-01,94.9303,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2019-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2020-01-01,96.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2021-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2022-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2023-01-01,95.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2024-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,both,2025-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2016-01-01,96.6483,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2017-01-01,98.1296,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2018-01-01,97.0508,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2019-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2020-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2021-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2022-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2023-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2024-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,female,2025-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2016-01-01,96.1076,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2017-01-01,97.1421,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2018-01-01,92.8984,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2019-01-01,95.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2020-01-01,94.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2021-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2022-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2023-01-01,94.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2024-01-01,94.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_lower,male,2025-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2016-01-01,99.6813,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2017-01-01,90.8114,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2018-01-01,99.1357,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2019-01-01,92.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2020-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2021-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2022-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2023-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2024-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,both,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2016-01-01,99.5629,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2017-01-01,91.9756,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2018-01-01,96.9521,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2019-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2020-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2021-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2022-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2023-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2024-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,female,2025-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2016-01-01,99.8058,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2017-01-01,89.6342,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2018-01-01,101.3786,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2019-01-01,89.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2020-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2021-01-01,100.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2022-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2023-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2024-01-01,95.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pahang,secondary_upper,male,2025-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2016-01-01,98.83,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2017-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2018-01-01,98.09,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2019-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2020-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2021-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2022-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2023-01-01,100.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2024-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,both,2025-01-01,100.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2016-01-01,99.28,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2017-01-01,99.37,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2018-01-01,98.51,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2019-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2020-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2021-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2022-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2023-01-01,101.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2024-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,female,2025-01-01,101.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2016-01-01,98.39,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2017-01-01,98.44,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2018-01-01,97.69,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2019-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2020-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2021-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2022-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2023-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2024-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,primary,male,2025-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2016-01-01,94.9094,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2017-01-01,96.7561,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2018-01-01,95.9696,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2019-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2020-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2021-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2022-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2023-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2024-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,both,2025-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2016-01-01,97.142,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2017-01-01,98.1378,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2018-01-01,97.178,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2019-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2020-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2021-01-01,100.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2022-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2023-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2024-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,female,2025-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2016-01-01,92.8087,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2017-01-01,95.3946,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2018-01-01,94.8274,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2019-01-01,96.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2020-01-01,95.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2021-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2022-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2023-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2024-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_lower,male,2025-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2016-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2017-01-01,94.4357,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2018-01-01,97.4355,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2019-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2020-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2021-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2022-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2023-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2024-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,both,2025-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2016-01-01,99.1742,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2017-01-01,95.7164,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2018-01-01,98.4112,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2019-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2020-01-01,93.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2021-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2022-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2023-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2024-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,female,2025-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2016-01-01,99.0226,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2017-01-01,93.1089,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2018-01-01,96.4462,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2019-01-01,96.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2020-01-01,91.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2021-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2022-01-01,100.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2023-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2024-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perak,secondary_upper,male,2025-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2016-01-01,101.66,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2017-01-01,99.22,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2018-01-01,99.61,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2019-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2020-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2021-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2022-01-01,105.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2023-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2024-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,both,2025-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2016-01-01,100.66,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2017-01-01,100.44,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2018-01-01,100.11,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2019-01-01,101.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2020-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2021-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2022-01-01,107.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2023-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2024-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,female,2025-01-01,102.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2016-01-01,102.63,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2017-01-01,98.05,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2018-01-01,99.13,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2019-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2020-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2021-01-01,94.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2022-01-01,103.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2023-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2024-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,primary,male,2025-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2016-01-01,93.6557,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2017-01-01,96.4581,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2018-01-01,96.5534,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2019-01-01,93.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2020-01-01,94.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2021-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2022-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2023-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2024-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,both,2025-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2016-01-01,95.152,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2017-01-01,96.6188,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2018-01-01,98.2229,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2019-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2020-01-01,95.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2021-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2022-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2023-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2024-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,female,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2016-01-01,92.1393,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2017-01-01,96.2909,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2018-01-01,94.895,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2019-01-01,90.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2020-01-01,93.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2021-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2022-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2023-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_lower,male,2025-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2016-01-01,91.1528,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2017-01-01,94.5276,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2018-01-01,94.6984,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2019-01-01,94.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2020-01-01,93.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2021-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2022-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2023-01-01,95.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2024-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,both,2025-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2016-01-01,93.1364,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2017-01-01,95.4263,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2018-01-01,96.6413,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2019-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2020-01-01,95.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2021-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2022-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2023-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2024-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,female,2025-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2016-01-01,89.2025,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2017-01-01,93.618,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2018-01-01,92.6738,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2019-01-01,92.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2020-01-01,91.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2021-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2022-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2023-01-01,95.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2024-01-01,93.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Perlis,secondary_upper,male,2025-01-01,94.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2016-01-01,96.55,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2017-01-01,96.71,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2018-01-01,96.52,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2019-01-01,96.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2020-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2021-01-01,94.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2022-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2023-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2024-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,both,2025-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2016-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2017-01-01,98.16,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2018-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2019-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2020-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2021-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2022-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2023-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2024-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,female,2025-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2016-01-01,95.93,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2017-01-01,95.35,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2018-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2019-01-01,95.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2020-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2021-01-01,91.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2022-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2023-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2024-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,primary,male,2025-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2016-01-01,94.7517,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2017-01-01,97.3899,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2018-01-01,95.4679,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2019-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2020-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2021-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2022-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2023-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2024-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,both,2025-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2016-01-01,96.7884,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2017-01-01,97.4851,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2018-01-01,96.6006,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2019-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2020-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2021-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2022-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2023-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,female,2025-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2016-01-01,92.7462,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2017-01-01,97.2984,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2018-01-01,94.3396,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2019-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2020-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2021-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2022-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2023-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2024-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_lower,male,2025-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2016-01-01,100.1947,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2017-01-01,95.4438,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2018-01-01,94.9794,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2019-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2020-01-01,92.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2021-01-01,95.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2022-01-01,100.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2023-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2024-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,both,2025-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2016-01-01,100.3956,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2017-01-01,96.4923,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2018-01-01,96.6369,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2019-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2020-01-01,92.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2021-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2022-01-01,101.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2023-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2024-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,female,2025-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2016-01-01,99.9818,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2017-01-01,94.3466,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2018-01-01,93.2466,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2019-01-01,95.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2020-01-01,91.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2021-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2022-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2023-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2024-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Pulau Pinang,secondary_upper,male,2025-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2016-01-01,99.75,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2017-01-01,99.04,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2018-01-01,99.12,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2019-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2020-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2021-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2022-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2023-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2024-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,both,2025-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2016-01-01,100.24,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2017-01-01,99.59,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2018-01-01,100.16,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2019-01-01,101.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2020-01-01,101.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2021-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2022-01-01,100.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2023-01-01,101.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2024-01-01,101.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,female,2025-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2016-01-01,99.29,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2017-01-01,98.51,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2018-01-01,98.14,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2019-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2020-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2021-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2022-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2023-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2024-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,primary,male,2025-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2016-01-01,90.1018,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2017-01-01,95.0703,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2018-01-01,94.6595,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2019-01-01,94.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2020-01-01,95.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2021-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2022-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2023-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2024-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,both,2025-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2016-01-01,92.4599,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2017-01-01,96.8362,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2018-01-01,96.9419,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2019-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2020-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2021-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2022-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2023-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2024-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,female,2025-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2016-01-01,87.8606,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2017-01-01,93.3594,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2018-01-01,92.4622,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2019-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2020-01-01,93.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2021-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2022-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2023-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2024-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_lower,male,2025-01-01,95.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2016-01-01,97.5882,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2017-01-01,96.3273,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2018-01-01,95.4015,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2019-01-01,95.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2020-01-01,94.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2021-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2022-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2023-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2024-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,both,2025-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2016-01-01,98.1709,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2017-01-01,97.5322,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2018-01-01,96.7491,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2019-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2020-01-01,95.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2021-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2022-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2023-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2024-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,female,2025-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2016-01-01,96.9636,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2017-01-01,95.0459,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2018-01-01,93.9898,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2019-01-01,93.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2020-01-01,92.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2021-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2022-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2023-01-01,95.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2024-01-01,94.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sabah,secondary_upper,male,2025-01-01,95.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2016-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2017-01-01,99.54,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2018-01-01,99.23,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2019-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2020-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2021-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2022-01-01,100.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2023-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2024-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,both,2025-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2016-01-01,100.02,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2017-01-01,99.98,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2018-01-01,99.57,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2019-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2020-01-01,100.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2021-01-01,100.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2022-01-01,101.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2023-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2024-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,female,2025-01-01,100.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2016-01-01,98.82,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2017-01-01,99.13,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2018-01-01,98.91,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2019-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2020-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2021-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2022-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2023-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2024-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,primary,male,2025-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2016-01-01,94.3106,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2017-01-01,95.7767,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2018-01-01,95.3701,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2019-01-01,95.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2020-01-01,96.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2021-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2022-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2023-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2024-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,both,2025-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2016-01-01,96.4445,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2017-01-01,97.5599,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2018-01-01,97.2874,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2019-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2020-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2021-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2022-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2023-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2024-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,female,2025-01-01,97.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2016-01-01,92.2721,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2017-01-01,94.0587,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2018-01-01,93.5813,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2019-01-01,93.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2020-01-01,94.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2021-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2022-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2023-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2024-01-01,95.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_lower,male,2025-01-01,95.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2016-01-01,97.7736,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2017-01-01,95.9102,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2018-01-01,96.2509,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2019-01-01,96.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2020-01-01,91.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2021-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2022-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2023-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2024-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,both,2025-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2016-01-01,98.4458,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2017-01-01,97.2364,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2018-01-01,97.283,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2019-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2020-01-01,92.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2021-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2022-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2023-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2024-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,female,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2016-01-01,97.0583,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2017-01-01,94.4892,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2018-01-01,95.1596,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2019-01-01,94.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2020-01-01,90.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2021-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2022-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2023-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2024-01-01,94.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Sarawak,secondary_upper,male,2025-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2016-01-01,96.86,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2017-01-01,96.03,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2018-01-01,95.56,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2019-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2020-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2021-01-01,104.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2022-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2023-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2024-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,both,2025-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2016-01-01,97.59,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2017-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2018-01-01,96.51,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2019-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2020-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2021-01-01,105.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2022-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2023-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2024-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,female,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2016-01-01,96.17,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2017-01-01,95.48,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2018-01-01,94.68,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2019-01-01,95.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2020-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2021-01-01,103.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2022-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2023-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2024-01-01,96.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,primary,male,2025-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2016-01-01,98.0499,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2017-01-01,100.1307,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2018-01-01,102.0542,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2019-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2020-01-01,97.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2021-01-01,101.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2022-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2023-01-01,101.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2024-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,both,2025-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2016-01-01,98.6911,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2017-01-01,100.2461,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2018-01-01,101.8743,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2019-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2020-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2021-01-01,101.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2022-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2023-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2024-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,female,2025-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2016-01-01,97.4134,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2017-01-01,100.0173,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2018-01-01,102.2325,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2019-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2020-01-01,95.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2021-01-01,102.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2022-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2023-01-01,101.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2024-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_lower,male,2025-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2016-01-01,100.3258,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2017-01-01,97.3706,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2018-01-01,97.6012,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2019-01-01,95.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2020-01-01,93.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2021-01-01,95.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2022-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2023-01-01,102.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2024-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,both,2025-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2016-01-01,100.6855,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2017-01-01,98.2312,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2018-01-01,98.9636,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2019-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2020-01-01,93.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2021-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2022-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2023-01-01,101.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2024-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,female,2025-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2016-01-01,99.9505,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2017-01-01,96.4688,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2018-01-01,96.2022,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2019-01-01,94.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2020-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2021-01-01,95.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2022-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2023-01-01,103.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2024-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Selangor,secondary_upper,male,2025-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2016-01-01,100.43,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2017-01-01,100.06,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2018-01-01,99.87,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2019-01-01,100.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2020-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2021-01-01,103.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2022-01-01,103.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2023-01-01,101.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2024-01-01,101.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,both,2025-01-01,101.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2016-01-01,101.43,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2017-01-01,101.45,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2018-01-01,101.81,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2019-01-01,101.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2020-01-01,101.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2021-01-01,104.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2022-01-01,104.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2023-01-01,102.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2024-01-01,102.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,female,2025-01-01,103.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2016-01-01,99.51,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2017-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2018-01-01,97.99,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2019-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2020-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2021-01-01,102.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2022-01-01,103.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2023-01-01,100.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2024-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,primary,male,2025-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2016-01-01,96.8437,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2017-01-01,98.9429,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2018-01-01,100.4034,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2019-01-01,101.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2020-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2021-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2022-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2023-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2024-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,both,2025-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2016-01-01,97.9727,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2017-01-01,99.5636,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2018-01-01,100.3665,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2019-01-01,101.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2020-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2021-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2022-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2023-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2024-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,female,2025-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2016-01-01,95.7021,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2017-01-01,98.3104,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2018-01-01,100.4405,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2019-01-01,101.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2020-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2021-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2022-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2023-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2024-01-01,96.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_lower,male,2025-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2016-01-01,99.5952,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2017-01-01,98.0835,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2018-01-01,98.1639,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2019-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2020-01-01,96.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2021-01-01,100.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2022-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2023-01-01,101.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2024-01-01,96.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,both,2025-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2016-01-01,99.4789,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2017-01-01,98.8052,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2018-01-01,98.4996,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2019-01-01,100.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2020-01-01,97.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2021-01-01,100.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2022-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2023-01-01,102.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2024-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,female,2025-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2016-01-01,99.7217,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2017-01-01,97.3145,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2018-01-01,97.8014,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2019-01-01,99.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2020-01-01,94.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2021-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2022-01-01,98.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2023-01-01,101.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2024-01-01,95.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+Terengganu,secondary_upper,male,2025-01-01,96.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2016-01-01,91.93,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2017-01-01,90.37,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2018-01-01,91.18,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2019-01-01,91.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2020-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2021-01-01,94.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2022-01-01,93.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2023-01-01,92.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2024-01-01,92.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,both,2025-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2016-01-01,93.13,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2017-01-01,91.38,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2018-01-01,92.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2019-01-01,92.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2020-01-01,93.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2021-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2022-01-01,94.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2023-01-01,93.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2024-01-01,92.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,female,2025-01-01,93.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2016-01-01,90.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2017-01-01,89.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2018-01-01,90.31,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2019-01-01,90.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2020-01-01,91.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2021-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2022-01-01,92.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2023-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2024-01-01,91.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,primary,male,2025-01-01,91.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2016-01-01,98.0524,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2017-01-01,96.7909,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2018-01-01,94.0251,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2019-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2020-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2021-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2022-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2023-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2024-01-01,98.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,both,2025-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2016-01-01,99.2771,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2017-01-01,97.4007,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2018-01-01,95.4319,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2019-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2020-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2021-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2022-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2023-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2024-01-01,98.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,female,2025-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2016-01-01,96.8634,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2017-01-01,96.1827,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2018-01-01,92.6775,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2019-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2020-01-01,94.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2021-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2022-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2023-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2024-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_lower,male,2025-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2016-01-01,100.5322,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2017-01-01,92.2802,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2018-01-01,91.9811,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2019-01-01,99.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2020-01-01,80.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2021-01-01,94.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2022-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2023-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2024-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,both,2025-01-01,97.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2016-01-01,101.1574,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2017-01-01,92.2339,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2018-01-01,93.8397,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2019-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2020-01-01,80.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2021-01-01,94.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2022-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2023-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2024-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,female,2025-01-01,98.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2016-01-01,99.9075,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2017-01-01,92.3269,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2018-01-01,90.1594,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2019-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2020-01-01,80.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2021-01-01,94.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2022-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2023-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2024-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Kuala Lumpur,secondary_upper,male,2025-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2016-01-01,95.05,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2017-01-01,91.31,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2018-01-01,94.54,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2019-01-01,89.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2020-01-01,94.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2021-01-01,91.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2022-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2023-01-01,92.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2024-01-01,92.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,both,2025-01-01,94.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2016-01-01,97.96,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2017-01-01,90.31,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2018-01-01,94.99,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2019-01-01,90.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2020-01-01,96.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2021-01-01,93.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2022-01-01,93.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2023-01-01,93.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2024-01-01,95.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,female,2025-01-01,95.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2016-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2017-01-01,92.24,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2018-01-01,94.09,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2019-01-01,89.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2020-01-01,91.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2021-01-01,89.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2022-01-01,90.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2023-01-01,92.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2024-01-01,88.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,primary,male,2025-01-01,92.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2016-01-01,78.3156,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2017-01-01,99.43,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2018-01-01,89.127,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2019-01-01,94.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2020-01-01,103.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2021-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2022-01-01,102.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2023-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2024-01-01,96.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,both,2025-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2016-01-01,80.4911,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2017-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2018-01-01,89.0909,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2019-01-01,94.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2020-01-01,104.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2021-01-01,98.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2022-01-01,103.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2023-01-01,98.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2024-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,female,2025-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2016-01-01,76.2581,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2017-01-01,99.3631,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2018-01-01,89.1603,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2019-01-01,94.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2020-01-01,103.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2021-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2022-01-01,102.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2023-01-01,94.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2024-01-01,95.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_lower,male,2025-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2016-01-01,101.9983,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2017-01-01,97.0185,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2018-01-01,91.4501,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2019-01-01,99.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2020-01-01,95.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2021-01-01,96.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2022-01-01,99.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2023-01-01,95.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2024-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,both,2025-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2016-01-01,100.1721,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2017-01-01,98.7138,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2018-01-01,91.0774,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2019-01-01,103.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2020-01-01,95.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2021-01-01,95.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2022-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2023-01-01,95.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2024-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,female,2025-01-01,96.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2016-01-01,103.8596,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2017-01-01,95.315,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2018-01-01,91.8197,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2019-01-01,96.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2020-01-01,96.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2021-01-01,97.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2022-01-01,99.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2023-01-01,95.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2024-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Labuan,secondary_upper,male,2025-01-01,96.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2016-01-01,103.48,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2017-01-01,103.56,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2018-01-01,101.26,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2019-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2020-01-01,101.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2021-01-01,76.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2022-01-01,102.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2023-01-01,103.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2024-01-01,105.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,both,2025-01-01,108.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2016-01-01,104.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2017-01-01,103.56,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2018-01-01,102.78,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2019-01-01,99.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2020-01-01,104.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2021-01-01,80.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2022-01-01,104.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2023-01-01,101.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2024-01-01,106.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,female,2025-01-01,111.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2016-01-01,102.23,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2017-01-01,103.56,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2018-01-01,99.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2019-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2020-01-01,98.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2021-01-01,73.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2022-01-01,101.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2023-01-01,105.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2024-01-01,104.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,primary,male,2025-01-01,105.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2016-01-01,110.3378,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2017-01-01,107.5758,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2018-01-01,97.7966,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2019-01-01,103.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2020-01-01,105.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2021-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2022-01-01,103.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2023-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2024-01-01,100.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,both,2025-01-01,98.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2016-01-01,111.7188,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2017-01-01,109.7004,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2018-01-01,98.8447,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2019-01-01,108.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2020-01-01,108.3,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2021-01-01,97.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2022-01-01,105.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2023-01-01,101.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2024-01-01,101.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,female,2025-01-01,98.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2016-01-01,109.2857,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2017-01-01,105.889,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2018-01-01,96.9728,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2019-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2020-01-01,103.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2021-01-01,97.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2022-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2023-01-01,99.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2024-01-01,99.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_lower,male,2025-01-01,97.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2016-01-01,109.4761,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2017-01-01,97.0238,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2018-01-01,95.034,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2019-01-01,103.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2020-01-01,93.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2021-01-01,93.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2022-01-01,101.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2023-01-01,97.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2024-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,both,2025-01-01,100.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2016-01-01,110.9515,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2017-01-01,95.2872,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2018-01-01,94.8438,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2019-01-01,101.2,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2020-01-01,93.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2021-01-01,94.5,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2022-01-01,99.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2023-01-01,98.1,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2024-01-01,100.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,female,2025-01-01,100.6,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2016-01-01,108.3671,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2017-01-01,98.4394,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2018-01-01,95.1807,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2019-01-01,105.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2020-01-01,93.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2021-01-01,92.9,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2022-01-01,104.0,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2023-01-01,97.7,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2024-01-01,100.8,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05
+W.P. Putrajaya,secondary_upper,male,2025-01-01,100.4,https://storage.data.gov.my/education/completion_school_state.csv,2026-11-05

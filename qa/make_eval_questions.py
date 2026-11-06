@@ -312,6 +312,25 @@ q("5", "What federal revenue did RMKe-12 target for 2025?", "get_gap_view",
   "row_field:indicator_code=federal_gov.revenue.total:target", s(rmk12("10", "", "Hasil", "sasaran_2025") * 1000000))
 
 
+def dosm_cell(ds, col, **where):
+    with open(os.path.join(REPO, "sources", "dosm", "data", f"{ds}.csv"), newline="") as fh:
+        return next(r[col] for r in csv.DictReader(fh) if all(r[k] == v for k, v in where.items()))
+
+
+q("2", "What was the median monthly wage in Sabah in 2025 (Salaries & Wages Survey)?", "get_series",
+  series("wages.median", "MY-12", "2025"), "value",
+  s(Decimal(dosm_cell("wages_state", "wages_median", state="Sabah", date="2025-01-01", sex="both"))))
+q("2", "What was the median monthly wage of women in Malaysia in 2025?", "get_series",
+  {**series("wages.median", "MY", "2025"), "breakdown": "sex=female"}, "value",
+  s(Decimal(dosm_cell("wages_state", "wages_median", state="Malaysia", date="2025-01-01", sex="female"))))
+q("9", "What were Malaysia's greenhouse-gas emissions in 2023, excluding LULUCF?", "get_series",
+  series("environment.ghg_emissions", "MY", "2023"),
+  "value", s(Decimal(dosm_cell("ghg_emissions", "emissions", date="2023-01-01", source="total"))))
+q("1", "What is life expectancy at birth in Malaysia in 2026?", "get_series",
+  series("life_expectancy", "MY", "2026"), "value",
+  s(Decimal(dosm_cell("life_expectancy", "life_expectancy", date="2026-01-01", sex="both", ethnicity="overall"))))
+
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")

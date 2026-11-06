@@ -3,6 +3,7 @@ ag_sijil_eselfaudit,LKAN 1/2025,CMD.4.2025.pdf,https://parlimen.gov.my/ipms/eps/
 ag_sijil_eselfaudit,LKAN 1/2026,CMD.1.2026.pdf,https://www.parlimen.gov.my/ipms/eps/2026-02-23/CMD.1.2026%20-%20CMD1.2026.pdf,bc6e0b0c8ebca34c9f868389792fda5e34dbf7c2881b49c20d9b0778e1c18cc1,12341296,126,2026-07-31,sources/audit-negara/data/lkan_reports.csv (via source_file of the AG registers)
 ag_sijil_eselfaudit,LKAN 1/2026,CMD.2.2026.pdf,https://www.parlimen.gov.my/ipms/eps/2026-02-23/CMD.2.2026%20-%20CMD2.2026.pdf,c5fde8d20e172ebce32d45670f4116402c852a1c1e3517bd599395d04184e54d,39074725,192,2026-07-31,sources/audit-negara/data/lkan_reports.csv (via source_file of the AG registers)
 ag_sijil_eselfaudit,LKAN 3/2025,CMD.14.2025.pdf,https://www.parlimen.gov.my/ipms/eps/2025-10-06/CMD.14.2025%20-%20CMD14.2025.pdf,06eadf80d1730bb1fe084f91b2367145b0454dc7550555379aea8cb7d68ca73d,43644429,264,2026-07-31,sources/audit-negara/data/lkan_reports.csv (via source_file of the AG registers)
+air_quality,2024-12-31 23:59,air_pollution.csv,,8b174d3badb823f7e68adcbd803189e130f55978556c6a132a553fcd5cec690c,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 amenities_access,2024,hh_access_amenities.csv,,41b1308e2bc7d62fa725154c0d1a9f74cb70330b442d36aa46ce4312fc3aa468,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 anggaran_hasil,2018,buku_anggaran_hasil_kerajaan_persekutuan_2018.pdf,https://belanjawan.mof.gov.my/pdf/2018/fiscal/buku_anggaran_hasil_kerajaan_persekutuan_2018.pdf,f93dcb1c8335dfed8ccb8a726c58d81b20fd3d18260db314afe83d681979c020,1644878,128,2026-11-04,sources/mof-fiscal-outlook/data/_editions_manifest.csv
 anggaran_hasil,2025,hasil_2025.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2025/hasil/hasil.pdf,89533f8df001db6bbdea5f54eb782ca7f159fa2bc4bc8d6c442e7bd1d398391a,1967931,2,2026-11-04,sources/anggaran-hasil/data/_documents_manifest.csv
@@ -48,10 +49,19 @@ bnm_msb,2026-08-01 05:05:35,msb_1_18.csv,,68aed20b7cbe02f680463b88dc083e3632e825
 bnm_msb,2026-08-01 05:06:17,msb_1_24.csv,,784afee0943c3ef7ac4901871149a04bf4047ccc514d1dc47586687476187e2d,,,2026-07-31,sources/bnm/data/_vintage_log.csv
 bnm_msb,2026-08-01 05:06:27,msb_1_25.csv,,b496008739cdb9f9a858c92abb14f161068516077784922c6bc19a53af85a8f0,,,2026-07-31,sources/bnm/data/_vintage_log.csv
 cpi,2018,mcoicop.csv,,b917d0e3446628251e465e55989e5631011d1e422f0483bd8e82f93e3214ebb4,,,2026-08-03,sources/dosm/data/_vintage_log.csv
+cpi,2025,cpi_annual.csv,,e5c93a7a92971eb24730b1ea7312409014ddb073b50cc4a66f69446137e2f7d6,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+cpi,2025,cpi_annual_inflation.csv,,9604b79f409331d4da8ead75b398de2a84a48200ec3dbd1fc219eb3cd66e4258,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 cpi,2026-09,cpi_headline.csv,,37c54ca1499e32a94f8253ac9b3d33893f9ada06f49266e1fcd6e8cad692705c,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+cpi,2026-09,cpi_headline_inflation.csv,,5ce755f683716782fe65b6f534f84e906e67e2b692e35c76c8370dc3779a1873,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 cpi,2026-09,cpi_state.csv,,fd15b662b1a4a60cf034b2a7eeb8954a5d08de28441e61a5f897d876bbdb98ea,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+cpi,2026-09,cpi_state_inflation.csv,,9f148fe71a1ca74591d5e732b9bb146727144178ce4966f0b918e39d8ca8c01e,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+cpi_detail,2026-09,cpi_core.csv,,ea2b27655dd15e05a5afb6246660919b3b3b920e203ce2c99d08fb5fbdc96842,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+cpi_detail,2026-09,cpi_core_inflation.csv,,10455e77a7afe9b45bffa571bcfc75626c8f477c3012ff09af87754d11eb9799,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+cpi_detail,2026-09,cpi_lowincome.csv,,2fe6ebdb093319a84473bb69790b488ab69c8c316d68478c8b3634c9f25ad2dd,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+cpi_detail,2026-09,cpi_strata.csv,,68a3b5f4e295b47134bd75d2a1003013a64483462a6bcb9dd6c62be7f114335b,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 crime_stats,2023-12-31 23:59,crime_district.csv,,800d488b426cd02f068179c626f7b4d2c5ba024f5b4b838fb0986fb7001c31be,,,,sources/dosm/data/_vintage_log.csv
 dewan_rakyat_hansard,2024-12-12,JBL12122024.pdf,https://www.parlimen.gov.my/files/jindex/pdf/JBL12122024.pdf,b12a7e6bf9026392212779985755527d5df6a0fb3182f11b762a134392bd5b60,45490970,2147,2026-11-05,sources/parliament/data/_documents_manifest.csv
+district_gdp,2020,gdp_district_real_supply.csv,,29699b9515a1302dfbeb7fdf6550ecbd3fe1cba40c0f3fbfbb09ce652b5d42c9,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2022,state_finance_expenditure.csv,,d47f672ebb5dd0dc556554e2a94d1ed37656811b41ab1539c9f2bec7f8430b3f,,,2026-07-31,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2022,state_finance_revenue.csv,,5d573ca68f5f6a9de48bf8f94280049399d29a0a60cbbe52cde10c2d39125e4c,,,2026-07-31,sources/dosm/data/_vintage_log.csv
 dosm_gfs,2024-01,lookup_federal_finance.csv,,de5fd5dad592856f7ff2048e4caa19fc414b8d674b516a5e4578c05f4cdbba41,,,2026-07-31,sources/dosm/data/_vintage_log.csv
@@ -66,9 +76,16 @@ dosm_gfs,2026-Q2,federal_finance_qtr_revenue.csv,,03684a1bfb8c27dd2026d1c2a9a72e
 dosm_population,2024,hh_lq.csv,,82cf729e0b5a0d9ff7fe25a6d05089cd5686cc01942d352262a15e89039496ae,,,,sources/dosm/data/_vintage_log.csv
 dosm_population,2024,hh_profile_state.csv,,4a37c2a6dca404a1307727d434300af0838a9b62cb9e69d1b1c5bb1716649017,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 dosm_population,2026,population_malaysia.csv,,ed287ef3277e96e74d27fd65f2dc4ab88b37817780e265e11b0d478e6bc9fe04,,,,sources/dosm/data/_vintage_log.csv
+education_stats,2025,completion_school_district.csv,,2fc8cf37813e6811d0fad3319ee6ebd918ac13d62c25eed8a0a68453e6a7077f,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+education_stats,2025,completion_school_state.csv,,f5de83487ffac290a98c1a7c0306ce75cc120248d2283511acbbd9b17648421b,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 education_stats,2025,enrolment_school_district.csv,,341380e1f77d6da81a47638c09bf3414905958b91faacc7f2de03050bc9e72c6,,,,sources/dosm/data/_vintage_log.csv
 education_stats,2025,schools_district.csv,,22a8ac4b1fa4d5c52bb864f0228bd93aa37577640d7ebad32970b0f6131d7069,,,,sources/dosm/data/_vintage_log.csv
 education_stats,2025,teachers_district.csv,,0608c35c0e89fff4bc651647bd653ec5321eb8d3a1378cead0f320ff270948fc,,,,sources/dosm/data/_vintage_log.csv
+emissions_inventory,2023,ghg_emissions.csv,,47894b6dde207adbb6655108ec39cba7e9efd8f32adcebc6386f8f3e0c9abc67,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+energy_stats,2024,energy_consumption_sector.csv,,3097b7cabf0c457062799f0e80c3d6d4cd8f0a6b2524a91e7fa93b774fb76d76,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+energy_stats,2024,energy_supply_commodity.csv,,935179ecb89a2dce02e090b382a8adb578f7dff33a6d39caab6396ff2db8377d,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+energy_stats,2026-06-30 23:59,electricity_consumption.csv,,b2511eea44eff0605b8e3c9d55384cb90da7af6eeda5572f82f74a7354f01311,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+energy_stats,2026-06-30 23:59,electricity_supply.csv,,e1a7e74e4db0d414dcd2d780aa2a58ebf6348392b2fa918daf90068f9daeacf4,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 federal_devex_by_state,2018,ksp_rmk11_lampiran_f.pdf,https://www.ekonomi.gov.my/sites/default/files/2020-08/12.%20Peruntukan%20dan%20perbelanjaan%20pembangunan%20kerajaan%20persekutuan%2C%202016-2017.pdf,b99e3e41af3d48d6e5a9e22f6ca1b5a776c17058f675b017500ffcdb46a2504e,620135,8,2026-11-05,sources/rmk/data/_documents_manifest.csv
 federal_grants_to_states_actual,2021,lampiran_e_2021.pdf,https://belanjawan.mof.gov.my/pdf/2021/perbelanjaan/lampiran_e.pdf,67e959d75e327f89ab3991c85752119e6d3e80a177b94f059ba01de817d29c52,253777,1,2026-11-05,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
 federal_grants_to_states_actual,2022,lampiran_e_2022.pdf,https://belanjawan.mof.gov.my/pdf/2022/perbelanjaan/lampiran_e.pdf,417405ca26a0f66cd32594fe54fe54971ed7d2d5d81841c657293ec9370a7bd4,192843,1,2026-11-05,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
@@ -76,6 +93,8 @@ federal_grants_to_states_actual,2023,lampiran_e_2023.pdf,https://belanjawan.mof.
 federal_grants_to_states_actual,2024,Anggaran_Perbelanjaan_Persekutuan_2024.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2024/perbelanjaan/Anggaran_Perbelanjaan_Persekutuan_2024.pdf,aa876a2e38cf1e981e0aa3f08b3436ced8f0721320550e808dc7c883fba58655,18793311,518,2026-11-04,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
 federal_grants_to_states_actual,2025,Anggaran_Perbelanjaan_Persekutuan_2025.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2025/perbelanjaan/Anggaran_Perbelanjaan_Persekutuan_2025.pdf,0a96d0a4c468b701482c2b1d0b00a1770c6c0d24391c52bc5d5bf28fda6710e6,25389042,541,2026-11-04,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
 federal_grants_to_states_actual,2026,Anggaran_Perbelanjaan_Persekutuan_2026.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2026/perbelanjaan/Anggaran_Perbelanjaan_Persekutuan_2026.pdf,e2eaeedf711be21dff09ef4409882de25b3e48f936bc3c9c07f95dc8fac7cdf0,14339484,584,2026-11-04,sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)
+forest_reserves,2022,forest_reserve.csv,,431c8e9c71ce1dc33e2546957149aaaec6e2e8c1947f4a586fa97cd3d4be1526,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+forest_reserves,2022,forest_reserve_state.csv,,e846d3debfea15fad808a39bc12a2c397bf5a574258d8149f5157ffd082ebc59,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 health_facts,2022-12-31 23:59,healthcare_staff.csv,,ea6194eee627c6d41819e4bc1a8153632e541c6360ce811e045b3cf02dd02d4f,,,,sources/dosm/data/_vintage_log.csv
 health_facts,2024,hospital_beds.csv,,97cb4cd999b525728c134324732cfc39bfd401b13fa991cde8b6b57d3b784862,,,,sources/dosm/data/_vintage_log.csv
 hies,2024,hh_expenditure_dun.csv,,f837723dd27fa417ee1db5e4e734ac65314abf3db5b6d0b44654ac3ed29fee85,,,2026-08-03,sources/dosm/data/_vintage_log.csv
@@ -99,6 +118,7 @@ hies,2024,hies_district.csv,,4b5a774d9c8bae45d3ab9039617d8cbb88be2d74c96fec9aa09
 hies,2024,hies_malaysia_percentile.csv,,977e489413a2af0a8b644ed97627d526b9f2313aae015682c7a20de8693d11f2,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hies_state.csv,,0cca36884c521055bbff7021545a6eb29dbb4f56aec84db2573965b86e6d49e0,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hies_state_percentile.csv,,b96cfc15633e3969b19c13c760d089ca82f6de2c14d8f811a096c71620003c81,,,2026-08-03,sources/dosm/data/_vintage_log.csv
+ict_households,2025,hh_access_internet.csv,,2611f5ac8d321535b48f94fa23cf2670d7508c8ba055cc649be1a3409e97b8e4,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 industry_trade,2006,sitc.csv,,9489220609c35c78db221ce3d4edc3301b4e4a43922c4c7c2b21765fd0f03ddb,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 industry_trade,2025-Q3,fdi_flows.csv,,556cd98fe1f7f6a2f38fd34cee75cb6f3052f7cdc6c74512409e9918ae9d2282,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-03,bec.csv,,dbc3c1edfab35a6dff04a509622491c44711a4a20d0d768dd087fdbbf9d58f21,,,2026-08-03,sources/dosm/data/_vintage_log.csv
@@ -593,11 +613,37 @@ pkkp,2023,2023_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,https://www.anm.gov.my/
 pkkp,2024,2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,https://www.anm.gov.my/images/JANM/Webmaster/BPOPA/Penyata-Kewangan/2024_Penyata_Kewangan_Kerajaan_Persekutuan.pdf,779d4d313583dbeef14fbd3adfab9475305d7128165af7ae6ad8702124700d87,62416627,447,2026-11-04,sources/pkkp/data/_documents_manifest.csv
 population_subnational,2023,population_state.csv,,a3ac1a8831a4e66dbc0bc0d018b699b3810eaead3775fbee4c95e9eb2cc44945,,,,sources/dosm/data/_vintage_log.csv
 population_subnational,2026,population_district.csv,,2c7caf2fc4bda1f58f12db6cc2d6d5f39148fbeaaa0516017eb59fb8e23784e0,,,,sources/dosm/data/_vintage_log.csv
+primary_production,2021,mineral_extraction.csv,,99b9744ee3bfac1ec798c61b5591d5b9e14007a827fd0cf230c42cc008254a7e,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+primary_production,2023,timber_production.csv,,9fced3d0897e98be5861afef2da5748bd3ee310317bf790f06a6a87eafe97810,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+primary_production,2024,crops_state.csv,,741201c85edceb8f8d589dee882592d120d12b4695cd2e0cdb43ed938332d463,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+primary_production,2025-12,fish_landings.csv,,9d6fdbee6553fd06678717e085a58aea4d1d0bfef756fee254eab891876edb25,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 productivity,2025,productivity_annual.csv,,5ef9bc4e090a402352d5ea7f9b057cc16a93e09aa02d6c37e4f583ef822cc092,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 productivity,2025,productivity_annual_priority.csv,,31030645f60fe605505cd15a75b9d92fcbb4b7c3d2c32d7c0a614e09265e82f4,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+productivity,2025,productivity_state.csv,,42eee55649632e9187d27c60e9dd9107481dc4984bf48f9267e5df3816c0f4c4,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 productivity,2025-Q4,productivity_lookup.csv,,efb406d08cbe4ae927f35949daf926f76d34f302bef7a911462b8652e7be6b9d,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 productivity,2025-Q4,productivity_qtr.csv,,e835e86a1d286daa7a16d14dd5046e5c52f3e0b3d893f44f9658b7a85bca4ff8,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+river_water_quality,2024,water_pollution_basin.csv,,d602d162c35d9c86d1f074f01e3d62d3e6196247b0a2f6f8c48fa628cddc96c1,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 rmk_targets,2021,rmk12.pdf,https://rmke12.ekonomi.gov.my/file/download/2021092721_rancangan_malaysia_kedua_belas.pdf?path=fileUpload/2021/09/2021092721_rancangan_malaysia_kedua_belas.pdf&name=Dokumen%20RMKe-12.pdf,763bdcd09acab8fb1bda6d21a476ddc0d8060647b2075d3e72e4b85ddb50e693,76663435,556,2026-11-05,sources/rmk/data/_documents_manifest.csv
+salaries_wages,2025,wages_age.csv,,c11183c6b721f646e131215bad70133ceba22a9314758a5b9386bf95ef579186,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_certificate.csv,,345fa0a259cd5c8536b1b68a8366670ca4d2ed686521e9b9c14a935e0138e46b,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_education.csv,,c42cb7c8ea2db6b2d2bdadf6b426b9a2792a30217474d5b591530a5e9e77633c,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_ethnicity.csv,,f3f8f4ec7a137f3cbb91ac57e6344623717196a0a5007548e2b82af06a006fed,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_industry.csv,,c9f0d5dd963e67c72bca3fa1854ad4d049de262c21445582d8cfb2ddaf1efcc8,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_noncitizen.csv,,f4dc8688728329f778ea8968f889728837d40e0aee1c139b176f0a15e60ad7af,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_noncitizen_education.csv,,d1f966ad848812ed7c593c8709ebb19fcbf6cbc01e47a2d14e4dd59f77d1442a,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_occupation.csv,,d8110397de67c286f1c08a554cdab0ba46d07247e6b84942c448af0518e8c4ac,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_real_state.csv,,707c7eb8bc0af1d7dd8c760dc8ab0294b8cf1299b1eafc278195b73062837dd0,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_real_state_citizen.csv,,b78576ba8510ddbaaaede9511f9c06bc77b61e89305052ca30822a36af394aa2,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_sector.csv,,3842ef53a4ec10c6b16fc87523b70d9f8236bd1ad69f010f7684979cb6cf933e,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_skill.csv,,a760ffa06d94801cceb6536a5c38425305e38a8cad51156e18d24d4a03ddfbd9,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_state.csv,,20e448a3841a726c3d794cb04c9d463b93426131ce6b328bf12b2ea873084f77,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2025,wages_strata.csv,,3473b6977ae58b62a0579a25f2b993db8a30a97f8f763ee8be5fbe0ab238389b,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2026-06,formal_wages.csv,,937970db6166f081bf379855721ff13d76bf03a952116229f917f211cf7acf05,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2026-06,formal_wages_band.csv,,da8ac7c664f086720a683ac833005208634b6676b2d267835be7af691620b512,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2026-06,formal_wages_msic.csv,,689ec8430ba2d2c9cd5a7257abd283527ba5ff55bceca5c6d69c874490c69905,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2026-06,formal_wages_msic_age.csv,,013f8cee0bc1e3ed2a86a20b121adc331f50f0e93f60e06f7e07d84accd54888,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2026-06,formal_wages_percentile.csv,,c0bde6e27bf5ebbd669aa2d1797270eb71337a136cd0e6549bfc5e776bd8a33a,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+salaries_wages,2026-06,formal_wages_state.csv,,d8f3e463396cb15dca0340057e29cb5908dd72a46cd77eb33475068c0d55f641,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 state_financial_statements,LKAN 1/2026,CMD.14.2026.pdf,join on command_paper to sources/audit-negara/data/lkan_reports_backfill.csv,25106cb3ccdd88a8e0e0ed862ddd66f597f7ba8ac1a8afc104798393b84c4e7e,9541513,153,,sources/states/data/selangor/state_reports_selangor.csv
 state_financial_statements,LKAN 2017 Siri 2,CMD.47.2018.pdf,join on command_paper to sources/audit-negara/data/lkan_reports_backfill.csv,0930ab73c2b1c2dcfc207685febdcc9cd6cd9fc1bc100eca109836e344b249ca,9058874,164,,sources/states/data/kedah/state_reports_kedah.csv
 state_financial_statements,LKAN 2017 Siri 2,CMD.52.2018.pdf,join on command_paper to sources/audit-negara/data/lkan_reports_backfill.csv,4b24faf9f308159e41cf751abd5cc1887c6eeb521ee77227782ff47f772b655d,7229145,100,,sources/states/data/perak/state_reports_perak.csv
@@ -758,6 +804,15 @@ tinjauan_fiskal,2026,st_kewangan.pdf,https://belanjawan.mof.gov.my/pdf/belanjawa
 tinjauan_fiskal,2026,tinjauan_fiskal_2026.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2026/hasil/tinjauan_fiskal_2026.pdf,cfaede046d4a038fb731d44dcfa3dc99db86555bc129a4e8515461a576bdae65,14832208,270,2026-11-04,sources/mof-fiscal-outlook/data/_editions_manifest.csv
 tinjauan_fiskal,2027,st_kewangan.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2027/hasil/st_kewangan.pdf,2903ab4d1cfcab43a57b84bbabd43c667363c81594918726a7fd6d47f67640ca,498067,19,2026-11-04,sources/mof-fiscal-outlook/data/_editions_manifest.csv
 tinjauan_fiskal,2027,tinjauan_fiskal_2027.pdf,https://belanjawan.mof.gov.my/pdf/belanjawan2027/hasil/tinjauan_fiskal_2027.pdf,dbcae5db1063fbe6d0861b2aa560059c23380ed76ec491840eaf57bb74e3ca99,9600887,273,2026-11-04,sources/mof-fiscal-outlook/data/_editions_manifest.csv
+vital_statistics,2025,births_annual_state.csv,,84bb75d9f2678ecf3e76c7212f25ae92be2a13929fbcfe499f97d9cf0a5fa569,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 vital_statistics,2025,death_state.csv,,4e20a085db4a8cb1f5e7eb128c7e6425fb7b4c0760b315ebdc51d26a5b1a99a5,,,,sources/dosm/data/_vintage_log.csv
+vital_statistics,2025,deaths_early_childhood_state.csv,,0140b69520ba4c7127ccec4c958849824c9d240ec2486b5938560fab63581359,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+vital_statistics,2025,deaths_maternal_state.csv,,c7607d25178f36ebc6b520b9e996f60365426870d68697441e30e1e3c1cafe8d,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+vital_statistics,2025,fertility_state.csv,,72f2e18a4d3bcfec33f1a38f63e668ddebdcfcae86e45b74fab3cb78eb7eac02,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+vital_statistics,2026,life_expectancy.csv,,8f1af2a15470b09d79d4195ae9117b0f7a526691103547becdc396b5697e4fee,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+vital_statistics,2026,life_expectancy_district.csv,,7fd5de5afa25cd19fa123f9978a6937bd754d8dc3182bb7df894a13bcbb148a2,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 vital_statistics,2026,life_expectancy_state.csv,,e93fa45eb5371d56c0745cc1a8d7703e09728b2771bb1cabbbb7ef24bb239b15,,,,sources/dosm/data/_vintage_log.csv
+vital_statistics,2026,life_expectancy_state_ethnic.csv,,2592c3ce71ab41fdec95500ae7a0ef970ba2b2bd837263a87429052869bb1031,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 water_access,2025,water_access.csv,,e1c7dac45576e6361173d4c42ba0e0b23884254138b0bbaf249d844d9fb16eaf,,,,sources/dosm/data/_vintage_log.csv
+water_supply,2022-12-31 23:59,water_production.csv,,188098a2250d97db52e01dbefc7c74ad2f144039931fc68096f0e9c31544400b,,,2026-11-05,sources/dosm/data/_vintage_log.csv
+water_supply,2024-12-31 23:59,water_consumption.csv,,b12ad1c989a1d5a9a0b347970c5d1e2cd5bba815d1a9d83c8dbe994aef673f04,,,2026-11-05,sources/dosm/data/_vintage_log.csv

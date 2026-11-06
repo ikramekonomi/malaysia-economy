@@ -1,0 +1,661 @@
+state,sector,date,value,retrieved_from,retrieved_date
+Malaysia,domestic,2003-01-01,4394,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2004-01-01,4770,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2005-01-01,4992,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2006-01-01,5025,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2007-01-01,5381,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2008-01-01,5466,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2009-01-01,5531,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2010-01-01,5602,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2011-01-01,5695,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2012-01-01,5873,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2013-01-01,6064,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2014-01-01,6267,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2015-01-01,6378,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2016-01-01,6490,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2017-01-01,6447,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2018-01-01,6605,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2019-01-01,6811,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2020-01-01,7179,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2021-01-01,7540,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2022-01-01,7353,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2023-01-01,7244,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,domestic,2024-01-01,7534,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2003-01-01,2281,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2004-01-01,2339,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2005-01-01,2366,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2006-01-01,2606,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2007-01-01,2696,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2008-01-01,2868,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2009-01-01,3020,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2010-01-01,3370,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2011-01-01,3469,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2012-01-01,3659,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2013-01-01,3790,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2014-01-01,3909,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2015-01-01,4067,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2016-01-01,4249,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2017-01-01,4341,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2018-01-01,4476,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2019-01-01,4688,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2020-01-01,4298,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2021-01-01,4180,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2022-01-01,4553,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2023-01-01,4985,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Malaysia,nondomestic,2024-01-01,5077,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2003-01-01,560,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2004-01-01,610,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2005-01-01,621,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2006-01-01,644,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2007-01-01,664,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2008-01-01,682,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2009-01-01,713,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2010-01-01,730,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2011-01-01,738,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2012-01-01,769,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2013-01-01,797,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2014-01-01,823,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2015-01-01,811,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2016-01-01,773,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2017-01-01,785,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2018-01-01,809,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2019-01-01,835,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2020-01-01,867,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2021-01-01,879,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2022-01-01,867,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2023-01-01,883,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,domestic,2024-01-01,901,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2003-01-01,246,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2004-01-01,225,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2005-01-01,235,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2006-01-01,255,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2007-01-01,289,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2008-01-01,300,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2009-01-01,285,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2010-01-01,306,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2011-01-01,323,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2012-01-01,341,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2013-01-01,366,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2014-01-01,391,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2015-01-01,448,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2016-01-01,513,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2017-01-01,535,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2018-01-01,576,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2019-01-01,599,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2020-01-01,526,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2021-01-01,505,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2022-01-01,536,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2023-01-01,572,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Johor,nondomestic,2024-01-01,610,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2003-01-01,388,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2004-01-01,412,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2005-01-01,420,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2006-01-01,434,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2007-01-01,471,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2008-01-01,470,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2009-01-01,474,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2010-01-01,444,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2011-01-01,459,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2012-01-01,474,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2013-01-01,487,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2014-01-01,510,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2015-01-01,511,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2016-01-01,525,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2017-01-01,523,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2018-01-01,544,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2019-01-01,551,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2020-01-01,574,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2021-01-01,590,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2022-01-01,560,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2023-01-01,511,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,domestic,2024-01-01,499,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2003-01-01,114,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2004-01-01,134,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2005-01-01,137,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2006-01-01,132,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2007-01-01,164,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2008-01-01,167,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2009-01-01,171,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2010-01-01,213,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2011-01-01,181,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2012-01-01,165,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2013-01-01,164,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2014-01-01,187,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2015-01-01,191,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2016-01-01,200,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2017-01-01,195,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2018-01-01,201,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2019-01-01,208,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2020-01-01,193,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2021-01-01,179,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2022-01-01,217,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2023-01-01,278,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kedah,nondomestic,2024-01-01,283,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2003-01-01,94,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2004-01-01,102,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2005-01-01,111,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2006-01-01,116,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2007-01-01,120,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2008-01-01,122,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2009-01-01,124,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2010-01-01,124,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2011-01-01,123,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2012-01-01,130,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2013-01-01,140,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2014-01-01,154,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2015-01-01,159,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2016-01-01,163,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2017-01-01,162,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2018-01-01,164,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2019-01-01,163,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2020-01-01,170,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2021-01-01,171,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2022-01-01,162,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2023-01-01,159,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,domestic,2024-01-01,164,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2003-01-01,35,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2004-01-01,40,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2005-01-01,46,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2006-01-01,48,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2007-01-01,49,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2008-01-01,51,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2009-01-01,53,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2010-01-01,55,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2011-01-01,56,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2012-01-01,58,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2013-01-01,62,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2014-01-01,71,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2015-01-01,73,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2016-01-01,76,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2017-01-01,79,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2018-01-01,85,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2019-01-01,85,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2020-01-01,75,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2021-01-01,68,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2022-01-01,77,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2023-01-01,79,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Kelantan,nondomestic,2024-01-01,80,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2003-01-01,153,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2004-01-01,144,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2005-01-01,150,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2006-01-01,155,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2007-01-01,196,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2008-01-01,202,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2009-01-01,173,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2010-01-01,177,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2011-01-01,180,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2012-01-01,187,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2013-01-01,193,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2014-01-01,196,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2015-01-01,202,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2016-01-01,206,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2017-01-01,206,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2018-01-01,209,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2019-01-01,210,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2020-01-01,215,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2021-01-01,230,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2022-01-01,228,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2023-01-01,235,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,domestic,2024-01-01,242,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2003-01-01,143,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2004-01-01,122,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2005-01-01,135,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2006-01-01,132,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2007-01-01,93,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2008-01-01,98,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2009-01-01,138,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2010-01-01,150,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2011-01-01,161,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2012-01-01,175,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2013-01-01,182,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2014-01-01,180,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2015-01-01,186,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2016-01-01,199,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2017-01-01,207,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2018-01-01,207,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2019-01-01,214,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2020-01-01,189,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2021-01-01,184,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2022-01-01,205,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2023-01-01,214,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Melaka,nondomestic,2024-01-01,215,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2003-01-01,184,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2004-01-01,183,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2005-01-01,181,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2006-01-01,190,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2007-01-01,231,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2008-01-01,237,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2009-01-01,213,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2010-01-01,229,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2011-01-01,239,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2012-01-01,247,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2013-01-01,255,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2014-01-01,259,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2015-01-01,276,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2016-01-01,287,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2017-01-01,288,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2018-01-01,293,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2019-01-01,294,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2020-01-01,318,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2021-01-01,327,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2022-01-01,307,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2023-01-01,309,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,domestic,2024-01-01,323,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2003-01-01,122,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2004-01-01,112,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2005-01-01,121,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2006-01-01,108,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2007-01-01,87,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2008-01-01,92,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2009-01-01,122,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2010-01-01,180,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2011-01-01,172,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2012-01-01,192,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2013-01-01,213,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2014-01-01,217,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2015-01-01,217,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2016-01-01,233,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2017-01-01,231,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2018-01-01,238,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2019-01-01,244,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2020-01-01,222,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2021-01-01,222,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2022-01-01,231,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2023-01-01,226,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Negeri Sembilan,nondomestic,2024-01-01,237,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2003-01-01,211,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2004-01-01,214,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2005-01-01,223,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2006-01-01,233,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2007-01-01,308,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2008-01-01,320,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2009-01-01,271,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2010-01-01,264,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2011-01-01,286,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2012-01-01,287,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2013-01-01,299,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2014-01-01,303,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2015-01-01,309,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2016-01-01,342,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2017-01-01,333,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2018-01-01,333,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2019-01-01,339,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2020-01-01,367,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2021-01-01,391,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2022-01-01,385,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2023-01-01,385,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,domestic,2024-01-01,378,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2003-01-01,131,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2004-01-01,136,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2005-01-01,134,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2006-01-01,142,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2007-01-01,104,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2008-01-01,111,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2009-01-01,96,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2010-01-01,168,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2011-01-01,186,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2012-01-01,209,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2013-01-01,205,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2014-01-01,216,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2015-01-01,223,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2016-01-01,238,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2017-01-01,250,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2018-01-01,256,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2019-01-01,288,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2020-01-01,264,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2021-01-01,259,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2022-01-01,280,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2023-01-01,291,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pahang,nondomestic,2024-01-01,293,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2003-01-01,450,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2004-01-01,474,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2005-01-01,487,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2006-01-01,486,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2007-01-01,496,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2008-01-01,508,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2009-01-01,526,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2010-01-01,552,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2011-01-01,556,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2012-01-01,592,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2013-01-01,607,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2014-01-01,623,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2015-01-01,628,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2016-01-01,655,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2017-01-01,648,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2018-01-01,665,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2019-01-01,679,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2020-01-01,706,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2021-01-01,703,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2022-01-01,699,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2023-01-01,600,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,domestic,2024-01-01,601,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2003-01-01,150,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2004-01-01,161,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2005-01-01,175,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2006-01-01,182,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2007-01-01,185,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2008-01-01,190,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2009-01-01,194,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2010-01-01,210,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2011-01-01,216,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2012-01-01,217,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2013-01-01,228,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2014-01-01,236,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2015-01-01,250,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2016-01-01,262,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2017-01-01,260,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2018-01-01,268,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2019-01-01,278,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2020-01-01,266,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2021-01-01,266,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2022-01-01,289,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2023-01-01,387,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perak,nondomestic,2024-01-01,398,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2003-01-01,47,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2004-01-01,50,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2005-01-01,50,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2006-01-01,51,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2007-01-01,50,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2008-01-01,54,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2009-01-01,49,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2010-01-01,63,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2011-01-01,62,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2012-01-01,57,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2013-01-01,65,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2014-01-01,81,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2015-01-01,81,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2016-01-01,82,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2017-01-01,78,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2018-01-01,80,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2019-01-01,80,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2020-01-01,78,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2021-01-01,80,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2022-01-01,80,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2023-01-01,63,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,domestic,2024-01-01,64,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2003-01-01,7,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2004-01-01,12,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2005-01-01,9,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2006-01-01,10,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2007-01-01,14,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2008-01-01,9,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2009-01-01,11,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2010-01-01,9,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2011-01-01,11,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2012-01-01,10,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2013-01-01,15,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2014-01-01,15,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2015-01-01,15,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2016-01-01,14,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2017-01-01,11,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2018-01-01,10,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2019-01-01,12,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2020-01-01,12,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2021-01-01,11,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2022-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2023-01-01,34,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Perlis,nondomestic,2024-01-01,36,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2003-01-01,377,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2004-01-01,388,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2005-01-01,400,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2006-01-01,408,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2007-01-01,427,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2008-01-01,439,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2009-01-01,451,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2010-01-01,468,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2011-01-01,459,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2012-01-01,475,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2013-01-01,481,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2014-01-01,483,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2015-01-01,483,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2016-01-01,492,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2017-01-01,482,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2018-01-01,491,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2019-01-01,499,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2020-01-01,533,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2021-01-01,547,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2022-01-01,534,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2023-01-01,503,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,domestic,2024-01-01,495,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2003-01-01,235,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2004-01-01,250,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2005-01-01,261,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2006-01-01,275,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2007-01-01,293,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2008-01-01,305,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2009-01-01,288,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2010-01-01,315,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2011-01-01,317,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2012-01-01,321,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2013-01-01,327,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2014-01-01,330,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2015-01-01,329,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2016-01-01,335,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2017-01-01,344,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2018-01-01,349,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2019-01-01,343,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2020-01-01,314,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2021-01-01,313,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2022-01-01,334,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2023-01-01,378,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Pulau Pinang,nondomestic,2024-01-01,375,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2003-01-01,156,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2004-01-01,207,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2005-01-01,254,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2006-01-01,294,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2007-01-01,294,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2008-01-01,252,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2009-01-01,259,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2010-01-01,222,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2011-01-01,279,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2012-01-01,305,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2013-01-01,314,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2014-01-01,330,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2015-01-01,315,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2016-01-01,338,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2017-01-01,323,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2018-01-01,341,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2019-01-01,366,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2020-01-01,313,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2021-01-01,425,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2022-01-01,394,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2023-01-01,416,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,domestic,2024-01-01,667,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2003-01-01,97,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2004-01-01,106,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2005-01-01,62,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2006-01-01,26,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2007-01-01,44,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2008-01-01,112,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2009-01-01,185,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2010-01-01,175,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2011-01-01,206,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2012-01-01,225,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2013-01-01,216,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2014-01-01,248,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2015-01-01,237,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2016-01-01,249,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2017-01-01,259,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2018-01-01,275,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2019-01-01,278,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2020-01-01,224,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2021-01-01,225,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2022-01-01,238,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2023-01-01,229,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sabah,nondomestic,2024-01-01,145,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2003-01-01,289,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2004-01-01,336,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2005-01-01,327,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2006-01-01,352,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2007-01-01,400,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2008-01-01,409,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2009-01-01,441,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2010-01-01,449,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2011-01-01,431,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2012-01-01,432,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2013-01-01,446,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2014-01-01,469,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2015-01-01,478,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2016-01-01,463,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2017-01-01,476,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2018-01-01,487,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2019-01-01,499,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2020-01-01,548,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2021-01-01,579,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2022-01-01,602,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2023-01-01,624,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,domestic,2024-01-01,599,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2003-01-01,201,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2004-01-01,227,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2005-01-01,220,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2006-01-01,226,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2007-01-01,259,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2008-01-01,266,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2009-01-01,274,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2010-01-01,324,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2011-01-01,321,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2012-01-01,336,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2013-01-01,345,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2014-01-01,341,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2015-01-01,368,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2016-01-01,385,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2017-01-01,395,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2018-01-01,409,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2019-01-01,468,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2020-01-01,448,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2021-01-01,440,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2022-01-01,463,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2023-01-01,572,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Sarawak,nondomestic,2024-01-01,586,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2003-01-01,1312,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2004-01-01,1474,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2005-01-01,1579,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2006-01-01,1460,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2007-01-01,1520,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2008-01-01,1562,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2009-01-01,1621,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2010-01-01,1655,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2011-01-01,1653,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2012-01-01,1686,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2013-01-01,1735,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2014-01-01,1779,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2015-01-01,1862,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2016-01-01,1883,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2017-01-01,1870,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2018-01-01,1916,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2019-01-01,2012,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2020-01-01,2186,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2021-01-01,2294,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2022-01-01,2230,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2023-01-01,2248,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,domestic,2024-01-01,2288,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2003-01-01,673,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2004-01-01,694,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2005-01-01,717,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2006-01-01,932,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2007-01-01,969,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2008-01-01,1006,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2009-01-01,1029,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2010-01-01,1090,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2011-01-01,1135,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2012-01-01,1207,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2013-01-01,1254,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2014-01-01,1268,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2015-01-01,1316,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2016-01-01,1336,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2017-01-01,1373,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2018-01-01,1400,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2019-01-01,1459,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2020-01-01,1362,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2021-01-01,1315,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2022-01-01,1459,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2023-01-01,1506,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Selangor,nondomestic,2024-01-01,1591,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2003-01-01,156,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2004-01-01,162,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2005-01-01,172,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2006-01-01,185,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2007-01-01,187,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2008-01-01,190,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2009-01-01,198,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2010-01-01,206,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2011-01-01,208,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2012-01-01,216,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2013-01-01,230,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2014-01-01,241,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2015-01-01,246,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2016-01-01,264,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2017-01-01,256,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2018-01-01,255,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2019-01-01,266,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2020-01-01,286,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2021-01-01,302,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2022-01-01,286,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2023-01-01,289,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,domestic,2024-01-01,294,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2003-01-01,118,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2004-01-01,108,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2005-01-01,105,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2006-01-01,124,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2007-01-01,135,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2008-01-01,149,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2009-01-01,155,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2010-01-01,157,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2011-01-01,163,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2012-01-01,173,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2013-01-01,183,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2014-01-01,179,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2015-01-01,182,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2016-01-01,176,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2017-01-01,171,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2018-01-01,169,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2019-01-01,176,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2020-01-01,165,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2021-01-01,161,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2022-01-01,173,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2023-01-01,187,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+Terengganu,nondomestic,2024-01-01,195,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2003-01-01,16,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2004-01-01,16,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2005-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2006-01-01,17,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2007-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2008-01-01,19,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2009-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2010-01-01,19,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2011-01-01,21,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2012-01-01,16,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2013-01-01,16,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2014-01-01,17,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2015-01-01,17,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2016-01-01,17,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2017-01-01,17,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2018-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2019-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2020-01-01,17,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2021-01-01,20,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2022-01-01,19,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2023-01-01,19,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,domestic,2024-01-01,19,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2003-01-01,9,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2004-01-01,10,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2005-01-01,10,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2006-01-01,10,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2007-01-01,11,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2008-01-01,12,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2009-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2010-01-01,18,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2011-01-01,20,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2012-01-01,30,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2013-01-01,31,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2014-01-01,31,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2015-01-01,32,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2016-01-01,33,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2017-01-01,31,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2018-01-01,33,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2019-01-01,36,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2020-01-01,40,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2021-01-01,32,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2022-01-01,33,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2023-01-01,32,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
+W.P. Labuan,nondomestic,2024-01-01,32,https://storage.data.gov.my/water/water_consumption.csv,2026-11-05
