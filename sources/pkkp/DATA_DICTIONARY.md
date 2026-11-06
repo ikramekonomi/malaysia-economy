@@ -4,7 +4,7 @@ Sources: *Penyata Kewangan Kerajaan Persekutuan* 2024 (447pp) … 2016 (293pp), 
 
 ## Conventions (all tables)
 
-CSVs are the canonical layer; `pkkp.duckdb` is regenerated from them (`python3 pipeline/build_duckdb.py`). Malay labels are canonical (`*_bm`); English glosses only in `dim_maksud.name_en`. Amounts in `*_rm` columns are Ringgit exactly as printed (sen kept where printed); the timeseries panel is `amount_rm_juta` (RM millions, as printed). En-dash (–) in source = nil = 0.0; parenthesised = negative. `has_footnote=True` marks values printed with an asterisk. Every row carries `source_file`, `pdf_page`, `printed_page`, `statement`. Tables that mix detail and subtotal rows carry `row_type` — **SUM only over detail/leaf rows** (`row_type='detail'` or `'object_aktiviti'` or `'project'`) to avoid double counting; subtotal rows are retained deliberately so every printed figure exists in the warehouse.
+CSVs are the canonical layer; `pkkp.duckdb` is regenerated from them (`python3 sources/pkkp/pipeline/build_duckdb.py`). Malay labels are canonical (`*_bm`); English glosses only in `dim_maksud.name_en`. Amounts in `*_rm` columns are Ringgit exactly as printed (sen kept where printed); the timeseries panel is `amount_rm_juta` (RM millions, as printed). En-dash (–) in source = nil = 0.0; parenthesised = negative. `has_footnote=True` marks values printed with an asterisk. Every row carries `source_file`, `pdf_page`, `printed_page`, `statement`. Tables that mix detail and subtotal rows carry `row_type` — **SUM only over detail/leaf rows** (`row_type='detail'` or `'object_aktiviti'` or `'project'`) to avoid double counting; subtotal rows are retained deliberately so every printed figure exists in the warehouse.
 
 ## Core statements (printed p.59–63)
 

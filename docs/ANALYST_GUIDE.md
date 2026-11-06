@@ -18,17 +18,17 @@ how much, kept exactly as published.
 | Real economy | `sources/dosm` | GFS, CPI, state GDP |
 | Monetary/financial | `sources/bnm` | debt issuance, holdings |
 
-Sources are **namespaced and never merged**. Comparison happens only in `curated/`,
+Sources are **namespaced and never merged**. Comparison happens only in `core/` (the gap views), with the older `curated/` layer retiring,
 through conformed dimensions (year, jurisdiction, entity, economic classification).
 
 ## 2. Where to start, by question
 
 | Your question | Start here |
 |---|---|
-| What did the federal government actually spend/collect? | `sources/pkkp` (`pkkp.duckdb`, rebuild with `pipeline/build_duckdb.py`) |
+| What did the federal government actually spend/collect? | `sources/pkkp` (`pkkp.duckdb`, rebuild with `sources/pkkp/pipeline/build_duckdb.py`) |
 | What was budgeted, by ministry? | `sources/anggaran/data/<yr>/fact_anggaran_maksud_<yr>.csv` |
 | …by programme, activity, object class, or headcount? | `…/fact_anggaran_detail_<yr>.csv` (26k rows, 2024–2026) |
-| Budgeted vs actual, ministry level, 2010–2024 | `curated/fact_planning_efficiency.csv` |
+| Budgeted vs actual, ministry level, 2009–2026 | `core/gap_budget_vs_actual.csv` (projects: `core/gap_project_budget_vs_actual.csv`) |
 | What is owed but not yet paid (guarantees, PFI, arrears)? | `curated/fact_obligations.csv` + `curated/OBLIGATIONS.md` |
 | What did the Auditor-General find, and did anyone answer? | `sources/audit-negara/data/fact_lkan_findings.csv` |
 | Which agencies/GLCs sit outside the federal accounts? | `…/fact_eselfaudit_registers.csv`, `fact_agensi_sijil_<yr>.csv` |
@@ -135,7 +135,7 @@ disagreement was resolved before the data was committed.
 ## 7. Reproducing anything
 
 Raw PDFs are gitignored; every source's `pipeline/` re-downloads (hash-checked against
-the manifest) and re-extracts. `python3 pipeline/build_duckdb.py` rebuilds the PKKP
+the manifest) and re-extracts. `python3 sources/pkkp/pipeline/build_duckdb.py` rebuilds the PKKP
 database. Extraction needs `poppler-utils` and `tesseract-ocr`; querying needs only
 `duckdb`. Every row carries `source_file` and `pdf_page` — if you doubt a number, open
 the page.

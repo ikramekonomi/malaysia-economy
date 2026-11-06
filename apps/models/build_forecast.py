@@ -2,7 +2,7 @@
 """Pilot forecast layer: utilisation signatures + trend projections for FY2025–FY2026.
 
 Run:  python3 apps/models/build_forecast.py
-Reads : sources/pkkp/pkkp.duckdb   (rebuild first: python3 pipeline/build_duckdb.py)
+Reads : sources/pkkp/pkkp.duckdb   (rebuild first: python3 sources/pkkp/pipeline/build_duckdb.py)
 Writes: apps/models/fact_utilisation_signatures.csv
         apps/models/fact_projection_headline.csv
         (method & assumptions: _METHOD.md in this folder)

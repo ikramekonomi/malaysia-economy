@@ -500,8 +500,8 @@ nobody can steer the warehouse by flooding it with questions.
   agent.
 * Tools never return `natural_person` entities or personal names (§4.5).
 
-**No free-form SQL for IKRAM-facing or public agents.** This matches the site's own rule
-(`site/CLAUDE.md`, golden rule 1). Read-only SQL exists only for analysts working in the
+**No free-form SQL for IKRAM-facing or public agents.** The public site follows the same rule: it reads
+only `site/data`, exported from the core by `apps/site/build_site_data.py`, never SQL. Read-only SQL exists only for analysts working in the
 repository, and its results are not publishable until they are turned into a `derive` rule or a
 `gap_*` view.
 
@@ -572,16 +572,12 @@ as `_unallocated` with its total, so a map never looks more complete than the da
 | `curated/forecast/` | **done 2026-11-04:** moved to `apps/models/` (D8) |
 | `curated/dashboard/` | **done 2026-11-04:** retired; features to port: pension simulator (an app in `apps/models/`), refinancing wall (a view over debt observations), debt vs the 60/65%-of-GDP ceiling (a target-vs-outcome view). Peer benchmarks return only from a registry source with matched definitions. Last commit with the old dashboard: `67372332eb8b28c37f7313db09eb96ebcb9c2932` |
 
-**Site migration.** Each site template moves to a view before the table it reads is retired, and
-the view must return the same numbers to the ringgit:
-
-| Site reads today (`site/api/app/templates.py`) | Becomes |
-|---|---|
-| `curated.fact_fiscal_headline` (14 uses, also `chatbot.py`) | `v_fiscal_headline` |
-| `curated.fact_ministry_fiscal`, `curated.dim_maksud_canonical` | `v_ministry_fiscal` over observations + `dim_entity` |
-| `curated.fact_opex_by_component`, `curated.fact_devex_by_sector` | `v_mof_breakdowns` |
-| `curated.fact_obligations`, `curated.fact_planning_efficiency` | `v_obligations`, `gap_budget_vs_actual` |
-| `pkkp.fact_revenue`, `pkkp.fact_timeseries_*`, `pkkp.fact_opex_detail`, `pkkp.fact_devex_project` | `v_pkkp_revenue`, `v_pkkp_timeseries`, `v_opex_leaf`, `v_devex_projects` |
+**Site migration (done 2026-11-06).** The old site (`site/api`, a FastAPI app with a chatbot reading
+`curated/warehouse.duckdb`) was replaced by a static site over the core: `apps/site/build_site_data.py` exports
+`core/` (observations with their citations, and the L3 gap views) to `site/data`, and `site/` reads nothing else.
+The curated tables it used (`fact_fiscal_headline`, `fact_ministry_fiscal`, `fact_opex_by_component`,
+`fact_devex_by_sector`, `fact_obligations`, `fact_planning_efficiency`) now feed no application; they stay until the
+core holds a view that returns the same numbers (see `HANDOVER.md`).
 
 ---
 
@@ -594,7 +590,7 @@ the view must return the same numbers to the ringgit:
 | 2 Broaden the statistics | all DOSM/BNM/MOF series; DOSM survey report tables (HIS, HES, LFS annual report, Basic Amenities); NHMS; wellbeing indices; `get_distribution`; full `geo_hierarchy` | reproduces today's curated tables to the ringgit. **In progress** (`core/README.md`): health, education and services (data.gov.my, state level); small areas (166 districts, 222 parlimen, 600 DUN on GE15 boundaries; HIES income, Gini, spending, poverty, LFS, amenities), never ranked; `geo_hierarchy` (administrative and electoral); income distributions by percentile with `get_distribution` (published brackets only, rule DIST1); national accounts (GDP and income components, current prices); federal totals from BNM and MOF beside PKKP; national monthly CPI (headline and COICOP divisions, on `cpi.index` beside the states), trade (exports, imports, balance), M1–M3 and banking-system loans (BNM MSB 1.3, 1.18); `qa/reproduce_curated.py` in CI (230 of 230 cells: fact_labour_indicators and the BNM/MOF columns of fact_fiscal_headline); 63 indicators, 134,612 observations; 146 eval questions. Open: the rest of the national DOSM/BNM/MOF series, ministries' own district boundaries, reproducing the curated tables |
 | 3 Money-trail spine | `meta.entity_register`, `dim_entity`, `bridge_entity_code`; PKKP and Anggaran as entity observations; transfers as flows; development estimates; social-transfer placement | every code resolves to one entity per date; `placed_share` reported per state. **In progress:** the entity spine is built (2026-11-05, D26): every vote printed in PKKP FY2009-2024 and the Anggaran 2024-2026 books resolves to one entity; core's state and federal rows carry entity IDs; `get_entity` resolves a code plus a year. Ministry spending is in core as entity observations (3,899: PKKP audited and estimates FY2009-2024, Anggaran 2024-2026; blind verifier: every row re-derived exactly, findings fixed), adding up to the printed totals every year (C16) and reproducing `curated/fact_ministry_fiscal` to the sen (1,261 of 1,267; 6 FY2009 rows explained). Federal headline totals now come from each year's own PKKP volume (Penyata Prestasi Kewangan; CV16 retired) and reproduce curated's PKKP headline columns. Federal grants to governments are the first flows (`core/fact_money_flow.csv`, D27): 276 audited flows FY2010-2024 (T.12 by code, each year equal to the printed programme total; B.11, B.06 and B.32 by printed name, the 40000 line): 96 to a named state or territory administration (Perbadanan Putrajaya, Perbadanan Labuan, DBKL), the rest to a class or joint recipient (`meta/group_member.csv`). Matched to what each state records receiving in `gap_federal_vs_state` (2026-11-05): class grants as each state's share of the federal total, a sum test per year, named grants as a floor test, federal loans vs state public debt (equal expected), cross-volume printings. Placement by state (2026-11-05, D29, `gap_federal_placement`): `placed_share` reported per state and year from the federal accounts alone (projects by name, grants by name): 0.6-3.9% of federal spending, so the amounts by state are withheld under the 60% guard; from FY2019 the class grants are placed at MOF's own split by state (Lampiran E, D30: 2.5-2.9%), which also gives gap_federal_vs_state a per-state federal side (capitation agrees in 14 of 14 state-years). Lapsed votes confirmed and linked by lineage (D28). Next: development estimates; sources by area for operating spending (not held) |
 | 4 Records and links | LKAN, PAC, procurement as `fact_record` + `bridge_link`, under the personal-data and defamation rules | findings carry entity IDs; no unsigned name-match is publishable |
-| 5 Complete | remaining `gap_*` views; site templates all on views; ported dashboard features; FY2025 nowcast scored; district-level need vs money where `placed_share` holds | every tool output cited; eval suite green. **In progress (2026-11-06, PR #31):** built and blind-verified: `gap_budget_vs_actual`, `gap_revenue_estimate_vs_collected`, `gap_reported_vs_audited`, `gap_obligations_growth`, `gap_target_vs_outcome` (RMKe-12, new `sources/rmk`); FY2025 projections scored against FY2025 as reported (provisional until PKKP FY2025); 262 eval questions green. Open: `gap_audit_recurrence` (needs Phase 4: findings extracted for 4 reports only, and LKAN names bodies, so a link must be `human_signed`); site templates on views (the site still reads `curated/warehouse.duckdb`); district need vs money (blocked by the 60% guard: placed_share under 4% even by state) |
+| 5 Complete | remaining `gap_*` views; site templates all on views; ported dashboard features; FY2025 nowcast scored; district-level need vs money where `placed_share` holds | every tool output cited; eval suite green. **In progress (2026-11-06, PR #31):** built and blind-verified: `gap_budget_vs_actual`, `gap_revenue_estimate_vs_collected`, `gap_reported_vs_audited`, `gap_obligations_growth`, `gap_target_vs_outcome` (RMKe-12, new `sources/rmk`); FY2025 projections scored against FY2025 as reported (provisional until PKKP FY2025); 262 eval questions green. Open: `gap_audit_recurrence` (needs Phase 4: findings extracted for 4 reports only, and LKAN names bodies, so a link must be `human_signed`); the site on the core (done 2026-11-06: `site/` reads only `site/data` from `apps/site/build_site_data.py`); district need vs money (blocked by the 60% guard: placed_share under 4% even by state) |
 
 Each phase: branch → reconcile to today's numbers → independent adversarial verifier → human
 spot-check of a sample → PR.
@@ -608,7 +604,7 @@ spot-check of a sample → PR.
 | D1 | Public money is one theme of nine; architecture is economy-wide | PKKP was the first document, not the centre | §1, §3 |
 | D2 | ISO 3166-2:MY for states; DOSM/SPR codes below state; ISO 3166-1 for other countries | standard, published codes | §4.1 |
 | D3 | Keep every vintage, in L1 (vintage log) and L2; "clean" is a view | revisions are evidence | §6 |
-| D4 | Typed agent tools only for IKRAM-facing and public agents; read-only SQL internal only | every answer cited and checked; matches `site/CLAUDE.md` | §11 |
+| D4 | Typed agent tools only for IKRAM-facing and public agents; read-only SQL internal only | every answer cited and checked; the public site reads only the core's export | §11 |
 | D5 | Follow the money both ways: place (Track A) and recipient (Track B) | IKRAM works at national and state level | §13 |
 | D6 | Permanent opaque `entity_id` + dated readable codes; tools accept readable codes | vote codes are renumbered and reused | §4.5 |
 | D7 | Every boundary set kept as published, vintage in `geo_code`; areas sit in several hierarchies; re-mapping built only on demand | boundaries change and do not nest | §4.1 |
@@ -647,7 +643,7 @@ spot-check of a sample → PR.
 
 | # | Finding | Severity | Answered in |
 |---|---|---|---|
-| 1 | Agent answers can be invalid even when every row is cited; `run_sql` contradicts `site/CLAUDE.md`; no eval set | critical | §11, D4, D14 |
+| 1 | Agent answers can be invalid even when every row is cited; `run_sql` contradicts the no-SQL rule for public agents; no eval set | critical | §11, D4, D14 |
 | 2 | No uncertainty; small-area rankings | critical | §5.1, §11, D10 |
 | 3 | Licence, PDPA, defamation, neutrality unaddressed | critical | §12, §4.5, §5.3, D15 |
 | 4 | "Keep every vintage" not true of the pipeline; L0 not archived | critical | §6 (DOSM vintage log built), §2, D3, D17 |

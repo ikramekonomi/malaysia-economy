@@ -2,7 +2,7 @@
 """Ministry lineage crosswalk + canonical ministry/headline fiscal facts.
 
 Run:  python3 curated/pipeline/build_ministry_fiscal.py
-Reads : sources/pkkp/pkkp.duckdb   (rebuild first: python3 pipeline/build_duckdb.py)
+Reads : sources/pkkp/pkkp.duckdb   (rebuild first: python3 sources/pkkp/pipeline/build_duckdb.py)
 Writes: curated/dim_maksud_canonical.csv
         curated/fact_ministry_fiscal.csv
         curated/fact_fiscal_headline.csv

@@ -50,7 +50,7 @@ editions), bnm, dosm (121 datasets incl. data.gov.my health, education and servi
 ## Golden rules — do not break these
 1. **Raw source data (the CSVs) is the source of truth.** Consolidated/curated tables and any
    `*.duckdb` are derived, rebuildable artifacts — never hand-edit them
-   (`python3 pipeline/build_duckdb.py` rebuilds the PKKP DB).
+   (`python3 sources/pkkp/pipeline/build_duckdb.py` rebuilds the PKKP DB).
 2. **Never silently correct a figure.** If a source misprints something, keep it as printed
    and document it in that source's validation CSV with a proof. Fixing an extraction bug is
    fine; altering what a source published is not.
@@ -86,8 +86,8 @@ core/               the conformed layer (L2: dims + fact_observation) and gap vi
 curated/            the older consolidated layer, moving into core/ view by view
 apps/tools/         typed agent tools over core/ (no SQL; every number cited; arithmetic only via derive)
 apps/models/        model projections: an application, never warehouse data
+apps/site/          build_site_data.py: core/ -> site/data (what the public site may show)
 site/               the public site: static, reads site/data built from core/ by apps/site/build_site_data.py (site/README.md)
-pipeline/           build_duckdb.py (PKKP DB)
 docs/               DATA_MODEL.md · SOURCES.md · DOCUMENT_REGISTRY.md · registry/ · ANALYST_GUIDE.md
 meta/               code lists, decisions, the file registry (build_registry.py) -> warehouse meta.*
 qa/                 the offline check suite CI runs on every PR, and its known-FAIL baseline
@@ -109,7 +109,7 @@ divergences.
 ## Setup (fresh clone / cloud session)
 ```
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py                  # -> sources/pkkp/pkkp.duckdb
+python3 sources/pkkp/pipeline/build_duckdb.py                  # -> sources/pkkp/pkkp.duckdb
 python3 curated/pipeline/build_warehouse_duckdb.py  # -> curated/warehouse.duckdb (all sources)
 ```
 Querying needs only `duckdb`. Refresh/verification needs `pyarrow` and `pandas` (in

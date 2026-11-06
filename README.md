@@ -91,7 +91,7 @@ No single safeguard is enough. Each layer below catches what the one before it c
 | Layer | What it checks | When | Can it block? |
 |---|---|---|---|
 | **1. The source's own arithmetic** | Every printed total against the sum of its printed parts. A publisher's misprint becomes a `SOURCE_ANOMALY` with proof, never a silent correction | at extraction | yes |
-| **2. CI** (`qa/run_offline_suite.py`) | 53 scripts on every pull request. A PR is blocked if:<br>• a check script fails;<br>• a rebuild changes a committed file;<br>• a new `FAIL` row appears that isn't in `qa/known_fails.csv`;<br>• a stored value differs from its printed value;<br>• an agent tool gives a wrong answer to one of 70 eval questions, or falls for a trap (incomparable figures, small-area rankings, missing documents, instructions hidden in a document) | every PR, automatically | **yes, always** |
+| **2. CI** (`qa/run_offline_suite.py`) | 65 scripts on every pull request. A PR is blocked if:<br>• a check script fails;<br>• a rebuild changes a committed file;<br>• a new `FAIL` row appears that isn't in `qa/known_fails.csv`;<br>• a stored value differs from its printed value;<br>• an agent tool gives a wrong answer to one of 270 eval questions, or falls for a trap (incomparable figures, small-area rankings, missing documents, instructions hidden in a document) | every PR, automatically | **yes, always** |
 | **3. Independent verifier agent** | A separate agent, blind to the extraction code, re-derives figures from the original and tries to break the tools | every new or changed source, and a monthly random audit (the 3rd of each month; reports in `qa/audits/`) | findings become fixes and new eval questions |
 | **4. Cross-source reconciliation** | The same concept from independent publishers (e.g. PKKP vs BNM vs MOF) | every build | divergences are published, not hidden |
 | **5. Human spot-check** | A person checks a random sample against the archived page (`qa/spot_check/`) | before anything IKRAM publishes | **yes: no publication without it** |
@@ -118,7 +118,7 @@ above.
 
 ```bash
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py                     # sources/pkkp/pkkp.duckdb (PKKP only)
+python3 sources/pkkp/pipeline/build_duckdb.py                     # sources/pkkp/pkkp.duckdb (PKKP only)
 python3 curated/pipeline/build_warehouse_duckdb.py   # curated/warehouse.duckdb: every source + core + meta
 duckdb curated/warehouse.duckdb
 ```
@@ -171,7 +171,7 @@ t.get_gap_view("gap_need_vs_money", year="2022")    # need vs state-government m
 **Known caveats:**
 - PKKP FY2015 is an image-only scan, so its leaf amounts are OCR-provisional.
 - DOSM small-area estimates carry no published sampling error.
-- Federal spending cannot yet be placed by state: only about 1% can be today, so that column is
+- Federal spending cannot yet be placed by state: under 4% can be today, so that column is
   withheld.
 
 Each source's README lists its own caveats and anomaly register.

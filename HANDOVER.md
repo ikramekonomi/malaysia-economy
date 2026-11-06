@@ -31,7 +31,7 @@ says what the warehouse is, and [`CLAUDE.md`](CLAUDE.md), which gives the rules 
 | L1 | source tables as printed: pkkp, anggaran, anggaran-hasil, mof-fiscal-outlook, bnm, dosm, dosm_reports, audit-negara, states, rmk, parliament, state-budgets | `sources/<name>/` | verified per source (each has `_validation*.csv`) |
 | L2 | conformed core: 6 dimensions, `fact_observation` (223,090 rows, 125 indicators), money flows, records | `core/` | built; machine-checked; blind-verified source by source |
 | L3 | 9 gap views (below) | `core/gap_*.csv` | built and blind-verified, except `gap_audit_recurrence` (draft) |
-| L4 | agent tools; models; the site | `apps/tools/`, `apps/models/`, `site/` | tools have 262 eval questions in CI; the site is new (2026-11-06) |
+| L4 | agent tools; models; the site | `apps/tools/`, `apps/models/`, `site/` | tools have 270 eval questions in CI; the site is new (2026-11-06) |
 
 **Gap views on the site:**
 * `gap_budget_vs_actual`
@@ -131,12 +131,24 @@ state's treasury.
   characters only where the PDF draws them twice), and keep the name check in `build_gap_project_budget.py` green.
 * **PKKP FY2015** is an image scan: its leaf amounts are OCR-provisional (`sources/pkkp/data/2015/_unresolved_ocr_cells_2015.csv`).
 * **FY2025 audited accounts** (PKKP) are not loaded yet. Several views use MOF's FY2025 actuals until they are.
-* **Baseline FAILs:** 23 known rows (`qa/known_fails.csv`), mostly Pahang and Perlis state statements that do not
+* **Baseline FAILs:** 22 known rows (`qa/known_fails.csv`), mostly Pahang and Perlis state statements that do not
   add up as printed. Each needs a proof page in `_source_anomalies*.csv`, or a fix.
 * **Federal spending by place** is under 4% placeable, so federal amounts by state stay withheld. Raising it needs
   project locations, which the Development Estimates book (`sources/anggaran`) partly gives.
-* `docs/DATA_MODEL.md` still mentions the old site (`site/CLAUDE.md`, `site/api/`), which has been replaced. Read
-  §11 against `apps/tools/` and `site/README.md`.
+* **PKKP memorandum checks for FY2009–2013.** The validators in those year folders were copies of the 2014
+  script (they re-checked 2014 five times) and were removed on 2026-11-06. Their `_validation_checks_memoranda_<year>.csv`
+  files are kept as last written but are no longer re-run. Each year needs its own `validate_memoranda_<year>.py`.
+* **Retire `curated/` in stages.** It is the older layer. The site no longer reads it, but CI still runs six of its
+  builders, `qa/reproduce_curated.py` checks the core against it, and `core/pipeline` imports
+  `curated/pipeline/mof_editions.py`. The order:
+  1. Move `mof_editions.py` and `_known_extraction_defects_curated.csv` into `core/`.
+  2. Drop `fact_budget_vs_actual` and `build_gap_views.py`, which `core/gap_budget_vs_actual.csv` supersedes.
+  3. Retire the MOF breakdown tables once the owner confirms no one uses them.
+  4. Keep `fact_obligations`, `fact_ministry_fiscal`, `fact_fiscal_headline` and `fact_labour_indicators` until
+     the core has views that reproduce them to the ringgit.
+  5. Move `build_warehouse_duckdb.py` (the SQL entry point for analysts) out of `curated/`.
+* **PKKP per-year extraction scripts** (`sources/pkkp/pipeline/<year>/`) are a frozen record of how each volume
+  was read. They hard-code the original work paths and need the PDFs; keep them as provenance, and do not delete them.
 
 ## 5. Decisions you will meet
 
