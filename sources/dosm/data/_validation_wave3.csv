@@ -1,0 +1,166 @@
+check,dataset,status,detail
+W1 row count equals the parquet,wages_state,PASS,csv 816 vs parquet 816
+W2 every cell equals the parquet,wages_state,PASS,4896 cells
+W3 stored file is the logged current vintage,wages_state,PASS,20e448a3841a726c
+W1 row count equals the parquet,wages_strata,PASS,csv 144 vs parquet 144
+W2 every cell equals the parquet,wages_strata,PASS,864 cells
+W3 stored file is the logged current vintage,wages_strata,PASS,3473b6977ae58b62
+W1 row count equals the parquet,wages_sector,PASS,csv 288 vs parquet 288
+W2 every cell equals the parquet,wages_sector,PASS,1728 cells
+W3 stored file is the logged current vintage,wages_sector,PASS,3842ef53a4ec10c6
+W1 row count equals the parquet,wages_industry,PASS,csv 960 vs parquet 960
+W2 every cell equals the parquet,wages_industry,PASS,5760 cells
+W3 stored file is the logged current vintage,wages_industry,PASS,c9f0d5dd963e67c7
+W1 row count equals the parquet,wages_education,PASS,csv 240 vs parquet 240
+W2 every cell equals the parquet,wages_education,PASS,1440 cells
+W3 stored file is the logged current vintage,wages_education,PASS,c42cb7c8ea2db6b2
+W1 row count equals the parquet,wages_age,PASS,csv 528 vs parquet 528
+W2 every cell equals the parquet,wages_age,PASS,3168 cells
+W3 stored file is the logged current vintage,wages_age,PASS,c11183c6b721f646
+W1 row count equals the parquet,wages_ethnicity,PASS,csv 336 vs parquet 336
+W2 every cell equals the parquet,wages_ethnicity,PASS,2016 cells
+W3 stored file is the logged current vintage,wages_ethnicity,PASS,f3f8f4ec7a137f3c
+W1 row count equals the parquet,wages_occupation,PASS,csv 480 vs parquet 480
+W2 every cell equals the parquet,wages_occupation,PASS,2880 cells
+W3 stored file is the logged current vintage,wages_occupation,PASS,d8110397de67c286
+W1 row count equals the parquet,wages_skill,PASS,csv 192 vs parquet 192
+W2 every cell equals the parquet,wages_skill,PASS,1152 cells
+W3 stored file is the logged current vintage,wages_skill,PASS,a760ffa06d94801c
+W1 row count equals the parquet,wages_certificate,PASS,csv 288 vs parquet 288
+W2 every cell equals the parquet,wages_certificate,PASS,1728 cells
+W3 stored file is the logged current vintage,wages_certificate,PASS,345fa0a259cd5c85
+W1 row count equals the parquet,wages_noncitizen,PASS,csv 80 vs parquet 80
+W2 every cell equals the parquet,wages_noncitizen,PASS,480 cells
+W3 stored file is the logged current vintage,wages_noncitizen,PASS,f4dc8688728329f7
+W1 row count equals the parquet,wages_noncitizen_education,PASS,csv 80 vs parquet 80
+W2 every cell equals the parquet,wages_noncitizen_education,PASS,400 cells
+W3 stored file is the logged current vintage,wages_noncitizen_education,PASS,d1f966ad848812ed
+W1 row count equals the parquet,wages_real_state,PASS,csv 272 vs parquet 272
+W2 every cell equals the parquet,wages_real_state,PASS,1088 cells
+W3 stored file is the logged current vintage,wages_real_state,PASS,707c7eb8bc0af1d7
+W1 row count equals the parquet,wages_real_state_citizen,PASS,csv 272 vs parquet 272
+W2 every cell equals the parquet,wages_real_state_citizen,PASS,1088 cells
+W3 stored file is the logged current vintage,wages_real_state_citizen,PASS,b78576ba8510ddba
+W1 row count equals the parquet,formal_wages,PASS,csv 972 vs parquet 972
+W2 every cell equals the parquet,formal_wages,PASS,5832 cells
+W3 stored file is the logged current vintage,formal_wages,PASS,937970db6166f081
+W1 row count equals the parquet,formal_wages_state,PASS,csv 918 vs parquet 918
+W2 every cell equals the parquet,formal_wages_state,PASS,3672 cells
+W3 stored file is the logged current vintage,formal_wages_state,PASS,d8f3e463396cb15d
+W1 row count equals the parquet,formal_wages_msic,PASS,csv 1242 vs parquet 1242
+W2 every cell equals the parquet,formal_wages_msic,PASS,6210 cells
+W3 stored file is the logged current vintage,formal_wages_msic,PASS,689ec8430ba2d2c9
+W1 row count equals the parquet,formal_wages_band,PASS,csv 810 vs parquet 810
+W2 every cell equals the parquet,formal_wages_band,PASS,2430 cells
+W3 stored file is the logged current vintage,formal_wages_band,PASS,da8ac7c664f08672
+W1 row count equals the parquet,formal_wages_percentile,PASS,csv 54 vs parquet 54
+W2 every cell equals the parquet,formal_wages_percentile,PASS,540 cells
+W3 stored file is the logged current vintage,formal_wages_percentile,PASS,c0bde6e27bf5ebbd
+W1 row count equals the parquet,formal_wages_msic_age,PASS,csv 2772 vs parquet 2772
+W2 every cell equals the parquet,formal_wages_msic_age,PASS,13860 cells
+W3 stored file is the logged current vintage,formal_wages_msic_age,PASS,013f8cee0bc1e3ed
+W1 row count equals the parquet,productivity_state,PASS,csv 2142 vs parquet 2142
+W2 every cell equals the parquet,productivity_state,PASS,10710 cells
+W3 stored file is the logged current vintage,productivity_state,PASS,42eee55649632e91
+W1 row count equals the parquet,cpi_core,PASS,csv 1470 vs parquet 1470
+W2 every cell equals the parquet,cpi_core,PASS,4410 cells
+W3 stored file is the logged current vintage,cpi_core,PASS,ea2b27655dd15e05
+W1 row count equals the parquet,cpi_core_inflation,PASS,csv 1456 vs parquet 1456
+W2 every cell equals the parquet,cpi_core_inflation,PASS,5824 cells
+W3 stored file is the logged current vintage,cpi_core_inflation,PASS,10455e77a7afe9b4
+W1 row count equals the parquet,cpi_lowincome,PASS,csv 2814 vs parquet 2814
+W2 every cell equals the parquet,cpi_lowincome,PASS,8442 cells
+W3 stored file is the logged current vintage,cpi_lowincome,PASS,2fe6ebdb093319a8
+W1 row count equals the parquet,cpi_strata,PASS,csv 5628 vs parquet 5628
+W2 every cell equals the parquet,cpi_strata,PASS,22512 cells
+W3 stored file is the logged current vintage,cpi_strata,PASS,68a3b5f4e295b471
+W1 row count equals the parquet,cpi_state_inflation,PASS,csv 44800 vs parquet 44800
+W2 every cell equals the parquet,cpi_state_inflation,PASS,224000 cells
+W3 stored file is the logged current vintage,cpi_state_inflation,PASS,9f148fe71a1ca745
+W1 row count equals the parquet,cpi_headline_inflation,PASS,csv 7840 vs parquet 7840
+W2 every cell equals the parquet,cpi_headline_inflation,PASS,31360 cells
+W3 stored file is the logged current vintage,cpi_headline_inflation,PASS,5ce755f683716782
+W1 row count equals the parquet,cpi_annual,PASS,csv 542 vs parquet 542
+W2 every cell equals the parquet,cpi_annual,PASS,1626 cells
+W3 stored file is the logged current vintage,cpi_annual,PASS,e5c93a7a92971eb2
+W1 row count equals the parquet,cpi_annual_inflation,PASS,csv 528 vs parquet 528
+W2 every cell equals the parquet,cpi_annual_inflation,PASS,1584 cells
+W3 stored file is the logged current vintage,cpi_annual_inflation,PASS,9604b79f409331d4
+W1 row count equals the parquet,gdp_district_real_supply,PASS,csv 10626 vs parquet 10626
+W2 every cell equals the parquet,gdp_district_real_supply,PASS,63756 cells
+W3 stored file is the logged current vintage,gdp_district_real_supply,PASS,29699b9515a1302d
+W1 row count equals the parquet,life_expectancy,PASS,csv 1072 vs parquet 1072
+W2 every cell equals the parquet,life_expectancy,PASS,4288 cells
+W3 stored file is the logged current vintage,life_expectancy,PASS,8f1af2a15470b09d
+W1 row count equals the parquet,life_expectancy_state_ethnic,PASS,csv 1790 vs parquet 1790
+W2 every cell equals the parquet,life_expectancy_state_ethnic,PASS,8950 cells
+W3 stored file is the logged current vintage,life_expectancy_state_ethnic,PASS,2592c3ce71ab41fd
+W1 row count equals the parquet,life_expectancy_district,PASS,csv 2934 vs parquet 2934
+W2 every cell equals the parquet,life_expectancy_district,PASS,14670 cells
+W3 stored file is the logged current vintage,life_expectancy_district,PASS,7fd5de5afa25cd19
+W1 row count equals the parquet,births_annual_state,PASS,csv 406 vs parquet 406
+W2 every cell equals the parquet,births_annual_state,PASS,1624 cells
+W3 stored file is the logged current vintage,births_annual_state,PASS,84bb75d9f2678ecf
+W1 row count equals the parquet,fertility_state,PASS,csv 3128 vs parquet 3128
+W2 every cell equals the parquet,fertility_state,PASS,12512 cells
+W3 stored file is the logged current vintage,fertility_state,PASS,72f2e18a4d3bcfec
+W1 row count equals the parquet,deaths_maternal_state,PASS,csv 406 vs parquet 406
+W2 every cell equals the parquet,deaths_maternal_state,PASS,1624 cells
+W3 stored file is the logged current vintage,deaths_maternal_state,PASS,c7607d25178f36eb
+W1 row count equals the parquet,deaths_early_childhood_state,PASS,csv 2030 vs parquet 2030
+W2 every cell equals the parquet,deaths_early_childhood_state,PASS,10150 cells
+W3 stored file is the logged current vintage,deaths_early_childhood_state,PASS,0140b69520ba4c71
+W1 row count equals the parquet,completion_school_state,PASS,csv 1530 vs parquet 1530
+W2 every cell equals the parquet,completion_school_state,PASS,7650 cells
+W3 stored file is the logged current vintage,completion_school_state,PASS,f5de83487ffac290
+W1 row count equals the parquet,completion_school_district,PASS,csv 2355 vs parquet 2355
+W2 every cell equals the parquet,completion_school_district,PASS,11775 cells
+W3 stored file is the logged current vintage,completion_school_district,PASS,2fc8cf37813e6811
+W1 row count equals the parquet,hh_access_internet,PASS,csv 343 vs parquet 343
+W2 every cell equals the parquet,hh_access_internet,PASS,1372 cells
+W3 stored file is the logged current vintage,hh_access_internet,PASS,2611f5ac8d321535
+W1 row count equals the parquet,air_pollution,PASS,csv 576 vs parquet 576
+W2 every cell equals the parquet,air_pollution,PASS,1728 cells
+W3 stored file is the logged current vintage,air_pollution,PASS,8b174d3badb823f7
+W1 row count equals the parquet,ghg_emissions,PASS,csv 238 vs parquet 238
+W2 every cell equals the parquet,ghg_emissions,PASS,714 cells
+W3 stored file is the logged current vintage,ghg_emissions,PASS,47894b6dde207adb
+W1 row count equals the parquet,water_pollution_basin,PASS,csv 225 vs parquet 225
+W2 every cell equals the parquet,water_pollution_basin,PASS,1350 cells
+W3 stored file is the logged current vintage,water_pollution_basin,PASS,d602d162c35d9c86
+W1 row count equals the parquet,forest_reserve,PASS,csv 22 vs parquet 22
+W2 every cell equals the parquet,forest_reserve,PASS,44 cells
+W3 stored file is the logged current vintage,forest_reserve,PASS,431c8e9c71ce1dc3
+W1 row count equals the parquet,forest_reserve_state,PASS,csv 374 vs parquet 374
+W2 every cell equals the parquet,forest_reserve_state,PASS,1122 cells
+W3 stored file is the logged current vintage,forest_reserve_state,PASS,e846d3debfea15fa
+W1 row count equals the parquet,electricity_consumption,PASS,csv 612 vs parquet 612
+W2 every cell equals the parquet,electricity_consumption,PASS,1836 cells
+W3 stored file is the logged current vintage,electricity_consumption,PASS,b2511eea44eff060
+W1 row count equals the parquet,electricity_supply,PASS,csv 612 vs parquet 612
+W2 every cell equals the parquet,electricity_supply,PASS,1836 cells
+W3 stored file is the logged current vintage,electricity_supply,PASS,e1a7e74e4db0d414
+W1 row count equals the parquet,energy_consumption_sector,PASS,csv 360 vs parquet 360
+W2 every cell equals the parquet,energy_consumption_sector,PASS,1080 cells
+W3 stored file is the logged current vintage,energy_consumption_sector,PASS,3097b7cabf0c4570
+W1 row count equals the parquet,energy_supply_commodity,PASS,csv 463 vs parquet 463
+W2 every cell equals the parquet,energy_supply_commodity,PASS,1389 cells
+W3 stored file is the logged current vintage,energy_supply_commodity,PASS,935179ecb89a2dce
+W1 row count equals the parquet,water_consumption,PASS,csv 660 vs parquet 660
+W2 every cell equals the parquet,water_consumption,PASS,2640 cells
+W3 stored file is the logged current vintage,water_consumption,PASS,b12ad1c989a1d5a9
+W1 row count equals the parquet,water_production,PASS,csv 345 vs parquet 345
+W2 every cell equals the parquet,water_production,PASS,1035 cells
+W3 stored file is the logged current vintage,water_production,PASS,188098a2250d97db
+W1 row count equals the parquet,mineral_extraction,PASS,csv 2112 vs parquet 2112
+W2 every cell equals the parquet,mineral_extraction,PASS,10560 cells
+W3 stored file is the logged current vintage,mineral_extraction,PASS,99b9744ee3bfac1e
+W1 row count equals the parquet,timber_production,PASS,csv 1447 vs parquet 1447
+W2 every cell equals the parquet,timber_production,PASS,5788 cells
+W3 stored file is the logged current vintage,timber_production,PASS,9fced3d0897e98be
+W1 row count equals the parquet,crops_state,PASS,csv 1584 vs parquet 1584
+W2 every cell equals the parquet,crops_state,PASS,7920 cells
+W3 stored file is the logged current vintage,crops_state,PASS,741201c85edceb8f
+W1 row count equals the parquet,fish_landings,PASS,csv 4788 vs parquet 4788
+W2 every cell equals the parquet,fish_landings,PASS,19152 cells
+W3 stored file is the logged current vintage,fish_landings,PASS,9d6fdbee6553fd06

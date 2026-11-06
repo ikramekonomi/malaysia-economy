@@ -88,6 +88,11 @@ def main():
                     row[col] = r["value"]
                     ids.append(r["obs_id"])
                     cv |= set(w.caveats_for(r))
+                elif w.conflicts(ind, g, y):
+                    both = sorted(w.conflicts(ind, g, y), key=lambda x: x["edition_id"])
+                    notes.append(f"{ind} {y}: DOSM prints different figures, not chosen: " + "; ".join(
+                        f"{x['value']} ({x['edition_id']})" for x in both))
+                    ids += [x["obs_id"] for x in both]
                 else:
                     notes.append(f"{ind} not published for {y}")
             for ind in list(NEED.values()) + ["pop.total"]:

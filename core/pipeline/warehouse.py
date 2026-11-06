@@ -36,14 +36,28 @@ class Refused(Exception):
     """A derivation whose inputs do not match. The message says why; nothing is computed."""
 
 
+def observation_files():
+    """The fact_observation table: one CSV per indicator family under core/fact_observation/ (decision D34)."""
+    import glob
+    return sorted(glob.glob(os.path.join(CORE, "fact_observation", "*.csv")))
+
+
+def read_observations():
+    out = []
+    for p in observation_files():
+        out.extend(_rows(p))
+    return out
+
+
 class Warehouse:
     def __init__(self):
-        fact = os.path.join(CORE, "fact_observation.csv")
-        self.obs = _rows(fact)
+        self.obs = read_observations()
         h = hashlib.sha256()
-        with open(fact, "rb") as f:
-            for chunk in iter(lambda: f.read(1 << 20), b""):
-                h.update(chunk)
+        for fact in observation_files():  # the release id covers every shard, in name order
+            h.update(os.path.basename(fact).encode())
+            with open(fact, "rb") as f:
+                for chunk in iter(lambda: f.read(1 << 20), b""):
+                    h.update(chunk)
         self.release_id = "core-" + h.hexdigest()[:12]
         for r in self.obs:
             r["obs_id"] = "o" + hashlib.sha1("|".join(r[k] for k in PK).encode()).hexdigest()[:12]
@@ -122,7 +136,23 @@ class Warehouse:
             rs = [r for r in rs if r["basis"] != "target"]  # a plan's target is never the outcome; ask for it by basis
         if len({r["edition_id"].split(":")[0] for r in rs}) > 1:
             return None  # two publishers for one concept: never choose between them silently
+        if self._divergent(rs):
+            return None  # two products of one publisher print different figures (D35): see conflicts()
         return rs[0] if len(rs) == 1 else (sorted(rs, key=lambda r: r["vintage"])[-1] if rs else None)
+
+    @staticmethod
+    def _divergent(rs):
+        """True when rows from different products (edition id before '@': dosm:hh_poverty_state vs
+        dosm:report.poverty_2024) print different values; vintages of one product are not a divergence."""
+        fam = {}
+        for r in rs:
+            fam.setdefault(r["edition_id"].split("@")[0], set()).add(Decimal(r["value"]))
+        return len(fam) > 1 and len(set().union(*fam.values())) > 1
+
+    def conflicts(self, indicator, geo, period, breakdown="_total"):
+        """The rows behind a get() that returned None because one publisher's products disagree, else []."""
+        rs = [r for r in self.index.get((indicator, geo, period, breakdown), []) if r["basis"] != "target"]
+        return rs if self._divergent(rs) else []
 
     def source_flags(self, r):
         """Anomalies registered at L1 (or by a declared rule) for the L1 row this observation comes from."""

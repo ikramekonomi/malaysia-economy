@@ -8,7 +8,7 @@ hand (golden rule 1). CI rebuilds them on every PR and fails if the committed fi
 
 ```
 python3 core/pipeline/build_entities.py           # dim_entity + bridge_entity_code + entity_name (Phase 3)
-python3 core/pipeline/build_core.py               # dims + fact_observation + _validation_core.csv
+python3 core/pipeline/build_core.py               # dims + fact_observation/ + _validation_core.csv
 python3 core/pipeline/build_flows.py              # fact_money_flow.csv + _validation_flow.csv (Phase 3)
 python3 core/pipeline/build_gap_need_vs_money.py  # gap_need_vs_money.csv + _validation_gap_need.csv
 python3 qa/run_eval.py                            # 209 questions against the agent tools
@@ -21,10 +21,10 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 |---|---|---|
 | `dim_geo.csv` | 1,006 | Malaysia, `_unallocated`, 16 states and FTs (ISO 3166-2:MY), 166 districts (boundary set `dosm_2020`), 222 parliamentary seats and 600 state seats (boundary set `ge15`) |
 | `geo_hierarchy.csv` | 1,020 | child → parent, one row per hierarchy (`administrative`: district → state; `electoral`: DUN → parlimen → state) |
-| `dim_period.csv` | 618 | years, months (monthly from 1980-01 for national CPI) |
-| `dim_indicator.csv` | 65 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
-| `dim_breakdown.csv` | 181 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
-| `fact_observation.csv` | 138,511 | indicator × geo × period × breakdown × entity × basis × edition × vintage (state 87,985; DUN 18,000; district 11,013; national 10,943; parlimen 6,660; unallocated 11) |
+| `dim_period.csv` | 630 | years, months (monthly from 1980-01 for national CPI) |
+| `dim_indicator.csv` | 125 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
+| `dim_breakdown.csv` | 811 keys | `_total`, `sex=…`, `strata=…`, `hh_head_ethnicity=…` (a household head's attributes, D35), `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
+| `fact_observation/<family>.csv` | 223,090 | indicator × geo × period × breakdown × entity × basis × edition × vintage, one file per indicator family (D34; read through `warehouse.observation_files()`): state 118,418; national 60,815; district 19,164; DUN 18,000; parlimen 6,660; unallocated 33 |
 | `dim_entity.csv` | 68 | who: the federal government, 13 state governments, 47 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
@@ -34,6 +34,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `fact_placement.csv` | 14,112 | every audited development project × year (PKKP FY2009-2024 except FY2015) with the place its name names: `stated_state`, `parsed_district`, `parsed_place`, `multiple_states`, `peninsula` or `none` (D29) |
 | `gap_federal_placement.csv` | 270 | federal money placed by state from the federal accounts (projects by name + grants by name) × 15 years, with each year's `placed_share`; amounts by state withheld below 60% |
 | `gap_budget_vs_actual.csv` | 1,440 | federal body × year × flow (opex, devex): the accounts' estimates (or devex allocation), the Budget book's original estimate, the audited actual and the book's reprint; execution rate and status (Phase 5) |
+| `gap_project_budget_vs_actual.csv` | 2,560 | development project (vote, project code) × year, FY2023-2025: the Budget book's tabled and revised allocations, PKKP's allocation and actual, execution rate and status |
 | `gap_reported_vs_audited.csv` | 89 | federal headline × year: PKKP audited, BNM MSB 3.1 and MOF Tinjauan Fiskal side by side, each pair's signed difference and status (Phase 5) |
 | `gap_obligations_growth.csv` | 68 | federal obligation × year: debt, PFI, commitments, guarantees at 31 December (PKKP memorandum), growth against debt's (Phase 5) |
 | `gap_target_vs_outcome.csv` | 43 | plan target × place: RMKe-12's 2025 targets (GDP by state, federal finance, labour) beside the outcome (Phase 5) |
@@ -407,6 +408,127 @@ collection, and is `above_estimate` in 13 of 15 years (FY2024: 4.78x the estimat
 performance. PKKP's own printed percentage is against the revised estimate, which is set late in the year, so it
 reads closer to 100% than `collection_rate_original` (FY2015 tax: 0.90 of the original, 97.3% printed). The
 FY2023 estimate is Budget 2023 as re-tabled in February 2023. Book reprints carry CV29.
+
+## Wave 3 DOSM and data.gov.my datasets (2026-11-06)
+
+55 datasets the catalogue publishes that the warehouse did not hold
+(`sources/dosm/pipeline/ingest_wave3.py`). Each was checked cell by cell against DOSM's parquet copy of the same
+publication (`verify_wave3.py`: 165 checks PASS). Core gains 37 indicators (`build_wave3` in build_core):
+
+* **Wages:**
+  * the Salaries & Wages Survey 2010-2025 (`wages.median`, `.mean`, `.recipients`), by state, sex, strata,
+    sector, MSIC section, education, age, ethnicity, occupation, skill, certificate and citizenship. **Most of
+    its tables cover citizens only (`citizenship=citizen`); `_total` is all employees** (from the ethnicity
+    table). A state figure is therefore held as citizens only, and `get_series` says so when `_total` is asked;
+  * real wages by state (2010 prices);
+  * formal-sector administrative wages, monthly 2022-2026 (`wages.formal.*`, with percentiles and wage bands).
+* **Productivity** by state and sector.
+* **CPI:**
+  * the core, low-income and urban/rural indexes, and the annual average index from 1960 (`cpi.index_annual`);
+  * DOSM's printed year-on-year inflation, national headline and core. The states' and the month-on-month rates
+    stay at L1 (they can be derived from `cpi.index`, D34).
+* **GDP by district,** constant 2015 prices, by sector, 2015-2020 (the 'Supra' rows stay at L1).
+* **People and services:**
+  * life expectancy, national (by sex and ethnicity), by state × ethnicity, and by district;
+  * live births, fertility (age-specific rates and total fertility), maternal and early-childhood deaths by state;
+  * school completion by state (the district file uses MOE's own education districts, so it stays at L1);
+  * household Internet access.
+* **Environment, energy, water, agriculture:**
+  * air pollutants, greenhouse-gas emissions, river-basin water quality, forest reserves;
+  * electricity, final and primary energy;
+  * water consumption and production;
+  * minerals, timber, crops and fish landings.
+
+Sources that do not print every state declare their real coverage in `meta/indicator.csv`.
+
+## DOSM survey-report tables (2026-11-06, D35)
+
+The HIES 2024, LFS 2025 and Salaries & Wages 2025 reports print breakdowns the open-data files do not
+(`sources/dosm_reports`, every printed cell at L1). `core/pipeline/report_tables.py` declares, table by table,
+which indicator, place, period and breakdown each cell is. 1,059 report figures are in core, each under edition
+`dosm:report.<publication>@<release date>` and cited to its sheet and cell:
+* poverty (absolute, hardcore) by state × strata, by the household head's ethnicity × strata and × sex, by the
+  head's age and by household size;
+* the poverty line income (`poverty.pli.mean`, new) by state, strata, ethnicity and food / non-food;
+* disposable and per-capita income (new indicators) and gross income breakdowns (state × head's sex,
+  ethnicity × strata × head's sex, head's age);
+* the participation rate by age × strata × sex.
+
+The report figures the open data already hold were checked and not loaded twice:
+* 170 figures equal the open data;
+* 130 repeat another table of the same report, and all of those copies are equal.
+
+One figure differs: Terengganu's absolute poverty in 2024. The report's chapter tables print 4.8, while its own district table and the open data print 5.8 (SD1, SD1b).
+Both are held, and `get_series` returns both (`sources/dosm_reports/data/_source_divergences.csv`, SD1). No
+reader chooses between them:
+* `Warehouse.get()` returns nothing for a key where two products of one publisher differ, and
+  `Warehouse.conflicts()` returns both rows;
+* `gap_need_vs_money` leaves Terengganu's 2024 poverty blank and names both figures in `coverage_note`;
+* `compare_geos` lists Terengganu under `not_banded`, with both figures cited. A
+household head's attributes are their own axes (`hh_head_ethnicity`, `hh_head_sex`, `hh_head_age`), never the person
+axes.
+
+## gap_project_budget_vs_actual (2026-11-06)
+
+Was each development project's money spent? The grain is development project (vote, project code) × year,
+FY2023-2025 (`build_gap_project_budget.py`; method declared in its docstring before any result). The view sets
+side by side:
+* the Budget book's tabled allocation (columns 6 + 7 of that year's book);
+* the next book's revised allocation (column 5);
+* the total project cost;
+* PKKP's audited allocation and actual for the project.
+
+Rows are joined on code, with a name check, because codes are reused. Where the book and the accounts print one
+code for two different projects, each is its own row and they are never joined (5 pairs). Derived columns:
+* the execution rate on PKKP's allocation and on the tabled amount;
+* the unspent amount;
+* the money moved in or out during the year (`allocation_change_rm`).
+
+Status words use `gap_budget_vs_actual`'s thresholds. Checks (`_validation_gap_pbva.csv`, 182 PASS):
+* every vote-year's tabled column adds up to the book's printed vote total;
+* its actual and allocation columns add up to core's audited vote observations.
+
+FY2024, the 697 projects in both sources excluding P.70: RM89.99b tabled. PKKP records RM78.03b allocated to
+those projects and RM78.93b spent, 101.1% of the allocation (RM0.89b more than the allocation the accounts
+record for them). 78 projects with a tabled allocation spent nothing. FY2023 has no
+tabled column, since the 2023 book is not held. FY2025 has no PKKP yet.
+
+Status words beyond the thresholds:
+* P.70, the contingency reserve, reads `reserve`. It is drawn by transfers to other votes and offset in the
+  accounts (P.70 00200, a negative actual), so it is not execution, and it is left out of every total above.
+* A negative actual reads `offset_entry`.
+
+The name check ignores generic words, and two names with the same total project cost to within 5% are `renamed`
+(5 pairs, e.g. MDEC under its former name Multimedia Development Corporation). These were added after the blind
+verifier; the first count had RM91.99b / RM80.03b / RM79.37b with the reserve inside. P.23 41000 (book "Bekalan
+Elektrik Sabah (BES)", PKKP 2023 "Sabah Electricity Sdn. Bhd. (SESB)") stays `different` under the declared rule,
+because their costs differ by more than 5%, though it may be one line.
+
+## Audits as records, and gap_audit_recurrence (Phase 4, 2026-11-06, D33)
+
+`build_records.py` builds four files:
+* **`fact_record.csv`:** one `audit` record per entry of the LKAN audit inventory (875). Each record has:
+  * its place (MY or the state);
+  * the year audited;
+  * the title as printed;
+  * the topic families of `meta/audit_topic_taxonomy.csv`, declared before any count and matched at the start
+    of a word;
+  * provenance down to the contents page.
+* **`bridge_link.csv`:** an audit is linked to a federal body only where the printed body equals a name the body
+  officially had that year (`core/entity_name.csv`). That is `name_exact_official`, publishable under D33: 143
+  links.
+* **`link_candidates.csv`:** nothing else is linked. Obvious candidates (the same name without 'MALAYSIA', or the
+  body's name in another year: 67) are listed with `publishable=false` for the owner to sign. A company,
+  statutory body or person is never linked here.
+* **`gap_audit_recurrence.csv`:** two kinds of row:
+  * linked body × topic family: the years audited, the number of audits, and `recurs` when the body was audited
+    in that family in two or more years;
+  * for every state and the federal level, audits by family and year. These rows name no body.
+
+  An audit can carry several families. Families classify the title of an audit, never its findings.
+
+Checks are in `_validation_records.csv`. Coverage is incomplete for 2014-2016 (image contents pages), and the
+inventory awaits its blind verifier: not for publication yet.
 
 ## gap_reported_vs_audited (Phase 5, 2026-11-06)
 

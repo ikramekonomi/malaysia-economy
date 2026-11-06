@@ -196,7 +196,9 @@ def main():
     add("F4 every flow's entities are registered (core/dim_entity.csv)", "fact_money_flow",
         "PASS" if not stray else "FAIL", "ok" if not stray else str(stray))
     head = defaultdict(Decimal)
-    for o in rows(os.path.join(CORE, "fact_observation.csv")):
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from warehouse import read_observations
+    for o in read_observations():
         if o["indicator_code"] == "federal_gov.vote.opex" and o["breakdown_key"] == "charged_head=T.12" \
                 and o["basis"] == "audited" and o["edition_id"].startswith("pkkp:"):
             head[o["period_code"]] += Decimal(o["value"])

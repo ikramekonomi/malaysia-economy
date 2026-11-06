@@ -42,7 +42,9 @@ def main():
     n_ok = len(rows) == 14 * 4 * 4 and len(names) == 14 and len(rps) == 4
     add("D2 coverage 14 rows x 4 rolling plans x 4 measures", "JBL12122024 Q243", "PASS" if n_ok else "FAIL", f"{len(rows)} cells")
     pk = defaultdict(D)
-    for r in csv.DictReader(open(os.path.join(REPO, "core", "fact_observation.csv"), encoding="utf-8")):
+    sys.path.insert(0, os.path.join(REPO, "core", "pipeline"))
+    from warehouse import read_observations
+    for r in read_observations():
         if r["indicator_code"] == "federal_gov.expenditure.devex" and r["basis"] == "audited" and \
                 r["edition_id"].startswith("pkkp:") and r["geo_code"] == "MY" and r["breakdown_key"] == "_total":
             pk[r["period_code"]] += D(r["value"])

@@ -5,7 +5,7 @@
   F2 each '% Jumlah' = Peruntukan / Jumlah, and each '% Peruntukan' = Perbelanjaan / Peruntukan (within 0.05 point
      plus the rounding of the amounts)
   F3 the Jumlah of Perbelanjaan against PKKP's audited gross development spending, FY2016 + FY2017, each from its own
-     volume (core/fact_observation.csv, federal_gov.expenditure.devex, basis audited): within RM1 juta
+     volume (core/fact_observation/, federal_gov.expenditure.devex, basis audited): within RM1 juta
   F4 (INFO) the share named to one state or the Federal Territories: the 13 states + 'Wilayah Persekutuan' over the
      Jumlah ('Pelbagai Negeri' is not placed)
 Writes sources/rmk/data/_validation_ksp_rmk11_f3.csv. Exit 1 on a FAIL. Nothing is corrected.
@@ -42,7 +42,9 @@ def main():
                 bad.append(f"{n} {name}: printed {pr}, from amounts {calc:.2f}")
     add("F2 printed percentages against the amounts", "Jadual F-3", "PASS" if not bad else "WARN", "; ".join(bad) or "32 percentages")
     pk = defaultdict(D)
-    for r in csv.DictReader(open(os.path.join(REPO, "core", "fact_observation.csv"), encoding="utf-8")):
+    sys.path.insert(0, os.path.join(REPO, "core", "pipeline"))
+    from warehouse import read_observations
+    for r in read_observations():
         if r["indicator_code"] == "federal_gov.expenditure.devex" and r["basis"] == "audited" and \
                 r["edition_id"].startswith("pkkp:") and r["period_code"] in ("2016", "2017") and r["geo_code"] == "MY":
             pk[r["period_code"]] += D(r["value"])

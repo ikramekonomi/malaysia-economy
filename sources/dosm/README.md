@@ -199,7 +199,7 @@ dataset.
 | `lfs_parlimen` / `lfs_dun` | 666 / 1,800 | 2021–2023 | × constituency |
 | `employment_sector` | 198 | 2001–2022 | share of employment by MSIC sector × sex |
 
-**There is no salaries & wages dataset in the catalogue.** DOSM publishes formal-sector
+**There is no salaries & wages dataset in the catalogue** (as of 2026-08-03; superseded: the catalogue now publishes `wages_*` and `formal_wages_*`, ingested in wave 3, 2026-11-06). DOSM publishes formal-sector
 wages as a dashboard only, and the Salaries & Wages Survey has no catalogue entry. The
 nearest available wage aggregate is `gdp_annual_nominal_income`'s *compensation of
 employees* (component `i1`), which gives the labour share of GDP from 2010. Getting
@@ -348,6 +348,50 @@ at one full unit so "agrees to the last printed digit" counts as agreement.
 The INFO rows are source-side, not pipeline-side: every value was verified verbatim
 against the parquet arbiter first, so an identity that fails is a property of the
 publication. All of them are recorded row-by-row and none is corrected.
+
+## Wave 3 (2026-11-06)
+
+`pipeline/ingest_wave3.py` pulls 55 datasets that the catalogue added or that earlier passes deferred, with the
+same writer (values verbatim plus `retrieved_from`/`retrieved_date`), `_vintage.json` and `_vintage_log.csv`
+entries. `refresh.py` watches them. `pipeline/verify_wave3.py` compares every file with the parquet mirror of the
+same publication, cell by cell (`data/_validation_wave3.csv`: 165 checks, all PASS).
+
+| block | datasets |
+|---|---|
+| wages and productivity | `wages_state`, `wages_strata`, `wages_sector`, `wages_industry`, `wages_education`, `wages_age`, `wages_ethnicity`, `wages_occupation`, `wages_skill`, `wages_certificate`, `wages_noncitizen`, `wages_noncitizen_education`, `wages_real_state`, `wages_real_state_citizen`, `formal_wages`, `formal_wages_state`, `formal_wages_msic`, `formal_wages_band`, `formal_wages_percentile`, `formal_wages_msic_age`, `productivity_state` |
+| prices, output, people, services | `cpi_core`, `cpi_core_inflation`, `cpi_lowincome`, `cpi_strata`, `cpi_state_inflation`, `cpi_headline_inflation`, `cpi_annual`, `cpi_annual_inflation`, `gdp_district_real_supply`, `life_expectancy`, `life_expectancy_state_ethnic`, `life_expectancy_district`, `births_annual_state`, `fertility_state`, `deaths_maternal_state`, `deaths_early_childhood_state`, `completion_school_state`, `completion_school_district`, `hh_access_internet` |
+| environment, energy, water, agriculture | `air_pollution`, `ghg_emissions`, `water_pollution_basin`, `forest_reserve`, `forest_reserve_state`, `electricity_consumption`, `electricity_supply`, `energy_consumption_sector`, `energy_supply_commodity`, `water_consumption`, `water_production`, `mineral_extraction`, `timber_production`, `crops_state`, `fish_landings` |
+
+Left out on purpose: `cpi_3d`/`4d`/`5d`, and `population_dun`/`parlimen` (age × ethnicity grain).
+
+**The Salaries & Wages Survey tables cover citizens only, except `wages_ethnicity` and `wages_real_state`,
+which cover all employees.** The other tables' 'overall' row equals `wages_ethnicity`'s 'citizen' row in all 48
+year × sex cells. In core, the citizens-only rows carry `citizenship=citizen`, and `_total` is all employees.
+
+The files' own identities are checked offline by `pipeline/verify_wave3_identities.py`. Breaches beyond the
+printed rounding are registered in `data/_identity_breaches_wave3.csv` and kept as published. There are 16:
+* timber national totals that are not the sum of the states (e.g. 2001 plywood: 4,317,193 printed against
+  4,217,193 summed);
+* water production in 2010;
+* fish landings in two months;
+* one wage-recipients year.
+
+Other notes:
+* District GDP: in Sabah and Sarawak the state's own Supra is not a district, so their districts do not add up to
+  the state.
+* Kuala Lumpur's district row includes Putrajaya (flagged).
+* 6 districts of the 2020 set print no GDP (the file likely uses earlier boundaries).
+* Selangor's water figures likely include KL and Putrajaya.
+* Fish landings are printed for each state only by coast.
+
+Held at L1 only:
+* `completion_school_district`: MOE's education districts, not DOSM's administrative districts;
+* the `growth_yoy` series of `productivity_state` and `gdp_district_real_supply` (derivable from the levels);
+* the national 'overall' rows of the citizens-only wage tables, and the national totals of `formal_wages_state`
+  and `formal_wages_msic`: each repeats a total loaded once from another file;
+* the states' CPI inflation and every month-on-month rate: derivable from the indexes core holds;
+* the 'Supra' rows of district GDP;
+* the 'Semenanjung Malaysia' forest subtotal.
 
 ## Provenance
 

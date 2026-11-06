@@ -1,0 +1,11 @@
+check,dataset,status,detail
+I1 national = sum of states,timber_production.production,SOURCE_DIVERGENCE,133 national rows; 12 differ
+I1 national = sum of states,water_consumption.value,PASS,44 national rows; 0 differ
+I1 national = sum of states,water_production.value,SOURCE_DIVERGENCE,23 national rows; 1 differ
+I1 national = sum of states,crops_state.planted_area,PASS,99 national rows; 0 differ
+I1 national = sum of states,crops_state.production,PASS,99 national rows; 0 differ
+I1 national = sum of states,forest_reserve_state.area,PASS,0 national rows; 0 differ
+I1 national = sum of states,formal_wages_state.employees,PASS,54 national rows; 0 differ
+I1 national = sum of states,wages_state.recipients,SOURCE_DIVERGENCE,48 national rows; 1 differ
+I2 wage bands = formal employees,formal_wages_band,PASS,54 months; 0 differ
+I2 coasts = Malaysia,fish_landings,SOURCE_DIVERGENCE,252 months; 2 differ

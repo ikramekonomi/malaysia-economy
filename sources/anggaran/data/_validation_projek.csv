@@ -1,0 +1,290 @@
+check,book_year,scope,column,printed,computed,difference,status,note
+J2,2024,P.63,sebenar_prev2,2580318081,2580318080,1,SOURCE_ANOMALY,PJ1: printed total vs sum of its rows
+J1,2024,56 programme subtotals,all,,,,PASS,280 of 280 subtotal cells equal the sum of their rows; the rest are listed above
+J2,2024,28 vote totals,all,,,,PASS,139 of 140 vote-total cells equal the sum of their rows; the rest are listed above
+J3,2024,P.06,anggaran_langsung,7025882300,7025882300,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.06,anggaran_pinjaman,60000000,60000000,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.06,sebenar_prev2,3145104904,6189564488,-3044459584,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.07,anggaran_langsung,1138426800,1138426800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.07,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.07,sebenar_prev2,17418732,852267684,-834848952,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.10,anggaran_langsung,12594013800,12594013800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.10,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.10,sebenar_prev2,16266638840,19902241165,-3635602325,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.13,anggaran_langsung,209750300,209750300,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.13,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.13,sebenar_prev2,64352714,64352714,0,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.14,anggaran_langsung,88231000,88231000,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.14,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.14,sebenar_prev2,8008674,140506818,-132498144,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.15,anggaran_langsung,2936124300,2936124300,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.15,anggaran_pinjaman,23174000,23174000,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.15,sebenar_prev2,835625375,0,835625375,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.20,anggaran_langsung,254396900,254396900,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.20,anggaran_pinjaman,50000000,50000000,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.20,sebenar_prev2,99199000,138478279,-39279279,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.21,anggaran_langsung,1694514300,1694514300,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.21,anggaran_pinjaman,60000000,60000000,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.21,sebenar_prev2,1057976232,1324016283,-266040051,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.22,anggaran_langsung,7372144800,7372144800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.22,anggaran_pinjaman,67030000,67030000,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.22,sebenar_prev2,5618999190,6920397903,-1301398713,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.23,anggaran_langsung,4697749100,4697749100,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.23,anggaran_pinjaman,732742000,732742000,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.23,sebenar_prev2,2930527256,516415993,2414111263,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.24,anggaran_langsung,1293902500,1293902500,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.24,anggaran_pinjaman,17000000,17000000,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.24,sebenar_prev2,595373896,626723755,-31349859,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.25,anggaran_langsung,67011000,67011000,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.25,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.25,sebenar_prev2,45403468,58457328,-13053860,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.26,anggaran_langsung,547007000,547007000,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.26,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.26,sebenar_prev2,155629419,355629419,-200000000,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.27,anggaran_langsung,8561817900,8561817900,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.27,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.27,sebenar_prev2,3664371917,5329457925,-1665086008,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.28,anggaran_langsung,4645604800,4645604800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.28,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.28,sebenar_prev2,1447788778,2203545683,-755756905,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.30,anggaran_langsung,535882800,535882800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.30,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.30,sebenar_prev2,246162171,311079169,-64916998,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.31,anggaran_langsung,150022800,150022800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.31,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.31,sebenar_prev2,70123289,91821270,-21697981,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J4,2024,P.32,,,,,PASS,no project table; the summary allocates RM0
+J4,2024,P.33,,,,,PASS,no project table; the summary allocates RM0
+J3,2024,P.42,anggaran_langsung,6067634700,6067634700,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.42,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.42,sebenar_prev2,4122773868,4336611301,-213837433,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.43,anggaran_langsung,3778802300,3778802300,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.43,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2024
+J5,2024,P.43,sebenar_prev2,1358638826,3235586935,-1876948109,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.45,anggaran_langsung,491833500,491833500,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.45,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.45,sebenar_prev2,215070032,264515934,-49445902,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.46,anggaran_langsung,578026000,578026000,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.46,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.46,sebenar_prev2,307163120,321051438,-13888318,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.47,anggaran_langsung,1800976500,1800976500,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.47,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.47,sebenar_prev2,581021503,955111153,-374089650,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.48,anggaran_langsung,265784800,265784800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.48,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.48,sebenar_prev2,111039218,125902923,-14863705,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.60,anggaran_langsung,7052971800,7052971800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.60,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.60,sebenar_prev2,2924078568,4749277925,-1825199357,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.62,anggaran_langsung,5079227800,5079227800,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.62,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.62,sebenar_prev2,2168317128,3041616933,-873299805,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.63,anggaran_langsung,5935634700,5935634700,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.63,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.63,sebenar_prev2,2580318081,3551037202,-970719121,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.64,anggaran_langsung,4126679500,4126679500,0,PASS,summary cara_langsung anggaran_2024
+J3,2024,P.64,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.64,sebenar_prev2,2464918230,2785808248,-320890018,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2024,P.70,anggaran_langsung,2000000000,2000000000,0,PASS,the summary prints one line for this vote
+J3,2024,P.70,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2024,P.70,sebenar_prev2,0,0,0,INFO,"project list's column (4) total vs the summary's sebenar_2022 (the vote's whole spending, incl. projects not carried into the budget year)"
+J5,2024,699 projects,sebenar_prev2,,,,INFO,"vs PKKP FY2022 fact_devex_project sebenar_jumlah_rm, joined on vote and project code: 242 equal, 9 within RM1, 301 different, 147 not in PKKP"
+J1,2025,P.21 Jumlah Perikanan,sebenar_prev2,112613957,112613958,-1,SOURCE_ANOMALY,PJ2: printed total vs sum of its rows
+J2,2025,P.21,sebenar_prev2,919187291,919187292,-1,SOURCE_ANOMALY,PJ3: printed total vs sum of its rows
+J1,2025,P.23 Jumlah Jabatan Mineral dan Geosains (JMG),sebenar_prev2,22324622,22324621,1,SOURCE_ANOMALY,PJ4: printed total vs sum of its rows
+J1,2025,P.23 Jumlah Jabatan Perhutanan Semenanjung Malaysia (JPSM),sebenar_prev2,14573512,14573511,1,SOURCE_ANOMALY,PJ5: printed total vs sum of its rows
+J2,2025,P.23,sebenar_prev2,365878093,365878091,2,SOURCE_ANOMALY,PJ6: printed total vs sum of its rows
+J2,2025,P.42,sebenar_prev2,4290632202,4290632201,1,SOURCE_ANOMALY,PJ7: printed total vs sum of its rows
+J1,2025,P.43 Jumlah Perumahan Negara,sebenar_prev2,750895195,750895194,1,SOURCE_ANOMALY,PJ8: printed total vs sum of its rows
+J1,2025,P.43 Jumlah Bomba dan Penyelamat Malaysia,sebenar_prev2,41778960,41778959,1,SOURCE_ANOMALY,PJ9: printed total vs sum of its rows
+J1,2025,P.43 Jumlah Landskap Negara,sebenar_prev2,52137645,52137644,1,SOURCE_ANOMALY,PJ10: printed total vs sum of its rows
+J2,2025,P.43,sebenar_prev2,1647893283,1647893281,2,SOURCE_ANOMALY,PJ11: printed total vs sum of its rows
+J2,2025,P.64,sebenar_prev2,2439997086,2439997087,-1,SOURCE_ANOMALY,PJ12: printed total vs sum of its rows
+J1,2025,56 programme subtotals,all,,,,PASS,274 of 280 subtotal cells equal the sum of their rows; the rest are listed above
+J2,2025,30 vote totals,all,,,,PASS,145 of 150 vote-total cells equal the sum of their rows; the rest are listed above
+J3,2025,P.06,anggaran_langsung,5781174900,5781174900,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.06,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.06,sebenar_prev2,5129094407,6913623616,-1784529209,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.07,anggaran_langsung,1142254400,1142254400,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.07,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.07,sebenar_prev2,47166555,917530606,-870364051,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.10,anggaran_langsung,7623348800,7623348800,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.10,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.10,sebenar_prev2,11651651869,29851630333,-18199978464,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.13,anggaran_langsung,209896500,209896500,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.13,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.13,sebenar_prev2,76258019,111452422,-35194403,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.14,anggaran_langsung,123995000,123995000,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.14,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.14,sebenar_prev2,15554300,25111400,-9557100,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.15,anggaran_langsung,2257380600,2257380600,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.15,anggaran_pinjaman,180067900,180067900,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.15,sebenar_prev2,1842021056,3339196916,-1497175860,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.20,anggaran_langsung,254717700,254717700,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.20,anggaran_pinjaman,50000000,50000000,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.20,sebenar_prev2,155070000,252357236,-97287236,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.21,anggaran_langsung,1758000000,1758000000,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.21,anggaran_pinjaman,14000000,14000000,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.21,sebenar_prev2,919187291,1418839340,-499652049,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.22,anggaran_langsung,7319824200,7319824200,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.22,anggaran_pinjaman,174559800,174559800,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.22,sebenar_prev2,5993681604,7375520646,-1381839042,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.23,anggaran_langsung,860109900,860109900,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.23,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.23,sebenar_prev2,365878093,3856627386,-3490749293,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.24,anggaran_langsung,1222304500,1222304500,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.24,anggaran_pinjaman,13750000,13750000,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.24,sebenar_prev2,863349990,951804931,-88454941,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.25,anggaran_langsung,72772700,72772700,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.25,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.25,sebenar_prev2,49134931,59477577,-10342646,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.26,anggaran_langsung,551944900,551944900,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.26,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.26,sebenar_prev2,480823594,519053951,-38230357,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.27,anggaran_langsung,9327143300,9327143300,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.27,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.27,sebenar_prev2,4748480778,6605681398,-1857200620,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.28,anggaran_langsung,4894040200,4894040200,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.28,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.28,sebenar_prev2,2998813689,4666533906,-1667720217,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.30,anggaran_langsung,536620700,536620700,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.30,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.30,sebenar_prev2,261996583,439057440,-177060857,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.31,anggaran_langsung,228929000,228929000,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.31,anggaran_pinjaman,1000000,1000000,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.31,sebenar_prev2,81720720,118277041,-36556321,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J4,2025,P.32,,,,,PASS,no project table; the summary allocates RM0
+J3,2025,P.33,anggaran_langsung,3612037600,3612037600,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.33,anggaran_pinjaman,979553400,979553400,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.33,sebenar_prev2,3054064889,0,3054064889,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.42,anggaran_langsung,6738085600,6738085600,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.42,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.42,sebenar_prev2,4290632202,4661248739,-370616537,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.43,anggaran_langsung,3962748600,3962748600,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.43,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2025
+J5,2025,P.43,sebenar_prev2,1647893283,3506752003,-1858858720,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.45,anggaran_langsung,498251100,498251100,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.45,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.45,sebenar_prev2,218976339,379022421,-160046082,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.46,anggaran_langsung,819525100,819525100,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.46,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.46,sebenar_prev2,393945185,458208775,-64263590,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.47,anggaran_langsung,1476878000,1476878000,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.47,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.47,sebenar_prev2,731353430,1277451297,-546097867,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.48,anggaran_langsung,217758100,217758100,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.48,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.48,sebenar_prev2,115335672,176431019,-61095347,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.50,anggaran_langsung,1105945500,1105945500,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.50,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.50,sebenar_prev2,727159172,0,727159172,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.60,anggaran_langsung,7492032400,7492032400,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.60,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.60,sebenar_prev2,4007718622,6041181689,-2033463067,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.62,anggaran_langsung,3925438800,3925438800,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.62,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.62,sebenar_prev2,2004539155,3944369160,-1939830005,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.63,anggaran_langsung,6323077700,6323077700,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.63,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.63,sebenar_prev2,3587017814,4832027066,-1245009252,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.64,anggaran_langsung,4250833100,4250833100,0,PASS,summary cara_langsung anggaran_2025
+J3,2025,P.64,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.64,sebenar_prev2,2439997086,3391268809,-951271723,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2025,P.70,anggaran_langsung,2000000000,2000000000,0,PASS,the summary prints one line for this vote
+J3,2025,P.70,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2025,P.70,sebenar_prev2,0,0,0,INFO,"project list's column (4) total vs the summary's sebenar_2023 (the vote's whole spending, incl. projects not carried into the budget year)"
+J5,2025,683 projects,sebenar_prev2,,,,INFO,"vs PKKP FY2023 fact_devex_project sebenar_jumlah_rm, joined on vote and project code: 236 equal, 6 within RM1, 379 different, 62 not in PKKP"
+J1,2026,56 programme subtotals,all,,,,PASS,280 of 280 subtotal cells equal the sum of their rows; the rest are listed above
+J2,2026,30 vote totals,all,,,,PASS,150 of 150 vote-total cells equal the sum of their rows; the rest are listed above
+J3,2026,P.06,anggaran_langsung,5324584300,5324584300,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.06,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.06,sebenar_prev2,1362181626,5543950157,-4181768531,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.07,anggaran_langsung,1141418000,1141418000,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.07,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.07,sebenar_prev2,25246720,899726867,-874480147,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.10,anggaran_langsung,2191437900,2191437900,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.10,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.10,sebenar_prev2,27563728,14454283483,-14426719755,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.13,anggaran_langsung,218145500,218145500,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.13,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.13,sebenar_prev2,30136775,116113678,-85976903,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.14,anggaran_langsung,117517200,117517200,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.14,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.14,sebenar_prev2,19322645,80107101,-60784456,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.15,anggaran_langsung,1999399800,1999399800,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.15,anggaran_pinjaman,115980000,115980000,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.15,sebenar_prev2,846096741,2117475135,-1271378394,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.20,anggaran_langsung,332265500,332265500,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.20,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.20,sebenar_prev2,46750000,289325243,-242575243,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.21,anggaran_langsung,1771926900,1771926900,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.21,anggaran_pinjaman,270000000,270000000,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.21,sebenar_prev2,215245205,1595198556,-1379953351,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.22,anggaran_langsung,7635757100,7635757100,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.22,anggaran_pinjaman,152676300,152676300,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.22,sebenar_prev2,5198098822,7287298904,-2089200082,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.23,anggaran_langsung,891265100,891265100,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.23,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.23,sebenar_prev2,228706160,652797588,-424091428,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.24,anggaran_langsung,1219246100,1219246100,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.24,anggaran_pinjaman,20000000,20000000,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.24,sebenar_prev2,459496096,1015548502,-556052406,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.25,anggaran_langsung,59440000,59440000,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.25,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.25,sebenar_prev2,10269394,64868552,-54599158,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.26,anggaran_langsung,745442000,745442000,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.26,anggaran_pinjaman,9000000,9000000,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.26,sebenar_prev2,3000000,508631018,-505631018,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.27,anggaran_langsung,9607032300,9607032300,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.27,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.27,sebenar_prev2,4996043456,8217403753,-3221360297,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.28,anggaran_langsung,5108764900,5108764900,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.28,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.28,sebenar_prev2,3062219379,4090326186,-1028106807,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.30,anggaran_langsung,516216800,516216800,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.30,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.30,sebenar_prev2,88773309,505348334,-416575025,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.31,anggaran_langsung,268954000,268954000,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.31,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.31,sebenar_prev2,31532683,138463596,-106930913,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.33,anggaran_langsung,4348299500,4348299500,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.33,anggaran_pinjaman,450660000,450660000,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.33,sebenar_prev2,3286922894,3734883223,-447960329,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.42,anggaran_langsung,6744503300,6744503300,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.42,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.42,sebenar_prev2,1994272319,5794032420,-3799760101,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.43,anggaran_langsung,4016936100,4016936100,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.43,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.43,sebenar_prev2,371165242,3676044367,-3304879125,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.45,anggaran_langsung,482754200,482754200,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.45,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.45,sebenar_prev2,118940505,391341625,-272401120,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.46,anggaran_langsung,782439200,782439200,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.46,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.46,sebenar_prev2,52814507,472048820,-419234313,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.47,anggaran_langsung,1422865000,1422865000,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.47,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.47,sebenar_prev2,749811151,1118801702,-368990551,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.48,anggaran_langsung,225801100,225801100,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.48,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.48,sebenar_prev2,34160768,227245917,-193085149,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.50,anggaran_langsung,1110068200,1110068200,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.50,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.50,sebenar_prev2,610278753,1027451178,-417172425,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.60,anggaran_langsung,7637966600,7637966600,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.60,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.60,sebenar_prev2,3425128962,7349255794,-3924126832,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.62,anggaran_langsung,3832118300,3832118300,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.62,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.62,sebenar_prev2,1188793631,3867983827,-2679190196,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.63,anggaran_langsung,6314529900,6314529900,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.63,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.63,sebenar_prev2,1981758360,5316736749,-3334978389,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.64,anggaran_langsung,3914588900,3914588900,0,PASS,summary cara_langsung anggaran_2026
+J3,2026,P.64,anggaran_pinjaman,0,0,0,PASS,summary pinjaman anggaran_2026
+J5,2026,P.64,sebenar_prev2,365910439,3458903190,-3092992751,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J3,2026,P.70,anggaran_langsung,2000000000,2000000000,0,PASS,the summary prints one line for this vote
+J3,2026,P.70,anggaran_pinjaman,0,0,0,PASS,the summary prints no pinjaman line for this vote: nil
+J5,2026,P.70,sebenar_prev2,0,0,0,INFO,"project list's column (4) total vs the summary's sebenar_2024 (the vote's whole spending, incl. projects not carried into the budget year)"
+J5,2026,640 projects,sebenar_prev2,,,,INFO,"vs PKKP FY2024 fact_devex_project sebenar_jumlah_rm, joined on vote and project code: 131 equal, 11 within RM1, 470 different, 28 not in PKKP"
+J6,2024,699 projects,anggaran,,,,INFO,"tabled allocation (columns 6+7) vs PKKP FY2024 fact_devex_project anggaran_jumlah_rm (the allocation the accounts record): 119 equal, 579 changed during the year, 1 not in PKKP"

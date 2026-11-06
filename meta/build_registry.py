@@ -13,6 +13,7 @@ Reads (the manifests each source already writes):
   sources/dosm/data/_vintage_log.csv            (state = current)
   sources/bnm/data/_vintage_log.csv             (if present)
   sources/{pkkp,anggaran,anggaran-hasil}/data/_documents_manifest.csv  (re-downloaded, identity-checked)
+  sources/dosm_reports/data/_documents_manifest.csv  (DOSM survey reports' Excel files, sha-checked on extraction)
   provenance columns of those sources' data, for any file no manifest covers (no sha256)
 Writes (derived, rebuilt every run):
   meta/registry_file.csv          one row per file a held series is built from
@@ -44,6 +45,15 @@ FIELDS = ["series_id", "edition", "file_name", "source_url", "sha256", "size_byt
 
 # DOSM dataset id -> registry series (first matching prefix wins)
 DOSM_SERIES = [
+    # wave 3 (2026-11-06): specific prefixes before the general ones below
+    ("wages_", "salaries_wages"), ("formal_wages", "salaries_wages"), ("cpi_core", "cpi_detail"),
+    ("cpi_lowincome", "cpi_detail"), ("cpi_strata", "cpi_detail"), ("gdp_district", "district_gdp"),
+    ("life_expectancy", "vital_statistics"), ("births_", "vital_statistics"), ("fertility_", "vital_statistics"),
+    ("deaths_", "vital_statistics"), ("completion_school", "education_stats"), ("hh_access_internet", "ict_households"),
+    ("air_pollution", "air_quality"), ("ghg_emissions", "emissions_inventory"), ("water_pollution", "river_water_quality"),
+    ("forest_reserve", "forest_reserves"), ("electricity_", "energy_stats"), ("energy_", "energy_stats"),
+    ("water_consumption", "water_supply"), ("water_production", "water_supply"), ("mineral_", "primary_production"),
+    ("timber_", "primary_production"), ("crops_", "primary_production"), ("fish_", "primary_production"),
     ("hospital_beds", "health_facts"), ("healthcare_staff", "health_facts"), ("schools_district", "education_stats"),
     ("enrolment_school_district", "education_stats"), ("teachers_district", "education_stats"),
     ("death_state", "vital_statistics"), ("deaths_state", "vital_statistics"), ("life_expectancy_state", "vital_statistics"),
@@ -141,6 +151,34 @@ def manifest_files():
                     "size_bytes": m.get("size_bytes", ""), "pages": m.get("pages", ""),
                     "retrieved_date": m.get("retrieved_date", ""),
                     "manifest": "sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)"})
+    # the development project lists are printed inside the Budget books: link those books to anggaran_pembangunan
+    books = {f["file_name"]: f for f in out if f["series_id"] == "anggaran_perbelanjaan"}
+    for p in sorted(glob.glob(os.path.join(REPO, "sources", "anggaran", "data", "*", "fact_anggaran_projek_*.csv"))):
+        for fn in sorted({r["source_file"] for r in rows(p)}):
+            m = books.get(fn, {})
+            out.append({**{k: m.get(k, "") for k in ("edition", "source_url", "sha256", "size_bytes", "pages",
+                                                       "retrieved_date")},
+                        "series_id": "anggaran_pembangunan", "file_name": fn,
+                        "manifest": m.get("manifest", "") + " (via source_file of the project lists)"})
+    # state budget documents (sources/state-budgets): estimates books and budget speeches, by document type
+    p = os.path.join(REPO, "sources", "state-budgets", "data", "_documents_manifest.csv")
+    if os.path.exists(p):
+        for r in rows(p):
+            out.append({"series_id": "state_budget_estimates" if r["doc_type"] == "estimates_book" else
+                        "state_budget_speech", "edition": f"{r['state']} {r['budget_year']}", "file_name": r["file_name"],
+                        "source_url": r["source_url"], "sha256": r["sha256"], "size_bytes": r["size_bytes"],
+                        "pages": r["pages"], "retrieved_date": r["retrieved_date"], "manifest": rel(p)})
+    # DOSM survey reports (the Excel twin of each publication; sources/dosm_reports, re-downloaded and sha-checked)
+    report_series = {"household_income_2024": "hies_report_tables", "poverty_2024": "hies_report_tables",
+                     "income_inequality_2024": "hies_report_tables", "household_expenditure_2024": "hes_report_tables",
+                     "labour_annual_2025": "lfs_annual_report", "salaries_wages_2025": "salaries_wages"}
+    p = os.path.join(REPO, "sources", "dosm_reports", "data", "_documents_manifest.csv")
+    if os.path.exists(p):
+        for r in rows(p):
+            out.append({"series_id": report_series.get(r["publication"], ""), "edition": r["edition"],
+                        "file_name": r["file_name"], "source_url": r["source_url"], "sha256": r["sha256"],
+                        "size_bytes": r["size_bytes"], "pages": "", "retrieved_date": r["retrieved_date"],
+                        "manifest": rel(p)})
     # the documents their rows cite that no manifest covers yet, without a sha256
     for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil"),
                      ("rmk", "rmk_targets"), ("parliament", "dewan_rakyat_hansard")):

@@ -1,0 +1,75 @@
+# LKAN audit inventory from the archived volumes (sources/audit-negara/pipeline/lkan_*.py, Phase 4, D33).
+# The LKAN PDFs are not in git: they come one by one from the private l0-archive release (meta/l0_fetch.py),
+# are read and deleted, so the runner's disk holds one volume at a time. A run writes the contents pages of
+# every in-scope volume (data/lkan_toc/) and shows which committed files change; it commits only when the
+# triggering commit message has a line that is exactly `Commit-Extraction: yes`.
+name: LKAN extraction
+
+on:
+  push:
+    branches: ["claude/**"]
+    paths: ["sources/audit-negara/pipeline/lkan_*.py", ".github/workflows/lkan-extract.yml"]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: lkan-extract
+  cancel-in-progress: false
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils tesseract-ocr > /dev/null
+          pip install -q -r requirements.txt
+
+      - name: Contents pages, volume by volume
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p sources/audit-negara/raw/backfill
+          missing=0
+          for f in $(python3 sources/audit-negara/pipeline/lkan_toc.py --list); do
+            if python3 meta/l0_fetch.py --files "$f" --dest sources/audit-negara/raw/backfill > fetch.log 2>&1; then
+              python3 sources/audit-negara/pipeline/lkan_toc.py "$f" | head -1
+            else
+              echo "not archived: $f"; missing=$((missing+1))
+            fi
+            rm -f sources/audit-negara/raw/backfill/"$f"
+          done
+          echo "volumes not archived: $missing"
+
+      - name: What changed
+        id: diff
+        run: |
+          {
+            echo "## LKAN extraction"; echo
+            echo "contents files: $(ls sources/audit-negara/data/lkan_toc | wc -l)"
+            echo '```'; git status --porcelain -- sources/audit-negara/data | head -60; echo '```'
+          } | tee -a "$GITHUB_STEP_SUMMARY"
+          if [ -z "$(git status --porcelain -- sources/audit-negara/data)" ]; then echo "changed=false" >> "$GITHUB_OUTPUT"; else echo "changed=true" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Commit (only when asked)
+        if: steps.diff.outputs.changed == 'true'
+        env:
+          MSG: ${{ github.event.head_commit.message }}
+        run: |
+          if ! printf '%s\n' "$MSG" | grep -qx 'Commit-Extraction: yes'; then
+            echo "not committing: the commit message has no line 'Commit-Extraction: yes'"; exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add sources/audit-negara/data
+          git commit -q -m "LKAN contents pages from the L0 archive (run ${{ github.run_id }})"
+          git pull -q --rebase origin "${{ github.ref_name }}" && git push -q origin "HEAD:${{ github.ref_name }}"

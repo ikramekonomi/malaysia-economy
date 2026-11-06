@@ -147,6 +147,15 @@ class Tools:
                 return {"held": False, "answer": "the federal government itself holds no vote: its figures here are the "
                         "charged heads (breakdown charged_head=T.01 ... T.14) and the reserve (reserve_head=P.70); for "
                         "the federal total use federal_gov.expenditure.opex / .devex", "release_id": self.w.release_id}
+            other = sorted({r["breakdown_key"] for r in self.w.obs if r["indicator_code"] == indicator and
+                            r["geo_code"] == geo and r["basis"] != "target" and self._period_in(r["period_code"], start, end)
+                            and r["breakdown_key"] != breakdown})
+            if other:
+                return {"held": False, "answer": f"{indicator} for {geo} is not held with breakdown {breakdown!r} in that "
+                        "period, but is held with: " + ", ".join(other[:12]) + (" ..." if len(other) > 12 else "")
+                        + (" (the Salaries & Wages Survey's state tables cover citizens only)"
+                           if indicator.startswith("wages.") and "citizenship=citizen" in other else ""),
+                        "breakdowns_held": other, "release_id": self.w.release_id}
             return self._not_held(f"{indicator} for {geo} {start or ''}-{end or ''}", self.w.ind[indicator]["name_en"])
         rs.sort(key=lambda r: (r["period_code"], r["edition_id"]))
         out = {"held": True, "indicator_code": indicator, "unit": self.w.ind[indicator]["unit"],
@@ -192,6 +201,15 @@ class Tools:
                     "answer": f"{indicator} is an index of change within each place over time; its level does not "
                               "compare places (caveat CV8). Compare each place's growth over the same period instead, "
                               "through derive('growth').", "release_id": self.w.release_id}
+        by_geo, divergent = {}, []
+        for r in rs:
+            by_geo.setdefault(r["geo_code"], []).append(r)
+        rs = []
+        for g, grs in sorted(by_geo.items()):
+            if self.w._divergent(grs):  # one publisher's products print different figures (D35): never banded
+                divergent.append({"geo_code": g, "figures": [self.w.cite(r) for r in grs]})
+            else:
+                rs.append(sorted(grs, key=lambda r: r["vintage"])[-1])
         rs.sort(key=lambda r: (Decimal(r["value"]), r["geo_code"]))
         has_ci = all(r["ci_low"] and r["ci_high"] for r in rs)
         bands, band = [], 0
@@ -217,7 +235,10 @@ class Tools:
                 "note": "Bands run from the lowest value to the highest. Places in one band are tied: they are not "
                         "ranked against each other." + ("" if has_ci else " Sampling error is not published, so "
                                                         "bands use the declared rule BAND1."),
-                "national": self.w.cite(nat) if nat else None, "release_id": self.w.release_id}
+                "national": self.w.cite(nat) if nat else None,
+                **({"not_banded": divergent, "not_banded_note": "DOSM prints two different figures for these places "
+                    "(its report and its open data); neither is chosen, both are cited"} if divergent else {}),
+                "release_id": self.w.release_id}
 
     def get_distribution(self, indicator, geo, period, below=None):
         """Household income by percentile group, as published (HIES), with the decile cut-offs and, given

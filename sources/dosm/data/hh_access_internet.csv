@@ -1,0 +1,344 @@
+date,state,strata,proportion,retrieved_from,retrieved_date
+2019-01-01,Malaysia,overall,89.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Malaysia,overall,91.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Malaysia,overall,94.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Malaysia,overall,96.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Malaysia,overall,96.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Malaysia,overall,96.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Malaysia,overall,97.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Malaysia,urban,92.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Malaysia,urban,93.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Malaysia,urban,96.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Malaysia,urban,98.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Malaysia,urban,98.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Malaysia,urban,98.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Malaysia,urban,99.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Malaysia,rural,79.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Malaysia,rural,81.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Malaysia,rural,86.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Malaysia,rural,89.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Malaysia,rural,89.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Malaysia,rural,90.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Malaysia,rural,90.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Johor,overall,94.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Johor,overall,92.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Johor,overall,98.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Johor,overall,98.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Johor,overall,98.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Johor,overall,99.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Johor,overall,99.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Johor,urban,95.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Johor,urban,93.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Johor,urban,98.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Johor,urban,98.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Johor,urban,99.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Johor,urban,99.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Johor,urban,99.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Johor,rural,89.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Johor,rural,89.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Johor,rural,95.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Johor,rural,97.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Johor,rural,97.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Johor,rural,97.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Johor,rural,98.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Kedah,overall,82.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Kedah,overall,90.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Kedah,overall,95.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Kedah,overall,95.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Kedah,overall,95.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Kedah,overall,96.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Kedah,overall,96.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Kedah,urban,84.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Kedah,urban,92.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Kedah,urban,96.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Kedah,urban,97.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Kedah,urban,97.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Kedah,urban,97.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Kedah,urban,98.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Kedah,rural,77.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Kedah,rural,86.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Kedah,rural,91.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Kedah,rural,92.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Kedah,rural,93.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Kedah,rural,93.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Kedah,rural,93.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Kelantan,overall,83.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Kelantan,overall,89.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Kelantan,overall,92.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Kelantan,overall,93.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Kelantan,overall,94.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Kelantan,overall,94.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Kelantan,overall,95.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Kelantan,urban,86.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Kelantan,urban,91.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Kelantan,urban,94.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Kelantan,urban,95.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Kelantan,urban,95.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Kelantan,urban,96.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Kelantan,urban,96.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Kelantan,rural,79.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Kelantan,rural,87.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Kelantan,rural,90.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Kelantan,rural,92.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Kelantan,rural,93.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Kelantan,rural,94.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Kelantan,rural,94.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Melaka,overall,88.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Melaka,overall,93.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Melaka,overall,95.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Melaka,overall,96.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Melaka,overall,96.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Melaka,overall,96.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Melaka,overall,97.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Melaka,urban,89.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Melaka,urban,93.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Melaka,urban,95.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Melaka,urban,96.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Melaka,urban,96.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Melaka,urban,97.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Melaka,urban,97.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Melaka,rural,82.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Melaka,rural,91.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Melaka,rural,91.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Melaka,rural,94.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Melaka,rural,94.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Melaka,rural,94.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Melaka,rural,95.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Negeri Sembilan,overall,90.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Negeri Sembilan,overall,93.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Negeri Sembilan,overall,94.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Negeri Sembilan,overall,95.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Negeri Sembilan,overall,96.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Negeri Sembilan,overall,96.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Negeri Sembilan,overall,97.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Negeri Sembilan,urban,92.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Negeri Sembilan,urban,95.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Negeri Sembilan,urban,96.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Negeri Sembilan,urban,98.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Negeri Sembilan,urban,98.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Negeri Sembilan,urban,98.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Negeri Sembilan,urban,99.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Negeri Sembilan,rural,85.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Negeri Sembilan,rural,85.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Negeri Sembilan,rural,87.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Negeri Sembilan,rural,90.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Negeri Sembilan,rural,90.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Negeri Sembilan,rural,90.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Negeri Sembilan,rural,91.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Pahang,overall,85.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Pahang,overall,86.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Pahang,overall,93.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Pahang,overall,94.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Pahang,overall,95.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Pahang,overall,95.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Pahang,overall,96.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Pahang,urban,89.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Pahang,urban,88.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Pahang,urban,94.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Pahang,urban,95.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Pahang,urban,96.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Pahang,urban,96.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Pahang,urban,97.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Pahang,rural,78.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Pahang,rural,83.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Pahang,rural,91.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Pahang,rural,94.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Pahang,rural,94.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Pahang,rural,94.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Pahang,rural,95.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Perak,overall,83.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Perak,overall,81.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Perak,overall,89.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Perak,overall,94.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Perak,overall,95.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Perak,overall,95.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Perak,overall,96.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Perak,urban,83.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Perak,urban,82.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Perak,urban,89.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Perak,urban,95.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Perak,urban,96.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Perak,urban,97.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Perak,urban,97.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Perak,rural,78.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Perak,rural,74.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Perak,rural,87.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Perak,rural,90.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Perak,rural,91.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Perak,rural,91.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Perak,rural,92.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Perlis,overall,92.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Perlis,overall,93.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Perlis,overall,93.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Perlis,overall,94.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Perlis,overall,95.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Perlis,overall,96.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Perlis,overall,96.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Perlis,urban,93.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Perlis,urban,94.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Perlis,urban,95.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Perlis,urban,97.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Perlis,urban,98.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Perlis,urban,98.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Perlis,urban,99.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Perlis,rural,90.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Perlis,rural,89.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Perlis,rural,90.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Perlis,rural,91.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Perlis,rural,92.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Perlis,rural,92.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Perlis,rural,93.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Pulau Pinang,overall,90.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Pulau Pinang,overall,94.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Pulau Pinang,overall,97.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Pulau Pinang,overall,99.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Pulau Pinang,overall,99.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Pulau Pinang,overall,99.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Pulau Pinang,overall,99.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Pulau Pinang,urban,90.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Pulau Pinang,urban,94.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Pulau Pinang,urban,97.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Pulau Pinang,urban,99.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Pulau Pinang,urban,99.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Pulau Pinang,urban,99.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Pulau Pinang,urban,99.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Pulau Pinang,rural,88.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Pulau Pinang,rural,92.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Pulau Pinang,rural,96.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Pulau Pinang,rural,96.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Pulau Pinang,rural,99.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Pulau Pinang,rural,99.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Pulau Pinang,rural,99.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Sabah,overall,86.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Sabah,overall,87.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Sabah,overall,89.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Sabah,overall,89.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Sabah,overall,90.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Sabah,overall,91.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Sabah,overall,91.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Sabah,urban,93.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Sabah,urban,94.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Sabah,urban,96.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Sabah,urban,97.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Sabah,urban,97.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Sabah,urban,98.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Sabah,urban,98.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Sabah,rural,73.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Sabah,rural,74.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Sabah,rural,77.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Sabah,rural,80.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Sabah,rural,81.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Sabah,rural,82.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Sabah,rural,82.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Sarawak,overall,83.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Sarawak,overall,85.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Sarawak,overall,89.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Sarawak,overall,89.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Sarawak,overall,90.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Sarawak,overall,91.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Sarawak,overall,91.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Sarawak,urban,91.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Sarawak,urban,95.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Sarawak,urban,97.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Sarawak,urban,97.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Sarawak,urban,98.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Sarawak,urban,98.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Sarawak,urban,99.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Sarawak,rural,70.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Sarawak,rural,68.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Sarawak,rural,75.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Sarawak,rural,79.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Sarawak,rural,79.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Sarawak,rural,80.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Sarawak,rural,81.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Selangor,overall,95.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Selangor,overall,94.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Selangor,overall,98.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Selangor,overall,99.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Selangor,overall,99.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Selangor,overall,99.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Selangor,overall,99.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Selangor,urban,95.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Selangor,urban,94.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Selangor,urban,98.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Selangor,urban,99.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Selangor,urban,99.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Selangor,urban,99.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Selangor,urban,99.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Selangor,rural,87.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Selangor,rural,88.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Selangor,rural,96.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Selangor,rural,96.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Selangor,rural,97.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Selangor,rural,97.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Selangor,rural,97.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Terengganu,overall,91.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Terengganu,overall,90.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Terengganu,overall,92.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Terengganu,overall,93.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Terengganu,overall,94.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Terengganu,overall,95.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Terengganu,overall,95.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Terengganu,urban,93.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Terengganu,urban,91.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Terengganu,urban,94.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Terengganu,urban,95.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Terengganu,urban,95.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Terengganu,urban,96.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Terengganu,urban,96.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,Terengganu,rural,87.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,Terengganu,rural,89.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,Terengganu,rural,89.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,Terengganu,rural,92.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,Terengganu,rural,92.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,Terengganu,rural,93.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,Terengganu,rural,93.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,W.P. Kuala Lumpur,overall,94.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,W.P. Kuala Lumpur,overall,98.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,W.P. Kuala Lumpur,overall,99.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,W.P. Kuala Lumpur,overall,99.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,W.P. Kuala Lumpur,overall,99.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,W.P. Kuala Lumpur,overall,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,W.P. Kuala Lumpur,overall,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,W.P. Kuala Lumpur,urban,94.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,W.P. Kuala Lumpur,urban,98.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,W.P. Kuala Lumpur,urban,99.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,W.P. Kuala Lumpur,urban,99.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,W.P. Kuala Lumpur,urban,99.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,W.P. Kuala Lumpur,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,W.P. Kuala Lumpur,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,W.P. Labuan,overall,98.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,W.P. Labuan,overall,98.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,W.P. Labuan,overall,99.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,W.P. Labuan,overall,99.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,W.P. Labuan,overall,99.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,W.P. Labuan,overall,99.7,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,W.P. Labuan,overall,99.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,W.P. Labuan,urban,98.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,W.P. Labuan,urban,98.1,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,W.P. Labuan,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,W.P. Labuan,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,W.P. Labuan,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,W.P. Labuan,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,W.P. Labuan,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,W.P. Labuan,rural,95.6,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,W.P. Labuan,rural,98.4,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,W.P. Labuan,rural,99.3,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,W.P. Labuan,rural,96.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,W.P. Labuan,rural,96.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,W.P. Labuan,rural,96.9,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,W.P. Labuan,rural,97.5,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,W.P. Putrajaya,overall,96.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,W.P. Putrajaya,overall,99.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,W.P. Putrajaya,overall,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,W.P. Putrajaya,overall,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,W.P. Putrajaya,overall,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,W.P. Putrajaya,overall,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,W.P. Putrajaya,overall,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2019-01-01,W.P. Putrajaya,urban,96.8,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2020-01-01,W.P. Putrajaya,urban,99.2,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2021-01-01,W.P. Putrajaya,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2022-01-01,W.P. Putrajaya,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2023-01-01,W.P. Putrajaya,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2024-01-01,W.P. Putrajaya,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05
+2025-01-01,W.P. Putrajaya,urban,100.0,https://storage.dosm.gov.my/icths/hh_access_internet.csv,2026-11-05

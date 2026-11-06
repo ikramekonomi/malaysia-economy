@@ -1,0 +1,817 @@
+state,date,sex,recipients,wages_median,wages_mean,retrieved_from,retrieved_date
+Malaysia,2010-01-01,both,7149.2,1500,1936,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2010-01-01,male,4432.6,1500,2003,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2010-01-01,female,2716.6,1498,1825,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2010-01-01,both,913.9,1500,1795,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2010-01-01,male,585.0,1550,1921,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2010-01-01,female,328.8,1200,1569,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2010-01-01,both,449.4,1060,1501,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2010-01-01,male,279.2,1170,1544,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2010-01-01,female,170.2,950,1429,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2010-01-01,both,252.2,1000,1645,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2010-01-01,male,164.2,1000,1548,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2010-01-01,female,88.0,1210,1825,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2010-01-01,both,227.2,1300,1717,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2010-01-01,male,133.8,1400,1773,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2010-01-01,female,93.3,1200,1638,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2010-01-01,both,234.5,1500,1885,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2010-01-01,male,149.1,1540,1936,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2010-01-01,female,85.4,1350,1797,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2010-01-01,both,315.2,1341,1660,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2010-01-01,male,201.3,1418,1732,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2010-01-01,female,113.9,1200,1533,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2010-01-01,both,501.4,1500,1944,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2010-01-01,male,293.6,1530,2052,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2010-01-01,female,207.8,1466,1791,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2010-01-01,both,545.7,1200,1622,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2010-01-01,male,354.7,1300,1681,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2010-01-01,female,191.0,1000,1511,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2010-01-01,both,46.4,1200,1709,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2010-01-01,male,28.7,1200,1722,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2010-01-01,female,17.7,1125,1688,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2010-01-01,both,1733.3,1894,2429,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2010-01-01,male,1031.1,2000,2538,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2010-01-01,female,702.2,1800,2269,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2010-01-01,both,225.4,1200,1737,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2010-01-01,male,149.1,1200,1770,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2010-01-01,female,76.2,1200,1674,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2010-01-01,both,504.0,1188,1578,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2010-01-01,male,319.1,1150,1603,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2010-01-01,female,184.9,1200,1535,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2010-01-01,both,579.0,1100,1706,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2010-01-01,male,393.4,1100,1759,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2010-01-01,female,185.7,1100,1593,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2010-01-01,both,558.2,1900,2290,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2010-01-01,male,315.5,1965,2451,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2010-01-01,female,242.7,1800,2082,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2010-01-01,both,27.9,1675,1993,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2010-01-01,male,18.0,1800,2161,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2010-01-01,female,9.9,1324,1685,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2010-01-01,both,35.6,2095,2689,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2010-01-01,male,16.7,2300,3024,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2010-01-01,female,18.9,1989,2393,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2011-01-01,both,7634.0,1500,1959,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2011-01-01,male,4680.1,1500,2035,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2011-01-01,female,2953.9,1467,1838,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2011-01-01,both,973.9,1520,1940,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2011-01-01,male,619.0,1745,2107,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2011-01-01,female,354.9,1280,1649,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2011-01-01,both,442.9,1190,1555,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2011-01-01,male,275.1,1200,1611,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2011-01-01,female,167.8,900,1464,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2011-01-01,both,288.2,1000,1622,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2011-01-01,male,187.7,1000,1504,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2011-01-01,female,100.5,1325,1842,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2011-01-01,both,234.5,1350,1765,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2011-01-01,male,137.5,1500,1883,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2011-01-01,female,97.0,1200,1596,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2011-01-01,both,267.4,1500,1975,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2011-01-01,male,163.6,1600,2070,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2011-01-01,female,103.8,1350,1826,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2011-01-01,both,347.8,1380,1695,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2011-01-01,male,229.3,1430,1731,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2011-01-01,female,118.5,1269,1627,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2011-01-01,both,527.9,1500,2016,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2011-01-01,male,312.1,1560,2119,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2011-01-01,female,215.8,1368,1867,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2011-01-01,both,594.9,1200,1607,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2011-01-01,male,370.6,1300,1660,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2011-01-01,female,224.3,1000,1518,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2011-01-01,both,47.7,1200,1682,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2011-01-01,male,28.6,1200,1663,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2011-01-01,female,19.1,1240,1710,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2011-01-01,both,1845.8,1800,2314,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2011-01-01,male,1085.5,1990,2466,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2011-01-01,female,760.3,1650,2096,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2011-01-01,both,248.7,1158,1645,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2011-01-01,male,163.0,1150,1665,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2011-01-01,female,85.6,1174,1608,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2011-01-01,both,561.1,1200,1623,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2011-01-01,male,342.3,1115,1619,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2011-01-01,female,218.8,1200,1629,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2011-01-01,both,605.7,1200,1753,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2011-01-01,male,407.6,1200,1800,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2011-01-01,female,198.1,1141,1654,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2011-01-01,both,580.5,2000,2513,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2011-01-01,male,321.6,2000,2637,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2011-01-01,female,259.8,2000,2359,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2011-01-01,both,29.2,1500,1903,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2011-01-01,male,19.0,1500,1941,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2011-01-01,female,10.2,1459,1833,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2011-01-01,both,37.8,2320,2837,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2011-01-01,male,17.5,2440,3031,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2011-01-01,female,20.3,2240,2670,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2012-01-01,both,7782.9,1566,2052,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2012-01-01,male,4745.0,1600,2126,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2012-01-01,female,3037.9,1500,1935,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2012-01-01,both,972.0,1695,2035,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2012-01-01,male,616.1,1800,2169,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2012-01-01,female,356.0,1475,1803,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2012-01-01,both,434.4,1150,1543,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2012-01-01,male,272.2,1200,1590,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2012-01-01,female,162.2,1000,1464,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2012-01-01,both,290.2,1000,1604,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2012-01-01,male,181.3,1000,1533,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2012-01-01,female,108.9,900,1722,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2012-01-01,both,238.1,1440,1879,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2012-01-01,male,141.7,1500,1950,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2012-01-01,female,96.4,1330,1774,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2012-01-01,both,267.7,1500,1922,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2012-01-01,male,157.5,1620,2014,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2012-01-01,female,110.2,1300,1791,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2012-01-01,both,348.4,1327,1718,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2012-01-01,male,222.6,1400,1745,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2012-01-01,female,125.7,1200,1669,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2012-01-01,both,525.8,1515,2021,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2012-01-01,male,303.3,1600,2115,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2012-01-01,female,222.5,1500,1893,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2012-01-01,both,584.7,1300,1712,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2012-01-01,male,362.5,1415,1765,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2012-01-01,female,222.3,1100,1627,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2012-01-01,both,49.7,1050,1609,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2012-01-01,male,29.9,1200,1602,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2012-01-01,female,19.8,900,1620,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2012-01-01,both,1948.9,2000,2501,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2012-01-01,male,1139.7,2000,2659,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2012-01-01,female,809.1,2000,2279,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2012-01-01,both,248.1,1200,1761,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2012-01-01,male,162.6,1200,1775,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2012-01-01,female,85.5,1200,1735,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2012-01-01,both,582.8,1100,1634,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2012-01-01,male,354.3,1100,1637,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2012-01-01,female,228.4,1200,1630,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2012-01-01,both,635.8,1200,1735,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2012-01-01,male,425.9,1200,1776,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2012-01-01,female,209.9,1100,1652,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2012-01-01,both,589.9,2000,2729,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2012-01-01,male,339.6,2000,2887,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2012-01-01,female,250.3,2000,2514,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2012-01-01,both,30.0,1519,1931,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2012-01-01,male,19.1,1685,2008,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2012-01-01,female,10.9,1360,1794,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2012-01-01,both,36.4,2625,3124,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2012-01-01,male,16.5,2847,3440,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2012-01-01,female,19.9,2514,2862,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2013-01-01,both,7903.1,1700,2186,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2013-01-01,male,4784.2,1800,2259,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2013-01-01,female,3118.9,1600,2072,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2013-01-01,both,1023.9,1700,2114,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2013-01-01,male,643.0,1885,2284,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2013-01-01,female,380.9,1480,1829,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2013-01-01,both,455.7,1200,1759,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2013-01-01,male,282.5,1300,1776,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2013-01-01,female,173.3,1100,1732,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2013-01-01,both,293.4,1000,1662,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2013-01-01,male,189.5,1000,1535,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2013-01-01,female,103.9,1000,1894,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2013-01-01,both,244.9,1580,2061,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2013-01-01,male,142.7,1656,2126,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2013-01-01,female,102.1,1420,1971,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2013-01-01,both,268.2,1800,2246,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2013-01-01,male,160.0,1900,2350,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2013-01-01,female,108.2,1600,2091,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2013-01-01,both,338.4,1500,1919,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2013-01-01,male,219.7,1500,1918,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2013-01-01,female,118.7,1500,1919,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2013-01-01,both,529.1,1631,2106,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2013-01-01,male,309.4,1775,2234,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2013-01-01,female,219.7,1500,1927,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2013-01-01,both,589.7,1300,1732,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2013-01-01,male,366.7,1400,1766,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2013-01-01,female,223.0,1100,1677,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2013-01-01,both,50.2,1000,1710,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2013-01-01,male,29.7,1200,1717,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2013-01-01,female,20.4,900,1701,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2013-01-01,both,1952.9,2000,2666,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2013-01-01,male,1133.3,2200,2825,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2013-01-01,female,819.7,2000,2447,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2013-01-01,both,243.8,1150,1819,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2013-01-01,male,160.4,1200,1826,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2013-01-01,female,83.4,1000,1804,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2013-01-01,both,608.8,1300,1877,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2013-01-01,male,358.3,1300,1853,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2013-01-01,female,250.5,1400,1911,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2013-01-01,both,632.2,1400,1929,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2013-01-01,male,418.6,1475,1986,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2013-01-01,female,213.6,1300,1817,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2013-01-01,both,606.7,2295,2717,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2013-01-01,male,334.4,2400,2887,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2013-01-01,female,272.3,2050,2510,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2013-01-01,both,29.7,1800,2254,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2013-01-01,male,19.6,1850,2347,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2013-01-01,female,10.0,1500,2071,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2013-01-01,both,35.4,2500,3183,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2013-01-01,male,16.3,2735,3484,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2013-01-01,female,19.1,2347,2925,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2014-01-01,both,8392.4,1800,2377,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2014-01-01,male,5070.7,1888,2455,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2014-01-01,female,3321.8,1700,2259,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2014-01-01,both,1054.2,2000,2466,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2014-01-01,male,668.3,2050,2644,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2014-01-01,female,385.9,1600,2158,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2014-01-01,both,502.5,1300,1972,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2014-01-01,male,303.1,1400,1978,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2014-01-01,female,199.5,1200,1963,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2014-01-01,both,314.9,1040,1853,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2014-01-01,male,193.9,1000,1704,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2014-01-01,female,121.0,1155,2092,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2014-01-01,both,255.0,1660,2123,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2014-01-01,male,145.9,1700,2161,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2014-01-01,female,109.1,1540,2073,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2014-01-01,both,281.1,1800,2445,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2014-01-01,male,167.6,1900,2597,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2014-01-01,female,113.5,1527,2222,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2014-01-01,both,391.2,1585,2062,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2014-01-01,male,245.1,1620,2094,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2014-01-01,female,146.2,1500,2009,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2014-01-01,both,553.0,1800,2339,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2014-01-01,male,320.0,2000,2474,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2014-01-01,female,233.1,1600,2154,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2014-01-01,both,644.8,1441,1859,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2014-01-01,male,393.0,1500,1926,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2014-01-01,female,251.8,1200,1756,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2014-01-01,both,56.3,1350,2084,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2014-01-01,male,33.9,1445,2074,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2014-01-01,female,22.4,1200,2099,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2014-01-01,both,2058.9,2200,2820,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2014-01-01,male,1207.3,2400,2975,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2014-01-01,female,851.6,2050,2602,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2014-01-01,both,260.9,1250,1932,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2014-01-01,male,171.4,1300,1947,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2014-01-01,female,89.5,1000,1904,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2014-01-01,both,645.5,1400,1998,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2014-01-01,male,386.0,1379,1977,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2014-01-01,female,259.4,1450,2029,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2014-01-01,both,696.9,1400,2069,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2014-01-01,male,460.1,1472,2126,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2014-01-01,female,236.8,1250,1959,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2014-01-01,both,609.3,2500,3111,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2014-01-01,male,338.7,2500,3249,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2014-01-01,female,270.6,2350,2939,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2014-01-01,both,31.3,1700,2317,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2014-01-01,male,20.5,1800,2397,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2014-01-01,female,10.8,1500,2165,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2014-01-01,both,36.5,2695,3267,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2014-01-01,male,16.0,2640,3151,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2014-01-01,female,20.5,2775,3358,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2015-01-01,both,8348.6,1942,2487,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2015-01-01,male,5049.4,2000,2558,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2015-01-01,female,3299.2,1855,2380,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2015-01-01,both,1013.8,2200,2549,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2015-01-01,male,638.2,2300,2684,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2015-01-01,female,375.6,1700,2320,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2015-01-01,both,519.6,1400,2024,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2015-01-01,male,306.5,1500,2047,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2015-01-01,female,213.1,1200,1990,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2015-01-01,both,337.7,1200,2069,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2015-01-01,male,219.8,1200,1926,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2015-01-01,female,117.9,1300,2336,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2015-01-01,both,187.3,1600,2174,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2015-01-01,male,112.1,1700,2219,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2015-01-01,female,75.1,1500,2106,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2015-01-01,both,275.6,1950,2464,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2015-01-01,male,168.2,2000,2590,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2015-01-01,female,107.4,1850,2267,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2015-01-01,both,507.3,1620,2122,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2015-01-01,male,313.5,1700,2168,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2015-01-01,female,193.8,1500,2047,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2015-01-01,both,556.2,1900,2414,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2015-01-01,male,324.7,2000,2555,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2015-01-01,female,231.6,1700,2217,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2015-01-01,both,653.5,1500,2030,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2015-01-01,male,402.6,1560,2082,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2015-01-01,female,250.9,1200,1947,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2015-01-01,both,56.2,1495,2248,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2015-01-01,male,33.2,1410,2144,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2015-01-01,female,23.0,1500,2397,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2015-01-01,both,1982.3,2500,3073,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2015-01-01,male,1162.3,2500,3236,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2015-01-01,female,820.0,2500,2843,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2015-01-01,both,267.1,1500,2107,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2015-01-01,male,173.3,1500,2105,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2015-01-01,female,93.8,1300,2112,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2015-01-01,both,646.5,1480,2046,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2015-01-01,male,381.3,1500,2026,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2015-01-01,female,265.2,1400,2075,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2015-01-01,both,697.0,1450,2077,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2015-01-01,male,448.8,1440,2068,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2015-01-01,female,248.2,1500,2094,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2015-01-01,both,583.5,2500,3162,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2015-01-01,male,327.9,2500,3366,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2015-01-01,female,255.6,2500,2899,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2015-01-01,both,30.6,1900,2425,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2015-01-01,male,19.8,2000,2556,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2015-01-01,female,10.8,1500,2185,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2015-01-01,both,34.4,3000,3743,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2015-01-01,male,17.3,3015,3944,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2015-01-01,female,17.1,3000,3541,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2016-01-01,both,8424.1,2000,2657,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2016-01-01,male,5034.4,2000,2741,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2016-01-01,female,3389.7,2000,2532,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2016-01-01,both,1039.1,2200,2656,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2016-01-01,male,652.0,2200,2852,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2016-01-01,female,387.1,1685,2324,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2016-01-01,both,502.7,1510,2109,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2016-01-01,male,292.0,1600,2108,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2016-01-01,female,210.7,1200,2111,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2016-01-01,both,352.9,1345,2248,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2016-01-01,male,215.8,1225,2078,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2016-01-01,female,137.1,1600,2517,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2016-01-01,both,271.3,1760,2297,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2016-01-01,male,155.6,1800,2397,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2016-01-01,female,115.6,1680,2162,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2016-01-01,both,294.8,2060,2628,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2016-01-01,male,171.1,2080,2815,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2016-01-01,female,123.7,1800,2369,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2016-01-01,both,374.5,1650,2185,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2016-01-01,male,230.0,1682,2219,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2016-01-01,female,144.6,1650,2131,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2016-01-01,both,555.8,2000,2603,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2016-01-01,male,321.1,2000,2734,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2016-01-01,female,234.7,2000,2424,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2016-01-01,both,647.9,1650,2206,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2016-01-01,male,391.4,1703,2260,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2016-01-01,female,256.5,1500,2122,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2016-01-01,both,62.2,1630,2271,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2016-01-01,male,37.2,1630,2302,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2016-01-01,female,25.0,1600,2225,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2016-01-01,both,2043.0,2500,3239,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2016-01-01,male,1171.7,2600,3404,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2016-01-01,female,871.3,2500,3016,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2016-01-01,both,272.4,1500,2341,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2016-01-01,male,179.2,1600,2358,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2016-01-01,female,93.2,1300,2309,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2016-01-01,both,661.7,1600,2224,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2016-01-01,male,397.1,1600,2243,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2016-01-01,female,264.7,1542,2194,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2016-01-01,both,706.1,1500,2255,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2016-01-01,male,458.7,1600,2295,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2016-01-01,female,247.4,1500,2179,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2016-01-01,both,575.3,2500,3482,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2016-01-01,male,327.0,2500,3635,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2016-01-01,female,248.2,2420,3281,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2016-01-01,both,30.6,2000,2610,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2016-01-01,male,19.2,2100,2775,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2016-01-01,female,11.4,1762,2332,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2016-01-01,both,33.7,3250,3995,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2016-01-01,male,15.1,3500,4282,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2016-01-01,female,18.6,3250,3762,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2017-01-01,both,8677.1,2160,2879,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2017-01-01,male,5151.2,2170,2953,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2017-01-01,female,3525.9,2145,2772,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2017-01-01,both,1092.0,2250,2932,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2017-01-01,male,677.3,2400,3158,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2017-01-01,female,414.7,1800,2564,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2017-01-01,both,506.2,1650,2193,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2017-01-01,male,292.1,1650,2148,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2017-01-01,female,214.1,1550,2254,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2017-01-01,both,362.1,1500,2319,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2017-01-01,male,228.9,1400,2156,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2017-01-01,female,133.2,1800,2598,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2017-01-01,both,284.2,2145,2565,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2017-01-01,male,162.7,2170,2599,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2017-01-01,female,121.5,2000,2519,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2017-01-01,both,303.2,2170,2874,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2017-01-01,male,181.9,2250,3031,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2017-01-01,female,121.3,2015,2639,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2017-01-01,both,386.1,1870,2425,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2017-01-01,male,241.2,1865,2406,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2017-01-01,female,144.9,2000,2456,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2017-01-01,both,565.6,2160,2672,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2017-01-01,male,325.9,2170,2791,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2017-01-01,female,239.6,2160,2512,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2017-01-01,both,659.2,1700,2281,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2017-01-01,male,391.4,1760,2310,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2017-01-01,female,267.9,1650,2240,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2017-01-01,both,61.5,1800,2465,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2017-01-01,male,37.8,1650,2388,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2017-01-01,female,23.7,2145,2589,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2017-01-01,both,2147.8,2580,3454,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2017-01-01,male,1213.3,2745,3651,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2017-01-01,female,934.6,2515,3198,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2017-01-01,both,285.0,1700,2522,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2017-01-01,male,180.2,1680,2521,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2017-01-01,female,104.8,2145,2524,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2017-01-01,both,654.2,1763,2507,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2017-01-01,male,391.9,1750,2509,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2017-01-01,female,262.3,1800,2503,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2017-01-01,both,728.8,1800,2513,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2017-01-01,male,474.4,1750,2504,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2017-01-01,female,254.4,2145,2529,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2017-01-01,both,579.8,2650,3969,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2017-01-01,male,318.8,2800,4129,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2017-01-01,female,261.0,2500,3774,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2017-01-01,both,28.7,2170,2849,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2017-01-01,male,19.1,2250,3054,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2017-01-01,female,9.6,1800,2439,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2017-01-01,both,32.8,3500,4220,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2017-01-01,male,14.4,3535,4538,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2017-01-01,female,18.4,3500,3971,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2018-01-01,both,8761.2,2308,3087,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2018-01-01,male,5209.8,2342,3174,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2018-01-01,female,3551.4,2227,2959,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2018-01-01,both,1106.0,2418,3228,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2018-01-01,male,684.4,2556,3483,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2018-01-01,female,421.6,2104,2813,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2018-01-01,both,529.3,1703,2294,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2018-01-01,male,307.2,1760,2323,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2018-01-01,female,222.2,1533,2253,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2018-01-01,both,367.5,1604,2419,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2018-01-01,male,228.6,1604,2272,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2018-01-01,female,138.8,1605,2660,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2018-01-01,both,283.8,2332,2853,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2018-01-01,male,161.2,2382,2939,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2018-01-01,female,122.6,2154,2739,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2018-01-01,both,309.1,2348,3048,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2018-01-01,male,181.9,2442,3189,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2018-01-01,female,127.3,2137,2846,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2018-01-01,both,393.1,2111,2662,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2018-01-01,male,247.9,2140,2632,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2018-01-01,female,145.2,1967,2712,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2018-01-01,both,566.2,2215,2811,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2018-01-01,male,321.9,2241,3010,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2018-01-01,female,244.3,2082,2549,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2018-01-01,both,676.2,1775,2387,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2018-01-01,male,402.5,1935,2461,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2018-01-01,female,273.7,1640,2280,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2018-01-01,both,61.8,1989,2628,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2018-01-01,male,38.6,2011,2522,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2018-01-01,female,23.2,1959,2805,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2018-01-01,both,2153.5,2695,3668,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2018-01-01,male,1229.6,2888,3855,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2018-01-01,female,923.9,2549,3419,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2018-01-01,both,285.0,1874,2695,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2018-01-01,male,183.4,1860,2705,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2018-01-01,female,101.6,1903,2678,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2018-01-01,both,665.2,1951,2745,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2018-01-01,male,400.5,1947,2703,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2018-01-01,female,264.8,1964,2807,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2018-01-01,both,743.0,2033,2757,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2018-01-01,male,477.2,2063,2751,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2018-01-01,female,265.8,1952,2767,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2018-01-01,both,557.2,2946,4336,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2018-01-01,male,310.9,2963,4465,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2018-01-01,female,246.3,2930,4173,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2018-01-01,both,31.1,2419,3054,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2018-01-01,male,19.8,2513,3166,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2018-01-01,female,11.3,2024,2858,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2018-01-01,both,33.2,3673,4530,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2018-01-01,male,14.2,3849,5074,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2018-01-01,female,18.9,3563,4120,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2019-01-01,both,9195.2,2442,3224,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2019-01-01,male,5435.9,2477,3304,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2019-01-01,female,3759.3,2370,3108,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2019-01-01,both,1133.6,2512,3266,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2019-01-01,male,703.5,2646,3507,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2019-01-01,female,430.1,2254,2873,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2019-01-01,both,550.6,1748,2413,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2019-01-01,male,327.5,1812,2387,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2019-01-01,female,223.2,1670,2450,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2019-01-01,both,383.9,1639,2571,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2019-01-01,male,242.1,1601,2371,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2019-01-01,female,141.8,1670,2911,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2019-01-01,both,299.5,2415,2990,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2019-01-01,male,170.4,2489,3095,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2019-01-01,female,129.1,2158,2853,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2019-01-01,both,314.9,2433,3218,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2019-01-01,male,188.7,2513,3272,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2019-01-01,female,126.2,2261,3138,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2019-01-01,both,424.7,2225,2754,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2019-01-01,male,264.4,2260,2718,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2019-01-01,female,160.2,1980,2813,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2019-01-01,both,586.7,2346,3022,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2019-01-01,male,337.2,2481,3186,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2019-01-01,female,249.5,2206,2800,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2019-01-01,both,699.9,1858,2571,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2019-01-01,male,416.3,2013,2653,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2019-01-01,female,283.6,1650,2452,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2019-01-01,both,69.4,2010,2723,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2019-01-01,male,41.3,2070,2640,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2019-01-01,female,28.0,1900,2847,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2019-01-01,both,2333.6,2956,3892,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2019-01-01,male,1283.0,3169,4114,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2019-01-01,female,1050.6,2788,3621,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2019-01-01,both,306.7,1911,2766,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2019-01-01,male,194.0,1911,2793,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2019-01-01,female,112.7,1853,2721,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2019-01-01,both,688.4,1980,2836,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2019-01-01,male,419.9,1980,2830,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2019-01-01,female,268.5,2060,2845,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2019-01-01,both,775.7,2070,2819,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2019-01-01,male,498.3,2081,2827,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2019-01-01,female,277.4,2070,2805,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2019-01-01,both,564.8,3106,4359,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2019-01-01,male,314.9,3096,4528,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2019-01-01,female,249.9,3179,4145,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2019-01-01,both,30.5,2712,3323,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2019-01-01,male,19.8,2841,3457,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2019-01-01,female,10.7,2261,3075,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2019-01-01,both,32.1,3749,4695,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2019-01-01,male,14.5,3985,4991,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2019-01-01,female,17.6,3710,4453,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2020-01-01,both,9456.0,2076,2954,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2020-01-01,male,5586.8,2107,3011,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2020-01-01,female,3869.2,2026,2872,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2020-01-01,both,1244.5,2076,2827,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2020-01-01,male,803.9,2199,2937,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2020-01-01,female,440.6,1870,2626,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2020-01-01,both,552.6,1509,2289,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2020-01-01,male,342.3,1509,2236,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2020-01-01,female,210.3,1447,2375,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2020-01-01,both,373.2,1390,2467,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2020-01-01,male,229.9,1390,2358,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2020-01-01,female,143.3,1345,2642,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2020-01-01,both,319.9,2130,2925,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2020-01-01,male,185.4,2190,2994,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2020-01-01,female,134.5,2025,2830,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2020-01-01,both,344.1,2011,2989,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2020-01-01,male,207.8,2167,3062,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2020-01-01,female,136.3,1883,2876,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2020-01-01,both,446.0,1775,2690,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2020-01-01,male,277.8,1705,2608,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2020-01-01,female,168.2,2011,2825,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2020-01-01,both,614.0,2115,2881,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2020-01-01,male,351.4,2244,3034,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2020-01-01,female,262.6,1965,2677,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2020-01-01,both,700.6,1666,2468,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2020-01-01,male,422.8,1713,2466,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2020-01-01,female,277.8,1545,2471,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2020-01-01,both,74.6,1541,2605,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2020-01-01,male,44.1,1541,2525,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2020-01-01,female,30.6,1395,2720,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2020-01-01,both,2461.7,2713,3476,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2020-01-01,male,1323.5,2874,3696,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2020-01-01,female,1138.2,2540,3220,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2020-01-01,both,302.3,1537,2441,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2020-01-01,male,199.2,1635,2443,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2020-01-01,female,103.1,1343,2435,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2020-01-01,both,647.5,1705,2648,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2020-01-01,male,389.4,1670,2604,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2020-01-01,female,258.1,1793,2716,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2020-01-01,both,691.8,1595,2515,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2020-01-01,male,434.6,1669,2508,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2020-01-01,female,257.2,1595,2528,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2020-01-01,both,619.4,2995,3849,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2020-01-01,male,340.9,3085,4131,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2020-01-01,female,278.5,2993,3504,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2020-01-01,both,29.0,2154,2931,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2020-01-01,male,18.7,2383,3140,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2020-01-01,female,10.3,1785,2552,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2020-01-01,both,34.8,3682,4497,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2020-01-01,male,15.1,3682,4645,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2020-01-01,female,19.7,3682,4384,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2021-01-01,both,9769.0,2256,3049,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2021-01-01,male,5769.1,2323,3114,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2021-01-01,female,4000.0,2150,2955,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2021-01-01,both,1266.2,2191,2850,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2021-01-01,male,798.9,2258,2929,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2021-01-01,female,467.3,2003,2715,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2021-01-01,both,565.4,1621,2516,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2021-01-01,male,340.8,1733,2531,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2021-01-01,female,224.7,1619,2495,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2021-01-01,both,404.9,1568,2522,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2021-01-01,male,257.0,1536,2401,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2021-01-01,female,147.9,1615,2732,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2021-01-01,both,337.0,2164,2950,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2021-01-01,male,190.8,2277,2973,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2021-01-01,female,146.2,2110,2920,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2021-01-01,both,343.5,2321,3060,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2021-01-01,male,205.0,2323,3049,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2021-01-01,female,138.5,2166,3077,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2021-01-01,both,445.5,1897,2727,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2021-01-01,male,274.2,1868,2672,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2021-01-01,female,171.4,1927,2816,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2021-01-01,both,604.7,2414,3089,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2021-01-01,male,345.1,2414,3164,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2021-01-01,female,259.6,2265,2990,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2021-01-01,both,714.0,1898,2619,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2021-01-01,male,416.0,1947,2622,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2021-01-01,female,297.9,1645,2616,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2021-01-01,both,78.0,1713,2676,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2021-01-01,male,45.6,1698,2657,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2021-01-01,female,32.4,1926,2703,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2021-01-01,both,2526.6,2778,3475,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2021-01-01,male,1418.4,2979,3728,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2021-01-01,female,1108.3,2303,3151,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2021-01-01,both,307.6,1549,2544,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2021-01-01,male,198.0,1669,2568,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2021-01-01,female,109.5,1549,2499,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2021-01-01,both,696.7,1899,2784,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2021-01-01,male,423.2,1878,2785,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2021-01-01,female,273.5,1931,2782,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2021-01-01,both,733.9,2036,2786,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2021-01-01,male,456.0,1927,2691,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2021-01-01,female,277.9,2295,2940,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2021-01-01,both,678.7,2999,3994,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2021-01-01,male,365.0,3250,4321,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2021-01-01,female,313.7,2805,3613,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2021-01-01,both,30.2,2573,3281,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2021-01-01,male,19.6,2775,3341,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2021-01-01,female,10.6,2000,3170,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2021-01-01,both,36.1,3858,4602,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2021-01-01,male,15.5,3806,4494,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2021-01-01,female,20.6,3858,4683,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2022-01-01,both,9996.4,2429,3219,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2022-01-01,male,5892.9,2498,3288,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2022-01-01,female,4103.6,2305,3119,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2022-01-01,both,1351.7,2216,2992,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2022-01-01,male,857.4,2216,3073,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2022-01-01,female,494.3,1865,2854,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2022-01-01,both,578.4,1797,2627,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2022-01-01,male,362.1,1863,2585,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2022-01-01,female,216.2,1760,2697,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2022-01-01,both,394.5,1635,2604,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2022-01-01,male,247.6,1568,2416,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2022-01-01,female,147.0,1699,2922,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2022-01-01,both,336.5,2280,3093,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2022-01-01,male,198.8,2314,3075,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2022-01-01,female,137.7,2280,3118,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2022-01-01,both,342.5,2334,3177,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2022-01-01,male,214.5,2359,3201,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2022-01-01,female,128.0,2218,3135,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2022-01-01,both,444.0,2013,2844,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2022-01-01,male,278.5,2013,2769,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2022-01-01,female,165.5,2087,2970,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2022-01-01,both,641.6,2477,3315,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2022-01-01,male,361.3,2558,3423,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2022-01-01,female,280.3,2297,3176,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2022-01-01,both,731.4,1901,2742,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2022-01-01,male,424.3,1953,2778,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2022-01-01,female,307.1,1677,2692,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2022-01-01,both,76.7,1781,2746,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2022-01-01,male,44.4,1781,2674,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2022-01-01,female,32.4,1908,2845,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2022-01-01,both,2560.7,3109,3719,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2022-01-01,male,1388.2,3400,4063,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2022-01-01,female,1172.4,2647,3313,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2022-01-01,both,307.0,1703,2615,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2022-01-01,male,204.8,1760,2620,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2022-01-01,female,102.2,1595,2603,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2022-01-01,both,721.4,2011,2871,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2022-01-01,male,447.3,2011,2851,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2022-01-01,female,274.1,2115,2902,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2022-01-01,both,741.3,2069,2937,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2022-01-01,male,464.9,2069,2840,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2022-01-01,female,276.3,2397,3101,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-01-01,both,701.8,3301,4276,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-01-01,male,363.2,3636,4649,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2022-01-01,female,338.5,2957,3877,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2022-01-01,both,31.3,2657,3365,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2022-01-01,male,20.7,2657,3453,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2022-01-01,female,10.6,2305,3192,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-01-01,both,35.8,3995,4716,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-01-01,male,14.8,3907,4892,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2022-01-01,female,21.0,3995,4592,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2023-01-01,both,10105.4,2602,3441,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2023-01-01,male,5949.0,2675,3532,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2023-01-01,female,4156.4,2464,3311,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2023-01-01,both,1367.2,2450,3212,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2023-01-01,male,867.2,2603,3328,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2023-01-01,female,500.0,2276,3010,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2023-01-01,both,567.7,1885,2859,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2023-01-01,male,357.8,1882,2806,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2023-01-01,female,209.8,1916,2948,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2023-01-01,both,389.5,1750,2882,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2023-01-01,male,239.5,1731,2695,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2023-01-01,female,150.0,1878,3180,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2023-01-01,both,346.9,2360,3311,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2023-01-01,male,204.7,2360,3292,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2023-01-01,female,142.3,2465,3338,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2023-01-01,both,350.9,2361,3375,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2023-01-01,male,218.6,2402,3368,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2023-01-01,female,132.2,2343,3386,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2023-01-01,both,454.2,2276,3124,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2023-01-01,male,282.8,2045,3057,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2023-01-01,female,171.5,2439,3236,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2023-01-01,both,635.8,2715,3557,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2023-01-01,male,354.4,2836,3680,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2023-01-01,female,281.4,2715,3402,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2023-01-01,both,729.7,2045,2973,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2023-01-01,male,418.6,2045,2993,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2023-01-01,female,311.1,1916,2945,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2023-01-01,both,76.9,1820,2968,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2023-01-01,male,43.8,1818,2891,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2023-01-01,female,33.0,1978,3069,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2023-01-01,both,2596.2,3235,3885,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2023-01-01,male,1415.2,3667,4267,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2023-01-01,female,1181.0,2465,3426,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2023-01-01,both,312.0,1845,2898,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2023-01-01,male,207.5,1849,2857,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2023-01-01,female,104.5,1807,2980,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2023-01-01,both,726.4,2059,3127,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2023-01-01,male,449.3,1916,3133,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2023-01-01,female,277.1,2276,3118,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2023-01-01,both,758.6,2276,3158,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2023-01-01,male,476.0,1974,3110,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2023-01-01,female,282.6,2551,3237,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-01-01,both,725.9,3469,4521,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-01-01,male,378.6,4023,4883,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2023-01-01,female,347.3,3077,4126,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2023-01-01,both,31.6,2735,3636,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2023-01-01,male,20.7,2852,3738,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2023-01-01,female,10.9,2464,3442,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-01-01,both,36.0,4443,4858,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-01-01,male,14.3,4095,5041,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2023-01-01,female,21.7,4443,4738,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2024-01-01,both,10238.4,2793,3652,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2024-01-01,male,6028.4,2850,3759,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2024-01-01,female,4210.0,2641,3499,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2024-01-01,both,1388.0,2582,3414,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2024-01-01,male,881.6,2850,3543,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2024-01-01,female,506.4,2444,3190,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2024-01-01,both,569.3,2051,3053,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2024-01-01,male,358.5,2051,2983,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2024-01-01,female,210.9,2051,3171,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2024-01-01,both,393.8,1914,3091,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2024-01-01,male,240.4,1831,2906,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2024-01-01,female,153.4,2018,3380,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2024-01-01,both,350.9,2528,3469,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2024-01-01,male,207.0,2606,3448,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2024-01-01,female,143.9,2527,3498,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2024-01-01,both,356.6,2503,3626,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2024-01-01,male,219.7,2606,3682,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2024-01-01,female,136.9,2475,3538,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2024-01-01,both,465.6,2491,3337,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2024-01-01,male,287.7,2213,3314,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2024-01-01,female,177.9,2641,3375,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2024-01-01,both,642.2,2934,3787,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2024-01-01,male,360.0,3125,3938,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2024-01-01,female,282.3,2894,3594,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2024-01-01,both,735.7,2050,3172,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2024-01-01,male,423.8,2200,3186,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2024-01-01,female,312.0,1947,3153,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2024-01-01,both,80.0,2038,3257,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2024-01-01,male,46.3,1970,3170,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2024-01-01,female,33.7,2038,3375,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2024-01-01,both,2610.5,3350,4052,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2024-01-01,male,1419.4,3751,4452,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2024-01-01,female,1191.1,2641,3576,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2024-01-01,both,320.3,2021,3107,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2024-01-01,male,213.1,2025,3036,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2024-01-01,female,107.2,1946,3248,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2024-01-01,both,730.0,2236,3389,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2024-01-01,male,450.2,2094,3455,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2024-01-01,female,279.8,2476,3285,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2024-01-01,both,771.7,2490,3424,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2024-01-01,male,488.4,2140,3402,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2024-01-01,female,283.2,2750,3460,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-01-01,both,752.9,3687,4782,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-01-01,male,396.0,4298,5132,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2024-01-01,female,356.9,3322,4395,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2024-01-01,both,32.3,2931,3812,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2024-01-01,male,21.0,3057,3955,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2024-01-01,female,11.3,2549,3547,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-01-01,both,38.5,4598,5091,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-01-01,male,15.5,4315,5291,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2024-01-01,female,23.0,4709,4956,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2025-01-01,both,10381.6,2940,3803,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2025-01-01,male,6084.6,3014,3921,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Malaysia,2025-01-01,female,4297.0,2788,3635,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2025-01-01,both,1412.3,2688,3609,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2025-01-01,male,904.1,2896,3790,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Johor,2025-01-01,female,508.2,2560,3287,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2025-01-01,both,573.5,2255,3148,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2025-01-01,male,360.0,2255,3050,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kedah,2025-01-01,female,213.5,2151,3314,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2025-01-01,both,400.3,1860,3214,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2025-01-01,male,243.0,1837,3002,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Kelantan,2025-01-01,female,157.3,2003,3541,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2025-01-01,both,351.9,2773,3549,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2025-01-01,male,202.6,2773,3542,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Melaka,2025-01-01,female,149.3,2675,3557,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2025-01-01,both,357.1,2710,3730,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2025-01-01,male,216.7,2725,3781,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Negeri Sembilan,2025-01-01,female,140.4,2693,3652,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2025-01-01,both,471.8,2578,3434,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2025-01-01,male,288.6,2526,3429,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pahang,2025-01-01,female,183.2,2627,3443,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2025-01-01,both,648.8,3107,3912,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2025-01-01,male,357.7,3334,4104,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Pulau Pinang,2025-01-01,female,291.1,2923,3675,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2025-01-01,both,742.2,2173,3233,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2025-01-01,male,428.6,2301,3203,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perak,2025-01-01,female,313.6,2053,3273,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2025-01-01,both,80.6,2013,3401,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2025-01-01,male,45.9,2067,3377,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Perlis,2025-01-01,female,34.7,1991,3434,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2025-01-01,both,2653.7,3547,4258,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2025-01-01,male,1459.6,3873,4692,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Selangor,2025-01-01,female,1194.1,3024,3727,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2025-01-01,both,326.5,2195,3208,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2025-01-01,male,214.4,2195,3069,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Terengganu,2025-01-01,female,112.1,2124,3472,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2025-01-01,both,736.7,2482,3421,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2025-01-01,male,446.8,2482,3478,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sabah,2025-01-01,female,289.9,2562,3333,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2025-01-01,both,784.8,2707,3645,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2025-01-01,male,486.4,2688,3711,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+Sarawak,2025-01-01,female,298.4,2747,3538,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-01-01,both,769.7,3938,4955,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-01-01,male,393.4,4325,5195,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Kuala Lumpur,2025-01-01,female,376.3,3440,4704,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2025-01-01,both,32.8,2688,3887,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2025-01-01,male,21.1,2688,3992,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Labuan,2025-01-01,female,11.7,2642,3697,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-01-01,both,39.0,4828,5417,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-01-01,male,15.6,4826,5733,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05
+W.P. Putrajaya,2025-01-01,female,23.4,4932,5207,https://storage.dosm.gov.my/labour/wages_state.csv,2026-11-05

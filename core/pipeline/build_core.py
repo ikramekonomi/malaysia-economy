@@ -14,7 +14,7 @@ Reads L1 (never edits it):
   meta/registry_file.csv (sha256 of each state volume), meta/indicator.csv (indicator definitions)
 Writes (derived, rebuilt every run, committed so a reviewer can diff them):
   core/dim_geo.csv  core/dim_period.csv  core/dim_indicator.csv  core/dim_breakdown.csv
-  core/fact_observation.csv  core/_validation_core.csv
+  core/fact_observation/<family>.csv  core/_validation_core.csv
 
 Rules kept here: values in the indicator's base unit (persons, not thousands; RM, not RM juta),
 exact decimals; the printed value and unit kept beside it; no uncertainty is invented (DOSM's
@@ -270,6 +270,206 @@ def build_services(obs, ed):
 
 
 ELECTORAL_VINTAGE = "ge15"
+
+
+def wave3(obs, ed, ds, cols, freq, method, geo_col="state", axes=(), filt=None, unit=None, district=False,
+          skip_geo=()):
+    """One wave-3 DOSM dataset into fact_observation. cols: {column: (indicator, scale, unit_printed, precision)};
+    axes: ((column, axis, total values), ...) -> breakdown key of the non-total values, axes sorted, joined '|'.
+    district: geo from (state, district), joined to DOSM's 166 administrative districts (meta/geo_alias.csv);
+    a name outside them is skipped and counted, never guessed."""
+    e, vint, sha = ed[ds]
+    alias = {(r["state"], r["published_name"]): r["canonical_name"] for r in rows(os.path.join(META, "geo_alias.csv"))}
+    for i, r in enumerate(rows(os.path.join(DOSM, f"{ds}.csv")), start=2):
+        if filt and not filt(r):
+            continue
+        if geo_col is None:
+            g = "MY"
+        elif r[geo_col] in skip_geo:
+            obs.skipped[f"{ds}: {r[geo_col]} (not a state; kept at L1)"] += 1
+            continue
+        elif district:
+            name = alias.get((r["state"], r["district"]), r["district"])
+            g = f"{STATE_ISO[r['state']]}/dis:{slug(name)}@{DISTRICT_VINTAGE}"
+            if g not in obs.districts:
+                obs.skipped[f"{ds}: {r['state']}/{r['district']} is not a DOSM administrative district"] += 1
+                continue
+        else:
+            g = geo_of(r[geo_col])
+            if not g:
+                obs.skipped[f"{ds}: unknown geo {r[geo_col]}"] += 1
+                continue
+        parts = sorted(f"{ax}={re.sub(r'[^a-z0-9]+', '_', r[c].strip().lower()).strip('_')}" for c, ax, tot in axes
+                       if r[c] not in tot)
+        bk = "|".join(parts) or "_total"
+        for col, (ind, scale, u, prec) in cols.items():
+            v = dec(r.get(col))
+            if v is None:
+                continue
+            obs.add(indicator_code=ind, geo_code=g, period_code=period_of(r["date"], freq), breakdown_key=bk,
+                    basis="statistic", edition_id=e, vintage=vint, value=v * scale, value_printed=r[col],
+                    unit_printed=unit(r) if unit else u, precision_printed=prec, estimate_method=method,
+                    reliability="unknown", file_id=sha, table_ref=ds,
+                    l1_ref=f"sources/dosm/data/{ds}.csv#row{i}")
+
+
+def build_wave3(obs, ed):
+    """Wave 3 (2026-11-06, sources/dosm/pipeline/ingest_wave3.py): wages (the Salaries & Wages Survey and formal
+    employees' administrative wages), productivity by state, CPI detail, GDP by district, life expectancy,
+    births, fertility, maternal and early-childhood deaths, school completion (state), household internet
+    access, and the environment, energy, water and agriculture datasets. Every value as published; national
+    rows ('Malaysia', 'All States' with no coast) are MY. School completion by district is MOE's education
+    districts, not DOSM's administrative ones, and stays at L1; 'Supra' and 'Semenanjung Malaysia' rows stay at
+    L1 (no geo of their own)."""
+    one, k = Decimal(1), Decimal(1000)
+    sex = ("sex", "sex", ("both",))
+    W = {"recipients": ("wages.recipients", k, "'000 persons", "100"),
+         "wages_median": ("wages.median", one, "RM per month", "1"), "wages_mean": ("wages.mean", one, "RM per month", "1")}
+    def tag(col, val):  # an axis the file does not print because the whole file is one value of it
+        return lambda r: r.__setitem__(col, val) or True
+    cit = ("_cit", "citizenship", ())
+    # The Salaries & Wages Survey tables are CITIZENS only, except wages_ethnicity (all employees) and
+    # wages_real_state (all employees): their 'overall' rows equal wages_ethnicity's 'citizen' row (the wave-3
+    # verifier, 2026-11-06). So every citizens-only row carries citizenship=citizen; the all-employee total is
+    # _total and comes only from wages_ethnicity; the national citizen total comes once (wages_ethnicity
+    # 'citizen'), so the other tables' national 'overall' rows are not loaded twice.
+    wave3(obs, ed, "wages_state", W, "A", "direct_survey", axes=(sex, cit),
+          filt=lambda r: r["state"] != "Malaysia" and tag("_cit", "citizen")(r))
+    for ds, col, ax in (("wages_strata", "strata", "strata"), ("wages_sector", "sector", "sector"),
+                        ("wages_industry", "section", "msic_section"), ("wages_education", "education", "education"),
+                        ("wages_age", "age", "age"), ("wages_occupation", "occupation", "occupation"),
+                        ("wages_skill", "skill", "skill"), ("wages_certificate", "certificate", "certificate")):
+        wave3(obs, ed, ds, W, "A", "direct_survey", geo_col=None, axes=(sex, (col, ax, ("overall",)), cit),
+              filt=lambda r, c=col: r[c] != "overall" and tag("_cit", "citizen")(r))
+
+    def eth(r):  # wages_ethnicity: overall = all employees; citizen / noncitizen = citizenship; groups = citizens
+        e = r["ethnicity"]
+        r["_cit"] = "" if e == "overall" else e if e in ("citizen", "noncitizen") else "citizen"
+        r["_eth"] = e if e not in ("overall", "citizen", "noncitizen") else "overall"
+        return True
+    wave3(obs, ed, "wages_ethnicity", W, "A", "direct_survey", geo_col=None,
+          axes=(sex, ("_eth", "ethnicity", ("overall",)), ("_cit", "citizenship", ("",))), filt=eth)
+    wave3(obs, ed, "wages_noncitizen", W, "A", "direct_survey", geo_col=None,
+          axes=(sex, ("strata", "strata", ("overall",)), cit),
+          filt=lambda r: r["strata"] != "overall" and tag("_cit", "noncitizen")(r))
+    wave3(obs, ed, "wages_noncitizen_education", W, "A", "direct_survey", geo_col=None,
+          axes=(("education", "education", ("overall",)), cit),
+          filt=lambda r: r["education"] != "overall" and tag("_cit", "noncitizen")(r))
+    WR = {"wages_median_real": ("wages.median.real", one, "RM per month, 2010 prices", "1"),
+          "wages_mean_real": ("wages.mean.real", one, "RM per month, 2010 prices", "1")}
+    wave3(obs, ed, "wages_real_state", WR, "A", "direct_survey")
+    wave3(obs, ed, "wages_real_state_citizen", WR, "A", "direct_survey", axes=(cit,), filt=tag("_cit", "citizen"))
+    F = {"employees": ("wages.formal.employees", one, "persons", "1"),
+         "wages_median": ("wages.formal.median", one, "RM per month", "1")}
+    wave3(obs, ed, "formal_wages", F, "M", "administrative", geo_col=None,
+          axes=(sex, ("ethnicity", "ethnicity", ("overall",)), ("age", "age", ("overall",))))
+    # the national total comes once, from formal_wages (formal_wages_state's and _msic's own totals repeat it)
+    wave3(obs, ed, "formal_wages_state", F, "M", "administrative", filt=lambda r: r["state"] != "Malaysia")
+    wave3(obs, ed, "formal_wages_msic", F, "M", "administrative", geo_col=None,
+          axes=(("sector", "sector", ("overall",)), ("industry", "industry", ("overall",))),
+          filt=lambda r: not (r["sector"] == "overall" and r["industry"] == "overall"))
+    wave3(obs, ed, "formal_wages_msic_age", F, "M", "administrative", geo_col=None,
+          axes=(("sector", "sector", ()), ("age", "age", ())))
+    wave3(obs, ed, "formal_wages_band", {"employees": ("wages.formal.employees", one, "persons", "1")}, "M",
+          "administrative", geo_col=None, axes=(("band", "wage_band", ()),))
+    for pc in range(10, 100, 10):
+        wave3(obs, ed, "formal_wages_percentile", {f"p{pc}": ("wages.formal.at_percentile", one, "RM per month", "1")},
+              "M", "administrative", geo_col=None, axes=(("_p", "percentile", ()),), filt=tag("_p", f"{pc:03d}"))
+    wave3(obs, ed, "productivity_state", {"output_employment": ("productivity.value_added_per_employed", one,
+                                                                 "RM per employed person, 2015 prices", "1")},
+          "A", "modelled", axes=(("sector", "sector", ("p0",)),), filt=lambda r: r["series"] == "abs")
+    div = ("division", "coicop", ("overall",))
+    CI = {"index": ("cpi.index", one, "index 2010=100", "0.1")}
+    wave3(obs, ed, "cpi_core", CI, "M", "direct_survey", geo_col=None, axes=(div, ("_b", "basket", ())),
+          filt=tag("_b", "core"))
+    wave3(obs, ed, "cpi_lowincome", CI, "M", "direct_survey", geo_col=None, axes=(div, ("_b", "basket", ())),
+          filt=tag("_b", "low_income"))
+    wave3(obs, ed, "cpi_strata", CI, "M", "direct_survey", geo_col=None, axes=(div, ("strata", "strata", ())))
+    # DOSM's printed year-on-year inflation, national headline and core; month-on-month rates and the states'
+    # rates are derivable from the indexes core holds (derive), so they stay at L1 as printed
+    INF = {"inflation_yoy": ("cpi.inflation_yoy", one, "percent", "0.1")}
+    wave3(obs, ed, "cpi_headline_inflation", INF, "M", "direct_survey", geo_col=None, axes=(div,))
+    wave3(obs, ed, "cpi_core_inflation", INF, "M", "direct_survey", geo_col=None, axes=(div, ("_b", "basket", ())),
+          filt=tag("_b", "core"))
+    wave3(obs, ed, "cpi_annual", {"index": ("cpi.index_annual", one, "index 2010=100, annual average", "0.1")}, "A",
+          "direct_survey", geo_col=None, axes=(div,))
+    wave3(obs, ed, "cpi_annual_inflation", {"inflation": ("cpi.inflation_annual", one, "percent", "0.1")}, "A",
+          "direct_survey", geo_col=None, axes=(div,))
+    wave3(obs, ed, "gdp_district_real_supply", {"value": ("gdp.real", Decimal(1000000), "RM million, 2015 prices",
+                                                         "1000000")},
+          "A", "modelled", district=True, axes=(("sector", "sector", ("p0",)),),
+          filt=lambda r: r["series"] == "abs" and r["district"] != "Supra")
+    eth = ("ethnicity", "ethnicity", ("overall",))
+    LE = {"life_expectancy": ("life_expectancy", one, "years", "0.1")}
+    wave3(obs, ed, "life_expectancy", LE, "A", "modelled", geo_col=None, axes=(sex, eth))
+    # state x sex (ethnicity overall) is already held from life_expectancy_state (2001-): only the ethnic detail
+    wave3(obs, ed, "life_expectancy_state_ethnic", LE, "A", "modelled", axes=(sex, eth),
+          filt=lambda r: r["ethnicity"] != "overall")
+    wave3(obs, ed, "life_expectancy_district", LE, "A", "modelled", district=True, axes=(sex,))
+    wave3(obs, ed, "births_annual_state", {"abs": ("births.live", one, "births", "1"),
+                                           "rate": ("births.crude_rate", one, "per 1,000 population", "0.1")},
+          "A", "administrative")
+    wave3(obs, ed, "fertility_state", {"fertility_rate": ("fertility.asfr", one, "births per 1,000 women", "0.1")},
+          "A", "administrative", axes=(("age_group", "age", ()),), filt=lambda r: r["age_group"] != "tfr")
+    wave3(obs, ed, "fertility_state", {"fertility_rate": ("fertility.tfr", one, "births per woman", "0.1")},
+          "A", "administrative", filt=lambda r: r["age_group"] == "tfr")
+    wave3(obs, ed, "deaths_maternal_state", {"abs": ("deaths.maternal", one, "deaths", "1"),
+                                             "rate": ("deaths.maternal_ratio", one, "per 100,000 live births", "0.1")},
+          "A", "administrative")
+    wave3(obs, ed, "deaths_early_childhood_state", {"abs": ("deaths.early_childhood", one, "deaths", "1"),
+                                                    "rate": ("deaths.early_childhood_rate", one, "per 1,000 (see type)",
+                                                             "0.1")},
+          "A", "administrative", axes=(("type", "type", ("total",)),))
+    wave3(obs, ed, "completion_school_state", {"completion": ("education.completion_rate", one, "percent", "0.1")},
+          "A", "administrative", axes=(sex, ("stage", "stage", ())))
+    wave3(obs, ed, "hh_access_internet", {"proportion": ("households.internet_access", one, "percent", "0.1")},
+          "A", "direct_survey", axes=(("strata", "strata", ("overall",)),))
+    # environment, energy, water, agriculture
+    wave3(obs, ed, "air_pollution", {"concentration": ("environment.air_pollutant_concentration", one, "ppm", "0.001")},
+          "M", "administrative", geo_col=None, axes=(("pollutant", "pollutant", ()),),
+          unit=lambda r: "ug/m3" if r["pollutant"].startswith("PM") else "ppm")
+    wave3(obs, ed, "ghg_emissions", {"emissions": ("environment.ghg_emissions", one, "Gg CO2e", "0.01")}, "A",
+          "modelled", geo_col=None, axes=(("source", "source", ("total",)),))
+    wave3(obs, ed, "water_pollution_basin", {"proportion": ("environment.river_basins_share", one, "percent", "0.1"),
+                                             "n_basins": ("environment.river_basins", one, "basins", "1")},
+          "A", "administrative", geo_col=None, axes=(("measure", "measure", ()), ("status", "status", ())))
+    wave3(obs, ed, "forest_reserve", {"area": ("environment.forest_reserve_area", one, "hectares", "1")}, "A",
+          "administrative", geo_col=None)
+    wave3(obs, ed, "forest_reserve_state", {"area": ("environment.forest_reserve_area", one, "hectares", "1")}, "A",
+          "administrative", skip_geo=("Semenanjung Malaysia",))
+    wave3(obs, ed, "electricity_consumption", {"consumption": ("energy.electricity_consumption", one, "GWh", "0.1")},
+          "M", "administrative", geo_col=None, axes=(("sector", "sector", ("total",)),))
+    wave3(obs, ed, "electricity_supply", {"supply": ("energy.electricity_supply", one, "GWh", "0.1")},
+          "M", "administrative", geo_col=None, axes=(("sector", "sector", ("total",)),))
+    wave3(obs, ed, "energy_consumption_sector", {"consumption": ("energy.final_consumption", one, "ktoe", "1")}, "A",
+          "administrative", geo_col=None, axes=(("sector", "sector", ("total",)),))
+    wave3(obs, ed, "energy_supply_commodity", {"supply": ("energy.primary_supply", one, "ktoe", "1")}, "A",
+          "administrative", geo_col=None, axes=(("commodity", "commodity", ("total",)),))
+    wave3(obs, ed, "water_consumption", {"value": ("water.consumption", one, "MLD", "1")}, "A",
+          "administrative", axes=(("sector", "sector", ()),))
+    wave3(obs, ed, "water_production", {"value": ("water.production", one, "MLD", "1")}, "A",
+          "administrative")
+    wave3(obs, ed, "mineral_extraction", {"production": ("output.mineral_production", one, "tonnes", "1")}, "A",
+          "administrative", axes=(("commodity", "commodity", ()),),
+          unit=lambda r: "grammes" if r["commodity"] in ("gold", "silver") else "tonnes")
+    wave3(obs, ed, "timber_production", {"production": ("output.timber_production", one, "cubic metres", "1")}, "A",
+          "administrative", axes=(("product", "product", ()),))
+    wave3(obs, ed, "crops_state", {"planted_area": ("output.crop_planted_area", one, "hectares", "1"),
+                                   "production": ("output.crop_production", one, "tonnes", "1")},
+          "A", "administrative", axes=(("crop_type", "crop", ()),))
+    wave3(obs, ed, "fish_landings", {"landings": ("output.fish_landings", one, "tonnes", "1")}, "M", "administrative",
+          axes=(("coast", "coast", ("all",)),),
+          filt=lambda r: (r.__setitem__("state", "Malaysia") if r["state"] == "All States" else None) or True)
+
+
+def build_report_tables(obs):
+    """DOSM survey-report tables (sources/dosm_reports), after the open data they are compared with (D35)."""
+    import report_tables
+    counts, unparsed = report_tables.load(obs)
+    obs.report_counts = counts
+    if unparsed:
+        sys.exit("report tables: cells the declared mapping cannot place:\n  " + "\n  ".join(unparsed[:40]))
+    print("report tables:", counts)
 
 
 def build_small_areas(obs, ed):
@@ -1040,7 +1240,7 @@ def build_flags(obs):
                                         f"(employed {sig[0]}, unemployed {sig[1]}, rates {sig[3]}/{sig[4]})",
                                 "register": "core/pipeline/build_core.py build_flags (declared rule)"})
     for r in obs.rows:
-        if (r["unit_printed"] == "percent" and r["value"] and
+        if (r["unit_printed"] == "percent" and r["value"] and "inflation" not in r["indicator_code"] and
                 not (Decimal(0) <= Decimal(r["value"]) <= Decimal(100))):
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "out_of_bounds",
                         "note": f"{r['indicator_code']} = {r['value_printed']} percent, outside 0-100",
@@ -1056,7 +1256,8 @@ def build_flags(obs):
             first16[r["indicator_code"]] = min(first16.get(r["indicator_code"], "9999"), r["period_code"][:4])
     for r in obs.rows:
         f = first16.get(r["indicator_code"])
-        if f and r["geo_code"] == "MY-14" and r["edition_id"].startswith("dosm:") and r["period_code"][:4] < f:
+        if f and (r["geo_code"] == "MY-14" or r["geo_code"].startswith("MY-14/dis:")) and \
+                r["edition_id"].startswith("dosm:") and r["period_code"][:4] < f:
             out.append({"l1_ref": r["l1_ref"], "indicator_code": r["indicator_code"], "flag": "scope_includes_putrajaya",
                         "note": f"WP Kuala Lumpur before {f} includes WP Putrajaya, which DOSM prints separately only from "
                                 f"{f}: growth across {f} compares different areas (proof: RMKe-12 Jadual 5 footnote; "
@@ -1355,7 +1556,9 @@ def main():
     build_dosm(obs, ed)
     build_services(obs, ed)
     build_small_areas(obs, ed)
+    build_wave3(obs, ed)
     build_distribution(obs, ed)
+    build_report_tables(obs)
     build_national_accounts(obs, ed)
     build_states(obs)
     build_federal(obs)
@@ -1394,7 +1597,20 @@ def main():
     flags = build_flags(obs)
     write("obs_flag.csv", flags, ["l1_ref", "indicator_code", "flag", "note", "register"])
     write("dim_indicator.csv", [r for r in ind if r["indicator_code"] in used], list(ind[0]))
-    write("fact_observation.csv", obs.rows, OBS_FIELDS)
+    # one file per indicator family (the code's first segment), so no file nears GitHub's size limits as the
+    # warehouse grows; readers go through warehouse.observation_files() (decision D34)
+    import glob as _glob
+    shard_dir = os.path.join(CORE, "fact_observation")
+    os.makedirs(shard_dir, exist_ok=True)
+    for f in _glob.glob(os.path.join(shard_dir, "*.csv")):
+        os.remove(f)
+    if os.path.exists(os.path.join(CORE, "fact_observation.csv")):
+        os.remove(os.path.join(CORE, "fact_observation.csv"))
+    fam = defaultdict(list)
+    for r in obs.rows:
+        fam[r["indicator_code"].split(".")[0]].append(r)
+    for f, rs in sorted(fam.items()):
+        write(os.path.join("fact_observation", f"{f}.csv"), rs, OBS_FIELDS)
     ck = checks(obs, geo, per, [r for r in ind if r["indicator_code"] in used], brk, ed)
     with open(os.path.join(CORE, "_validation_core.csv"), "w", newline="") as f:
         w = csv.writer(f)
