@@ -201,6 +201,15 @@ class Tools:
                     "answer": f"{indicator} is an index of change within each place over time; its level does not "
                               "compare places (caveat CV8). Compare each place's growth over the same period instead, "
                               "through derive('growth').", "release_id": self.w.release_id}
+        by_geo, divergent = {}, []
+        for r in rs:
+            by_geo.setdefault(r["geo_code"], []).append(r)
+        rs = []
+        for g, grs in sorted(by_geo.items()):
+            if self.w._divergent(grs):  # one publisher's products print different figures (D35): never banded
+                divergent.append({"geo_code": g, "figures": [self.w.cite(r) for r in grs]})
+            else:
+                rs.append(sorted(grs, key=lambda r: r["vintage"])[-1])
         rs.sort(key=lambda r: (Decimal(r["value"]), r["geo_code"]))
         has_ci = all(r["ci_low"] and r["ci_high"] for r in rs)
         bands, band = [], 0
@@ -226,7 +235,10 @@ class Tools:
                 "note": "Bands run from the lowest value to the highest. Places in one band are tied: they are not "
                         "ranked against each other." + ("" if has_ci else " Sampling error is not published, so "
                                                         "bands use the declared rule BAND1."),
-                "national": self.w.cite(nat) if nat else None, "release_id": self.w.release_id}
+                "national": self.w.cite(nat) if nat else None,
+                **({"not_banded": divergent, "not_banded_note": "DOSM prints two different figures for these places "
+                    "(its report and its open data); neither is chosen, both are cited"} if divergent else {}),
+                "release_id": self.w.release_id}
 
     def get_distribution(self, indicator, geo, period, below=None):
         """Household income by percentile group, as published (HIES), with the decile cut-offs and, given

@@ -334,6 +334,28 @@ q("1", "What is life expectancy at birth in Malaysia in 2026?", "get_series",
   s(Decimal(dosm_cell("life_expectancy", "life_expectancy", date="2026-01-01", sex="both", ethnicity="overall"))))
 
 
+def report_cell(pub, table, row_label, col_header):
+    """A DOSM survey-report figure as printed (sources/dosm_reports, L1)."""
+    with open(os.path.join(REPO, "sources", "dosm_reports", "data", pub, "cells.csv"), newline="") as fh:
+        hit = [r for r in csv.DictReader(fh) if r["table_no"] == table and r["row_label"] == row_label
+               and r["col_header"] == col_header]
+    assert len(hit) == 1, (pub, table, row_label, col_header, len(hit))
+    return hit[0]["value_printed"].replace(",", "")
+
+
+q("1", "What share of rural households in Kelantan were in absolute poverty in 2024?", "get_series",
+  {**series("poverty.absolute.rate", "MY-03", "2024"), "breakdown": "strata=rural"}, "value",
+  s(Decimal(report_cell("poverty_2024", "3.1", "Kelantan", "2024 (%) | Luar Bandar | Rural"))))
+q("1", "What was the median monthly household disposable income in Selangor in 2024?", "get_series",
+  series("hh_income.disposable.median", "MY-10", "2024"), "value",
+  s(Decimal(report_cell("household_income_2024", "3.5", "Selangor", "Penengah/ Median | (RM) | 2024"))))
+q("1", "What was the average poverty line income in Sabah in 2024?", "get_series",
+  series("poverty.pli.mean", "MY-12", "2024"), "value",
+  s(Decimal(report_cell("poverty_2024", "1.1", "Sabah",
+                        "Purata Pendapatan Garis Kemiskinan Sebulan (RM) | Average Poverty Line Income per month (RM)"
+                        " | 2024"))))
+
+
 # H. compare_geos bands
 q("1", "Is Sabah in a band of its own for poverty in 2022?", "compare_geos",
   {"indicator": "poverty.absolute.rate", "period": "2022"}, "alone_in_band", "MY-12")

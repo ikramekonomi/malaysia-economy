@@ -124,6 +124,10 @@ R4 held series has files,hies,PASS,21 file(s)
 R5 every file has a sha256,hies,PASS,21 files
 R7 every file is in the L0 archive,hies,PASS,21 of 21 archived (release l0-archive or git history)
 R6 licence recorded,hies,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,hies_report_tables,PASS,3 file(s)
+R5 every file has a sha256,hies_report_tables,PASS,3 files
+R7 every file is in the L0 archive,hies_report_tables,OPEN,0 of 3 archived (release l0-archive or git history)
+R6 licence recorded,hies_report_tables,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,population_subnational,PASS,2 file(s)
 R5 every file has a sha256,population_subnational,PASS,2 files
 R7 every file is in the L0 archive,population_subnational,PASS,2 of 2 archived (release l0-archive or git history)
@@ -132,9 +136,13 @@ R4 held series has files,lfs,PASS,18 file(s)
 R5 every file has a sha256,lfs,PASS,18 files
 R7 every file is in the L0 archive,lfs,PASS,18 of 18 archived (release l0-archive or git history)
 R6 licence recorded,lfs,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,salaries_wages,PASS,20 file(s)
-R5 every file has a sha256,salaries_wages,PASS,20 files
-R7 every file is in the L0 archive,salaries_wages,PASS,20 of 20 archived (release l0-archive or git history)
+R4 held series has files,lfs_annual_report,PASS,1 file(s)
+R5 every file has a sha256,lfs_annual_report,PASS,1 files
+R7 every file is in the L0 archive,lfs_annual_report,OPEN,0 of 1 archived (release l0-archive or git history)
+R6 licence recorded,lfs_annual_report,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,salaries_wages,PASS,21 file(s)
+R5 every file has a sha256,salaries_wages,PASS,21 files
+R7 every file is in the L0 archive,salaries_wages,OPEN,20 of 21 archived (release l0-archive or git history)
 R6 licence recorded,salaries_wages,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,productivity,PASS,5 file(s)
 R5 every file has a sha256,productivity,PASS,5 files
@@ -144,6 +152,10 @@ R4 held series has files,cpi,PASS,7 file(s)
 R5 every file has a sha256,cpi,PASS,7 files
 R7 every file is in the L0 archive,cpi,PASS,7 of 7 archived (release l0-archive or git history)
 R6 licence recorded,cpi,PASS,CC BY 4.0 (DOSM catalogue pages)
+R4 held series has files,hes_report_tables,PASS,1 file(s)
+R5 every file has a sha256,hes_report_tables,PASS,1 files
+R7 every file is in the L0 archive,hes_report_tables,OPEN,0 of 1 archived (release l0-archive or git history)
+R6 licence recorded,hes_report_tables,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,cpi_detail,PASS,4 file(s)
 R5 every file has a sha256,cpi_detail,PASS,4 files
 R7 every file is in the L0 archive,cpi_detail,PASS,4 of 4 archived (release l0-archive or git history)

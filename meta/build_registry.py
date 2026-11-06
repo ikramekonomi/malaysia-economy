@@ -13,6 +13,7 @@ Reads (the manifests each source already writes):
   sources/dosm/data/_vintage_log.csv            (state = current)
   sources/bnm/data/_vintage_log.csv             (if present)
   sources/{pkkp,anggaran,anggaran-hasil}/data/_documents_manifest.csv  (re-downloaded, identity-checked)
+  sources/dosm_reports/data/_documents_manifest.csv  (DOSM survey reports' Excel files, sha-checked on extraction)
   provenance columns of those sources' data, for any file no manifest covers (no sha256)
 Writes (derived, rebuilt every run):
   meta/registry_file.csv          one row per file a held series is built from
@@ -150,6 +151,17 @@ def manifest_files():
                     "size_bytes": m.get("size_bytes", ""), "pages": m.get("pages", ""),
                     "retrieved_date": m.get("retrieved_date", ""),
                     "manifest": "sources/anggaran/data/_documents_manifest.csv (cited by fact_anggaran_lampiran_e_*)"})
+    # DOSM survey reports (the Excel twin of each publication; sources/dosm_reports, re-downloaded and sha-checked)
+    report_series = {"household_income_2024": "hies_report_tables", "poverty_2024": "hies_report_tables",
+                     "income_inequality_2024": "hies_report_tables", "household_expenditure_2024": "hes_report_tables",
+                     "labour_annual_2025": "lfs_annual_report", "salaries_wages_2025": "salaries_wages"}
+    p = os.path.join(REPO, "sources", "dosm_reports", "data", "_documents_manifest.csv")
+    if os.path.exists(p):
+        for r in rows(p):
+            out.append({"series_id": report_series.get(r["publication"], ""), "edition": r["edition"],
+                        "file_name": r["file_name"], "source_url": r["source_url"], "sha256": r["sha256"],
+                        "size_bytes": r["size_bytes"], "pages": "", "retrieved_date": r["retrieved_date"],
+                        "manifest": rel(p)})
     # the documents their rows cite that no manifest covers yet, without a sha256
     for src, sid in (("pkkp", "pkkp"), ("anggaran", "anggaran_perbelanjaan"), ("anggaran-hasil", "anggaran_hasil"),
                      ("rmk", "rmk_targets"), ("parliament", "dewan_rakyat_hansard")):

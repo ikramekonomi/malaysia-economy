@@ -97,6 +97,7 @@ forest_reserves,2022,forest_reserve.csv,,431c8e9c71ce1dc33e2546957149aaaec6e2e8c
 forest_reserves,2022,forest_reserve_state.csv,,e846d3debfea15fad808a39bc12a2c397bf5a574258d8149f5157ffd082ebc59,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 health_facts,2022-12-31 23:59,healthcare_staff.csv,,ea6194eee627c6d41819e4bc1a8153632e541c6360ce811e045b3cf02dd02d4f,,,,sources/dosm/data/_vintage_log.csv
 health_facts,2024,hospital_beds.csv,,97cb4cd999b525728c134324732cfc39bfd401b13fa991cde8b6b57d3b784862,,,,sources/dosm/data/_vintage_log.csv
+hes_report_tables,2024,household_expenditure_2024.xlsx,https://storage.dosm.gov.my/hies/household_expenditure_2024.xlsx,c9229c0ecc184b0b4bd68201a41eda1829d9706e7da933463e75153a37c4a445,2602909,,2026-11-06,sources/dosm_reports/data/_documents_manifest.csv
 hies,2024,hh_expenditure_dun.csv,,f837723dd27fa417ee1db5e4e734ac65314abf3db5b6d0b44654ac3ed29fee85,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hh_expenditure_parlimen.csv,,80955a5fd15058c44b5d2f5406bffd1b3a462d8e4a6821d6be739da3d43b867d,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hh_income.csv,,f60105e01491b2a01feb7494c0fda3f1feccc0d12180ae56e85dd0eb0716f4d3,,,2026-08-03,sources/dosm/data/_vintage_log.csv
@@ -118,6 +119,9 @@ hies,2024,hies_district.csv,,4b5a774d9c8bae45d3ab9039617d8cbb88be2d74c96fec9aa09
 hies,2024,hies_malaysia_percentile.csv,,977e489413a2af0a8b644ed97627d526b9f2313aae015682c7a20de8693d11f2,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hies_state.csv,,0cca36884c521055bbff7021545a6eb29dbb4f56aec84db2573965b86e6d49e0,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 hies,2024,hies_state_percentile.csv,,b96cfc15633e3969b19c13c760d089ca82f6de2c14d8f811a096c71620003c81,,,2026-08-03,sources/dosm/data/_vintage_log.csv
+hies_report_tables,2024,household_income_2024.xlsx,https://storage.dosm.gov.my/hies/household_income_2024.xlsx,f95623140bf186ecd9f4712a2d29868e5ed8b36c57cfa397e671cd29c6aecf77,7933661,,2026-11-06,sources/dosm_reports/data/_documents_manifest.csv
+hies_report_tables,2024,income_inequality_2024.xlsx,https://storage.dosm.gov.my/hies/inequality_2024.xlsx,3b5318d7dcd01b6009ce52a47409efb871b559d36f40b9b7518d5c8df3d135f6,143430,,2026-11-06,sources/dosm_reports/data/_documents_manifest.csv
+hies_report_tables,2024,poverty_2024.xlsx,https://storage.dosm.gov.my/hies/poverty_2024.xlsx,3233fd86b73eedc6635d45822560003726554b57405a0c179d349edca9437c27,65483,,2026-11-06,sources/dosm_reports/data/_documents_manifest.csv
 ict_households,2025,hh_access_internet.csv,,2611f5ac8d321535b48f94fa23cf2670d7508c8ba055cc649be1a3409e97b8e4,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 industry_trade,2006,sitc.csv,,9489220609c35c78db221ce3d4edc3301b4e4a43922c4c7c2b21765fd0f03ddb,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 industry_trade,2025-Q3,fdi_flows.csv,,556cd98fe1f7f6a2f38fd34cee75cb6f3052f7cdc6c74512409e9918ae9d2282,,,2026-08-03,sources/dosm/data/_vintage_log.csv
@@ -159,6 +163,7 @@ lfs,2026-Q2,lfs_qtr_sru_sex.csv,,9f2541f44fdf82e7ddbe7e36c7586cb70eed69185a1470d
 lfs,2026-Q2,lfs_qtr_state.csv,,6bfcb67b323245309ee46951878f35490bb12f06ca036942bebd4ad51a36ddaf,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr_tru_age.csv,,1ff6fee9879f1b667472379d65c0238241da8c07ce48e833c7c49068a1a99d8f,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr_tru_sex.csv,,956ca757e649a214cf016762d861a7a860c6acbe4d4c10b8575f9d910fe04015,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+lfs_annual_report,2025,labour_annual_2025.xlsx,https://storage.dosm.gov.my/labour/lfs_annual_2025.xlsx,90a73ab340231b208eed01f935007f08f6e7d7d670927155274d02106226c9dc,71100,,2026-11-06,sources/dosm_reports/data/_documents_manifest.csv
 lkan_federal,LKAN 1/2025,CMD.4.2025.pdf,https://parlimen.gov.my/ipms/eps/2025-02-24/CMD.4.2025%20-%20CMD4.2025.pdf,a12fff80ca84027e24506772f28ba1ae44a77736532464ffb834049ee2756dd6,18536624,121,2026-07-31,sources/audit-negara/data/lkan_reports.csv
 lkan_federal,LKAN 1/2026,CMD.1.2026.pdf,https://www.parlimen.gov.my/ipms/eps/2026-02-23/CMD.1.2026%20-%20CMD1.2026.pdf,bc6e0b0c8ebca34c9f868389792fda5e34dbf7c2881b49c20d9b0778e1c18cc1,12341296,126,2026-07-31,sources/audit-negara/data/lkan_reports.csv
 lkan_federal,LKAN 1/2026,CMD.2.2026.pdf,https://www.parlimen.gov.my/ipms/eps/2026-02-23/CMD.2.2026%20-%20CMD2.2026.pdf,c5fde8d20e172ebce32d45670f4116402c852a1c1e3517bd599395d04184e54d,39074725,192,2026-07-31,sources/audit-negara/data/lkan_reports.csv
@@ -624,6 +629,7 @@ productivity,2025-Q4,productivity_lookup.csv,,efb406d08cbe4ae927f35949daf926f76d
 productivity,2025-Q4,productivity_qtr.csv,,e835e86a1d286daa7a16d14dd5046e5c52f3e0b3d893f44f9658b7a85bca4ff8,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 river_water_quality,2024,water_pollution_basin.csv,,d602d162c35d9c86d1f074f01e3d62d3e6196247b0a2f6f8c48fa628cddc96c1,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 rmk_targets,2021,rmk12.pdf,https://rmke12.ekonomi.gov.my/file/download/2021092721_rancangan_malaysia_kedua_belas.pdf?path=fileUpload/2021/09/2021092721_rancangan_malaysia_kedua_belas.pdf&name=Dokumen%20RMKe-12.pdf,763bdcd09acab8fb1bda6d21a476ddc0d8060647b2075d3e72e4b85ddb50e693,76663435,556,2026-11-05,sources/rmk/data/_documents_manifest.csv
+salaries_wages,2025,salaries_wages_2025.xlsx,https://storage.dosm.gov.my/labour/salaries_wages_2025.xlsx,cf50d5a11ab5a8e49ad37291b2ed11b01338a63907465e97b6455c61ea969e2e,272495,,2026-11-06,sources/dosm_reports/data/_documents_manifest.csv
 salaries_wages,2025,wages_age.csv,,c11183c6b721f646e131215bad70133ceba22a9314758a5b9386bf95ef579186,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 salaries_wages,2025,wages_certificate.csv,,345fa0a259cd5c8536b1b68a8366670ca4d2ed686521e9b9c14a935e0138e46b,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 salaries_wages,2025,wages_education.csv,,c42cb7c8ea2db6b2d2bdadf6b426b9a2792a30217474d5b591530a5e9e77633c,,,2026-11-05,sources/dosm/data/_vintage_log.csv

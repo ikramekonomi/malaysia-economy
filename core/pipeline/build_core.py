@@ -462,6 +462,16 @@ def build_wave3(obs, ed):
           filt=lambda r: (r.__setitem__("state", "Malaysia") if r["state"] == "All States" else None) or True)
 
 
+def build_report_tables(obs):
+    """DOSM survey-report tables (sources/dosm_reports), after the open data they are compared with (D35)."""
+    import report_tables
+    counts, unparsed = report_tables.load(obs)
+    obs.report_counts = counts
+    if unparsed:
+        sys.exit("report tables: cells the declared mapping cannot place:\n  " + "\n  ".join(unparsed[:40]))
+    print("report tables:", counts)
+
+
 def build_small_areas(obs, ed):
     """Phase 2: district, parlimen and DUN rows from DOSM's HIES and LFS small-area files.
 
@@ -1548,6 +1558,7 @@ def main():
     build_small_areas(obs, ed)
     build_wave3(obs, ed)
     build_distribution(obs, ed)
+    build_report_tables(obs)
     build_national_accounts(obs, ed)
     build_states(obs)
     build_federal(obs)

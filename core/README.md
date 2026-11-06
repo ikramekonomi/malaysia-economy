@@ -22,9 +22,9 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `dim_geo.csv` | 1,006 | Malaysia, `_unallocated`, 16 states and FTs (ISO 3166-2:MY), 166 districts (boundary set `dosm_2020`), 222 parliamentary seats and 600 state seats (boundary set `ge15`) |
 | `geo_hierarchy.csv` | 1,020 | child → parent, one row per hierarchy (`administrative`: district → state; `electoral`: DUN → parlimen → state) |
 | `dim_period.csv` | 630 | years, months (monthly from 1980-01 for national CPI) |
-| `dim_indicator.csv` | 117 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
-| `dim_breakdown.csv` | 951 | `_total`, `sex=…`, `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
-| `fact_observation/<family>.csv` | 223,735 | indicator × geo × period × breakdown × entity × basis × edition × vintage, one file per indicator family (D34; read through `warehouse.observation_files()`): state 117,853; national 62,025; district 19,164; DUN 18,000; parlimen 6,660; unallocated 33 |
+| `dim_indicator.csv` | 125 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
+| `dim_breakdown.csv` | 811 keys | `_total`, `sex=…`, `strata=…`, `hoh_ethnicity=…` (a household head's attributes, D35), `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
+| `fact_observation/<family>.csv` | 223,090 | indicator × geo × period × breakdown × entity × basis × edition × vintage, one file per indicator family (D34; read through `warehouse.observation_files()`): state 118,418; national 60,815; district 19,164; DUN 18,000; parlimen 6,660; unallocated 33 |
 | `dim_entity.csv` | 68 | who: the federal government, 13 state governments, 47 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
 | `bridge_entity_code.csv` | 112 | readable code → entity, with validity years, scope and proof |
@@ -439,6 +439,33 @@ publication (`verify_wave3.py`: 165 checks PASS). Core gains 37 indicators (`bui
   * minerals, timber, crops and fish landings.
 
 Sources that do not print every state declare their real coverage in `meta/indicator.csv`.
+
+## DOSM survey-report tables (2026-11-06, D35)
+
+The HIES 2024, LFS 2025 and Salaries & Wages 2025 reports print breakdowns the open-data files do not
+(`sources/dosm_reports`, every printed cell at L1). `core/pipeline/report_tables.py` declares, table by table,
+which indicator, place, period and breakdown each cell is. 1,059 report figures are in core, each under edition
+`dosm:report.<publication>@<release date>` and cited to its sheet and cell:
+* poverty (absolute, hardcore) by state × strata, by the household head's ethnicity × strata and × sex, by the
+  head's age and by household size;
+* the poverty line income (`poverty.pli.mean`, new) by state, strata, ethnicity and food / non-food;
+* disposable and per-capita income (new indicators) and gross income breakdowns (state × head's sex,
+  ethnicity × strata × head's sex, head's age);
+* the participation rate by age × strata × sex.
+
+The report figures the open data already hold were checked and not loaded twice:
+* 170 figures equal the open data;
+* 130 repeat another table of the same report, and all of those copies are equal.
+
+One figure differs: Terengganu's absolute poverty in 2024. The report prints 4.8 and the open data print 5.8.
+Both are held, and `get_series` returns both (`sources/dosm_reports/data/_source_divergences.csv`, SD1). No
+reader chooses between them:
+* `Warehouse.get()` returns nothing for a key where two products of one publisher differ, and
+  `Warehouse.conflicts()` returns both rows;
+* `gap_need_vs_money` leaves Terengganu's 2024 poverty blank and names both figures in `coverage_note`;
+* `compare_geos` lists Terengganu under `not_banded`, with both figures cited. A
+household head's attributes are their own axes (`hoh_ethnicity`, `hoh_sex`, `hoh_age`), never the person
+axes.
 
 ## gap_reported_vs_audited (Phase 5, 2026-11-06)
 

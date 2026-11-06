@@ -1,5 +1,5 @@
 check,scope,status,note
-C1 primary key unique,fact_observation,PASS,222031 rows
+C1 primary key unique,fact_observation,PASS,223090 rows
 C2 indicator_code resolves,fact_observation,PASS,all resolve
 C2 geo_code resolves,fact_observation,PASS,all resolve
 C2 period_code resolves,fact_observation,PASS,all resolve
@@ -49,6 +49,10 @@ C6 state coverage,gdp.real.avg_growth,PASS,15 of 16 states and territories (expe
 C6 state coverage,health.beds,PASS,16 of 16 states and territories
 C6 state coverage,health.staff,PASS,16 of 16 states and territories
 C6 state coverage,hh_expenditure.mean,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.disposable.mean,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.disposable.median,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.disposable_per_capita.mean,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.disposable_per_capita.median,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gini,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gross.mean,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gross.median,PASS,16 of 16 states and territories
@@ -56,6 +60,8 @@ C6 state coverage,hh_income.gross.pctile_group.max,PASS,16 of 16 states and terr
 C6 state coverage,hh_income.gross.pctile_group.mean,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gross.pctile_group.median,PASS,16 of 16 states and territories
 C6 state coverage,hh_income.gross.pctile_group.min,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.gross_per_capita.mean,PASS,16 of 16 states and territories
+C6 state coverage,hh_income.gross_per_capita.median,PASS,16 of 16 states and territories
 C6 state coverage,households.internet_access,PASS,16 of 16 states and territories
 C6 state coverage,households.total,PASS,16 of 16 states and territories
 C6 state coverage,lfs.employed,PASS,16 of 16 states and territories
@@ -80,6 +86,7 @@ C6 state coverage,output.timber_production,PASS,13 of 16 states and territories 
 C6 state coverage,pop.total,PASS,16 of 16 states and territories
 C6 state coverage,poverty.absolute.rate,PASS,16 of 16 states and territories
 C6 state coverage,poverty.hardcore.rate,PASS,16 of 16 states and territories
+C6 state coverage,poverty.pli.mean,PASS,16 of 16 states and territories
 C6 state coverage,poverty.relative.rate,PASS,16 of 16 states and territories
 C6 state coverage,productivity.value_added_per_employed,PASS,16 of 16 states and territories
 C6 state coverage,state_gov.debt.total,PASS,13 of 13 state governments
@@ -115,7 +122,7 @@ C13 banking-system loans = commercial + Islamic + investment banks (BNM MSB 1.18
 C14 the file read is the vintage logged as current (sha256; national series),fact_observation,PASS,"7 files, all match"
 C15 every entity_id is a registered entity (core/dim_entity.csv) or _none,fact_observation,PASS,61 entities used
 "C16 PKKP votes add up to the printed audited totals (opex + transfer, devex; within RM2: the statement prints whole ringgit)",federal_gov.vote.*,INFO,"32 year-totals; differ: ['devex 2009: votes 49291023062.69 vs printed 49515355570.54']; FY2009 devex: printed vote totals vs the printed grand total, diagnosed in curated/_known_extraction_defects_curated.csv (caveat CV21)"
-"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,222029 rows checked
+"C8 value = value_printed x unit scale (sign kept, except spending levels and meta/sign_convention.csv)",fact_observation,PASS,223088 rows checked
 "C20 BNM MSB 3.1 shifted keys: current balance - net DE - COVID-19 Fund (ov_sur_def) = overall balance (sou_fin_dom_bor_gro_dom_bor), every annual row",BNM,PASS,30 annual rows; largest difference RM1.000000000010 million (printed rounding)
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2010,PASS,states 18170277815.79 vs printed 18170277815.79
 C17 federal loans to the states add up to the printed Jumlah Kerajaan Negeri,2011,PASS,states 16820200196.15 vs printed 16820200196.15

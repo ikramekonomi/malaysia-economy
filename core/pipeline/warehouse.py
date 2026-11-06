@@ -136,7 +136,23 @@ class Warehouse:
             rs = [r for r in rs if r["basis"] != "target"]  # a plan's target is never the outcome; ask for it by basis
         if len({r["edition_id"].split(":")[0] for r in rs}) > 1:
             return None  # two publishers for one concept: never choose between them silently
+        if self._divergent(rs):
+            return None  # two products of one publisher print different figures (D35): see conflicts()
         return rs[0] if len(rs) == 1 else (sorted(rs, key=lambda r: r["vintage"])[-1] if rs else None)
+
+    @staticmethod
+    def _divergent(rs):
+        """True when rows from different products (edition id before '@': dosm:hh_poverty_state vs
+        dosm:report.poverty_2024) print different values; vintages of one product are not a divergence."""
+        fam = {}
+        for r in rs:
+            fam.setdefault(r["edition_id"].split("@")[0], set()).add(Decimal(r["value"]))
+        return len(fam) > 1 and len(set().union(*fam.values())) > 1
+
+    def conflicts(self, indicator, geo, period, breakdown="_total"):
+        """The rows behind a get() that returned None because one publisher's products disagree, else []."""
+        rs = [r for r in self.index.get((indicator, geo, period, breakdown), []) if r["basis"] != "target"]
+        return rs if self._divergent(rs) else []
 
     def source_flags(self, r):
         """Anomalies registered at L1 (or by a declared rule) for the L1 row this observation comes from."""

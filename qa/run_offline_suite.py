@@ -71,6 +71,7 @@ SUITE = [
     "sources/dosm/pipeline/verify_services.py",
     "sources/dosm/pipeline/crosscheck_state_finance.py",
     "sources/bnm/pipeline/validate_bnm.py",
+    "sources/dosm_reports/pipeline/validate_report_cells.py",
     "curated/pipeline/build_ministry_fiscal.py",
     "curated/pipeline/build_opex_devex_breakdown.py",
     "curated/pipeline/build_obligations.py",
