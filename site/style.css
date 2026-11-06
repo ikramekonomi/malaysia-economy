@@ -34,7 +34,7 @@ button, input, select { font: inherit; color: inherit; }
   display: flex; flex-direction: column; padding: 14px 10px; gap: 4px; }
 .brand { display: flex; align-items: center; gap: 10px; padding: 4px 8px 14px; }
 .brand img, .brand svg { width: 38px; height: 38px; flex: none; }
-.brand img { background: #fff; border-radius: 9px; padding: 2px; border: 1px solid var(--line); object-fit: contain; }
+.brand img { object-fit: contain; }
 .brand b { display: block; font-size: 13px; letter-spacing: -.01em; }
 .brand span { display: block; font-size: 11.5px; color: var(--text-3); }
 .search-btn { display: flex; align-items: center; gap: 8px; width: 100%; border: 1px solid var(--line);
@@ -181,3 +181,4 @@ th[data-dir="asc"]::after { content: " ↑"; color: var(--accent); } th[data-dir
 th:hover { color: var(--text); }
 @media (max-width: 900px) { .stats { grid-template-columns: 1fr 1fr; } .stats > div:nth-child(3) { border-left: 0; } .stats > div { border-top: 1px solid var(--line); }
   .stories { grid-template-columns: 1fr; } .cta { flex-direction: column; align-items: flex-start; } }
+.brand { color: var(--text); } .brand:hover { text-decoration: none; }
