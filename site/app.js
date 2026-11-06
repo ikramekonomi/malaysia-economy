@@ -31,6 +31,7 @@ function compact(v, unit = "") {
   if (unit === "percent") return s + "%";
   return s;
 }
+const million = (v) => (v >= 1e6 ? NF(2).format(v / 1e6) + " million" : NF(0).format(v));
 const pct = (v, d = 1) => (v == null || v === "" ? "–" : NF(d).format(v * 100) + "%");
 const unitShort = (u) => ({ percent: "%", RM: "RM" }[u] || u);
 
@@ -159,13 +160,13 @@ function route() {
   const [path] = hashParams();
   const seg = path.split("/").filter(Boolean);
   const top = seg[0] || "about";
-  $$("#nav a").forEach((a) => a.classList.toggle("on", a.dataset.r === (top === "state" ? "states" : top)));
+  $$("#nav a").forEach((a) => a.classList.toggle("on", a.dataset.r === (top === "state" ? "states" : top === "bubbles" ? "compare" : top)));
   $("#side").classList.remove("open");
   const v = $("#view");
   window.scrollTo(0, 0);
   const R = { about: viewAbout, explore: (v) => (seg[1] ? viewIndicator(decodeURIComponent(seg[1]), v) : viewExplore(v)),
     gaps: (v) => (seg[1] ? viewGap(seg[1], v) : viewGaps(v)), states: viewStates, state: (v) => viewState(decodeURIComponent(seg[1] || ""), v),
-    sources: viewSources, method: viewMethod, bubbles: viewBubbles };
+    sources: viewSources, method: viewMethod, compare: viewBubbles, bubbles: viewBubbles };
   Promise.resolve((R[top] || viewAbout)(v)).catch((e) => { v.innerHTML = `<div class="note">Could not load this view: ${esc(e.message)}</div>`; console.error(e); });
 }
 
@@ -174,62 +175,156 @@ function route() {
    ===================================================================================================== */
 async function viewAbout(v) {
   crumbs([["About", "#/about"]]);
-  const m = D.meta;
-  // every fact on this page is computed from the data on load, so it can never drift from the warehouse
+  const m = D.meta, sc = m.scale || {};
+  // every number on this page is computed from the warehouse on load, so the page can never drift from the data
   const [pl, ob, tg, ra, bu] = await Promise.all(["gap_federal_placement", "gap_obligations_growth", "gap_target_vs_outcome", "gap_reported_vs_audited", "gap_budget_vs_actual"].map((n) => J(`gap/${n}.json`).then(objs).catch(() => [])));
   const plMY = pl.filter((r) => r.geo_code === "MY" && r.placed_share != null).sort((a, b) => a.year - b.year);
   const plLast = plMY[plMY.length - 1] || {};
   const obY = Math.max(...ob.map((r) => +r.year));
   const obOf = (k) => ob.find((r) => +r.year === obY && r.instrument === k) || {};
-  const below = tg.filter((r) => /^below/.test(r.status)).length, above = tg.filter((r) => r.status === "above_target").length;
+  const below = tg.filter((r) => /^below/.test(r.status)).length;
   const gdpBelow = tg.filter((r) => r.indicator_code === "gdp.real" && r.status === "below_target").length, gdpAll = tg.filter((r) => r.indicator_code === "gdp.real").length;
   const bothRA = ra.filter((r) => r.bnm_vs_pkkp_status && r.bnm_vs_pkkp_status !== "not_held"), agreeRA = bothRA.filter((r) => r.bnm_vs_pkkp_status === "agree").length;
-  const buY = Math.max(...bu.filter((r) => r.actual_audited != null && r.flow === "devex").map((r) => +r.year));
-  const buRows = bu.filter((r) => +r.year === buY && r.flow === "devex" && r.breakdown_key === "_total" && r.entity_id !== "E000001" && r.actual_audited != null && r.estimate_revised_pkkp);
-  const buUnder = buRows.filter((r) => r.status === "underspent").length;
-  const fact = (n, big, txt, href, cta) => `<a class="story card link" href="${href}"><div class="story-n">${n}</div><div class="story-big">${big}</div><p>${txt}</p><span class="small">${cta} →</span></a>`;
+  const HELD = new Set(["verified", "extracted", "held"]);
+  const held = D.registry.filter((r) => HELD.has(r.status));
+  const pubs = new Set(held.map((r) => r.publisher)).size;
+  const themeRows = Object.entries(D.themes).filter(([k]) => k !== "cross").map(([k, name]) => {
+    const rs = D.registry.filter((r) => String(r.theme || "").split(";").includes(k));
+    const h = rs.filter((r) => HELD.has(r.status)).length, n = D.cat.filter((c) => c.theme === k).length;
+    const share = rs.length ? h / rs.length : 0;
+    const [lab, cls] = h === 0 && n === 0 ? ["None yet", "bad"] : share >= 0.6 ? ["Strong", "good"] : share >= 0.35 ? ["Partial", "warn"] : ["Thin", "bad"];
+    return { k, name, h, all: rs.length, n, lab, cls };
+  });
+  const donut = (a, b) => { const r = 54, c = 2 * Math.PI * r, f = b ? a / b : 0;
+    return `<svg viewBox="0 0 140 140" class="donut" aria-label="${a} of ${b} held"><circle cx="70" cy="70" r="${r}" fill="none" stroke="var(--line)" stroke-width="16"/><circle cx="70" cy="70" r="${r}" fill="none" stroke="var(--accent-2)" stroke-width="16" stroke-dasharray="${(c * f).toFixed(1)} ${c.toFixed(1)}" transform="rotate(-90 70 70)"/><text x="70" y="70" text-anchor="middle" font-size="34" font-weight="700" fill="var(--text)">${a}</text><text x="70" y="92" text-anchor="middle" font-size="12" fill="var(--text-3)">of ${b} held</text></svg>`; };
+  const fact = (big, txt, href, cta) => `<a class="story card link" href="${href}"><div class="story-big">${big}</div><p>${txt}</p><span class="small">${cta} →</span></a>`;
+  const node = (t, held, note) => `<div class="mnode ${held ? "" : "dash"}"><b>${t}</b>${note ? `<span>${note}</span>` : ""}</div>`;
   v.innerHTML = `
   <section class="hero">
-    <div class="kicker">Malaysia Economy Data Warehouse · an IKRAM gift to the public</div>
-    <h1 class="display">Malaysia prints thousands of pages about its own money every year. Almost no one can read them together. Now you can.</h1>
-    <p class="lede big">The budget, the audited accounts, the Auditor-General's reports, Bank Negara's statistics, DOSM's surveys and the books of thirteen state governments. Each one is published, but in its own PDF, on its own website, in its own format. This warehouse reads every line, puts it all on one map and one timeline, and shows you where the institutions agree and where they don't.</p>
-    <div class="row" style="margin:22px 0 8px;gap:10px"><a class="btn primary lg" href="#/gaps">Start with a question →</a><a class="btn lg" href="#/explore">Explore the data</a><a class="btn lg" href="#/bubbles">See the states move</a></div>
+    <div class="kicker"><i class="bar"></i>Malaysia Economy Data Warehouse · An IKRAM initiative</div>
+    <h1 class="display"><span class="pre">From data to</span>policy change.</h1>
+    <p class="lede big">Checked public data, behind every policy case we make.</p>
+    <p class="muted" style="max-width:720px;margin-top:-4px">The budget, the audited accounts, the Auditor-General, Bank Negara, DOSM and thirteen state governments. All in one place, on one map and one timeline. Where they agree, you can rely on it. Where they differ, you see by how much.</p>
+    <div class="row" style="margin:22px 0 8px;gap:10px"><a class="btn primary lg" href="#/gaps">Start with a question →</a><a class="btn lg" href="#/explore">Explore the data</a><a class="btn lg" href="#/compare">Compare the states</a></div>
     <div class="muted small">Or press <kbd>⌘K</kbd> anywhere and type what you are looking for.</div>
   </section>
 
-  <div class="stats">
-    <div><b>${NF(0).format(m.observations)}</b><span>numbers, each linked to the page it came from</span></div>
-    <div><b>${NF(0).format(m.places)}</b><span>places: the nation, every state, district, parlimen and DUN</span></div>
-    <div><b>${m.indicators}</b><span>indicators, from poverty to project spending</span></div>
-    <div><b>${m.gap_views}</b><span>questions answered by setting one source against another</span></div>
+  <div class="eyebrow" style="margin-top:34px">By the numbers</div>
+  <h2 class="section">Big enough to matter. Checked enough to trust.</h2>
+  <div class="stats big">
+    <div><b>${million(sc.source_rows)}</b><span>rows copied from ${NF(0).format(sc.source_tables)} official tables, exactly as printed</span></div>
+    <div><b>${NF(0).format(m.observations)}</b><span>numbers on one common core, each linked to its page</span></div>
+    <div><b>${NF(0).format(sc.checks)}</b><span>automatic checks, re-run on every change</span></div>
+    <div><b>${NF(0).format(sc.l0_files)}</b><span>original documents and files archived (${NF(1).format(sc.l0_gb)} GB), never overwritten</span></div>
+    <div><b>${sc.anomalies}</b><span>publisher errors caught, kept as printed, with proof</span></div>
+    <div><b>${sc.series_held}</b><span>official series held, of ${m.series_registered} on our list</span></div>
+    <div><b>${NF(0).format(m.places)}</b><span>places, from the nation down to every DUN</span></div>
+    <div><b>${sc.first_year}–${sc.last_year}</b><span>${sc.last_year - sc.first_year + 1} years of history</span></div>
   </div>
+  <p class="muted small" style="margin-top:8px">Counted from the repository each time the site is built. ${sc.eval_questions} test questions and ${sc.ci_scripts} check scripts guard every change.</p>
 
-  <h2 class="section">Four things you can only see when the sources sit side by side</h2>
+
+  <div class="eyebrow">What the data says</div>
+  <h2 class="section">Four findings. Each one you can check.</h2>
   <div class="stories">
-    ${fact("01", pct(plLast.placed_share), `Only this share of federal spending in ${plLast.year} can be traced to a state from the federal accounts. Salaries, subsidies, cash aid and most projects carry no address. So when anyone tells you how much the federal government spends in your state, ask how they know.`, "#/gaps/gap_federal_placement", "Where federal money lands")}
-    ${fact("02", compact(obOf("commitments").amount_rm, "RM"), `in financial commitments in ${obY}, plus ${compact(obOf("pfi").amount_rm, "RM")} in PFI liabilities and ${compact(obOf("loan_guarantees").amount_rm, "RM")} in loan guarantees. None of it is counted in the ${compact(obOf("debt").amount_rm, "RM")} of federal debt. Each is tracked year by year against the debt itself.`, "#/gaps/gap_obligations_growth", "Hidden obligations")}
-    ${fact("03", `${below} of ${tg.length}`, `numeric targets of the Twelfth Malaysia Plan ended below the number the Plan set, and ${above} above. Below is not always bad: unemployment below target is good news. But real GDP came in below target in ${gdpBelow} of ${gdpAll} places the Plan named.`, "#/gaps/gap_target_vs_outcome", "Plan target vs outcome")}
-    ${fact("04", `${agreeRA} of ${bothRA.length}`, `times, Bank Negara's published fiscal figure matches the audited accounts. The rest differ, some by a few ringgit, some by billions, and every difference is kept and measured. In ${buY}, ${buUnder} ministries spent well short of their development allocation.`, "#/gaps/gap_reported_vs_audited", "Reported vs audited")}
+    ${fact(pct(plLast.placed_share), `of federal spending in ${plLast.year} can be traced to a state. The rest has no address in the accounts. So ask anyone who quotes federal spending in your state: how do you know?`, "#/gaps/gap_federal_placement", "Where federal money lands")}
+    ${fact(compact(obOf("commitments").amount_rm, "RM"), `in financial commitments in ${obY}. Plus ${compact(obOf("pfi").amount_rm, "RM")} in PFI and ${compact(obOf("loan_guarantees").amount_rm, "RM")} in loan guarantees. None of it is in the ${compact(obOf("debt").amount_rm, "RM")} of federal debt.`, "#/gaps/gap_obligations_growth", "Hidden obligations")}
+    ${fact(`${below} of ${tg.length}`, `Twelfth Malaysia Plan targets ended below the number set. Not always bad news: lower unemployment is good. But real GDP fell short in ${gdpBelow} of the ${gdpAll} places the Plan named.`, "#/gaps/gap_target_vs_outcome", "Plan target vs outcome")}
+    ${fact(`${agreeRA} of ${bothRA.length}`, `times Bank Negara's fiscal figure matches the audited accounts. The other times, they differ. We keep both, and measure the gap.`, "#/gaps/gap_reported_vs_audited", "Reported vs audited")}
   </div>
 
-  <h2 class="section">Built for people who check</h2>
-  <div class="grid g3">
-    <div class="pillar"><div class="pi">↳</div><h3>Every number has an address</h3><p>Hover any point on any chart and you get the value exactly as printed, with the document, table, page and file fingerprint. One click opens the source row.</p></div>
-    <div class="pillar"><div class="pi">≠</div><h3>Disagreement is a feature</h3><p>When the Ministry of Finance, Bank Negara and the Accountant General print different figures for the same thing, you see all three, and the gap between them.</p></div>
-    <div class="pillar"><div class="pi">±</div><h3>Honest about uncertainty</h3><p>Survey numbers keep their error margins. Small places are never ranked as if their estimates were exact. Breaks in method are marked on the chart, not smoothed over.</p></div>
-  </div>
+  <div class="eyebrow">Why it exists</div>
+  <h2 class="section">The data is public. Using it is the hard part.</h2>
+  <div class="tablewrap" style="max-height:none"><table class="cmp ww">
+    <thead><tr><th style="width:22%">When you want to…</th><th>Without the warehouse</th><th>With it</th></tr></thead><tbody>
+    <tr><td>Find a figure</td><td class="x">Hunt through PDFs on a dozen websites, each in its own format and language.</td><td class="y">Type it into search. One place, one set of codes, one timeline.</td></tr>
+    <tr><td>Prove it</td><td class="x">Quote a number and hope no one asks for the page.</td><td class="y">Every value cites its document, table, page and file fingerprint.</td></tr>
+    <tr><td>Compare sources</td><td class="x">MOF, Bank Negara and the audited accounts print different figures. Which is right?</td><td class="y">All three side by side, with the gap measured and explained.</td></tr>
+    <tr><td>Compare places</td><td class="x">States, districts and constituencies use different codes and boundaries.</td><td class="y">${NF(0).format(m.places)} places on official codes, from the nation to every DUN.</td></tr>
+    <tr><td>Track change</td><td class="x">Methods change quietly. Old and new numbers get mixed.</td><td class="y">Breaks are marked on every chart, and never differenced across.</td></tr>
+    <tr><td>Judge certainty</td><td class="x">A survey estimate looks as exact as an audited account.</td><td class="y">Uncertainty is carried, and small areas are never ranked.</td></tr>
+    </tbody></table></div>
 
-  <h2 class="section">Five minutes to your first finding</h2>
+  <div class="eyebrow">How it works</div>
+  <h2 class="section">Every number has a source.</h2>
+  <div class="flow card">
+    <div class="fstep"><b>${held.length}</b><span>official series: budgets, accounts, audits, surveys</span></div>
+    <div class="farrow">→</div>
+    <div class="fstep core"><b>1</b><span>checked library</span></div>
+    <div class="farrow">→</div>
+    <div class="fstep"><b>3</b><span>ways in: this website, CSV download, AI tools</span></div>
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <p class="plain">Copied exactly as published. Checked against the publisher's own totals, then by an independent reviewer. Never overwritten.</p>
+    <p class="plain">Every finding links back to the original document, so it can be taken to Parliament, state assemblies and the media with confidence.</p>
+  </div>
+  <div class="tablewrap" style="max-height:none;margin-top:14px"><table class="cmp">
+    <thead><tr><th style="width:9%">Layer</th><th style="width:20%">What it is</th><th>What happens there</th><th style="width:26%">Where</th></tr></thead><tbody>
+    <tr><td class="mono">L0</td><td><b>Raw files</b></td><td>Every PDF and data file, kept exactly as the publisher released it, by its sha256 fingerprint.</td><td class="mono small">private l0-archive release</td></tr>
+    <tr><td class="mono">L1</td><td><b>Source tables</b></td><td>Each table copied as printed, row by row. The publisher's own totals are re-added; a misprint is kept and documented, never corrected.</td><td class="mono small">sources/&lt;name&gt;/data</td></tr>
+    <tr><td class="mono">L2</td><td><b>One common core</b></td><td>The same codes for place, time, measure, body and source, so figures from different publishers can sit side by side. Every row points back to L1.</td><td class="mono small">core/</td></tr>
+    <tr><td class="mono">L3</td><td><b>Gap views</b></td><td>Named comparisons, each with a method fixed before the results were seen: budget vs spending, plan vs outcome, need vs money.</td><td class="mono small">core/gap_*.csv</td></tr>
+    <tr><td class="mono">L4</td><td><b>Ways in</b></td><td>This website, CSV downloads, and typed tools for AI agents that never return a number without its citation.</td><td class="mono small">site/, apps/tools/</td></tr>
+    </tbody></table></div>
+
+  <div class="eyebrow">What it covers</div>
+  <h2 class="section">Nine themes. The whole economy.</h2>
+  <div class="themes">${themeRows.map((t) => `<a class="theme-tile" href="#/explore?theme=${t.k}"><b>${esc(t.name)}</b><span class="tl ${t.cls}"><i></i>${t.lab}</span><small>${t.h} of ${t.all} series held · ${t.n} indicators</small></a>`).join("")}</div>
+  <p class="muted small" style="margin-top:10px">Each tile shows how much of that theme's data we already hold, from the registry of every series we hold or still need.</p>
+  <h3 style="margin:22px 0 8px">What is inside, source by source</h3>
+  <div class="row" style="justify-content:space-between;margin-bottom:8px"><span class="muted small">${held.length} series held. Click a heading to sort.</span><input type="search" id="srcq" placeholder="Filter sources…" style="width:220px"></div>
+  <div class="tablewrap" id="srct" style="max-height:440px"><table><thead><tr><th>Theme</th><th>Publisher</th><th>Series</th><th>What we hold</th></tr></thead><tbody>
+    ${held.sort((a, b) => String(a.theme).localeCompare(String(b.theme), "en", { numeric: true })).map((r) => `<tr><td class="small">${esc(themeName(String(r.theme || "").split(";")[0]))}</td><td class="small">${esc(r.publisher)}</td><td>${esc(r.title_en)}</td><td class="small muted">${esc(r.held_coverage)}</td></tr>`).join("")}
+  </tbody></table></div>
+
+  <div class="eyebrow">Signature feature</div>
+  <h2 class="section">Follow every ringgit to where it went and who got it.</h2>
+  <div class="card mtree">
+    <div class="mroot">Budget</div>
+    <div class="mcols">
+      <div><div class="mhead">Where it went</div>${node("State", true, `${pct(plLast.placed_share)} placed today`)}${node("District", false)}${node("DUN", false)}</div>
+      <div><div class="mhead">Who got it</div>${node("Ministry or agency", true, "audited, every vote")}${node("Contractor", false)}${node("Audit finding", false, "draft, being re-checked")}</div>
+    </div>
+  </div>
+  <p class="plain" style="margin-top:12px"><b style="color:var(--bad)">Dashed boxes:</b> data still to collect. If we can't trace the money, we say so. We never guess.</p>
+
+  <div class="eyebrow">How we check</div>
+  <h2 class="section">Six checks. Each one catches what the last one missed.</h2>
+  <div class="tablewrap" style="max-height:none"><table class="cmp">
+    <thead><tr><th style="width:24%">Check</th><th>What it does</th><th style="width:18%">When</th></tr></thead><tbody>
+    <tr><td><b>1. The source's own sums</b></td><td>Every printed total is re-added from its printed parts. A publisher's error is kept, with proof.</td><td class="small">at extraction</td></tr>
+    <tr><td><b>2. Automatic checks</b></td><td>Scripts re-run the whole warehouse on every change and block anything that alters a figure or adds a failure.</td><td class="small">every change</td></tr>
+    <tr><td><b>3. Independent reviewer</b></td><td>A separate reviewer, blind to the code, re-derives figures from the original pages and tries to break them.</td><td class="small">every new source</td></tr>
+    <tr><td><b>4. Source against source</b></td><td>The same figure from different institutions is compared to the ringgit. Differences are published, not hidden.</td><td class="small">every build</td></tr>
+    <tr><td><b>5. A person</b></td><td>A human checks a random sample against the archived page before IKRAM publishes anything.</td><td class="small">before publication</td></tr>
+    <tr><td><b>6. Nothing overwritten</b></td><td>Every raw file and every data release is kept, so any figure can be re-checked later.</td><td class="small">always</td></tr>
+    </tbody></table></div>
+  <p class="muted small" style="margin-top:8px">What fails a check is not shown. The audit-findings inventory failed its independent review on 2026-11-06, so it stays a draft until it is fixed.</p>
+
+  <div class="eyebrow">Who it is for</div>
+  <h2 class="section">Built for people who need to be right in public.</h2>
+  <div class="tablewrap" style="max-height:none"><table class="cmp">
+    <thead><tr><th style="width:18%">You are</th><th>You can</th><th style="width:26%">Start here</th></tr></thead><tbody>
+    <tr><td><b>Policy advocate</b></td><td>Ask a question in plain words and leave with a finding, its source and its caveats, ready for a brief.</td><td><a href="#/gaps">Policy gaps</a></td></tr>
+    <tr><td><b>Data analyst</b></td><td>Pull any series by place, breakdown and year, as published, with every citation, and download it as CSV.</td><td><a href="#/explore">Explore data</a></td></tr>
+    <tr><td><b>Journalist</b></td><td>Check a claim in seconds: what was budgeted, what was spent, what the auditors found, and where it is printed.</td><td><a href="#/gaps/gap_budget_vs_actual">Budget vs actual</a></td></tr>
+    <tr><td><b>Elected representative</b></td><td>See your state against Malaysia on poverty, income, jobs and the state's own accounts.</td><td><a href="#/states">States</a></td></tr>
+    <tr><td><b>Researcher</b></td><td>Set two measures against each other across states and years, and rebuild any figure from the repository.</td><td><a href="#/compare">Compare states</a></td></tr>
+    </tbody></table></div>
+
+  <div class="eyebrow">How to use it</div>
+  <h2 class="section">Five minutes to your first finding.</h2>
   <ol class="steps">
-    <li><b>Ask.</b> Open <a href="#/gaps">Policy gaps</a> and type a question, such as "was the education budget spent?". Or pick one of the nine questions.</li>
-    <li><b>Read the answer.</b> Each view opens with a plain sentence worked out from the rows by fixed rules, then the chart.</li>
-    <li><b>Dig.</b> Filter by year, follow one ministry across a decade, sort the table, compare states with the map.</li>
-    <li><b>Check.</b> Every row carries its citation. Download the CSV and rebuild the figure yourself.</li>
-    <li><b>Use it.</b> "Copy as brief" gives you the finding, its source and its caveats, ready for a press release or a parliamentary question.</li>
+    <li><b>Ask.</b> Open <a href="#/gaps">Policy gaps</a>. Type a question, or pick one of nine.</li>
+    <li><b>Read.</b> One plain sentence gives the answer. The chart shows it.</li>
+    <li><b>Dig.</b> Filter by year. Follow one ministry for a decade. Compare the states.</li>
+    <li><b>Check.</b> Every row cites its page. Download it and rebuild the figure yourself.</li>
+    <li><b>Use.</b> "Copy as brief" gives you the finding, the source and the caveats. Ready for a press release or a parliamentary question.</li>
   </ol>
 
-  <h2 class="section">How it compares</h2>
-  <p class="muted" style="max-width:760px">The official portals are where these figures are born, and the place for the newest release. This warehouse does what none of them does alone: it puts different publishers on the same page.</p>
+  <div class="eyebrow">How it compares</div>
+  <h2 class="section">Built to sit beside the official portals, not replace them.</h2>
+  <p class="muted" style="max-width:760px">The portals are where these figures are born, and the place for the newest release. This warehouse adds what none of them does alone: different publishers on the same page.</p>
   <div class="tablewrap" style="max-height:none"><table class="cmp">
     <thead><tr><th>What you need</th><th>This warehouse</th><th>OpenDOSM / data.gov.my</th><th>World Bank WDI</th><th>MOF / AG portals</th></tr></thead>
     <tbody>
@@ -245,23 +340,28 @@ async function viewAbout(v) {
       ${cmpRow("International comparison", "x:Malaysia only", "x:No", "y:Yes", "x:No")}
     </tbody></table></div>
 
-  <h2 class="section">Under the hood</h2>
-  <p class="muted" style="max-width:760px">Five layers, each rebuilt from the one below, so any number can be walked back to the file it came from.</p>
-  <div class="layers">
-    ${layer("L0", "Raw files", "PDFs and data files exactly as released, kept by fingerprint (sha256).")}
-    ${layer("L1", "Source tables", "Each table as printed, row by row, checked against the publisher's own totals.")}
-    ${layer("L2", "One common core", "One set of codes for place, time, measure and body; every row cites L1.")}
-    ${layer("L3", "Gap views", "Named comparisons: budget vs spending, plan vs outcome, need vs money.")}
-    ${layer("L4", "Tools", "This site, typed agent tools that never return an uncited number, and models.")}
+  <div class="eyebrow">Where we stand</div>
+  <h2 class="section">A strong start. More still to collect.</h2>
+  <div class="stand card">
+    ${donut(held.length, D.registry.length)}
+    <div><h3>Already in</h3><p class="plain" style="margin:0">Audited federal and state accounts, federal budgets and development estimates, Auditor-General reports, Bank Negara, the Twelfth Malaysia Plan, and DOSM data refreshed every day.</p></div>
   </div>
-  <div class="grid g2" style="margin-top:16px">
-    <div class="note">Survey estimates carry sampling error, and DOSM publishes none below state level. A small difference between two districts may not be real, so the site never ranks or colours them.</div>
-    <div class="note">Most federal spending has no place in the accounts. Federal amounts by state are withheld until at least 60% can be placed; until then you see the share that can.</div>
+  <div class="next"><span class="tag">Next</span><p>Welfare and health by state, procurement awards, the environment, and audit findings once re-checked.</p></div>
+  <p class="muted" style="margin-top:12px">The warehouse is built in stages. Every number is checked before it is published. This page: release ${esc(m.release_id.replace("core-", ""))}.</p>
+
+  <div class="eyebrow">Limits, stated plainly</div>
+  <h2 class="section">What this cannot tell you yet.</h2>
+  <div class="grid g2">
+    <div class="note"><b>Small places are estimates.</b> DOSM publishes no error margin below state level. A small gap between two districts may not be real, so we never rank or colour them.</div>
+    <div class="note"><b>Most federal money has no address.</b> Only ${pct(plLast.placed_share)} of federal spending can be placed in a state. Federal amounts by state stay hidden until at least 60% can be.</div>
+    <div class="note"><b>Some years are missing.</b> A gap in a line is a year with no published figure, not a zero. We never fill it in.</div>
+    <div class="note"><b>Malaysia only.</b> For comparisons with other countries, use the World Bank or the IMF. This warehouse goes deep, not wide.</div>
   </div>
   <div class="cta card">
-    <div><h3 style="margin:0 0 4px">Open by design</h3><p class="muted small" style="margin:0">Every table is a plain CSV in the <a href="${REPO}" target="_blank" rel="noopener">repository</a>, with the code that built it and the checks it passed (${esc(m.built_from)}). Licences are tracked per series; a publisher's takedown request is honoured. <a href="#/method">How we keep it true →</a></p></div>
+    <div><h3 style="margin:0 0 4px">Open by design.</h3><p class="muted small" style="margin:0">Every table is a plain CSV in the <a href="${REPO}" target="_blank" rel="noopener">repository</a>, with the code that built it and the checks it passed. A publisher's takedown request is honoured. <a href="#/method">How we keep it true →</a></p></div>
     <a class="btn primary lg" href="#/gaps">Ask your first question →</a>
   </div>`;
+  $("#srcq").oninput = (e) => filterTable($("#srct"), e.target.value);
 }
 
 const kpi = (v, l) => `<div class="card kpi"><div class="v">${v}</div><div class="l">${l}</div></div>`;
@@ -281,7 +381,7 @@ function viewExplore(v) {
   const pubs = [...new Set(D.cat.flatMap((c) => c.publishers))].sort();
   v.innerHTML = `
     <h1>Explore data</h1>
-    <p class="lede">${D.cat.length} indicators, ${NF(0).format(D.meta.observations)} observations. Pick one to chart it by place, period and breakdown, with every value cited.</p>
+    <p class="lede">${D.cat.length} indicators. ${NF(0).format(D.meta.observations)} numbers. Pick one and see it as published: by place, by year, by group. Every value cites its page.</p>
     <div class="layout-2" style="margin-top:18px">
       <aside class="facets">
         <input type="search" id="eq" placeholder="Filter indicators…" value="${esc(st.q)}" style="width:100%;margin-bottom:12px">
@@ -649,16 +749,16 @@ async function stateYears(code) {
 }
 let bubbleTimer = null;
 async function viewBubbles(v) {
-  crumbs([["Bubbles", "#/bubbles"]]);
+  crumbs([["Compare states", "#/compare"]]);
   clearInterval(bubbleTimer);
   const [, P] = hashParams();
   const opts = D.cat.filter((c) => c.levels.includes("state") && /^\d{4}$/.test(c.first) && /^\d{4}$/.test(c.last)).sort((a, b) => a.name.localeCompare(b.name));
   const has = (k) => opts.some((c) => c.code === k);
   const st = { x: has(P.get("x")) ? P.get("x") : "hh_income.gross.median", y: has(P.get("y")) ? P.get("y") : "poverty.absolute.rate",
     s: P.get("s") || "pop.total", logx: P.get("logx") === "1", trace: (P.get("trace") || "").split(",").filter(Boolean), year: P.get("year") || "" };
-  v.innerHTML = `<div class="row">${chip("Bubbles", "accent")}${chip("all 16 states and FTs")}</div>
-    <h1>See the states move</h1>
-    <p class="lede">Pick any two measures. Each bubble is a state; its size is its population. Press play to watch the years go by, and trace a state to see the path it took.</p>
+  v.innerHTML = `<div class="row">${chip("Compare states", "accent")}${chip("all 16 states and FTs")}</div>
+    <h1>Compare the states, year by year.</h1>
+    <p class="lede">Pick any two measures. Each circle is a state, sized by its population. Press play to watch the years go by. Trace a state to see the path it took.</p>
     <div class="card" style="padding:12px 14px;margin:16px 0 12px"><div class="row" style="gap:14px" id="bc">
       <div style="flex:1;min-width:220px"><div class="small muted">Across (x)</div><select id="bx" style="width:100%">${opts.map((c) => `<option value="${c.code}" ${c.code === st.x ? "selected" : ""}>${esc(c.name)}</option>`).join("")}</select></div>
       <div style="flex:1;min-width:220px"><div class="small muted">Up (y)</div><select id="by" style="width:100%">${opts.map((c) => `<option value="${c.code}" ${c.code === st.y ? "selected" : ""}>${esc(c.name)}</option>`).join("")}</select></div>
@@ -672,7 +772,7 @@ async function viewBubbles(v) {
       <div class="player"><button class="btn primary" id="bplay" type="button">▶ Play</button><input type="range" id="byr" min="0" max="0" step="1"><b id="byl" class="mono"></b></div>
       <p class="small muted" id="bnote" style="margin:10px 0 0"></p></div>
     <div id="bstory" class="answer" style="margin-top:14px"></div>`;
-  const go = () => { const p = new URLSearchParams({ x: st.x, y: st.y, s: st.s }); if (st.logx) p.set("logx", "1"); if (st.trace.length) p.set("trace", st.trace.join(",")); if (st.year) p.set("year", st.year); setParams("/bubbles", p); };
+  const go = () => { const p = new URLSearchParams({ x: st.x, y: st.y, s: st.s }); if (st.logx) p.set("logx", "1"); if (st.trace.length) p.set("trace", st.trace.join(",")); if (st.year) p.set("year", st.year); setParams("/compare", p); };
   async function load() {
     $("#bchart").innerHTML = `<div class="skel">Loading…</div>`;
     const [X, Y, S] = await Promise.all([stateYears(st.x), stateYears(st.y), st.s ? stateYears(st.s) : Promise.resolve({})]);
@@ -973,7 +1073,7 @@ const QUESTIONS = [
 function viewGaps(v) {
   crumbs([["Policy gaps", "#/gaps"]]);
   v.innerHTML = `<h1>Policy gaps</h1>
-    <p class="lede">Each view compares two things that should line up: a plan and its outcome, a budget and its spending, need and money, what one institution reports and what another audited. Ask a question, or start from one below.</p>
+    <p class="lede">Ask a question. Get the answer, the evidence and the caveats. Each view sets two things side by side that should line up: a plan and its outcome, a budget and its spending, need and money, a report and its audit.</p>
     <div class="card" style="margin:18px 0;padding:14px"><input type="search" id="gq" placeholder="Ask, e.g. “was the education budget spent?”, “poverty in Kelantan”, “PFI”" style="width:100%;font-size:15px;padding:10px 12px"><div id="gans" style="margin-top:10px"></div></div>
     <div class="grid g3" id="gcards">${QUESTIONS.map(([q, name]) => { const g = D.gaps.find((x) => x.name === name); return g ? `<a class="card link qcard" href="#/gaps/${name}"><div class="small muted">${esc(g.title)}</div><h3 style="margin:4px 0 10px;font-size:15px">${esc(q)}</h3><div class="gh" data-n="${name}"><span class="muted small">…</span></div><div class="small" style="margin-top:10px">Open the analysis →</div></a>` : ""; }).join("")}</div>
     <div class="note info" style="margin-top:18px">Every view follows a method declared before its results were seen, runs for all states and Federal Territories, and keeps the sources' own figures. The plain-language reading at the top of each view is generated by fixed rules from the rows below it, not written by hand.</div>`;
@@ -988,7 +1088,7 @@ function viewGaps(v) {
     $("#gans").innerHTML = (gs.length ? `<div class="small muted">Gap views</div>${gs.map(([, t, n]) => `<div><a href="#/gaps/${n}">${esc(t)}</a></div>`).join("")}` : "")
       + (st.length ? `<div class="small muted" style="margin-top:8px">States</div>${st.map((g) => `<div><a href="#/state/${g}">${esc(geoName(g))} profile</a></div>`).join("")}` : "")
       + (inds.length ? `<div class="small muted" style="margin-top:8px">Indicators</div>${inds.map(([, c]) => `<div><a href="#/explore/${encodeURIComponent(c.code)}${st.length ? "?lvl=state&geo=" + st.join(",") : ""}">${esc(c.name)}</a> <span class="muted small">${esc(c.first)}–${esc(c.last)}</span></div>`).join("")}` : "")
-      + (inds.length > 1 ? `<div class="small muted" style="margin-top:8px">Compare two of them across states</div><div><a href="#/bubbles?x=${encodeURIComponent(inds[0][1].code)}&y=${encodeURIComponent(inds[1][1].code)}">${esc(inds[0][1].name)} against ${esc(inds[1][1].name)}, as bubbles</a></div>` : "")
+      + (inds.length > 1 ? `<div class="small muted" style="margin-top:8px">Compare two of them across states</div><div><a href="#/compare?x=${encodeURIComponent(inds[0][1].code)}&y=${encodeURIComponent(inds[1][1].code)}">${esc(inds[0][1].name)} against ${esc(inds[1][1].name)}, state by state</a></div>` : "")
       || `<span class="muted small">No match yet. Try words like budget, poverty, plan, debt, revenue, or a state's name.</span>`;
   };
 }
@@ -1217,7 +1317,7 @@ async function viewGap(name, v = $("#view")) {
   v.innerHTML = `<div class="row">${chip("Gap view", "accent")}${chip(`<span class="mono">${esc(name)}</span>`)}</div>
     <h1>${esc(qs ? qs[0] : g.question)}</h1><p class="lede">${esc(g.title)}: ${esc(g.question)}</p>
     <div class="card" style="padding:12px 14px;margin:16px 0 12px"><div class="row" id="gf" style="gap:14px"></div></div>
-    <div class="answer"><div class="small muted" style="margin-bottom:6px">What the rows say</div><div class="finding" id="read"></div>
+    <div class="answer"><div class="small muted" style="margin-bottom:6px">The answer, from the rows below</div><div class="finding" id="read"></div>
       <div class="row" style="margin-top:12px"><button class="btn" id="brief" type="button">Copy as brief</button><button class="btn" id="gcsv" type="button">Download rows (CSV)</button><a class="btn" href="${REPO}/blob/main/core/${name}.csv" target="_blank" rel="noopener">Source table on GitHub</a></div></div>
     <div class="card" style="margin-top:14px"><div class="legend" id="glegend"></div><div class="chart" id="gchart"></div></div>
     ${cfg.drill ? `<h2>${esc(cfg.drill.title)}</h2><div class="card"><div class="row" style="justify-content:space-between"><select id="gdsel" style="min-width:300px"></select><span class="small muted">${esc(cfg.drill.hint)}</span></div><div class="legend" id="gdleg"></div><div class="chart" id="gdchart"></div><div class="finding small" id="gdread" style="margin-top:8px"></div></div>` : ""}
@@ -1343,7 +1443,7 @@ function initPalette() {
 }
 function palRender(q) {
   const base = [
-    ...[["About", "#/about"], ["Explore data", "#/explore"], ["Policy gaps", "#/gaps"], ["Bubbles: see the states move", "#/bubbles"], ["States", "#/states"], ["Sources & caveats", "#/sources"], ["Method & trust", "#/method"]].map(([t, h]) => ["Page", h, t, ""]),
+    ...[["About", "#/about"], ["Explore data", "#/explore"], ["Policy gaps", "#/gaps"], ["Compare states: two measures over time", "#/compare"], ["States", "#/states"], ["Sources & caveats", "#/sources"], ["Method & trust", "#/method"]].map(([t, h]) => ["Page", h, t, ""]),
     ...QUESTIONS.map(([t, n]) => ["Gap", "#/gaps/" + n, t, D.gaps.find((g) => g.name === n)?.title || ""]),
     ...STATES.map(([g]) => ["State", "#/state/" + g, geoName(g), g]),
     ...D.cat.map((c) => ["Data", "#/explore/" + encodeURIComponent(c.code), c.name, `${c.first}–${c.last}`, c.definition + " " + c.code + " " + themeName(c.theme)]),

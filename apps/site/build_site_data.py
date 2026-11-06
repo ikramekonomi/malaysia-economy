@@ -63,6 +63,31 @@ def write(name, data):
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
 
 
+def warehouse_scale(cat, w):
+    """The size of the warehouse, counted from the repository itself (for the About page)."""
+    import glob
+
+    def n(p):
+        with open(p, encoding="utf-8", errors="replace") as f:
+            return max(0, sum(1 for _ in f) - 1)
+    g = lambda pat: sorted(glob.glob(os.path.join(REPO, pat), recursive=True))
+    src = [p for p in g("sources/*/data/**/*.csv") if not os.path.basename(p).startswith("_")]
+    checks = g("sources/*/data/**/_validation*.csv") + g("core/**/_validation*.csv") + g("curated/**/_validation*.csv")
+    anomalies = g("sources/*/data/**/_source_anomal*.csv")
+    l0 = [r for r in rows(os.path.join(REPO, "meta", "l0_archive.csv")) if r["status"] == "ARCHIVED"]
+    held = [r for r in w.registry if r["status"] in ("verified", "extracted", "held")]
+    years = [int(c[k][:4]) for c in cat for k in ("first", "last") if c[k][:4].isdigit()]
+    suite = open(os.path.join(REPO, "qa", "run_offline_suite.py"), encoding="utf-8").read()
+    suite = suite[suite.index("SUITE = ["):]
+    return {"source_tables": len(src), "source_rows": sum(map(n, src)), "checks": sum(map(n, checks)),
+            "anomalies": sum(map(n, anomalies)), "l0_files": len(l0),
+            "l0_gb": round(sum(int(r["size_bytes"] or 0) for r in l0) / 1e9, 1),
+            "series_held": len(held), "publishers": len({r["publisher"] for r in held}),
+            "eval_questions": len(rows(os.path.join(REPO, "qa", "eval_questions.csv"))),
+            "ci_scripts": suite[:suite.index("]")].count('"') // 2,
+            "first_year": min(years), "last_year": max(years)}
+
+
 def main():
     w = Warehouse()
     themes = {r["code"]: r["label_en"] for r in rows(os.path.join(REPO, "meta", "code_list.csv"))
@@ -135,13 +160,14 @@ def main():
         write(f"gap/{name}.json", {"name": name, "title": title, "question": q, "cols": cols, "rows": data})
         gaps.append({"name": name, "title": title, "question": q, "n": len(data)})
     write("gaps.json", gaps)
+    scale = warehouse_scale(cat, w)
     lv = defaultdict(int)
     for r in w.obs:
         lv[w.geo.get(r["geo_code"], {}).get("geo_level", "")] += 1
     write("meta.json", {"release_id": w.release_id, "observations": len(w.obs), "indicators": len(cat),
                         "places": len(w.geo), "by_level": lv, "series_registered": len(w.registry),
                         "series_held": sum(1 for r in w.registry if r["status"] in ("verified", "extracted", "held")),
-                        "gap_views": len(gaps), "built_from": "core/ at " + w.release_id})
+                        "gap_views": len(gaps), "built_from": "core/ at " + w.release_id, "scale": scale})
     print(f"site data: {len(cat)} indicators, {len(gaps)} gap views -> {os.path.relpath(OUT, REPO)}")
 
 

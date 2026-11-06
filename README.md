@@ -38,9 +38,10 @@ tools. The public site (`site/`) is one application on top of it.
 | **bnm** | Monthly Highlights & Statistics (fiscal, debt, monetary, banking, external) | 1996–2026 | 8,106 | 279 |
 | **dosm** | 121 datasets (DOSM and data.gov.my): national accounts, population by state and district, HIES, LFS, CPI, trade, GFS; hospital beds, health staff, schools, teachers, deaths, life expectancy, water, crime. **Refreshed daily** | 1947–2026 | 957,708 | 1,473 |
 
-**Totals:** about 1.19 million source rows and 32,609 validation checks. **49 catalogued source
-anomalies:** places where a publisher's own figures do not add up, kept exactly as printed with
-proof.
+**Totals (2026-11-06):** 1.45 million rows in 771 source tables, 223,090 conformed observations, 52,100
+validation checks, 470 archived source files (13.4 GB), and **75 catalogued source anomalies**: places where a
+publisher's own figures do not add up, kept exactly as printed with proof. The site's About page counts these from the
+repository on every build (`apps/site/build_site_data.py`).
 
 **What we hold and what we still need** is one checklist,
 [`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 115 series, 46 held. Each has
