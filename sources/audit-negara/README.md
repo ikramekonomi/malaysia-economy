@@ -81,6 +81,36 @@ normalisation. Source wording variants kept as printed and documented in
 re-derived the datasets from the PDFs (30-row deep sample all confirmed); the
 margin-label defects it flagged are fixed and re-validated.
 
+### Audit inventory of every held volume (`data/lkan_toc/`, `data/fact_lkan_audit_inventory.csv`, 2026-11-06)
+
+There is one row per audit that the contents pages of a volume list, across every LKAN volume reporting audits
+of activities, companies or statutory bodies: 283 volumes in the two manifests, tabled 2015-2026.
+
+* **`pipeline/lkan_toc.py`** (`.github/workflows/lkan-extract.yml` runs it on Actions, over the L0 archive) writes
+  the contents pages as page-aligned text (`data/lkan_toc/<file>.txt`). It reads the text layer, or, where the
+  contents page is an image (the 2014-2016 volumes), uses OCR; OCR pages are marked `(ocr)`. A volume with no
+  contents page found says why: text per page, and the lines naming the contents.
+* **`pipeline/lkan_inventory.py`** (in the suite) reads every layout of the twelve years into one row per audit:
+  * the part (BAHAGIAN);
+  * the body as printed (ministry or department, in capitals);
+  * the agency or company under it;
+  * the topic;
+  * the printed page;
+  * `text_source` (`text` or `ocr`).
+
+  The layouts are documented in its docstring: page number left, behind a bar or right; chapter pages `1-1`;
+  marked topics `2.` / `-`. It does no matching or classification.
+* **Counts (2026-11-06): 875 audits in 211 volumes (430 federal, 445 state).** Some volumes have no audit by
+  design: the 2025 state volumes (3/2025) and the 2017 Siri 1 state volumes print only financial statements and
+  key audit areas. Some contents pages are images (2014-2016) and await the OCR run.
+* **Caveats:**
+  * a combined audit lists several bodies in one entry, and they are kept joined as printed;
+  * an audit's year is the volume's (`LKAN 2017 Siri 2` -> 2017; `TAHUN 2023` in the title), not the years its
+    findings cover.
+
+The findings register of the five recent federal volumes (`fact_lkan_findings.csv`, below) goes deeper. The
+inventory is the breadth: what was audited, where and when, over twelve years.
+
 ### AG federal fiscal tables (`data/fact_lkan_fiscal_tables_2024.csv`)
 
 The Auditor-General's own Analisis Kewangan Kerajaan Persekutuan tables

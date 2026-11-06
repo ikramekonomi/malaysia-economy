@@ -316,7 +316,7 @@ again as state spending.
 
 | column | note |
 |---|---|
-| `record_id`, `record_type` | `audit_finding` · `audit_opinion` · `project` · `pfi_contract` · `guarantee` · `procurement_award` · `pac_recommendation` · `plan_target` |
+| `record_id`, `record_type` | `audit` (one audit an LKAN volume lists, 2026-11-06) · `audit_finding` · `audit_opinion` · `project` · `pfi_contract` · `guarantee` · `procurement_award` · `pac_recommendation` · `plan_target` |
 | `entity_id`, `geo_code`, `period_code` | |
 | `title_bm`, `text_bm` | as printed; personal names masked in anything an agent or view returns |
 | `attributes` | JSON for type-specific fields |

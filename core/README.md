@@ -504,6 +504,32 @@ verifier; the first count had RM91.99b / RM80.03b / RM79.37b with the reserve in
 Elektrik Sabah (BES)", PKKP 2023 "Sabah Electricity Sdn. Bhd. (SESB)") stays `different` under the declared rule,
 because their costs differ by more than 5%, though it may be one line.
 
+## Audits as records, and gap_audit_recurrence (Phase 4, 2026-11-06, D33)
+
+`build_records.py` builds four files:
+* **`fact_record.csv`:** one `audit` record per entry of the LKAN audit inventory (875). Each record has:
+  * its place (MY or the state);
+  * the year audited;
+  * the title as printed;
+  * the topic families of `meta/audit_topic_taxonomy.csv`, declared before any count and matched at the start
+    of a word;
+  * provenance down to the contents page.
+* **`bridge_link.csv`:** an audit is linked to a federal body only where the printed body equals a name the body
+  officially had that year (`core/entity_name.csv`). That is `name_exact_official`, publishable under D33: 143
+  links.
+* **`link_candidates.csv`:** nothing else is linked. Obvious candidates (the same name without 'MALAYSIA', or the
+  body's name in another year: 67) are listed with `publishable=false` for the owner to sign. A company,
+  statutory body or person is never linked here.
+* **`gap_audit_recurrence.csv`:** two kinds of row:
+  * linked body × topic family: the years audited, the number of audits, and `recurs` when the body was audited
+    in that family in two or more years;
+  * for every state and the federal level, audits by family and year. These rows name no body.
+
+  An audit can carry several families. Families classify the title of an audit, never its findings.
+
+Checks are in `_validation_records.csv`. Coverage is incomplete for 2014-2016 (image contents pages), and the
+inventory awaits its blind verifier: not for publication yet.
+
 ## gap_reported_vs_audited (Phase 5, 2026-11-06)
 
 Do MOF, BNM and PKKP agree? One row per federal headline and year, where at least two of them print it:

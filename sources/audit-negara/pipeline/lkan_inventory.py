@@ -45,6 +45,8 @@ PART_KIND = re.compile(r"^(BAHAGIAN\s+[IVXL]+\b|AKTIVITI\b|PENGURUSAN SYARIKAT|P
 COMPANY = re.compile(r"\b(Sdn\.?\s*Bhd|Berhad|Bhd\.)", re.I)
 AUDIT_PART = re.compile(r"AKTIVITI|SYARIKAT|BADAN BERKANUN", re.I)
 SKIP_PART = re.compile(r"RINGKASAN|INTI SARI|PERKARA AM", re.I)
+HEADING_BODY = re.compile(r"^(PENGAUDITAN|FOKUS UTAMA|PENUTUP|LAMPIRAN|BAGI TAHUN|KUMPULAN WANG|BERKANUN|PENGLIBATAN|"
+                          r"PENGURUSAN KEWANGAN|PENYATA KEWANGAN|PENGESAHAN)")
 PROSE = re.compile(r"\b(telah|adalah|merupakan|diharapkan|hendaklah|bahawa)\b|^[a-z]", )
 MATTER = re.compile(r"^(Pendahuluan|Rumusan|Penutup|PENUTUP|PENDAHULUAN|Status Tindakan|Lampiran|Objektif|Skop|"
                     r"Syor|Akronim|AKRONIM|Latar Belakang|Kandungan|Pembentangan Laporan|Kedudukan)", re.I)
@@ -204,9 +206,12 @@ def main():
             for o in read_marked(text):
                 if SKIP_PART.search(o["part"]):
                     continue
-                rows.append(dict(report=report, scope=scope, file_name=fn.replace(".txt", ".pdf"), part=o["part"],
-                                 body_bm=o["ministry"], topic_bm=o["topic"], sub_entity_bm=o["agency"],
-                                 entry_text=" | ".join(x for x in (o["ministry"], o["agency"], o["topic"]) if x),
+                part_, body_ = o["part"], o["ministry"]
+                if HEADING_BODY.match(body_.strip()):
+                    part_, body_ = f"{part_} {body_}".strip(), ""  # a heading in capitals, not a body
+                rows.append(dict(report=report, scope=scope, file_name=fn.replace(".txt", ".pdf"), part=part_,
+                                 body_bm=body_, topic_bm=o["topic"], sub_entity_bm=o["agency"],
+                                 entry_text=" | ".join(x for x in (body_, o["agency"], o["topic"]) if x),
                                  printed_page=o["page"] or "", toc_pdf_page=o["pdf_page"],
                                  text_source="ocr" if f"=== pdf page {o['pdf_page']} (ocr)" in text else "text"))
             continue

@@ -17,6 +17,8 @@ Method (declared 2026-11-06, with the taxonomy meta/audit_topic_taxonomy.csv com
   (core/entity_name.csv, from the accounts' own vote names): link_method 'name_exact_official', publishable. No other
   link is made here: a fuzzy, translated or abbreviated name, a statutory body or a company would be
   'name_matched_reviewed' and needs the owner's signature (D33), so it is left unlinked. A person is never linked.
+  The obvious candidates (the same name without 'MALAYSIA', or the body's name in another year) are listed in
+  core/link_candidates.csv, publishable=false, for the owner to sign; a signed row becomes a human_signed link.
 * gap_audit_recurrence: for each linked body and topic family, the years it was audited and how many audits; a body
   audited in a family in two or more distinct years 'recurs'. Beside it, for every state and the federal level, the
   number of audits by family and year, which names no body. An audit can carry several families, so family counts
@@ -78,7 +80,7 @@ def main():
     for r in rows(os.path.join(CORE, "entity_name.csv")):
         names[norm(r["name_bm"])].append((r["entity_id"], int(r["valid_from"] or 0), int(r["valid_to"] or 9999),
                                           r["name_bm"]))
-    recs, links, checks = [], [], []
+    recs, links, checks, cands = [], [], [], []
     for i, a in enumerate(rows(os.path.join(AN, "fact_lkan_audit_inventory.csv")), start=2):
         vol = vols.get(a["file_name"], {})
         scope = a["scope"]
@@ -104,6 +106,18 @@ def main():
                                       link_type="audit_of", link_method="name_exact_official", confidence="1",
                                       proof=f"contents page prints {a['body_bm']!r}; the entity's name in {year} is "
                                             f"{printed!r} (core/entity_name.csv)", publishable="true",
+                                      signed_off_by="", signed_off_on=""))
+                    break
+        if scope == "federal" and a["body_bm"] and year and not rec["entity_id"]:
+            # a candidate for the owner's review (D33): the same name without 'MALAYSIA', or a name the body had in
+            # another year; never published until signed
+            key = norm(re.sub(r"\s+MALAYSIA$", "", a["body_bm"].strip(), flags=re.I))
+            for nm, ents in names.items():
+                if norm(re.sub(r"\s+malaysia$", "", nm)) == key:
+                    eid, y0, y1, printed = ents[0]
+                    cands.append(dict(record_id=rid, entity_id=eid, printed_body=a["body_bm"], entity_name=printed,
+                                      entity_name_years=f"{y0}-{y1}", year=year, title_bm=title,
+                                      link_method="name_matched_reviewed", publishable="false",
                                       signed_off_by="", signed_off_on=""))
                     break
         recs.append(rec)
@@ -150,12 +164,15 @@ def main():
                            f"{g} {sum(v for (gg, _), v in cov.items() if gg == g)}" for g in sorted({g for g, _ in cov}))))
     for name, data, fields in (("fact_record.csv", recs, REC_FIELDS), ("bridge_link.csv", links, LINK_FIELDS),
                                ("gap_audit_recurrence.csv", gap, GAP_FIELDS),
-                               ("_validation_records.csv", checks, ["check", "scope", "status", "note"])):
+                               ("_validation_records.csv", checks, ["check", "scope", "status", "note"]),
+                               ("link_candidates.csv", cands, ["record_id", "entity_id", "printed_body", "entity_name",
+                                                               "entity_name_years", "year", "title_bm", "link_method",
+                                                               "publishable", "signed_off_by", "signed_off_on"])):
         with open(os.path.join(CORE, name), "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=fields, lineterminator="\n")
             w.writeheader()
             w.writerows(data)
-    print(f"records: {len(recs)} audits, {len(links)} links; gap_audit_recurrence {len(gap)} rows "
+    print(f"records: {len(recs)} audits, {len(links)} links, {len(cands)} candidates for review; gap_audit_recurrence {len(gap)} rows "
           f"({sum(1 for g in gap if g['recurs'] == 'true')} recurring)")
 
 
