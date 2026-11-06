@@ -5,7 +5,7 @@ entity,MY,E000020,Jabatan Perdana Menteri,ict,2018;2019,2,2,true,r7e71b8dfc02f;r
 entity,MY,E000020,Jabatan Perdana Menteri,land_resources,2018;2021;2023,3,4,true,r1b615b926fb9;r7e71b8dfc02f;r711657b9f7c6;r2d3497509b23
 entity,MY,E000020,Jabatan Perdana Menteri,loans_investment,2019;2020,2,2,true,r7270f9b62a95;r2fb8734cfe07
 entity,MY,E000020,Jabatan Perdana Menteri,projects,2014;2018;2019;2021;2023,5,8,true,rdbacf1c18cf2;rf18c59fe326f;r7e71b8dfc02f;r74d4e46b146b;r1f7c0f9fd37a;rda82398ebbf1;re18db713d298;r2d3497509b23
-entity,MY,E000020,Jabatan Perdana Menteri,unclassified,2014;2015;2019;2021,4,7,true,r0c9369004e75;r393f0baa9612;rdc4d99e4579f;r5a178cbff972;r730697d9850f;rfbcd3017339e;r75cf1c7db122
+entity,MY,E000020,Jabatan Perdana Menteri,unclassified,2014;2015;2019;2021;2023,5,9,true,r0c9369004e75;r393f0baa9612;rdc4d99e4579f;r5a178cbff972;r730697d9850f;rfbcd3017339e;r75cf1c7db122;r2b3caec6dbfb;rcdd1c768cd84
 entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,companies,2018,1,2,false,r6955ca8440d7;rd278ec896817
 entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,land_resources,2018,1,1,false,r6955ca8440d7
 entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,projects,2018,1,1,false,r6955ca8440d7
@@ -20,7 +20,7 @@ entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,health_educatio
 entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,loans_investment,2021,1,1,false,rff00388e3cb8
 entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,projects,2014,1,1,false,r428ef36bda15
 entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,unclassified,2018,1,1,false,re128a96eee83
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,companies,2016;2020;2021,3,3,true,r8e7332ff50f2;r751f03729dcb;re593a93ee475
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,companies,2016;2020;2021;2023,4,4,true,r8e7332ff50f2;r751f03729dcb;re593a93ee475;r42a5fbadbdd9
 entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,land_resources,2023,1,1,false,r10b031024a83
 entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,projects,2014;2016;2023,3,4,true,r4bb15a3ccb90;r8bb3538da5be;r9ae347fb3614;r10b031024a83
 entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,unclassified,2014,1,1,false,r86960c200973
@@ -74,9 +74,10 @@ entity,MY,E000052,Kementerian Belia dan Sukan,procurement,2017,1,1,false,re0a6a3
 entity,MY,E000052,Kementerian Belia dan Sukan,projects,2016;2017,2,3,true,rea0e4f19c6f2;r777a969522ac;re0a6a307a41f
 entity,MY,E000052,Kementerian Belia dan Sukan,unclassified,2017;2018;2022,3,3,true,r752233cc5500;rcf45412a0ef6;rbb819dbeeae0
 entity,MY,E000053,Kementerian Sumber Manusia,assistance,2021,1,1,false,rb48508bac42e
-entity,MY,E000053,Kementerian Sumber Manusia,companies,2019,1,1,false,re38a2a78858a
+entity,MY,E000053,Kementerian Sumber Manusia,companies,2019;2023,2,2,true,re38a2a78858a;rc75615881297
 entity,MY,E000053,Kementerian Sumber Manusia,health_education,2017,1,2,false,rb839c49035c4;rc01f892a33a2
 entity,MY,E000053,Kementerian Sumber Manusia,procurement,2017,1,1,false,rb839c49035c4
+entity,MY,E000053,Kementerian Sumber Manusia,projects,2023,1,1,false,rc75615881297
 entity,MY,E000054,Kementerian Komunikasi,assistance,2017,1,1,false,rbad9bc03f90f
 entity,MY,E000054,Kementerian Komunikasi,projects,2017;2021,2,2,true,rbad9bc03f90f;r2288a57216ae
 entity,MY,E000055,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",assistance,2016,1,2,false,re58b55fe12b0;re987cc1932ee
@@ -92,9 +93,10 @@ entity,MY,E000067,Kementerian Pendidikan Tinggi,health_education,2016;2017,2,2,t
 entity,MY,E000067,Kementerian Pendidikan Tinggi,procurement,2016;2017,2,2,true,r49704741bf43;ra88e64f5b51b
 entity,MY,E000068,Kementerian Pendidikan Tinggi,health_education,2024,1,1,false,r8dc28bf17152
 entity,MY,E000068,Kementerian Pendidikan Tinggi,procurement,2024,1,1,false,r8dc28bf17152
+entity,MY,E000068,Kementerian Pendidikan Tinggi,unclassified,2023,1,1,false,rdf10116ed741
 federal,MY,,,assets,2014:2;2017:3;2019:5;2024:1,4,11,,
 federal,MY,,,assistance,2014:6;2015:1;2016:2;2017:2;2018:6;2019:1;2021:1;2022:1;2024:1,9,21,,
-federal,MY,,,companies,2014:15;2015:5;2016:8;2017:18;2018:20;2019:19;2020:10;2021:9;2022:11;2023:1;2024:2;2025:5,12,123,,
+federal,MY,,,companies,2014:15;2015:5;2016:8;2017:18;2018:20;2019:19;2020:10;2021:9;2022:11;2023:4;2024:2;2025:5,12,126,,
 federal,MY,,,financial_management,2015:3;2017:7;2018:6;2019:1;2020:2;2021:1;2022:1;2024:2;2025:1,9,24,,
 federal,MY,,,health_education,2014:8;2015:3;2016:1;2017:10;2018:7;2019:6;2021:1;2022:2;2024:1,9,39,,
 federal,MY,,,ict,2014:2;2015:1;2017:2;2018:2;2019:5;2020:1;2021:2;2022:1;2024:1;2025:1,10,18,,
@@ -102,9 +104,9 @@ federal,MY,,,land_resources,2015:3;2016:2;2017:4;2018:4;2019:4;2020:2;2021:1;202
 federal,MY,,,loans_investment,2014:3;2016:1;2017:2;2018:3;2019:1;2020:1;2021:1;2022:2;2025:1,9,15,,
 federal,MY,,,local_government,2014:2;2017:1;2019:2;2021:1;2022:1;2023:1,6,8,,
 federal,MY,,,procurement,2014:5;2015:1;2016:2;2017:4;2018:1;2019:1;2024:3,7,17,,
-federal,MY,,,projects,2014:19;2015:10;2016:10;2017:15;2018:6;2019:16;2020:4;2021:8;2022:8;2023:5;2024:1;2025:2,12,104,,
+federal,MY,,,projects,2014:19;2015:10;2016:10;2017:15;2018:6;2019:16;2020:4;2021:8;2022:8;2023:6;2024:1;2025:2,12,105,,
 federal,MY,,,revenue,2014:3;2015:1;2017:2;2020:1,4,7,,
-federal,MY,,,unclassified,2014:17;2015:6;2016:12;2017:19;2018:20;2019:5;2020:2;2021:8;2022:6;2023:2;2025:2,11,99,,
+federal,MY,,,unclassified,2014:17;2015:6;2016:12;2017:19;2018:19;2019:5;2020:2;2021:8;2022:6;2023:6;2025:2,11,102,,
 state,MY-01,,,companies,2016:1;2017:3;2020:1;2022:1;2023:2;2025:3,6,11,,
 state,MY-01,,,health_education,2020:1,1,1,,
 state,MY-01,,,ict,2017:1;2022:1;2025:1,3,3,,
@@ -114,7 +116,8 @@ state,MY-01,,,projects,2017:1;2021:1;2022:2;2023:1,4,5,,
 state,MY-01,,,revenue,2017:2;2018:1,2,3,,
 state,MY-01,,,unclassified,2016:2;2017:2;2018:2;2020:3;2021:3;2022:3,6,15,,
 state,MY-02,,,assistance,2017:1,1,1,,
-state,MY-02,,,companies,2016:1;2017:1;2018:1;2020:3;2021:3;2022:1;2023:1,7,11,,
+state,MY-02,,,companies,2016:1;2017:1;2018:1;2020:3;2021:3;2022:4;2023:1,7,14,,
+state,MY-02,,,ict,2022:1,1,1,,
 state,MY-02,,,land_resources,2014:2;2017:1;2018:1,3,4,,
 state,MY-02,,,procurement,2014:2,1,2,,
 state,MY-02,,,projects,2014:1;2022:1,2,2,,
@@ -147,9 +150,10 @@ state,MY-05,,,land_resources,2016:1;2017:1;2021:1;2022:1;2023:1,5,5,,
 state,MY-05,,,projects,2016:1;2017:1,2,2,,
 state,MY-05,,,unclassified,2017:2;2018:1;2020:1;2022:1,4,5,,
 state,MY-06,,,assistance,2017:1,1,1,,
-state,MY-06,,,companies,2017:2;2020:3;2021:3;2022:1,4,9,,
+state,MY-06,,,companies,2017:2;2020:3;2021:3;2022:1;2025:2,5,11,,
+state,MY-06,,,ict,2025:1,1,1,,
 state,MY-06,,,land_resources,2017:2;2022:1;2023:1,3,4,,
-state,MY-06,,,projects,2017:1;2018:1;2022:1,3,3,,
+state,MY-06,,,projects,2017:1;2018:1;2022:1;2025:1,4,4,,
 state,MY-06,,,revenue,2017:1,1,1,,
 state,MY-06,,,unclassified,2020:1,1,1,,
 state,MY-07,,,companies,2014:1;2016:1;2017:2;2020:3;2021:2;2022:2;2023:1;2025:3,8,15,,
@@ -207,9 +211,11 @@ state,MY-12,,,projects,2014:2;2017:2;2018:1;2020:2;2021:1;2023:2,6,10,,
 state,MY-12,,,revenue,2016:1;2021:1,2,2,,
 state,MY-12,,,unclassified,2014:1;2016:1;2017:2;2020:2;2021:2;2022:1,6,9,,
 state,MY-13,,,assistance,2020:1;2023:1,2,2,,
-state,MY-13,,,companies,2016:1;2017:2;2022:3;2023:2,4,8,,
+state,MY-13,,,companies,2016:1;2017:2;2022:6;2023:2,4,11,,
 state,MY-13,,,financial_management,2023:1,1,1,,
+state,MY-13,,,health_education,2022:2,1,2,,
+state,MY-13,,,ict,2022:1,1,1,,
 state,MY-13,,,land_resources,2016:1;2017:2;2022:1,3,4,,
 state,MY-13,,,procurement,2020:1,1,1,,
-state,MY-13,,,projects,2016:1;2017:5;2018:2;2020:1;2022:2,5,11,,
+state,MY-13,,,projects,2016:1;2017:5;2018:2;2020:1;2022:4,5,13,,
 state,MY-13,,,unclassified,2020:2,1,2,,
