@@ -85,6 +85,16 @@ def main():
                     f"{vols.get(fn, {}).get('volume_title_bm', '')}\n")
             for n, t in pages:
                 f.write(f"=== pdf page {n} ===\n{t.rstrip()}\n")
+            if not pages:
+                # nothing found: say why it may be (a scan has no text; another word for the contents page)
+                lens, hits = [], []
+                for n in range(1, 21):
+                    t = page(pdf, n)
+                    lens.append(f"{n}:{len(t.strip())}")
+                    hits += [f"p{n}: {ln.strip()[:100]}" for ln in t.splitlines() if re.search(r"kandungan|contents|isi\b",
+                                                                                                ln, re.I)]
+                f.write("# no contents page found\n# text characters by pdf page: " + " ".join(lens) + "\n")
+                f.write("".join(f"# {h}\n" for h in hits[:20]))
         done += 1
         print(f"{fn}: {len(pages)} contents pages")
     print(f"{done} volumes written to {os.path.relpath(OUT, SRC)}")
