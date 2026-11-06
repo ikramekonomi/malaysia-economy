@@ -19,7 +19,7 @@ con.sql("SHOW TABLES").show()
 
 **R:** `library(duckdb); con <- dbConnect(duckdb(), "pkkp.duckdb", read_only=TRUE)`
 
-**No DuckDB?** The CSVs are the canonical layer — open any of them directly; the .duckdb file is just the same data pre-loaded with convenience views. Rebuild it anytime: `python3 pipeline/build_duckdb_multi.py`.
+**No DuckDB?** The CSVs are the canonical layer — open any of them directly; the .duckdb file is just the same data pre-loaded with convenience views. Rebuild it anytime: `python3 sources/pkkp/pipeline/build_duckdb.py`.
 
 ## Things to know before querying
 

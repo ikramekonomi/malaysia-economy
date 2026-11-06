@@ -14,6 +14,15 @@ tools. The public site (`site/`) is one application on top of it.
 > **Every number must survive a hostile reader.** If a figure cannot be traced to its source page
 > and its checks, it does not leave the warehouse.
 
+### Start here
+
+| You are | Go to |
+|---|---|
+| **a policy advocate or analyst** | the site: *About*, *Explore data*, *Policy gaps* (`site/`, published by `.github/workflows/site.yml`; run it locally with the two commands in [`site/README.md`](site/README.md)) |
+| **taking over the warehouse** | [`HANDOVER.md`](HANDOVER.md): what is built, what is open, how to keep it running |
+| **adding or fixing data** | [`CLAUDE.md`](CLAUDE.md) (the rules), then [`docs/DATA_MODEL.md`](docs/DATA_MODEL.md) |
+| **querying it** | [`docs/ANALYST_GUIDE.md`](docs/ANALYST_GUIDE.md), then the *Quick start* below |
+
 ---
 
 ## What is inside
@@ -29,12 +38,13 @@ tools. The public site (`site/`) is one application on top of it.
 | **bnm** | Monthly Highlights & Statistics (fiscal, debt, monetary, banking, external) | 1996–2026 | 8,106 | 279 |
 | **dosm** | 121 datasets (DOSM and data.gov.my): national accounts, population by state and district, HIES, LFS, CPI, trade, GFS; hospital beds, health staff, schools, teachers, deaths, life expectancy, water, crime. **Refreshed daily** | 1947–2026 | 957,708 | 1,473 |
 
-**Totals:** about 1.19 million source rows and 32,609 validation checks. **49 catalogued source
-anomalies:** places where a publisher's own figures do not add up, kept exactly as printed with
-proof.
+**Totals (2026-11-06):** 1.45 million rows in 771 source tables, 223,090 conformed observations, 52,100
+validation checks, 470 archived source files (13.4 GB), and **75 catalogued source anomalies**: places where a
+publisher's own figures do not add up, kept exactly as printed with proof. The site's About page counts these from the
+repository on every build (`apps/site/build_site_data.py`).
 
 **What we hold and what we still need** is one checklist,
-[`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 107 series, 25 held. Each has
+[`docs/registry/series_seed.csv`](docs/registry/series_seed.csv): 115 series, 46 held. Each has
 its route, licence and priority. The plan, theme by theme, is [`docs/SOURCES.md`](docs/SOURCES.md).
 
 ### Nine themes
@@ -82,7 +92,7 @@ No single safeguard is enough. Each layer below catches what the one before it c
 | Layer | What it checks | When | Can it block? |
 |---|---|---|---|
 | **1. The source's own arithmetic** | Every printed total against the sum of its printed parts. A publisher's misprint becomes a `SOURCE_ANOMALY` with proof, never a silent correction | at extraction | yes |
-| **2. CI** (`qa/run_offline_suite.py`) | 53 scripts on every pull request. A PR is blocked if:<br>• a check script fails;<br>• a rebuild changes a committed file;<br>• a new `FAIL` row appears that isn't in `qa/known_fails.csv`;<br>• a stored value differs from its printed value;<br>• an agent tool gives a wrong answer to one of 70 eval questions, or falls for a trap (incomparable figures, small-area rankings, missing documents, instructions hidden in a document) | every PR, automatically | **yes, always** |
+| **2. CI** (`qa/run_offline_suite.py`) | 65 scripts on every pull request. A PR is blocked if:<br>• a check script fails;<br>• a rebuild changes a committed file;<br>• a new `FAIL` row appears that isn't in `qa/known_fails.csv`;<br>• a stored value differs from its printed value;<br>• an agent tool gives a wrong answer to one of 270 eval questions, or falls for a trap (incomparable figures, small-area rankings, missing documents, instructions hidden in a document) | every PR, automatically | **yes, always** |
 | **3. Independent verifier agent** | A separate agent, blind to the extraction code, re-derives figures from the original and tries to break the tools | every new or changed source, and a monthly random audit (the 3rd of each month; reports in `qa/audits/`) | findings become fixes and new eval questions |
 | **4. Cross-source reconciliation** | The same concept from independent publishers (e.g. PKKP vs BNM vs MOF) | every build | divergences are published, not hidden |
 | **5. Human spot-check** | A person checks a random sample against the archived page (`qa/spot_check/`) | before anything IKRAM publishes | **yes: no publication without it** |
@@ -109,7 +119,7 @@ above.
 
 ```bash
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py                     # sources/pkkp/pkkp.duckdb (PKKP only)
+python3 sources/pkkp/pipeline/build_duckdb.py                     # sources/pkkp/pkkp.duckdb (PKKP only)
 python3 curated/pipeline/build_warehouse_duckdb.py   # curated/warehouse.duckdb: every source + core + meta
 duckdb curated/warehouse.duckdb
 ```
@@ -152,16 +162,17 @@ t.get_gap_view("gap_need_vs_money", year="2022")    # need vs state-government m
 
 | Phase | What | State |
 |---|---|---|
-| 0 Foundation | registry as data, CI, archive, vintage logs, governance | built; archive filling (PDFs by sha256) |
-| 1 First slice | state-level need vs money, end to end, with agent tools and evals | **built** (`core/README.md`); awaiting a human spot-check before publication |
-| 2 Broaden statistics | all DOSM/BNM/MOF series, survey report tables, health data | **in progress**: health, education and services by state; districts, parlimen and DUN (never ranked); income distributions |
-| 3 Money trail | entities, transfers, placing federal spending by state | planned |
-| 4 Records and links | audit findings, PAC, procurement | planned |
+| 0 Foundation | registry as data, CI, archive, vintage logs, governance | **built** |
+| 1 First slice | state-level need vs money, end to end, with agent tools and evals | **built**; awaiting a human spot-check before publication |
+| 2 Broaden statistics | DOSM, BNM and MOF series, survey report tables, health, education and services, small areas | **built** (125 indicators, 223,090 observations) |
+| 3 Money trail | entities, federal→state transfers, placing federal spending by state, development projects | **built**; federal spending by state withheld (under 4% placeable) |
+| 4 Records and links | audit findings inventory, audit-to-ministry links, recurrence | **draft**: failed blind verification 2026-11-06; fix list in `HANDOVER.md` |
+| 5 Complete | gap views, the site | 9 gap views built and blind-verified; new site 2026-11-06 |
 
 **Known caveats:**
 - PKKP FY2015 is an image-only scan, so its leaf amounts are OCR-provisional.
 - DOSM small-area estimates carry no published sampling error.
-- Federal spending cannot yet be placed by state: only about 1% can be today, so that column is
+- Federal spending cannot yet be placed by state: under 4% can be today, so that column is
   withheld.
 
 Each source's README lists its own caveats and anomaly register.

@@ -1,4 +1,4 @@
-# Rebuildable caches (regenerate: python3 pipeline/build_duckdb.py)
+# Rebuildable caches (regenerate: python3 sources/pkkp/pipeline/build_duckdb.py)
 *.duckdb
 # Python
 __pycache__/
@@ -12,3 +12,7 @@ sources/*/raw/
 # State-source text extraction cache (rebuildable)
 sources/*/.textcache/
 sources/*/pipeline/__pycache__/
+
+# The site's data: rebuilt from core/ (python3 apps/site/build_site_data.py), never committed
+site/data/
+site/assets/*.tmp

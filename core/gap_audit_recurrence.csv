@@ -1,234 +1,253 @@
-level,geo_code,entity_id,entity_name_bm,topic_family,years,n_years,n_audits,recurs,record_ids
-entity,MY,E000020,Jabatan Perdana Menteri,assistance,2018,1,1,false,r8c78a4001aa5
-entity,MY,E000020,Jabatan Perdana Menteri,companies,2018;2019;2020;2021,4,7,true,rcc89c2cc2849;rf18c59fe326f;r1b615b926fb9;r7270f9b62a95;r2fb8734cfe07;r648c70c757e5;r711657b9f7c6
-entity,MY,E000020,Jabatan Perdana Menteri,health_education,2018,1,2,false,rcc89c2cc2849;r8c78a4001aa5
-entity,MY,E000020,Jabatan Perdana Menteri,ict,2018;2019,2,2,true,r7e71b8dfc02f;r235dd9c6e68e
-entity,MY,E000020,Jabatan Perdana Menteri,land_resources,2018;2021;2023,3,4,true,r1b615b926fb9;r7e71b8dfc02f;r711657b9f7c6;r2d3497509b23
-entity,MY,E000020,Jabatan Perdana Menteri,loans_investment,2019;2020,2,2,true,r7270f9b62a95;r2fb8734cfe07
-entity,MY,E000020,Jabatan Perdana Menteri,projects,2014;2018;2019;2021;2023,5,9,true,rdbacf1c18cf2;rf18c59fe326f;rf677113b6a15;r7e71b8dfc02f;r74d4e46b146b;r1f7c0f9fd37a;rda82398ebbf1;re18db713d298;r2d3497509b23
-entity,MY,E000020,Jabatan Perdana Menteri,unclassified,2014;2015;2019;2021;2023,5,9,true,r0c9369004e75;r393f0baa9612;rdc4d99e4579f;r5a178cbff972;r730697d9850f;rfbcd3017339e;r75cf1c7db122;r2b3caec6dbfb;rcdd1c768cd84
-entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,companies,2018,1,2,false,r6955ca8440d7;rd278ec896817
-entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,land_resources,2018,1,1,false,r6955ca8440d7
-entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,projects,2018,1,1,false,r6955ca8440d7
-entity,MY,E000030,Kementerian Ekonomi,land_resources,2023,1,1,false,r51fb7f887dfb
-entity,MY,E000030,Kementerian Ekonomi,projects,2023,1,1,false,r51fb7f887dfb
-entity,MY,E000031,Kementerian Perladangan dan Komoditi,assistance,2018,1,1,false,r7691c16043d8
-entity,MY,E000031,Kementerian Perladangan dan Komoditi,companies,2017;2018,2,2,true,rb975f8174bf3;r7691c16043d8
-entity,MY,E000031,Kementerian Perladangan dan Komoditi,projects,2017,1,1,false,rb975f8174bf3
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,assistance,2014;2018,2,2,true,r54473b4936c4;r73b7d390a73c
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,companies,2016;2021,2,2,true,r3471c36d58ec;rff00388e3cb8
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,health_education,2017,1,1,false,r38646b8a4a93
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,loans_investment,2021,1,1,false,rff00388e3cb8
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,projects,2014;2018,2,2,true,r428ef36bda15;rbdd06b7ce001
-entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,unclassified,2018,1,1,false,re128a96eee83
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,companies,2016;2020;2021;2023,4,4,true,r8e7332ff50f2;r751f03729dcb;re593a93ee475;r42a5fbadbdd9
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,land_resources,2023,1,1,false,r10b031024a83
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,projects,2014;2016;2023,3,4,true,r4bb15a3ccb90;r8bb3538da5be;r9ae347fb3614;r10b031024a83
-entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,unclassified,2014,1,1,false,r86960c200973
-entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,land_resources,2018,1,1,false,r71e38b0e7f79
-entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,procurement,2014,1,1,false,r7ec802069e12
-entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,projects,2014;2018;2020,3,3,true,r53ed4f2d2beb;r71e38b0e7f79;rb1a25bb5a4e1
-entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,unclassified,2021,1,1,false,r458556659ae5
-entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",assets,2019,1,1,false,r76a3fbd5566b
-entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,assistance,2024,1,1,false,r6b204f7d26f3
-entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,financial_management,2024,1,1,false,r6b204f7d26f3
-entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,loans_investment,2016,1,1,false,r1e39589aaf61
-entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,projects,2016,1,1,false,r1e39589aaf61
-entity,MY,E000038,Kementerian Pembangunan Usahawan dan Koperasi,companies,2018,1,1,false,r6ca4a4e76711
-entity,MY,E000038,Kementerian Pembangunan Usahawan dan Koperasi,loans_investment,2022,1,1,false,r6e223842e5ed
-entity,MY,E000039,Kementerian Kerja Raya,companies,2019;2022,2,2,true,r50fa443d1e3d;r5512a4d2a3e5
-entity,MY,E000039,Kementerian Kerja Raya,procurement,2014,1,1,false,r42edbeb29e71
-entity,MY,E000039,Kementerian Kerja Raya,projects,2014;2018;2019;2022,4,8,true,r3d6a2b95c23a;r792b5f3622ae;rbf12dff94ee8;rdab40107c11f;r50fa443d1e3d;r0f9181e482bc;r7f4319265960;r5512a4d2a3e5
-entity,MY,E000040,Kementerian Pengangkutan,assets,2017,1,2,false,r8d34fe1577ec;r6f216bcee179
-entity,MY,E000040,Kementerian Pengangkutan,companies,2016;2020;2022,3,3,true,r3a02ea1abd77;r287d89dacd0b;r747ed43d8fff
-entity,MY,E000040,Kementerian Pengangkutan,financial_management,2021,1,1,false,r6c99f0997782
-entity,MY,E000040,Kementerian Pengangkutan,ict,2017;2021,2,2,true,r8d34fe1577ec;r6c99f0997782
-entity,MY,E000040,Kementerian Pengangkutan,land_resources,2020;2022,2,2,true,r287d89dacd0b;r747ed43d8fff
-entity,MY,E000040,Kementerian Pengangkutan,local_government,2022,1,1,false,r747ed43d8fff
-entity,MY,E000040,Kementerian Pengangkutan,procurement,2016,1,1,false,r3a02ea1abd77
-entity,MY,E000040,Kementerian Pengangkutan,projects,2016;2017;2020;2021,4,5,true,r041cba6db732;r8d34fe1577ec;r6f216bcee179;r957a473e66f7;r6c99f0997782
-entity,MY,E000040,Kementerian Pengangkutan,revenue,2017,1,1,false,r8d34fe1577ec
-entity,MY,E000040,Kementerian Pengangkutan,unclassified,2014;2017,2,2,true,r784918b06ab9;r1a8aeb874502
-entity,MY,E000041,"Kementerian Tenaga, Teknologi Hijau dan Air",unclassified,2016,1,1,false,r5178bb3422ac
-entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",loans_investment,2018,1,1,false,r351b0cb1e4b8
-entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",projects,2018,1,1,false,r351b0cb1e4b8
-entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",unclassified,2018,1,1,false,r5e741b20f50c
-entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",unclassified,2019;2021,2,2,true,rf50bbfb1910b;rbeb405d54a6a
-entity,MY,E000044,Kementerian Wilayah Persekutuan,companies,2017;2021,2,4,true,r0edd8587347e;r8d9778a5661b;rbe1303488743;rf6d4daa67c3e
-entity,MY,E000044,Kementerian Wilayah Persekutuan,financial_management,2017,1,1,false,rb41b3fd1dd63
-entity,MY,E000044,Kementerian Wilayah Persekutuan,land_resources,2015;2017,2,2,true,rf221af52726e;rb41b3fd1dd63
-entity,MY,E000044,Kementerian Wilayah Persekutuan,local_government,2014;2017;2019;2021,4,5,true,r0a52c352135f;rb41b3fd1dd63;rd051fe0a3c1f;r8f5695899974;r9d93b4a2b175
-entity,MY,E000044,Kementerian Wilayah Persekutuan,projects,2014;2015;2017;2019;2021,5,5,true,r0a52c352135f;rf221af52726e;rb41b3fd1dd63;rd051fe0a3c1f;rf6d4daa67c3e
-entity,MY,E000044,Kementerian Wilayah Persekutuan,unclassified,2016,1,1,false,rfe10c7bb2a37
-entity,MY,E000045,Kementerian Alam Sekitar dan Air,companies,2020,1,1,false,rc0cb774f1813
-entity,MY,E000045,Kementerian Alam Sekitar dan Air,land_resources,2020,1,1,false,rc0cb774f1813
-entity,MY,E000045,Kementerian Alam Sekitar dan Air,unclassified,2020,1,1,false,r63678905053e
-entity,MY,E000048,Kementerian Pendidikan,health_education,2021;2022,2,2,true,r663061b76360;r2099f2668ac1
-entity,MY,E000048,Kementerian Pendidikan,projects,2021;2022,2,2,true,r663061b76360;r2099f2668ac1
-entity,MY,E000048,Kementerian Pendidikan,unclassified,2015,1,1,false,ra848db9d2571
-entity,MY,E000049,Kementerian Kesihatan,financial_management,2022,1,1,false,re6798fa84054
-entity,MY,E000049,Kementerian Kesihatan,health_education,2019,1,1,false,r3e609544ea4d
-entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,assistance,2018,1,1,false,r86414cf1cbb3
-entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,companies,2019,1,2,false,r072e21ea89e1;r822543a89bea
-entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,local_government,2014,1,1,false,r761b50384444
-entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,projects,2014,1,1,false,r761b50384444
-entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,unclassified,2016;2018;2021;2023,4,5,true,r4a1ce1d2fe60;r5e78acdfb5d4;r73393c41afb5;r4b29e86dd043;rd58c0a668fb8
-entity,MY,E000052,Kementerian Belia dan Sukan,companies,2017,1,1,false,re0a6a307a41f
-entity,MY,E000052,Kementerian Belia dan Sukan,procurement,2017,1,1,false,re0a6a307a41f
-entity,MY,E000052,Kementerian Belia dan Sukan,projects,2016;2017,2,3,true,rea0e4f19c6f2;r777a969522ac;re0a6a307a41f
-entity,MY,E000052,Kementerian Belia dan Sukan,unclassified,2017;2018;2022,3,3,true,r752233cc5500;rcf45412a0ef6;rbb819dbeeae0
-entity,MY,E000053,Kementerian Sumber Manusia,assistance,2021,1,1,false,rb48508bac42e
-entity,MY,E000053,Kementerian Sumber Manusia,companies,2019;2023,2,2,true,re38a2a78858a;rc75615881297
-entity,MY,E000053,Kementerian Sumber Manusia,health_education,2017,1,2,false,rb839c49035c4;rc01f892a33a2
-entity,MY,E000053,Kementerian Sumber Manusia,procurement,2017,1,1,false,rb839c49035c4
-entity,MY,E000053,Kementerian Sumber Manusia,projects,2023,1,1,false,rc75615881297
-entity,MY,E000054,Kementerian Komunikasi,assistance,2017,1,1,false,rbad9bc03f90f
-entity,MY,E000054,Kementerian Komunikasi,projects,2017;2021,2,2,true,rbad9bc03f90f;r2288a57216ae
-entity,MY,E000055,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",assistance,2016,1,2,false,re58b55fe12b0;re987cc1932ee
-entity,MY,E000055,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",projects,2016,1,1,false,re58b55fe12b0
-entity,MY,E000058,Kementerian Pertahanan,assets,2024,1,1,false,rb40ff7b4d3db
-entity,MY,E000058,Kementerian Pertahanan,projects,2014;2018,2,3,true,r18e1460bab2f;r85a00599dd5d;r51da08716066
-entity,MY,E000058,Kementerian Pertahanan,unclassified,2018;2020;2023,3,3,true,rcb2123f03d72;r8dd0ff4b59d6;rb658306ee505
-entity,MY,E000059,Kementerian Dalam Negeri,financial_management,2019,1,1,false,rf591a67c7f43
-entity,MY,E000059,Kementerian Dalam Negeri,ict,2015,1,1,false,r8b4f8109a9b0
-entity,MY,E000059,Kementerian Dalam Negeri,projects,2020,1,1,false,r5cbdbe03bf41
-entity,MY,E000059,Kementerian Dalam Negeri,unclassified,2014;2016;2017;2022,4,5,true,r6c2bf63c7323;rc6550ec381d7;r7edf26226c1d;r74469cf1836a;r71c3ee254520
-entity,MY,E000067,Kementerian Pendidikan Tinggi,health_education,2016;2017,2,2,true,r49704741bf43;ra88e64f5b51b
-entity,MY,E000067,Kementerian Pendidikan Tinggi,procurement,2016;2017,2,2,true,r49704741bf43;ra88e64f5b51b
-entity,MY,E000068,Kementerian Pendidikan Tinggi,health_education,2024,1,1,false,r8dc28bf17152
-entity,MY,E000068,Kementerian Pendidikan Tinggi,procurement,2024,1,1,false,r8dc28bf17152
-entity,MY,E000068,Kementerian Pendidikan Tinggi,unclassified,2023,1,1,false,rdf10116ed741
-federal,MY,,,assets,2014:2;2017:3;2018:1;2019:5;2024:6,5,17,,
-federal,MY,,,assistance,2014:6;2015:1;2016:2;2017:2;2018:9;2019:1;2021:1;2022:1;2024:1,9,24,,
-federal,MY,,,companies,2014:17;2015:5;2016:8;2017:18;2018:21;2019:19;2020:10;2021:9;2022:11;2023:4;2024:2;2025:5,12,129,,
-federal,MY,,,financial_management,2015:3;2017:7;2018:8;2019:1;2020:2;2021:1;2022:1;2024:2;2025:1,9,26,,
-federal,MY,,,health_education,2014:9;2015:3;2016:1;2017:10;2018:14;2019:6;2021:1;2022:2;2024:1,9,47,,
-federal,MY,,,ict,2014:2;2015:1;2017:2;2018:2;2019:5;2020:1;2021:2;2022:1;2025:1,9,17,,
-federal,MY,,,land_resources,2015:3;2016:2;2017:4;2018:5;2019:4;2020:2;2021:1;2022:2;2023:5;2024:3,10,31,,
-federal,MY,,,loans_investment,2014:3;2016:1;2017:2;2018:5;2019:1;2020:1;2021:1;2022:2;2025:1,9,17,,
-federal,MY,,,local_government,2014:2;2017:1;2019:2;2021:1;2022:1;2023:1,6,8,,
-federal,MY,,,procurement,2014:14;2015:1;2016:2;2017:4;2018:1;2019:1;2024:3,7,26,,
-federal,MY,,,projects,2014:19;2015:10;2016:10;2017:15;2018:14;2019:16;2020:4;2021:8;2022:8;2023:6;2024:5;2025:2,12,117,,
-federal,MY,,,revenue,2014:3;2015:1;2017:2;2020:1;2024:2,5,9,,
-federal,MY,,,unclassified,2014:18;2015:6;2016:12;2017:19;2018:21;2019:5;2020:2;2021:8;2022:6;2023:6;2024:8;2025:2,12,113,,
-state,MY-01,,,companies,2016:1;2017:3;2018:2;2019:1;2020:1;2022:1;2023:2;2025:2,8,13,,
-state,MY-01,,,health_education,2020:1,1,1,,
-state,MY-01,,,ict,2017:1;2022:1;2025:1,3,3,,
-state,MY-01,,,land_resources,2017:1,1,1,,
-state,MY-01,,,local_government,2019:1;2022:1,2,2,,
-state,MY-01,,,procurement,2016:2;2017:2;2019:1,3,5,,
-state,MY-01,,,projects,2017:1;2018:2;2019:1;2021:1;2022:2;2023:1,6,8,,
-state,MY-01,,,revenue,2017:2;2018:1,2,3,,
-state,MY-01,,,unclassified,2016:2;2017:2;2018:4;2019:2;2020:3;2021:1;2022:2,7,16,,
-state,MY-02,,,assets,2019:1,1,1,,
-state,MY-02,,,assistance,2017:1,1,1,,
-state,MY-02,,,companies,2016:1;2017:1;2018:2;2019:2;2020:1;2021:1;2022:3;2023:1,8,12,,
-state,MY-02,,,ict,2022:1,1,1,,
-state,MY-02,,,land_resources,2014:2;2017:1;2018:1,3,4,,
-state,MY-02,,,procurement,2014:2,1,2,,
-state,MY-02,,,projects,2014:1;2019:1;2022:1,3,3,,
-state,MY-02,,,revenue,2017:2,1,2,,
-state,MY-02,,,unclassified,2014:1;2016:2;2018:3;2019:2;2020:1;2021:1,6,10,,
-state,MY-03,,,assistance,2018:1;2021:2,2,3,,
-state,MY-03,,,companies,2016:1;2017:2;2018:2;2019:1;2020:3;2021:1;2022:2;2023:1;2025:1,9,14,,
-state,MY-03,,,financial_management,2021:1,1,1,,
-state,MY-03,,,health_education,2017:1,1,1,,
-state,MY-03,,,ict,2017:1;2022:1;2025:1,3,3,,
-state,MY-03,,,land_resources,2016:1;2017:2;2018:1;2019:1;2021:3;2025:1,6,9,,
-state,MY-03,,,loans_investment,2025:1,1,1,,
-state,MY-03,,,local_government,2021:1;2025:1,2,2,,
-state,MY-03,,,projects,2017:4;2018:1;2019:1;2021:3;2025:1,5,10,,
-state,MY-03,,,revenue,2018:1;2021:2,2,3,,
-state,MY-03,,,unclassified,2017:2;2018:1;2022:1,3,4,,
-state,MY-04,,,assistance,2021:1,1,1,,
-state,MY-04,,,companies,2016:1;2017:3;2018:3;2019:2;2021:2;2023:1;2025:1,7,13,,
-state,MY-04,,,financial_management,2016:1;2021:2,2,3,,
-state,MY-04,,,health_education,2017:1;2018:1,2,2,,
-state,MY-04,,,ict,2019:1;2025:1,2,2,,
-state,MY-04,,,land_resources,2016:1;2017:1;2020:1;2021:1,4,4,,
-state,MY-04,,,loans_investment,2025:1,1,1,,
-state,MY-04,,,local_government,2022:1,1,1,,
-state,MY-04,,,projects,2019:1,1,1,,
-state,MY-04,,,unclassified,2018:1;2019:2;2020:3;2021:1;2023:1,5,8,,
-state,MY-05,,,assistance,2016:1;2019:1,2,2,,
-state,MY-05,,,companies,2016:2;2017:2;2018:2;2019:1;2020:1;2021:3;2022:4,7,15,,
-state,MY-05,,,ict,2016:1;2022:1,2,2,,
-state,MY-05,,,land_resources,2016:1;2017:1;2021:1;2022:2;2023:1,5,6,,
-state,MY-05,,,loans_investment,2019:1,1,1,,
-state,MY-05,,,projects,2016:1;2017:1;2018:2;2019:1,4,5,,
-state,MY-05,,,unclassified,2017:2;2018:2;2020:1;2022:1,4,6,,
-state,MY-06,,,assistance,2017:1,1,1,,
-state,MY-06,,,companies,2016:1;2017:2;2018:2;2019:2;2020:1;2021:3;2022:1;2025:1,8,13,,
-state,MY-06,,,health_education,2019:1,1,1,,
-state,MY-06,,,ict,2019:1;2025:1,2,2,,
-state,MY-06,,,land_resources,2016:1;2017:2;2019:1;2022:1;2023:1,5,6,,
-state,MY-06,,,projects,2017:1;2018:2;2019:1;2022:1;2025:1,5,6,,
-state,MY-06,,,revenue,2016:1;2017:1,2,2,,
-state,MY-06,,,unclassified,2018:1;2019:1;2020:1,3,3,,
-state,MY-07,,,assistance,2018:3,1,3,,
-state,MY-07,,,companies,2014:1;2016:1;2017:2;2018:2;2019:1;2020:3;2022:1;2023:1;2025:1,9,13,,
-state,MY-07,,,financial_management,2017:1,1,1,,
-state,MY-07,,,ict,2022:1,1,1,,
-state,MY-07,,,land_resources,2014:1,1,1,,
-state,MY-07,,,loans_investment,2018:1,1,1,,
-state,MY-07,,,procurement,2014:1,1,1,,
-state,MY-07,,,projects,2014:1;2018:1;2019:1;2021:1,4,4,,
-state,MY-07,,,revenue,2017:1,1,1,,
-state,MY-07,,,unclassified,2016:1;2017:2;2019:1;2021:1;2025:1,5,6,,
-state,MY-08,,,assistance,2017:1;2019:1,2,2,,
-state,MY-08,,,companies,2014:1;2016:1;2017:2;2018:2;2019:2;2021:1;2022:2;2025:2,8,13,,
-state,MY-08,,,health_education,2021:1,1,1,,
-state,MY-08,,,ict,2025:1,1,1,,
-state,MY-08,,,land_resources,2014:1;2019:1;2022:1;2025:1,4,4,,
-state,MY-08,,,loans_investment,2017:1,1,1,,
-state,MY-08,,,local_government,2018:1;2021:1;2022:1,3,3,,
-state,MY-08,,,procurement,2014:2;2017:1,2,3,,
-state,MY-08,,,projects,2014:3;2017:1;2018:3;2021:1;2022:3;2023:1,6,12,,
-state,MY-08,,,unclassified,2018:1;2020:2;2023:1,3,4,,
-state,MY-09,,,companies,2014:1;2019:1;2020:1;2021:1;2025:1,5,5,,
-state,MY-09,,,ict,2025:1,1,1,,
-state,MY-09,,,land_resources,2016:1;2021:1;2025:1,3,3,,
-state,MY-09,,,procurement,2014:1,1,1,,
-state,MY-09,,,projects,2018:1;2020:1;2023:1,3,3,,
-state,MY-09,,,unclassified,2014:1;2017:1;2018:1;2019:2;2022:1,5,6,,
-state,MY-10,,,assistance,2019:2,1,2,,
-state,MY-10,,,companies,2017:3;2018:3;2019:1;2020:1;2021:1;2022:4;2023:3,7,16,,
-state,MY-10,,,ict,2017:1;2022:1,2,2,,
-state,MY-10,,,land_resources,2021:1,1,1,,
-state,MY-10,,,procurement,2016:2;2017:1,2,3,,
-state,MY-10,,,projects,2017:1;2018:3;2020:1;2021:1;2022:1,5,7,,
-state,MY-10,,,revenue,2019:1;2020:1,2,2,,
-state,MY-10,,,unclassified,2017:4;2018:2;2019:1;2022:1,4,8,,
-state,MY-11,,,assistance,2016:3;2018:1;2021:2,3,6,,
-state,MY-11,,,companies,2016:2;2017:3;2018:2;2019:2;2021:2;2022:3;2023:1;2025:3,8,18,,
-state,MY-11,,,financial_management,2021:2,1,2,,
-state,MY-11,,,health_education,2021:1,1,1,,
-state,MY-11,,,ict,2025:2,1,2,,
-state,MY-11,,,land_resources,2016:1;2017:1;2021:1;2025:1,4,4,,
-state,MY-11,,,loans_investment,2019:1;2022:2,2,3,,
-state,MY-11,,,local_government,2022:1,1,1,,
-state,MY-11,,,procurement,2016:1,1,1,,
-state,MY-11,,,projects,2019:2;2020:2;2022:3,3,7,,
-state,MY-11,,,revenue,2017:1;2022:1,2,2,,
-state,MY-11,,,unclassified,2017:1;2018:3;2021:1,3,5,,
-state,MY-12,,,assets,2019:1,1,1,,
-state,MY-12,,,assistance,2016:1;2019:1;2021:1;2023:1,4,4,,
-state,MY-12,,,companies,2014:2;2017:2;2018:3;2019:3;2020:1;2021:2;2022:2;2023:2;2025:2,9,19,,
-state,MY-12,,,financial_management,2021:1,1,1,,
-state,MY-12,,,health_education,2014:1;2017:1;2018:1;2019:1,4,4,,
-state,MY-12,,,ict,2017:1;2018:1;2025:1,3,3,,
-state,MY-12,,,land_resources,2014:3;2019:1;2021:1;2022:5;2023:1,5,11,,
-state,MY-12,,,loans_investment,2018:1,1,1,,
-state,MY-12,,,local_government,2014:1,1,1,,
-state,MY-12,,,procurement,2014:2;2017:1,2,3,,
-state,MY-12,,,projects,2014:2;2017:2;2018:2;2019:2;2020:2;2021:1;2023:2,7,13,,
-state,MY-12,,,revenue,2016:1;2021:1,2,2,,
-state,MY-12,,,unclassified,2014:1;2016:1;2017:2;2018:1;2019:1;2020:1;2021:1,7,8,,
-state,MY-13,,,assistance,2020:1;2023:1,2,2,,
-state,MY-13,,,companies,2016:1;2017:2;2018:3;2019:2;2022:4;2023:2,6,14,,
-state,MY-13,,,financial_management,2023:1,1,1,,
-state,MY-13,,,health_education,2018:1;2022:2,2,3,,
-state,MY-13,,,ict,2022:1,1,1,,
-state,MY-13,,,land_resources,2016:1;2017:2;2018:3;2022:1,4,7,,
-state,MY-13,,,procurement,2020:1,1,1,,
-state,MY-13,,,projects,2016:1;2017:5;2018:6;2019:4;2020:1;2022:5,6,22,,
+level,geo_code,entity_id,entity_name_bm,topic_family,years,n_years,n_audits,recurs,record_ids,verification
+entity,MY,E000020,Jabatan Perdana Menteri,assistance,2018,1,1,false,r8c78a4001aa5,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000020,Jabatan Perdana Menteri,companies,2018;2019;2020;2021,4,7,true,rcc89c2cc2849;rf18c59fe326f;r1b615b926fb9;r7270f9b62a95;r2fb8734cfe07;r648c70c757e5;r711657b9f7c6,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000020,Jabatan Perdana Menteri,health_education,2018,1,2,false,rcc89c2cc2849;r8c78a4001aa5,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000020,Jabatan Perdana Menteri,ict,2018;2019,2,2,true,r7e71b8dfc02f;r235dd9c6e68e,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000020,Jabatan Perdana Menteri,land_resources,2018;2021;2023,3,4,true,r1b615b926fb9;r7e71b8dfc02f;r711657b9f7c6;r2d3497509b23,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000020,Jabatan Perdana Menteri,loans_investment,2019;2020,2,2,true,r7270f9b62a95;r2fb8734cfe07,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000020,Jabatan Perdana Menteri,projects,2014;2018;2019;2021;2023,5,9,true,rdbacf1c18cf2;rf18c59fe326f;rf677113b6a15;r7e71b8dfc02f;r74d4e46b146b;r1f7c0f9fd37a;rda82398ebbf1;re18db713d298;r2d3497509b23,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000020,Jabatan Perdana Menteri,unclassified,2014;2015;2019;2021;2023,5,9,true,r0c9369004e75;r393f0baa9612;rdc4d99e4579f;r5a178cbff972;r730697d9850f;rfbcd3017339e;r75cf1c7db122;r2b3caec6dbfb;rcdd1c768cd84,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,companies,2018,1,2,false,r6955ca8440d7;rd278ec896817,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,land_resources,2018,1,1,false,r6955ca8440d7,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000029,Kementerian Hal Ehwal Ekonomi,projects,2018,1,1,false,r6955ca8440d7,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000030,Kementerian Ekonomi,land_resources,2023,1,1,false,r51fb7f887dfb,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000030,Kementerian Ekonomi,projects,2023,1,1,false,r51fb7f887dfb,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000031,Kementerian Perladangan dan Komoditi,assistance,2018,1,1,false,r7691c16043d8,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000031,Kementerian Perladangan dan Komoditi,companies,2017;2018;2022,3,3,true,rb975f8174bf3;r7691c16043d8;rb85160d42a3d,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000031,Kementerian Perladangan dan Komoditi,projects,2017;2022,2,2,true,rb975f8174bf3;rb85160d42a3d,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,assistance,2014;2018,2,2,true,r54473b4936c4;r73b7d390a73c,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,companies,2016;2019;2021,3,4,true,r3471c36d58ec;r64ff650cd9d7;r801a271faa99;rff00388e3cb8,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,health_education,2017,1,1,false,r38646b8a4a93,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,loans_investment,2021,1,1,false,rff00388e3cb8,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,projects,2014;2018;2019,3,3,true,r428ef36bda15;rbdd06b7ce001;r801a271faa99,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000032,Kementerian Pertanian dan Keterjaminan Makanan,unclassified,2018;2022,2,3,true,re128a96eee83;r5f5e9d6f4d5f;rb1d319bd4599,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,assistance,2022,1,1,false,r50b94e553fc0,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,companies,2016;2017;2020;2021;2023,5,5,true,r8e7332ff50f2;rc7134fe27271;r751f03729dcb;re593a93ee475;r42a5fbadbdd9,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,land_resources,2017;2022;2023,3,3,true,r4d62674aefd5;rad612f9dba93;r10b031024a83,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,projects,2014;2016;2017;2022;2023,5,7,true,r4bb15a3ccb90;r8bb3538da5be;r9ae347fb3614;r4d62674aefd5;r50b94e553fc0;rad612f9dba93;r10b031024a83,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000033,Kementerian Kemajuan Desa dan Wilayah,unclassified,2014,1,1,false,r86960c200973,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,land_resources,2017;2018;2019,3,3,true,r8195be2999ab;r71e38b0e7f79;rb653ad736363,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,procurement,2014,1,1,false,r7ec802069e12,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,projects,2014;2017;2018;2020,4,4,true,r53ed4f2d2beb;r8195be2999ab;r71e38b0e7f79;rb1a25bb5a4e1,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000034,Kementerian Sumber Asli dan Kelestarian Alam,unclassified,2017;2021;2022,3,3,true,r5713c9293540;r458556659ae5;reae0f79fb6b3,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",assets,2019,1,1,false,r76a3fbd5566b,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",companies,2022,1,1,false,r2cef4b84220c,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",loans_investment,2022,1,1,false,r2cef4b84220c,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000035,"Kementerian Pelaburan, Perdagangan dan Industri",projects,2022,1,1,false,r2cef4b84220c,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,assistance,2024,1,1,false,r6b204f7d26f3,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,financial_management,2024,1,1,false,r6b204f7d26f3,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,loans_investment,2016;2017,2,2,true,r1e39589aaf61;r67a07a4a605c,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000036,Kementerian Perdagangan Dalam Negeri dan Kos Sara Hidup,projects,2016,1,1,false,r1e39589aaf61,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000038,Kementerian Pembangunan Usahawan dan Koperasi,companies,2018,1,1,false,r6ca4a4e76711,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000038,Kementerian Pembangunan Usahawan dan Koperasi,loans_investment,2022,1,1,false,r6e223842e5ed,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000039,Kementerian Kerja Raya,companies,2019;2022,2,2,true,r50fa443d1e3d;r5512a4d2a3e5,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000039,Kementerian Kerja Raya,procurement,2014,1,1,false,r42edbeb29e71,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000039,Kementerian Kerja Raya,projects,2014;2018;2019;2022,4,8,true,r3d6a2b95c23a;r792b5f3622ae;rbf12dff94ee8;rdab40107c11f;r50fa443d1e3d;r0f9181e482bc;r7f4319265960;r5512a4d2a3e5,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,assets,2017,1,2,false,r8d34fe1577ec;r6f216bcee179,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,companies,2016;2020;2022,3,3,true,r3a02ea1abd77;r287d89dacd0b;r747ed43d8fff,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,financial_management,2021,1,1,false,r6c99f0997782,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,ict,2017;2021,2,2,true,r8d34fe1577ec;r6c99f0997782,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,land_resources,2020;2022,2,2,true,r287d89dacd0b;r747ed43d8fff,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,local_government,2022,1,1,false,r747ed43d8fff,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,procurement,2016,1,1,false,r3a02ea1abd77,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,projects,2016;2017;2020;2021,4,5,true,r041cba6db732;r8d34fe1577ec;r6f216bcee179;r957a473e66f7;r6c99f0997782,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,revenue,2017,1,1,false,r8d34fe1577ec,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000040,Kementerian Pengangkutan,unclassified,2014;2017,2,2,true,r784918b06ab9;r1a8aeb874502,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000041,"Kementerian Tenaga, Teknologi Hijau dan Air",unclassified,2016,1,1,false,r5178bb3422ac,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",companies,2017;2019,2,2,true,re4a8929beeaf;rd9e6d8d98746,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",loans_investment,2018,1,1,false,r351b0cb1e4b8,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",projects,2018,1,1,false,r351b0cb1e4b8,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000042,"Kementerian Sains, Teknologi dan Inovasi",unclassified,2018;2019,2,3,true,r5e741b20f50c;re30ade69fd8e;rfd5e3b77c8ab,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",companies,2014,1,1,false,r41c5fbb1a86f,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",loans_investment,2014,1,1,false,r41c5fbb1a86f,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000043,"Kementerian Pelancongan, Seni dan Budaya",unclassified,2018;2019;2021,3,3,true,r996d46c36e49;rf50bbfb1910b;rbeb405d54a6a,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000044,Kementerian Wilayah Persekutuan,companies,2017;2021,2,4,true,r0edd8587347e;r8d9778a5661b;rbe1303488743;rf6d4daa67c3e,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000044,Kementerian Wilayah Persekutuan,financial_management,2017,1,1,false,rb41b3fd1dd63,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000044,Kementerian Wilayah Persekutuan,land_resources,2015;2017,2,2,true,rf221af52726e;rb41b3fd1dd63,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000044,Kementerian Wilayah Persekutuan,local_government,2014;2017;2019;2021,4,5,true,r0a52c352135f;rb41b3fd1dd63;rd051fe0a3c1f;r8f5695899974;r9d93b4a2b175,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000044,Kementerian Wilayah Persekutuan,projects,2014;2015;2017;2019;2021,5,5,true,r0a52c352135f;rf221af52726e;rb41b3fd1dd63;rd051fe0a3c1f;rf6d4daa67c3e,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000044,Kementerian Wilayah Persekutuan,unclassified,2016,1,1,false,rfe10c7bb2a37,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000045,Kementerian Alam Sekitar dan Air,companies,2020,1,1,false,rc0cb774f1813,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000045,Kementerian Alam Sekitar dan Air,land_resources,2020,1,1,false,rc0cb774f1813,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000045,Kementerian Alam Sekitar dan Air,unclassified,2020,1,1,false,r63678905053e,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,assets,2014,1,1,false,r2e38cac81058,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,assistance,2018,1,1,false,re355861b2f16,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,companies,2018,1,1,false,rd198a19e47a8,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,health_education,2014;2017;2018;2019;2021;2022,6,18,true,r2e38cac81058;rb9a7e641ccbe;r37c80d8e79e5;r7729fbeb5730;r35fb44d36c75;r43247b209ca8;rd215ce4c9f31;r32dbb6668ba4;rd198a19e47a8;r1a0b3adda32e;r24c487ce80a8;r93d3a92f645d;rd927b47c7887;reabc5f1d64e4;r1dbfc7f1b060;r08582bffe6a4;r663061b76360;r2099f2668ac1,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,ict,2014;2019,2,2,true,rdb86087d338f;r08582bffe6a4,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,loans_investment,2018,1,1,false,re355861b2f16,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,procurement,2014;2017,2,4,true,rb9a7e641ccbe;rdb86087d338f;rf77b616f0fed;r35fb44d36c75,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,projects,2014;2017;2018;2019;2021;2022,6,11,true,r2e38cac81058;rf19dc7ec5401;r37c80d8e79e5;r7729fbeb5730;rd215ce4c9f31;r24c487ce80a8;r93d3a92f645d;rd927b47c7887;r08582bffe6a4;r663061b76360;r2099f2668ac1,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000048,Kementerian Pendidikan,unclassified,2014;2015;2018,3,5,true,rcf42e0c32700;ra848db9d2571;rc213c0d89d96;r6ae288066f15;r4efa24912472,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000049,Kementerian Kesihatan,assistance,2017,1,1,false,r7464f351da59,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000049,Kementerian Kesihatan,financial_management,2022,1,1,false,re6798fa84054,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000049,Kementerian Kesihatan,health_education,2014;2018;2019,3,3,true,rfb3ed22e2aed;rbf54bbdfa29c;r3e609544ea4d,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000049,Kementerian Kesihatan,revenue,2014,1,1,false,rfb3ed22e2aed,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000049,Kementerian Kesihatan,unclassified,2015;2017;2018,3,3,true,r80f66fd607ad;r1df1e928c876;r32b909716d9d,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,assistance,2018,1,1,false,r86414cf1cbb3,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,companies,2019,1,2,false,r072e21ea89e1;r822543a89bea,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,local_government,2014,1,1,false,r761b50384444,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,projects,2014,1,1,false,r761b50384444,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000050,Kementerian Perumahan dan Kerajaan Tempatan,unclassified,2016;2018;2021;2023,4,5,true,r4a1ce1d2fe60;r5e78acdfb5d4;r73393c41afb5;r4b29e86dd043;rd58c0a668fb8,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000052,Kementerian Belia dan Sukan,companies,2017,1,1,false,re0a6a307a41f,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000052,Kementerian Belia dan Sukan,procurement,2017,1,1,false,re0a6a307a41f,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000052,Kementerian Belia dan Sukan,projects,2016;2017,2,3,true,rea0e4f19c6f2;r777a969522ac;re0a6a307a41f,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000052,Kementerian Belia dan Sukan,unclassified,2017;2018;2022,3,3,true,r752233cc5500;rcf45412a0ef6;rbb819dbeeae0,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000053,Kementerian Sumber Manusia,assistance,2021,1,1,false,rb48508bac42e,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000053,Kementerian Sumber Manusia,companies,2019;2023,2,2,true,re38a2a78858a;rc75615881297,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000053,Kementerian Sumber Manusia,health_education,2017,1,2,false,rb839c49035c4;rc01f892a33a2,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000053,Kementerian Sumber Manusia,procurement,2017,1,1,false,rb839c49035c4,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000053,Kementerian Sumber Manusia,projects,2023,1,1,false,rc75615881297,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000054,Kementerian Komunikasi,assistance,2017;2018,2,2,true,rbad9bc03f90f;r865d86b06b6f,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000054,Kementerian Komunikasi,companies,2014;2017;2018,3,4,true,rd1df7096167a;rf9ae252fdfc0;r49b3dd53d710;r865d86b06b6f,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000054,Kementerian Komunikasi,loans_investment,2014;2018,2,2,true,rf9ae252fdfc0;rd0fa178b0637,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000054,Kementerian Komunikasi,projects,2014;2017;2021;2023,4,4,true,rf9ae252fdfc0;rbad9bc03f90f;r2288a57216ae;r7ede50099583,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000055,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",assistance,2016,1,2,false,re58b55fe12b0;re987cc1932ee,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000055,"Kementerian Pembangunan Wanita, Keluarga dan Masyarakat",projects,2016,1,1,false,re58b55fe12b0,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000058,Kementerian Pertahanan,assets,2019;2024,2,3,true,r6691cce46487;r85b380829568;rb40ff7b4d3db,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000058,Kementerian Pertahanan,procurement,2019,1,1,false,r85b380829568,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000058,Kementerian Pertahanan,projects,2014;2018;2019,3,4,true,r18e1460bab2f;r85a00599dd5d;r51da08716066;r1b4a0937f3fe,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000058,Kementerian Pertahanan,unclassified,2018;2020;2023,3,3,true,rcb2123f03d72;r8dd0ff4b59d6;rb658306ee505,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000059,Kementerian Dalam Negeri,financial_management,2019,1,1,false,rf591a67c7f43,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000059,Kementerian Dalam Negeri,ict,2015,1,1,false,r8b4f8109a9b0,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000059,Kementerian Dalam Negeri,projects,2020,1,1,false,r5cbdbe03bf41,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000059,Kementerian Dalam Negeri,unclassified,2014;2016;2017;2022,4,5,true,r6c2bf63c7323;rc6550ec381d7;r7edf26226c1d;r74469cf1836a;r71c3ee254520,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000067,Kementerian Pendidikan Tinggi,health_education,2016;2017,2,2,true,r49704741bf43;ra88e64f5b51b,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000067,Kementerian Pendidikan Tinggi,procurement,2016;2017,2,2,true,r49704741bf43;ra88e64f5b51b,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000068,Kementerian Pendidikan Tinggi,health_education,2024,1,1,false,r8dc28bf17152,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000068,Kementerian Pendidikan Tinggi,procurement,2024,1,1,false,r8dc28bf17152,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+entity,MY,E000068,Kementerian Pendidikan Tinggi,unclassified,2023,1,1,false,rdf10116ed741,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,assets,2014:2;2017:3;2018:1;2019:5;2024:6,5,17,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,assistance,2014:6;2015:1;2016:2;2017:2;2018:9;2019:1;2021:1;2022:1;2024:1,9,24,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,companies,2014:17;2015:5;2016:8;2017:18;2018:21;2019:19;2020:10;2021:9;2022:11;2023:4;2024:2;2025:5,12,129,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,financial_management,2015:3;2017:7;2018:8;2019:1;2020:2;2021:1;2022:1;2024:2;2025:1,9,26,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,health_education,2014:9;2015:3;2016:1;2017:10;2018:14;2019:6;2021:1;2022:2;2024:1,9,47,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,ict,2014:2;2015:1;2017:2;2018:2;2019:5;2020:1;2021:2;2022:1;2025:1,9,17,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,land_resources,2015:3;2016:2;2017:4;2018:5;2019:4;2020:2;2021:1;2022:2;2023:5;2024:3,10,31,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,loans_investment,2014:3;2016:1;2017:2;2018:5;2019:1;2020:1;2021:1;2022:2;2025:1,9,17,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,local_government,2014:2;2017:1;2019:2;2021:1;2022:1;2023:1,6,8,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,procurement,2014:14;2015:1;2016:2;2017:4;2018:1;2019:1;2024:3,7,26,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,projects,2014:19;2015:10;2016:10;2017:15;2018:14;2019:16;2020:4;2021:8;2022:8;2023:6;2024:5;2025:2,12,117,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,revenue,2014:3;2015:1;2017:2;2020:1;2024:2,5,9,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+federal,MY,,,unclassified,2014:18;2015:6;2016:12;2017:19;2018:21;2019:5;2020:2;2021:8;2022:6;2023:6;2024:8;2025:2,12,113,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,companies,2016:1;2017:3;2018:2;2019:1;2020:1;2022:1;2023:2;2025:2,8,13,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,health_education,2020:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,ict,2017:1;2022:1;2025:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,land_resources,2017:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,local_government,2019:1;2022:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,procurement,2016:2;2017:2;2019:1,3,5,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,projects,2017:1;2018:2;2019:1;2021:1;2022:2;2023:1,6,8,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,revenue,2017:2;2018:1,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-01,,,unclassified,2016:2;2017:2;2018:4;2019:2;2020:3;2021:1;2022:2,7,16,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,assets,2019:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,assistance,2017:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,companies,2016:1;2017:1;2018:2;2019:2;2020:1;2021:1;2022:3;2023:1,8,12,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,ict,2022:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,land_resources,2014:2;2017:1;2018:1,3,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,procurement,2014:2,1,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,projects,2014:1;2019:1;2022:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,revenue,2017:2,1,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-02,,,unclassified,2014:1;2016:2;2018:3;2019:2;2020:1;2021:1,6,10,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,assistance,2018:1;2021:2,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,companies,2016:1;2017:2;2018:2;2019:1;2020:3;2021:1;2022:2;2023:1;2025:1,9,14,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,financial_management,2021:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,health_education,2017:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,ict,2017:1;2022:1;2025:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,land_resources,2016:1;2017:2;2018:1;2019:1;2021:3;2025:1,6,9,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,loans_investment,2025:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,local_government,2021:1;2025:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,projects,2017:4;2018:1;2019:1;2021:3;2025:1,5,10,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,revenue,2018:1;2021:2,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-03,,,unclassified,2017:2;2018:1;2022:1,3,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,assistance,2021:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,companies,2016:1;2017:3;2018:3;2019:2;2021:2;2023:1;2025:1,7,13,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,financial_management,2016:1;2021:2,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,health_education,2017:1;2018:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,ict,2019:1;2025:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,land_resources,2016:1;2017:1;2020:1;2021:1,4,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,loans_investment,2025:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,local_government,2022:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,projects,2019:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-04,,,unclassified,2018:1;2019:2;2020:3;2021:1;2023:1,5,8,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-05,,,assistance,2016:1;2019:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-05,,,companies,2016:2;2017:2;2018:2;2019:1;2020:1;2021:3;2022:4,7,15,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-05,,,ict,2016:1;2022:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-05,,,land_resources,2016:1;2017:1;2021:1;2022:2;2023:1,5,6,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-05,,,loans_investment,2019:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-05,,,projects,2016:1;2017:1;2018:2;2019:1,4,5,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-05,,,unclassified,2017:2;2018:2;2020:1;2022:1,4,6,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,assistance,2017:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,companies,2016:1;2017:2;2018:2;2019:2;2020:1;2021:3;2022:1;2025:1,8,13,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,health_education,2019:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,ict,2019:1;2025:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,land_resources,2016:1;2017:2;2019:1;2022:1;2023:1,5,6,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,projects,2017:1;2018:2;2019:1;2022:1;2025:1,5,6,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,revenue,2016:1;2017:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-06,,,unclassified,2018:1;2019:1;2020:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,assistance,2018:3,1,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,companies,2014:1;2016:1;2017:2;2018:2;2019:1;2020:3;2022:1;2023:1;2025:1,9,13,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,financial_management,2017:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,ict,2022:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,land_resources,2014:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,loans_investment,2018:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,procurement,2014:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,projects,2014:1;2018:1;2019:1;2021:1,4,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,revenue,2017:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-07,,,unclassified,2016:1;2017:2;2019:1;2021:1;2025:1,5,6,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,assistance,2017:1;2019:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,companies,2014:1;2016:1;2017:2;2018:2;2019:2;2021:1;2022:2;2025:2,8,13,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,health_education,2021:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,ict,2025:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,land_resources,2014:1;2019:1;2022:1;2025:1,4,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,loans_investment,2017:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,local_government,2018:1;2021:1;2022:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,procurement,2014:2;2017:1,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,projects,2014:3;2017:1;2018:3;2021:1;2022:3;2023:1,6,12,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-08,,,unclassified,2018:1;2020:2;2023:1,3,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-09,,,companies,2014:1;2019:1;2020:1;2021:1;2025:1,5,5,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-09,,,ict,2025:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-09,,,land_resources,2016:1;2021:1;2025:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-09,,,procurement,2014:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-09,,,projects,2018:1;2020:1;2023:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-09,,,unclassified,2014:1;2017:1;2018:1;2019:2;2022:1,5,6,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,assistance,2019:2,1,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,companies,2017:3;2018:3;2019:1;2020:1;2021:1;2022:4;2023:3,7,16,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,ict,2017:1;2022:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,land_resources,2021:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,procurement,2016:2;2017:1,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,projects,2017:1;2018:3;2020:1;2021:1;2022:1,5,7,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,revenue,2019:1;2020:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-10,,,unclassified,2017:4;2018:2;2019:1;2022:1,4,8,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,assistance,2016:3;2018:1;2021:2,3,6,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,companies,2016:2;2017:3;2018:2;2019:2;2021:2;2022:3;2023:1;2025:3,8,18,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,financial_management,2021:2,1,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,health_education,2021:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,ict,2025:2,1,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,land_resources,2016:1;2017:1;2021:1;2025:1,4,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,loans_investment,2019:1;2022:2,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,local_government,2022:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,procurement,2016:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,projects,2019:2;2020:2;2022:3,3,7,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,revenue,2017:1;2022:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-11,,,unclassified,2017:1;2018:3;2021:1,3,5,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,assets,2019:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,assistance,2016:1;2019:1;2021:1;2023:1,4,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,companies,2014:2;2017:2;2018:3;2019:3;2020:1;2021:2;2022:2;2023:2;2025:2,9,19,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,financial_management,2021:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,health_education,2014:1;2017:1;2018:1;2019:1,4,4,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,ict,2017:1;2018:1;2025:1,3,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,land_resources,2014:3;2019:1;2021:1;2022:5;2023:1,5,11,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,loans_investment,2018:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,local_government,2014:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,procurement,2014:2;2017:1,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,projects,2014:2;2017:2;2018:2;2019:2;2020:2;2021:1;2023:2,7,13,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,revenue,2016:1;2021:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-12,,,unclassified,2014:1;2016:1;2017:2;2018:1;2019:1;2020:1;2021:1,7,8,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,assistance,2020:1;2023:1,2,2,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,companies,2016:1;2017:2;2018:3;2019:2;2022:4;2023:2,6,14,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,financial_management,2023:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,health_education,2018:1;2022:2,2,3,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,ict,2022:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,land_resources,2016:1;2017:2;2018:3;2022:1,4,7,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,procurement,2020:1,1,1,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication
+state,MY-13,,,projects,2016:1;2017:5;2018:6;2019:4;2020:1;2022:5,6,22,,,draft: the audit inventory failed its blind verification (2026-11-06); not for publication

@@ -5,7 +5,7 @@ Run from anywhere:  python3 curated/pipeline/build_warehouse_duckdb.py
 
 Source of truth = the CSVs under sources/<name>/data/ and curated/ (never the .duckdb).
 This script only builds a rebuildable cache (curated/warehouse.duckdb). It does NOT
-replace sources/pkkp/pkkp.duckdb (pipeline/build_duckdb.py) — that file stays the
+replace sources/pkkp/pkkp.duckdb (sources/pkkp/pipeline/build_duckdb.py) — that file stays the
 quick, PKKP-only entry point docs/ANALYST_GUIDE.md already points to. This one is the
 "query all eight sources from one file" entry point once you're past PKKP-only questions.
 
@@ -21,7 +21,7 @@ Query fully-qualified: SELECT * FROM anggaran.fact_anggaran_maksud_2024.
 
 TABLE NAMING WITHIN A SOURCE
 -----------------------------
-Same rule as pipeline/build_duckdb.py: files are grouped by exact basename (no year/state
+Same rule as sources/pkkp/pipeline/build_duckdb.py: files are grouped by exact basename (no year/state
 suffix stripping) and UNIONed BY NAME across folders that share it. This unions PKKP's
 per-year files into one series per concept, but leaves e.g. states' per-state files
 (fact_state_finance_pahang.csv, fact_state_finance_sabah.csv, ...) as separate tables,
@@ -29,7 +29,7 @@ since their basenames differ — same "own-year/own-state file first, consolidat
 place" pattern the source already uses (states' own cross-state panel lives under
 data/_national/ and becomes its own table here, e.g. states.fact_state_finance_all).
 Leading-underscore files (validation, anomalies, dropped rows, crosswalks, restatements)
-get a `meta_` prefix, same convention as pipeline/build_duckdb.py.
+get a `meta_` prefix, same convention as sources/pkkp/pipeline/build_duckdb.py.
 
 EXCLUSIONS
 ----------
@@ -148,7 +148,7 @@ def main():
         total_rows += n
         total_tables += 1
 
-    # Convenience views carried over from pipeline/build_duckdb.py (leaf rows only).
+    # Convenience views carried over from sources/pkkp/pipeline/build_duckdb.py (leaf rows only).
     con.execute("CREATE VIEW pkkp.v_opex_leaf AS "
                 "SELECT * FROM pkkp.fact_opex_detail WHERE row_type='object_aktiviti'")
     con.execute("CREATE VIEW pkkp.v_devex_projects AS "

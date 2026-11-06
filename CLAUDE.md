@@ -1,7 +1,7 @@
 # CLAUDE.md — Malaysia Economy Data Warehouse
 
 Operating manual for anyone (human or AI) working in this repo. Read this first.
-(The GitHub repo is `ammarroslizar/malaysia-economy`; the old name `malaysiafinance` redirects.)
+(The GitHub repo is `ikramekonomi/malaysia-economy`, owned by IKRAM since 2026-11-06; the old names `ammarroslizar/malaysia-economy` and `ammarroslizar/malaysiafinance` redirect.)
 
 ## Mission
 Build a consolidated, fully verifiable data warehouse of **the Malaysian economy**, national and
@@ -41,7 +41,7 @@ guarantees sit in memorandum accounts), and **place** (most federal spending has
 in the accounts; see `docs/DATA_MODEL.md` §10 and §13).
 
 ## Sources
-What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (107 series:
+What we hold and what we need is one checklist: **`docs/registry/series_seed.csv`** (115 series:
 status, route, access, licence, priority). The plan behind it, theme by theme:
 **`docs/SOURCES.md`**. How the registry works: `docs/DOCUMENT_REGISTRY.md`. Held today (each in
 `sources/<name>/`): pkkp (FY2009–2024), anggaran, anggaran-hasil, mof-fiscal-outlook (9
@@ -50,7 +50,7 @@ editions), bnm, dosm (121 datasets incl. data.gov.my health, education and servi
 ## Golden rules — do not break these
 1. **Raw source data (the CSVs) is the source of truth.** Consolidated/curated tables and any
    `*.duckdb` are derived, rebuildable artifacts — never hand-edit them
-   (`python3 pipeline/build_duckdb.py` rebuilds the PKKP DB).
+   (`python3 sources/pkkp/pipeline/build_duckdb.py` rebuilds the PKKP DB).
 2. **Never silently correct a figure.** If a source misprints something, keep it as printed
    and document it in that source's validation CSV with a proof. Fixing an extraction bug is
    fine; altering what a source published is not.
@@ -86,8 +86,8 @@ core/               the conformed layer (L2: dims + fact_observation) and gap vi
 curated/            the older consolidated layer, moving into core/ view by view
 apps/tools/         typed agent tools over core/ (no SQL; every number cited; arithmetic only via derive)
 apps/models/        model projections: an application, never warehouse data
-site/               the public site + chatbot (reads curated views; its own CLAUDE.md)
-pipeline/           build_duckdb.py (PKKP DB)
+apps/site/          build_site_data.py: core/ -> site/data (what the public site may show)
+site/               the public site: static, reads site/data built from core/ by apps/site/build_site_data.py (site/README.md)
 docs/               DATA_MODEL.md · SOURCES.md · DOCUMENT_REGISTRY.md · registry/ · ANALYST_GUIDE.md
 meta/               code lists, decisions, the file registry (build_registry.py) -> warehouse meta.*
 qa/                 the offline check suite CI runs on every PR, and its known-FAIL baseline
@@ -109,7 +109,7 @@ divergences.
 ## Setup (fresh clone / cloud session)
 ```
 pip install -r requirements.txt
-python3 pipeline/build_duckdb.py                  # -> sources/pkkp/pkkp.duckdb
+python3 sources/pkkp/pipeline/build_duckdb.py                  # -> sources/pkkp/pkkp.duckdb
 python3 curated/pipeline/build_warehouse_duckdb.py  # -> curated/warehouse.duckdb (all sources)
 ```
 Querying needs only `duckdb`. Refresh/verification needs `pyarrow` and `pandas` (in
@@ -134,6 +134,7 @@ original (`docs/DATA_MODEL.md` §7.4). Report discrepancies; never correct silen
 - See each source's README for its own caveats and anomaly registers.
 
 ## Next work
+**`HANDOVER.md` lists what is open, in priority order** (the audit-inventory fixes first). Then:
 Follow the build order in `docs/DATA_MODEL.md` §15. Phase 0 (foundation: registry as data, CI,
 archive, governance) then Phase 1 (a state-level, end-to-end slice: population, HIES, LFS, state
 finances → `gap_need_vs_money` with agent tools).
