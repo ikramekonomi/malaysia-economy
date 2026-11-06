@@ -57,7 +57,7 @@ wellbeing · environment, climate & disasters.
 ## How it is built
 
 ```
-L0  raw documents        PDFs and API files, archived by sha256 (private l0-archive release)
+L0  raw documents        PDFs and API files, archived by sha256 (public l0-archive release)
 L1  sources/<name>/      every table exactly as printed, with source file, page and statement
 L2  core/                one conformed model: geo, period, indicator, breakdown, entity, source
                          + fact_observation (exact decimals, printed value, uncertainty, citation)
