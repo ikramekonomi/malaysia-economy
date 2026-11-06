@@ -184,7 +184,7 @@ def load(obs):
     divergent = {(d["publication"], d["sheet"], d["cell"]) for d in
                  csv.DictReader(open(os.path.join(SRC, "_source_divergences.csv"), encoding="utf-8"))}
     counts = {"loaded": 0, "same_as_open_data": 0, "repeated_in_report": 0, "divergent_kept": 0, "left_at_l1": 0,
-              "unparsed": 0}
+              "marker_at_l1": 0, "unparsed": 0}
     first = {}
     unparsed = []
     for pub, tables in TABLES.items():
@@ -195,12 +195,15 @@ def load(obs):
             if not spec:
                 continue
             ind_fmt, rkind, ckind = spec
+            if not c["value"]:
+                counts["marker_at_l1"] += 1  # 'n.a' / '-' as printed: no figure to load
+                continue
             row = parse_row(rkind, c["row_label"])
             col = parse_col(ckind, c["col_header"], c["title_en"])
             if col is None:
                 counts["left_at_l1"] += 1
                 continue
-            if row is None or not c["value"]:
+            if row is None:
                 counts["unparsed"] += 1
                 unparsed.append(f"{pub} {c['sheet']}!{c['cell']} {c['row_label']!r}")
                 continue

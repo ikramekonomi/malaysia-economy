@@ -19,8 +19,8 @@ Method (declared 2026-11-06, before any result of this view was computed):
 * Joining: on (maksud_code, projek_code) within a year's sources. Codes are reused (P.15 00700 is GREEN FUND in the
   2024 book and a different programme in the 2025 book), so every join carries a name check on the printed names
   (lowercase, letters and digits only): same (equal), similar (one contains the other, or at least half of the
-  words of the shorter name are in the longer), different. A 'different' pair is not joined: each side is its
-  own row, with a note.
+  words of the shorter name are in the longer), renamed (see the amendment below), different. A 'different' pair
+  is not joined: each side is its own row, with a note.
 * Derived, by declared rules only, no rounding before the end:
     execution_rate          actual_pkkp_rm / allocation_pkkp_rm
     execution_rate_tabled   actual_pkkp_rm / tabled_rm
@@ -28,6 +28,13 @@ Method (declared 2026-11-06, before any result of this view was computed):
     allocation_change_rm    allocation_pkkp_rm - tabled_rm (money moved into or out of the project during the year)
 * Status words, no ranking, the thresholds of gap_budget_vs_actual: within_allocation (execution 0.90-1.00),
   underspent (< 0.90), overspent (> 1.00), not_held (a side missing), no_allocation (allocation 0 and actual 0).
+* Amended after the blind verifier (2026-11-06; no threshold changed):
+    - P.70, the contingency reserve, reads status 'reserve': it is drawn by transfers to other votes and offset in
+      the accounts (P.70 00200, a negative actual), so it is not execution, and it is left out of every total
+    - a negative actual reads 'offset_entry', never 'overspent'
+    - the name check compares words without generic ones (projek, pembangunan, program, kajian, ...), and two
+      different names with the same total project cost to within 5% are one line renamed ('renamed', joined):
+      the 2024 book's MDAG is PKKP 2023's 'Schoolnet Fasa 2' at RM217,249,700 in both
 * Checks: V1 each vote-year's tabled_rm adds up to that book's printed vote total (columns 6+7); V2 each vote-year's
   actual_pkkp_rm adds up to the vote's audited development spending in core (federal_gov.vote.devex, basis
   audited), within the sen rounding of its project rows; V3 every value traces to a file, page and row; V4 every
@@ -61,7 +68,13 @@ def norm(s):
     return re.sub(r"[^a-z0-9]", "", (s or "").lower())
 
 
-def name_check(a, b):
+GENERIC = {"projek", "program", "programme", "pembangunan", "dan", "kajian", "kajiankajian", "the", "of", "and",
+           "di", "bagi", "untuk", "baru", "baharu", "naik", "taraf", "menaik", "pembinaan", "membina"}
+
+
+def name_check(a, b, cost_a=None, cost_b=None):
+    """same / similar / renamed / different (method above): words compared without generic ones; two different
+    names with the same total project cost to within 5% are one line renamed."""
     if not a or not b:
         return ""
     na, nb = norm(a), norm(b)
@@ -69,9 +82,15 @@ def name_check(a, b):
         return "same"
     if na in nb or nb in na:
         return "similar"
-    wa, wb = set(re.findall(r"[a-z0-9]+", a.lower())), set(re.findall(r"[a-z0-9]+", b.lower()))
+    wa = set(re.findall(r"[a-z0-9]+", a.lower())) - GENERIC
+    wb = set(re.findall(r"[a-z0-9]+", b.lower())) - GENERIC
     short, long_ = (wa, wb) if len(wa) <= len(wb) else (wb, wa)
-    return "similar" if short and len(short & long_) * 2 >= len(short) else "different"
+    if short and len(short & long_) * 2 >= len(short):
+        return "similar"
+    ca, cb = dec(cost_a), dec(cost_b)
+    if ca and cb and abs(ca - cb) <= Decimal("0.05") * max(ca, cb):
+        return "renamed"
+    return "different"
 
 
 def book(y):
@@ -122,11 +141,13 @@ def main():
             bname = (t or rv or {}).get("projek_name_bm", "")
             notes = []
             # the revised figure is the next book's: it must name the same project as the tabled one
-            if t and rv and name_check(t["projek_name_bm"], rv["projek_name_bm"]) == "different":
+            if t and rv and name_check(t["projek_name_bm"], rv["projek_name_bm"], t["jumlah_anggaran_harga_projek"],
+                                       rv["jumlah_anggaran_harga_projek"]) == "different":
                 notes.append(f"the {int(y) + 1} book prints code {k[1]} for another project "
                              f"({rv['projek_name_bm']!r}): its revised figure is not used")
                 rv = None
-            nc = name_check(bname, a["name_bm"]) if a and (t or rv) else ""
+            bcost = (t or rv or {}).get("jumlah_anggaran_harga_projek")
+            nc = name_check(bname, a["name_bm"], bcost, a.get("kos_keseluruhan_rm")) if a and (t or rv) else ""
             if nc:
                 names[nc] += 1
             if nc == "different":
@@ -213,6 +234,19 @@ def row(y, k, t, rv, a, nc, w, notes):
         r.update(name_pkkp=a["name_bm"], allocation_pkkp_rm=fmt(Decimal(a["anggaran_jumlah_rm"] or "0")),
                  actual_pkkp_rm=fmt(Decimal(a["sebenar_jumlah_rm"] or "0")), pkkp_ref=a["_ref"])
     al, ac, tb = dec(r["allocation_pkkp_rm"]), dec(r["actual_pkkp_rm"]), dec(r["tabled_rm"])
+    if k[0] == "P.70":
+        r["status"] = "reserve"
+        r["note"] = "; ".join(x for x in (r["note"], "the contingency reserve (Simpanan Luar Jangka): it is drawn by "
+                                          "transfers to other votes and offset in the accounts (00200), so its rows "
+                                          "are not execution; excluded from every total of this view") if x)
+        if al is not None and ac is not None:
+            r["unspent_rm"] = fmt(al - ac)
+        return r
+    if ac is not None and ac < 0:
+        r["status"] = "offset_entry"
+        r["note"] = "; ".join(x for x in (r["note"], "a negative actual: an offsetting entry in the accounts, not "
+                                          "spending") if x)
+        return r
     if al is not None and ac is not None:
         r["unspent_rm"] = fmt(al - ac)
         if al == 0 and ac == 0:

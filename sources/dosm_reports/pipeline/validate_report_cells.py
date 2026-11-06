@@ -4,7 +4,8 @@
   python3 sources/dosm_reports/pipeline/validate_report_cells.py -> sources/dosm_reports/data/_validation_report_cells.csv
 
 Declared before the results were looked at (2026-11-06). Runs offline on the committed CSVs.
-  R1 coverage     every numeric cell of every sheet is a captured cell or sits in a header row and is a whole year
+  R1 coverage     every numeric cell of every sheet is a captured cell, sits in a header row, or is a label printed as
+                  a number (an income class's bounds, a year column)
                   (data/_extraction_coverage.csv, written by the extractor from the workbook itself)
   R2 display      value_printed is value rounded to the decimals value_printed shows (half away from zero)
   R3 open data    the same figure in the report and in the open-data file DOSM publishes for it, exact: the open-data
@@ -22,6 +23,11 @@ Declared before the results were looked at (2026-11-06). Runs offline on the com
                   A row whose report figure and open-data figure differ is a FAIL here unless it is registered, with its
                   proof, in data/_source_divergences.csv (status SOURCE_DIVERGENCE): a divergence between two DOSM
                   releases, kept as each prints it (golden rule 2), never a correction.
+  R5 one report   (added after the blind verifier, 2026-11-06) a figure the poverty report prints twice is printed the
+                  same: Jadual 5.4 (state rows: absolute and relative poverty, median and mean income, 2022 and 2024)
+                  against Jadual 3.1 / 4.0 and household_income Jadual 2.7; Jadual 5.1 / 5.3 (Malaysia and state rows,
+                  2022 and 2024) against Jadual 2.1 / 3.1. Exact on the printed figure; a registered difference reads
+                  SOURCE_DIVERGENCE.
   R4 identity     household_income_2024 Jadual 2.7: the households of the 16 states add to Malaysia's, to the
                   rounding of 17 printed figures (8.5 thousand households at one decimal: 17 x 0.05)
 """
@@ -82,7 +88,8 @@ def main():
     # R1
     for r in csv.DictReader(open(os.path.join(SRC, "data", "_extraction_coverage.csv"), encoding="utf-8")):
         add("R1", r["publication"], "", r["sheet"], r["captured"], r["numeric_cells"], int(r["not_captured"]) == 0,
-            f"{r['in_header_rows']} header-row years, {r['in_note_rows']} in notes; not captured: "
+            f"{r['in_header_rows']} in header rows, {r['in_note_rows']} in notes, {r['in_label_columns']} printed as "
+            f"labels (class bounds, years); not captured: "
             f"{r['not_captured_cells'] or 'none'}")
     data = {p: cells(p) for p in PUBS}
     # R2
@@ -172,6 +179,50 @@ def main():
                 False, "wages_state.csv", (r["sheet"], r["cell"]))
     add("R3", "salaries_wages_2025", "A8/A9", "state x year x sex x measure, equal", str(n_ok), str(n_ok + n_bad),
         n_ok > 0 and n_bad == 0, "wages_state.csv; any differing cell is listed on its own row")
+    # R5
+    pv = data["poverty_2024"]
+    inc27 = {}
+    for r in data["household_income_2024"]:
+        m = re.search(r"\(RM\) \| (20\d\d)$", r["col_header"])
+        if r["table_no"] == "2.7" and m:
+            inc27[(norm_state(r["row_label"]), "median" if r["col_header"].startswith("Penengah") else "mean",
+                   m.group(1))] = r
+    t31 = {(norm_state(r["row_label"]), r["col_header"][:4]): r for r in pv if r["table_no"] == "3.1"
+           and r["col_header"].endswith("Jumlah | Total")}
+    t21 = {(norm_state(r["row_label"]), r["col_header"][:4]): r for r in pv if r["table_no"] == "2.1"
+           and r["col_header"].endswith("Jumlah | Total")}
+    t40 = {(norm_state(r["row_label"]), r["col_header"][:4]): r for r in pv if r["table_no"] == "4.0"
+           and r["col_header"].endswith("Jumlah | Total")}
+    states = {k[0] for k in t31}
+    pairs = []
+    for r in pv:
+        st, yr = norm_state(r["row_label"]), r["col_header"][-4:]
+        if st not in states or yr not in ("2022", "2024"):
+            continue
+        if r["table_no"] == "5.4":
+            h = r["col_header"]
+            ref = t31 if "Mutlak" in h else t40 if "Relatif" in h else None
+            if ref is not None:
+                pairs.append((r, ref.get((st, yr))))
+            elif "Penengah" in h or "Purata" in h:
+                pairs.append((r, inc27.get((st, "median" if "Penengah" in h else "mean", yr))))
+        elif r["table_no"] in ("5.1", "5.3") and (r["section"] == "Negeri/State" or st == "malaysia") \
+                and r["col_header"] in ("2022", "2024"):
+            pairs.append((r, (t21 if r["table_no"] == "5.1" else t31).get((st, yr))))
+    n_ok = 0
+    for a, b in pairs:
+        if b is None:
+            add("R5", a["publication"], a["table_no"], f"{a['row_label']} {a['col_header'][-4:]} {a['sheet']}!{a['cell']}",
+                printed(a), "", False, "no counterpart found in the declared chapter table")
+        elif printed(a) == printed(b) or eq(a["value"], b["value"]):
+            n_ok += 1
+        else:
+            add("R5", a["publication"], a["table_no"],
+                f"{a['row_label']} {a['col_header'][-4:]}: {a['sheet']}!{a['cell']} vs {b['publication']} "
+                f"Jadual {b['table_no']} {b['sheet']}!{b['cell']}", printed(a), printed(b), False,
+                "the same figure printed twice in one release", (a["sheet"], a["cell"]))
+    add("R5", "poverty_2024", "5.1/5.3/5.4", "figures printed twice, equal", str(n_ok), str(len(pairs)), n_ok > 0,
+        "any unequal pair is listed on its own row")
     # R4
     t = [r for r in data["household_income_2024"] if r["table_no"] == "2.7" and "households" in r["col_header"]]
     for yr in ("2022", "2024"):

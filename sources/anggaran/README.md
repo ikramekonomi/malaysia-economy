@@ -160,8 +160,13 @@ headings with their subtotals, and closes with the vote's JUMLAH. Each table has
   * J5, J6 (INFO): comparisons with PKKP's audited project figures.
 * **Column (4) is not a project's actual spending.** The list carries only projects continuing into the budget
   year, and of each only the part carried forward. The 2024 book's column (4) totals RM3.1b for P.06, while the
-  vote spent RM6.2b in 2022. Project by project, only 242 of 699 equal PKKP FY2022's audited actual. Use PKKP
-  for actuals; `gap_project_budget_vs_actual` does.
+  vote spent RM6.2b in 2022. Project by project, column (4) is within RM1 of PKKP's audited actual for:
+  * 251 of 699 in the 2024 book (FY2022);
+  * 242 of 621 shared in the 2025 book (FY2023);
+  * 142 of 612 in the 2026 book (FY2024).
+
+  For example, P.07 00500 prints 0 against PKKP's RM842.8m. Never read column (4) as a project's actual. Use PKKP;
+  `gap_project_budget_vs_actual` does.
 * Project codes are reused for different projects across books: P.15 00700 is GREEN FUND in 2024 and another
   programme in 2025. Joins across books or with PKKP therefore carry a name check (`core/README.md`).
 

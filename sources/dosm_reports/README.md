@@ -32,6 +32,8 @@ L0 archive, `meta/l0_candidates.csv`, which stores every file as `<sha256>.pdf` 
   * `number_format`: the cell's Excel number format.
 
   A `-` or `..` is kept as printed, with `value` empty.
+  Labels printed as numbers are kept as labels: an income class's bounds (`2,000 – 2,999`) and a Tahun/Year
+  column. Headings nest in `section` (`Lelaki | Penengah (RM)`).
 * `data/<publication>/tables.csv`: one row per table, with its notes as printed (`1 Data merujuk kepada
   warganegara sahaja / Data refer to citizen`, `Nota / Notes: ...`). A table's notes end its body.
 * `data/_extraction_coverage.csv`: every numeric cell of every sheet, either captured or the reason it was not.
@@ -45,6 +47,9 @@ L0 archive, `meta/l0_candidates.csv`, which stores every file as `<sha256>.pdf` 
     state, the participation rate, all 2,448 wage cells of Jadual A8-A9). The method was amended once, after the
     first run, to accept the stored number or the printed figure. The audit note lists both runs.
   * R4, identity: the states' household counts add to Malaysia's.
+  * R5, one report (added after the blind verifier): a figure the poverty report prints twice must be printed
+    the same. Jadual 5.1, 5.3 and 5.4 are checked against chapters 2-4 and income Jadual 2.7: 203 of 204 pairs are
+    equal, and the exception is SD1b.
 
 `pipeline/extract_report_cells.py` regenerates everything above from `raw/` and checks each file's sha256 against
 the manifest first. It does no mapping: which indicator, place and breakdown a cell means is declared table by
@@ -80,10 +85,17 @@ The rest of the tables are held at L1 only, so far:
 
 ## Caveats
 
-* **Terengganu, absolute poverty 2024 (SD1).** The report prints **4.8%**: workbook Jadual 3.1, cell E17; PDF
-  Table 5, p. 40, and Malay Jadual 5, p. 20; Chart 2. The open-data file `hh_poverty_state` prints **5.8%**. The
-  report's own strata (urban 3.3, rural 7.3) give 4.8 for any urban share near Terengganu's. Core holds both,
-  each under its own edition, and `get_series` returns both. Which is right is for DOSM to say.
+* **Terengganu, absolute poverty 2024 (SD1, SD1b).** The poverty report prints two figures for one key:
+  * **4.8%** in Jadual 3.1 (cell E17) and Jadual 5.3 (U24); the PDF prints it on pp. 20, 40 (Table 5 and Chart 2),
+    62 and 67;
+  * **5.8%** in Jadual 5.4, the district table (cell I100; PDF p. 72). The open-data file `hh_poverty_state` also
+    prints 5.8.
+
+  The report's own strata (urban 3.3, rural 7.3), weighted by Terengganu's 2024 households (64.0% urban), give 4.7
+  to 4.8. The open data probably follow the district table. Core holds the chapter figure (4.8) and the open data's
+  (5.8), each under its own edition, and no reader chooses between them. Which is right is for DOSM to say. The
+  verifier found the 5.8 inside the report; the first write-up said only that the report and the open data
+  differ.
 * The poverty workbook stores hardcore incidence to more digits than it prints (0.03, printed 0.0). Core loads
   the printed figure, and cells.csv keeps the stored number. Where the open data carry the stored number
   (hardcore poverty by state, 0.08), core keeps the open data's figure and does not load the report's.

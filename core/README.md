@@ -458,7 +458,7 @@ The report figures the open data already hold were checked and not loaded twice:
 * 170 figures equal the open data;
 * 130 repeat another table of the same report, and all of those copies are equal.
 
-One figure differs: Terengganu's absolute poverty in 2024. The report prints 4.8 and the open data print 5.8.
+One figure differs: Terengganu's absolute poverty in 2024. The report's chapter tables print 4.8, while its own district table and the open data print 5.8 (SD1, SD1b).
 Both are held, and `get_series` returns both (`sources/dosm_reports/data/_source_divergences.csv`, SD1). No
 reader chooses between them:
 * `Warehouse.get()` returns nothing for a key where two products of one publisher differ, and
@@ -479,7 +479,7 @@ side by side:
 * PKKP's audited allocation and actual for the project.
 
 Rows are joined on code, with a name check, because codes are reused. Where the book and the accounts print one
-code for two different projects, each is its own row and they are never joined (8 pairs). Derived columns:
+code for two different projects, each is its own row and they are never joined (5 pairs). Derived columns:
 * the execution rate on PKKP's allocation and on the tabled amount;
 * the unspent amount;
 * the money moved in or out during the year (`allocation_change_rm`).
@@ -488,9 +488,21 @@ Status words use `gap_budget_vs_actual`'s thresholds. Checks (`_validation_gap_p
 * every vote-year's tabled column adds up to the book's printed vote total;
 * its actual and allocation columns add up to core's audited vote observations.
 
-FY2024 (698 projects in both sources): RM91.99b tabled. PKKP records RM80.03b allocated to those projects and
-RM79.37b spent. 78 projects with a tabled allocation spent nothing. FY2023 has no tabled column, since the 2023
-book is not held. FY2025 has no PKKP yet.
+FY2024, the 697 projects in both sources excluding P.70: RM89.99b tabled. PKKP records RM78.03b allocated to
+those projects and RM78.93b spent, 101.1% of the allocation (RM0.89b more than the allocation the accounts
+record for them). 78 projects with a tabled allocation spent nothing. FY2023 has no
+tabled column, since the 2023 book is not held. FY2025 has no PKKP yet.
+
+Status words beyond the thresholds:
+* P.70, the contingency reserve, reads `reserve`. It is drawn by transfers to other votes and offset in the
+  accounts (P.70 00200, a negative actual), so it is not execution, and it is left out of every total above.
+* A negative actual reads `offset_entry`.
+
+The name check ignores generic words, and two names with the same total project cost to within 5% are `renamed`
+(5 pairs, e.g. MDEC under its former name Multimedia Development Corporation). These were added after the blind
+verifier; the first count had RM91.99b / RM80.03b / RM79.37b with the reserve inside. P.23 41000 (book "Bekalan
+Elektrik Sabah (BES)", PKKP 2023 "Sabah Electricity Sdn. Bhd. (SESB)") stays `different` under the declared rule,
+because their costs differ by more than 5%, though it may be one line.
 
 ## gap_reported_vs_audited (Phase 5, 2026-11-06)
 

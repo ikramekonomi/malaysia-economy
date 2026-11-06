@@ -181,4 +181,4 @@ V1 tabled adds up to the book's vote total,P.64 2025,PASS,"rows 4250833100, prin
 V1 tabled adds up to the book's vote total,P.70 2025,PASS,"rows 2000000000, printed 2000000000"
 V4 every project-year once,all,PASS,0 duplicates
 "V3 every row traces to a file, page and row",all,PASS,0 untraced
-V5 name checks (book vs accounts),all,INFO,"different 8, same 1330, similar 86"
+V5 name checks (book vs accounts),all,INFO,"different 5, renamed 5, same 1330, similar 84"
