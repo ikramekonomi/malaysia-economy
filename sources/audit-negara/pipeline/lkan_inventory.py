@@ -34,7 +34,7 @@ SRC = os.path.dirname(HERE)
 TOC = os.path.join(SRC, "data", "lkan_toc")
 OUT = os.path.join(SRC, "data", "fact_lkan_audit_inventory.csv")
 FIELDS = ["report", "scope", "file_name", "part", "body_bm", "topic_bm", "sub_entity_bm", "entry_text",
-          "printed_page", "toc_pdf_page"]
+          "printed_page", "toc_pdf_page", "text_source"]
 NUM_LEFT = re.compile(r"^(\s*)(\d{1,4}|[ivxlc]{1,6})(?:\s*\|\s*|\s{2,})(.*)$")
 NUM_ONLY = re.compile(r"^\s*(\d{1,4}|[ivxlc]{1,6})\s*\|?\s*$")
 NUM_RIGHT = re.compile(r"^(\s*)(\S.*?[A-Za-z)].*?)\s{3,}(\d{1,3})\s*$")
@@ -119,19 +119,25 @@ CHAPTER = re.compile(r"^(\d{1,2})\s+([A-Z].*)$")
 
 
 def marked_layout(text):
-    """True for the chapter layouts: audits printed as '2. topic ... 35' or '- topic ... 1-1' under a ministry."""
-    n = 0
+    """True for the chapter layouts: audits printed as '2. topic ... 35' or '- topic ... 1-1' under a body in capitals
+    (two marked topics are enough: a state volume can hold two audits)."""
+    marked = pages = 0
     for ln in text.splitlines():
         m = PAGE_RIGHT.match(ln)
-        if m and TOPIC.match(m.group(1).strip()):
-            n += 1
-    return n >= 3
+        body = (m.group(1) if m else ln).strip()
+        pages += bool(m)
+        if TOPIC.match(re.sub(r"^TW\s+", "", body)) and re.search(r"[A-Za-z]{4}", body):
+            marked += 1
+    chapter_pages = len(re.findall(r"\s\d{1,2}\s?[–-]\s?\d{1,3}\s*$", text, re.M))
+    # the page may sit on the body's line ('PEJABAT MENTERI BESAR   1-3'); a volume of one audit has one topic
+    return (marked >= 2 and pages >= 2) or (marked >= 1 and chapter_pages >= 2)
 
 
 def read_marked(text):
     """[(part, ministry, agency, topic, page, pdf_page)] for the chapter layouts (method in the module docstring)."""
     out, part, ministry, agency, cur, ministry_open, agency_open = [], "", "", "", None, False, False
-    pages = re.split(r"^=== pdf page (\d+) ===$", text, flags=re.M)
+    pending_pg = None
+    pages = re.split(r"^=== pdf page (\d+)(?: \(ocr\))? ===$", text, flags=re.M)
     for pno, body in zip(pages[1::2], pages[2::2]):
         for raw in body.splitlines():
             if not raw.strip() or NOISE.search(raw) or re.match(r"^\s*(Muka Surat|KANDUNGAN|JILID)", raw.strip(), re.I):
@@ -147,13 +153,16 @@ def read_marked(text):
                 cur["topic"] = f"{cur['topic']} {txt_}"  # a topic over two lines, its page on the second
                 cur["page"] = pg
                 continue
+            if pg and caps(txt_) and SKIP_PART.search(txt_) and not BAHAGIAN.match(txt_):
+                continue  # 'INTI SARI LAPORAN   B-1': an entry for the digest, not a part holding audits
             if BAHAGIAN.match(txt_) or (caps(txt_) and PART_KIND.match(txt_)):
                 part = txt_ if BAHAGIAN.match(txt_) else (part + " " + txt_ if part.endswith(tuple("IVXL")) else txt_)
                 ministry, agency, cur = "", "", None
                 continue
             if t:
-                cur = {"part": part, "ministry": ministry, "agency": agency, "topic": t.group(2).strip(), "page": pg,
-                       "pdf_page": pno, "ind": ind}
+                cur = {"part": part, "ministry": ministry, "agency": agency, "topic": t.group(2).strip(),
+                       "page": pg or pending_pg, "pdf_page": pno, "ind": ind}
+                pending_pg = None
                 out.append(cur)
                 ministry_open = agency_open = False
                 continue
@@ -162,6 +171,7 @@ def read_marked(text):
                 ministry, agency, cur, ministry_open, agency_open = c.group(2).strip(), "", None, True, False
                 continue
             if caps(txt_):
+                pending_pg = pg or pending_pg  # 'KEDAH   2-3': the page of the topic printed below the body
                 if ministry_open:
                     ministry = f"{ministry} {txt_}"  # a ministry's name over two lines, or a second ministry
                 else:
@@ -197,9 +207,10 @@ def main():
                 rows.append(dict(report=report, scope=scope, file_name=fn.replace(".txt", ".pdf"), part=o["part"],
                                  body_bm=o["ministry"], topic_bm=o["topic"], sub_entity_bm=o["agency"],
                                  entry_text=" | ".join(x for x in (o["ministry"], o["agency"], o["topic"]) if x),
-                                 printed_page=o["page"] or "", toc_pdf_page=o["pdf_page"]))
+                                 printed_page=o["page"] or "", toc_pdf_page=o["pdf_page"],
+                                 text_source="ocr" if f"=== pdf page {o['pdf_page']} (ocr)" in text else "text"))
             continue
-        pages = re.split(r"^=== pdf page (\d+) ===$", text, flags=re.M)
+        pages = re.split(r"^=== pdf page (\d+)(?: \(ocr\))? ===$", text, flags=re.M)
         part = ""
         seen = set()
         for pno, body in zip(pages[1::2], pages[2::2]):
@@ -235,7 +246,8 @@ def main():
                 seen.add(key)
                 rows.append(dict(report=report, scope=scope, file_name=fn.replace(".txt", ".pdf"), part=part,
                                  body_bm=" ".join(body_l), topic_bm=" ".join(topic), sub_entity_bm="; ".join(sub),
-                                 entry_text=text_all, printed_page=items[k][3], toc_pdf_page=pno))
+                                 entry_text=text_all, printed_page=items[k][3], toc_pdf_page=pno,
+                                 text_source="ocr" if f"=== pdf page {pno} (ocr)" in text else "text"))
     with open(OUT, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=FIELDS, lineterminator="\n")
         w.writeheader()
