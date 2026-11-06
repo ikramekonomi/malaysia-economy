@@ -1,0 +1,282 @@
+# LKAN 2018 Siri 3 | federal | LAPORAN KETUA AUDIT NEGARA AKTIVITI KEMENTERIAN/JABATAN KERAJAAN PERSEKUTUAN DAN BADAN-BADAN BERKANUN PERSEKUTUAN TAHUN 2018 SIRI 3
+=== pdf page 7 ===
+                                                                                                 (LKAN2018 S3)
+
+
+
+
+                           KANDUNGAN
+                                                                                                       Muka Surat
+
+                      PENDAHULUAN                                                                              A-1
+
+                        1 JABATAN PERDANA MENTERI
+                                 Unit Perancang Ekonomi
+                      TW          - Pengurusan Program Peningkatan Kapasiti dan Kapabiliti                     1-1
+                                    Kumpulan Khusus
+                                 Lembaga Kemajuan Tanah Persekutuan (FELDA)
+                      TW          - Projek Menaik Taraf Sistem Bekalan Air FELDA                               1 - 41
+
+
+
+                        2 KEMENTERIAN KEWANGAN
+
+                          Jabatan Akauntan Negara Malaysia
+                      TW    - Pengurusan Pembangunan Integrated Government Financial                           2-1
+                              Management Accounting System (iGFMAS)
+                          Menteri Kewangan Diperbadankan
+                      TW    - Pengurusan Sistem Landasan Mass Rapid Transit (MRT) Laluan 1                     2 - 45
+
+
+                        3 KEMENTERIAN PERTANIAN DAN INDUSTRI MAKANAN
+                                 Jabatan Perkhidmatan Kuarantin dan Pemeriksaan Malaysia
+                                 (MAQIS)
+                      TW          - Pengurusan Aktiviti Kawalan Import Konsainan Pertanian                     3-1
+
+
+
+                        4 KEMENTERIAN KERJA RAYA
+                                 Jabatan Kerja Raya
+                      TW          - Pengurusan Cerun di Jalan Persekutuan Semenanjung Malaysia                 4-1
+
+
+
+                        5 KEMENTERIAN PERUMAHAN DAN KERAJAAN TEMPATAN
+                      TW          - Pengurusan Program Perumahan Penjawat Awam Malaysia di                     5-1
+                                    Wilayah Persekutuan Putrajaya
+
+                                 Jabatan Perumahan Negara
+                      TW          - Pengurusan Program Perumahan Rakyat Berkonsepkan Rent To                   5 - 41
+                                    Own
+
+
+                                                                Laporan Ketua Audit Negara Tahun 2018 Siri 3     v
+                                                            Laporan Ketua Audit Negara Tahun 2018 Siri 3         v
+                                                                                               Kandungan
+                                                                                                 Kandungan
+
+
+
+
+WJD0013374 2 Kandungan.indd 5                                                                                           23/06/2020 2:25 PM
+=== pdf page 8 ===
+                                                                                                     (LKAN2018 S3)
+
+
+
+
+                        6 MAJLIS KESELAMATAN NEGARA
+                          KEMENTERIAN DALAM NEGERI
+                      TW  Kementerian Pertahanan
+                          Kementerian Kewangan
+                          Kementerian Luar Negeri
+                          Kementerian Pertanian dan Industri Makanan
+                          Kementerian Pengangkutan
+                                     - Aktiviti Kawalan Keselamatan dan Penguatkuasaan Zon Maritim   6-1
+                                       Malaysia
+
+                                  Kementerian Kewangan
+                                  Kementerian Pertahanan
+                      TW             - Aktiviti Kawalan Keselamatan dan Penguatkuasaan Sempadan      6 - 43
+                                       Darat Malaysia
+
+
+                        7       KEMENTERIAN PENDIDIKAN MALAYSIA
+                       TW            - Pengurusan Program Bekalan Makanan Bermasak di Sekolah        7-1
+                                       Berasrama
+                                 Bahagian PERMATA
+                       TW            - Pengurusan Program PERMATA Negara                             7 - 41
+
+
+
+                      PENUTUP                                                                        B-1
+                      AKRONIM                                                                        C-1
+
+
+
+
+                                vi   Laporan
+                                     LaporanKetua
+                                             KetuaAudit Negara Tahun 2018 Siri 3Siri 3
+                                vi                 Audit  Negara Tahun  2018
+                                     Kandungan
+                                     Kandungan
+
+
+
+
+WJD0013374 2 Kandungan.indd 6                                                                                  23/06/2020 2:25 PM
+=== pdf page 9 ===
+                                PENDAHULUAN
+
+
+
+
+WJD0013374 2 Kandungan.indd 7             23/06/2020 2:25 PM
+=== pdf page 10 ===
+                      A - viii   Laporan Ketua Audit Negara Tahun 2018 Siri 3
+                                 Kata Pendahuluan
+
+
+
+
+WJD0013374 2 Kandungan.indd 8                                                   23/06/2020 2:25 PM
+=== pdf page 11 ===
+                            PENDAHULUAN
+                      1.    Perkara 106 dan 107 Perlembagaan Persekutuan dan Akta Audit 1957
+                      menghendaki Ketua Audit Negara mengaudit penyata kewangan, pengurusan
+                      kewangan, aktiviti kementerian/jabatan/agensi serta pengurusan syarikat Kerajaan
+                      Persekutuan. Laporan mengenai pengauditan yang dijalankan hendaklah disediakan
+                      dan dikemukakan kepada Kebawah Duli Yang Maha Mulia Seri Paduka Baginda Yang
+                      di-Pertuan Agong untuk mendapatkan perkenan supaya Laporan itu dibentangkan di
+                      Dewan Rakyat. Bagi memenuhi tanggungjawab ini, Jabatan Audit Negara (JAN) telah
+                      menjalankan empat (4) jenis pengauditan seperti berikut:
+
+                           1.1. Pengauditan Penyata Kewangan - untuk memberi pendapat sama ada
+                           Penyata Kewangan Kerajaan Persekutuan bagi tahun berkenaan menggambarkan
+                           kedudukan kewangan yang benar dan saksama serta rekod perakaunan
+                           mengenainya telah diselenggarakan dengan teratur dan kemas kini;
+
+                           1.2. Pengauditan Pematuhan - untuk menilai sama ada pengurusan
+                           kewangan di kementerian/jabatan persekutuan telah dilaksanakan mengikut
+                           undang-undang dan peraturan kewangan yang berkaitan;
+
+                           1.3. Pengauditan Prestasi - untuk menilai sama ada sesuatu aktiviti Kerajaan
+                           Persekutuan dilaksanakan dengan cekap, berhemat dan berkesan bagi mencapai
+                           objektif yang ditetapkan; dan
+
+                           1.4. Pengauditan Pengurusan Syarikat Kerajaan - untuk menilai sama ada
+                           pengurusan syarikat Kerajaan Persekutuan telah dilaksanakan dengan teratur.
+
+
+                      2.    Pengauditan Prestasi dijalankan selaras dengan Seksyen 6(d), Akta Audit 1957
+                      serta berpandukan kepada piawaian pengauditan antarabangsa yang dikeluarkan oleh
+                      The International Organisation of Supreme Audit Institutions (INTOSAI). Laporan pada
+                      kali ini mengandungi perkara yang telah dibangkitkan hasil daripada pengauditan
+                      terhadap 12 program/projek/aktiviti di 10 kementerian. Pengauditan yang dijalankan
+                      antara lain meliputi aspek pengurusan program/aktiviti, pengurusan sistem dan
+                      pembinaan.
+
+                      3.    Pada kebiasaannya, LKAN hanya dibentangkan sebanyak dua (2) siri sahaja bagi
+                      setiap tahun. Bagaimanapun untuk LKAN tahun 2018, JAN menerbitkan tiga (3) siri
+                      LKAN berikutan dengan penambahan bilangan pengauditan prestasi untuk tahun 2018.
+                      Pada asalnya, LKAN Siri 3 ini dijadual untuk dibentangkan dalam sidang Dewan Rakyat
+                      pada bulan Mac 2020. Namun disebabkan oleh penangguhan sidang Dewan Rakyat dan
+                      Perintah Kawalan Pergerakan akibat Covid-19, kerja-kerja pemuktamadan LKAN Siri 3
+                      turut terjejas. Walaupun terdapat kelewatan dalam pembentangannya di Dewan
+                      Rakyat, namun nilai penemuan audit dan lessons learnt yang dilaporkan LKAN Siri 3 ini
+
+                                                         Laporan Ketua
+                                                             Laporan   Audit
+                                                                     Ketua   Negara
+                                                                           Audit     Tahun
+                                                                                 Negara     2018
+                                                                                        Tahun 2018Siri
+                                                                                                   Siri 33    AA -- 11
+                                                                                         KataP ePendahuluan
+                                                                                                 ndahuluan
+
+
+
+
+WJD0013374 2 Kandungan.indd 1                                                                                            23/06/2020 2:25 PM
+=== pdf page 12 ===
+                      masih relevan          dalam     menambah      baik    pengurusan   program/aktiviti   Kerajaan
+                      Persekutuan.
+
+                      4.    Secara umumnya, program/projek/aktiviti Kerajaan Persekutuan telah
+                      dilaksanakan mengikut tujuan yang ditetapkan. Bagaimanapun, masih terdapat
+                      kelemahan seperti sasaran output dan outcome yang ditetapkan tidak dapat dicapai
+                      atau tidak boleh dinilai kerana sasaran kuantitatif, mekanisme dan indikator tidak
+                      ditetapkan, serta data berkaitan tidak diselenggara dengan lengkap dan kemas kini.
+                      Selain itu, masih berlaku kes pembayaran tidak teratur, kelemahan pentadbiran
+                      kontrak, kerja/bekalan/perkhidmatan tidak mengikut spesifikasi/tidak berkualiti,
+                      pembaziran serta ketidakcekapan dalam pengurusan aset dan pungutan hasil Kerajaan.
+
+                      5.    Kelemahan tersebut antara lain disebabkan oleh kecuaian dalam mematuhi
+                      peraturan/prosedur yang ditetapkan oleh Kerajaan serta kurang teliti semasa
+                      merancang program/projek/aktiviti dan menetapkan skop serta spesifikasi kontrak.
+                      Selain itu, ia juga disebabkan pemantauan yang tidak dijalankan dengan kerap dan teliti
+                      terhadap kerja kontraktor/perunding, kurang kemahiran dalam pengurusan projek dan
+                      kurang memberi perhatian terhadap keberhasilan/impak sesuatu program/projek/
+                      aktiviti.
+
+                      6.    Seperti tahun yang lalu, Ketua Setiausaha Kementerian/Ketua Jabatan/Ketua
+                      Pengarah Badan Berkanun Persekutuan selaku ketua jabatan yang berkenaan telah
+                      dimaklumkan terlebih dahulu tentang perkara yang dilaporkan dalam laporan ini untuk
+                      tujuan pengesahan. Pemerhatian Audit telah dikemukakan kepada ketua jabatan
+                      terlibat dan mereka juga telah dimaklumkan mengenai isu yang dibangkitkan semasa
+                      Exit Conference diadakan. Penemuan Audit yang penting sahaja telah dilaporkan dalam
+                      laporan ini untuk memaklumkan kepada stakeholders mengenai kelemahan yang
+                      dikesan. Bagi menambah baik kelemahan yang dibangkitkan atau mengelakkan
+                      kelemahan yang sama berulang, saya telah mengemukakan sebanyak 63 syor untuk
+                      diambil tindakan oleh kementerian/jabatan/agensi berkenaan.
+
+                      7.   Saya berharap laporan ini akan digunakan sebagai asas untuk memperbaiki segala
+                      kelemahan dan memantapkan usaha penambahbaikan dalam pelaksanaan aktiviti
+                      Kerajaan. Selain meningkatkan akauntabiliti dan integriti penjawat awam, laporan ini
+                      juga diharap dapat membantu menimbulkan kesedaran melalui lessons learnt bagi
+                      membolehkan Kerajaan mendapat value for money untuk setiap perbelanjaan yang
+                      dibuat.
+
+                      8.    Status isu dan tindakan terkini Laporan Ketua Audit Negara Tahun 2018 Siri 3,
+                      boleh diakses oleh auditi dan orang awam melalui Auditor General’s Dashboard di
+                      Portal Jabatan Audit Negara. Mekanisme ini telah berjaya membantu kementerian/
+                      jabatan/agensi Kerajaan untuk menyalurkan maklum balas dengan cepat, pantas serta
+                      meningkatkan ketelusan dan akauntabiliti. Hal ini membuktikan komitmen dan
+                      keprihatinan Kerajaan dalam menjelaskan kedudukan terkini isu yang dibangkitkan
+
+                        A
+                        A -- 2
+                             2   Laporan Ketua
+                                 Laporan  KetuaAudit
+                                                Audit  Negara
+                                                     Negara   Tahun
+                                                            Tahun    2018
+                                                                  2018      Siri 3
+                                                                       Siri 3
+                                 PKata
+                                   e n d Pendahuluan
+                                         ahuluan
+
+
+
+
+WJD0013374 2 Kandungan.indd 2                                                                                           23/06/2020 2:25 PM
+=== pdf page 13 ===
+                      dalam Laporan Ketua Audit Negara serta menyalurkan status tindakan yang telah
+                      diambil.
+
+                      9.   Saya ingin merakamkan ucapan terima kasih kepada semua pegawai
+                      kementerian/jabatan/badan berkanun Persekutuan yang telah memberi kerjasama
+                      kepada pegawai saya sepanjang pengauditan dijalankan. Saya juga ingin melahirkan
+                      penghargaan dan terima kasih kepada semua pegawai Jabatan Audit Negara yang telah
+                      berusaha gigih serta memberi sepenuh komitmen untuk menyiapkan Laporan ini.
+
+
+
+
+                      (DATO’ NIK AZMAN NIK ABDUL MAJID)
+                      Ketua Audit Negara
+                      Malaysia
+
+                      Putrajaya
+                      14 Mei 2020
+
+
+
+
+                                                       Laporan Ketua
+                                                           Laporan   Audit
+                                                                   Ketua   Negara
+                                                                         Audit     Tahun
+                                                                               Negara     2018
+                                                                                      Tahun 2018Siri
+                                                                                                 Siri 33    AA -- 33
+                                                                                       KataP ePendahuluan
+                                                                                               ndahuluan
+
+
+
+
+WJD0013374 2 Kandungan.indd 3                                                                                          23/06/2020 2:25 PM
