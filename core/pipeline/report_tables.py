@@ -13,7 +13,7 @@ printed 0.0; RM 4,920.0000001 printed 4,920), kept at L1 in cells.csv 'value'. A
 table of a report (Malaysia's median in the state table and as the total of the ethnicity table) is loaded once,
 from the first table declared below, and the copies are checked equal (an unequal copy stops the build).
 
-Breakdown axes of a household's head are their own axes (hoh_ethnicity, hoh_sex, hoh_age), not the person axes
+Breakdown axes of a household's head are their own axes (hh_head_ethnicity, hh_head_sex, hh_head_age), not the person axes
 (ethnicity, sex, age): a household headed by a woman is not a woman. hh_size is the household's size.
 """
 import csv
@@ -41,7 +41,7 @@ def state(label):
 def ethnicity(label):
     for pat, code in ETH:
         if re.match(pat, label):
-            return ("total",) if code is None else ("hoh_ethnicity", code)
+            return ("total",) if code is None else ("hh_head_ethnicity", code)
     return None
 
 
@@ -50,9 +50,9 @@ def age_group(label):
         return ("total",)
     m = re.match(r"^(\d+)\s*[-–−]\s*(\d+)$", label)
     if m:
-        return ("hoh_age", f"{m.group(1)}_{m.group(2)}")
+        return ("hh_head_age", f"{m.group(1)}_{m.group(2)}")
     if re.match(r"^65\b", label):
-        return ("hoh_age", "65_above")
+        return ("hh_head_age", "65_above")
     return None
 
 
@@ -98,29 +98,29 @@ TABLES = {
         "1.4": ("poverty.pli.mean", "state", "component"),
         "2.1": ("poverty.hardcore.rate", "state", "strata"),
         "2.2": ("poverty.hardcore.rate", "ethnicity", "strata"),
-        "2.3": ("poverty.hardcore.rate", "ethnicity", "hoh_sex"),
-        "2.4": ("poverty.hardcore.rate", "hoh_age", "plain"),
+        "2.3": ("poverty.hardcore.rate", "ethnicity", "hh_head_sex"),
+        "2.4": ("poverty.hardcore.rate", "hh_head_age", "plain"),
         "2.5": ("poverty.hardcore.rate", "hh_size", "plain"),
         "3.1": ("poverty.absolute.rate", "state", "strata"),
         "3.2": ("poverty.absolute.rate", "ethnicity", "strata"),
-        "3.3": ("poverty.absolute.rate", "ethnicity", "hoh_sex"),
-        "3.4": ("poverty.absolute.rate", "hoh_age", "plain"),
+        "3.3": ("poverty.absolute.rate", "ethnicity", "hh_head_sex"),
+        "3.4": ("poverty.absolute.rate", "hh_head_age", "plain"),
         "3.5": ("poverty.absolute.rate", "hh_size", "plain"),
         "4.0": ("poverty.relative.rate", "state", "strata"),
     },
     "household_income_2024": {
         "2.7": ("hh_income.gross.{m}", "state", "measure"),
         "2.8": ("hh_income.gross_per_capita.{m}", "state", "measure"),
-        "2.9": ("hh_income.gross.median", "ethnicity", "strata_hoh_sex"),
-        "2.10": ("hh_income.gross.mean", "ethnicity", "strata_hoh_sex"),
-        "2.11": ("hh_income.gross.{m}", "state", "measure_hoh_sex"),
-        "2.12": ("hh_income.gross.{m}", "hoh_age", "measure"),
+        "2.9": ("hh_income.gross.median", "ethnicity", "strata_hh_head_sex"),
+        "2.10": ("hh_income.gross.mean", "ethnicity", "strata_hh_head_sex"),
+        "2.11": ("hh_income.gross.{m}", "state", "measure_hh_head_sex"),
+        "2.12": ("hh_income.gross.{m}", "hh_head_age", "measure"),
         "3.5": ("hh_income.disposable.{m}", "state", "measure"),
         "3.6": ("hh_income.disposable_per_capita.{m}", "state", "measure"),
-        "3.7": ("hh_income.disposable.median", "ethnicity", "strata_hoh_sex"),
-        "3.8": ("hh_income.disposable.mean", "ethnicity", "strata_hoh_sex"),
-        "3.9": ("hh_income.disposable.{m}", "state", "measure_hoh_sex"),
-        "3.10": ("hh_income.disposable.{m}", "hoh_age", "measure"),
+        "3.7": ("hh_income.disposable.median", "ethnicity", "strata_hh_head_sex"),
+        "3.8": ("hh_income.disposable.mean", "ethnicity", "strata_hh_head_sex"),
+        "3.9": ("hh_income.disposable.{m}", "state", "measure_hh_head_sex"),
+        "3.10": ("hh_income.disposable.{m}", "hh_head_age", "measure"),
     },
     "labour_annual_2025": {
         "A1.1": ("lfs.participation_rate", "person_age", "strata_sex"),
@@ -142,7 +142,7 @@ def parse_row(kind, label):
     if kind == "state":
         g = state(label)
         return ("geo", g) if g else None
-    return {"ethnicity": ethnicity, "hoh_age": age_group, "hh_size": hh_size, "person_age": person_age}[kind](label)
+    return {"ethnicity": ethnicity, "hh_head_age": age_group, "hh_size": hh_size, "person_age": person_age}[kind](label)
 
 
 def parse_col(kind, col, title):
@@ -150,14 +150,14 @@ def parse_col(kind, col, title):
     if "growth rate" in col or "households" in col:
         return None  # growth rates are derivable (D34); household counts are loaded from hh_profile_state
     parts = {}
-    if kind in ("strata", "strata_hoh_sex", "strata_sex"):
+    if kind in ("strata", "strata_hh_head_sex", "strata_sex"):
         s = strata_of(col)
         if s:
             parts["strata"] = s
-    if kind in ("hoh_sex", "strata_hoh_sex", "measure_hoh_sex"):
+    if kind in ("hh_head_sex", "strata_hh_head_sex", "measure_hh_head_sex"):
         s = sex_of(col)
         if s:
-            parts["hoh_sex"] = s
+            parts["hh_head_sex"] = s
     if kind == "strata_sex":
         s = sex_of(col)
         if s:

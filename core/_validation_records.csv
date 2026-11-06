@@ -1,0 +1,5 @@
+check,scope,status,note
+V1 every record traces to a contents page,all,PASS,"754 records, 0 untraced"
+V2 links by exact official name,all,PASS,"131 links (name_exact_official, publishable); 623 records unlinked"
+V3 recurrence rows add up to their records,entity,PASS,93 rows
+V4 coverage,all,INFO,"157 volumes; audits by place: MY 377, MY-01 38, MY-02 24, MY-03 33, MY-04 24, MY-05 26, MY-06 17, MY-07 25, MY-08 30, MY-09 18, MY-10 31, MY-11 35, MY-12 52, MY-13 24"

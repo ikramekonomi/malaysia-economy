@@ -17,8 +17,12 @@ behind a bar ('140  |', 2019-2025), or at the right (2026)):
     a number belong to the closer number; a heading or a numbered line stops them);
   * an audit is an entry in a part whose title names activities (AKTIVITI), companies (SYARIKAT) or statutory bodies
     (BADAN BERKANUN), or, in volumes without parts, an entry after such a heading, except the front and back matter
-    (Pendahuluan, Rumusan, Penutup, Status Tindakan, ...). The RINGKASAN / INTI SARI digest repeats the audits and
-    is skipped.
+    (Pendahuluan, Rumusan, Penutup, Status Tindakan, ...) and prose that runs on past the contents (a sentence:
+    'telah', 'adalah', ...; over 220 characters). The RINGKASAN / INTI SARI digest repeats the audits and is
+    skipped.
+The chapter layouts of the federal volumes ('2. topic ... 35' or '- topic ... 1-1' under a ministry in capitals and
+an agency in mixed case or after '•') are read by read_marked(): a topic is the marked line and the lines under it
+until its page; the ministry and agency above it are its body.
 """
 import csv
 import os
@@ -41,9 +45,10 @@ PART_KIND = re.compile(r"^(BAHAGIAN\s+[IVXL]+\b|AKTIVITI\b|PENGURUSAN SYARIKAT|P
 COMPANY = re.compile(r"\b(Sdn\.?\s*Bhd|Berhad|Bhd\.)", re.I)
 AUDIT_PART = re.compile(r"AKTIVITI|SYARIKAT|BADAN BERKANUN", re.I)
 SKIP_PART = re.compile(r"RINGKASAN|INTI SARI|PERKARA AM", re.I)
+PROSE = re.compile(r"\b(telah|adalah|merupakan|diharapkan|hendaklah|bahawa)\b|^[a-z]", )
 MATTER = re.compile(r"^(Pendahuluan|Rumusan|Penutup|PENUTUP|PENDAHULUAN|Status Tindakan|Lampiran|Objektif|Skop|"
                     r"Syor|Akronim|AKRONIM|Latar Belakang|Kandungan|Pembentangan Laporan|Kedudukan)", re.I)
-NOISE = re.compile(r"\.indd\b|^\s*(v|vi|vii|viii|ix|x|xi|iii|iv)?\s*\|?\s*Kandungan\s*$|LKAN NEGERI|│", re.I)
+NOISE = re.compile(r"\.indd\b|VERSI KABINET|^\s*Terkini\b|^\s*-\s*\d{1,2}\.\d{2}\.\d{4}\s*$|^\s*(v|vi|vii|viii|ix|x|xi|iii|iv)?\s*\|?\s*Kandungan\s*$|LKAN NEGERI|│", re.I)
 
 
 def caps(t):
@@ -108,6 +113,74 @@ def entries(items):
         groups[j][where].append(it[2])
     return [(k, groups[k]) for k in nums]
 
+PAGE_RIGHT = re.compile(r"^(.*?\S)\s{2,}((?:[A-D]\s?-\s?)?\d{1,3}(?:\s?[–-]\s?\d{1,3})?|[ivxlc]{1,6})\s*$")
+TOPIC = re.compile(r"^(?:TW\s+)?(?:(\d{1,2})\.\s*|[-–]\s+)(.*)$")
+CHAPTER = re.compile(r"^(\d{1,2})\s+([A-Z].*)$")
+
+
+def marked_layout(text):
+    """True for the chapter layouts: audits printed as '2. topic ... 35' or '- topic ... 1-1' under a ministry."""
+    n = 0
+    for ln in text.splitlines():
+        m = PAGE_RIGHT.match(ln)
+        if m and TOPIC.match(m.group(1).strip()):
+            n += 1
+    return n >= 3
+
+
+def read_marked(text):
+    """[(part, ministry, agency, topic, page, pdf_page)] for the chapter layouts (method in the module docstring)."""
+    out, part, ministry, agency, cur, ministry_open, agency_open = [], "", "", "", None, False, False
+    pages = re.split(r"^=== pdf page (\d+) ===$", text, flags=re.M)
+    for pno, body in zip(pages[1::2], pages[2::2]):
+        for raw in body.splitlines():
+            if not raw.strip() or NOISE.search(raw) or re.match(r"^\s*(Muka Surat|KANDUNGAN|JILID)", raw.strip(), re.I):
+                if not raw.strip():
+                    ministry_open = False
+                continue
+            m = PAGE_RIGHT.match(raw)
+            txt_, pg = (m.group(1).strip(), m.group(2)) if m else (raw.strip(), None)
+            txt_ = re.sub(r"^TW\s+", "", txt_)
+            ind = len(raw) - len(raw.lstrip())
+            t = TOPIC.match(txt_)
+            if cur is not None and cur["page"] is None and not t and not BAHAGIAN.match(txt_):
+                cur["topic"] = f"{cur['topic']} {txt_}"  # a topic over two lines, its page on the second
+                cur["page"] = pg
+                continue
+            if BAHAGIAN.match(txt_) or (caps(txt_) and PART_KIND.match(txt_)):
+                part = txt_ if BAHAGIAN.match(txt_) else (part + " " + txt_ if part.endswith(tuple("IVXL")) else txt_)
+                ministry, agency, cur = "", "", None
+                continue
+            if t:
+                cur = {"part": part, "ministry": ministry, "agency": agency, "topic": t.group(2).strip(), "page": pg,
+                       "pdf_page": pno, "ind": ind}
+                out.append(cur)
+                ministry_open = agency_open = False
+                continue
+            c = CHAPTER.match(txt_)
+            if c and caps(c.group(2)):
+                ministry, agency, cur, ministry_open, agency_open = c.group(2).strip(), "", None, True, False
+                continue
+            if caps(txt_):
+                if ministry_open:
+                    ministry = f"{ministry} {txt_}"  # a ministry's name over two lines, or a second ministry
+                else:
+                    ministry, agency, ministry_open = txt_, "", True
+                cur, agency_open = None, False
+                continue
+            if cur is not None and (cur["page"] is None or ind > cur["ind"]) and not txt_.startswith("•"):
+                cur["topic"] = f"{cur['topic']} {txt_}"
+                if pg and not cur["page"]:
+                    cur["page"] = pg
+                continue
+            name = txt_.lstrip("• ").strip()
+            agency = f"{agency}; {name}" if agency_open and agency else name  # several agencies, one audit
+            cur, ministry_open, agency_open = None, False, True
+            continue
+    return [o for o in out if o["topic"] and not MATTER.match(o["topic"]) and not PROSE.search(o["topic"])
+            and len(o["topic"]) <= 220]
+
+
 
 def main():
     rows = []
@@ -117,6 +190,15 @@ def main():
         text = open(os.path.join(TOC, fn), encoding="utf-8").read()
         head = text.splitlines()[0].lstrip("# ").split(" | ")
         report, scope = (head + ["", ""])[:2]
+        if marked_layout(text):
+            for o in read_marked(text):
+                if SKIP_PART.search(o["part"]):
+                    continue
+                rows.append(dict(report=report, scope=scope, file_name=fn.replace(".txt", ".pdf"), part=o["part"],
+                                 body_bm=o["ministry"], topic_bm=o["topic"], sub_entity_bm=o["agency"],
+                                 entry_text=" | ".join(x for x in (o["ministry"], o["agency"], o["topic"]) if x),
+                                 printed_page=o["page"] or "", toc_pdf_page=o["pdf_page"]))
+            continue
         pages = re.split(r"^=== pdf page (\d+) ===$", text, flags=re.M)
         part = ""
         seen = set()
@@ -139,7 +221,8 @@ def main():
                 lines = [x.lstrip("| ").strip() for x in g["above"] + ([g["on"]] if g["on"] else []) + g["below"]]
                 lines = [x for x in lines if x]
                 text_all = " ".join(lines).strip()
-                if not text_all or not AUDIT_PART.search(part) or SKIP_PART.search(part) or MATTER.match(text_all):
+                if not text_all or not AUDIT_PART.search(part) or SKIP_PART.search(part) or MATTER.match(text_all) \
+                        or PROSE.search(text_all) or len(text_all) > 300:
                     continue
                 body_l = [x for x in lines if caps(x) and not x.startswith("-")]
                 sub = [x.lstrip("- ").strip() for x in lines if x.startswith("-")]

@@ -71,7 +71,7 @@ figure, are not loaded a second time. Report figures in core: 1,059.
   * by the head's age.
 * `lfs.participation_rate`: by age, strata and sex (2025).
 
-A household head's attributes are their own axes, `hoh_ethnicity`, `hoh_sex` and `hoh_age`, not the person axes.
+A household head's attributes are their own axes, `hh_head_ethnicity`, `hh_head_sex` and `hh_head_age`, not the person axes.
 `hh_size` is the household's size. Growth rates stay at L1, because they are derivable (D34). Household counts
 stay at L1 too: core takes those from `hh_profile_state`.
 

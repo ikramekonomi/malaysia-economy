@@ -23,7 +23,7 @@ python3 qa/reproduce_curated.py                   # curated tables rebuilt from 
 | `geo_hierarchy.csv` | 1,020 | child → parent, one row per hierarchy (`administrative`: district → state; `electoral`: DUN → parlimen → state) |
 | `dim_period.csv` | 630 | years, months (monthly from 1980-01 for national CPI) |
 | `dim_indicator.csv` | 125 | definitions from `meta/indicator.csv` (unit, statistic, universe, price basis, additivity, expected coverage) |
-| `dim_breakdown.csv` | 811 keys | `_total`, `sex=…`, `strata=…`, `hoh_ethnicity=…` (a household head's attributes, D35), `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
+| `dim_breakdown.csv` | 811 keys | `_total`, `sex=…`, `strata=…`, `hh_head_ethnicity=…` (a household head's attributes, D35), `coicop=…`, `bank_type=…`, `staff_type=…`, `stage=…`, `crime_category=…`, `percentile=001…100` |
 | `fact_observation/<family>.csv` | 223,090 | indicator × geo × period × breakdown × entity × basis × edition × vintage, one file per indicator family (D34; read through `warehouse.observation_files()`): state 118,418; national 60,815; district 19,164; DUN 18,000; parlimen 6,660; unallocated 33 |
 | `dim_entity.csv` | 68 | who: the federal government, 13 state governments, 47 federal votes, 4 group recipients, 3 territory administrations (Phase 3) |
 | `fact_money_flow.csv` | 276 | money moving from one body to another: federal grants to governments (PKKP T.12, B.11, and B.32/B.06 by name to the territories' administrations), FY2010-2024 except FY2015 |
@@ -465,7 +465,7 @@ reader chooses between them:
   `Warehouse.conflicts()` returns both rows;
 * `gap_need_vs_money` leaves Terengganu's 2024 poverty blank and names both figures in `coverage_note`;
 * `compare_geos` lists Terengganu under `not_banded`, with both figures cited. A
-household head's attributes are their own axes (`hoh_ethnicity`, `hoh_sex`, `hoh_age`), never the person
+household head's attributes are their own axes (`hh_head_ethnicity`, `hh_head_sex`, `hh_head_age`), never the person
 axes.
 
 ## gap_project_budget_vs_actual (2026-11-06)

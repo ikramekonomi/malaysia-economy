@@ -24,7 +24,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.dirname(HERE)
 OUT = os.path.join(SRC, "data", "lkan_toc")
 SCOPE = re.compile(r"AKTIVITI|SYARIKAT|BADAN BERKANUN", re.I)
-ENTRY = re.compile(r"\S.*\s(\d{1,4})\s*$|^(\d{1,4}|[ivxl]+)\s+\S")  # page number at the right, or (older) left
+# an entry: a page number at the right after a gap of three spaces or more (justified prose has single spaces), or
+# (older volumes) at the left; a chapter page '1-1' / '2 – 47' counts
+ENTRY = re.compile(r"\S.*\s{3,}((?:[A-D]\s?-\s?)?\d{1,3}(?:\s?[–-]\s?\d{1,3})?)\s*$|^(\d{1,4}|[ivxl]+)\s{2,}\S")
 
 
 def volumes():
