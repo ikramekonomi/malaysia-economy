@@ -27,8 +27,8 @@ cpi_headline,row_count,7854,7854,PASS
 cpi_headline,"latest_period_values (2026-09-01, 14 rows x 1 cols)",0,0,PASS
 cpi_state,row_count,45024,45024,PASS
 cpi_state,"latest_period_values (2026-09-01, 224 rows x 1 cols)",0,0,PASS
-lfs_month,row_count,200,200,PASS
-lfs_month,"latest_period_values (2026-08-01, 1 rows x 7 cols)",0,0,PASS
+lfs_month,row_count,201,201,PASS
+lfs_month,"latest_period_values (2026-09-01, 1 rows x 7 cols)",0,0,PASS
 trade_headline,row_count,1310,1310,PASS
 trade_headline,"latest_period_values (2026-09-01, 3 rows x 7 cols)",0,0,PASS
 trade_sitc_1d,row_count,4851,4851,PASS

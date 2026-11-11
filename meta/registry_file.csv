@@ -137,6 +137,11 @@ industry_trade,2026-08,ipi_1d.csv,,4f00ede96817545694af1419ca6862fb2d28a420e62eb
 industry_trade,2026-08,ipi_2d.csv,,7fc45a944c0020bf74d8348ff9b7fb282ec9151502bd8ac62964aae0db69e88d,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-08,ipi_domestic.csv,,1e2376625c8b7aa512cc9e10299f227565feaae04ca8f4d3565e8503d155f8b9,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-08,ipi_export.csv,,8c36e5d33a5dda57477c7aaac94a2b8beab8cd48b002b9177b724fa8eaf1b617,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,ipi.csv,,12a67a866b48c64a66881a2f9df2cd7d3a142699a914b72191044579926b7890,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,ipi_1d.csv,,ca6f4a7f84d91dbe6bce6f2712f5b35c4f09a03401adfa9b25ac68dce52314d2,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,ipi_2d.csv,,c6051c566290d2efdcb4594d20a81b00387336eb81ff4b8b7e56d8a1094a6d39,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,ipi_domestic.csv,,664cce5c6481e9af413174adf5bd77022bfc014dada2b90aed82d06f3c29021c,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,ipi_export.csv,,b379b5f3ff7b623a7c2eabeb69daa5917b7ecefe633462110271b9aee2e6789b,,,2026-11-11,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-09,ppi.csv,,65e41580a87b2cb525d3a452d580ee7f7befc24cc9d89f8b8e257bd9e3cdab1f,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-09,ppi_1d.csv,,d2b288beae2ee8e6efb9f0c4fb2ed6ea946b33c703ebe33e7aba2c433871d54b,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-09,ppi_sitc.csv,,d0f498d963811905d53c1b7a5d3fd8a4df35b78fed073621ecf204bb0a9fd58d,,,2026-11-04,sources/dosm/data/_vintage_log.csv
@@ -156,16 +161,27 @@ lfs,2025,lfs_state_sex.csv,,d672f32a519bf249e9fc6c87903556320791b84e800c20c2de44
 lfs,2025,lfs_year.csv,,b6ae672ed51e0b923ae253e82b7a8233424eebd675534e6dec35404109be8d83,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2025,lfs_year_sex.csv,,c14ae825232092b73f45c200335f1672705a98d15c85870ccda93221aa212e17,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-06,lfs_month_duration.csv,,c28af0875d904f7a6fd642f1eae3ae29400499b61ea1d1a700b391d6785b9508,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+lfs,2026-06,lfs_month_duration.csv,,33d7acce256e539190534b80bfde4d8b84c7158ab140aac6a25e4bc2d1adbe4d,,,2026-11-11,sources/dosm/data/_vintage_log.csv
 lfs,2026-06,lfs_month_youth.csv,,27cb8d999c5990be190670c262fd27e89614fd9dc4d0ea296d121747a531dd65,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+lfs,2026-06,lfs_month_youth.csv,,e60ee5649048c9ab23574afe41cda76b8f25b91c502a91c3b0ca9d3496aba502,,,2026-11-11,sources/dosm/data/_vintage_log.csv
 lfs,2026-08,lfs_month.csv,,8dc891d543a92eed7bfb1aee6f151f0c5254b3d864d4ee9b20ad837b90521bd9,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-08,lfs_month_sa.csv,,ceb5bf0d7733d5c250ae83bbb9345f20cd9348f0bd7a7f5b185130899e6baeef,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-08,lfs_month_status.csv,,0194feb7ee75220caf0ce85db71b3d56160fb8bd83f4db19111db422907c007d,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+lfs,2026-09,lfs_month.csv,,d964aaf190f070f6925cc984a154d2274c3cc5eca2c95efd5ac3bcc89264169b,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+lfs,2026-09,lfs_month_sa.csv,,132ac20e7937279d9a0d44ba025c6ee6c176f773d0c395b6e3206eaa5c6ec5ae,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+lfs,2026-09,lfs_month_status.csv,,b63dbafae6cdd7d6676755cfb1bb23def31136cd55e0aec328079a497bc172d4,,,2026-11-11,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr.csv,,a567c89e496cbc61a21fca6ff8b6d79285a9a137f38d6df055267513c0e4b3aa,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr_sru_age.csv,,147fee5ab0cfdad66341cc9ad67406ffbd75e576bacefbaddf20e9479d54e95d,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr_sru_sex.csv,,9f2541f44fdf82e7ddbe7e36c7586cb70eed69185a1470d660dd51d41f19e121,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr_state.csv,,6bfcb67b323245309ee46951878f35490bb12f06ca036942bebd4ad51a36ddaf,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr_tru_age.csv,,1ff6fee9879f1b667472379d65c0238241da8c07ce48e833c7c49068a1a99d8f,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 lfs,2026-Q2,lfs_qtr_tru_sex.csv,,956ca757e649a214cf016762d861a7a860c6acbe4d4c10b8575f9d910fe04015,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+lfs,2026-Q3,lfs_qtr.csv,,840f4830403fa50779df95a94a257eaee52791150bf99c61febb4d8c6b5055ea,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+lfs,2026-Q3,lfs_qtr_sru_age.csv,,8267ab2750ef2385d5b198c3b23cfc10e215c4606fb13d8f31505c06d9f9885f,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+lfs,2026-Q3,lfs_qtr_sru_sex.csv,,3975f3fa77e00e65da95fba6420825f9bff79467cbe69e96b94a0d2f66fd0471,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+lfs,2026-Q3,lfs_qtr_state.csv,,9537212da1c02e064c3ed773538ffcfef7d41f1cbf1d722d953ef50f7b475f4e,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+lfs,2026-Q3,lfs_qtr_tru_age.csv,,0a43496705fb5fb926b68700a3ff64c259f8c3edd26fad3e2c6ca48983c45d1b,,,2026-11-11,sources/dosm/data/_vintage_log.csv
+lfs,2026-Q3,lfs_qtr_tru_sex.csv,,6ebcabf35dd1da848795738ea1ade8f1ae09c1b2fce1283682ac862def06410b,,,2026-11-11,sources/dosm/data/_vintage_log.csv
 lfs_annual_report,2025,labour_annual_2025.xlsx,https://storage.dosm.gov.my/labour/lfs_annual_2025.xlsx,90a73ab340231b208eed01f935007f08f6e7d7d670927155274d02106226c9dc,71100,,2026-11-06,sources/dosm_reports/data/_documents_manifest.csv
 lkan_federal,LKAN 1/2025,CMD.4.2025.pdf,https://parlimen.gov.my/ipms/eps/2025-02-24/CMD.4.2025%20-%20CMD4.2025.pdf,a12fff80ca84027e24506772f28ba1ae44a77736532464ffb834049ee2756dd6,18536624,121,2026-07-31,sources/audit-negara/data/lkan_reports.csv
 lkan_federal,LKAN 1/2026,CMD.1.2026.pdf,https://www.parlimen.gov.my/ipms/eps/2026-02-23/CMD.1.2026%20-%20CMD1.2026.pdf,bc6e0b0c8ebca34c9f868389792fda5e34dbf7c2881b49c20d9b0778e1c18cc1,12341296,126,2026-07-31,sources/audit-negara/data/lkan_reports.csv
