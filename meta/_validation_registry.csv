@@ -132,9 +132,9 @@ R4 held series has files,population_subnational,PASS,2 file(s)
 R5 every file has a sha256,population_subnational,PASS,2 files
 R7 every file is in the L0 archive,population_subnational,PASS,2 of 2 archived (release l0-archive or git history)
 R6 licence recorded,population_subnational,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,lfs,PASS,18 file(s)
-R5 every file has a sha256,lfs,PASS,18 files
-R7 every file is in the L0 archive,lfs,PASS,18 of 18 archived (release l0-archive or git history)
+R4 held series has files,lfs,PASS,29 file(s)
+R5 every file has a sha256,lfs,PASS,29 files
+R7 every file is in the L0 archive,lfs,PASS,29 of 29 archived (release l0-archive or git history)
 R6 licence recorded,lfs,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,lfs_annual_report,PASS,1 file(s)
 R5 every file has a sha256,lfs_annual_report,PASS,1 files
@@ -176,9 +176,9 @@ R4 held series has files,energy_stats,PASS,4 file(s)
 R5 every file has a sha256,energy_stats,PASS,4 files
 R7 every file is in the L0 archive,energy_stats,PASS,4 of 4 archived (release l0-archive or git history)
 R6 licence recorded,energy_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
-R4 held series has files,industry_trade,PASS,22 file(s)
-R5 every file has a sha256,industry_trade,PASS,22 files
-R7 every file is in the L0 archive,industry_trade,PASS,22 of 22 archived (release l0-archive or git history)
+R4 held series has files,industry_trade,PASS,27 file(s)
+R5 every file has a sha256,industry_trade,PASS,27 files
+R7 every file is in the L0 archive,industry_trade,PASS,27 of 27 archived (release l0-archive or git history)
 R6 licence recorded,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,anggaran_pembangunan,PASS,3 file(s)
 R5 every file has a sha256,anggaran_pembangunan,PASS,3 files
