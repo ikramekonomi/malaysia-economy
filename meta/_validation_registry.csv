@@ -176,9 +176,9 @@ R4 held series has files,energy_stats,PASS,4 file(s)
 R5 every file has a sha256,energy_stats,PASS,4 files
 R7 every file is in the L0 archive,energy_stats,PASS,4 of 4 archived (release l0-archive or git history)
 R6 licence recorded,energy_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
-R4 held series has files,industry_trade,PASS,27 file(s)
-R5 every file has a sha256,industry_trade,PASS,27 files
-R7 every file is in the L0 archive,industry_trade,PASS,27 of 27 archived (release l0-archive or git history)
+R4 held series has files,industry_trade,PASS,30 file(s)
+R5 every file has a sha256,industry_trade,PASS,30 files
+R7 every file is in the L0 archive,industry_trade,PASS,30 of 30 archived (release l0-archive or git history)
 R6 licence recorded,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,anggaran_pembangunan,PASS,3 file(s)
 R5 every file has a sha256,anggaran_pembangunan,PASS,3 files

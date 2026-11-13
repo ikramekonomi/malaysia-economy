@@ -137,6 +137,9 @@ industry_trade,2026-08,ipi_1d.csv,,4f00ede96817545694af1419ca6862fb2d28a420e62eb
 industry_trade,2026-08,ipi_2d.csv,,7fc45a944c0020bf74d8348ff9b7fb282ec9151502bd8ac62964aae0db69e88d,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-08,ipi_domestic.csv,,1e2376625c8b7aa512cc9e10299f227565feaae04ca8f4d3565e8503d155f8b9,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-08,ipi_export.csv,,8c36e5d33a5dda57477c7aaac94a2b8beab8cd48b002b9177b724fa8eaf1b617,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,iowrt.csv,,623b25d023d3ee605da754427a51233e6c8c93e9d572e0b4361aded0f0727c19,,,2026-11-13,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,iowrt_2d.csv,,5d839732763dd0313b4adfd1ec8be8a70de709627f868edca3c9b98f415b36c4,,,2026-11-13,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-09,iowrt_3d.csv,,ca2cd3ae9016bebf71b1197937f12c595240ea9cf9cfad10fc891f05cb5cf3d2,,,2026-11-13,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-09,ipi.csv,,12a67a866b48c64a66881a2f9df2cd7d3a142699a914b72191044579926b7890,,,2026-11-11,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-09,ipi_1d.csv,,ca6f4a7f84d91dbe6bce6f2712f5b35c4f09a03401adfa9b25ac68dce52314d2,,,2026-11-11,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-09,ipi_2d.csv,,c6051c566290d2efdcb4594d20a81b00387336eb81ff4b8b7e56d8a1094a6d39,,,2026-11-11,sources/dosm/data/_vintage_log.csv
