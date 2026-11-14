@@ -52,6 +52,7 @@ bnm_msb,2026-08-01 05:05:35,msb_1_18.csv,,68aed20b7cbe02f680463b88dc083e3632e825
 bnm_msb,2026-08-01 05:06:17,msb_1_24.csv,,784afee0943c3ef7ac4901871149a04bf4047ccc514d1dc47586687476187e2d,,,2026-07-31,sources/bnm/data/_vintage_log.csv
 bnm_msb,2026-08-01 05:06:27,msb_1_25.csv,,b496008739cdb9f9a858c92abb14f161068516077784922c6bc19a53af85a8f0,,,2026-07-31,sources/bnm/data/_vintage_log.csv
 cpi,2018,mcoicop.csv,,b917d0e3446628251e465e55989e5631011d1e422f0483bd8e82f93e3214ebb4,,,2026-08-03,sources/dosm/data/_vintage_log.csv
+cpi,2018,mcoicop.csv,,97e65413878848a9a17667c0df2b432d21a58f733f103c4928518c20e6c3904f,,,2026-11-14,sources/dosm/data/_vintage_log.csv
 cpi,2025,cpi_annual.csv,,e5c93a7a92971eb24730b1ea7312409014ddb073b50cc4a66f69446137e2f7d6,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 cpi,2025,cpi_annual_inflation.csv,,9604b79f409331d4da8ead75b398de2a84a48200ec3dbd1fc219eb3cd66e4258,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 cpi,2026-09,cpi_headline.csv,,37c54ca1499e32a94f8253ac9b3d33893f9ada06f49266e1fcd6e8cad692705c,,,2026-11-04,sources/dosm/data/_vintage_log.csv

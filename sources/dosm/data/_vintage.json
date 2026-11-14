@@ -1386,8 +1386,8 @@
     "last_updated": "2024-04-16",
     "next_update": "\u2014",
     "api_total_rows": 1,
-    "storage_etag": "ad52b13a8c0691a0a3feb69bac280e95",
-    "storage_last_modified": "Tue, 16 Apr 2024 22:35:37 GMT",
+    "storage_etag": "6158602d678b7d9fc647ae60cfb971e8",
+    "storage_last_modified": "Fri, 13 Nov 2026 09:21:32 GMT",
     "api_route": "opendosm",
     "provenance_columns": true,
     "block": "realeconomy"
