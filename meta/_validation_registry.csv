@@ -148,9 +148,9 @@ R4 held series has files,productivity,PASS,5 file(s)
 R5 every file has a sha256,productivity,PASS,5 files
 R7 every file is in the L0 archive,productivity,PASS,5 of 5 archived (release l0-archive or git history)
 R6 licence recorded,productivity,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,cpi,PASS,7 file(s)
-R5 every file has a sha256,cpi,PASS,7 files
-R7 every file is in the L0 archive,cpi,PASS,7 of 7 archived (release l0-archive or git history)
+R4 held series has files,cpi,PASS,8 file(s)
+R5 every file has a sha256,cpi,PASS,8 files
+R7 every file is in the L0 archive,cpi,PASS,8 of 8 archived (release l0-archive or git history)
 R6 licence recorded,cpi,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,hes_report_tables,PASS,1 file(s)
 R5 every file has a sha256,hes_report_tables,PASS,1 files
