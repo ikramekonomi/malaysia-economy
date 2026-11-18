@@ -52,6 +52,7 @@ bnm_msb,2026-08-01 05:05:35,msb_1_18.csv,,68aed20b7cbe02f680463b88dc083e3632e825
 bnm_msb,2026-08-01 05:06:17,msb_1_24.csv,,784afee0943c3ef7ac4901871149a04bf4047ccc514d1dc47586687476187e2d,,,2026-07-31,sources/bnm/data/_vintage_log.csv
 bnm_msb,2026-08-01 05:06:27,msb_1_25.csv,,b496008739cdb9f9a858c92abb14f161068516077784922c6bc19a53af85a8f0,,,2026-07-31,sources/bnm/data/_vintage_log.csv
 cpi,2018,mcoicop.csv,,b917d0e3446628251e465e55989e5631011d1e422f0483bd8e82f93e3214ebb4,,,2026-08-03,sources/dosm/data/_vintage_log.csv
+cpi,2018,mcoicop.csv,,7492eded9ff63f3348b989c406475cb1ac73af4c67f5f096cd1fb8ec6b6e5924,,,2026-11-18,sources/dosm/data/_vintage_log.csv
 cpi,2025,cpi_annual.csv,,e5c93a7a92971eb24730b1ea7312409014ddb073b50cc4a66f69446137e2f7d6,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 cpi,2025,cpi_annual_inflation.csv,,9604b79f409331d4da8ead75b398de2a84a48200ec3dbd1fc219eb3cd66e4258,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 cpi,2026-09,cpi_headline.csv,,37c54ca1499e32a94f8253ac9b3d33893f9ada06f49266e1fcd6e8cad692705c,,,2026-11-04,sources/dosm/data/_vintage_log.csv
@@ -128,6 +129,7 @@ hies_report_tables,2024,poverty_2024.xlsx,https://storage.dosm.gov.my/hies/pover
 ict_households,2025,hh_access_internet.csv,,2611f5ac8d321535b48f94fa23cf2670d7508c8ba055cc649be1a3409e97b8e4,,,2026-11-05,sources/dosm/data/_vintage_log.csv
 industry_trade,2006,sitc.csv,,9489220609c35c78db221ce3d4edc3301b4e4a43922c4c7c2b21765fd0f03ddb,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 industry_trade,2025-Q3,fdi_flows.csv,,556cd98fe1f7f6a2f38fd34cee75cb6f3052f7cdc6c74512409e9918ae9d2282,,,2026-08-03,sources/dosm/data/_vintage_log.csv
+industry_trade,2025-Q3,fdi_flows.csv,,51adba17a48406fe29c3f282c6c96e46e58f268384443d843f2bb73aa1c4b2a8,,,2026-11-18,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-03,bec.csv,,dbc3c1edfab35a6dff04a509622491c44711a4a20d0d768dd087fdbbf9d58f21,,,2026-08-03,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-08,iowrt.csv,,87c35269f4ef69ed09ed7574a81ce1f133f689af5543b9c347bdd4f432818748,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-08,iowrt_2d.csv,,f45d40d46a945222670857225b2edcfd3f1b57c8a02b98f0b0f1ba1bf883798f,,,2026-11-04,sources/dosm/data/_vintage_log.csv
@@ -152,6 +154,7 @@ industry_trade,2026-09,trade_enduse_bec.csv,,1f2b76916d73203baa88fcc954e8805fc21
 industry_trade,2026-09,trade_headline.csv,,21b2b6fb4f7103f92c942f4565431bc0a080b6ea19ba862949b2c2757bdad684,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-09,trade_sitc_1d.csv,,c3f6ec33addf120d3ba0b5547ad79387b13d7886fbb27bbb5ee09cc11c65ca2d,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-Q2,bop_balance.csv,,604b72911c4b8a95372b66ab40b391ea64295c49ab318c7f47352200008f1a7d,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+industry_trade,2026-Q2,bop_balance.csv,,204edfcf25e6110f3c8fc3daf3ee700a0122d7e7d4438f7e303d1a2311d9dce1,,,2026-11-18,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-Q2,sppi.csv,,2e23de6de2b71021a7ed731dd22d942faa6bcb0fe0f89dc4043d6dbe2b0b2d5a,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-Q2,sppi_1d.csv,,63e66d9da924907fad54af5b8a4273cdea1f846c848282b43962ed5f19d3ca46,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 industry_trade,2026-Q2,sppi_2d.csv,,0e49fa365de96a39ddf70a9e6b31d27b35562fad7fa94d5d81b1a7cc883f2b7b,,,2026-11-04,sources/dosm/data/_vintage_log.csv
@@ -622,6 +625,19 @@ national_accounts,2026-Q2,gdp_qtr_real_sa_demand.csv,,99a29df6f3bad2e70c3251e7d0
 national_accounts,2026-Q2,gdp_qtr_real_sa_supply.csv,,5c6508beccb84d3548894f9b9484b6fb55608ab1ed1a1056869c6ec110a172b9,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 national_accounts,2026-Q2,gdp_qtr_real_supply.csv,,d304972b81fe1cd847691727e61a10b7fa925dbdbdca74f4de02319dbee3880b,,,2026-11-04,sources/dosm/data/_vintage_log.csv
 national_accounts,2026-Q2,gdp_qtr_real_supply_granular.csv,,abf5e6a893d4c4e58460b667f4577622e08626a4b31a0ded6b2446306b7a0c8c,,,2026-11-04,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_nominal.csv,,52f757f975f247de034cfe812948e705472950ddab196db5e9d5248eed1b5881,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_nominal_demand.csv,,ecd17868a74b7bf39ee03c5da11d0571add318bbeb6b0f95651e9c849ef71219,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_nominal_demand_granular.csv,,127561302c936d095499291f1f1abcdd53c84b9fcc0b23562d6df608a36084cf,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_nominal_supply.csv,,613377885d23cd7b6835d34e8dd64b5afd6443a51f6cc2314d1ab40243639f2a,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_nominal_supply_granular.csv,,e37045daf4e0d67bf1964d30e898e299e6b002675b202c58087b503d3c9a3bc0,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real.csv,,89e548b7a4134ac66f47f648a573b49a4054d821a1c263445236a704950ffe50,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real_demand.csv,,f550dfc91222b6e124f708591cfd7e18d9741c480b710b5e152864d2b04b7bd6,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real_demand_granular.csv,,e98b58f7f8c8bbbbe286c82cab6839e1dc1c05de76d99dadf089f7d14cff58bc,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real_sa.csv,,47476cfd70758766be25c7fb362aa19c13951d78ab022a4cc2a5639b767106a1,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real_sa_demand.csv,,920074c1c2c230c37afee1f62ef06cb3e88ac7a6fba5365f65cc90ba55ea3577,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real_sa_supply.csv,,8ba4ba2ba6907a5c5cbfdd200495516b5968c36cc0b414853f510b96bacb7150,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real_supply.csv,,1fc81571e298c4ce9f26f4cd286679f2c5bf4e0c9e867da1a6cc4b15864158a5,,,2026-11-18,sources/dosm/data/_vintage_log.csv
+national_accounts,2026-Q3,gdp_qtr_real_supply_granular.csv,,55226f09102e9bd44fc38692f483ec2df4aa9c31dcff7d29387c25644f66e221,,,2026-11-18,sources/dosm/data/_vintage_log.csv
 pkkp,,2015_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
 pkkp,,2020_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,,,,,,cited in sources/pkkp/data (no manifest yet)
 pkkp,2009,2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,https://www.anm.gov.my/images/dokumen/arkib/penyata-kewangan/2009_PENYATA_KEWANGAN_KERAJAAN_PERSEKUTUAN.pdf,860d81f768bae2954103937d33eb1e06a847b2d7011af3f77f1a253a29263540,8364734,274,2026-11-04,sources/pkkp/data/_documents_manifest.csv
