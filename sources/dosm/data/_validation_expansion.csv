@@ -23,10 +23,10 @@ state_finance_expenditure,row_count,104,104,PASS
 state_finance_expenditure,"latest_period_values (2022-01-01, 96 rows x 1 cols)",0,0,PASS
 gdp_state_real_supply,row_count,2163,2163,PASS
 gdp_state_real_supply,"latest_period_values (2025-01-01, 210 rows x 1 cols)",0,0,PASS
-cpi_headline,row_count,7854,7854,PASS
-cpi_headline,"latest_period_values (2026-09-01, 14 rows x 1 cols)",0,0,PASS
-cpi_state,row_count,45024,45024,PASS
-cpi_state,"latest_period_values (2026-09-01, 224 rows x 1 cols)",0,0,PASS
+cpi_headline,row_count,7868,7868,PASS
+cpi_headline,"latest_period_values (2026-10-01, 14 rows x 1 cols)",0,0,PASS
+cpi_state,row_count,45248,45248,PASS
+cpi_state,"latest_period_values (2026-10-01, 224 rows x 1 cols)",0,0,PASS
 lfs_month,row_count,201,201,PASS
 lfs_month,"latest_period_values (2026-09-01, 1 rows x 7 cols)",0,0,PASS
 trade_headline,row_count,1310,1310,PASS
