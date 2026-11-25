@@ -163,8 +163,8 @@ Q161,fact,get_series,value,40.2,40.2,PASS
 Q162,fact,derive_chain,value,0.017751,0.017751,PASS
 Q163,trap_missing,get_series,not_held,,"cpi.index for MY is not held with breakdown 'coicop=12' in that period, but is held with: _total, coicop=01, coicop=02, coicop=03, coicop=04, coicop=05, coicop=06, coicop=07, coicop=08, coicop=09, coicop=10, coicop=11 ...",PASS
 Q164,fact,get_series,caveat,CV8,"CV1,CV8",PASS
-Q165,fact,get_series,value,215112665290,215112665290,PASS
-Q166,fact,get_series,value,181388948021,181388948021,PASS
+Q165,fact,get_series,value,215755791490,215755791490,PASS
+Q166,fact,get_series,value,181400900592,181400900592,PASS
 Q167,fact,get_series,value,-1799499923,-1799499923,PASS
 Q168,fact,get_series,caveat,CV19,"CV19,COVERAGE",PASS
 Q169,fact,get_series,value,738502324542.45,738502324542.45,PASS
