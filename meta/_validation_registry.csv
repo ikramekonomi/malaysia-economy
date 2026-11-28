@@ -144,25 +144,25 @@ R4 held series has files,salaries_wages,PASS,21 file(s)
 R5 every file has a sha256,salaries_wages,PASS,21 files
 R7 every file is in the L0 archive,salaries_wages,OPEN,20 of 21 archived (release l0-archive or git history)
 R6 licence recorded,salaries_wages,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,productivity,PASS,5 file(s)
-R5 every file has a sha256,productivity,PASS,5 files
-R7 every file is in the L0 archive,productivity,PASS,5 of 5 archived (release l0-archive or git history)
+R4 held series has files,productivity,PASS,6 file(s)
+R5 every file has a sha256,productivity,PASS,6 files
+R7 every file is in the L0 archive,productivity,PASS,6 of 6 archived (release l0-archive or git history)
 R6 licence recorded,productivity,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,cpi,PASS,7 file(s)
-R5 every file has a sha256,cpi,PASS,7 files
-R7 every file is in the L0 archive,cpi,PASS,7 of 7 archived (release l0-archive or git history)
+R4 held series has files,cpi,PASS,12 file(s)
+R5 every file has a sha256,cpi,PASS,12 files
+R7 every file is in the L0 archive,cpi,PASS,12 of 12 archived (release l0-archive or git history)
 R6 licence recorded,cpi,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,hes_report_tables,PASS,1 file(s)
 R5 every file has a sha256,hes_report_tables,PASS,1 files
 R7 every file is in the L0 archive,hes_report_tables,OPEN,0 of 1 archived (release l0-archive or git history)
 R6 licence recorded,hes_report_tables,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,cpi_detail,PASS,4 file(s)
-R5 every file has a sha256,cpi_detail,PASS,4 files
-R7 every file is in the L0 archive,cpi_detail,PASS,4 of 4 archived (release l0-archive or git history)
+R4 held series has files,cpi_detail,PASS,8 file(s)
+R5 every file has a sha256,cpi_detail,PASS,8 files
+R7 every file is in the L0 archive,cpi_detail,PASS,8 of 8 archived (release l0-archive or git history)
 R6 licence recorded,cpi_detail,PASS,CC BY 4.0 (DOSM catalogue pages)
-R4 held series has files,national_accounts,PASS,26 file(s)
-R5 every file has a sha256,national_accounts,PASS,26 files
-R7 every file is in the L0 archive,national_accounts,PASS,26 of 26 archived (release l0-archive or git history)
+R4 held series has files,national_accounts,PASS,39 file(s)
+R5 every file has a sha256,national_accounts,PASS,39 files
+R7 every file is in the L0 archive,national_accounts,PASS,39 of 39 archived (release l0-archive or git history)
 R6 licence recorded,national_accounts,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,state_gdp,PASS,1 file(s)
 R5 every file has a sha256,state_gdp,PASS,1 files
@@ -176,9 +176,9 @@ R4 held series has files,energy_stats,PASS,4 file(s)
 R5 every file has a sha256,energy_stats,PASS,4 files
 R7 every file is in the L0 archive,energy_stats,PASS,4 of 4 archived (release l0-archive or git history)
 R6 licence recorded,energy_stats,PASS,"CC BY 4.0 (developer.data.gov.my footer, checked 2026-11-04)"
-R4 held series has files,industry_trade,PASS,30 file(s)
-R5 every file has a sha256,industry_trade,PASS,30 files
-R7 every file is in the L0 archive,industry_trade,PASS,30 of 30 archived (release l0-archive or git history)
+R4 held series has files,industry_trade,PASS,38 file(s)
+R5 every file has a sha256,industry_trade,PASS,38 files
+R7 every file is in the L0 archive,industry_trade,PASS,38 of 38 archived (release l0-archive or git history)
 R6 licence recorded,industry_trade,PASS,CC BY 4.0 (DOSM catalogue pages)
 R4 held series has files,anggaran_pembangunan,PASS,3 file(s)
 R5 every file has a sha256,anggaran_pembangunan,PASS,3 files
